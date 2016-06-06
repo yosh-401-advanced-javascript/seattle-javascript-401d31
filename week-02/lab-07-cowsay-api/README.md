@@ -11,7 +11,7 @@
 
 # Project Structure
 * Create these directorys
- * lib -> for modules
+ * lib -> for supporting modules
  * test -> for test files
 * create a main program called server.js
 * create a package.json
@@ -22,7 +22,7 @@
 
 # Directions
 * Create a HTTP Server using the http module
-* Create a body parser that uses Promises to parse the json in the body of `POST`, `PUT`, or `DELETE` requests
+* Create a body parser module that uses Promises to parse the json in the body of `POST`, `PUT`, or `DELETE` requests
 
 ## Server Endpoints
 ### /
