@@ -22,7 +22,7 @@
 
 ## Directions
 * Create a module named greet in the lib directory that exports a single function
-* The greet module should take in a name as a parameter and returnd shte string `'hello ' + name`
+* The greet module should take in a name as a parameter and **return** the string `'hello ' + name`
 
 ## Tests
 * Your code should pass the **.eslintrc** included in this repository.  
