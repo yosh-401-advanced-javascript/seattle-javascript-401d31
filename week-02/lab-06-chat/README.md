@@ -12,7 +12,7 @@
 ## Project Structure
 ## Project Stucture
 * Create these directores
- * lib -> for modules
+ * lib -> for supporting modules
  * test -> for test files
 * a main program called server.js
 * Include a .gitignore
