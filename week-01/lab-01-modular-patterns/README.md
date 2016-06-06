@@ -25,9 +25,9 @@
 * The greet module should take in a name as a parameter and **return** the string `'hello ' + name`
 
 ## Tests
-* Your code should pass the **.eslintrc** included in this repository.  
-* Write a test that expects the string 'hello test user' to be and use your greet module to make it pass.
+* Your code should pass the course **.eslintrc**
+* Write a test that expects the string 'hello test user' to be and use your greet module to make it pass
 
 ## Bonus:
-* For an extra point, create a command line utility that will be run using `node greet.js 'some name'` and will pass the input contained in that argument to the greet function and output the result to the screen.
-* For a second bonus point, write a test that makes sure that the arguments are being processed.
+* For an extra point, create a command line utility that will be run using `node greet.js 'some name'` and will pass the input contained in that argument to the greet function and output the result to the screen
+* For a second bonus point, write a test that makes sure that the arguments are being processed
