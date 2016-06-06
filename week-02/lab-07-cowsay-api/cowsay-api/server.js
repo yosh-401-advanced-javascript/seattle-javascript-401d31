@@ -44,7 +44,7 @@ var server = http.createServer(function(req, res){
 
   res.writeHead(200)
   res.write('Options:\n');
-  res.write('\t/coolface');
+  res.write('\t/cowsay');
   res.end();
 });
 
