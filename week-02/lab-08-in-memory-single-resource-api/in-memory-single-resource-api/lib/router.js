@@ -3,7 +3,8 @@
 const parseUrl = require('url').parse;
 const parseQuery = require('querystring').parse;
 const parseBody = require('./parse-body');
-const response = require('./response.js');
+const errorResponse = require('./error-response');
+const httpError = require('http-errors');
 const debug = require('debug')('noteapp:router');
 
 const Router = module.exports = function(){
@@ -47,9 +48,9 @@ Router.prototype.route = function(){
       if(typeof routes[req.method][req.url.pathname] === 'function'){
         return routes[req.method][req.url.pathname](req, res);
       }
-      response(404, 'not found', res);
+      errorResponse(httpError(404, 'no such route'), res);
     }).catch((err) => {
-      response(400, 'bad request', res);
+      errorResponse(httpError(400, 'bad json'), res);
     });
   }
 };
