@@ -52,13 +52,13 @@
 
 	const noteApp = angular.module('noteapp', [])
 	noteApp.controller('CowsayController', function(){
-	  this.animals = []
+	  this.cowsayFileList= []
 	  this.cowsayFile = 'default'
 	  this.cowsayText = 'Wish i had something better to say !'
 
 	  this.getAnimals = () => {
 	    cowsay.list((err, list) => {
-	      this.animals = list
+	      this.cowsayFileList = list
 	    })
 	  }
 
