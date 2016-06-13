@@ -50,8 +50,8 @@
 	const cowsay = __webpack_require__(3)
 	const lorem = __webpack_require__(12)
 
-	const noteApp = angular.module('noteapp', [])
-	noteApp.controller('CowsayController', function(){
+	const cowsayApp = angular.module('cowsay-app', [])
+	cowsayApp.controller('CowsayController', function(){
 	  this.cowsayFileList= []
 	  this.cowsayFile = 'default'
 	  this.cowsayText = 'Wish i had something better to say !'

@@ -4,8 +4,8 @@ const angular = require('angular')
 const cowsay = require('cowsay-browser')
 const lorem = require('lorem-ipsum')
 
-const noteApp = angular.module('noteapp', [])
-noteApp.controller('CowsayController', function(){
+const cowsayApp = angular.module('cowsay-app', [])
+cowsayApp.controller('CowsayController', function(){
   this.cowsayFileList= []
   this.cowsayFile = 'default'
   this.cowsayText = 'Wish i had something better to say !'
