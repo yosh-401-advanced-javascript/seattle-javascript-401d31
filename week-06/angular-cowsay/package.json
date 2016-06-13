@@ -13,5 +13,9 @@
     "cowsay-browser": "^1.1.8",
     "lorem-ipsum": "^1.0.3",
     "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0"
   }
 }
