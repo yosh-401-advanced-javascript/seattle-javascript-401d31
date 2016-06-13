@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Note App</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body data-ng-app="noteapp">
+    <div data-ng-controller="CowsayController as cc" data-ng-init="cc.getAnimals()">
+      <form data-ng-submit="cc.loremify()">
+        <label for"cowsayText">Text:</label>
+        <input type="text" name="cowsayText" data-ng-model="cc.cowsayText">
+        <select data-ng-model="cc.cowsayFile">
+          <option data-ng-repeat="animal in cc.animals">{{animal}}</option>
+        </select>
+        <button type="submit">Loremify</button>
+      </form>
+      <pre>
+        {{ cc.say(cc.cowsayText) }}
+      </pre>
+    </div>
+    <script src="/bundle.js"></script>
+  </body>
+</html>
