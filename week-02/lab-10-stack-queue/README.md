@@ -3,4 +3,4 @@
 
 # white board problems
 * write a function for determining if a string has matching parentheses
-* wrate a function to determine if a string is a palindrome
+* write a function to determine if a string is a palindrome
