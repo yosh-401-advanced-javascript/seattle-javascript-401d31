@@ -1,5 +1,29 @@
 401 Labs and Solutions
 ======================
+#### First Half: Back End Assignments
+| week | day | comments | title                                  | link                                                                                                                       |
+|------|-----|----------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| 1    | 1   |          | Install Node                           | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-00-install-node                           |
+|      | 2   |          | Module Patterns                        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-01-modular-patterns                       |
+|      | 3   |          | Build Tools                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-02-build-tools                            |
+|      |     |          | Parallel File Processing               | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-03-parallel-file-processing               |
+|      | 4   |          | Bitmap Transformer                     | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-04-bitmap-transformer                     |
+|      | 5   |          | DSA - Big O, Arrays and Objects        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-05-big-o-array-methods                    |
+| 2    | 6   | TCP      | Chat Server                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-06-chat                                   |
+|      | 7   | HTTP     | Cowsay API                             | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-07-cowsay-api                             |
+|      | 8   |          | In Memory Resource API                 | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-08-in-memory-single-resource-api          |
+|      | 9   |          | Simple Persistence Single Resource API | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-09-simple-persistance-single-resource-api |
+|      | 10  |          | DSA - Bind/Call/Apply Stack and Queues | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-10-stack-queue                            |
+| 3    | 11  | Express  | Single Resource Express API            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-11-single-resource-express-api            |
+|      | 12  |          | Express Middleware                     | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-12-express-middleware                     |
+|      | 13  | Mongo    | Single Resource Mongo Express          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-13-single-resource-mongo-express          |
+|      | 14  |          | Double Resource Mongo Express          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-14-double-resouce-mongo-express           |
+|      | 15  |          | DSA - Linked List                      | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-15-linked-list                            |
+| 4    | 16  |          | Express Authorization                  | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-16-express-authorization                  |
+|      | 17  |          | Express Authentication                 | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-17-expresss-authentication                |
+|      | 18  |          | Travis CI                              | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-18-travis-ci                              |
+|      | 19  |          | Heroku Deployment                      | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-19-heroku-deployment                      |
+|      | 20  |          | DSA - Recursion, Intro to trees        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-20-trees                                  |
 
 
 
