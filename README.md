@@ -4,9 +4,9 @@
 | week | day | comments | title                                  | link                                                                                                                       |
 |------|-----|----------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | 1    | 1   |          | Install Node                           | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-00-install-node                           |
-|      | 2   |          | Module Patterns                        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-01-modular-patterns                       |
-|      | 3   |          | Build Tools                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-02-build-tools                            |
-|      |     |          | Parallel File Processing               | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-03-parallel-file-processing               |
+|      |    |          | Module Patterns                        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-01-modular-patterns                       |
+|      | 2   |          | Build Tools                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-02-build-tools                            |
+|      |  3   |          | Parallel File Processing               | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-03-parallel-file-processing               |
 |      | 4   |          | Bitmap Transformer                     | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-04-bitmap-transformer                     |
 |      | 5   |          | DSA - Big O, Arrays and Objects        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-05-big-o-array-methods                    |
 | 2    | 6   | TCP      | Chat Server                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-06-chat                                   |
