@@ -1,6 +1,7 @@
+
 # Explain Client Side Auth
 
-By yourself or with a partner explain the client side auth that we wrote in class. There a series of comments inside of the javascript code in the 
+By yourself or with a partner explain the client side auth that we wrote in class. There are a series of comments inside of the javascript code in the 
 TODO(instructors): replace this with your directory and use this one as a template:
 https://github.com/codefellows/seattle-javascript-401d7/week_9/jun_1_client_auth_2_electric_boogaloo 
 
