@@ -10,7 +10,7 @@
   * write a question and observation on canvas
 
 ## Description
-* Create these directorys to organize your code
+* create these directorys to organize your code
  * lib
  * data
  * test
