@@ -1,8 +1,6 @@
 ![cf](https://i.imgur.com/7v5ASc8.png) lab-03-fs-async
 ======
 
-[![Stories in Ready](https://badge.waffle.io/codefellows/seattle-javascript-401n1.svg?label=ready&title=Ready)](http://waffle.io/codefellows/seattle-javascript-401n1) [![Build Status](https://travis-ci.org/codefellows-seattle-javascript-401n1/lab-03-fs-async.svg?branch=master)](https://travis-ci.org/codefellows-seattle-javascript-401n1/lab-03-fs-async)
-
 ## To Submit this Assignment
   * fork this repository
   * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
@@ -11,12 +9,23 @@
   * submit a link to your PR in canvas
   * write a question and observation on canvas
 
-## Description:
+## Description
 * Create these directorys to organize your code
  * lib
+ * data
  * test
-* create a **readFiles**  module that will read a array of filepaths in parallel, and return an array of the file contents
-* create a CLI that uses your file reading module to print the contents of a list of files provided on `process.argv`
+* create three diffrent json files that model a read world object in the data directory for example
+
+``` json
+{
+  "name": "Grocery List",
+  "user": "slugbyte",
+  "items": ["fish", "apple", "chips"]
+}
+``` 
+  
+* create a **readFiles**  module that will read a array of filepaths in parallel, and return an array of parsed JSON
+* create a CLI that uses your file reading module to print the contents of a list of JOSN files provided on `process.argv`
 * also, you must guarantee that three files are read and console logged in the order they were passed in on `process.argv`
 * you can use any method of handling async except nested callback. aka. dont use nested calls to `fs.readFile` with anynomus function callbacks
  
