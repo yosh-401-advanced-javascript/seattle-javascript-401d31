@@ -24,7 +24,7 @@
 }
 ``` 
   
-* create a **readFiles**  module that will read a array of filepaths in parallel, and return an array of parsed JSON
+* create a **readFiles** module that will read a array of filepaths in parallel, parse the json, and return in an array of parsed objects
 * create a CLI that uses your file reading module to print the contents of a list of JOSN files provided on `process.argv`
 * also, you must guarantee that three files are read and console logged in the order they were passed in on `process.argv`
 * you can use any method of handling async except nested callback. aka. dont use nested calls to `fs.readFile` with anynomus function callbacks
