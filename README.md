@@ -1,5 +1,14 @@
-# code 401 js 
+Code 401 Javascript Guide 
+======
 
+# Profesional Development
+
+* JS prototype and context
+* BigO notation and functional programming
+* Sorting algorithms
+* Stacks and queues
+* Linked lists
+* Binary search tres
 
 # Backend
 
@@ -34,6 +43,7 @@
 * lecture 19 continueous integration and continueous deployment
 
 # Frontend
+
 ## Intro to angular
 * lecture 21 angular, $rootScope, and templating
 * lecture 22 webpack, angular controllers and testing
@@ -62,12 +72,3 @@
 ## Review
 * lecture 39 Review day!
 
-# Profesional Development
-* JS prototype and context
-* BigO notation and functional programming
-* Sorting algorithms
-* Stacks and queues
-* Linked lists
-* Binary search tres
-* PD1
-* PD2 
