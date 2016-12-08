@@ -1,53 +1,74 @@
-401 Labs and Solutions
-======================
-#### First Half: Back End Assignments
-| week | day | comments | title                                  | link                                                                                                                       |
-|------|-----|----------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| 1    | 1   |          | Install Node                           | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-00-install-node                           |
-|      |    |          | Module Patterns                        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-01-modular-patterns                       |
-|      | 2   |          | Build Tools                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-02-build-tools                            |
-|      |  3   |          | Parallel File Processing               | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-03-parallel-file-processing               |
-|      | 4   |          | Bitmap Transformer                     | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-04-bitmap-transformer                     |
-|      | 5   |          | DSA - Big O, Arrays and Objects        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-01/lab-05-big-o-array-methods                    |
-| 2    | 6   | TCP      | Chat Server                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-06-chat                                   |
-|      | 7   | HTTP     | Cowsay API                             | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-07-cowsay-api                             |
-|      | 8   |          | In Memory Resource API                 | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-08-in-memory-single-resource-api          |
-|      | 9   |          | Simple Persistence Single Resource API | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-09-simple-persistance-single-resource-api |
-|      | 10  |          | DSA - Bind/Call/Apply Stack and Queues | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-02/lab-10-stack-queue                            |
-| 3    | 11  | Express  | Single Resource Express API            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-11-single-resource-express-api            |
-|      | 12  |          | Express Middleware                     | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-12-express-middleware                     |
-|      | 13  | Mongo    | Single Resource Mongo Express          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-13-single-resource-mongo-express          |
-|      | 14  |          | Double Resource Mongo Express          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-14-double-resouce-mongo-express           |
-|      | 15  |          | DSA - Linked List                      | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-03/lab-15-linked-list                            |
-| 4    | 16  |          | Express Authorization                  | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-16-express-authorization                  |
-|      | 17  |          | Express Authentication                 | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-17-expresss-authentication                |
-|      | 18  |          | Travis CI                              | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-18-travis-ci                              |
-|      | 19  |          | Heroku Deployment                      | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-19-heroku-deployment                      |
-|      | 20  |          | DSA - Recursion, Intro to trees        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-04/lab-20-trees                                  |
+Code 401 Javascript Guide 
+======
 
+# Profesional Development
 
+* JS prototype and context
+* BigO notation and functional programming
+* Sorting algorithms
+* Stacks and queues
+* Linked lists
+* Binary search tres
 
-#### Second Half: Front End Assignments
-| week | day | comments                                                                                                                                         | title                                    |                                                                                                                     |
-|------|-----|--------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| 6    | 26  | Setup with karma, webpack, folders, sass/css, angular cowsay                                                                                     | Angular Cowsay                           | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-06/lab-26-angular-cowsay                  |
-|      | 27  | Angular Controllers                                                                                                                              | Testing  Controllers                     | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-06/lab-27-testing-controllers             |
-|      | 28  | Adventure test                                                                                                                                   | Adventure game and testing               | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-06/lab-28-adventure-game            |
-|      | 29  | 1-many backend - add front end with controller and 2 way binding with $http CRUD                                                                 | Two Resource Crud                        | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-06/lab-29-two-resource-crud               |
-|      | 30  | DSA - linked list                                                                                                                                |                                          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-06/lab-30-data-structures-algorithms      |
-| 7    | 31  | Bunny Widget - 1 item: list, thumbnail, full, display widget                                                                                     | Bunny Display Widgets                    | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-07/lab-31-bunny-display-widgets           |
-|     |  | Bunny Display Views                                                                                      | Bunny Display Views using angular routing                    | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-07/lab-31-bunny-display-views          |
-|      | 32  | Bunny Widget - album = multiple items in list - there could be multiple albums? pick album?                                                      | Cute Animal Gallery                      | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-07/lab-32-cute-animal-gallery             |
-|      | 33  | Bunny Widget - test directives                                                                                                                   | Cute Animal Gallery Test                 | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-07/lab-33-test-your-animal-gallery        |
-|      | 34  | 1-many backend - convert views to directives and test                                                                                            | Two Resource Directive Refactor          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-07/lab-34-two-resource-directive-refactor |
-|      | 35  | DSA - recursion                                                                                                                                  |                                          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-07/lab-35-dsa                             |
-| 8    | 36  | Cowsay helper  service                                                                                                                            | Cowsay Helper Service                    | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-08/lab-36-cowsay-helper-service           |
-|      | 37  | Error handling factory service + test                                                                                                            | Error Handling Service                   | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-08/lab-37-error-handling-service          |
-|      | 38  | "Communication Service" with global error handling object  - what is the real learning object here with regard to services? differenent from 31? | Communication Service                    | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-08/lab-38-communication-service           |
-|      | 39  | 1-many-backend - refactor CRUD $http to use a service + test                                                                                     | Two Resource Service Refactor            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-08/lab-39-two-resource-service-refactor   |
-|      | 40  | DSA - trees and binary trees                                                                                                                     |                                          | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-08/lab-40-dsa                             |
-| 9    | 41  | Cowsay frontend routing  ? incomplete description                                                                                                | Cowsay Router                            | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-09/lab-41-cowsay-router                   |
-|      | 42  | Explain client side auth                                                                                                                         | Explain Authorization and Authentication | https://github.com/codefellows/code-401-javascript-guide/tree/master/week-09/lab-42-auth                      |
-|      | 43  | Code and Test auth                                                                                                                               | Two Resource Auth and Testing            |   https://github.com/codefellows/code-401-javascript-guide/tree/master/week-09/lab-43-44-auth                                                                                                                  |
-|      | 44  | Code and Test auth                                                                                                                | Two Resource Auth and Testing                                         |    https://github.com/codefellows/code-401-javascript-guide/tree/master/week-09/lab-43-44-auth                                                                                                            |
-|      | 45  | DSA - BST                                                                                                                                        |                                          |                                                                                                                     |
+# Backend
+
+## Intro to Node.JS
+* lecture 01 modular patterns
+* lecture 02 build tools and testing
+* lecture 03 JS runtime and FS module 
+* lecture 04 Event Emitters and Bitmap
+
+## Networking
+* lecture 06 OSI, TCP, and pub/sub
+* lecture 07 HTTP and client/server
+
+## Single Resouce API
+* lecture 08 Node.JS REST api with in memory persistance
+* lecture 09 Node.JS REST api with file system persistance
+
+## Single Resouce Express API
+* lecture 11 express api with file system persistance 
+* lecture 12 express middleware
+
+## Express API with database
+* lecture 13 single resource express 
+* lecture 14 express api with second resouce
+
+## API Authentication and Authorization 
+* lecture 16 basic authentication
+* lecture 17 bearer authorization 
+
+## Asset Hosting and Deployment
+* lecture 18 asset hosing on AWS s3
+* lecture 19 continueous integration and continueous deployment
+
+# Frontend
+
+## Intro to angular
+* lecture 21 angular, $rootScope, and templating
+* lecture 22 webpack, angular controllers and testing
+
+## Adventure Game
+* lecture 23 angular services 
+* lecture 24 built in directives
+
+## Image Gallery Crud App
+* lecture 26 routing
+* lecture 27 authentication and authorization
+* lecture 28 AJAX CRUD and multi-part form requests
+* lecture 29 components as templates with controller logic
+
+## Fronend for first project week api
+* lecture 31 component bindings
+* lecture 32 component callbacks
+* lecture 33 filter and uiBootstrap
+* lecture 34 directives and dom manipulation
+
+## Oauth
+* lecture 36 Google OAuth backend
+* lecture 37 Google Oauth frontend
+* lecture 38 Frontend deployment and CDNs
+
+## Review
+* lecture 39 Review day!
+
