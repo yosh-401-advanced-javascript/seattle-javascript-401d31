@@ -17,4 +17,4 @@ Code 401 JS -- Big o and Functional programming
 [Funfunfunction functional programming video series]: https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
 [Functional programming jagon]: https://github.com/hemanth/functional-programming-jargon#functional-programming-jargon
 [What is functional programming]: http://blog.jenkster.com/2015/12/what-is-functional-programming.html
-[Functional-Light JS]: https://github.com/getify/Functional-Light-JS
+[Functional-Light JS Book]: https://github.com/getify/Functional-Light-JS
