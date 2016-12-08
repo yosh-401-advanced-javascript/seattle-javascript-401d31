@@ -10,7 +10,7 @@
   * **Bases**
     * Bases refer to the creation of a new digit, whenever the base "ticks over"
       * **example:** base2 has 2 possible values before it ticks over
-        * binary is base2, thus only allowing for a 0 and a 1
+        * **binary is base2**, thus only allowing for a **0** and a **1**
       * **base8** (octal) - 8 possible options (0-7)
       * **base10** (decimal) - has 10 possible values - (0-9)
       * **base16** (hexidecimal) - has 15 possible values (0-f)
@@ -45,9 +45,9 @@
       * "dependency hell" refers to version lock - this means you cannot safely move your project forward without issues
   * `version [MAJOR].[MINOR].[PATCH]`
     * ex: `version 1.0.0`
-    * MAJOR - increment the MAJOR version when you have removed or changed a feature and where dependent modules must be modified to work with the new version
-    * MINOR - increment the MINOR version when a feature has been added but the module is backwards compatible
-    * PATCH - increment the PATCH version when fixing a bug/defect
+    * **MAJOR** - increment the MAJOR version when you have removed or changed a feature and where dependent modules must be modified to work with the new version
+    * **MINOR** - increment the MINOR version when a feature has been added but the module is backwards compatible
+    * **PATCH** - increment the PATCH version when fixing a bug/defect
 
 #### Bitmap Transformer
   * **Project Overview**
