@@ -11,7 +11,7 @@
 
 # Programming Exercise
 * Write out the bdd framework from the class lecture
-* Add beforeEach and afterEach functionality
+* Add `beforeEach` and `afterEach` functionality
 * **SUPER BONUS**: 
  * refactor your bdd framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
 
