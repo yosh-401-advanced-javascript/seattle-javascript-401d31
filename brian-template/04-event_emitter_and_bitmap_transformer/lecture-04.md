@@ -1,9 +1,9 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 04: EventEmitter and Bitmap Transformer
 =====================================
 
-#### Code Review
+## Code Review
 
-#### EventEmitter
+## EventEmitter
   *  **Overview**
     * in NodeJS, we can create custom events that can be used on demand
     * all objects that emit events are instances of the `EventEmitter` class
@@ -15,7 +15,7 @@
   * **demo:** event emitter demo
     * [event-emitter-demo](/04-event_emitter_and_bitmap_transformer/demo/event-emitter-demo)
 
-#### Working with Binary Data - Part 2
+## Working with Binary Data - Part 2
   * **Bases**
     * bases refer to the creation of a new digit, whenever the base "ticks over"
       * **example:** base2 has 2 possible values before it ticks over
@@ -47,7 +47,7 @@
     | 00001111       | f              |
     ```
 
-#### Semantic Versioning
+## Semantic Versioning
   * semantic versioning is a simple set of rules that dictates how version numbers are assigned and released
     * following proper versioning conventions will help avoid the dreaded "dependency hell"
       * "dependency hell" refers to version lock - this means you cannot safely move your project forward without issues
@@ -57,7 +57,7 @@
     * **MINOR** - increment the MINOR version when a feature has been added but the module is backwards compatible
     * **PATCH** - increment the PATCH version when fixing a bug/defect
 
-#### Bitmap Transformer
+## Bitmap Transformer
   * **Project Overview**
     * what is a `.bmp`?
       * raster graphics image file
