@@ -4,18 +4,26 @@
 #### Code Review
 
 #### EventEmitter
-  *
+  *  **Overview**
+    * in NodeJS, we can create custom events that can be used on demand
+    * all objects that emit events are instances of the `EventEmitter` class
+    * functions are added to custom named events and then emitted through the use of the `.on()` and `.emit()` methods
+      * `.on()` lets us register the listeners
+      * `.emit()` lets us trigger (emit) the event
+    * when an event is emitted all functions attached to the event are called synchronously
+      * to get around this you can use `process.nextTick` or `setImmediate`
+  * **demo:** event emitter demo
+    * [event-emitter-demo](/04-event_emitter_and_bitmap_transformer/demo/event-emitter-demo)
 
 #### Working with Binary Data - Part 2
   * **Bases**
-    * Bases refer to the creation of a new digit, whenever the base "ticks over"
+    * bases refer to the creation of a new digit, whenever the base "ticks over"
       * **example:** base2 has 2 possible values before it ticks over
         * **binary is base2**, thus only allowing for a **0** and a **1**
       * **base8** (octal) - 8 possible options (0-7)
-      * **base10** (decimal) - has 10 possible values - (0-9)
-      * **base16** (hexidecimal) - has 15 possible values (0-f)
-        * using the hexidecimal format, we can represent numbers that are higher than the number **9** with a letter, starting with **a** and counting up to the letter **f**
-      
+      * **base10** (decimal) - 10 possible values - (0-9)
+      * **base16** (hexidecimal) - 15 possible values (0-f)
+        * using the hexidecimal format, we represent numbers that are higher than the number **9** with a letter, starting with **a** and counting up to the letter **f**
     
   * **Hexidecimal Conversion Chart**
     ```
@@ -51,24 +59,32 @@
 
 #### Bitmap Transformer
   * **Project Overview**
-    * why is this specific project important?
-      * this project was designed with a few things in mind:
-        * the general process of working with binary data
-        * working through the process of deconstructing a buffer, manipulating it, and writing it back to a new buffer (or the same buffer, if you choose)
-        * working with the `fs` module to read and write new files
-        * working with callbacks and, in particular, working with the NodeJS "error first" callback pattern
-        * researching and creating features that represent a series of "real life" programming tasks
     * what is a `.bmp`?
-      * its a file type
-      * you will be reading and running transforms on an 8 bit bitmap
-  * **Getting Started**
-    * groking the `.bmp` file format wiki
-      * [BMP File Format](https://en.wikipedia.org/wiki/BMP_file_format)
-    * deconstructing a `.bmp` file
-      * major components:
-        * file header
-        * DIB header
-        * colors table
-        * pixel array
+      * raster graphics image file
+      * commonly used in older versions of Microsoft Windows
+    * how does this project relate to web application development?
+      * this project was designed with a few things in mind:
+        * working through the process of deconstructing a buffer, manipulating it, and writing it back to a new buffer (or the same buffer, if you choose)
+        * working with the file system
+        * working with callbacks and the NodeJS "error first" callback pattern
+        * working with a self managing team to create, plan, test, and build
+        * figuring out creative solutions within a specific problem domain
+    * [sample `.bmp`](/04-event_emitter_and_bitmap_transformer/demo/assets/palette-bitmap.bmp)
+    * possible directory structure:
+      ```
+        - index.js
+        - lib
+          - bitmap file helper
+        - model
+          - bitmap constructor
+          - color constructor
+        - test
+          - bitmap file helper test
+          - bitmap constructor test
+          - color constructor test
+      ```
+    * **demo:** `.bmp` reader
+      * [bitmap-reader.js](/04-event_emitter_and_bitmap_transformer/demo/bitmap-reader.js)
+
   * **Project Team Selection**
     * TODO: Add Project Teams/Members
