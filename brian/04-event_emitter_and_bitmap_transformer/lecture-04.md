@@ -7,8 +7,17 @@
   *
 
 #### Working with Binary Data - Part 2
-  * **Conversions**
-    * Hexadecimal Conversions: (0-f)
+  * **Bases**
+    * Bases refer to the creation of a new digit, whenever the base "ticks over"
+      * **example:** base2 has 2 possible values before it ticks over
+        * binary is base2, thus only allowing for a 0 and a 1
+      * **base8** (octal) - 8 possible options (0-7)
+      * **base10** (decimal) - has 10 possible values - (0-9)
+      * **base16** (hexidecimal) - has 15 possible values (0-f)
+        * using the hexidecimal format, we can represent numbers that are higher than the number **9** with a letter, starting with **a** and counting up to the letter **f**
+      
+    
+  * **Hexidecimal Conversion Chart**
     ```
     | Binary         | Hexadecimal    |
     | :------------- | :------------- |
@@ -49,6 +58,9 @@
         * working with the `fs` module to read and write new files
         * working with callbacks and, in particular, working with the NodeJS "error first" callback pattern
         * researching and creating features that represent a series of "real life" programming tasks
+    * what is a `.bmp`?
+      * its a file type
+      * you will be reading and running transforms on an 8 bit bitmap
   * **Getting Started**
     * groking the `.bmp` file format wiki
       * [BMP File Format](https://en.wikipedia.org/wiki/BMP_file_format)
@@ -58,6 +70,5 @@
         * DIB header
         * colors table
         * pixel array
-  * **Helpers**
   * **Project Team Selection**
     * TODO: Add Project Teams/Members
