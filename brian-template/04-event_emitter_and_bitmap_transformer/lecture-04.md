@@ -71,7 +71,6 @@
         * figuring out creative solutions within a specific problem domain
     * [sample `.bmp`](/04-event_emitter_and_bitmap_transformer/demo/assets/palette-bitmap.bmp)
     * possible directory structure:
-      ```
         - index.js
         - lib
           - bitmap file helper
@@ -82,7 +81,6 @@
           - bitmap file helper test
           - bitmap constructor test
           - color constructor test
-      ```
     * **demo:** `.bmp` reader
       * [bitmap-reader.js](/04-event_emitter_and_bitmap_transformer/demo/bitmap-reader.js)
 
