@@ -1,4 +1,4 @@
-Code 401 JS -- Big O and Functional programming
+401 JS Big O and Functional programming
 ===============================================
 
 # Big O Resources
