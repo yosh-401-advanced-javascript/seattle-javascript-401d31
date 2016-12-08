@@ -10,6 +10,4 @@ bmp.size = bitmap.readInt32LE(2);
 bmp.width = bitmap.readInt32LE(18);
 bmp.height = bitmap.readInt32LE(22);
 
-// hint: you'll still need to get the 
-
 console.dir(bmp);
