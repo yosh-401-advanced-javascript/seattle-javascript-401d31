@@ -9,8 +9,11 @@
 * Skim [MDN Object prototype]
 * Read [MDN inheritance and the prototype chain]
 
-
-# Context Video 
+# Programming Exercise
+* write out your own bdd framework
+* add beforeEach and afterEach functionality
+* **SUPER BONUS**: 
+ * refactor your bdd framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
 
 [MDN new]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
 
