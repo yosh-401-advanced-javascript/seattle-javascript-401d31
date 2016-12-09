@@ -93,6 +93,7 @@ let sortedNumbers = [2, 5, 7, 10, 22, 23, 26, 32, 45, 67, 73, 84, 92];
 
 // O(log(n))
 function binarySearch(array, find){
+  // the binary search algorythm only works on sorted arrays
   // this aglogorthm is considered to be "O(log(n))" because
   // log(n) is a little harder to explain, but the idea is
   // that each time the algorythm runs it cuts the number of items it searchs in half
