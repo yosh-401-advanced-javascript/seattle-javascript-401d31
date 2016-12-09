@@ -85,6 +85,7 @@ function ABC(shape, color){
 }
 
 ABC.prototype = Object.create(XYZ.prototype);
+ABX.prototype.constructor = ABC;
 
 ABC.prototype.changeColor = function(color){
   this.color = color;
@@ -111,8 +112,20 @@ let redBall = new ABC('ball', 'red');
 // }
 
 ```
+* dont mess with `__proto__` its slow **not even to read a property**
+* if you want to determin an objects prototype use `Object.getPrototypeOf(someObject)`
+``` javascript
+var prototype = {};
+var color = Object.create(prototype);
+Object.getPrototypeOf(color) === prototype; // true
+```
+* don't nest a lot of prototype's it will have a speed impact on your code
+* if you look up a prototype that is not on any prototype it will look through the whole prototype chain
 
 # Learning Objectives
+* understand the difference between context and scope
+* learn how to configure a functions context
+* understand the roll context plays in constructor functions
 
 # Programming Exercise
 * Write out the bdd framework from the class lecture
