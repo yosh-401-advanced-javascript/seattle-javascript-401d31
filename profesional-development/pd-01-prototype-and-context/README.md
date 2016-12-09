@@ -43,7 +43,7 @@ getCoolStuff.apply(state, ['hello', 'world']);
 var state = {};
 var getCoolState = getCoolStuff.bind(state);
 
-getCoolState('hello', world');
+getCoolState('hello', 'world');
 ```   
 * Arrow functions inherit their context from their parent context
 ``` javascript
@@ -57,7 +57,7 @@ describe('lulwat', function(){
   })
 })
 ```
-* variables can be assed to arrow functions  
+* variables can be assigned to arrow functions  
 ``` javascript
 var doubleIt = num => num * 2;
 
