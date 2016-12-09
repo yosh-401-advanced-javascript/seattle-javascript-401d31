@@ -8,17 +8,17 @@ function FArray(){
   this.length = arguments.length;
 }
 
-FArray.prototype.push = function(value){
-  let result = {};
-  result[this.length] = value;
-  result.length = this.length + 1;
-  for(var i=0; i<this.length; ++i){
-    result[i] = this[i];
-  }
+//FArray.prototype.push = function(value){
+  //let result = {};
+  //result[this.length] = value;
+  //result.length = this.length + 1;
+  //for(var i=0; i<this.length; ++i){
+    //result[i] = this[i];
+  //}
 
-  result.prototype = FArray.prototype;
-  return result;
-}
+  //result.prototype = FArray.prototype;
+  //return result;
+//}
 
 FArray.prototype.reduce = function(callback, initial){
 
