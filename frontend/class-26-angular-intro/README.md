@@ -1,5 +1,5 @@
-401 JS -- Angular
-=================
+401 JS -- class 26 Angular 
+===========================
 
 # Angular Resources
 * [Angular Developer Guide]

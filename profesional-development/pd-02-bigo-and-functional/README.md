@@ -4,6 +4,7 @@
 # Big O Resources
 * Read [simple Wiki Big O] 
 * Watch [hacker Rank Big O video]
+* Look at [Big O Cheat Sheet]
 
 
 # Functional programming resources
@@ -18,3 +19,4 @@
 [functional programming jagon]: https://github.com/hemanth/functional-programming-jargon#functional-programming-jargon
 [what is functional programming]: http://blog.jenkster.com/2015/12/what-is-functional-programming.html
 [functional-Light JS Book]: https://github.com/getify/Functional-Light-JS
+[Big O Cheat Sheet]: http://bigocheatsheet.com/
