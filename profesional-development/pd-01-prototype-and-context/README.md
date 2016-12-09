@@ -1,4 +1,4 @@
-# JS Prototype and Context
+# 401 JS -- JS Prototype and Context
 
 # Context resources
 * Read [MDN this]
@@ -120,7 +120,7 @@ var color = Object.create(prototype);
 Object.getPrototypeOf(color) === prototype; // true
 ```
 * don't nest a lot of prototype's it will have a speed impact on your code
-* if you look up a prototype that is not on any prototype it will look through the whole prototype chain
+* if you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
 
 # Learning Objectives
 * understand the difference between context and scope
