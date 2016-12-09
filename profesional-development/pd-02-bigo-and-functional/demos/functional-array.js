@@ -27,7 +27,7 @@ FArray.prototype.copy = function(){
   for(var key in this){
     result[key] = this[key];
   }
-  return this;
+  return result;
 }
 
 // O(n) because it runs copy
@@ -43,12 +43,13 @@ FArray.prototype.push = function(value){
 // and fArray is the new FArray with the popped value
 // this was done to keep pop a "pure function"
 FArray.prototype.pop = function(){
-  let copy = this.copy();
-  delete copy[this.length - 1];
+  let result  = this.copy();
+  delete result[--result.length];
+  //copy.length--;
   
   return  { 
     value: this[this.length -1],
-    fArray: copy,
+    fArray: result,
   }
 }
 
@@ -151,12 +152,13 @@ console.log();
 
 //TODO: implement filter with reduce
 
+// push creates a new FArray with a new value at the end
+console.log('nums.push(6000)', nums.push(6000));
+console.log();
+
+
 // push pop returns an object with the last value and a new FArray
 // with the last value removed
 console.log('nums.pop()', nums.pop());
-console.log();
-
-// push creates a new FArray with a new value at the end
-console.log('nums.push(6000)', nums.push(6000));
 console.log();
 
