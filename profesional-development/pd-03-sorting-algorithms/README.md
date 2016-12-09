@@ -4,7 +4,6 @@ Code 401JS -- PD02 Sorting Algorythms
 # Sorting Algorythm Resouces
 * Watch [15 sorting algorythm visualizations]
 * Watch [sorting algorythm visualization comparison]
-* 
 
 # Overview
 * [quick sort]
