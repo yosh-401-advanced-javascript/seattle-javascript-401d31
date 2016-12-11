@@ -1,79 +1,87 @@
 'use strict';
 
+//quick sort 
 
-function quicksort(items){
-  var index;
+
+function quicksort(items, left, right){
+   left = left || 0;  
+   right = right || items.length -1;
+
+  // TODO: uncomment this to see how the partitioning works
+  //console.log(items.slice(left, right));
+
   if (items.length > 1){
-    items = _quicksort(items, 0, items.length-1);
+    // partition returns the position to the right of the last pivot
+    // which is one right of half of the current partition
+    var index = partition(items, left, right);
+
+    // sort the left side of the pivot if not yet sorted
+    if (left < index -1){
+      quicksort(items, left, index -1);
+    }
+
+    // sort the right side of the pivot if not yet sorted
+    if (index < right){
+      quicksort(items, index, right);
+    }
+    
   }
 
   return items;
 }
 
-function _quicksort(items, left, right){
-    let index = partition(items, left, right);
-    console.log('index', index, '\n');
-    console.log('qs left', left)
-    console.log('qs right', right)
-
-    if (left < index - 1){
-      console.log('small side');
-      _quicksort(items, left, index -1);
-    }
-
-    if(index < right){
-      console.log('big side');
-      _quicksort(items, index, right);
-    }
-    
-    return items;
+function swap(items, left, right){
+  //TODO: comment out to watch the swapping in action
+  //console.log('swaping', items[left], items[right]);
+  let tmp = items[left];
+  items[left] = items[right];
+  items[right] = tmp;
 }
 
-console.log('partition', partition([2,3,5,7,2,4], 0, 5));
+function partition(items, left, right, pivot){
+  // only reset the pivot if the current partition has not yet
+  // found a pivot
+  pivot = pivot || items[Math.floor((left + right) / 2)];
+  //TODO: uncomment this to see the pivot point
+  //console.log('pivot', pivot); 
 
-function partition(items, left, right) {
-  var pivot = items[Math.floor((right + left) / 2)];
-  console.log('items', items);
-  console.log('pivot', pivot);
-  console.log('left', left);  
-  console.log('right', right, '\n');
-  // advance left index to the right as log as its value is less than the pivot
-  left = advanceLeftIndex(items, left, pivot);
+  // continue swaping around the pivot until all items on 
+  // left of the pivot are less than the pivot and all items
+  // on the right of the pivot are greater than the pivot
+  if (left <= right){ // go until the right side 
 
-  // advance right index to the left as log as its value is greater than the pivot
-  right = advanceRightIndex(items, right, pivot)
+    // advance the left index to the right as long as its value is 
+    // smaller than the pivot
+    left = advanceLeft(items, left, pivot);
 
-  if (left <= right) {
-    swap(items, left, right);
-    return partition(items, left +1, right -1);
+    // advance the right index to the left as long as its value is 
+    // greater than the pivot
+    right = advanceRight(items, right, pivot);
+    
+    if (left <= right){
+      if (left < right) {
+        // swap the items around the pivot
+        swap(items, left, right);
+      }
+      return partition(items, left + 1, right - 1, pivot);
+    }
   }
 
+  // if the left index is greater than the right 
+  // there can be no more sorting around the pivot
   return left;
-
 }
 
-function advanceLeftIndex(items, index, pivot){
-  if (items[index] < pivot) return advanceLeftIndex(items, index + 1, pivot);
-  return index;
+function advanceLeft(items, left, pivot){
+  if (items[left] < pivot)
+    return advanceLeft(items, left + 1, pivot);
+  return left;
 }
 
-function advanceRightIndex(items, index, pivot){
-  if (items[index] > pivot) return advanceLeftIndex(items, index - 1, pivot);
-  return index;
+function advanceRight (items, right, pivot){
+  if (items[right] > pivot)
+    return advanceRight(items, right -1, pivot);
+  return right;
 }
 
-function swap(items, firstIndex, secondIndex){
-  // you can make this functional by returning a copy of the array 
-  let temp = items[firstIndex];
-  items[firstIndex] = items[secondIndex];
-  items[secondIndex] = temp;
-}
-
-let ascending = (a, b) => a > b ? true: false;
-let descending = (a, b) => a < b ? true: false;
-
-//console.log([3,1,6,23,4,1].sort(ascending))
-//
-//let unsorted = [12,3,53,4,63,6,2,34];
-//console.log(quicksort([9,3,4,2,5,7]));
-console.log(quicksort([2,3,9,32,8,100,5,7,4]));
+console.log(quicksort([23,3,5,1,55,38,49,200,432,1, 352]));
