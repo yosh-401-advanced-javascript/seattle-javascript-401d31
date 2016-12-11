@@ -111,6 +111,31 @@ let sorted = sortAlphabeticly(['Glorb', 'slorb', 'Jlorb', 'clorb'])
 // names has not changed
 ```
 
+# Factory function
+A factory function is a pure function that acts like a constructor without the new keyword.
+``` javascript
+// constructor
+function User(name, permissions){
+  this.name = name;
+  this.permissions = permissions
+}
+
+User.prototype.getName = function() { return this.name };
+
+// factory function
+function user(name, permissions){
+  let proto = {
+    getName: function(){ return this.name },
+  };
+  
+  let result = Object.create(proto);
+  result.name = name;
+  result.permissions = permissions;
+
+  return result;
+}
+```
+
 # Exercise
 * Implement a List constructor that acts like an array
 * For the List constructor implement the prototype methods, `map`, `filter`, `reduce`, and `forEach`
