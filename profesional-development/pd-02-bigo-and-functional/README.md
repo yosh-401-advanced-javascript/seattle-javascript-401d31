@@ -26,6 +26,10 @@
  * "O(1)" runtime is also called constant time
 * if an algorithm run through every item, it is said that the algorithm runs with an "O(n)" runtime.
  * "O(n)" runtime is also called linear time
+* if an algorithm runs torgh a list "n" times "n" time, it is said that the alorithm runs with an "O(n^2)" runtime.
+ * "O(n^2)" runtime is also called quadradic time
+* if an algorithm recursivly cuts its itteration in half from "n" until 1, it is said that the alogrithm runs with"O(log(n))"
+
  
 ## Functional programing
 * In order to understand functional programing you must understand what a side-effect is.
