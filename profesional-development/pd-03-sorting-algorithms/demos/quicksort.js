@@ -7,6 +7,7 @@ function quicksort(items, compare, left, right){
 
   // TODO: uncomment this to see how the partitioning works
   //console.log(items.slice(left, right));
+
   if (items.length > 1){
     // partition returns the position to the right of the last pivot
     // which is one right of half of the current partition
@@ -71,20 +72,51 @@ function partition(items, compare, left, right, pivot){
   return pivot;
 }
 
-function advanceLeft(items, left, pivot){
-  if (items[left] < items[pivot])
-    return advanceLeft(items, left + 1, pivot);
+function advanceLeft(items, compare, left, pivot){
+  if (compare(items[left], items[pivot]))
+    return advanceLeft(items, compare, left + 1, pivot);
   return left;
 }
 
-function advanceRight (items, right, pivot){
-  if (items[right] > items[pivot])
-    return advanceRight(items, right -1, pivot);
+function advanceRight (items, compare, right, pivot){
+  if (compare(items[pivot], items[right]))
+    return advanceRight(items, compare, right -1, pivot);
   return right;
 }
 
-let lul = [23,3,5,1,55,38,49,200,432,1, 352];
-greater = (a, b) => a > b;
-console.log(quicksort(lul));
+let nums = [23,3,5,1,55,38,49,200,432,1, 352];
+
+let greater = (a, b) => a > b;
+let less = (a,b) => a < b;
+
+console.log(quicksort(nums, greater));
+console.log(quicksort(nums, less));
 
 
+
+let people = [
+  {
+    name: 'lark',
+    age: 12,
+  },
+  {
+    name: 'clark',
+    age: 32,
+  },
+  {
+    name: 'mark',
+    age: 7,
+  },
+  {
+    name: 'shark',
+    age: 11,
+  },
+  {
+    name: 'lark',
+    age: 19,
+  },
+];
+
+let greaterAge = (a, b) => a.age > b.age;
+
+console.log(quicksort(people, greaterAge));
