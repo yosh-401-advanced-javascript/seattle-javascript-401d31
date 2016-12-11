@@ -1,4 +1,4 @@
-# 401 JS -- JS Prototype and Context
+# 401 JS -- Prototype and Context
 
 # Context resources
 * Read [MDN this]
@@ -8,6 +8,11 @@
 * Skim [MDN new]
 * Skim [MDN Object prototype]
 * Read [MDN inheritance and the prototype chain]
+
+# Learning Objectives
+* understand the difference between context and scope
+* learn how to configure a functions context
+* understand the roll context plays in constructor functions
 
 # Overview
 * when a function has a `this` we say that `this` is the functions context
@@ -122,12 +127,7 @@ Object.getPrototypeOf(color) === prototype; // true
 * don't nest a lot of prototype's it will have a speed impact on your code
 * if you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
 
-# Learning Objectives
-* understand the difference between context and scope
-* learn how to configure a functions context
-* understand the roll context plays in constructor functions
-
-# Programming Exercise
+# Exercise
 * Write out the bdd framework from the class lecture
 * Add `beforeEach` and `afterEach` functionality
 * **SUPER BONUS**: 
