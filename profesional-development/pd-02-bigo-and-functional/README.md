@@ -107,6 +107,10 @@ let sorted = sortAlphabeticly(['Glorb', 'slorb', 'Jlorb', 'clorb'])
 // names has not changed
 ```
 
+# Exercise
+* Implement a List constructor that acts like an array
+* For the List constructor implement the prototype methods, `map`, `filter`, `reduce`, and `forEach`
+
 [simple Wiki Big O]: https://simple.wikipedia.org/wiki/Big_O_notation
 [hacker Rank Big O video]: https://www.youtube.com/watch?v=v4cd1O4zkGw
 [funfunfunction functional programming video series]: https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
