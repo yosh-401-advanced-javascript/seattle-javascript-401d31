@@ -5,6 +5,10 @@ function quicksort(items, compare, left, right){
    left = left || 0;  
    right = right || items.length -1;
 
+   // by default compare will sort things smallet to largest
+   // but this will break if the items can't be compared with > or < 
+   compare = compare ? compare : (a,b) => a < b;
+
   // TODO: uncomment this to see how the partitioning works
   //console.log(items.slice(left, right));
 
@@ -38,7 +42,8 @@ function swap(items, left, right){
 
 function partition(items, compare, left, right, pivot){
   // only create the pivot if the current partition has not yet
-  // created a pivot
+  // created a pivot. pivit will be the index of the middle of the 
+  // current partion
   pivot = pivot || Math.floor((left + right) / 2);
 
   // continue swaping around the pivot until all items on 
@@ -46,23 +51,22 @@ function partition(items, compare, left, right, pivot){
   // on the right of the pivot are greater than the pivot
   if (left <= right){ // go until the right side 
 
-    // advance the left index to the right as long as its value is 
-    // smaller than the pivot's value
+    // move the left index right until its value should
+    // be on the other side of the pivot
     left = advanceLeft(items, compare, left, pivot);
-
-    // advance the right index to the left as long as its value is 
-    // greater than the pivot's value
+    // move the right index left until its value should 
+    // be on the other side of the pivot
     right = advanceRight(items, compare, right, pivot);
     
-    // now that the pointers have moved check if more swaps need
+    // now that the indexes have moved check if more swaps need
     // to be done
     if (left <= right){
       // swap the items around the pivot
-      // but dont swap an item with its self
+      // but dont swap an item with its self (aka leftIndex == rightIndex)
       if (left < right) 
         swap(items, left, right);
       // continue sorting items around the pivot until 
-      // both sides are sorted
+      // both sides are sorted (aka left > right)
       return partition(items, compare, left + 1, right - 1, pivot);
     }
   }
@@ -89,6 +93,7 @@ let nums = [23,3,5,1,55,38,49,200,432,1, 352];
 let greater = (a, b) => a > b;
 let less = (a,b) => a < b;
 
+console.log(quicksort(nums));
 console.log(quicksort(nums, greater));
 console.log(quicksort(nums, less));
 
@@ -118,3 +123,4 @@ let people = [
 let greaterAge = (a, b) => a.age > b.age;
 
 console.log(quicksort(people, greaterAge));
+
