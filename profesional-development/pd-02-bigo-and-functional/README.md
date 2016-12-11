@@ -122,6 +122,8 @@ function User(name, permissions){
 
 User.prototype.getName = function() { return this.name };
 
+let ada = new User('adalove', 'admin');
+
 // factory function
 function user(name, permissions){
   let proto = {
@@ -134,6 +136,8 @@ function user(name, permissions){
 
   return result;
 }
+
+let delia = user('delia', 'moderator');
 ```
 
 # Exercise
