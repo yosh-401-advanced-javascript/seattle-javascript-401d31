@@ -1,7 +1,5 @@
 'use strict';
 
-//quick sort 
-
 
 function quicksort(items, left, right){
    left = left || 0;  
@@ -13,16 +11,16 @@ function quicksort(items, left, right){
   if (items.length > 1){
     // partition returns the position to the right of the last pivot
     // which is one right of half of the current partition
-    var index = partition(items, left, right);
+    var pivot = partition(items, left, right);
 
     // sort the left side of the pivot if not yet sorted
-    if (left < index -1){
-      quicksort(items, left, index -1);
+    if (left < (pivot - 1)){
+      quicksort(items, left, pivot);
     }
 
     // sort the right side of the pivot if not yet sorted
-    if (index < right){
-      quicksort(items, index, right);
+    if ((pivot + 1) < right){
+      quicksort(items, pivot + 1, right);
     }
     
   }
@@ -39,11 +37,9 @@ function swap(items, left, right){
 }
 
 function partition(items, left, right, pivot){
-  // only reset the pivot if the current partition has not yet
-  // found a pivot
-  pivot = pivot || items[Math.floor((left + right) / 2)];
-  //TODO: uncomment this to see the pivot point
-  //console.log('pivot', pivot); 
+  // only create the pivot if the current partition has not yet
+  // created a pivot
+  pivot = pivot || Math.floor((left + right) / 2);
 
   // continue swaping around the pivot until all items on 
   // left of the pivot are less than the pivot and all items
@@ -51,37 +47,44 @@ function partition(items, left, right, pivot){
   if (left <= right){ // go until the right side 
 
     // advance the left index to the right as long as its value is 
-    // smaller than the pivot
+    // smaller than the pivot's value
     left = advanceLeft(items, left, pivot);
 
     // advance the right index to the left as long as its value is 
-    // greater than the pivot
+    // greater than the pivot's value
     right = advanceRight(items, right, pivot);
     
+    // now that the pointers have moved check if more swaps need
+    // to be done
     if (left <= right){
-      if (left < right) {
-        // swap the items around the pivot
+      // swap the items around the pivot
+      // but dont swap an item with its self
+      if (left < right) 
         swap(items, left, right);
-      }
+      // continue sorting items around the pivot until 
+      // both sides are sorted
       return partition(items, left + 1, right - 1, pivot);
     }
   }
 
   // if the left index is greater than the right 
   // there can be no more sorting around the pivot
-  return left;
+  return pivot;
 }
 
 function advanceLeft(items, left, pivot){
-  if (items[left] < pivot)
+  if (items[left] < items[pivot])
     return advanceLeft(items, left + 1, pivot);
   return left;
 }
 
 function advanceRight (items, right, pivot){
-  if (items[right] > pivot)
+  if (items[right] > items[pivot])
     return advanceRight(items, right -1, pivot);
   return right;
 }
 
-console.log(quicksort([23,3,5,1,55,38,49,200,432,1, 352]));
+let lul = [23,3,5,1,55,38,49,200,432,1, 352];
+console.log(quicksort(lul));
+
+
