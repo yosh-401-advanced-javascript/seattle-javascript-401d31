@@ -16,7 +16,7 @@
 * students will be able to determine and describe the runtime complexity of an algorighm
 * students will be able to identify and explain the qualities of imperitive and functional code
 * students will be able to determine whether or not a function is pure
-* students will be able to implement an functional array with map, filter, reduce, and forEach methods
+* students will be able to implement a functional array-like list with map, filter, reduce, and forEach methods
 
 # Overview
 ## Big O
