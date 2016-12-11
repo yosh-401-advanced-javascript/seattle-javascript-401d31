@@ -1,4 +1,4 @@
-# 401 JS -- JS Prototype and Context
+# 401 JS -- Prototype and Context
 
 # Context resources
 * Read [MDN this]
