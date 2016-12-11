@@ -70,10 +70,12 @@ function map(input, callback){
 * Cons of functional programming
  * Looks more complex at first
  * Functions may have more argumetns
+ 
+### Impertive vs Functional example
+#### Impertive alphabetical sort
+Imperitve code is hard to read because you have to figure out what is happening at each line. Loops are generaly very hard to read.
 ```
-// imperitve code is hard to read because you have to figure out what is happening at each line
-// loops are generaly very hard to read
-function imperitiveAlphabeticalSort(items) {  
+function alphabeticalSort(items) {  
     var length = items.length;
     for (var i = (length - 1); i >= 0; i--) {
         for (var j = (length - i); j > 0; j--) {
@@ -87,21 +89,18 @@ function imperitiveAlphabeticalSort(items) {
 }
 
 let spooky = ['grr', 'boo', 'creek', 'squeek', 'glimer'];
-imperitiveAlphabeticalSort(spooky);
+alphabeticalSort(spooky);
 // spooky is now sorterd
-
-// even though the following may seem  complcated at first, it should be more readable at a glance than 
-// the imperitive code above, that does the same thing. one important thing to note is that the .sort()
-// method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly
-// uses the .slice() method to create a copy of the original list before it runs sort(). this makes 
-// sortAlphabeticly a pure function.
-
+```
+#### Functional alphabetical sort
+* even though the following may seem  complcated at first, it should be more readable at a glance than the imperitive code above, that does the same thing. 
+* one important thing to note is that the .sort() method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly uses the .slice() method to create a copy of the original list before it runs sort(). this makes sortAlphabeticly a pure function.
+``` javascript
 let sortAlphabeticly = list => list.slice().sort((a, b) => a.toLowerCase() > b.toLowerCase());
 let names = ['Glorb', 'slorb', 'Jlorb', 'clorb'];
 
 // this line should be very readble as long as you pay attention to the function name
 let sorted = sortAlphabeticly(['Glorb', 'slorb', 'Jlorb', 'clorb'])
-
 // sorted is now a sorted copy of names
 // names has not changed
 ```
