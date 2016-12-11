@@ -57,12 +57,27 @@ function map(input, callback){
   return result;
 }
 ```
+* a program with no side effects at all is not very usefull
+ * no side effects means no input or output
+* because a program with no-side effects is not useful, functional programers try two write there code as functional as possible
+ * they do this by limiting functions with side effects to as few as possible
+ * they also have design patterns for wraping functions with side effects to act like pure functions
 * Pros of functional programming
- * Easy to test pure functions
- * When done correclty its more readble 
- * by isolating the the code with the most potential for bugs (code with side effects) to as few places as possible, you reduce the time it takes to track down bugs
+ * Easy to test
+ * When done correclty its more readble
+ * By isolating the the code with the most potential for bugs (code with side effects) to as few places as possible, you reduce the time it takes to track down bugs
+ * Encurages modularization
 * Cons of functional programming
- * can be slower
+ * Looks more complex at first
+ * Functions may have more argumetns
+```
+// even though this may seem more complcated at first
+let sortAlphabeticly = list => list.sort((a, b) => a.toLowerCase() > b.toLowerCase());
+
+// this line should be very readble
+sortAlphabeticly(['glorb', 'slorb', 'jlorb', 'clorb'])
+```
+
 
 
 
