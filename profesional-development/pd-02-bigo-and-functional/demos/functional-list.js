@@ -1,18 +1,15 @@
 'use strict';
 
-// FArray can stand for F(unctional)array in the sence of functional 
-// programing... but you could also call it a F(ake)Array because its
-// also meant to demonstrate how an Array can be implamented from scratch
-
 // all the functions in this file are considered "pure functions"
 // pure function are functions that do not mutate any data that are
 // defined outside of their scope. 
 //
-// this means that the methods on FArray do not change the instance 
-// of fArray that call the functions, instead they create a return 
+// this means that the methods on List do not change the instance 
+// of list that call the functions, instead they create a return 
 // a new Farray that has the desired change
 
-function FArray(){
+// TODO: refactor the constructor into a factory function
+function List(){
   // this will create indexed values with all teh arguments passed into
   for(var key in arguments){
     this[key] = arguments[key];
@@ -22,8 +19,8 @@ function FArray(){
 }
 
 // O(n)
-FArray.prototype.copy = function(){
-  let result = new FArray();
+List.prototype.copy = function(){
+  let result = new List();
   for(var key in this){
     result[key] = this[key];
   }
@@ -31,30 +28,30 @@ FArray.prototype.copy = function(){
 }
 
 // O(n) because it runs copy
-FArray.prototype.push = function(value){
+List.prototype.push = function(value){
   let result = this.copy()
   result[result.length++] = value;
   return result;
 }
 
 // O(n) because it runs copy
-// returns {value, fArray} 
+// returns {value, list} 
 // where value is the last item on the array 
-// and fArray is the new FArray with the popped value
+// and list is the new List with the popped value
 // this was done to keep pop a "pure function"
-FArray.prototype.pop = function(){
+List.prototype.pop = function(){
   let result  = this.copy();
   delete result[--result.length];
   //copy.length--;
   
   return  { 
     value: this[this.length -1],
-    fArray: result,
+    list: result,
   }
 }
 
 // O(n)
-FArray.prototype.reduce = function(callback, initial){
+List.prototype.reduce = function(callback, initial){
 
   var i=0;
   var result = initial ? initial : this[i++];
@@ -67,8 +64,8 @@ FArray.prototype.reduce = function(callback, initial){
 }
 
 // O(n)
-FArray.prototype.filter= function(callback){
-  let result = new FArray();
+List.prototype.filter= function(callback){
+  let result = new List();
   for(var i=0; i<this.length; ++i){
     if (callback(this[i], i, this)){
       result[result.length++] = this[i];
@@ -79,8 +76,8 @@ FArray.prototype.filter= function(callback){
 }
 
 // O(n)
-FArray.prototype.map = function(callback){
-  let result = new FArray();
+List.prototype.map = function(callback){
+  let result = new List();
   for(var i=0; i<this.length; ++i){
     result[i] = callback(this[i], i, this);
   }
@@ -90,19 +87,19 @@ FArray.prototype.map = function(callback){
 
 
 // O(n)
-FArray.prototype.forEach = function(callback){
+List.prototype.forEach = function(callback){
   for(var i=0; i<this.length; i++){
     callback(this[i], i, this);
   }
 }
 
-// create an instance of FArray
-let nums = new FArray(1,33,4,53,6,24);
+// create an instance of List
+let nums = new List(1,33,4,53,6,24);
 console.log('nums', nums);
 console.log(); // these empty console logs just make the output more easy to read
 
 // !(num & 1) uses the bitwise and opperator to determine if a number is even
-// nums.filter takes the isEven function as an argument and returns an FArray that
+// nums.filter takes the isEven function as an argument and returns an List that
 // only has even numbers.
 // naming functions is a big part of createing good functional programs
 // naming a function makes the programg mor readable
@@ -120,16 +117,16 @@ console.log('evens', evens);
 
 // forEach takes a function as an argument 
 // if we pass console.log as the function we can see the values that are passed
-// to the callback they will be "(value, index, fArray)"
+// to the callback they will be "(value, index, list)"
 console.log('using console.log as an argument to forEach on evans')
 evens.forEach(console.log)
 console.log();
 
 
-// map takes a function as an argument and creates a new fArray 
+// map takes a function as an argument and creates a new list 
 // where each index is the result of that function 
-// hen called with "(value, index, fArray)"
-// create a new FArray where each index is Math.sqrt(nums[index])
+// hen called with "(value, index, list)"
+// create a new List where each index is Math.sqrt(nums[index])
 let squareRoots = nums.map(Math.sqrt)
 console.log('squareRoots', squareRoots);
 console.log();
@@ -137,7 +134,7 @@ console.log();
 // @getify on github call's reduce "the swiss army knife of functional programing"
 // reduce allows you to accumulate information
 // it could be used to implement map and filter
-// here we use reduce to get the sum of all the numbers in the fArray
+// here we use reduce to get the sum of all the numbers in the list
 let sum = nums.reduce((prev, current) => prev + current)
 console.log('sum', sum);
 console.log();
@@ -152,12 +149,12 @@ console.log();
 
 //TODO: implement filter with reduce
 
-// push creates a new FArray with a new value at the end
+// push creates a new List with a new value at the end
 console.log('nums.push(6000)', nums.push(6000));
 console.log();
 
 
-// push pop returns an object with the last value and a new FArray
+// push pop returns an object with the last value and a new List
 // with the last value removed
 console.log('nums.pop()', nums.pop());
 console.log();
