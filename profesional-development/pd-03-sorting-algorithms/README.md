@@ -11,6 +11,8 @@ Code 401JS -- PD03 Sorting Algorythms
 * The students will be able to refactor impertive code to recursive code, and vice versa
 
 # Overview
+Generaly when implementing a sorting alogorithm its easier to solve for one that does not have a comparision callback. Once the algorithm works, you can refactor a comparison callback into the implemention with very few changes.
+
 * [quick sort]
  1. Find a pivot point in the array. The pivot will be used for comparison
  2. Set pointers to the begining and end of the array
