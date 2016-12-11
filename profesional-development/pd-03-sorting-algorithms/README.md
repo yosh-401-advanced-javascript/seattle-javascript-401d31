@@ -39,6 +39,10 @@ Generaly when implementing a sorting alogorithm its easier to solve for one that
  * [insertion sort]
  * [shell sort]
  * [radix sort]
+ 
+ # Exercise
+* refactor the quicksort algorithm to use loops instead of recursion
+* refactor the selection sort to use recursion instead of loops
 
 [15 sorting algorythm visualizations]: https:/www.youtube.com/watch?v=kPRA0W1kECg
 [sorting algorythm visualization comparison]: https://www.youtube.com/watch?v=ZZuD6iUe3Pc
