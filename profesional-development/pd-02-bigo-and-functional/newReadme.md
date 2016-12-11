@@ -43,7 +43,28 @@ document.getElementById('title').textContent = 'side effect'; // side effect
 ``` javascript
 console.log('side effect'); // side effect
 ```
-* 
+* in functional programming the goal is to design functions that have no side effects
+* a function with no side effects has an input and an output
+* functions with no side-effects are called pure functions
+``` javascript
+// map has no side effects
+// the callback also has no side effects
+function map(input, callback){
+  let result = [];
+  for(var i=0;i<array.length;++i){
+    result.push(callback(input[i], i, input));
+  }
+  return result;
+}
+```
+* Pros of functional programming
+ * Easy to test pure functions
+ * When done correclty its more readble 
+ * by isolating the the code with the most potential for bugs (code with side effects) to as few places as possible, you reduce the time it takes to track down bugs
+* Cons of functional programming
+ * can be slower
+
+
 
 [simple Wiki Big O]: https://simple.wikipedia.org/wiki/Big_O_notation
 [hacker Rank Big O video]: https://www.youtube.com/watch?v=v4cd1O4zkGw
