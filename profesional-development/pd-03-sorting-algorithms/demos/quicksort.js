@@ -92,8 +92,6 @@ let less = (a,b) => a < b;
 console.log(quicksort(nums, greater));
 console.log(quicksort(nums, less));
 
-
-
 let people = [
   {
     name: 'lark',
