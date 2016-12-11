@@ -74,7 +74,7 @@ function map(input, callback){
 ### Impertive vs Functional example
 #### Impertive alphabetical sort
 Imperitve code is hard to read because you have to figure out what is happening at each line. Loops are generaly very hard to read.
-```
+``` javascript
 function alphabeticalSort(items) {  
     var length = items.length;
     for (var i = (length - 1); i >= 0; i--) {
