@@ -1,4 +1,4 @@
-Code 401JS -- PD03 Sorting Algorythms 
+Code 401JS -- Sorting Algorythms 
 ================================
 
 # Sorting Algorythm Resouces
