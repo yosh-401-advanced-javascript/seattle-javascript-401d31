@@ -43,9 +43,9 @@ document.getElementById('title').textContent = 'side effect'; // side effect
 ``` javascript
 console.log('side effect'); // side effect
 ```
-* in functional programming the goal is to design functions that have no side effects
-* a function with no side effects has an input and an output
-* functions with no side-effects are called pure functions
+* In functional programming the goal is to design functions that have no side effects
+* A function with no side effects has an input and an output
+* Functions with no side-effects are called pure functions
 ``` javascript
 // map has no side effects
 // the callback also has no side effects
@@ -62,6 +62,7 @@ function map(input, callback){
 * because a program with no-side effects is not useful, functional programers try two write there code as functional as possible
  * they do this by limiting functions with side effects to as few as possible
  * they also have design patterns for wraping functions with side effects to act like pure functions
+* functional programers use a techneque called function composition that allows them to create functions out of function combinations. 
 * Pros of functional programming
  * Easy to test
  * When done correclty its more readble
@@ -94,6 +95,7 @@ alphabeticalSort(spooky);
 ```
 #### Functional alphabetical sort
 * even though the following may seem  complcated at first, it should be more readable at a glance than the imperitive code above, that does the same thing. 
+* sortAlphabeticly is an example of function composition. by composing slice, sort, and a callback to sort.
 * one important thing to note is that the .sort() method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly uses the .slice() method to create a copy of the original list before it runs sort(). this makes sortAlphabeticly a pure function.
 ``` javascript
 let sortAlphabeticly = list => list.slice().sort((a, b) => a.toLowerCase() > b.toLowerCase());
