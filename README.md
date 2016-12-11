@@ -1,5 +1,7 @@
-Code 401 Javascript Guide 
+Code 401 Javascript Guide
 ======
+
+[Facilitator's Guide](https://docs.google.com/document/d/1vmgu4wUU_2G90kpVUpz2mdelIwjJk9cNXsZMVQl43FQ/edit#heading=h.1j8q9kkvjvmu)
 
 # Profesional Development
 
@@ -15,7 +17,7 @@ Code 401 Javascript Guide
 ## Intro to Node.JS
 * class 01 modular patterns
 * class 02 build tools and testing
-* class 03 JS runtime and FS module 
+* class 03 JS runtime and FS module
 * class 04 Event Emitters and Bitmap
 
 ## Networking
@@ -27,16 +29,16 @@ Code 401 Javascript Guide
 * class 09 Node.JS REST api with file system persistance
 
 ## Single Resouce Express API
-* class 11 express api with file system persistance 
+* class 11 express api with file system persistance
 * class 12 express middleware
 
 ## Express API with database
-* class 13 single resource express 
+* class 13 single resource express
 * class 14 express api with second resouce
 
-## API Authentication and Authorization 
+## API Authentication and Authorization
 * class 16 basic authentication
-* class 17 bearer authorization 
+* class 17 bearer authorization
 
 ## Asset Hosting and Deployment
 * class 18 asset hosing on AWS s3
@@ -49,7 +51,7 @@ Code 401 Javascript Guide
 * class 27 webpack, angular controllers and testing
 
 ## Adventure Game
-* class 28 angular services 
+* class 28 angular services
 * class 29 built in directives
 
 ## Image Gallery Crud App
@@ -71,4 +73,3 @@ Code 401 Javascript Guide
 
 ## Review
 * class 44 Review day!
-
