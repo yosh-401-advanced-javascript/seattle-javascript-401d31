@@ -1,4 +1,4 @@
-Code 401JS -- Sorting Algorythms 
+401JS -- Sorting Algorythms 
 ================================
 
 # Sorting Algorythm Resouces
