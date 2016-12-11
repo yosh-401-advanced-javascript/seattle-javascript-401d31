@@ -23,36 +23,42 @@
 * `call` is a methods on a function that invokes a function with a specified context and argments  
  * `call` passes comma seporated argments
 ``` javascript
-// invoke the function getCoolStuff
-// set the object state to be getCoolStuff's context
-// pass 'hello' and 'wolrd' as getCoolStuff's argments
-var state = {};
+function lower(str){
+  return String.prototype.toLowerCase.call(str)
+}
 
-getCoolStuff.call(state, 'hello', 'world');
+lower("HELLO");
+// hello
 ```  
 * `apply` is a methods on a function that invokes a function with a specified context and argments  
  * `apply` passes argments from an array  
 ``` javascript
-// invoke the function getCoolStuff
-// set the object state to be getCoolStuff's context
-// pass 'hello' and 'wolrd' as getCoolStuff's argments
-var state = {};
+var state = {
+  history: [],
+  addToHistory: function(){ 
+    Array.prototype.push.apply(this.history, arguments);
+  }
+};
 
-getCoolStuff.apply(state, ['hello', 'world']);
+state.addToHistory('move player', 'pickup item', 'update hp');
+// state.history === ['move player', 'pickup item', update hp']
 ```   
 * `bind` is a methods on a function that returns a new function with a specified context
 ``` javascript
-// create a function getCoolState that acts 
-// like getCoolStuff thke state as its context
+describe('bind example', function(){
+  this.example = 'some data';
 
-var state = {};
-var getCoolState = getCoolStuff.bind(state);
+  // it's arrow function has the context of the callback from the describe block
+  it('example should be "some data"', (function(done) {
+    expect(this.example).to.equal('some data');
+    done();
+  }).bind(this)) // binds the callback to the describe blocks context
+})
 
-getCoolState('hello', 'world');
 ```   
 * Arrow functions inherit their context from their parent context
 ``` javascript
-describe('lulwat', function(){
+describe('arrow function example', function(){
   this.example = 'some data';
 
   // it's arrow function has the context of the callback from the describe block
@@ -65,9 +71,13 @@ describe('lulwat', function(){
 * variables can be assigned to arrow functions  
 ``` javascript
 var doubleIt = num => num * 2;
-
 doubleIt(16);
 // 32
+
+let upper = str => String.prototype.toUpperCase.call(str);
+
+upper('hello');
+// HELLO
 ```
 * The `new` keyword creates a empty object and invokes a function with that object as its context
 * For constructor ABC to inherit constructor XYZ's property it should `XYZ.call(this)` 
