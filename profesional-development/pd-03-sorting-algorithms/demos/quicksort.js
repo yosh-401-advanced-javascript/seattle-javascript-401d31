@@ -1,26 +1,25 @@
 'use strict';
 
 
-function quicksort(items, left, right){
+function quicksort(items, compare, left, right){
    left = left || 0;  
    right = right || items.length -1;
 
   // TODO: uncomment this to see how the partitioning works
   //console.log(items.slice(left, right));
-
   if (items.length > 1){
     // partition returns the position to the right of the last pivot
     // which is one right of half of the current partition
-    var pivot = partition(items, left, right);
+    var pivot = partition(items, compare, left, right);
 
     // sort the left side of the pivot if not yet sorted
     if (left < (pivot - 1)){
-      quicksort(items, left, pivot);
+      quicksort(items, compare, left, pivot);
     }
 
     // sort the right side of the pivot if not yet sorted
     if ((pivot + 1) < right){
-      quicksort(items, pivot + 1, right);
+      quicksort(items, compare, pivot + 1, right);
     }
     
   }
@@ -36,7 +35,7 @@ function swap(items, left, right){
   items[right] = tmp;
 }
 
-function partition(items, left, right, pivot){
+function partition(items, compare, left, right, pivot){
   // only create the pivot if the current partition has not yet
   // created a pivot
   pivot = pivot || Math.floor((left + right) / 2);
@@ -48,11 +47,11 @@ function partition(items, left, right, pivot){
 
     // advance the left index to the right as long as its value is 
     // smaller than the pivot's value
-    left = advanceLeft(items, left, pivot);
+    left = advanceLeft(items, compare, left, pivot);
 
     // advance the right index to the left as long as its value is 
     // greater than the pivot's value
-    right = advanceRight(items, right, pivot);
+    right = advanceRight(items, compare, right, pivot);
     
     // now that the pointers have moved check if more swaps need
     // to be done
@@ -63,7 +62,7 @@ function partition(items, left, right, pivot){
         swap(items, left, right);
       // continue sorting items around the pivot until 
       // both sides are sorted
-      return partition(items, left + 1, right - 1, pivot);
+      return partition(items, compare, left + 1, right - 1, pivot);
     }
   }
 
@@ -85,6 +84,7 @@ function advanceRight (items, right, pivot){
 }
 
 let lul = [23,3,5,1,55,38,49,200,432,1, 352];
+greater = (a, b) => a > b;
 console.log(quicksort(lul));
 
 
