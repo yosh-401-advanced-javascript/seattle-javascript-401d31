@@ -41,6 +41,7 @@ Generaly when implementing a sorting alogorithm its easier to solve for one that
  * [radix sort]
  
  # Exercise
+* read the wiki on insertion sort and implement it
 * refactor the quicksort algorithm to use loops instead of recursion
 * refactor the selection sort to use recursion instead of loops
 
