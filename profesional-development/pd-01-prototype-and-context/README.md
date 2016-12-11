@@ -48,7 +48,6 @@ state.addToHistory('move player', 'pickup item', 'update hp');
 describe('bind example', function(){
   this.example = 'some data';
 
-  // it's arrow function has the context of the callback from the describe block
   it('example should be "some data"', (function(done) {
     expect(this.example).to.equal('some data');
     done();
