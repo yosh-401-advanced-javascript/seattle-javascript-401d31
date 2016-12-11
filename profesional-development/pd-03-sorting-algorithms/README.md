@@ -27,6 +27,10 @@ Code 401JS -- PD02 Sorting Algorythms
  5. move the index pointer to the right 
  6. incrament index and jump back to step two, repeat until index hits the end of the array 
 
+* [merge sort]
+* divide the array into sub arrays of lenght one
+* merge sub arrays to produce sorted sub arrays until there is one sub array remaining
+
 [15 sorting algorythm visualizations]: https:/www.youtube.com/watch?v=kPRA0W1kECg
 [sorting algorythm visualization comparison]: https://www.youtube.com/watch?v=ZZuD6iUe3Pc
 [quick sort]: https://en.wikipedia.org/wiki/Quicksort
