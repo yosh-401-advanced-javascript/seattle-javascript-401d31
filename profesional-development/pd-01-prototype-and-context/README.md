@@ -74,9 +74,12 @@ doubleIt(16);
 // 32
 
 let upper = str => String.prototype.toUpperCase.call(str);
-
 upper('hello');
 // HELLO
+
+let removeOdds = list => list.filter(num => !(num & 1));
+removeOdds([1,2,3,4]);
+// [2,4]
 ```
 * The `new` keyword creates a empty object and invokes a function with that object as its context
 * For constructor ABC to inherit constructor XYZ's property it should `XYZ.call(this)` 
