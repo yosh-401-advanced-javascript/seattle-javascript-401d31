@@ -51,7 +51,7 @@ describe('bind example', function(){
   it('example should be "some data"', (function(done) {
     expect(this.example).to.equal('some data');
     done();
-  }).bind(this)) // binds the callback to the describe blocks context
+  }).bind(this)) // binds "it's" callback to the describe block's callback's context
 })
 
 ```   
