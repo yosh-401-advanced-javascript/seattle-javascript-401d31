@@ -71,15 +71,40 @@ function map(input, callback){
  * Looks more complex at first
  * Functions may have more argumetns
 ```
-// even though this may seem more complcated at first
-let sortAlphabeticly = list => list.sort((a, b) => a.toLowerCase() > b.toLowerCase());
+// imperitve code is hard to read because you have to figure out what is happening at each line
+// loops are generaly very hard to read
+function imperitiveAlphabeticalSort(items) {  
+    var length = items.length;
+    for (var i = (length - 1); i >= 0; i--) {
+        for (var j = (length - i); j > 0; j--) {
+            if (items[j] && (items[j].toLowerCase() < items[j - 1].toLowerCase())) {
+                var tmp = items[j];
+                items[j] = items[j - 1];
+                items[j - 1] = tmp;
+            }
+        }
+    }
+}
 
-// this line should be very readble
-sortAlphabeticly(['glorb', 'slorb', 'jlorb', 'clorb'])
+let spooky = ['grr', 'boo', 'creek', 'squeek', 'glimer'];
+imperitiveAlphabeticalSort(spooky);
+// spooky is now sorterd
+
+// even though the following may seem  complcated at first, it should be more readable at a glance than 
+// the imperitive code above, that does the same thing. one important thing to note is that the .sort()
+// method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly
+// uses the .slice() method to create a copy of the original list before it runs sort(). this makes 
+// sortAlphabeticly a pure function.
+
+let sortAlphabeticly = list => list.slice().sort((a, b) => a.toLowerCase() > b.toLowerCase());
+let names = ['Glorb', 'slorb', 'Jlorb', 'clorb'];
+
+// this line should be very readble as long as you pay attention to the function name
+let sorted = sortAlphabeticly(['Glorb', 'slorb', 'Jlorb', 'clorb'])
+
+// sorted is now a sorted copy of names
+// names has not changed
 ```
-
-
-
 
 [simple Wiki Big O]: https://simple.wikipedia.org/wiki/Big_O_notation
 [hacker Rank Big O video]: https://www.youtube.com/watch?v=v4cd1O4zkGw
@@ -88,4 +113,3 @@ sortAlphabeticly(['glorb', 'slorb', 'jlorb', 'clorb'])
 [what is functional programming]: http://blog.jenkster.com/2015/12/what-is-functional-programming.html
 [functional-Light JS Book]: https://github.com/getify/Functional-Light-JS
 [Big O Cheat Sheet]: http://bigocheatsheet.com/
-
