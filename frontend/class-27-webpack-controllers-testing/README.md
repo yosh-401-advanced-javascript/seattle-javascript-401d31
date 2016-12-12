@@ -1,31 +1,35 @@
 401 JS -- class 2& Angular 
 ===========================
 
-# Angular controller resources
-* Read [controller guide]
-* Read [$scope guide]
-* Read [ng-controller api docs]
-
-# Webpack Resources
+## Webpack Resources
 * Read [webpack-your-bags]
 * Skim [what is webpack?]
 * Skim [using loaders]
 * Skim [using plugins]
 
-# Jasmine Resources
+## Angular controller and $scope resources
+* Read [controller guide]
+* Read [$scope guide]
+* Read [ng-controller api docs]
+
+## Angular mocks resources
+* Skim [angular mocks]
+
+## Jasmine Resources
 * Skim [jasmine introduction]
 
-# Karma Resouces
+## Karma Resouces
 * Skim [how karma works]
 * Skim [karma configuration]
 
-# Learning Objectives
+
+## Learning Objectives
 * Students will be able to write and test angular controllers
 * Students will be able to identify how tempates interact with Angular controllers and $scope
 * Students will understand the function of a module bundler
 * Students will be able to explain the function of a test-runner 
 
-# Overview
+## Overview
 ### Webpack 
 * Webpack is an all purpose module bundler
  * Webpack will take our moduler javascript code with commonJS `require` statements, and build our code into a single file that can be shipped to a browser
@@ -47,6 +51,23 @@
  * [webpack-clean-plugin] - clears the build directory between builds
  * [extract-text-webpack-plugin] - creates a bundle.css
  * [html-webpack-plugin] - create an index.html with dynamicly named script and link tags
+
+### Angular controllers and $scope
+* controllers are used to define javascript functionality for a tempate
+* controllers can use $scope to maintain state for a tempate
+* from an MVC perspectice
+  * $scope is often called the model
+  * the html tempalte is the view
+  * the controller is the controller (or glue between the view and the model)
+* values on $scope have two way databinding with their template
+* controller's and there $scope can be assigned to a tempalte using the `ng-controller` directive
+* by using the now prefered `controllerAs someName` assignment convention a controller function will be bound to have $scope.someName be its context
+
+### Karma, Jasmine, and Angular Mocks
+* Karma is a test runner its job is to load our code and tests into a browser, and then run our tests.
+* Jasmine is a testing framework, it uses BDD style naming conventions and looks alot like mocha
+* Jasmine has a built in assertion framework that has simular naming conventions to chia's expect
+* Angular Mocks is a library written by angular that allows us to mock our angular code for testing
 
 [controller guide]: https://docs.angularjs.org/guide/controller
 [$scope guide]: https://docs.angularjs.org/guide/scope
@@ -74,3 +95,6 @@
 [using loaders]: http://webpack.github.io/docs/using-loaders.html
 [using plugins]: http://webpack.github.io/docs/using-plugins.html
 [webpack-your-bags]: https://blog.madewithlove.be/post/webpack-your-bags
+
+[angular mocks]: https://docs.angularjs.org/api/ngMock#!
+
