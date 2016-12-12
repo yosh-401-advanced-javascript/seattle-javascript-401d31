@@ -23,7 +23,7 @@
 ## Big O
 * big-o is a way of describing the speed and memory useage of an algorythm because algorythm's can run faster or slower given a specific input, we only use big-o to describe the worst case.
 * the letter "n" is used to describe the number of items an algorithm is working with
-* if an algorithm only makes state ment in the worst case, it is said that the algorithm run s with an "O(1)" runtime.
+* if an algorithm only makes single state ments in the worst case, it is said that the algorithm run s with an "O(1)" runtime.
  * "O(1)" runtime is also called constant time
 * if an algorithm run through every item, it is said that the algorithm runs with an "O(n)" runtime.
  * "O(n)" runtime is also called linear time
