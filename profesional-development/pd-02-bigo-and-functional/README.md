@@ -14,6 +14,7 @@
 
 # Learning Objectives
 * students will be able to determine and describe the runtime complexity of an algorighm
+* sutendts will understand the differance between a constructor function and a factory function
 * students will be able to identify and explain the qualities of imperitive and functional code
 * students will be able to determine whether or not a function is pure
 * students will be able to implement a functional array-like list with map, filter, reduce, and forEach methods
@@ -22,14 +23,18 @@
 ## Big O
 * big-o is a way of describing the speed and memory useage of an algorythm because algorythm's can run faster or slower given a specific input, we only use big-o to describe the worst case.
 * the letter "n" is used to describe the number of items an algorithm is working with
-* if an algorithm only makes state ment in the worst case, it is said that the algorithm run s with an "O(1)" runtime.
+* if an algorithm only makes single state ments in the worst case, it is said that the algorithm run s with an "O(1)" runtime.
  * "O(1)" runtime is also called constant time
-* if an algorithm run through every item, it is said that the algorithm runs with an "O(n)" runtime.
+* if an algorithm runs through every item, it is said that the algorithm runs with an "O(n)" runtime.
  * "O(n)" runtime is also called linear time
+* if an algorithm runs through a list "n" times "n" times, it is said that the alorithm runs with an "O(n^2)" runtime.
+ * "O(n^2)" runtime is also called quadradic time
+* if an algorithm recursivly cuts its itteration in half from "n" until 1, it is said that the alogrithm runs with an "O(log(n))" runtime
+
  
-## Functional programing
+## Functional Programing
 * In order to understand functional programing you must understand what a side-effect is.
- * a side effect is when a function alters state defined outside its scope.  
+ * A side effect is when a function alters state defined outside its scope.  
  **Below are some examples of side effects**
 ``` javascript
 let state = {}
@@ -44,7 +49,7 @@ document.getElementById('title').textContent = 'side effect'; // side effect
 console.log('side effect'); // side effect
 ```
 * In functional programming the goal is to design functions that have no side effects
-* A function with no side effects has an input and an output
+* A function with no side effects has can still have an input and an output
 * Functions with no side-effects are called pure functions
 ``` javascript
 // map has no side effects
@@ -57,12 +62,12 @@ function map(input, callback){
   return result;
 }
 ```
-* a program with no side effects at all is not very usefull
- * no side effects means no input or output
-* because a program with no-side effects is not useful, functional programers try two write there code as functional as possible
- * they do this by limiting functions with side effects to as few as possible
- * they also have design patterns for wraping functions with side effects to act like pure functions
-* functional programers use a techneque called function composition that allows them to create functions out of function combinations. 
+* A program with no side effects at all is not very usefull
+ * No side effects means no input or output from or to devices and the user
+* Because a program with no-side effects is not useful, functional programers try two write there code as functional as possible
+ * They do this by creating as few functions with side effects as possible 
+ * They also have design patterns for wraping functions with side effects so they act like pure functions
+* Functional programers use a powerful techneque called function composition that allows them to create functions out of function combinations 
 * Pros of functional programming
  * Easy to test
  * When done correclty its more readble
@@ -74,7 +79,7 @@ function map(input, callback){
  
 ### Impertive vs Functional example
 #### Impertive alphabetical sort
-Imperitve code is hard to read because you have to figure out what is happening at each line. Loops are generaly very hard to read.
+Imperitve code is hard to read because you have to figure out what is happening on each line. Loops are generaly very hard to read.
 ``` javascript
 function alphabeticalSort(items) {  
     var length = items.length;
@@ -95,8 +100,8 @@ alphabeticalSort(spooky);
 ```
 #### Functional alphabetical sort
 * even though the following may seem  complcated at first, it should be more readable at a glance than the imperitive code above, that does the same thing. 
-* sortAlphabeticly is an example of function composition. by composing slice, sort, and a callback to sort.
-* one important thing to note is that the .sort() method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly uses the .slice() method to create a copy of the original list before it runs sort(). this makes sortAlphabeticly a pure function.
+* sortAlphabeticly is an example of function composition. sortAlphabeticly is created by composing slice, sort, and a callback to sort.
+* one important thing to note is that the .sort() method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly uses the .slice() method to create a copy of the original list before it runs sort(). This makes sortAlphabeticly a pure function.
 ``` javascript
 let sortAlphabeticly = list => list.slice().sort((a, b) => a.toLowerCase() > b.toLowerCase());
 let names = ['Glorb', 'slorb', 'Jlorb', 'clorb'];
@@ -105,6 +110,38 @@ let names = ['Glorb', 'slorb', 'Jlorb', 'clorb'];
 let sorted = sortAlphabeticly(['Glorb', 'slorb', 'Jlorb', 'clorb'])
 // sorted is now a sorted copy of names
 // names has not changed
+```
+
+# Factory function
+A factory function is a pure function that acts like a constructor but without the new keyword.
+``` javascript
+// constructor
+function User(name, permissions){
+  this.name = name;
+  this.permissions = permissions
+}
+
+User.prototype.getName = function() { return this.name };
+
+let ada = new User('adalove', 'admin');
+console.log(ada.getName());
+
+
+// factory function
+function user(name, permissions){
+  let proto = {
+    getName: function(){ return this.name },
+  };
+  
+  let result = Object.create(proto);
+  result.name = name;
+  result.permissions = permissions;
+
+  return result;
+}
+
+let delia = user('delia', 'moderator');
+console.log(delia.getName());
 ```
 
 # Exercise
