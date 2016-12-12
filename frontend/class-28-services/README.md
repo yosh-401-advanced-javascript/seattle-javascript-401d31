@@ -22,9 +22,17 @@
 * Angular services are used to implement an apps shared code
 * We use services to build librarys for handling the logic for our AJAX requests
 * We use services to build librarys to maintain app state in one place
+* Angluar services can be injected into angular controllers and other angular services
+
+### Adventure Game
+* Text based adventure games have been around since before computers had monitors
+* Adventure games ususaly consist of a map that can be traversed with cardinal direction commands. (N S E W)
+* Adventure games ususaly have a story about a caracter on a journey to (find/solve/fix/escape/help*) someone or something.
+* Angular Services can be used to create a map, and a player.
+ * The Map service can have getters for reteving information about a room or setters for modifying the state of a room. for example removing keys.
+ * The Player service can have methods for moving the player about the map, and interacting with anything found on the map. for example picking up keys.
 
 <!--links -->
-
 [angular services guide]: https://docs.angularjs.org/guide/services
 [singleton pattern]: https://en.wikipedia.org/wiki/Singleton_pattern
 [race conditions]: https://en.wikipedia.org/wiki/Race_condition
