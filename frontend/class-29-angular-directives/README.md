@@ -36,8 +36,8 @@
 * ng-dblclick - is used to trigger an expression when a DOM element is double clicked
 * ng-submit - is used to trigger an expression when a form's submit event has been triggered
 
-#### Form Directives
-* form - form tags are actualy an anggular directive and have many awesome features includeing a scope with  dynamic validtation properties, and dynamic validation classes
+#### Some Form Directives
+* form - form tags are actualy an angular directive and have many awesome features includeing a scope with  dynamic validtation properties, and dynamic validation classes
  * to get access to a froms validation properties it must be named. the forms name will become a property on the $scope
  * formname.$submitted - set to true when the form has been submitted
  * formname.$invalid - set to true if the form is invalid
