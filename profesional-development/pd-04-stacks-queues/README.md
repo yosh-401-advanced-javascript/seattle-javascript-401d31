@@ -42,6 +42,7 @@
 * write a function to determine if a string has matching brackets "{}[]()" "[()]{}"
  * the string can have characters that are not brackets
 
-[stack]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)i
+
 [stacks and queues]: https://www.youtube.com/watch?v=wjI1WNcIntg
 [queue wiki]: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+[stack wiki]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
