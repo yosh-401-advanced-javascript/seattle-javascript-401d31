@@ -5,6 +5,10 @@
 * [Angular Developer Guide]
 * [Angular API Docs]
 
+# Learning Objectives
+* Setup an angular project that uses a CDN
+* Build an app that uses angulars built in templating
+
 # Overview
 * Single page applications
  * Routing (compare to PageJS)
@@ -24,10 +28,6 @@
  * Angular's $rootScope will re-render templates on the DOM when values have changed
  * Angular's ng-model directive allows you to dynamicly set the state of a property on the $rootScope, when applyed to an input tag
  * If you have an input tag controling the state of a propery and a template rendering that property's value, you can observer the effect of editing the DOM in real time
-
-# Learning Objectives
-* Setup an angular project that uses a CDN
-* Build an app that uses angulars built in templating
 
 [Angular Developer Guide]: https://docs.angularjs.org/guide
 [Angular API Docs]: https://docs.angularjs.org/api
