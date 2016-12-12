@@ -23,6 +23,9 @@
 * We use services to build librarys for handling the logic for our AJAX requests
 * We use services to build librarys to maintain app state in one place
 * Angluar services can be injected into angular controllers and other angular services
+* $log - is a service that can be used in place of console log and can be configured to be disabled in production
+* $http - is a service that provides an API for making AJAX requests
+$ $q - is a service that is a Promise library that is aware of working with angulars $scope
 
 ### Adventure Game
 * Text based adventure games have been around since before computers had monitors
