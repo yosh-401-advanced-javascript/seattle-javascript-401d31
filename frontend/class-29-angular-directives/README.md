@@ -3,10 +3,12 @@
 
 ## Resources
 * Skim [diretive components]
+* Read [form guide]
 
 ## Learning Objectives
 * students will understand the functions of angular directives
 * students will be able to identify use cases for angular's built in diretives
+* students will be able to modify the view based on angulars form validation classes
 
 ## Overview
 * Directives are markers on a DOM element that tells angular's HTML compiler to attach behavior to that DOM element
@@ -35,8 +37,8 @@
 * ng-submit - is used to trigger an expression when a form's submit event has been triggered
 
 #### Form Directives
-* form - form tags are actualy an anggular directive and have many awesome features includeing dynamic validtation classes
- * to get access to a forms validtation classes it must be named. The forms name will become a property on the $scope. forms also have dynamic propertys for form validtation
+* form - form tags are actualy an anggular directive and have many awesome features includeing a scope with  dynamic validtation properties, and dynamic validation classes
+ * to get access to a froms validation properties it must be named. the forms name will become a property on the $scope
  * formname.$submitted - set to true when the form has been submitted
  * formname.$invalid - set to true if the form is invalid
  * formname.$valid - set to true if the form is valid
@@ -48,3 +50,4 @@
 
 <!--links -->
 [diretive components]: https://docs.angularjs.org/api/ng/directive
+[form guide]: https://docs.angularjs.org/guide/forms
