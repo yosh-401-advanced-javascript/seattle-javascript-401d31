@@ -50,7 +50,7 @@
 [html-loader]: https://github.com/webpack/html-loader
 [webpack-clean-plugin]: https://github.com/johnagan/clean-webpack-plugin
 [html-webpack-plugin]: https://github.com/ampedandwired/html-webpack-plugin
-[extrac-text-webpack-plugin]: https://github.com/webpack/extract-text-webpack-plugin
+[extract-text-webpack-plugin]: https://github.com/webpack/extract-text-webpack-plugin
 [webpack.optimize.UglifyJsPlugin]: https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
 [webpack.DefinePlugin]: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
 
