@@ -20,7 +20,7 @@
 * ng-init - used to run an expression when a template is loaded 
 * ng-href - like a href attribute, but it suports angular's template expressions `ng-href="{{someCtrl.nav.home}}"`
 * ng-src - like a src attribue, but it suports angular's template like ng-href
-* ng-required - is used to require a form input to have a value before the form is submitted
+* ng-cloak - is used to prevent angular from showing uncompiled templates during page load
 * ng-repeat - is used to create itterate over an array on $scope and create a $scope and template for each item in the array
 
 #### Some Toggling Directives
@@ -28,12 +28,23 @@
 * ng-hide - is used to toggle the css propery display none on a DOM element based on a truthy or falsey value
 * ng-if - is used to add or remove an element from the DOM based on a truthy or falsey value
 * ng-class - is used to add or remove class names on an element based on truthy or falsey values
-* ng-cloak - is used to prevent angular from showing uncompiled templates during page load
 
 #### Some Event Directives
 * ng-click - is used to trigger an expression when a DOM element is clicked
 * ng-dblclick - is used to trigger an expression when a DOM element is double clicked
 * ng-submit - is used to trigger an expression when a form's submit event has been triggered
+
+#### Form Directives
+* form - form tags are actualy an anggular directive and have many awesome features includeing dynamic validtation classes
+ * to get access to a forms validtation classes it must be named. The forms name will become a property on the $scope. forms also have dynamic propertys for form validtation
+ * formname.$submitted - set to true when the form has been submitted
+ * formname.$invalid - set to true if the form is invalid
+ * formname.$valid - set to true if the form is valid
+* input - input tags are also an angular diretive, if they are named they become a property on the $scope.formname
+ * fromname.inputname.$invalid - set to true if the form is invalid
+ * fromname.inputname.$valid - set to true if the form is valid
+* ng-required - is used to require a form input to have a value before the form is submitted
+* ng-disabled - is used to disabled a user input based on a truthy or falsey value
 
 <!--links -->
 [diretive components]: https://docs.angularjs.org/api/ng/directive
