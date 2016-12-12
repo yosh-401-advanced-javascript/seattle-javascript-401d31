@@ -14,6 +14,7 @@
 
 # Learning Objectives
 * students will be able to determine and describe the runtime complexity of an algorighm
+* sutendts will understand the differance between a constructor function and a factory function
 * students will be able to identify and explain the qualities of imperitive and functional code
 * students will be able to determine whether or not a function is pure
 * students will be able to implement a functional array-like list with map, filter, reduce, and forEach methods
