@@ -2,17 +2,28 @@
 ===========================
 
 # Angular controller resources
- * Read [controller guide]
- * Read [$scope guide]
- * Read [ng-controller api docs]
+* Read [controller guide]
+* Read [$scope guide]
+* Read [ng-controller api docs]
 
 # Webpack Resources
+* Read [webpack-your-bags]
+* Skim [what is webpack?]
+* Skim [using loaders]
+* Skim [using plugins]
 
 # Jasmine Resources
+* Skim [jasmine introduction]
 
 # Karma Resouces
+* Skim [how karma works]
+* Skim [karma configuration]
 
 # Learning Objectives
+* Students will be able to write and test angular controllers
+* Students will be able to identify how tempates interact with Angular controllers and $scope
+* Students will understand the function of a module bundler
+* Students will be able to explain the function of a test-runner 
 
 # Overview
 ### Webpack 
@@ -54,5 +65,12 @@
 [webpack.optimize.UglifyJsPlugin]: https://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
 [webpack.DefinePlugin]: https://webpack.github.io/docs/list-of-plugins.html#defineplugin
 
+[how karma works]: https://karma-runner.github.io/1.0/intro/how-it-works.html
+[karma configuration]: https://karma-runner.github.io/latest/intro/configuration.html
 
+[jasmine introduction]: https://jasmine.github.io/2.0/introduction.html
 
+[what is webpack?]: http://webpack.github.io/docs/what-is-webpack.html
+[using loaders]: http://webpack.github.io/docs/using-loaders.html
+[using plugins]: http://webpack.github.io/docs/using-plugins.html
+[webpack-your-bags]: https://blog.madewithlove.be/post/webpack-your-bags
