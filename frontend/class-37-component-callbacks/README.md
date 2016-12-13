@@ -47,7 +47,7 @@ myApp.controller('MainController', ['$log', 'articleService', function($log, art
     article="article" deleteArticle="mainCtrl.deleteArticle(article)"> </article-item>
 </main>
 ```
-* **EXTREEMLY IMPORTANT:** when `mainCtrl.deleteArticle(article)` is passed into the `<article-item>` it is not invokeing the _mainCtrl.deleteArticle_ function. Infact it is nameing the first paramiter article. Later that same name will be used as a key in an object when the function actualy gets invoked from within the `<article-item>`
+* **EXTREEMLY IMPORTANT:** when `mainCtrl.deleteArticle(article)` is passed into the `<article-item>` it is not invokeing the _mainCtrl.deleteArticle_ function. Infact it is nameing the first paramiter **article**. Later that same name will be used as a key in an object when the function actualy gets invoked from within the `<article-item>`
 
 ``` html 
 <!-- article item template -->
