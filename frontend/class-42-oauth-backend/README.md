@@ -44,7 +44,7 @@ const userSchema = Schema({
  * if the query string has an 'error' key redirect back to the client
 * make a *POST* request to `https://www.googleapis.com/oauth2/v4/token` to get a accessToken for that user
  * you must send the following information in the body
-```
+``` javascript
  let data = {
     // the code is the code just recieved from the auth server
     code: req.query.code,
