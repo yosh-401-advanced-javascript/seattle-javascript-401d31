@@ -13,6 +13,9 @@
 ## Overview
 Yesterday, we implemented the first half of the OAuth2 serverside work flow. First we implemented the redirect from the client side to the Goolgle auth sever. Google then redirects back to our API Server with a code and a redirect token. We now need to use that information to request access to the users OpenID information. Then we will save the user into our database.
 
+#### requirements
+* add the key `CLIENT_URL` to the servers .env file and give it the value `http://localhost:8080` or what ever port your client app is running on
+
 #### Modifying out previous user model
 * first we need to remove the required configuration from the password field
  * remember the point of ouath is so that the user can login without a password
