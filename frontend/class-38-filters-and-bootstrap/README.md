@@ -5,10 +5,10 @@
 * [filter guide]
 
 ## Bootstrap Resources
-[bootstrap css docs]
-[bootstrap component css docs]
-[bootstrap sass]
-[ui-bootstrap]
+* [bootstrap css docs]
+* [bootstrap component css docs]
+* [bootstrap sass]
+* [ui-bootstrap]
 
 ## Learning Objectives
 <!-- unordered list of learning objectives --> 
