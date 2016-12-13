@@ -73,7 +73,6 @@ authRouter.get('/api//oauthcallback', function(req, res){
     // this tells google its OUR APP
     client_id: process.env.GOOGLE_CLIENT_ID,
     // this tells google that its are SERVER
-    // NEVER NEVER NEVER share your CLIENT SECRET 
     client_secret: process.env.GOOGLE_CLIENT_SECRET,
     // tell google which redirect you just used
     redirect_uri: `${process.env.API_URL}/api/oauthcallback`
