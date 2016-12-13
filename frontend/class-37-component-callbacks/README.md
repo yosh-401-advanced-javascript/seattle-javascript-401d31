@@ -20,9 +20,9 @@
  * when invokeing a function from within the compoent the call will have the form  
  `bindingName({paramName1: someValue, paramName2: someValue})`
  * the calling function will allways pass an object whos keys will map to the named paramiters
- 
- #### callback binding example
- bare with the order, you will need to read this several times 
+  
+#### callback binding example  
+bare with the order, you will need to read this several times 
  ``` javascript
 // define the componet that expects a callback 
 myApp.component('articleItem', {
