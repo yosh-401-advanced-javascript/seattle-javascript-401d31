@@ -13,6 +13,14 @@
 ## Overview
 * angular's `&` binding is used to configure a component to recieve a callback through its attributes
 * `&` bindings should be used any time a child component neads to invoke its parents function
+* `&` bindings have a really tricky syntax
+ * when passing a function in to a component the atribute will have the form  
+ `bindingName="functionName(paramName1, paramName2)"`
+ * _functionName_ is not being invoked above, instead it is just defining the named paramiters paramName1 and paramName2
+ * when invokeing a function from within the compoent the call will have the form  
+ `bindingName({paramName1: someValue, paramName2: someValue})`
+ * the calling function will allways pass an object whos keys will map to the named paramiters
+ 
 
 ``` javascript
 // define the parent controller with a function deleteArticle
