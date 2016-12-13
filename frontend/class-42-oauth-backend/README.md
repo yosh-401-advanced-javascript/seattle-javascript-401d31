@@ -40,13 +40,13 @@ const userSchema = Schema({
   },
 })
 ```
-#### Create a route for processing the oauth server redirect
+
+#### Create a route for rocessing the oauth server redirect 
 * create a new router called authRouter
 * create a *GET* route for `/api/oauthcallback`
 * check that you got a query string from the auth server
  * if the query string has an 'error' key redirect back to the client
-* make a *POST* request to `https://www.googleapis.com/oauth2/v4/token` to get a accessToken for that user
- * you must send the following information in the body
+ * other wise parse the query string and prepare to request for the token
 ``` javascript
  let data = {
     // the code is the code just recieved from the auth server
@@ -61,20 +61,73 @@ const userSchema = Schema({
     // this never changes
     grant_type: 'authorization_code', 
   };
+```
 
+#### request the users token
+* make a *POST* request to `https://www.googleapis.com/oauth2/v4/token` to get a accessToken for that user
+ * the server does not expect 'json' it expects a form request so make sure you include `.type('form')`
+``` javascript
   // google is expecting a form request ** not a json reqest *** so make sure you use .type('form')
+
+  // create variables for later use
+  let accessToken, refreshToken, tokenTimeToLive;
   superagent.post('https://www.googleapis.com/oauth2/v4/token')
   .type('form')
   .send(data)
   .then(resonse => {
+    // parse the accessToken, refreshToken, and tokenTimeToLive off or req.body
+    accessToken = accessToken;
+    refreshToken = refreshToken;
+    tokenTimeToLive = tokenTimeToLive;
     //TODO: next step goes here
   })
-  .catch(err => {
-    // DONT call next on this error, we dont want the error middleware to respond
-    // instead we want to redirect back to our client
-    console.error(err);
-    res.redirect(process.env.CLIENT_URL);
-  })
+```
+
+#### requests the users openID info
+* inside the 'then' callback block after requesting the token
+ * make  a **GET** request to 'https://www.googleapis.com/plus/v1/people/me/openIdConnect' and send the google  accessToken in a Bearer auth header
+
+ ``` javascript
+.then(resonse => {
+   return request.get('https://www.googleapis.com/plus/v1/people/me/openIdConnect')
+  .set('Authorization', `Bearer ${response.body.access_token}`)
+})
+ ```
+
+#### create user and genorate token
+* use all the previously aquierd information to create a user 
+* use the users original generateToken method
+``` javascript
+.then( response => {
+  let userData = {
+    username: req.body.email,
+    email: req.body.email,
+    google: {
+      googleID: req.body.sub,
+      tokenTimeToLive: tokenTimeToLive,
+      tokenTimestamp: Date.now(),
+      refreshToken: refreshToken,
+      accessToken: accessToken,
+    }
+  }
+
+  return new User(userData).save()
+})
+.then(user => user.generateToken())
+.then(token => {
+  // redirect back to the user and pass the token in the query string
+  res.redirect(`${process.env.CLIENT_URL}/?token=${token}`);
+});
+```
+
+#### handle any errors and redirect to client
+* log the error
+* redirect back to the client 
+``` javascript
+.catch(err => {
+  console.log(err);
+  res.redirect(`${process.env.CLIENT_URL}`);
+})
 ```
 
 <!--links -->
