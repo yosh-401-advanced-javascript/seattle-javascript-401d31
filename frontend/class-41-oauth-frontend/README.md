@@ -15,6 +15,20 @@ OAuth2 is a authorization standard, used as a way for users to authorize website
 
 Today we will implent the first half of the server side workflow. The first half of the work flow is to register our application, and then redirect our frontend to google's OAuth server.
 
+#### OAuth handshake
+* first the client redirects to the auth server
+* if the client accepts to grant our app privlidges
+ * the auth server redirects to our server with a code
+ * we make a request back to the auth server with the code, our client id, and out client secret
+ * the auth server sends us back a token, a token time to live, and a refresh token
+ * we make a request to the get the openid information about the user (email, name, ect.)
+ * we create a user user in the database
+ * we genoarate a token for the new user
+ * we redirect to our client and pass the token
+* if the client does not grant our app privlidges
+ * the auth server redirects to our server with an error
+ * we redirect back to our client with no token
+
 #### Google OAuth Requirements
 * Register as a google developer (there may be a small fee)
 * Register an application with the google developer console
