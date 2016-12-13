@@ -11,7 +11,9 @@
 * [ui-bootstrap]
 
 ## Learning Objectives
-<!-- unordered list of learning objectives --> 
+* Students will be able to create angular filters
+* Students will be able to build bootstrap from soruce using sass
+* Students will be ablue to use ui-bootstrap components
 
 ## Overview
 #### built in filters
