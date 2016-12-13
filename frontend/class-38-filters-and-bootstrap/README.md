@@ -5,13 +5,15 @@
 * [filter guide]
 
 ## Bootstrap Resources
-[bootstrap css docs]
-[bootstrap component css docs]
-[bootstrap sass]
-[ui-bootstrap]
+* [bootstrap css docs]
+* [bootstrap component css docs]
+* [bootstrap sass]
+* [ui-bootstrap]
 
 ## Learning Objectives
-<!-- unordered list of learning objectives --> 
+* Students will be able to create angular filters
+* Students will be able to build bootstrap from soruce using sass
+* Students will be ablue to use ui-bootstrap components
 
 ## Overview
 #### built in filters
@@ -64,7 +66,7 @@ function genorateFuzzyRegex(input){
 * [ui-bootstrap]: is a port of bootstraps jquery plugin to angular directives
 * to use bootstrap and ui-bootstrap you must
  * `npm i -S bootstrap-sass angular-ui-bootstrap angular-animate angular-touch`
- * put `@import ~/bootstrap/assets/stylesheets/_bootstrap.scss;` in your **_main.scss** after your 
+ * put `@import "~/bootstrap/assets/stylesheets/_bootstrap.scss";` in your **_main.scss** after your 
  * add the following code to your entry.js when you setup your angular module
 ``` javascript
 const ngTouch = require('angular-touch');
