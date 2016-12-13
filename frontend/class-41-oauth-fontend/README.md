@@ -11,7 +11,9 @@
 * Students will learn how to implent a server side workflow for OAuth2 using Google's OAuth
 
 ## Overview
-OAuth2 is a authorization standard, used as a way for users to authorize websites to access their information on other websites without giving them the passwords. We use this so that people can log in to our service without giving us their password! This is great because then we dont have to manage the security of protecting their password! 
+OAuth2 is a authorization standard, used as a way for users to authorize websites to access their information on other websites without giving them the passwords. We use this so that people can log in to our service without giving us their password! This is great because then we dont have to manage the security of protecting their password!   
+
+Today we will implent the first half of the server side workflow. The first half of the work flow is to register our application, and then redirect our frontend to google's OAuth server.
 
 #### Google OAuth Requirements
 * Register as a google developer (there may be a small fee)
