@@ -2,7 +2,7 @@
 ===
 
 ## OAuth Resources
-* Read [Google OAuth2 Overview]
+* Read [Google's OAuth2 Overview]
 * Read [Google's OpenID Connect Docs]
 * Read [Google's OAuth2 for Web Server Applications] and select HTTP/REST in examples
 * Skim [OpenID Connect]
