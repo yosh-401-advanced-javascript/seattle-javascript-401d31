@@ -21,6 +21,19 @@
  `bindingName({paramName1: someValue, paramName2: someValue})`
  * the calling function will allways pass an object whos keys will map to the named paramiters
  
+ #### callback binding example
+ bare with the order, you will need to read this several times 
+ ``` javascript
+// define the componet that expects a callback 
+myApp.component('articleItem', {
+  template: require('./article-item.html'),
+  controllerAs: 'articleItemCtrl',
+  bindings: {
+    article: '<',
+    deleteArticle: '&',
+  },
+});
+```
 
 ``` javascript
 // define the parent controller with a function deleteArticle
@@ -48,6 +61,7 @@ myApp.controller('MainController', ['$log', 'articleService', function($log, art
   }
 });
 ```
+
 ``` html
 <!-- this is the parent template --> 
 <main class="main-container">
@@ -66,17 +80,7 @@ myApp.controller('MainController', ['$log', 'articleService', function($log, art
 </div>
 ```
 * When _articleItemCtrl.deleteArticle_ is invoked it passes an object with the key **article** as a value. That value must be the same as the named paramiter defined when the callabck function was passed into this `article-item` in the parent template.
-``` javascript
-// article item declaration
-myApp.component('articleItem', {
-  template: require('./article-item.html'),
-  controllerAs: 'articleItemCtrl',
-  bindings: {
-    article: '<',
-    deleteArticle: '&',
-  },
-});
-```
+
 
 
 <!--links -->
