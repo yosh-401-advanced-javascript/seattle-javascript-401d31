@@ -13,14 +13,6 @@
 ## Overview
 * angular's `&` binding is used to configure a component to recieve a callback through its attributes
 * `&` bindings should be used any time a child component neads to invoke its parents function
-``` html
-<!-- this is the parent template --> 
-<main class="main-container">
-  <article-item ng-repeat="article in mainCtrl.articles"
-    article="article" deleteArticle="mainCtrl.deleteArticle(article)"> </article-item>
-</main>
-```
-* when `mainCtrl.deleteArticle(article)` is passed into the `<article-item>` it is not invokeing the deleteAricle function. infact it is nameing the first paramiter article. This is an **EXTREEMLY IMPORTANT** point... Later that same name will be used as a key in an object when the function actualy gets invoked from within the `<article-item>`
 
 ``` javascript
 // define the parent controller with a function deleteArticle
@@ -48,6 +40,14 @@ myApp.controller('MainController', ['$log', 'articleService', function($log, art
   }
 });
 ```
+``` html
+<!-- this is the parent template --> 
+<main class="main-container">
+  <article-item ng-repeat="article in mainCtrl.articles"
+    article="article" deleteArticle="mainCtrl.deleteArticle(article)"> </article-item>
+</main>
+```
+* **EXTREEMLY IMPORTANT:** when `mainCtrl.deleteArticle(article)` is passed into the `<article-item>` it is not invokeing the _mainCtrl.deleteArticle_ function. Infact it is nameing the first paramiter article. Later that same name will be used as a key in an object when the function actualy gets invoked from within the `<article-item>`
 
 ``` html 
 <!-- article item template -->
@@ -57,7 +57,7 @@ myApp.controller('MainController', ['$log', 'articleService', function($log, art
   <button ng-click="articleItemCtrl.deleteArticle({article: articleItemCtrl.article})"> Delete </button>
 </div>
 ```
-* When `articleItemCtrl.deleteArticle` is invoked it passes an object with the key **article** as a value. That value must be the same as the named paramiter defined when the callabck function was passed into this `article-item` in the main-container template.
+* When _articleItemCtrl.deleteArticle_ is invoked it passes an object with the key **article** as a value. That value must be the same as the named paramiter defined when the callabck function was passed into this `article-item` in the parent template.
 ``` javascript
 // article item declaration
 myApp.component('articleItem', {
