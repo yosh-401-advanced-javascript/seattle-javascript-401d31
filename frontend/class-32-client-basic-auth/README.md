@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+401 JS -- class 32 Client Basic Authentication and Bearer Authorization 
+=======
 401 JS -- class 32 Client Auth
+>>>>>>> e3caf6f8303296d7f52c1d075175a92eb5f80562
 =========================
 
 ## Basic and Bearer Resources
@@ -22,8 +26,7 @@
 * we use webpack constants for all information that need to be kept secret like API SECRET KEYS
 * we also use webpack constants for all information that canges depending on what environment our app is runnin in (dev, testing, production)
 
-
-``` javascript   
+``` javascipt 
 let plugins = [
   new ExtractTextPlugin('bundle.css'),
   new HTMLPlugin({ template: `${__dirname}/app/index.html` }),
@@ -35,7 +38,7 @@ let plugins = [
     __DEBUG__: JSON.stringify(!production),
   }),
 ];
-```   
+``` 
 
 #### Auth service
 * we use a service to create a libary for authentiation because it will be neaded through out our app
@@ -49,7 +52,6 @@ let plugins = [
 * after setting up each test `$httpBackend.flush()` needs to be called inorder to for $httpBackend's outstanding requtests to be validated
 * its also a wise idea to call `$httpBackend.verifyNoOutstandingRequest()` and `$httpBackend.verifyNoOutstandingExpectation()` in an afterEach block to make sure all requests have been validated
 * **IMPORTANT** for any test that is testing a function which uses a $q promises `$rootScope.apply()` must be called to allow the promise to resolve. Simular to `$httpBackend.fush()` in regards to a `$httpBackend.expectGET(...)`. 
-
 
 <!--links -->
 [$http api docs]: https://docs.angularjs.org/api/ng/service/$http
