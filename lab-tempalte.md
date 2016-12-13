@@ -16,12 +16,12 @@
 ## Requirements  
 #### Configuration  
 <!-- list of files, configurations, tools, ect that are required -->
-* Your lab directory must include
- * **README.md** -- with a documention about your lab
- * **.gitignore** -- with a robust gitignore
- * **.eslintrc** -- with the class .eslintrc file
- * **.eslintignore** -- with the class .eslintignore
- * **.package.json** -- with all dependencies and dev-dependencies 
+Your lab directory must include  
+* **README.md** -- with a documention about your lab
+* **.gitignore** -- with a robust gitignore
+* **.eslintrc** -- with the class .eslintrc file
+* **.eslintignore** -- with the class .eslintignore
+* **.package.json** -- with all dependencies and dev-dependencies 
  
 #### Feature Tasks  
 <!-- a list or description of the feature tasks you want the students to implement -->
