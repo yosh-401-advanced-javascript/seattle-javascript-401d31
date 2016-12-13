@@ -43,12 +43,31 @@ const userSchema = Schema({
 
 #### Create a route for rocessing the oauth server redirect 
 * create a new router called authRouter
-* create a *GET* route for `/api/oauthcallback`
+* create a *GET* route handling the `/api/oauthcallback` request from googles auth server
 * check that you got a query string from the auth server
  * if the query string has an 'error' key redirect back to the client
- * other wise parse the query string and prepare to request for the token
+ 
+``` javascript 
+authRouter.get('/api//oauthcallback', function(req, res){
+  debug('GET /api/oauthcallback');
+
+  // if googleError deal with google Error
+  if(req.query.error){
+    res.redirect('/');
+    return;
+  }
+  //TODO: next setps go here
+});
+```
+
+#### request the users token
+* parse the query to get the **code** sent from googles auth server
+* make a *POST* request to `https://www.googleapis.com/oauth2/v4/token` to get the users acessToken, tokenTimeToLive, and refreshToken
+ * since the auth server does not expect 'json' and instead expects a form request, make sure you include `.type('form')`
 ``` javascript
- let data = {
+  // google is expecting a form request ** not a json reqest *** so make sure you use .type('form')
+
+  let data = {
     // the code is the code just recieved from the auth server
     code: req.query.code,
     // this tells google its OUR APP
@@ -61,14 +80,7 @@ const userSchema = Schema({
     // this never changes
     grant_type: 'authorization_code', 
   };
-```
-
-#### request the users token
-* make a *POST* request to `https://www.googleapis.com/oauth2/v4/token` to get a accessToken for that user
- * the server does not expect 'json' it expects a form request so make sure you include `.type('form')`
-``` javascript
-  // google is expecting a form request ** not a json reqest *** so make sure you use .type('form')
-
+  
   // create variables for later use
   let accessToken, refreshToken, tokenTimeToLive;
   superagent.post('https://www.googleapis.com/oauth2/v4/token')
@@ -92,6 +104,7 @@ const userSchema = Schema({
    return request.get('https://www.googleapis.com/plus/v1/people/me/openIdConnect')
   .set('Authorization', `Bearer ${response.body.access_token}`)
 })
+// TODO: next setp goes here
  ```
 
 #### create user and genorate token
@@ -117,7 +130,8 @@ const userSchema = Schema({
 .then(token => {
   // redirect back to the user and pass the token in the query string
   res.redirect(`${process.env.CLIENT_URL}/?token=${token}`);
-});
+})
+// TODO: next step goes here
 ```
 
 #### handle any errors and redirect to client
@@ -127,7 +141,7 @@ const userSchema = Schema({
 .catch(err => {
   console.log(err);
   res.redirect(`${process.env.CLIENT_URL}`);
-})
+});
 ```
 
 <!--links -->
