@@ -7,7 +7,7 @@
 * Skim [about v8]
 
 ## ES6 Resources
-* Read [just another intro to ES6]
+* Read [just another guide to ES6]
 * Skim [node and es6]
 
 ## NPM Resources
@@ -109,3 +109,4 @@
 [a gentle intro to tdd in js]: http://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/
 [chai expect guide]: http://chaijs.com/guide/styles/#expect
 [mocha getting started]: http://mochajs.org/#getting-started
+[just another guide to ES6]: https://medium.com/sons-of-javascript/javascript-an-introduction-to-es6-1819d0d89a0f#.wb7rj1gin
