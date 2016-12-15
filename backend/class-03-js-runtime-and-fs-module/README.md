@@ -52,7 +52,46 @@ someNodeFunction('arg', 'arg', function(err, data) {
 
 #### fs module
 * the fs module is the node interface to the file system
-* the fs module is mostly used asyncronously
+* the fs module has syncronous and asyncronous methods
+* if the method does not have sync in its name you can assume its syncronous
+* in this class we will **NEVER** use the syncronous methods 
+* useful globals
+  * `__dirname` - the absolute path to the directory the current file is in
+  * `__filename` - the absolute path to the current file
+* Create File
+ * `fs.writeFile(filepath, data [, options], callback);`
+ * the callback should take the form `(Error) => {}`
+``` javascript
+fs.writeFile(`${__dirname}/hello-wolrd.txt`, 'hello from fs!', (err) => {
+  if(err) return console.error(err.message);
+  console.log('success');
+});
+```
+* Read File
+ * `fs.readFile(filepath [, options], callback);`
+ * the callback should take the form `(Error, Buffer) => {}`
+
+``` javascript
+fs.readFile(`${__dirname}/hello-wolrd.txt`, (err, data) => {
+  if(err) return console.error(err.message);
+  console.log(data.toString());
+});
+```
+* Delete File
+ * `fs.unlink(filepath, callback);`
+ * the callback should take the form `(Error) => {}`
+``` javascript
+fs.writeFile(`${__dirname}/hello-wolrd.txt`, (err) => {
+  if(err) return console.error(err.message);
+  console.log('success');
+});
+```
+* Other useful methods
+ * `readdir` - reads the contents of a directory
+ * `mkdir` - create a directory
+ * `stat` - get information about a file/dir/link
+ * `watch` - watch a file for changes
+
 <!--links -->
 [what the heck is the event loop anyway]: https://www.youtube.com/watch?v=8aGhZQkoFbQ
 [fs module docs]: https://nodejs.org/dist/latest-v6.x/docs/api/fs.html
