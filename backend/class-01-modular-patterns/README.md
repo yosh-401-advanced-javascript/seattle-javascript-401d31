@@ -105,8 +105,7 @@
 [node and es6]: https://nodejs.org/en/docs/es6/
 [libuv docs]: https://github.com/libuv/libuv
 [about v8]: https://developers.google.com/v8/
-[just another intro to ES6]: https://medium.com/sons-of-javascript/javascript-an-introduction-to-es6-1819d0d89a0f#.uc88oqhxp
-[what is npm ]: https://docs.npmjs.com/getting-started/what-is-npm
+[what is npm]: https://docs.npmjs.com/getting-started/what-is-npm
 [a gentle intro to tdd in js]: http://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/
 [chai expect guide]: http://chaijs.com/guide/styles/#expect
 [mocha getting started]: http://mochajs.org/#getting-started
