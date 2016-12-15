@@ -1,10 +1,12 @@
 401 JS -- class 02 gulp, npm, ref vs val, errors
 ===
 
-## Gulp Resources
-
 ## package.json Resources
 * Read [about package.json]
+
+## Gulp Resources
+* Skim [gulp on github]
+* Skim [gulp api docs]
 
 ## Error Resources
 * Read [node Error docs]
@@ -25,6 +27,11 @@
  * navagate inside your directory
  * run `npm init` and answer the questions
  * now you should find a package.json inside your current directory :)
+
+#### Gulp 
+* Gulp is a tool that helps you automate time-consuming tasks that are a part of your dev workflow
+* Gulp is configured in pure javascript, so you can use any node module in a gulp task
+* Gulp has a awesome plugin ecosystem
 
 #### Node Errors
 **Error**  
@@ -59,8 +66,32 @@
  * `EPERM` - An attempt to do something that you currently dont have permissions to do
  * `EPIPE` - An attempt to write data to a connection that had been closed
 
-<!--links -->
+###### Throw Try Catch
+* If an un handled error is thrown in javascript the program will crash
+* try catch blocks allow you to safely throw a an error and handle it
+``` javascript
+try {
+  let data = {};
+  // accidently throw an error by calling a function that does not exist
+  data.name();
+} catch (err) {
+  console.error(err.message);
+}
 
-<!-- to use links like this just put [link name] somwhere -->
+try {
+  let data = {name: 'adalove'};
+
+  // explicly create and throw a custom error
+  if (data.name !== 'ada lovelace')
+    throw new Error('expected name to be "ada lovelace"');
+} catch(err) {
+  console.error(err.message);
+
+}
+```
+
+<!--links -->
 [node Error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html
 [about package.json]: https://docs.npmjs.com/files/package.json
+[gulp api docs]: https://github.com/gulpjs/gulp/blob/master/docs/API.md
+[gulp on github]: https://github.com/gulpjs/gulp
