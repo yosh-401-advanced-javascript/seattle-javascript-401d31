@@ -4,7 +4,7 @@
 ## JS Runtime Resources
 * Watch [what the heck is the event loop anyway]
 
-## FS Module Resources
+## fs Module Resources
 * Read [fs module docs]
 
 ## Learning Objectives
@@ -30,7 +30,29 @@ Javascript is a single threaded language. Which means that it can only do a sing
 * callback queue
  * the callback queue holds compltion handling functions from passed node APIs
 
+#### Node asyncronous callback pattern
+* node functions that have asyncronous input or output take a callback as there last argument
+* node functions that do not pass back data allways have callback functions take the form `(err) => { }`
+``` javascript
+someNodeFunction('arg', 'arg', function(err) {
+  if(err) {
+    // handle Error
+  }
+})
+```
+* node functions that do pass back data allways have callback functions take the form `(err, data) => { }`
+``` javascript 
+someNodeFunction('arg', 'arg', function(err, data) {
+  if(err) {
+    // handle Error
+  }
+  // do something with the data
+})
+```
 
+#### fs module
+* the fs module is the node interface to the file system
+* the fs module is mostly used asyncronously
 <!--links -->
 [what the heck is the event loop anyway]: https://www.youtube.com/watch?v=8aGhZQkoFbQ
 [fs module docs]: https://nodejs.org/dist/latest-v6.x/docs/api/fs.html
