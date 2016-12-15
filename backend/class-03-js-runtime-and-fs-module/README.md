@@ -64,7 +64,7 @@ someNodeFunction('arg', 'arg', function(err, data) {
 ``` javascript
 fs.writeFile(`${__dirname}/hello-wolrd.txt`, 'hello from fs!', (err) => {
   if(err) return console.error(err.message);
-  console.log('success');
+  console.log('write success');
 });
 ```
 * Read File
@@ -81,9 +81,9 @@ fs.readFile(`${__dirname}/hello-wolrd.txt`, (err, data) => {
  * `fs.unlink(filepath, callback);`
  * the callback should take the form `(Error) => {}`
 ``` javascript
-fs.writeFile(`${__dirname}/hello-wolrd.txt`, (err) => {
+fs.unlink(`${__dirname}/hello-wolrd.txt`, (err) => {
   if(err) return console.error(err.message);
-  console.log('success');
+  console.log('delete success');
 });
 ```
 * Other useful methods
