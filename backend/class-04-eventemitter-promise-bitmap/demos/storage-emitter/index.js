@@ -2,17 +2,45 @@
 
 const storage = require('./storage.js');
 
-storage.on('beforeWrite', function(key, value){
-  // do what you need to do
-  console.log('beforeWrite', key, value);
+storage.on('beforeDelete', function(key){
+  console.log('about to delete', key);
 });
 
-storage.on('afterWrite', function(key, value){
-  console.log('afterWrite', key, value);
+storage.on('afterDelete', function(key, value){
+  // if the menu is delete then delete all of it items
+  if(key === 'menu'){
+    value.forEach( item => storage.emit('deleteData', item.name));
+  }
 });
 
-storage.emit('setData', 'lu', {name: 'wat'});
+let menu = [
+  {
+    name: 'blt',
+    price: 8.45,
+  },
+  {
+    name: 'pbj',
+    price: 4.50,
+  },
+  {
+    name: 'club',
+    price: 9.00,
+  },
+  {
+    name: 'veggy',
+    price: 8.45,
+  }
+];
 
-storage.emit('getData', 'lu', function(data){
-  console.log('getData', data);
+menu.forEach( item => storage.emit('setData', item.name, item));
+storage.emit('setData', 'menu', menu);
+
+storage.emit('getData', 'blt', function(data){
+  console.log('blt', data);
+})
+
+storage.emit('deleteData', 'menu');
+
+storage.emit('getData', 'blt', function(data){
+  console.log('blt', data);
 })
