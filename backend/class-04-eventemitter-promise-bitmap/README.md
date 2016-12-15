@@ -10,14 +10,76 @@
 * Read [es6 promises]
 
 ## Bitmap Resources
-* [bitmap file format]
-* [node buffer api docs]
+* Read [bitmap file format]
+* Read  [node buffer api docs]
+* Watch [endian and little endian]
 
 ## Learning Objectives
 <!-- unordered list of learning objectives --> 
 
 ## Overview
-#### overivew sub topic 
+#### EventEmitter
+* Much of the node APIs is built arount events
+* All objects that emmit events in node are instances of the EventEmitter constructor
+* EventEmitters are a great way to handle controling async events
+* functions can be registered as listners for an event on instances of EventEmitters 
+* instances of EventEmitters can emmit events and pass the listners data
+* EventEmitters do not throw errors if events are emmited and have no listners to handle them
+ * This can be a very powerful feature and is often used to implement "hooks" and "observables" in many librarys
+
+``` javascript
+'use strict';
+// get access to EventEmitter constructor
+const EventEmitter = require('events').EventEmitter;
+
+let storage = {};
+
+// create an instance of the EventEmitter
+let storageEmitter = module.exports = new EventEmitter();
+
+// define a listener called setData
+storageEmitter.on('setData', function(key, value){
+  // beforeWrite and afterWrite listners have not been defined
+  // but they could be implemented by a consumer of this storage 
+  // module if they need  that functionality for any reason this 
+  // is a super powerful reason people use EventEmitters
+  storageEmitter.emit('beforeWrite', key, value);
+  storage[key] = value; 
+  storageEmitter.emit('afterWrite', key, value);
+});
+
+storageEmitter.on('getData', function(key ,callback){
+  callback(storage[key]);
+});
+
+storageEmitter.on('deleteData', function(key){
+  storageEmitter.emit('beforeDelete', key, storage[key]);
+  let backup = storage[key];
+  delete storage[key];
+  storageEmitter.emit('afterDelete', key, backup);
+});
+```
+```
+'use strict';
+
+const storage = require('./storage.js');
+
+storage.on('beforeWrite', function(key, value){
+  // do what you need to do
+  console.log('beforeWrite', key, value);
+});
+
+storage.on('afterWrite', function(key, value){
+  console.log('afterWrite', key, value);
+});
+
+storage.emit('setData', 'BLT', {name: 'Bacon lettuce Tomato', price: 8.45});
+
+storage.emit('getData', 'BLT', function(data){
+  console.log('BLT', data);
+});
+```
+#### Promise
 
 #### Binary 
 * you've probably heard that all things in the computer are just a bunch of zeros and ones
@@ -26,30 +88,10 @@
 * Integers, floating point numbers, characters are some of the basic things we can turn zeros and ones into
 * the process for taking an integer, float, character, or ect. and turning them into zeros and one is called encoding
 * the process for taking zeros and ones and turning them into an integer, float, character, or ect. is called decoding
-* below is decimal hex binary conversion chart
-``` text
-DEC |HEX |BIN
---------------
-0   |0   |0000
-1   |1   |0001   
-2   |2   |0010   
-3   |3   |0011   
-4   |4   |0100   
-5   |5   |0101   
-6   |6   |0110   
-7   |7   |0111   
-8   |8   |1000   
-9   |9   |1001   
-10  |a   |1010   
-11  |b   |1011   
-12  |c   |1100   
-13  |d   |1101   
-14  |e   |1110   
-15  |f   |1111   
-```
-* binary works alot like decimal 
+* binary and hex work a lot like decimal 
  * decimal is also called base 10
  * binary is also called base 2 
+ * hex is also called base 16
  * if you take each digit multipy it times its base to the power of its place, you get its value
 ```
 HOW DECMAL WORKS...
@@ -80,9 +122,33 @@ value     01011
 
 Hex is the same ...
 ```
-* to convert to floating points is a little takes the binary to decmial idea and uses it with scientific notation
+* below is decimal hex binary conversion chart
+``` text
+DEC |HEX |BIN
+--------------
+0   |0   |0000
+1   |1   |0001   
+2   |2   |0010   
+3   |3   |0011   
+4   |4   |0100   
+5   |5   |0101   
+6   |6   |0110   
+7   |7   |0111   
+8   |8   |1000   
+9   |9   |1001   
+10  |a   |1010   
+11  |b   |1011   
+12  |c   |1100   
+13  |d   |1101   
+14  |e   |1110   
+15  |f   |1111   
+```
+* to convert to floating points is a little takes the binary to decmial idea a little further by useing it for scientific notation
 * to convert to text there is an encoding called ascii which maps all characters to a coresponding number
- * run the command `man ascii` in your command line to see a chart
+ * run the command `man ascii` in your command line to see an ascii chart
+* now days we have a character encoding called `utf8` that is an extension for ascii, that suports multipul languages
+
+#### Buffers
 
 <!--links -->
 [events api docs]: https://nodejs.org/api/events.html
@@ -91,3 +157,4 @@ Hex is the same ...
 [es6 promises]: https://medium.com/ecmascript-2015/es6-promises-9ca8d8b4aca6#.x683hhcy5
 [bitmap file format]: https://en.wikipedia.org/wiki/BMP_file_format
 [node buffer api docs]: https://nodejs.org/api/buffer.html
+[endian and little endian]: https://www.youtube.com/watch?v=B50mNoVw21k
