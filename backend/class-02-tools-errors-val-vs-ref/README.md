@@ -27,19 +27,23 @@
  * now you should find a package.json inside your current directory :)
 
 #### Node Errors
-**Error**  
+###### Error 
 * a generic error 
 * `.stack` - a **String** describe the point in the code where the `Error` was instantiated
 * `.message` - a **String** description set by calling the `new Error(message)`  
-**ReferenceError**  
+
+###### ReferenceError
 * indicates that an attempt is being made to access a variable that is not defined
 * `ReferenceError` is a subclass of `Error`  
-**SyntaxError**  
+
+###### SyntaxError
 * indicates a program is not valid javascript
 * `SyntaxError` is a subclass of `Error`  
-**TypeError** 
+
+###### TypeError
 * indicates that a provided argument is not an allowable type
-* `TypeError` is a subclass of `Error`  
+* `TypeError` is a subclass of `Error`    
+
 ###### SystemError
 * `.code` - A **String** describing the error code
 * `.errno` - A **Number** describing the error code
