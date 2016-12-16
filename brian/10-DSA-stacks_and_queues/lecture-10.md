@@ -12,7 +12,7 @@
   * `push` adds a new element to the stack
   * `peek` is used to retrieve the value from the top of the stack
   * **demo:** implement a stack
-    [stacks-demo](/09-DSA-stacks_and_queues/demo/stack-demo.js)
+    * [stack-demo](/09-DSA-stacks_and_queues/demo/stack-demo.js)
 
 ## Queues
   * queues are also a data structure that serve as a collection of elements
@@ -21,4 +21,4 @@
   * `enqueue` is used to add an element to the end of a queue
   * `dequeue` is used to retrieve and remove an element from the beginning of a queue 
   * **demo:** implement a queue
-    [stacks-demo](/09-DSA-stacks_and_queues/demo/queue-demo.js)
+    * [queue-demo](/09-DSA-stacks_and_queues/demo/queue-demo.js)
