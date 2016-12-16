@@ -30,7 +30,7 @@ console.log('push 20:', nums.push(20));
 console.log('push 30:', nums.push(30));
 
 console.log('\n===================================\n');
-;
+
 // remove an element from the stack ("pop it off the stack")
 console.log('pop off the last item in the stack:', nums.pop(), 'popped of the stack');
 
