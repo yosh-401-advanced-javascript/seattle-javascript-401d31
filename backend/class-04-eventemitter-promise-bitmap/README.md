@@ -293,8 +293,7 @@ Raw dat is stored as instances of the Buffer class A buffer is simular to an arr
 
 The Buffer class is a global, making it very rare that one would need to ever require('buffer').
 
-##### TL;DR;
-* the Buffer data type represents ararys of bytes
+* A Buffer represents ararys of bytes
  * A byte is made of of 8 bits
  * A bit is a single one or zero
 * Each byte in a buffer can be decoded as an integer, floating point number, or a string
@@ -305,10 +304,10 @@ The Buffer class is a global, making it very rare that one would need to ever re
 * Your OS stores binary in one of two ways
  * `little endian` - most significant bit first
  * `big endian` - least significant bit first
-* When reading numbers from a buffer its important you use the correct the correct method, depending on your systes endianess
 * In a node **REPL** you can un `os.endianness()` to determin how your os stores bytes
- * 'LE' == little endian
- * 'BE' == big endian
+ * `'LE'` == little endian
+ * `'BE'` == big endian
+* Make sure your useing the methods that corresond to your systems **endianness**
  
 ###### Creating buffers
 * ` new Buffer(size) ` allocates a new buffer of size octets(bytes)
