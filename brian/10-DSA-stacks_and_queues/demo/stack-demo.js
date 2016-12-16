@@ -22,23 +22,13 @@ Stack.prototype.pop = function() {
 // create new stack object
 let nums = new Stack();
 
-console.log('\n===================================\n');
-
 // add a sequence of elements to the stack
-console.log('push 10:', nums.push(10));
+console.log('\npush 10:', nums.push(10));
 console.log('push 20:', nums.push(20));
 console.log('push 30:', nums.push(30));
 
-console.log('\n===================================\n');
-
 // remove an element from the stack ("pop it off the stack")
-console.log('pop off the last item in the stack:', nums.pop(), 'popped of the stack');
-
-console.log('\n===================================\n');
+console.log('\npop off the last item in the stack:', nums.pop(), 'popped of the stack');
 
 // log the stack after popping off the most recently added item
-console.log('new stack:', nums);
-
-console.log('\n===================================\n');
-
-
+console.log('\nnew stack:', nums, '\n');

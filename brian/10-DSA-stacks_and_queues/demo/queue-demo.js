@@ -1,5 +1,10 @@
 'use strict';
 
+// format console output
+function lineBreak() {
+  console.log('\n::::  ===================================  ::::\n');
+}
+
 // queue constructor
 function Queue() {
   this.next = null;
@@ -19,14 +24,12 @@ Queue.prototype.dequeue = function() {
   --this.length;
   let result = this[this.next];
   delete this[this.next];
-  this.next++; 
+  this.next++;
   return result;
 };
 
 // create new queue object
 let nums = new Queue();
-
-console.log('\n===================================\n');
 
 // add a sequence of elements to the queue
 nums.enqueue('first');
@@ -34,27 +37,16 @@ nums.enqueue('second');
 nums.enqueue('third');
 
 // log the current nums queue
-console.log('nums queue:', nums);
-
-console.log('\n===================================\n');
+console.log('\nnums queue:', nums);
 
 // remove an element from the queue
-console.log('removed the', nums.dequeue(), 'element from the queue');
+console.log('\nremoved the', nums.dequeue(), 'element from the queue\n');
 
-console.log('\n===================================\n');
-
+// show queue after removal
 console.log('new queue:', nums);
-
-console.log('\n===================================\n');
 
 // remove another element from the queue
-console.log('removed the', nums.dequeue(), 'element from the queue');
+console.log('\nremoved the', nums.dequeue(), 'element from the queue\n');
 
-console.log('\n===================================\n');
-
-console.log('new queue:', nums);
-
-console.log('\n===================================\n');
-
-
-
+// show queue after removal
+console.log('new queue:', nums, '\n');
