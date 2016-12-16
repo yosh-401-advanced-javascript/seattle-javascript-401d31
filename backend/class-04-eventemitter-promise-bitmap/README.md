@@ -162,7 +162,8 @@ Promise.resolve([2,3,4,5])
 .then(console.log) // will never be reached
 .catch(console.error)
 ```
-
+##### readfile, ajax, writefile program 
+* this program demonstrates the power of chaining async 
 ``` json
 [
   "https://api.github.com/search/repositories?q=language:javascript",
@@ -287,6 +288,50 @@ DEC |HEX |BIN
 * now days we have a character encoding called `utf8` that is an extension for ascii, that suports multipul languages
 
 #### Buffers
+* the Buffer data type represents ararys of bytes
+ * A byte is made of of 8 bits
+ * A bit is a single one or zero
+* Each byte in a buffer can be decoded as an integer, floating point number, or a string
+* Integers and Floats come in different sizes 8bit, 16bit, 32bit
+* Strings come in different encodings 'hex', 'utf8', 'base64' ...
+* Buffers are often referted to as raw data, meaning just a bunch of zeros and ones
+* Many of the Node APIs use buffers as the data type when dealing with input and output
+* Your OS stores binary in one of two ways
+ * `little endian` - most significant bit first
+ * `big endian` - least significant bit first
+* When reading numbers from a buffer its important you use the correct the correct method, depending on your systes endianess
+* In a node **REPL** you can un `os.endianness()` to determin how your os stores bytes
+ * 'LE' == little endian
+ * 'BE' == big endian
+
+* Creating a buffer
+``` javascript`
+// create a buffer with 32 bytes
+let buf = new Buffer(32);
+
+// buffer with the raw data version of the string "raw data message"
+let msg = new Buffer('raw data message');
+```
+* Reading Integers
+ * `UInt` methods will interperate the number as unsigned (cant be negitive)
+ * offsets start at 0
+ * `buf.readUInt8(15)` - interperage the 16th byte as an 8bit unsigned integer
+ * `buf.readUInt16LE()` - interperage the 1st byte as an 16bit unsigned integer
+ * `buf.readUInt32LE(9)` - interperage the 10th byte as an 8bit unsigned integer
+  * `buf.readInt8(1)` - interperage the 2nd byte as an 8bit signed integer
+ * `buf.readInt16LE()` - interperage the 1st byte as an 16bit signed integer
+ * `buf.readInt32LE(4)` - interperage the 5th byte as an 8bit signed integer
+
+* Writing Integers
+ * `buf.writeUInt8(255)` - write 255 to the first byte int the buffer
+ * `buf.writeUInt8(100, 10)` - write 100 to the 11th byte int the buffer
+* Reading Strings
+ * `buf.toString()` - interperate the buffer as a 'utf8' string
+ * `buf.toString('base64')` interperate the buffer as a 'base64' string
+* Writing Strings
+ * `buf.write('hello', 3)` - write the word hello starting at the 4th byte in the buffer
+* Other usefull methods
+ * `buf.slice(0, 10)` returns a new buffer that refrences the memory between the 0th and 11th byte
 
 <!--links -->
 [events api docs]: https://nodejs.org/api/events.html
