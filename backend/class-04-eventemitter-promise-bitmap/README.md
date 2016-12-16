@@ -58,7 +58,8 @@ storageEmitter.on('deleteData', function(key){
   delete storage[key];
   storageEmitter.emit('afterDelete', key, backup);
 });
-```
+```  
+
 ``` javascript
 'use strict';
 
@@ -110,9 +111,11 @@ storage.emit('deleteData', 'menu');
 storage.emit('getData', 'blt', function(data){
   console.log('blt', data);
 })
-```
-#### Promise
 
+```  
+
+#### Promise
+* this is an idea
 ``` json
 [
   "https://api.github.com/search/repositories?q=language:javascript",
