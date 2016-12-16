@@ -1,10 +1,5 @@
 'use strict';
 
-// format console output
-function lineBreak() {
-  console.log('\n::::  ===================================  ::::\n');
-}
-
 // queue constructor
 function Queue() {
   this.next = null;
