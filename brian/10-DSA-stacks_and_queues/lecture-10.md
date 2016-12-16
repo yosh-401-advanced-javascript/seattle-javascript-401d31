@@ -10,7 +10,6 @@
     * call stack management
   * `pop` removes the most recent element from the stack
   * `push` adds a new element to the stack
-  * `peek` is used to retrieve the value from the top of the stack
   * **demo:** implement a stack
     * [stack-demo](/09-DSA-stacks_and_queues/demo/stack-demo.js)
 
