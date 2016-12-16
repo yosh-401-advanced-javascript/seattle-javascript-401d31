@@ -115,7 +115,54 @@ storage.emit('getData', 'blt', function(data){
 ```  
 
 #### Promise
-* this is an idea
+* The Promise pattern allows us to chain asyncronous events
+* When you create a new promise, you pass it two callbacks
+ * the `resolve` callback is used on success
+ * the `reject` callback is used on failure
+``` javascript
+function readFile(path){
+  return new Promise(function(resolve, reject){
+    fs.readFile(path, function(err, data){
+      if (err) return reject(err);
+      resolve(data);
+    });
+  });
+}
+```
+* You can also create promises that explicity resolve or reject using convienece static methods
+* `Promise.resolve(3)` - returns a promise that resolves the value three
+* `Promise.reject(new Error('bad things'))` - returns a promise that rejects an `new Error('bad things')`
+* `then` and `catch` methods are used to handle the result of a promise
+* `then` and `catch` each take a callback as their argument
+* `then` is called with the value that was `resolved(value)` in the last promise
+* `catch` is called with the value that was `rejected(value` in the last promise
+* Promises should only reslove or reject, not both
+* In the callback of a `then` or a `catch` block if you return a value, it will be passed into the callback of the next then block
+* In the callback of a `then` or a `catch` block if you return a Promise that rejects, the value you reject will be passed into the callback of the next catch block
+``` javascript
+Promise.resolve(3)
+.catch(console.error) // will be skiped over because resolve allways goes to next then callback
+.then(console.log)
+
+Promise.reject('bad news')
+.then(console.log) // will be skiped because reject allways goes to next catch callback
+.catch(console.error)
+
+Promise.reject('simple err msg')
+.catch(err => {
+  console.error( err);
+  return 'hello world'; // this value will be resolved to the next then block :)
+})
+.then(console.log)
+.catch(console.error) // this will never be reached
+
+Promise.resolve([2,3,4,5])
+.then(nums => nums.map(num => num * 2))
+.then(nums => Promise.reject('error for fun')) 
+.then(console.log) // will never be reached
+.catch(console.error)
+```
+
 ``` json
 [
   "https://api.github.com/search/repositories?q=language:javascript",
