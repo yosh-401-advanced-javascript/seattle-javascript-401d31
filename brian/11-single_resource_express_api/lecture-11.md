@@ -28,10 +28,10 @@
     ```
 ## **Useful Commands**
   * **Commands:**
-    * `npm run start` - this maps back to the `scripts.start` section of our `package.json` file
-      * this is used to debug our modules and start our server
-      * this will kick off the `DEBUG='note*' node server.js` commands that our housed in `scripts.start`
-    * `nodemon server.js` - this will run `nodemon`, which will monitor our application for changes and restart the server if a change is made`
+    * `npm run start` - this maps back to the `scripts.start` section of a `package.json` file
+      * in our application, this is used to debug modules and start the server
+      * in our application, the command for this would normally be: `DEBUG='note*' node server.js`
+    * `nodemon server.js` - this will run the `nodemon` application, which is used to monitor our application for changes and restart the server if a change is made
 
 ## Express API Visualization
   ![visualization](www.url.com)
