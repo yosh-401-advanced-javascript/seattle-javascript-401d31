@@ -26,8 +26,9 @@
       // post a new note to the /api/note endpoint
       app.post('/api/note', function(req, res, next) { ... });
     ```
+
 ## **Useful Commands**
-  * **Commands:**
+  * **Commands**
     * `npm run start` - this maps back to the `scripts.start` section of a `package.json` file
       * in our application, this is used to debug modules and start the server
       * in our application, the command for this would normally be: `DEBUG='note*' node server.js`
