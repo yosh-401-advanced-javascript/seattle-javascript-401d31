@@ -1,4 +1,4 @@
-401 JS -- class 35 Component Bindings
+401 JS -- class 36 Component Bindings
 =========================
 
 ## Component Resources
