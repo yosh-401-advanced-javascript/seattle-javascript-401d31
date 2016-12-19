@@ -1,8 +1,8 @@
 'use strict';
 
-/// bellow is an implamentation of a syncronus BDD testing framework
-/// it wont work with async code.. but its a cool demo of how context
-/// can be used in powerful ways
+// below is an implementation of a syncronus BDD testing framework
+// it won't work with async code.. but its a cool demo of how context
+// can be used in powerful ways
 
 // state is used to hold all the callbacks registerd by before, after, and it blocks
 let state = {
@@ -11,8 +11,8 @@ let state = {
   itBlocks: [],
 };
 
-// before after and it mush their callbacks into the state 
-// so that describe can later itterate over them
+// before, after, and it consolidate their callbacks into the state
+// so that describe can later iterate over them
 function before(callback){
   state.beforeBlocks.push(callback);
 }
@@ -30,7 +30,7 @@ function describe(msg, callback){
   console.log(msg);
 
   // run the describe callback which will register all the before,
-  // aftter, and it callbacks
+  // after, and it callbacks
   callback.call({});
 
   // loop over the before callbacks and run them
@@ -54,13 +54,13 @@ function describe(msg, callback){
   state.afterBlocks.forEach(callback => callback());
 }
 
-// demonstrate t
-describe('running example bdd testing framework', function(){;
+// demonstrate
+describe('running example bdd testing framework', function(){
   // bind is used to bind the before and after callbacks to the describe block's context
   before((function(){
     console.log('first');
     this.first = 'shark in the dark';
-  }).bind(this)); 
+  }).bind(this));
 
   after((function(){
     console.log('fourth');
@@ -68,10 +68,10 @@ describe('running example bdd testing framework', function(){;
     console.log('this.second:', this.second);
   }).bind(this));
 
-  // lexical arrow functions inherrit there context form the closest parent with context
-  // this means you wont need bind
+  // lexical arrow functions inherit their context form the closest parent with context
+  // this means you won't need bind
   // TODO: refactor this before block's callback to use bind instead of an arrow function
-  before(() => { 
+  before(() => {
     console.log('second');
     this.second = 'fog in the hole in the log';
   })

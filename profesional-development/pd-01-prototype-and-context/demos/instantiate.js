@@ -16,8 +16,8 @@ function Product(name, price, sellBy){
 }
 
 Product.prototype.getCost = function(){
-  let dollers = Math.round(this.price * 100) / 100;
-  return `$ ${dollers}`
+  let dollars = Math.round(this.price * 100) / 100;
+  return `$ ${dollars}`
 }
 
 // create an instance of a product

@@ -39,9 +39,9 @@ function addColor(red, green, blue){
   red = this.red + red;
   blue = this.blue + blue;
   green = this.green + green;
-  this.red = red > 255 ? 255 : red; 
-  this.blue = blue > 255 ? 255 : blue; 
-  this.green = green > 255 ? 255 : green; 
+  this.red = red > 255 ? 255 : red;
+  this.blue = blue > 255 ? 255 : blue;
+  this.green = green > 255 ? 255 : green;
 }
 
 color = {
@@ -58,17 +58,15 @@ console.log();
 
 let favoriteColor = {red: 255, green: 255, blue: 0};
 
-// bind create a new function that can be only that can only be applyed to an object
-// this example doenst seem very useful, however it shows what bind does. Ususaly 
-// you will find bind being used with callbacks like you will in the 
-// homemade bdd testing framework
-
 let darkenFavoriteColor = darken.bind(favoriteColor);
+// bind creates a new function that can be only that can only be applyed to an object
+// this example doesn't seem very useful, however it shows what bind does. Ususaly
+// you will find bind being used with callbacks like you will in the
+// homemade BDD testing framework
+
 
 console.log('favoriteColor', favoriteColor);
 darkenFavoriteColor(11);
 console.log('after darkenFavoriteColor(11)', favoriteColor);
 darkenFavoriteColor(100);
 console.log('after darkenFavoriteColor(100)', favoriteColor);
-console.log();
-
