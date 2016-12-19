@@ -5,15 +5,14 @@ Code 401 Javascript Guide
 
 # Profesional Development
 
-* JS prototype and context
-* BigO notation and functional programming
-* Sorting algorithms
-* Stacks and queues
+* [JS prototype and context](./profesional-development/pd-01-prototype-and-context)
+* [BigO notation and functional programming](./profesional-development/pd-02-bigo-and-functional)
+* [Sorting algorithms](./profesional-development/pd-03-sorting-algorithms)
+* [Stacks and queues](./profesional-development/pd-04-stacks-queues)
 * Linked lists
 * Binary search tres
 
 # Backend
-
 ## Intro to Node.JS
 * class 01 modular patterns
 * class 02 build tools and testing
