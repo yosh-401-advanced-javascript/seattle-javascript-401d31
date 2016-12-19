@@ -14,10 +14,10 @@ Code 401 Javascript Guide
 
 # Backend
 ## Intro to Node.JS
-* class 01 modular patterns
-* class 02 build tools and testing
-* class 03 JS runtime and FS module
-* class 04 Event Emitters and Bitmap
+* [class 01 modular patterns](./backend/class-01-modular-patterns)
+* [class 02 build tools and testing](./backend/class-02-tools-errors-val-vs-ref)
+* [class 03 JS runtime and FS module](./backend/class-03-js-runtime-and-fs-module)
+* [class 04 Event Emitters and Bitmap](./backend/class-04-eventemitter-promise-bitmap)
 
 ## Networking
 * class 06 OSI, TCP, and pub/sub
