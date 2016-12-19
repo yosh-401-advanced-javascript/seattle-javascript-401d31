@@ -60,17 +60,15 @@ Code 401 Javascript Guide
 * [class 34 components as templates with controller logic](./frontend/class-34-template-components)
 
 ## Fronend for first project week api
-* class 36 component bindings
-* class 37 component callbacks
-* class 38 filter and uiBootstrap]()
+* [class 36 component bindings](./frontend/class-36-component-bindings)
+* [class 37 component callbacks](./frontend/class-37-component-callbacks)
+* [class 38 filter and uiBootstrap](./frontend/class-38-filters-and-bootstrap)
 * class 39 directives and dom manipulation
 
 ## Oauth
-* class 41 Google OAuth backend
-* class 42 Google Oauth frontend
-* class 43 Frontend deployment and CDNs
+* [class 41 Google OAuth backend](./frontend/class-41-oauth-frontend)
+* [class 42 Google Oauth frontend](./frontend/class-42-oauth-backend)
+* [class 43 Frontend deployment and CDNs](./frontend/class-43-frontend-deployment)
 
 ## Review
-* class 44 Review day!
-
-<!--hahahah-->
+* [class 44 Review day!](./frontend/class-44-review)
