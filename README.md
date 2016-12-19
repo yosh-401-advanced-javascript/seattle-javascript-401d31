@@ -46,23 +46,23 @@ Code 401 Javascript Guide
 # Frontend
 
 ## Intro to angular
-* class 26 angular, $rootScope, and templating
-* class 27 webpack, angular controllers and testing
+* [class 26 angular, $rootScope, and templating](./frontend/class-26-angular-intro)
+* [class 27 webpack, angular controllers and testing](./frontend/class-27-webpack-controllers-testing)
 
 ## Adventure Game
-* class 28 angular services
-* class 29 built in directives
+* [class 28 angular services](./frontend/class-28-services)
+* [class 29 built in directives](./frontend/class-29-angular-directives)
 
 ## Image Gallery Crud App
-* class 31 routing
-* class 32 authentication and authorization
-* class 33 AJAX CRUD and multi-part form requests
-* class 34 components as templates with controller logic
+* [class 31 routing](./frontend/class-31-angular-routing)
+* [class 32 authentication and authorization](./frontend/class-32-client-basic-auth)
+* [class 33 AJAX CRUD and multi-part form requests](./frontend/class-33-AJAX-crud-and-image-upload)
+* [class 34 components as templates with controller logic](./frontend/class-34-template-components)
 
 ## Fronend for first project week api
 * class 36 component bindings
 * class 37 component callbacks
-* class 38 filter and uiBootstrap
+* class 38 filter and uiBootstrap]()
 * class 39 directives and dom manipulation
 
 ## Oauth
