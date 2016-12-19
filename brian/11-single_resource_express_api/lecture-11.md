@@ -8,7 +8,7 @@
     * it also provides us with useful helpers to manage requests, routes, and even views
     * in addition to managing requests and routes, it provides us with the ability to create our own middeware components
       * middleware provides us with access to the `req` and `res` objects
-      * middleware also provides us with the ability to access the `next` middleware function in the `req` and `res` cycle 
+      * middleware also provides us with the ability to access the `next` middleware function in the `req` and `res` cycle
 
   * **Route Methods**
     * `express.js` provides us with simple to use route methods and parameters
@@ -33,6 +33,3 @@
       * in our application, this is used to debug modules and start the server
       * in our application, the command for this would normally be: `DEBUG='note*' node server.js`
     * `nodemon server.js` - this will run the `nodemon` application, which is used to monitor our application for changes and restart the server if a change is made
-
-## Express API Visualization
-  ![visualization](www.url.com)
