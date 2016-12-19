@@ -1,17 +1,17 @@
 'use strict';
 
 // all the functions in this file are considered "pure functions"
-// pure function are functions that do not mutate any data that are
-// defined outside of their scope. 
+// pure functions are functions that do not mutate any data that has been
+// defined outside of their scope.
 //
-// this means that the methods on List do not change the instance 
-// of list that call the functions, instead they create a return 
-// a new Farray that has the desired change
+// this means that the methods on List do not change the instance
+// of the list that calls the function, instead they create and return
+// a new Array that has the desired change
 
 // TODO: refactor the constructor into a factory function
 function List(){
-  // this will create indexed values with all teh arguments passed into
-  for(var key in arguments){
+  // this will create indexed values with all the arguments passed into it
+  for(let key in arguments){
     this[key] = arguments[key];
   }
 
@@ -21,7 +21,7 @@ function List(){
 // O(n)
 List.prototype.copy = function(){
   let result = new List();
-  for(var key in this){
+  for(let key in this){
     result[key] = this[key];
   }
   return result;
@@ -35,16 +35,16 @@ List.prototype.push = function(value){
 }
 
 // O(n) because it runs copy
-// returns {value, list} 
-// where value is the last item on the array 
+// returns {value, list}
+// where value is the last item on the array
 // and list is the new List with the popped value
 // this was done to keep pop a "pure function"
 List.prototype.pop = function(){
   let result  = this.copy();
   delete result[--result.length];
   //copy.length--;
-  
-  return  { 
+
+  return {
     value: this[this.length -1],
     list: result,
   }
@@ -52,9 +52,8 @@ List.prototype.pop = function(){
 
 // O(n)
 List.prototype.reduce = function(callback, initial){
-
-  var i=0;
-  var result = initial ? initial : this[i++];
+  let i=0;
+  let result = initial ? initial : this[i++];
 
   for (; i<this.length; ++i){
     result = callback(result, this[i], i, this);
@@ -66,7 +65,7 @@ List.prototype.reduce = function(callback, initial){
 // O(n)
 List.prototype.filter= function(callback){
   let result = new List();
-  for(var i=0; i<this.length; ++i){
+  for(let i=0; i<this.length; ++i){
     if (callback(this[i], i, this)){
       result[result.length++] = this[i];
     }
@@ -78,7 +77,7 @@ List.prototype.filter= function(callback){
 // O(n)
 List.prototype.map = function(callback){
   let result = new List();
-  for(var i=0; i<this.length; ++i){
+  for(let i=0; i<this.length; ++i){
     result[i] = callback(this[i], i, this);
   }
 
@@ -88,7 +87,7 @@ List.prototype.map = function(callback){
 
 // O(n)
 List.prototype.forEach = function(callback){
-  for(var i=0; i<this.length; i++){
+  for(let i=0; i<this.length; i++){
     callback(this[i], i, this);
   }
 }
@@ -98,44 +97,45 @@ let nums = new List(1,33,4,53,6,24);
 console.log('nums', nums);
 console.log(); // these empty console logs just make the output more easy to read
 
-// !(num & 1) uses the bitwise and opperator to determine if a number is even
-// nums.filter takes the isEven function as an argument and returns an List that
-// only has even numbers.
-// naming functions is a big part of createing good functional programs
-// naming a function makes the programg mor readable
-// "isEvan" is much more readable than "num => !(num &1)"
 
-// arrow functions can be assigned to variabels to name them!!!!!
-let isEven = num => !(num & 1); 
+// arrow functions can be assigned to variables to name them!!!!!
+let isEven = num => !(num & 1);
 let evens = nums.filter(isEven); // keeps all the numbers that are even
 console.log('evens', evens);
+// !(num & 1) uses the bitwise and opperator to determine if a number is even
+// nums.filter takes the isEven function as an argument and returns a List that
+// only has even numbers.
+// naming functions is a big part of createing good functional programs
+// naming a function makes the programg more readable
+// "isEven" is much more readable than "num => !(num &1)"
 
 // the above filter statement could also be written
-// let evens = nums.filter(num => !(num & 1)); but i would argue this
-// satement format is less readable
+// let evens = nums.filter(num => !(num & 1))
+  // I would argue this satement format is less readable
 
 
-// forEach takes a function as an argument 
+// forEach takes a function as an argument
 // if we pass console.log as the function we can see the values that are passed
 // to the callback they will be "(value, index, list)"
-console.log('using console.log as an argument to forEach on evans')
+console.log('using console.log as an argument to forEach on evens')
 evens.forEach(console.log)
 console.log();
 
 
-// map takes a function as an argument and creates a new list 
-// where each index is the result of that function 
-// hen called with "(value, index, list)"
+// map takes a function as an argument and creates a new list
+// where each index is the result of that function
+// when called with "(value, index, list)"
 // create a new List where each index is Math.sqrt(nums[index])
 let squareRoots = nums.map(Math.sqrt)
 console.log('squareRoots', squareRoots);
 console.log();
 
-// @getify on github call's reduce "the swiss army knife of functional programing"
+
+// @getify on github call's reduce "the swiss army knife of functional programming"
 // reduce allows you to accumulate information
 // it could be used to implement map and filter
 // here we use reduce to get the sum of all the numbers in the list
-let sum = nums.reduce((prev, current) => prev + current)
+let sum = nums.reduce((accumulator, current) => accumulator + current)
 console.log('sum', sum);
 console.log();
 
@@ -158,4 +158,3 @@ console.log();
 // with the last value removed
 console.log('nums.pop()', nums.pop());
 console.log();
-
