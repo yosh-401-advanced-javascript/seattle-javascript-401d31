@@ -10,39 +10,33 @@
 * Read [MDN inheritance and the prototype chain]
 
 # Learning Objectives
-* understand the difference between context and scope
-* learn how to configure a functions context
-* understand the roll context plays in constructor functions
+* Understand the difference between context and scope
+* Learn how to configure a function's context
+* Understand the roll context plays in constructor functions
 
 # Overview
-* when a function has a `this` we say that `this` is the functions context
-* unlike scope a functions context can be configured
+* When a function has a `this` we say that `this` is the functions context
+* Unlike scope, a function's context can be configured
 * If a function is not a property on an object, by default it has no context
 * If a function is a property on an object, by default that object is the context for that function
+
+## Call, Bind, and Apply
 * `call`, `bind`, and `apply` are function prototype methods that allow us to change the context of a function
-* `call` is a methods on a function that invokes a function with a specified context and argments  
- * `call` passes comma seporated argments
+
+### Call
+* `call` is a methods on a function that invokes a function with a specified context and arguments
+ * `call` passes comma separated arguments
+
 ``` javascript
 function lower(str){
   return String.prototype.toLowerCase.call(str)
 }
 
 lower("HELLO");
-// hello
+// "hello"
 ```  
-* `apply` is a methods on a function that invokes a function with a specified context and argments  
- * `apply` passes argments from an array  
-``` javascript
-var state = {
-  history: [],
-  addToHistory: function(){ 
-    Array.prototype.push.apply(this.history, arguments);
-  }
-};
 
-state.addToHistory('move player', 'pickup item', 'update hp');
-// state.history === ['move player', 'pickup item', update hp']
-```   
+### Bind
 * `bind` is a methods on a function that returns a new function with a specified context
 ``` javascript
 describe('bind example', function(){
@@ -55,6 +49,23 @@ describe('bind example', function(){
 })
 
 ```   
+
+### Apply
+* `apply` is a methods on a function that invokes a function with a specified context and arguments  
+ * `apply` passes arguments from an array  
+``` javascript
+var state = {
+  history: [],
+  addToHistory: function(){
+    Array.prototype.push.apply(this.history, arguments);
+  }
+};
+
+state.addToHistory('move player', 'pickup item', 'update hp');
+// state.history === ['move player', 'pickup item', update hp']
+```   
+
+## Arrow Functions & 'this'
 * Arrow functions inherit their context from their parent context
 ``` javascript
 describe('arrow function example', function(){
@@ -67,7 +78,8 @@ describe('arrow function example', function(){
   })
 })
 ```
-* variables can be assigned to arrow functions  
+
+* Arrow functions can be assigned as the value of variables  
 ``` javascript
 var doubleIt = num => num * 2;
 doubleIt(16);
@@ -81,8 +93,10 @@ let removeOdds = list => list.filter(num => !(num & 1));
 removeOdds([1,2,3,4]);
 // [2,4]
 ```
+
+## Prototypes
 * The `new` keyword creates a empty object and invokes a function with that object as its context
-* For constructor ABC to inherit constructor XYZ's property it should `XYZ.call(this)` 
+* For constructor ABC to inherit constructor XYZ's properties it should `XYZ.call(this)`
 * For constructor ABC to inherit constructor XYZ's methods it should `ABC.prototype = Object.create(XYZ.prototype)`
 ``` javascript
 function XYZ(shape){
@@ -129,29 +143,29 @@ let redBall = new ABC('ball', 'red');
 // }
 
 ```
-* dont mess with `__proto__` its slow **not even to read a property**
-* if you want to determin an objects prototype use `Object.getPrototypeOf(someObject)`
+
+* Don't modify or rely on the `__proto__` property of an object. It's slow. **not even to read a property**
+* If you want to determine an objects prototype use `Object.getPrototypeOf(someObject)`
 ``` javascript
 var prototype = {};
 var color = Object.create(prototype);
 Object.getPrototypeOf(color) === prototype; // true
 ```
-* don't nest a lot of prototype's it will have a speed impact on your code
-* if you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
+* Don't nest a lot of prototypes. It will have a speed impact on your code
+* If you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
 
 # Exercise
-* Write out the bdd framework from the class lecture
+* Write out the BDD (Behavior Driven Development) framework from the class lecture
 * Add `beforeEach` and `afterEach` functionality
-* **SUPER BONUS**: 
- * refactor your bdd framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
+* **SUPER BONUS**:
+ * refactor your BDD framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
 
 [MDN new]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
 
-[MDN Object prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype 
+[MDN Object prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
 
 [MDN inheritance and the prototype chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 
 [MDN this]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
 
 [Javascript Context Tutorial]: https://www.youtube.com/watch?v=fjJoX9F_F5g
-
