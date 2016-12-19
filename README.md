@@ -5,20 +5,19 @@ Code 401 Javascript Guide
 
 # Profesional Development
 
-* JS prototype and context
-* BigO notation and functional programming
-* Sorting algorithms
-* Stacks and queues
+* [JS prototype and context](./profesional-development/pd-01-prototype-and-context)
+* [BigO notation and functional programming](./profesional-development/pd-02-bigo-and-functional)
+* [Sorting algorithms](./profesional-development/pd-03-sorting-algorithms)
+* [Stacks and queues](./profesional-development/pd-04-stacks-queues)
 * Linked lists
 * Binary search tres
 
 # Backend
-
 ## Intro to Node.JS
-* class 01 modular patterns
-* class 02 build tools and testing
-* class 03 JS runtime and FS module
-* class 04 Event Emitters and Bitmap
+* [class 01 modular patterns](./backend/class-01-modular-patterns)
+* [class 02 build tools and testing](./backend/class-02-tools-errors-val-vs-ref)
+* [class 03 JS runtime and FS module](./backend/class-03-js-runtime-and-fs-module)
+* [class 04 Event Emitters and Bitmap](./backend/class-04-eventemitter-promise-bitmap)
 
 ## Networking
 * class 06 OSI, TCP, and pub/sub
@@ -47,31 +46,29 @@ Code 401 Javascript Guide
 # Frontend
 
 ## Intro to angular
-* class 26 angular, $rootScope, and templating
-* class 27 webpack, angular controllers and testing
+* [class 26 angular, $rootScope, and templating](./frontend/class-26-angular-intro)
+* [class 27 webpack, angular controllers and testing](./frontend/class-27-webpack-controllers-testing)
 
 ## Adventure Game
-* class 28 angular services
-* class 29 built in directives
+* [class 28 angular services](./frontend/class-28-services)
+* [class 29 built in directives](./frontend/class-29-angular-directives)
 
 ## Image Gallery Crud App
-* class 31 routing
-* class 32 authentication and authorization
-* class 33 AJAX CRUD and multi-part form requests
-* class 34 components as templates with controller logic
+* [class 31 routing](./frontend/class-31-angular-routing)
+* [class 32 authentication and authorization](./frontend/class-32-client-basic-auth)
+* [class 33 AJAX CRUD and multi-part form requests](./frontend/class-33-AJAX-crud-and-image-upload)
+* [class 34 components as templates with controller logic](./frontend/class-34-template-components)
 
 ## Fronend for first project week api
-* class 36 component bindings
-* class 37 component callbacks
-* class 38 filter and uiBootstrap
+* [class 36 component bindings](./frontend/class-36-component-bindings)
+* [class 37 component callbacks](./frontend/class-37-component-callbacks)
+* [class 38 filter and uiBootstrap](./frontend/class-38-filters-and-bootstrap)
 * class 39 directives and dom manipulation
 
 ## Oauth
-* class 41 Google OAuth backend
-* class 42 Google Oauth frontend
-* class 43 Frontend deployment and CDNs
+* [class 41 Google OAuth backend](./frontend/class-41-oauth-frontend)
+* [class 42 Google Oauth frontend](./frontend/class-42-oauth-backend)
+* [class 43 Frontend deployment and CDNs](./frontend/class-43-frontend-deployment)
 
 ## Review
-* class 44 Review day!
-
-<!--hahahah-->
+* [class 44 Review day!](./frontend/class-44-review)
