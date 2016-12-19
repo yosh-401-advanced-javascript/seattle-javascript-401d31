@@ -58,7 +58,8 @@ storageEmitter.on('deleteData', function(key){
   delete storage[key];
   storageEmitter.emit('afterDelete', key, backup);
 });
-```
+```  
+
 ``` javascript
 'use strict';
 
@@ -110,8 +111,115 @@ storage.emit('deleteData', 'menu');
 storage.emit('getData', 'blt', function(data){
   console.log('blt', data);
 })
-```
+
+```  
+
 #### Promise
+* The Promise pattern allows us to chain asyncronous events
+* When you create a new promise, you pass it two callbacks
+ * the `resolve` callback is used on success
+ * the `reject` callback is used on failure
+``` javascript
+function readFile(path){
+  return new Promise(function(resolve, reject){
+    fs.readFile(path, function(err, data){
+      if (err) return reject(err);
+      resolve(data);
+    });
+  });
+}
+```
+* You can also create promises that explicity resolve or reject using convienece static methods
+* `Promise.resolve(3)` - returns a promise that resolves the value three
+* `Promise.reject(new Error('bad things'))` - returns a promise that rejects an `new Error('bad things')`
+* `then` and `catch` methods are used to handle the result of a promise
+* `then` and `catch` each take a callback as their argument
+* `then` is called with the value that was `resolved(value)` in the last promise
+* `catch` is called with the value that was `rejected(value` in the last promise
+* Promises should only reslove or reject, not both
+* In the callback of a `then` or a `catch` block if you return a value, it will be passed into the callback of the next then block
+* In the callback of a `then` or a `catch` block if you return a Promise that rejects, the value you reject will be passed into the callback of the next catch block
+``` javascript
+Promise.resolve(3)
+.catch(console.error) // will be skiped over because resolve allways goes to next then callback
+.then(console.log)
+
+Promise.reject('bad news')
+.then(console.log) // will be skiped because reject allways goes to next catch callback
+.catch(console.error)
+
+Promise.reject('simple err msg')
+.catch(err => {
+  console.error( err);
+  return 'hello world'; // this value will be resolved to the next then block :)
+})
+.then(console.log)
+.catch(console.error) // this will never be reached
+
+Promise.resolve([2,3,4,5])
+.then(nums => nums.map(num => num * 2))
+.then(nums => Promise.reject('error for fun')) 
+.then(console.log) // will never be reached
+.catch(console.error)
+```
+##### readfile, ajax, writefile program 
+* this program demonstrates the power of chaining async 
+``` json
+[
+  "https://api.github.com/search/repositories?q=language:javascript",
+  "https://api.github.com/search/repositories?q=language:python",
+  "https://api.github.com/search/repositories?q=language:swift",
+  "https://api.github.com/search/repositories?q=language:c"
+]
+```
+
+``` javascript
+'use strict';
+
+const fs = require('fs');
+const superagent = require('superagent');
+
+// promises can be created using the new Promise() constructor
+// which takes a callback that expects two callback functions resolve
+// and reject.  
+function readFileProm(path){
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, (err, data) => {
+      if (err) return reject(err); // reject is called anytime there is an error
+      return resolve(data); // resolve is called when there is a success
+    });
+  });
+}
+
+function writeFileProm(path, data){
+  return new Promise((resolve, reject) => {
+    fs.writeFile(path, data, (err) => {
+      if (err) return reject(err); // reject is called anytime there is an error
+      return resolve(); // resolve is called when there is a success
+    });
+  });
+}
+// read a json file
+// turn a buffer into a string
+// parse the string into an array
+// turn each url in the array into a GET request
+// make all the requests
+// extact the body from each response
+// write the responses to the file system
+// log success
+
+readFileProm(`${__dirname}/gh-search.json`) 
+.then(data => data.toString())  
+.then(json => JSON.parse(json)) 
+.then(urlList => { 
+  let requests = urlList.map(url => superagent.get(url)); 
+  return Promise.all(requests); 
+})
+.then(responses => responses.map(res => res.body)) 
+.then(data => writeFileProm(`${__dirname}/results.json`, JSON.stringify(data, null, 2))) 
+.then(() => console.log('success')) 
+.catch(console.error)
+```
 
 #### Binary 
 * you've probably heard that all things in the computer are just a bunch of zeros and ones
@@ -181,6 +289,103 @@ DEC |HEX |BIN
 * now days we have a character encoding called `utf8` that is an extension for ascii, that suports multipul languages
 
 #### Buffers
+Pure javascript is Unicode freindly but not nice to bindary data. When dealing with TCP streams or the file system, it's necessary to deal with octet streams. node has a few ways to handle manipulating, consuming, and creating octet streams. 
+Raw dat is stored as instances of the Buffer class A buffer is simular to an array of integers, but corresponds to raw memory allocation outside the V8 heap. a Buffer cannot be resized.
+
+The Buffer class is a global, making it very rare that one would need to ever require('buffer').
+
+* A Buffer represents ararys of bytes
+ * A byte is made of of 8 bits
+ * A bit is a single one or zero
+* Each byte in a buffer can be decoded as an integer, floating point number, or a string
+* Integers and Floats come in different sizes 8bit, 16bit, 32bit
+* Strings come in different encodings 'hex', 'utf8', 'base64' ...
+* Buffers are often referted to as raw data, meaning just a bunch of zeros and ones
+* Many of the Node APIs use buffers as the data type when dealing with input and output
+* Your OS stores binary in one of two ways
+ * `little endian` - most significant bit first
+ * `big endian` - least significant bit first
+* In a node **REPL** you can un `os.endianness()` to determin how your os stores bytes
+ * `'LE'` == little endian
+ * `'BE'` == big endian
+* Make sure your useing the methods that corresond to your systems **endianness**
+ 
+###### Creating buffers
+* ` new Buffer(size) ` allocates a new buffer of size octets(bytes)
+* ` new Buffer(array) ` allocates a new buffer using an array of octets
+* ` new Buffer(buffer) ` copys the passed buffer data onto a new Buffer instance
+* ` new Buffer(str, *encoding) ` allocates a new buffer containing a givin string, Defaluts to utf8
+
+###### buffer info
+* ` Buffer.isBuffer(obj) ` test is obj is Buffer -> return boolean
+* ` Buffer.isEncoding(encoding) ` test if the encoding is valid -> return boolean
+* ` Buffer.byteLength(string, *encoding) ` gives the actual byte lenght of a string. Defalut encoding = utf8
+* ` buf.length ` retrun the size of the buffer in bytes.
+
+###### comparing buffers
+* ` buf.equals(otherBuffer) ` returns boolean of weather this and otherbuffer have the same bytes
+* ` buf.compare(otherbuffer) ` returns a bynber indicating wheather this comes before or after or is the same as the other buffer in a sort
+
+###### copying, slice, and concat
+* ` buf.copy( targetBuffer, *targetStart, *sourceStart, *sourceEnd)`
+ * create a new buffer
+* ` buf.slice(*start, *end) ` 
+ * create a  a new buffer witch references the same memory as teh old by offset and cropped by start, end
+* ` Buffer.concat(list, *totalLength) ` concatinates the buffers in the list
+
+###### indexing a buffer
+ * `buf[index]` get and set the octet at index (just like an array)
+ 
+###### fill a buffer
+* ` buff.fill(value, *offset, *end) ` fills the buffer with the specified value
+ * **offset** - number of bytes into array, Defaults: 0
+ * **end** - number of bytes into array to stop, Defaults, buffer.length
+ 
+###### writing integers
+* ` writeUInt16LE(value, offset, *noAssert)` 
+* ` writeUInt32LE(value, offset, *noAssert)`
+* ` writeUInt8(value, offset, *noAssert)`
+* ` writeInt16LE(value, offset, *noAssert)`
+* ` writeInt32LE(value, offset, *noAssert)`
+* ` writeInt8(value, offset, *noAssert)`
+ * **value** - Number to write
+ * **offset** - number of bytes into array
+ * **noAssert** - Boolean,  set to true to skip validation off offset
+
+###### reading integers
+* `readUInt16LE(offset, *noAssert)`
+* `readUInt16BE(offset, *noAssert)`
+* `readUInt32LE(offset, *noAssert)`
+* `readUInt32BE(offset, *noAssert)`
+* `readUInt8(offset, *noAssert)`
+* `readInt16LE(offset, *noAssert)`
+* `readInt16BE(offset, *noAssert)`
+* `readInt32LE(offset, *noAssert)`
+* `readInt32BE(offset, *noAssert)`
+* `readInt8(offset, *noAssert)`
+ * **offset** - number of bytes into array
+ * **noAssert** - Boolean,  set to true to skip offset validation
+
+
+###### writing strings
+ * ``` buf.write(string, *offset, *length, *encoding)``` 
+ * offset Defaluts to 0
+ * encoding defalts to utf8
+ * if buffer did not conain enough space to fit the entire string it will wrate a partial amount of the string. 
+ * length defalts to buffer.length
+ 
+###### reading stirngs
+* ``` buf.toString(*encoding, *start, *end) ``` decodes and returns a string from buffer data
+ * **encoding** - String, Defalut: 'utf8'
+ * **start** - Number, Default: 0
+ * **end** - Number, Default: buffer.length
+ * Converting between buffers and strings requireds a specific encodeing 
+  * `acii` - for 7 bit ASCII data
+  * `utf8` - for multibyte encoded unicode characters
+  * `utf16le` - 2 or 4 byte, little endian unicode
+  * `ucs2` - alias of utf16le
+  * `base64` - Base64 sring encoding
+  * `hex` - encode each byte as two hexadecimal characters
 
 <!--links -->
 [events api docs]: https://nodejs.org/api/events.html
