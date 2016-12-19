@@ -111,7 +111,6 @@ storage.emit('deleteData', 'menu');
 storage.emit('getData', 'blt', function(data){
   console.log('blt', data);
 })
-<<<<<<< HEAD
 
 ```  
 
@@ -221,11 +220,7 @@ readFileProm(`${__dirname}/gh-search.json`)
 .then(() => console.log('success')) 
 .catch(console.error)
 ```
-=======
-```
-#### Promise
 
->>>>>>> 1c91dc3edd4bed07b9b53aa8d24b8b772e2a757a
 #### Binary 
 * you've probably heard that all things in the computer are just a bunch of zeros and ones
  * its true :)
@@ -294,7 +289,6 @@ DEC |HEX |BIN
 * now days we have a character encoding called `utf8` that is an extension for ascii, that suports multipul languages
 
 #### Buffers
-<<<<<<< HEAD
 Pure javascript is Unicode freindly but not nice to bindary data. When dealing with TCP streams or the file system, it's necessary to deal with octet streams. node has a few ways to handle manipulating, consuming, and creating octet streams. 
 Raw dat is stored as instances of the Buffer class A buffer is simular to an array of integers, but corresponds to raw memory allocation outside the V8 heap. a Buffer cannot be resized.
 
@@ -392,8 +386,6 @@ The Buffer class is a global, making it very rare that one would need to ever re
   * `ucs2` - alias of utf16le
   * `base64` - Base64 sring encoding
   * `hex` - encode each byte as two hexadecimal characters
-=======
->>>>>>> 1c91dc3edd4bed07b9b53aa8d24b8b772e2a757a
 
 <!--links -->
 [events api docs]: https://nodejs.org/api/events.html
