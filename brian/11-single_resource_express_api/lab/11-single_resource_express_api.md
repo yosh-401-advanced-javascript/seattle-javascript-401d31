@@ -29,7 +29,7 @@
   * Persist your API data using the storage module and file system persistence
 
 ## Server Endpoints
-  ### `/api/simple-resource-name`
+  * **`/api/simple-resource-name`**
   * `POST` request
    * pass data as stringifed JSON in the body of a **POST** request to create a new resource
   * `GET` request
