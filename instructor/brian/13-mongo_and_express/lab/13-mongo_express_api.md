@@ -17,7 +17,7 @@
   * `README.md`
 
 ## Description
-  * Create a HTTP Server using `express`
+  * Create an HTTP Server using `express`
   * Create a resource **model** of your choice that uses `mongoose.Schema` and `mongoose.model`
   * Use the `body-parser` express middleware to parse the `req` body on `POST` and `PUT` requests
   * Use the npm `debug` module to log the functions and methods that are being used in your application
