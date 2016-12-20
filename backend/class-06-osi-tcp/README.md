@@ -25,12 +25,12 @@ The application layer conains process to process comunication protocols used by 
 * **6** Presintation
 The presintation layer is responsible for formating information for the application layer.  
   * string encoding
-   * num bytes followed by data
-     * null terminated strings
+    * num bytes followed by data  
+    * null terminated strings
   * data serialization
-   * JSON
-     * XML
-       * TLV
+    * JSON
+    * XML
+    * TLV
   * encription
 * **5** Session 
 The session layer is responsible for opening, closing, and  managing end-user applications.  
