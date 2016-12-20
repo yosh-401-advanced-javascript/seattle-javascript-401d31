@@ -7,7 +7,7 @@
     * middleware can also access the next middleware function in the middleware chain by calling `next()`
 
   * **Types of Middleware**
-    * **application level:** binds middleware to the instance of the `app` object through the use of:
+    * **application level:** binds middleware to the instance of the `app` object by using:
       * `app.use()`
       * `app.METHOD()` *get, post, put, delete*
     * **router level:** binds middleware to an instance of `express.Router`
@@ -16,7 +16,7 @@
       * it contains 4 arguments `(err, req, res, next)`
     * **built-in:** provides us with helper methods
       * ex: `express.static()`
-    * **3rd party:** can be used by passing the middleware into an `app.use` call
+    * **3rd party:** can be used by passing middleware into an `app.use` call
       * ex: `app.use(bodyParser.json())`
       * ex: `app.use(cors())`
 
