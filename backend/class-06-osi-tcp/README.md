@@ -21,7 +21,7 @@ The application layer conains process to process comunication protocols used by 
  * `POP` - used by email clients to retrieve e-mail
  * `FTP` - used to transfer files bewteen computers
  * `SSH` - used for securly operating a computer over an unsecure network
- * `BitTorrent`  
+ * `BitTorrent` - used for peer to perr file transfer
 * **Layer 6** Presintation  
 The presintation layer is responsible for formating information for the application layer.  
   * string encoding
