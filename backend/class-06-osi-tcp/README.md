@@ -27,10 +27,7 @@ The presintation layer is responsible for formating information for the applicat
   * string encoding
     * num bytes followed by data  
     * null terminated strings
-  * data serialization
-    * JSON
-    * XML
-    * TLV
+  * data serialization like `JSON`, `XML`, and `TLV`
   * encription
 * **Layer 5** Session   
 The session layer is responsible for opening, closing, and  managing end-user applications.  
