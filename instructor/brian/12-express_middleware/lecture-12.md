@@ -4,7 +4,7 @@
 ## Middleware
   * **Overview**
     * middleware functions are functions that have access to the `req` and `res` objects
-    * it can also access the next middleware function in the middleware chain by calling `next()`
+    * middleware can also access the next middleware function in the middleware chain by calling `next()`
 
   * **Types of Middleware**
     * **application level:** binds middleware to the instance of the `app` object through the use of:
