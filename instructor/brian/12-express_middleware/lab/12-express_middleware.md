@@ -17,14 +17,12 @@
   * `README.md`
 
 ## Description
-  * Create a `node.js` and `express.js` REST API with `GET`, `POST`, and `PUT` routes
-  * Create an `error-middleware` module to handle errors and error messages
-    * be sure to use the `http-errors` module to associate your errors with the appropriate status code
-  * Create a custom `cors-middleware` module, that uses the npm `cors` module, to allow anyone access to your API
-  * Add a `deleteItem` and `availIDs` method to your `storage` module for deleting items and displaying all available id's when performing `GET` requests to `/api/resource-name`
-  * Add an `updateNote`, `fetchNote`, and `fetchIDs` static method to your `Note` constructor - these should be used in order to update a note, get a note, and access all notes at the `/api/resource-name` endpoint
-    * use the `storage` module as the main logic for this, your `Note` methods should just be wrappers for convenience
-  * Create a `note-router` module to handle all `GET`, `POST`, and `PUT` routes
-  * Create a series of `note-route-tests` to test your routes and expected results
-    * **hint:** you'll want to use the `before` and `after` hooks provided by `mocha` in order to setup an example note or other associated mock data
-  * **note: feel free to use the in-class lecture code from today as a point of reference - the requirements listed above are directly based off of what was built in lecture**
+  * Create a single resource `express` API that can handle **GET**, **POST**, and **PUT** requests
+  * Use the `http-errors` module to create new errors and associate them with a proper status code
+  * Create an `error-middleware` module to handle errors and *use* it in your server file
+  * Create a `cors-middleware` module, that is built on top of the npm `cors` module, to allow for public use of your API
+  * Create the `deleteItem` and `availIDs` methods and add them to your `storage` module
+    * these methods should be used to delete a resource (`deleteItem`) and return an array of id's from persisted resource filenames (`availIDs`)
+  * Create the `updateNote`, `fetchNote`, and `fetchIDs` static methods as part of your `Note` model
+  * Create a series of `note-route-tests` to test your **GET**, **POST**, and **PUT** routes
+    * **hint:** *you'll want to use the `before` and `after` hooks provided by `mocha` in order to create a test note and delete the note after the test has completed*
