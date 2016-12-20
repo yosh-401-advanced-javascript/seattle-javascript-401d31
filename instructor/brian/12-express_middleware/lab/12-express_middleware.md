@@ -17,7 +17,6 @@
   * `README.md`
 
 ## Description
-  * *note: feel free to use the in-class lecture code from today as a point of reference - the following requirements are directly based off of what was built in lecture*
   * Create a `node.js` and `express.js` REST API with `GET`, `POST`, and `PUT` routes
   * Create an `error-middleware` module to handle errors and error messages
     * be sure to use the `http-errors` module to associate your errors with the appropriate status code
@@ -28,3 +27,4 @@
   * Create a `note-router` module to handle all `GET`, `POST`, and `PUT` routes
   * Create a series of `note-route-tests` to test your routes and expected results
     * **hint:** you'll want to use the `before` and `after` hooks provided by `mocha` in order to setup an example note or other associated mock data
+  * **note: feel free to use the in-class lecture code from today as a point of reference - the requirements listed above are directly based off of what was built in lecture**
