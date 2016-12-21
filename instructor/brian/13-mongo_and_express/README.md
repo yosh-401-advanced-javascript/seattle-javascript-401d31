@@ -5,16 +5,16 @@
   * **Overview**
     * **MongoDB** is a document based (noSQL) database
     * data is stored as a document with a series of key/value pairs
-    * the data structure used to define a **MongoDB** document is referred to as `BSON` (which stands for Binary JSON)
-    * you can install `mongoDB` through npm by running `npm install mongodb`
-    * **MongoDB** runs as a daemon process and has an included shell client
+    * the data structure used to define a **MongoDB** document is referred to as `BSON` (Binary JSON)
+    * you can install **MongoDB** through npm by running `npm install mongodb`
+    * **MongoDB** runs as a daemon process and has an included shell client for easy database access
       * **start the MongoDB process:** `mongod`
       * **start the MongoDB shell:** `mongo`
 
 ## Mongoose
   * **Overview**
     * **Mongoose** provides us with a schema based solution for modeling our application data
-    * it provides us with helper methods, validation, query building, and logic hooks to speed up the development process
+    * it provides us with helper methods, validation, queries, and logic hooks to speed up the dev process
     * basic usage:
     ``` javascript
       const mongoose = require('mongoose');
