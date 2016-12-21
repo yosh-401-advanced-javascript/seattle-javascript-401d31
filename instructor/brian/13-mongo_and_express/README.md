@@ -31,3 +31,9 @@
 
 ## Mongo Shell Commands
   * **Commands**
+    * `show dbs` - show a list of available databases
+    * `use dbname` - switch to a new database
+    * `show collections` - show a list of collections from the current database
+    * `db.collection.find()` - show all documents in the collection
+    * `db.collection.insert({ <data> })` - insert a new document into the collection
+    * `db.collection.save()` - insert a new document or update an existing document in the collection
