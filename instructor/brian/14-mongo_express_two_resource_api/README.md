@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 14: Mongo/Express 2 Resource API
+![cf](http://i.imgur.com/7v5ASc8.png) 14: Mongo & Express Two Resource API
 =====================================
 
 ## Working with Multiple Resources
@@ -9,7 +9,7 @@
       * this property has a "data type" of `ObjectId` and can be used to create relationships between resources that specify the same id upon creation
     * example:
     ``` javascript
-      
+
       const mongoose = require('mongoose');
       const Schema = mongoose.Schema;
 
@@ -18,10 +18,13 @@
         content: String,
         listID: Schema.Types.ObjectId // when creating a new note, we can assign the listID property as the same value as the `_id` property of a list
       });
-      
+
     ```
     * `mongoose` also provides us with the ability to `populate` our resources with a connection to a related resource
     * population is handled through the use of the `populate()` method and will populate your resource with a connection to another resource by using it's schema name
       * example: `populate('notes')`
+    * **demo:** **MongoDB** and **Express** two resource API
+      * [mongo-express-two-resource-api](/14-mongo_express_two_resource_api/demo/two_resource_api)
 
-
+  * **Visualization**
+    ![visualization](www.url.com)
