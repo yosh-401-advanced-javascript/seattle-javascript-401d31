@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 14: Mongo & Express Two Resource API
+![cf](http://i.imgur.com/7v5ASc8.png) 14: MongoDB & Express Two Resource API
 =====================================
 
 ## Working with Multiple Resources
@@ -26,5 +26,5 @@
     * **demo:** **MongoDB** and **Express** two resource API
       * [mongo-express-two-resource-api](/14-mongo_express_two_resource_api/demo/two_resource_api)
 
-  * **Visualization**
-    ![visualization](www.url.com)
+## Mongo & Express API with 2 Resources Visualization
+    ![visualization](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/mongo-express-api.png)
