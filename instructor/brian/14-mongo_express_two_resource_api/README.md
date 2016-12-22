@@ -10,9 +10,6 @@
     * example:
     ``` javascript
 
-      const mongoose = require('mongoose');
-      const Schema = mongoose.Schema;
-
       const noteSchema = Schema({
         name: String,
         content: String,
@@ -24,7 +21,7 @@
     * population is handled through the use of the `populate()` method and will populate your resource with a connection to another resource by using it's schema name
       * example: `populate('notes')`
     * **demo:** **MongoDB** and **Express** two resource API
-      * [mongo-express-two-resource-api](/14-mongo_express_two_resource_api/demo/two_resource_api)
+      * [mongo-express-two-resource-api](/14-mongo_express_two_resource_api/demo/mongo_express_two_resource_api)
 
 ## Mongo & Express API with 2 Resources Visualization
  ![visualization](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/mongo-express-api.png)
