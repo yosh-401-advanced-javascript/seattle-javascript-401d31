@@ -24,5 +24,4 @@
     * population is handled through the use of the `populate()` method and will populate your resource with a connection to another resource by using it's schema name
       * example: `populate('notes')`
 
-## 2 Resource API Visualization
-  ![visualization](www.url.com)
+
