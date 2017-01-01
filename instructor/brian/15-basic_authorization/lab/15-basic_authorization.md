@@ -33,9 +33,9 @@
   * Use the **npm** `debug` module to log function calls that are used within your application
   * Use the **express** `Router` to create a custom router for allowing users to **sign up** and **sign in**
   * Use the **npm** `dotenv` module to house the following environment variables:
-    * **PORT** - *used for setting up the port that your server will listen on*
-    * **MONGODB_URI** - *used for setting up the URI that mongoose will use to connect to a database*
-    * **APP_SECRET** - *used for signing and verify tokens*
+    * `PORT`
+    * `MONGODB_URI`
+    * `APP_SECRET` - *this used for signing and verify tokens*
 
 ## Server Endpoints
 ### `/api/signup`
