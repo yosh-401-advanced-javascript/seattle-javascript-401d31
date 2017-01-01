@@ -14,7 +14,8 @@
   * `.eslintrc`
   * `gulpfile.js`
   * `.gitignore`
-  * `.env` - *add this to your `.gitignore`*
+  * `.travis.yml`
+  * `.env`
   * `README.md`
 
 ## Description
