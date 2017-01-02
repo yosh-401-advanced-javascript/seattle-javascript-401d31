@@ -14,7 +14,6 @@
   * `.eslintrc`
   * `gulpfile.js`
   * `.gitignore`
-  * `.travis.yml`
   * `.env`
   * `README.md`
 
