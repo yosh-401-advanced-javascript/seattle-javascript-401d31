@@ -54,3 +54,6 @@
     * the `req.headers.authorization` header property provides us with a base64 encoded string that is prepended with `Basic `
     * upon splitting off the end of the `Basic ` base64 string, we can transform this into a UTF-8 string and grab the username and password as they are now available and split with a `:`
       * ex: `username:password`
+
+  * **demo:** basic auth demo & start of `CFgram` application build out
+    * [basic-auth-demo](/15-basic_auth/demo/auth-demo)
