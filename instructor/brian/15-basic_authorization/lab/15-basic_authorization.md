@@ -1,4 +1,4 @@
-![cf](https://i.imgur.com/7v5ASc8.png) Lab 15 - Basic Authorization
+![cf](https://i.imgur.com/7v5ASc8.png) Lab 15 - Basic Auth
 ======
 
 ## To Submit this Assignment
