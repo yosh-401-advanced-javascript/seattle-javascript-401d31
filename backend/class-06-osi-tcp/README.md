@@ -2,9 +2,11 @@
 ===
 
 ## OSI Resources
-* [OSI model wiki]
+* Skim [OSI model wiki]
 
 ## TCP Resources
+* Watch [TCP connection walkthrough]
+* Skim [TCP wiki]
 
 ## Learning Objectives
 
@@ -55,5 +57,17 @@ The Physical Layer consists of the newtorking hardware.
  * `802.11 Physical Interface` - wifi hardware
  * `Ethernet Physical Interface` - ethernet hardware
 
+# Transmission Control Protocol
+* The TCP allows for connection oriented (stateful) transmission. (open connections with two way communication)
+* TCP is used by the world wide web, FTP, SSH, E-mail, p2p sharing, and streeming media.
+* The TCP protocol is optimized for accurate delivery rather than speed
+* TCP segments data into packets and sends them across the network over IP
+ * It keeps packets in order
+ * It resends packets that get lost
+ * It removes duplicate packets
+ * It even trys to help maintain network conjestion
+
 <!--links -->
 [OSI model wiki]: https://en.wikipedia.org/wiki/OSI_model
+[TCP wiki]: https://en.wikipedia.org/wiki/Transmission_Control_Protocol
+[TCP connection walkthrough]: https://www.youtube.com/watch?v=F27PLin3TV0
