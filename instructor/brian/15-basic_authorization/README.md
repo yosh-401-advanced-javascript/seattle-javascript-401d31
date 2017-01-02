@@ -43,6 +43,7 @@
   * **Authorization**
     * **authorization** refers to *user permissions*
       * we'll be using authorization to allow users access to specific API endpoints in our application
+
   * **Authentication**
     * **authentication** refers to *who you are*
       * think of authentication as a user *login* and *password*
