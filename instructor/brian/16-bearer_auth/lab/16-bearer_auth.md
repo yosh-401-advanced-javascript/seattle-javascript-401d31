@@ -1,4 +1,5 @@
 ![cf](https://i.imgur.com/7v5ASc8.png) Lab 16 - Bearer Auth
+======
 
 ## To Submit this Assignment
   * create a new branch from the fork that you created yesterday (lab-15)
