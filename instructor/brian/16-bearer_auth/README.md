@@ -17,4 +17,4 @@
       * **general information exchange** - JWT's are excellent at securely transmitting data between parties - this is often configured using a series of public/private key pairs
 
 ## CFGram Visualization
-  ![visualization](www.url.com)
+  ![visualization](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/cfgram.png)
