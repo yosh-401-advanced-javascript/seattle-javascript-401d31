@@ -42,7 +42,7 @@
 ## Authorization & Authentication
   * **Authorization**
     * **authorization** refers to *user permissions*
-      * we'll be using authorization to allow users access to specific API endpoints in our application
+      * we'll be using authorization to verify access to use our application
 
   * **Authentication**
     * **authentication** refers to *who you are*
@@ -51,7 +51,7 @@
   * **Basic Authentication Scheme**
     * basic access authentication is used when a user provides a username and password over HTTP
     * basic auth provides **no real significant protection** as the credentials are sent through the HTTP headers when making a request
-    * the `req.headers.authorization` header property provides us with a base64 encoded string that is prepended with `Basic `
+    * the `req.headers.authorization` header property provides us with a standard base64 encoded string that is prepended with `Basic `
     * upon splitting off the end of the `Basic ` base64 string, we can transform this into a UTF-8 string and grab the username and password as they are now available and split with a `:`
       * ex: `username:password`
 
