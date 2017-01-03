@@ -10,26 +10,41 @@
   * Submit a question, observation, and how long you spent on canvas  
   
 ## Learning Objectives  
-<!-- the leaning objectives from the corisponding class number --> 
+* Students will be able to manage a dependiecies with a package.json
+* Students will be able to create automated tasks using gulp
+* Students will be able to create automated tasks using npm scripts
+
 ## Resources  
-<!-- a list of liks if any are necessary for the assignment--> 
+* [Gulp API docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
 ## Requirements  
 #### Configuration  
-<!-- list of files, configurations, tools, ect that are required -->
-Your lab directory must include  
-* **README.md** -- with a documention about your lab
-* **.gitignore** -- with a robust gitignore
-* **.eslintrc** -- with the class .eslintrc file
-* **.eslintignore** -- with the class .eslintignore
-* **.package.json** -- with all dependencies and dev-dependencies 
+* add a gulpfile **gulpfile.js** 
  
 #### Feature Tasks  
-<!-- a list or description of the feature tasks you want the students to implement -->
+* Create a gulpfile
+ * with a `test` task for running mocha
+ * with a `lint` task for running eslint
+ * with a `dev` task for running `test` and `lint` when any javascript project file chages
+ * with a `default` task fro running `test` and `lint` once
+* Add `lint` script to the **package.json** for running eslint
+* Add `test` script to the **package.json** for running mocha
+
+###### BONUS 1pt
+* Create a CLI that uses command line arguments to pass a name into the greet function
+ * The cli should be in new module named index.js
+
 ####  Documentation  
-<!-- a description of what you want the student to write about in their readme --> 
+* In your **README.md** write documation to explain how Javascript's data types are passed by value or passed by reference
+
 #### Testing  
-<!-- a description of what you want the student to test -->
+###### BONUS 1pt
+* Write a test for the index.js CLI
+
 ## Rubric  
-<!-- TODO: decide on the rubric and put it here --> 
+* 2ps Configuration
+* 3pts Feature Tasks
+* 3pts Tests
+* 2pts Documentation
+
 
 <!-- links --> 
