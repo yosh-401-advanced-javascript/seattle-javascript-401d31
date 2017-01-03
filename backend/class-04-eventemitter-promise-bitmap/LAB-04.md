@@ -50,9 +50,7 @@ Your lab directory must include
     5. add a border
     6. tint with a color
 
-###### Here is a proposal for how your CLI might function  
-** THIS IS NOT A REQUIRED WORKFLOW **     
-
+###### Here is a proposal for how your CLI might function   
 1. Open the bitmap file using fs module and read it into a buffer
 2. Use a `Bitmap` constructor to parse the buffer's "bitmap headers" 
 3. Run a transform on the bitmap instance
