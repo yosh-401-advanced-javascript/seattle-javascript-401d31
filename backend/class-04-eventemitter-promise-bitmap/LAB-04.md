@@ -40,8 +40,8 @@ Your lab directory must include
     1. tranform name
     2. input file path
     3. output file path
-* Create a `Bitmap` constructor for pasring the bitmap buffer according to the bitmap specification
-* Create a helper module(s) for transforming the bitmap instance
+* Create a `Bitmap` constructor module for pasring the bitmap buffer according to the bitmap specification
+* Create helper module(s) for transforming the bitmap instance
  * here are some transform ideas (**don't limit yourself to these!!!!**)
     1. grey scale
     2. invert
