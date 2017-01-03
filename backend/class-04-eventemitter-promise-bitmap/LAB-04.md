@@ -37,21 +37,22 @@ Your lab directory must include
 #### Feature Tasks  
 * Create a  modle **index.js** that will be used as a CLI for transforming bitmap images
  * Your CLI should take three arguments 
-   1. tranform name
-   2. input file path
-   3. output file path
+    1. tranform name
+    2. input file path
+    3. output file path
 * Create a `Bitmap` constructor for pasring the bitmap buffer according to the bitmap specification
 * Create a helper module(s) for transforming the bitmap instance
  * here are some transform ideas (**don't limit yourself to these!!!!**)
-   1. grey scale
-   2. invert
-   3. random colors
-   4. mirror image
-   5. add a border
-   6. tint with a color
+    1. grey scale
+    2. invert
+    3. random colors
+    4. mirror image
+    5. add a border
+    6. tint with a color
 
-###### Here is a proposal for how your CLI might function
-** THIS IS NOT A REQUIRED WORKFLOW **   
+###### Here is a proposal for how your CLI might function  
+** THIS IS NOT A REQUIRED WORKFLOW **     
+
 1. Open the bitmap file using fs module and read it into a buffer
 2. Use a `Bitmap` constructor to parse the buffer's "bitmap headers" 
 3. Run a transform on the bitmap instance
