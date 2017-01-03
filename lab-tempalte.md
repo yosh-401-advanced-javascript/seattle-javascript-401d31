@@ -1,4 +1,4 @@
-401 JS -- Lab num topic
+401 JS --  Lab num topic
 ===
 
 ## Submission Instructions
