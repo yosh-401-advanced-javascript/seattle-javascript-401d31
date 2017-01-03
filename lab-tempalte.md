@@ -1,7 +1,7 @@
 401 JS -- Lab num topic
 ===
 
-## Submision Instructions
+## Submission Instructions
   * Work in a fork of this repository
   * Work in a branch on your fork
   * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
