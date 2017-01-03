@@ -13,17 +13,17 @@
 * After 401 [functional-Light JS Book]
 
 # Learning Objectives
-* students will be able to determine and describe the runtime complexity of an algorighm
-* sutendts will understand the differance between a constructor function and a factory function
-* students will be able to identify and explain the qualities of imperitive and functional code
+* students will be able to determine and describe the runtime complexity of an algorithm
+* students will understand the differance between a constructor function and a factory function
+* students will be able to identify and explain the qualities of imperative and functional code
 * students will be able to determine whether or not a function is pure
 * students will be able to implement a functional array-like list with map, filter, reduce, and forEach methods
 
 # Overview
 ## Big O
-* big-o is a way of describing the speed and memory useage of an algorythm because algorythm's can run faster or slower given a specific input, we only use big-o to describe the worst case.
+* big-o is a way of describing the speed and memory usage of an algorythm because algorithm's can run faster or slower given a specific input, we only use big-o to describe the worst case.
 * the letter "n" is used to describe the number of items an algorithm is working with
-* if an algorithm only makes single state ments in the worst case, it is said that the algorithm run s with an "O(1)" runtime.
+* if an algorithm only makes single statements in the worst case, it is said that the algorithm run s with an "O(1)" runtime.
  * "O(1)" runtime is also called constant time
 * if an algorithm runs through every item, it is said that the algorithm runs with an "O(n)" runtime.
  * "O(n)" runtime is also called linear time
@@ -64,22 +64,22 @@ function map(input, callback){
 ```
 * A program with no side effects at all is not very usefull
  * No side effects means no input or output from or to devices and the user
-* Because a program with no-side effects is not useful, functional programers try two write there code as functional as possible
+* Because a program with no-side effects is not useful, functional programers try to write their code as functional as possible
  * They do this by creating as few functions with side effects as possible 
- * They also have design patterns for wraping functions with side effects so they act like pure functions
-* Functional programers use a powerful techneque called function composition that allows them to create functions out of function combinations 
+ * They also have design patterns for wrapping functions with side effects so they act like pure functions
+* Functional programers use a powerful technique called function composition that allows them to create functions out of function combinations 
 * Pros of functional programming
  * Easy to test
- * When done correclty its more readble
+ * When done correclty its more readable
  * By isolating the the code with the most potential for bugs (code with side effects) to as few places as possible, you reduce the time it takes to track down bugs
- * Encurages modularization
+ * Encourages modularization
 * Cons of functional programming
  * Looks more complex at first
- * Functions may have more argumetns
+ * Functions may have more arguments
  
-### Impertive vs Functional example
-#### Impertive alphabetical sort
-Imperitve code is hard to read because you have to figure out what is happening on each line. Loops are generaly very hard to read.
+### Imperative vs Functional example
+#### Imperative alphabetical sort
+Imperative code is hard to read because you have to figure out what is happening on each line. Loops are generaly very hard to read.
 ``` javascript
 function alphabeticalSort(items) {  
     var length = items.length;
@@ -96,10 +96,10 @@ function alphabeticalSort(items) {
 
 let spooky = ['grr', 'boo', 'creek', 'squeek', 'glimer'];
 alphabeticalSort(spooky);
-// spooky is now sorterd
+// spooky is now sorted: ['boo', 'creek', 'glimer', 'grr', squeek']
 ```
 #### Functional alphabetical sort
-* even though the following may seem  complcated at first, it should be more readable at a glance than the imperitive code above, that does the same thing. 
+* even though the following may seem  complicated at first, it should be more readable at a glance than the imperative code above, that does the same thing. 
 * sortAlphabeticly is an example of function composition. sortAlphabeticly is created by composing slice, sort, and a callback to sort.
 * one important thing to note is that the .sort() method on arrays will mutate the array, which is a side effect. because of this sortAlphabeticly uses the .slice() method to create a copy of the original list before it runs sort(). This makes sortAlphabeticly a pure function.
 ``` javascript
