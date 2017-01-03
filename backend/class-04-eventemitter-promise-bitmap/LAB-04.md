@@ -30,7 +30,7 @@ Your lab directory must include
 * **test/** -- directory for holding unit and integration tests
 * **lib/** -- directory for holding program helper modules
 * **model/** -- directory for holding object constructor modules
-* **index.js** main CLI program
+* **index.js** -- main CLI program
 
  
 #### Feature Tasks  
