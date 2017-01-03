@@ -45,8 +45,8 @@ Generally when implementing a sorting alogorithm, it's easier to solve for one t
 * refactor the quicksort algorithm to use loops instead of recursion
 * refactor the selection sort to use recursion instead of loops
 
-[15 sorting algorythm visualizations]: https:/www.youtube.com/watch?v=kPRA0W1kECg
-[sorting algorythm visualization comparison]: https://www.youtube.com/watch?v=ZZuD6iUe3Pc
+[15 sorting algorithm visualizations]: https:/www.youtube.com/watch?v=kPRA0W1kECg
+[sorting algorithm visualization comparison]: https://www.youtube.com/watch?v=ZZuD6iUe3Pc
 [quick sort]: https://en.wikipedia.org/wiki/Quicksort
 [merge sort]: https://en.wikipedia.org/wiki/Merge_sort
 [selection sort]: https://en.wikipedia.org/wiki/Selection_sort
