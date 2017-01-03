@@ -10,7 +10,6 @@
   * Submit a question, observation, and how long you spent on canvas  
   
 ## Learning Objectives  
-* Students will be able to work with promises
 * Students will be able to manipulate binary data using nodejs Buffers 
 * Students will be able to architect modular solutions to solving problems
 
