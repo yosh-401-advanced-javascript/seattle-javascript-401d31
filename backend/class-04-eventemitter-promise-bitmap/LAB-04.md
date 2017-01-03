@@ -58,7 +58,7 @@ Your lab directory must include
 
 ####  Documentation  
 * Wriate a project description
-* Write documentation about the bitmap headers
+* Write documentation about the bitmap specification
 
 #### Testing  
 * Write unit test every function in your project (including any constructors)
