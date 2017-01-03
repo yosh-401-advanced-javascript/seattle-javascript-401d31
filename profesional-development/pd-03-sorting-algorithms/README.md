@@ -1,8 +1,9 @@
-401JS -- Sorting Algorythms 
+401JS -- Sorting Algorithms 
 ================================
 
 # Sorting Algorithm Resouces
 * Watch [15 sorting algorithm visualizations]
+<!---Duncan, this link doesn't appear to be working for some reason, but it works when I copy/paste the YouTube link in my browswer? Not sure why it won't work. ~ Judy -->
 * Watch [sorting algorithm visualization comparison]
 
 # Learning Objectives
