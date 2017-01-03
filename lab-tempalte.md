@@ -1,4 +1,4 @@
-401 JS -- Lab num topic
+401 JS -- Lab 02 build tools
 ===
 
 ## Submision Instructions
@@ -15,7 +15,8 @@
 * Students will be able to create automated tasks using npm scripts
 
 ## Resources  
-* [Gulp API docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+* [Gulp API docs](https://github.com/gulpjs/gulp/blob/master/docs/API.md)  
+
 ## Requirements  
 #### Configuration  
 * add a gulpfile **gulpfile.js** 
