@@ -28,10 +28,21 @@
 
 ## Server Endpoint
   * `POST` - `/api/resource/:resourceID/new-resource`
+  * `DELETE` - `/api/resource/:resourceID/new-resource/:new-resourceID`
 
 ## Tests
-  * `POST` - **200** - create a series of basic tests to ensure that uploads work as expected
+  * `POST` - **200** - test that the upload worked and a resource object is returned
+  * `DELETE` - **204** - test to ensure the object was deleted from s3
 
-## Bonus
-* 1pt - Create a **DELETE** route that will remove an object from an S3 bucket
-* 1pt - Create a test that checks to ensure the object was properly deleted
+## DELETE Route Hints
+  * Try using the `deleteObject` method provided by the `aws-sdk` to delete an object *(file)* from S3
+    * you will need to pass in a `params` object that contains the associated Bucket and AWS object key in order to delete the object from s3
+    * ex:
+    ``` javascript
+    var params = {
+      Bucket: 's3-bucket-name',
+      Key: 'object-filename'
+    }
+    s3.deleteObject(params)
+    ```
+  * Don't forget to remove the resource from the DB
