@@ -27,10 +27,11 @@
   * Use `multer` to parse the file upload request
 
 # server endpoints
-  * `POST` request - you choose the endpoint path
+  * `POST` - `/api/resource/:resourceID/new-resource`
 
 ## Tests
-  * `POST` - **200** - test to ensure uploads work as expected
+  * `POST` - **200** - create a series of basic tests to ensure that uploads work as expected
 
 ## Bonus
-* 2pt - Create a delete route and associated series of tests that removes an upload from S3
+* 1pt - Create a **DELETE** route that will remove an object from an S3 bucket
+* 1pt - Create a test that checks to ensure the object was properly deleted
