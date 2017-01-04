@@ -10,9 +10,12 @@
   * Submit a question, observation, and how long you spent on canvas  
   
 ## Learning Objectives  
-<!-- the leaning objectives from the corisponding class number --> 
+* Students will understand how to implement a TCP server using the net module
+* Students will understand work with Node.js EventEmitters
+
 ## Resources  
-<!-- a list of liks if any are necessary for the assignment--> 
+
+
 ## Requirements  
 #### Configuration  
 <!-- list of files, configurations, tools, ect that are required -->
