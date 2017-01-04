@@ -66,31 +66,3 @@ picRouter.post('/api/gallery/:galleryID/pic', bearerAuth, upload.single('image')
   .then( pic => res.json(pic))
   .catch( err => next(err));
 });
-
-picRouter.delete('/api/gallery/:galleryID/pic/:picID', bearerAuth, function(req, res, next) {
-  debug('DELETE: /api/gallery/:galleryID/pic/:picID');
-
-  Pic.findById(req.params.picID)
-  .catch( err => Promise.reject(createError(400, err.message)))
-  .then( pic => {
-    if (pic.galleryID.toString() !== req.params.galleryID) {
-      return Promise.reject(createError(400, 'incorrect gallery'))
-    };
-
-    if (pic.userID.toString() !== req.user._id.toString()) {
-      return Promise.reject(createError(401, 'user not authorized to delete'))
-    };
-
-    let params = {
-      Bucket: process.env.AWS_BUCKET,
-      Key: pic.objectKey
-    };
-
-    return s3.deleteObject(params).promise();
-  })
-  .then( s3data => {
-    return pic.findByIdAndRemove(req.params.picID)
-  })
-  .then( () => res.sendStatus(204))
-  .catch(next);
-});
