@@ -26,7 +26,7 @@
   * Use the `aws-sdk` to assist with uploading
   * Use `multer` to parse the file upload request
 
-# server endpoints
+## Server Endpoint
   * `POST` - `/api/resource/:resourceID/new-resource`
 
 ## Tests
