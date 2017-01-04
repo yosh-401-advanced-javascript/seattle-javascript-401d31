@@ -3,10 +3,12 @@
 
 ## AWS S3
   * **Overview**
-    * S3 *(Amazon Simple Storage Service)* is scalable object storage platform
-      * we'll be using S3 as a way to store images used within our application
-    * when uploading files to S3, each file is considered an object
-    * objects (aka files) are contained in custom buckets that we create
+    * S3 *(Amazon Simple Storage Service)* is a scalable object storage platform
+    * S3 will be used as a way to store images used within our application
+    * using the `aws-sdk` module, each time a new file is saved we will be provided with a url to the associated file
+      * this url is what we will be saving to the database in our application, not the actual file
+    * when uploading files to S3, we consider each file to be an "object"
+    * "objects" can then be contained in buckets for later use
   
 ## Helpers
   * **`.env` config**
