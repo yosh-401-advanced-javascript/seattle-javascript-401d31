@@ -34,7 +34,7 @@ Your lab directory must include
 
  
 #### Feature Tasks  
-* Create a  modle **index.js** that will be used as a CLI for transforming bitmap images
+* Create a module **index.js** that will be used as a CLI for transforming bitmap images
  * Your CLI should take three arguments 
     1. tranform name
     2. input file path
