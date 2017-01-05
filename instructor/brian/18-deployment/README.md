@@ -1,7 +1,7 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 18: Deployment
 =====================================
 
-## Deploying to Heroku with CI and Staging and Production Pipelines
+## Deploying to Heroku with TravisCI and Staging/Production Pipelines
   * **TravisCI**
     * create and configure a `.travis.yml` file that will be used to tell TravisCI to run your npm `test` and `lint` scripts
     * example `.travis.yml`
