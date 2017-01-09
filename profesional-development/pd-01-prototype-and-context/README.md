@@ -15,13 +15,13 @@
 * understand the roll context plays in constructor functions
 
 # Overview
-* when a function has a `this` we say that `this` is the functions context
-* unlike scope a functions context can be configured
+* When a function has a `this` we say that `this` is the functions context
+* Unlike scope, a functions context can be configured
 * If a function is not a property on an object, by default it has no context
 * If a function is a property on an object, by default that object is the context for that function
 * `call`, `bind`, and `apply` are function prototype methods that allow us to change the context of a function
 * `call` is a methods on a function that invokes a function with a specified context and argments  
- * `call` passes comma seporated argments
+ * `call` passes comma separated argments
 ``` javascript
 function lower(str){
   return String.prototype.toLowerCase.call(str)
@@ -30,7 +30,7 @@ function lower(str){
 lower("HELLO");
 // hello
 ```  
-* `apply` is a methods on a function that invokes a function with a specified context and argments  
+* `apply` is a method on a function that invokes a function with a specified context and argments  
  * `apply` passes argments from an array  
 ``` javascript
 var state = {
