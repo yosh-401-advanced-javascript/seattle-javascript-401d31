@@ -1,7 +1,7 @@
-401 JS -- Lab num topic
+401 JS --  Lab num topic
 ===
 
-## Submision Instructions
+## Submission Instructions
   * Work in a fork of this repository
   * Work in a branch on your fork
   * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
@@ -30,6 +30,9 @@ Your lab directory must include
 #### Testing  
 <!-- a description of what you want the student to test -->
 ## Rubric  
-<!-- TODO: decide on the rubric and put it here --> 
+* 2ps Configuration
+* 3pts Feature Tasks
+* 3pts Tests
+* 2pts Documentation
 
 <!-- links --> 

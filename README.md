@@ -4,7 +4,6 @@ Code 401 Javascript Guide
 [Facilitator's Guide](https://docs.google.com/document/d/1vmgu4wUU_2G90kpVUpz2mdelIwjJk9cNXsZMVQl43FQ/edit#heading=h.1j8q9kkvjvmu)
 
 # Profesional Development
-
 * [JS prototype and context](./profesional-development/pd-01-prototype-and-context)
 * [BigO notation and functional programming](./profesional-development/pd-02-bigo-and-functional)
 * [Sorting algorithms](./profesional-development/pd-03-sorting-algorithms)

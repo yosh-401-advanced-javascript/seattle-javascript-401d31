@@ -1,8 +1,6 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 02: Build Automation and Dependency Management
 =====================================
 
-## Code Review
-
 ## NPM (Node Package Manager)
   * **Overview**
     * `package.json`

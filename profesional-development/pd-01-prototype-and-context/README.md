@@ -17,16 +17,15 @@
 # Overview
 * When a function has a `this` we say that `this` is the functions context
 * Unlike scope, a function's context can be configured
+
 * If a function is not a property on an object, by default it has no context
 * If a function is a property on an object, by default that object is the context for that function
 
 ## Call, Bind, and Apply
+#### Call
 * `call`, `bind`, and `apply` are function prototype methods that allow us to change the context of a function
-
-### Call
 * `call` is a methods on a function that invokes a function with a specified context and arguments
  * `call` passes comma separated arguments
-
 ``` javascript
 function lower(str){
   return String.prototype.toLowerCase.call(str)
@@ -36,7 +35,19 @@ lower("HELLO");
 // "hello"
 ```  
 
-### Bind
+#### Apply
+* `apply` is a method on a function that invokes a function with a specified context and argments  
+ * `apply` passes argments from an array  
+``` javascript
+var state = {
+  history: [],
+  addToHistory: function(){ 
+    Array.prototype.push.apply(this.history, arguments);
+  }
+};
+```
+
+#### Bind
 * `bind` is a methods on a function that returns a new function with a specified context
 ``` javascript
 describe('bind example', function(){
