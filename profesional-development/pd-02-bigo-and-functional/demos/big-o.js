@@ -1,20 +1,19 @@
 'use strict';
 
-
-//big-o is a way of describing the speed and memory useage of an algorythm
-//because algorythm's can run faster or slower given an input, we only ever
-//use big-o to describe the worst case.
+// big-o is a way of describing the speed and memory usege of an algorithm
+// because algorithms can run faster or slower given an input, we only ever
+// use big-o to describe the worst case.
 
 // we use the letter "n" to describe the number of items an aglogorthm is work with
 
 // the array num strings has an "n" of 4
-var numStrings = ['one', 'two', 'three', 'four'];
+let numStrings = ['one', 'two', 'three', 'four'];
 
 // O(n)
 function arrayContains(input, find){
-  // this aglogorthm is considerd to be "O(n)" because it runs over every item in the array
+  // this algorithm is considerd to be "O(n)" because it runs over every item in the array
   // so if four items are in the array this loop is going to run four times in the worst case
-  // so if "n" itmes are in the array this look is going to run "n" times in the worst case
+  // so if "n" items are in the array this is going to run "n" times in the worst case
   for(let i=0; i<input.length; i++){
     if(input[i] === find) return true
   }
@@ -36,7 +35,7 @@ let colors = {
 
 // O(1)
 function objectContains(input, find){
-  // this algorythm is considerd to be "O(1)" because no matter how big the input is 
+  // this algorithm is considerd to be "O(1)" because no matter how big the input is
   // it will only run one statement in the worst case
   // so if 5 items are in the object only one statement is going to run in the worst case
   // so if "n" items are in the object only one statement is going to run in the worst case
@@ -49,7 +48,6 @@ console.log('object has black', objectContains(colors, 'black')); // runs one st
 console.log('object has purple', objectContains(colors, 'purple')); // runs one statement
 
 // the array dates has an "n" of 8
-
 let dates = [
   new Date('10-23-1990'),
   new Date('02-11-2001'),
@@ -63,15 +61,15 @@ let dates = [
 
 // more info on selection sort: https://en.wikipedia.org/wiki/Selection_sort
 function selectionSort(array){
-  // this algorythm is considerd to be "O(n^2)" because
-  // it run "n" times "n" times in the worst case
-  // so if 8 items are in the object the algorythm will run 8^2 (64) times
-  // so if "n" items are in the object the algorythm will run n^2 times
+  // this algorithm is considerd to be "O(n^2)" because
+  // it run for "n" items, "n" times in the worst case
+  // so if 8 items are in the object the algorithm will run 8^2 (64) times
+  // so if "n" items are in the object the algorithm will run n^2 times
 
   for(let i=0; i<array.length; ++i){ // runs n times
-    var minIndex = i;
+    let minIndex = i;
 
-    for(var j=i+1; j<array.length; ++j){ // runs n times in the worst case
+    for(let j=i+1; j<array.length; ++j){ // runs n times in the worst case
       if( array[j] < array[minIndex])
         minIndex = j;
     }
@@ -93,15 +91,14 @@ let sortedNumbers = [2, 5, 7, 10, 22, 23, 26, 32, 45, 67, 73, 84, 92];
 
 // O(log(n))
 function binarySearch(array, find){
-  // the binary search algorythm only works on sorted arrays
-  // this aglogorthm is considered to be "O(log(n))" because
-  // log(n) is a little harder to explain, but the idea is
-  // that each time the algorythm runs it cuts the number of items it searchs in half
-  // so with 8 items it will run 8 times then 4 time then 2 time then 1 
+  // the binary search algorithm only works on sorted arrays
+  // this algorithm is considered to be "O(log(n))" because
+  // each time the algorithm runs it cuts the number of items it searchs in half
+  // so with 8 items it will run 8 times then 4 time then 2 time then 1
   // so with 8 items it will run "log(8)" (aka 15) times
   // so with n items it will run "log(n)" times
-  
-  // TODO: comment this out to watch the array get cut in half each time through
+
+  // TODO: uncomment this to watch the array get cut in half each time through
   //console.log(array);
   if (array.length == 1)
     return array[0] === find ? true: false ;
