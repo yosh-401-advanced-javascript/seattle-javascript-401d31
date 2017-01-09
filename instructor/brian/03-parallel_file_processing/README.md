@@ -1,8 +1,6 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 03: Parallel File Processing
 =====================================
 
-## Code Review
-
 ## Advanced JS & Asynchronous Programming in NodeJS
   * **Passing By Value vs. Passing By Reference**
     * the concept of how we handle arguments passed into a function

@@ -1,8 +1,6 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 04: EventEmitter and Bitmap Transformer
 =====================================
 
-## Code Review
-
 ## EventEmitter
   *  **Overview**
     * in NodeJS, we can create custom events that can be used on demand
