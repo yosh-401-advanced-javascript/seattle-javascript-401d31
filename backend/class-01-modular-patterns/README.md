@@ -26,14 +26,14 @@
 
 ## Overview
 #### Seting up a DEV workspace and uing your computer like a DEV
-* Before people are developers they often develope many habbits of computer usage they will need to unlearn
-* It is highly important that as a developer people keep there file system organized
-* If your problem is finding your code, you are in deep trouble!
-* Students should set up a directory for all there class work and never deviate from working out side of this dir
+* Before people are developers they often develop many habits of computer usage they will need to unlearn
+* It is highly important as a developer to keep their file system organized!
+* You have bigger challenges to worry about than trouble finding your code
+* Students should set up a directory for all their class work and never deviate from working inside of this dir
 * Create a dir stucture for keeping track of you class work
  * **Never put space bars in your file names**
- * **Use `-` or `_` instead. But choose one and stick with it... dont use both!**
- * **Never use capital letters in your filenames, unless its convention (like README.md)**
+ * **Use `-` or `_` between words instead. Choose one and stick with it... dont use both!**
+ * **Never use capital letters in your filenames, unless its a convention (like README.md)**
    * some file systems (like osx) don't keep track of Case and will cause git issues
 ``` text
  * $HOME/
@@ -51,52 +51,52 @@
   |   |   | - ...
   ```
 #### Node.JS
-* Node is an asyncronious event driven framework, for programming in javascript on your opperating system!
+* Node is an asynchronous, event-driven framework for programming in javascript on your operating system.
 * Node only does work when events are triggered.
-* When Node has no work to be do Node sleeps
-* Node input and output (I/O) is non-blocking 
- * This save developers from having to worry about complicated concurrent programming patterns!
-* Node is composed of four main components
- * Node Javascript API - The Javascript interface to all the cool C++ APIs
- * V8 - a javascript runtime
- * libuv - a c library for async io (for the opperating system)
- * Node C++ APIs - the glue between Node's Javascript APIs and libuv
-* Node has great documentation online, but make sure you read the docs for the version of node your using
-* Nodes documentation has a stability index
- * 0 - depricated - dont use the feature
- * 1 - Experamental - dont use this feature in something you care about
- * 2 - Stable - fine to use
- * 3 - Locked - fine to use
+* When Node has no work to be doing, Node sleeps.
+* Node input and output (I/O) is non-blocking. 
+ * This saves developers from having to worry about complicated concurrency programming patterns!
+* Node is composed of four main components:
+ * Node Javascript API - The Javascript interface to all the cool C++ APIs,
+ * V8 - A javascript runtime,
+ * libuv - A c library for asynchronous I/O (for the opperating system),
+ * Node C++ APIs - the glue between Node's Javascript APIs and libuv.
+* Node has great documentation online, but make sure you read the docs for the correct version of Node you're using
+* Node's documentation has a stability index
+ * 0 - Deprecated - Dont use the feature
+ * 1 - Experamental - Dont use this feature in something you care about
+ * 2 - Stable - Fine to use
+ * 3 - Locked - Fine to use
 
-#### NPM 
-* NPM is a package manager for installing javascript librarys
-* NPM is composed of the following
- * A registry where all the packages are hosted
- * A search engine where you can find packages
- * A CLI where that helps you interface with the registry
- * A for profit organization 
+#### NPM (Node Package Manager)
+* NPM is a package manager for installing javascript libraries
+* NPM is composed of the following:
+ * A registry where all the packages are hosted,
+ * A search engine where you can find packages,
+ * A CLI that helps you interface with the registry,
+ * A for profit organization.
 
-#### Testing and TDD
+#### Testing and TDD (Test-Driven Development)
 * TDD is a software development process
 * It relies on a very short development cycle
- * It encurages to build small things at a time
-* TDD Process
+ * It encurages build small things at a time
+* TDD Process:
  * you make a plan for the features needed to make a program work
  * you choose a feature to implement
- * you write code that tests that features beahaior
+ * you write code that tests that feature's beahaior
  * the tests now should fail, because the feature has not been implemented
- * you write the feature it self
+ * you write the feature itself
  * the tests now should pass, because the feature has been implemented
- * you refactor you code to optimze it 
+ * you refactor you code to optimize it 
  * the tests should still pass, because the behavior should not have changed
-* This is process is called RED GREEN REFACTOR
+* This process is called RED GREEN REFACTOR
  * RED - the test is written, but fail
- * GREEN - the test pass because the feature is implemented
- * REFACTOR - the code runs better, and the test still pass
+ * GREEN - the test passes because the feature is implemented
+ * REFACTOR - the code runs better, and the test still passes
 
 #### Mocha and Chai 
 * Mocha is a testing framwork
- * Its job is to facilitate writing and running test
+ * Its job is to facilitate writing and running tests
 * Chai is an assertion library
  * Its job facilitate writing expectations and then throw errors when the expectations are not met
 

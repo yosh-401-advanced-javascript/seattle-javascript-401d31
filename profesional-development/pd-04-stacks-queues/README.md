@@ -40,7 +40,7 @@ In computer science, an abstract data type (ADT) is a mathematical model for dat
 * to add a value to the end of the queue a `enqueue` method is used
 * to retrieve and remove a value from the beginning of the queue a `dequeue` method is used
 * A Queue will keep track of the `head` and `tail` Nodes but does not need to explicitly track Nodes within the collection
-* A Queue do not have a specific capacity
+* A Queue does not have a specific capacity
  * Exception: a 'Bounded Queue', which is limited to a fixed number of Nodes
 * Queues are used for ...
  * Event listeners
@@ -49,7 +49,7 @@ In computer science, an abstract data type (ADT) is a mathematical model for dat
 * Implementation variants:
  * Doubly Linked List (common)
  * Linked List
- * Deque (Double ended queue)
+ * Dequeue (Double ended queue)
 
 # Exercise
 * Implement a Stack
