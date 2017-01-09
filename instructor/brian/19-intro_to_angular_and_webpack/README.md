@@ -11,9 +11,9 @@
       * AJAX
       * clearly defined client vs server architecture
     * examples of a few common SPA frameworks that adopt modern SPA principles:
-      * **Angular.js** - (www.angularjs.org)[www.angularjs.org]
-      * **React** - (facebook.github.io/react/)[https://facebook.github.io/react/]
-      * **Ember.js** - (www.emberjs.com)[www.emberjs.com]
+      * **Angular.js** - www.angularjs.org
+      * **React** - facebook.github.io/react/
+      * **Ember.js** - www.emberjs.com
 
 ## Intro to Angular.js
   * **Overview**
@@ -42,7 +42,7 @@
   * **Overview**
     * **webpack.js** is a **module bundler**
     * it is used to handle modules with dependencies and, in turn, will generate static assets representing those modules
-    * webpack has a few key benefits - it allows us to:
+    * **webpack.js** has a few key benefits - it allows us to:
       * split an application's dependency tree into "chunks" that can be loaded on demand
       * keep our application performant by promoting shorter load times
       * easily convert static assets into associated modules
