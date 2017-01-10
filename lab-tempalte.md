@@ -22,6 +22,10 @@ Your lab directory must include
 * **.eslintrc** -- with the class .eslintrc file
 * **.eslintignore** -- with the class .eslintignore
 * **.package.json** -- with all dependencies and dev-dependencies 
+* **lib/** - a directory for helper modules
+* **model/** - a directory for constructor functions
+* **test/** - a directory for test modules
+* **server.js** - entry point to your program
  
 #### Feature Tasks  
 <!-- a list or description of the feature tasks you want the students to implement -->
