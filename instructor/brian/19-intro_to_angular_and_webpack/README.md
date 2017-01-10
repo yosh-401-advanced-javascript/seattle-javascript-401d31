@@ -24,7 +24,7 @@
       * decouple DOM manipulation from application logic
       * decouple the client side from the server side
       * provide structure for the full application development life-cycle
-  
+
   * **CRUD Application**
     * **Angular.js** is excellent at handling most common **CRUD** applications
     * CRUD applications refer to apps that require the use of "create, read, update, and delete" functionality
@@ -47,12 +47,12 @@
       * keep our application performant by promoting shorter load times
       * easily convert static assets into associated modules
       * customize the bundler to conform to our applications needs
-  
+
   * **Sample `.webpack.config.js`**
     ``` javascript
-    
+
     'use strict';
-  
+
     const HTMLPlugin = require('html-webpack-plugin');
 
     module.exports = {
@@ -71,9 +71,9 @@
           {
             test: /\.scss$/,
             loader: 'style!css!sass!'
-          },
-        ],
-      },
+          }
+        ]
+      }
     };
 
     ```
