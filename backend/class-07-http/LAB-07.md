@@ -31,7 +31,8 @@ Your lab directory must include
 * **server.js** - entry point to your program
  
 #### Feature Tasks  
-* implement the following routes
+* implement the following routes  
+
 ### GET /
 * for all get request to `/` the server should respond with the following:
  * a header containing `Content-Type: text/plain`
