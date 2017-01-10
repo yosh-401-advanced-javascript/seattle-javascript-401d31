@@ -33,13 +33,13 @@ Your lab directory must include
 #### Feature Tasks  
 * implement the following routes  
 
-### GET /
+###### GET /
 * for all get request to `/` the server should respond with the following:
  * a header containing `Content-Type: text/plain`
  * a status code of **200**
  * a response with the string "hello world"
  
-#### GET /cowsay
+###### GET /cowsay
 * the query string should have the key value `text=<message>`
 * the response header should include `Content-Type: text/html`
 * if the query `text=messsage` is set, respond with:  
@@ -51,7 +51,7 @@ Your lab directory must include
  * a body including and html text
  * the html should have a pretag that contains the result of `cowsay.say({text: 'bad request\ntry: localhost:3000/cowsay?text=howdy'})`
 
-#### POST /cowsay
+###### POST /cowsay
 * the response header should include `Content-Type: text/plain`
 * if the json `{text: messsage}` is set in the body, respond with:  
  * a status code of 200
