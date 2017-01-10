@@ -2,7 +2,7 @@
 ======
 
 ## To Submit this Assignment
-  * create a new branch off of the branch that you created yesterday (lab-16)
+  * create a fork of this repository
   * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-brian`
   * push to your repository
   * submit a pull request to this repository
@@ -19,16 +19,15 @@
   * `webpack.config.js`
 
 ## Description
-  * create an **app/index.html** file that contains your HTML markup
+  * Create a cowsay application with same criteria as today's lecture demo:
+  * Create an **app/index.html** file that contains your HTML markup
     * *hint:* be sure to include the `ng-app` directive to point to your default angular module
-  * create an **app/entry.js** to house your application logic
+  * Create an **app/entry.js** to house your application logic
     * require in your **app/scss/main.scss**
-  * setup an angular module and create a controller for your application logic
-
-## Client Functionality
-  * in your `index.html` file, include an `input` and `pre` tag that will be used to dynamically update the text of your cow
-  * the `pre` tag should be a preview, showing the result of what was typed into the `input` field *(two way data-binding)*
-  * add custom styles *(no wireframe based requirements - just be creative!)*
+  * Setup an angular module and create a controller for your application logic
+  * In your `index.html` file, include an `input` and `pre` tag that will be used to dynamically update the text of your cow
+  * The `pre` tag should be a preview, showing the result of what was typed into the `input` field *(two way data-binding)*
+  * Add custom styles *(no wireframe based requirements - just be creative!)*
 
 ## Bonus
   * **1pt** add a button that uses the `ng-click` directive to populate a second `pre` tag with the current `pre` tag's state
