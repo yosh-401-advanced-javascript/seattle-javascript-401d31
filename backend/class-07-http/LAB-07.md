@@ -32,14 +32,13 @@ Your lab directory must include
  
 #### Feature Tasks  
 * implement the following routes
-### /
-* for all request to `/` the server should respond with the following:
+### GET /
+* for all get request to `/` the server should respond with the following:
  * a header containing `Content-Type: text/plain`
  * a status code of **200**
  * a response with the string "hello world"
-
-### /cowsay
-#### GET REQUEST    
+ 
+#### GET /cowsay
 * the query string should have the key value `text=<message>`
 * the response header should include `Content-Type: text/html`
 * if the query `text=messsage` is set, respond with:  
@@ -51,7 +50,7 @@ Your lab directory must include
  * a body including and html text
  * the html should have a pretag that contains the result of `cowsay.say({text: 'bad request\ntry: localhost:3000/cowsay?text=howdy'})`
 
-#### POST REQUEST   
+#### POST /cowsay
 * the response header should include `Content-Type: text/plain`
 * if the json `{text: messsage}` is set in the body, respond with:  
  * a status code of 200
@@ -60,14 +59,14 @@ Your lab directory must include
  * status code = 400
  * a body including the value returned from `cowsay.say({text: 'bad request\ntry: localhost:3000/cowsay?text=howdy'})`
 
+#### Testing  
+* Write a 200 and 400 test for GET and POST requests to /cowsay
+* Write a 404 test for undefined routes
+
 ####  Documentation  
 * Write a project description in your readme
 * Write a guide to useing your server endpoint
 
-#### Testing  
-* Write a 200 and 400 test for GET and POST requests to /cowsay
-* Write a 404 test for undefined routes
-<!-- a description of what you want the student to test -->
 ## Rubric  
 * 2ps Configuration
 * 3pts Feature Tasks
