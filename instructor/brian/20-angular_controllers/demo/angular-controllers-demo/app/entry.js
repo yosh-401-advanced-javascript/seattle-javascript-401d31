@@ -14,21 +14,29 @@ function CowsayController($log) {
   $log.debug('CowsayController');
 
   this.title = 'Welcome to Cowville!';
-
-  this.speak = function(input) {
-    $log.debug('cowsayCtrl.speak()');
-    return cowsay.say({ text: input || 'moooooooo', f: this.current });
-  };
-
-  this.logger = function(input) {
-    $log.debug('cowsayCtrl.logger()');
-    $log.log(input);
-  };
+  this.history = [];
 
   cowsay.list((err, cowfiles) => {
     this.cowfiles = cowfiles;
     this.current = this.cowfiles[0];
   });
+
+  this.update = function(input) {
+    $log.debug('cowsayCtrl.update()');
+    return cowsay.say({ text: input || 'moooooooo', f: this.current });
+  };
+
+  this.speak = function(input) {
+    $log.debug('cowsayCtrl.speak()');
+    this.spoken = this.update(input);
+    this.history.push(this.spoken);
+  };
+
+  this.undo = function() {
+    $log.debug('cowsayCtrl.undo()');
+    this.history.pop();
+    this.spoken = this.history.pop() || '';
+  };
 };
 
 cowsayApp.controller('NavController', ['$log', NavController]);
@@ -43,7 +51,11 @@ function NavController($log) {
     },
     {
       name: 'about',
-      url: '/about'
+      url: '/about-us'
+    },
+    {
+      name: 'contact',
+      url: '/contact-us'
     }
   ];
 };
