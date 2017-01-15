@@ -5,14 +5,14 @@
   * **Overview**
     * controllers are constructor functions that are used to modify the angular **scope**
     * when a controller is attached to the **DOM**, using the `ng-controller` directive, Angular will instantiate a new controller object
-      * this will create a new **child scope** that is made available as a parameter to a controller's constructor function **(`$scope`)**
+      * this will create a new **child scope** that is made available as a parameter to a controller's constructor
     * **note:** controllers are used to setup and add behavior to the `$scope` object
     * **note:** controllers should not be used for DOM maniuplation or formatting of input and output
 
   * **`Controller as` Syntax**
     * the `Controller as` syntax can be used to allow the use of `this` instead of `$scope` within our controllers
       * this removes the need for us to inject `$scope` into our controller's constructor function
-    * controller example:
+    * **controller example:**
     ``` javascript
 
     // using the dependency injection system, we can inject dependencies
@@ -25,7 +25,7 @@
     function SampleController($log) { ... }
     ```
 
-    * markup example:
+    * **markup example:**
     ``` html
     
     <!-- using the ng-contoller directive, we can tell
