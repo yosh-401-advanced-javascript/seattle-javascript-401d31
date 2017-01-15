@@ -1,22 +1,24 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 21: Angular Controllers
 =====================================
 
-## Angular Controllers
+## Getting Started with Controllers
   * **Overview**
-    * in angular.js, controllers are constructor functions that are used to modify the angular **scope**
-    * when a controller is attached to the DOM (using the `ng-controller` directive), angular will instantiate a new controller object
-      * this will create a new *child scope* that is made available as a parameter to a controller's constructor function **`$scope`**
-    * controllers are used to setup and add behavior to the `$scope` object
-    * controllers should not be used for DOM maniuplation or formatting of input and output
+    * controllers are constructor functions that are used to modify the angular **scope**
+    * when a controller is attached to the **DOM**, using the `ng-controller` directive, Angular will instantiate a new controller object
+      * this will create a new **child scope** that is made available as a parameter to a controller's constructor function **(`$scope`)**
+    * **note:** controllers are used to setup and add behavior to the `$scope` object
+    * **note:** controllers should not be used for DOM maniuplation or formatting of input and output
 
   * **`Controller as` Syntax**
-    * we'll be using the `Controller as` syntax in order to use `this` instead of `$scope` within our controller methods
-      * this removes the need for us to inject `$scope` into our controller constructor
+    * the `Controller as` syntax can be used to allow the use of `this` instead of `$scope` within our controllers
+      * this removes the need for us to inject `$scope` into our controller's constructor function
     * controller example:
     ``` javascript
 
-    // using angular's dependency injection, we can inject $log
-    // into our controller for advanced logging capabilities
+    // using the dependency injection system, we can inject dependencies
+    // into our controller for additional modularity and functionality
+
+    // here, we are injecting $log for advanced logging capabilities
     sampleApp.controller('SampleController', ['$log', SampleController]);
 
     // create a new controller and pass in $log for use in our controller's methods
