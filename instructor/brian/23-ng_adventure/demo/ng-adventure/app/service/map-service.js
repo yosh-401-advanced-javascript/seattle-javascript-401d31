@@ -3,9 +3,9 @@
 const angular = require('angular');
 const ngAdventure = angular.module('ngAdventure');
 
-ngAdventure.factory('map', ['$log', map]);
+ngAdventure.factory('mapService', ['$log', mapService]);
 
-function map($log) {
+function mapService($log) {
   $log.debug('map service');
 
   let service = {};
@@ -41,6 +41,6 @@ function map($log) {
       west: 'A'
     }
   };
-  
+
   return service;
 };

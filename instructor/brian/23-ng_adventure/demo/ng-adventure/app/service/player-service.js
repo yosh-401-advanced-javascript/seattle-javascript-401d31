@@ -3,9 +3,9 @@
 const angular = require('angular');
 const ngAdventure = angular.module('ngAdventure');
 
-ngAdventure.factory('player', ['$q', '$log', 'map', player]);
+ngAdventure.factory('playerService', ['$q', '$log', 'mapService', playerService]);
 
-function player($q, $log, map) {
+function playerService($q, $log, mapService) {
   $log.debug('player service');
 
   let service = {};
@@ -31,7 +31,7 @@ function player($q, $log, map) {
       turn++;
 
       let current = player.location;
-      let newLocation = map.mapData[current][direction];
+      let newLocation = mapService.mapData[current][direction];
 
       if (!newLocation) {
         history.unshift({
@@ -46,7 +46,7 @@ function player($q, $log, map) {
       history.unshift({
         turn,
         location: player.location,
-        desc: map.mapData[newLocation].desc,
+        desc: mapService.mapData[newLocation].desc,
         hp: player.hp
       });
 
