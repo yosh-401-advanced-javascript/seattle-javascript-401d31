@@ -13,7 +13,7 @@ function playerService($q, $log, mapService) {
   let turn = 0;
   let player = service.player = {
     name: 'bnates',
-    location: 'A',
+    location: 'cabin',
     hp: 16
   };
 
@@ -21,7 +21,7 @@ function playerService($q, $log, mapService) {
     {
       turn,
       desc: 'Welcome to ngAdventure',
-      location: 'A',
+      location: 'cabin',
       hp: player.hp
     }
   ];

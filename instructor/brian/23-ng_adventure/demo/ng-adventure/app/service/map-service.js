@@ -11,34 +11,38 @@ function mapService($log) {
   let service = {};
 
   service.mapData = {
-    A: {
-      desc: 'You are in room A.  There are 2 paths leaving this room.  The lights are dim',
-      south: 'C',
-      east: 'B'
+    cabin: {
+      desc: "message from the cabin",
+      south: "trail"
     },
-    B: {
-      desc: 'You are in room B.  You cannot see anything',
-      west: 'A',
-      south: 'D'
+    trail: {
+      desc: "message from the trail",
+      north: "cabin",
+      east: "gate",
+      south: "pit"
     },
-    C: {
-      desc: 'You are in room C.  There is a path to the north.  You can see some light coming from this path',
-      north: 'A',
-      east: 'D'
+    pit: {
+      desc: "message from the pit",
+      north: "trail"
     },
-    D: {
-      desc: 'You are in room D.  You hear sounds to the south',
-      items: ['lamp'],
-      north: 'B',
-      west: 'C',
-      south: 'X'
+    gate: {
+      desc: "message from the gate",
+      west: "trail",
+      east: "castle"
     },
-    X: {
-      desc: 'You are stuck in a trap',
-      south: 'X',
-      north: 'X',
-      east: 'X',
-      west: 'A'
+    castle: {
+      desc: "message from the castle",
+      west: "gate",
+      south: "corridor"
+    },
+    corridor: {
+      desc: "message from the corridor",
+      north: "castle",
+      east: "snackroom"
+    },
+    snackroom: {
+      desc: "message from the snack room",
+      west: "corridor"
     }
   };
 
