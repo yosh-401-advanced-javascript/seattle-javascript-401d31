@@ -1,11 +1,38 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 01: Class Title
+![cf](http://i.imgur.com/7v5ASc8.png) 23: ngAdventure
 =====================================
 
-## Topic
-  * sub topic
+## Directives
+  * **Overview**
+    * directives are a special form of markup that provide us the ability to add behavior to elements or attributes
+    * directives come in the form of a tag name (`<sidebar-nav></sidebar-nav>`), attribute property (`<li ng-repeat="item in items"></li>`) and class names (`<span class="msg: success;"></span>`) 
+    * angular allows us to create our own directives or/and use a series of handy directives provided the framework
 
-## Topic
-  * sub topic
+  * **General Purpose Directives**
+    * `ng-app` - binds an angular module's `$rootScope` to an element on the DOM
+    * `ng-controller` - binds a controller and it's `$scope` to an element on the DOM
+    * `ng-model` - binds the value of user input to a property on the `$scope`
+    * `ng-init` - used to run an expression when the template is loaded
+    * `ng-href` - same as an `href` but supports angulars template expressions
+    * `ng-src` - same as a `src` but supports angulars template expression
+    * `ng-cloak` - used to prevent angular from showing uncompiled templates during page load
+    * `ng-repeat` - used to iterate over an array on the `$scope`
 
-## Topic
-  * sub topic
+  * **Toggling Directives**
+    * `ng-show` - used to toggle `display: block;` on a DOM element based on a condition
+    * `ng-hide` - used to toggle `display: none;` on a DOM element based on a condition
+    * `ng-if` - used to add or remove an element based on a condition
+    * `ng-class` - used to add or remove class names based on a condition
+
+  * **Event Directives**
+    * `ng-click` - used to trigger an expression when a DOM element is clicked
+    * `ng-submit` - used to trigger an expression wehn a `<form>`'s submit event has been fired
+
+  * **Form Directives**
+    * `<form>` - includes additional behavior, such as dynamic validation and dynamic validation classes
+    * `<input>` - includes additional behavior, such as dynamic validation
+    * `ng-required` - extra `required` validation on form submit
+    * `ng-disabled` - disables a user input based on a condition
+
+## Services
+  * **Overview**
+  * **Singletons**
