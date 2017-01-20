@@ -12,3 +12,5 @@
     * a doubly linked list utilizes the same functionality as a singly linked list and adds the ability for bi-directional movement within the list
     * this provides us with the ability to move from the first node in the list to the last node in the list and vice versa
     * [doubly-linked-list-demo](/24-25/demo/doubly_linked_list)
+
+![linked-list](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/linked-list.png)
