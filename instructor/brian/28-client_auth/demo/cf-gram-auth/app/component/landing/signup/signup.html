@@ -1,0 +1,25 @@
+<section class="signup">
+  <form class="signup-form"
+    ng-submit="signupCtrl.signup(signupCtrl.user)"
+    no-validate>
+
+    <fieldset>
+      <input class="input-std"
+        type="text"
+        placeholder="name"
+        ng-minlength="6"
+        ng-model="singupCtrl.user.username" required>
+
+      <input class="input-std"
+        type="email"
+        placeholder="email"
+        ng-model="signupCtrl.user.email">
+
+      <input class="input-std"
+        type="password"
+        placeholder="password"
+        ng-minlength="8"
+        ng-model="singupCtrl.user.password" required>
+    </fieldset>
+  </form>
+</section>
