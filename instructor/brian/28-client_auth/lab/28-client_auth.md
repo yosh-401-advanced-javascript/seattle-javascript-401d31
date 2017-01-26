@@ -31,14 +31,16 @@
     * app/view/home
     * app/view/landing
     * app/scss
+    * app/scss/lib
+    * app/scss/lib/base
+    * app/scss/lib/layout
+    * app/scss/lib/theme
     * app/service
     * app/component
-    * app/component/gallery
-    * app/component/gallery/create-gallery
     * app/component/landing
-    * app/component/navbar
   * include a **main.scss**
-  * include `.scss` partials in your components
+  * include an `.scss` partial for each component you create
+  * style the application to meet the **sign in** & **sign up** mockups provided in the `wireframes` directory of this repo
   * use `require.context` to add all of your angular construct definitions
 
 ## Functional Requirements

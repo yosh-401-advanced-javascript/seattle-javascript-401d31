@@ -1,0 +1,16 @@
+<section class="home">
+  <create-gallery></create-gallery>
+
+  <ul>
+    <li ng-repeat="gallery in homeCtrl.galleries">
+      <span>name: {{ gallery.name }}</span>
+      <span>desc: {{ gallery.desc }}</span>
+      <span>id: {{ gallery._id }}</span>
+      <button>delete gallery</button>
+
+      <form name="updateForm">
+        <input name="name" type="text" placeholder="name">
+        <input name="desc" type="text" placeholder="description">
+        <button>update gallery</button>
+      </form>
+    </li>
