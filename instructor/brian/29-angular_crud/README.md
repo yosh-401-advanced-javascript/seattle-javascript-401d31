@@ -13,7 +13,7 @@
     * **MIME** was originally created to provide emails with the ability to send non-text attachments
     * the specification on **MIME** has been adapted by **HTTP** to enable `http` clients and servers with the ability to pass non-text data
 
-  **Common MIME Types**
+  * **Common MIME Types**
     * `text/plain`
     * `text/javascript`
     * `application/json`
