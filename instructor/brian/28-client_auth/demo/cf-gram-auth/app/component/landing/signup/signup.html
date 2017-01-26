@@ -3,12 +3,11 @@
     ng-submit="signupCtrl.signup(signupCtrl.user)"
     no-validate>
 
-    <fieldset>
       <input class="input-std"
         type="text"
         placeholder="name"
-        ng-minlength="6"
-        ng-model="singupCtrl.user.username" required>
+        ng-minlength="4"
+        ng-model="signupCtrl.user.username" required>
 
       <input class="input-std"
         type="email"
@@ -18,8 +17,9 @@
       <input class="input-std"
         type="password"
         placeholder="password"
-        ng-minlength="8"
-        ng-model="singupCtrl.user.password" required>
-    </fieldset>
+        ng-minlength="3"
+        ng-model="signupCtrl.user.password" required>
+
+      <input type="submit" class="btn-std" value="signup">
   </form>
 </section>
