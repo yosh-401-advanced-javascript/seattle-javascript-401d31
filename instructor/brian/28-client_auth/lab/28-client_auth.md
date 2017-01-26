@@ -43,6 +43,12 @@
   * style the application to meet the **sign in** & **sign up** mockups provided in the `wireframes` directory of this repo
   * use `require.context` to add all of your angular construct definitions
 
+## Clone
+  * Clone, setup, and run the `slugram-backend` application in order for your angular app to communicate with the server
+  * [slugram-backend](https://github.com/slugbyte/slugram-backend)
+    * **note** - this application should be running on the `staging` branch
+    * **note** - **DO NOT** include this application with your assignment submission
+
 ## Functional Requirements
   * Create 2 views: `/#/`, `/#/home/`
     * each view should have its own controller
