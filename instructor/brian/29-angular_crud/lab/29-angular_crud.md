@@ -1,4 +1,4 @@
-![cf](https://i.imgur.com/7v5ASc8.png) Lab 28 - Client Side Auth
+![cf](https://i.imgur.com/7v5ASc8.png) Lab 29 - Angular CRUD
 ======
 
 ## To Submit this Assignment
@@ -49,13 +49,13 @@
     * app/component/navbar
   * include a **main.scss**
   * include an `.scss` partial for your `create-gallery` and `navbar` components
-  * style your application to meet the `navbar` and `create-gallery` mockups provided in the `wireframes` director of this repo
+  * style your application to meet the `create-gallery` mockup provided in the `wireframes` directory of this repo
 
 ## Functional Requirements
   * Create a component for displaying a user's
   saved galleries (name and description)
   * This should contain functionality that allows the user to be able to add additional galleries
-  * Style the application to meet the mockup specifications found in the `wireframes` directory of this repo
+  * Style your application to meet the mockup specifications provided in the `wireframes` directory of this repo
 
 ## Bonus
   * **2pts:** Add the ability to **delete** a gallery
