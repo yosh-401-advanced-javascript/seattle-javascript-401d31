@@ -1,0 +1,11 @@
+<li class="gallery-item">
+  <div class="current-item" ng-if="!galleryItemCtrl.showEditGallery">
+    <span>{{ galleryItemCtrl.gallery.name }}</span>
+    <span>{{ galleryItemCtrl.gallery.desc }}</span>
+  </div>
+
+  <edit-gallery ng-if="galleryItemCtrl.showEditGallery" gallery="galleryItemCtrl.gallery"></edit-gallery>
+
+  <span ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">edit</span>
+  <span ng-click="galleryItemCtrl.deleteGallery()">delete</span>
+</li>

@@ -1,0 +1,14 @@
+<section class="edit">
+  <form class="edit-gallery"
+    name="editGallery"
+    ng-submit="editGalleryCtrl.updateGallery()"
+    no-validate>
+
+    <fieldset>
+      <input name="name" class="input-std" ng-model="editGalleryCtrl.gallery.name">
+      <input name="desc" class="input-std" ng-model="editGalleryCtrl.gallery.desc">
+    </fieldset>
+
+    <button class="btn-std">update</button>
+  </form>
+</section>
