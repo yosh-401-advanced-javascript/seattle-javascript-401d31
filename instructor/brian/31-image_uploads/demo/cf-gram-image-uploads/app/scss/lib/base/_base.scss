@@ -6,6 +6,12 @@ html, body {
   color: $btn-primary;
 }
 
+a {
+  text-decoration: none;
+  color: $black;
+  font-weight: 700;
+}
+
 h1 {
   font-size: 5vw;
   margin-bottom: $gutter-sm;
@@ -48,6 +54,14 @@ input[type="text"] {
     background: $brand-primary;
     color: $white;
   }
+}
+
+input[type="password"] {
+  @extend input[type="text"];
+}
+
+input[disabled="disabled"] {
+  background: $disabled;
 }
 
 .input-std {
