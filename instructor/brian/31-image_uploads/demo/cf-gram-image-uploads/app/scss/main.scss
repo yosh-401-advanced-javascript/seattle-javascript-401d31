@@ -1,7 +1,17 @@
-html, body {
-  background: #888;
-}
+// :::: BASE & THEME :::: //
+@import "lib/base/reset";
+@import "lib/theme/vars";
+@import "lib/base/base";
 
-fieldset {
-  border: none;
-}
+// :::: LAYOUT :::: //
+@import "lib/layout/header";
+@import "lib/layout/footer";
+@import "lib/layout/layout";
+
+// :::: COMPONENT :::: //
+@import "../component/gallery/create-gallery/create-gallery";
+@import "../component/gallery/edit-gallery/edit-gallery";
+@import "../component/gallery/gallery-item/gallery-item";
+@import "../component/gallery/thumbnail-container/thumbnail-container";
+@import "../component/gallery/thumbnail/thumbnail";
+@import "../component/gallery/upload-pic/upload-pic";
