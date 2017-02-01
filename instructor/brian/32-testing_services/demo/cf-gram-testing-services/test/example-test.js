@@ -1,7 +1,7 @@
 'use strict';
 
-describe('true test', function(){
-  it('should pass', () => {
+describe('Example Test', function(){
+  it('should pass this test', () => {
     expect(true).toEqual(true);
   });
 });

@@ -26,8 +26,8 @@ describe('Gallery Service', function() {
     this.$rootScope.$apply();
   });
 
-  describe('testing galleryService.createGallery', () => {
-    it('should return a gallery', () => {
+  describe('galleryService.createGallery()', () => {
+    it('should create a new gallery', () => {
       let galleryData = {
         name: 'example gallery',
         desc: 'example description'
