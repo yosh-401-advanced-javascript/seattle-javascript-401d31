@@ -72,4 +72,3 @@ describe('Gallery Service', function() {
     });
   });
 });
-

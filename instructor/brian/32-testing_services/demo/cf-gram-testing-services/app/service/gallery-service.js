@@ -88,7 +88,7 @@ function galleryService($q, $log, $http, authService) {
           'Content-Type': 'application/json'
         }
       }
-      
+
       return $http.put(url, galleryData, config);
     })
     .then( res => {
@@ -123,7 +123,6 @@ function galleryService($q, $log, $http, authService) {
       return $http.delete(url, config);
     })
     .then( res => {
-      // update gallery in galleries array
       for (let i = 0; i < service.galleries.length; i++) {
         let current = service.galleries[i];
         if (current._id === galleryID) {
