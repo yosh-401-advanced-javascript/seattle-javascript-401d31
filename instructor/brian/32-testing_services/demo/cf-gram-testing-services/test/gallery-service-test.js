@@ -1,18 +1,32 @@
 'use strict';
 
 describe('Gallery Service', function() {
-  beforeEach( () => {
-    angular.mock.module('cfgram');
-    angular.mock.inject((authService, galleryService, $httpBackend) => {
-      this.authService = authService;
-      authService.setToken('1234');
 
+  beforeEach(() => {
+    angular.mock.module('cfgram');
+    angular.mock.inject(( $rootScope, authService, galleryService, $window, $httpBackend) => {
+      this.$window = $window;
+      this.$rootScope = $rootScope;
+      this.authService = authService;
       this.galleryService = galleryService;
       this.$httpBackend = $httpBackend;
     });
+
+    this.authService.token = null;
+    this.$window.localStorage.setItem('token', 'test token');
+
+    this.authService.getToken()
+    .then( token => {
+      expect(token).toEqual('test token');
+    })
+    .catch( err => {
+      expect(err).toEqual(null);
+    });
+
+    this.$rootScope.$apply();
   });
 
-  describe('galleryService.createGallery', () => {
+  describe('testing galleryService.createGallery', () => {
     it('should return a gallery', () => {
       let galleryData = {
         name: 'example gallery',
@@ -22,53 +36,36 @@ describe('Gallery Service', function() {
       let headers = {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        Authorization: 'Bearer 1234'
+        Authorization: 'Bearer test token'
       };
 
       this.$httpBackend.expectPOST('http://localhost:8000/api/gallery', galleryData, headers)
-      .respond(200, { _id: '5678', username: 'testuser', name: galleryData.name, desc: galleryData.desc, pics: [] });
+      .respond(200, {
+        _id: '1234',
+        username: 'testuser',
+        name: galleryData.name,
+        desc: galleryData.desc,
+        pics: []
+      });
 
       this.galleryService.createGallery(galleryData);
       this.$httpBackend.flush();
+      this.$rootScope.$apply();
     });
   });
 
-  describe('galleryService.deleteGallery(galleryID)', () => {
+  describe('galleryService.deleteGallery()', () => {
     it('should delete a gallery', () => {
-      let galleryID = '12345';
+      let galleryID = 'testid';
       let headers = {
-        Authorization: 'Bearer 1234',
-        Accept: 'application/json, text/plain, */*'
+        Authorization: 'Bearer test token',
+        Accept: "application/json, text/plain, */*",
       };
 
-      this.$httpBackend.expectDELETE('http://localhost:8000/api/gallery/12345', headers).respond(204);
-
+      this.$httpBackend.expectDELETE('http://localhost:8000/api/gallery/testid', headers).respond(204);
       this.galleryService.deleteGallery(galleryID);
-
       this.$httpBackend.flush();
-    });
-
-    it('should respond with a 404', () => {
-      let headers = {
-        Authorization: 'Bearer 1234',
-        Accept: 'application/json, text/plain, */*'
-      };
-
-      this.$httpBackend.whenDELETE('http://localhost:8000/api/gallery/:galleryID', headers).respond( function(method, url, data, headers, params) {
-        if (params.galleryID !== '1234') {
-          return [404, 'NotFoundError'];
-        };
-
-        return [204]
-      });
-
-      this.galleryService.deleteGallery('12345')
-      .catch( err => {
-        console.error('gallery delete not successful');
-        expect(err.status).toBe(404);
-      });
-
-      this.$httpBackend.flush();
-    });
+      this.$rootScope.$apply();
+    })
   });
 });
