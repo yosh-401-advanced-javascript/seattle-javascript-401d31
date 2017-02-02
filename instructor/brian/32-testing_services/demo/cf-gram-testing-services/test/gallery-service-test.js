@@ -11,19 +11,6 @@ describe('Gallery Service', function() {
       this.galleryService = galleryService;
       this.$httpBackend = $httpBackend;
     });
-
-    this.authService.token = null;
-    this.$window.localStorage.setItem('token', 'test token');
-
-    this.authService.getToken()
-    .then( token => {
-      expect(token).toEqual('test token');
-    })
-    .catch( err => {
-      expect(err).toEqual(null);
-    });
-
-    this.$rootScope.$apply();
   });
 
   describe('galleryService.createGallery()', () => {
