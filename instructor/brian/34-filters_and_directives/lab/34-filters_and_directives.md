@@ -1,4 +1,4 @@
-![cf](https://i.imgur.com/7v5ASc8.png) Lab 33 - Testing Components
+![cf](https://i.imgur.com/7v5ASc8.png) Lab 34 - Filters and Directives
 ======
 
 ## To Submit this Assignment
