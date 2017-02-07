@@ -21,3 +21,14 @@
     * much like we have been doing with the `component` method, we can create our own directives that contain their own template and associated behavior
     * angular includes many useful built-in directives as well as giving us the ability to create our own
       * this can be done with, or without, the use of the `directive` method
+
+  * **`restrict` Option**
+    * the `restrict` option will trigger directives by elements, attributes, classes, or comments - the default option is **attribute** and **element**
+    * example usage: in order to trigger a directive **only** based on class name, you would use the `C` option
+    * **note**: these options can be clustered together (ex: `EAC` - element, attribute, and class)
+    * `restrict` options:
+      * `E` - only matches element name
+      * `A` - only matches attribute name
+      * `C` - only matches class name
+      * `M` - only matches comment
+      
