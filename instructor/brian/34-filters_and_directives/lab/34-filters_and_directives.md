@@ -29,3 +29,6 @@
   * Use the `uppercase`, `lowercase`, `number`, `date`, `limitTo`, and `orderBy` built-in angular filters in your application *(note: this is simply for practice and can be used anywhere in your application)*
   * Create a custom `directive` that will allow for the use of elements, classes, and attributes (EAC) in a custom `<social-icons></icons>` element
     * this should include an `@` binding that is used to associate an attribute on the directive, along with an `ng-repeat` directive to print out a list of potential social icons, which are listed as an array on the `SocialIconsController`
+
+## Bonus
+  * **2pts:** create a sprite sheet of social icons, add an `<li>` and associated class for each social icon in the sprite sheet, and update the background position of each `<li>` to show the related social icon
