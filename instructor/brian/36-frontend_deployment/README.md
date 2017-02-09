@@ -4,34 +4,34 @@
 ## Deployment Steps
   * **Code Updates**
     * add the following to your `package.json` file
-      * `"engines": { "node": "4.4.7" }
+      * `"engines": { "node": "4.4.7" }`
       * `"start": "node server.js"`
       * `"heroku-postbuild": webpack -p --progress`
     * install `express` as a dependency in your application
       * `npm i -S express`
     * create a simple server for your application
-      ``` javascript
-      'use strict';
+    ``` javascript
+    'use strict';
 
-      const express = require('express');
-      const app = express();
-      const PORT = process.env.PORT || 8080;
+    const express = require('express');
+    const app = express();
+    const PORT = process.env.PORT || 8080;
 
-      app.use(express.static(`${__dirname}/build`));
+    app.use(express.static(`${__dirname}/build`));
 
-      app.listen(PORT, function(){
-        console.log('server up:', PORT);
-      });
-      ```
+    app.listen(PORT, function(){
+     console.log('server up:', PORT);
+    });
+    ```
     * include a simple `.travis.yml` file for running your `karma` tests
-      ``` javascript
-      language: node_js
-      node_js:
-        - 'stable'
-      sudo: required
-      before_script: npm i
-      script:
-        - npm run test
+    ``` javascript
+    language: node_js
+    node_js:
+      - 'stable'
+    sudo: required
+    before_script: npm i
+    script:
+      - npm run test
       ```
   
   * **Travis Admin Config**
