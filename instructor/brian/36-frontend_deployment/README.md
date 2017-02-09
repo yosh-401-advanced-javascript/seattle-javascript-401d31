@@ -36,7 +36,7 @@
   
   * **Travis Admin Config**
     * enable your application in Travis
-    * include yout `API_URL` enviornment variable
+    * include your `API_URL` enviornment variable
 
   * **Heroku Admin Config**
     * create a new application in Heroku
