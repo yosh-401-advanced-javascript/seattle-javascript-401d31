@@ -9,6 +9,8 @@ Code 401 Javascript Guide
 * [Sorting algorithms](./profesional-development/pd-03-sorting-algorithms)
 * [Stacks and queues](./profesional-development/pd-04-stacks-queues)
 * Linked lists
+* Trees
+* Binary trees
 * Binary search trees
 
 # Backend
