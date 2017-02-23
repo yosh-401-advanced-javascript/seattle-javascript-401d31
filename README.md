@@ -9,7 +9,7 @@ Code 401 Javascript Guide
 * [Sorting algorithms](./profesional-development/pd-03-sorting-algorithms)
 * [Stacks and queues](./profesional-development/pd-04-stacks-queues)
 * Linked lists
-* Binary search tres
+* Binary search trees
 
 # Backend
 ## Intro to Node.JS
@@ -44,12 +44,12 @@ Code 401 Javascript Guide
 
 # Frontend
 
-## Intro to angular
-* [class 26 angular, $rootScope, and templating](./frontend/class-26-angular-intro)
-* [class 27 webpack, angular controllers and testing](./frontend/class-27-webpack-controllers-testing)
+## Intro to Angular
+* [class 26 Angular, $rootScope, and templating](./frontend/class-26-angular-intro)
+* [class 27 webpack, Angular controllers and testing](./frontend/class-27-webpack-controllers-testing)
 
 ## Adventure Game
-* [class 28 angular services](./frontend/class-28-services)
+* [class 28 Angular services](./frontend/class-28-services)
 * [class 29 built in directives](./frontend/class-29-angular-directives)
 
 ## Image Gallery Crud App
