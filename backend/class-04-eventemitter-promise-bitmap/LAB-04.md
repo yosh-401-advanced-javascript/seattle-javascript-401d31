@@ -8,9 +8,9 @@
   * Submit a pull request to this repository
   * Submit a link to your pull request on canvas
   * Submit a question, observation, and how long you spent on canvas  
-  
+
 ## Learning Objectives  
-* Students will be able to manipulate binary data using nodejs Buffers 
+* Students will be able to manipulate binary data using nodejs Buffers
 * Students will be able to architect modular solutions to solving problems
 
 ## Resources  
@@ -19,27 +19,27 @@
 
 ## Requirements  
 #### Configuration  
-<!-- list of files, configurations, tools, ect that are required -->
+<!-- list of files, configurations, tools, etc that are required -->
 Your lab directory must include  
-* **README.md** -- with a documention about your lab
-* **.gitignore** -- with a robust gitignore
+* **README.md** -- with a documentation about your lab
+* **.gitignore** -- with a robust .gitignore
 * **.eslintrc** -- with the class .eslintrc file
 * **.eslintignore** -- with the class .eslintignore
-* **.package.json** -- with all dependencies and dev-dependencies 
+* **.package.json** -- with all dependencies and dev-dependencies
 * **assets/** -- directory for holding image files
 * **test/** -- directory for holding unit and integration tests
 * **lib/** -- directory for holding program helper modules
 * **model/** -- directory for holding object constructor modules
 * **index.js** -- main CLI program
 
- 
+
 #### Feature Tasks  
 * Create a module **index.js** that will be used as a CLI for transforming bitmap images
- * Your CLI should take three arguments 
-    1. tranform name
+ * Your CLI should take three arguments
+    1. transform name
     2. input file path
     3. output file path
-* Create a `Bitmap` constructor module for pasring the bitmap buffer according to the bitmap specification
+* Create a `Bitmap` constructor module for parsing the bitmap buffer according to the bitmap specification
 * Create helper module(s) for transforming the bitmap instance
  * here are some transform ideas (**don't limit yourself to these!!!!**)
     1. grey scale
@@ -51,13 +51,13 @@ Your lab directory must include
 
 ###### Here is a proposal for how your CLI might function   
 1. Open the bitmap file using fs module and read it into a buffer
-2. Use a `Bitmap` constructor to parse the buffer's "bitmap headers" 
+2. Use a `Bitmap` constructor to parse the buffer's "bitmap headers"
 3. Run a transform on the bitmap instance
 4. Convert the bitmap into a buffer
 5. Write the buffer into a new file
 
 ####  Documentation  
-* Wriate a project description
+* Write a project description
 * Write documentation about the bitmap specification
 
 #### Testing  
@@ -65,7 +65,7 @@ Your lab directory must include
  * Make sure you test edge cases!
 
 ## Rubric  
-* 2ps Configuration
+* 2pts Configuration
 * 3pts Feature Tasks
 * 3pts Tests
 * 2pts Documentation

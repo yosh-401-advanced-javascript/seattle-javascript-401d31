@@ -12,30 +12,30 @@
 * Read [node Error docs]
 
 ## Learning Objectives
-<!-- unordered list of learning objectives --> 
+<!-- unordered list of learning objectives -->
 
 ## Overview
 #### package.json
 * a package.json is a config file used for configuring metadata about a node project
-* It only requires a name and version filed, but a typical package.json has much more inforamtion
+* It only requires a name and version filed, but a typical package.json has much more information
 * dependencies vs dev-dependencies
  * dependencies - a list of packages required to run the main program
  * dev-dependencies - a list of packages required to work on the project
 * npm scripts are used to manage common tasks for working a node project  
 * Setting up a project
  * create a new directory named after your project
- * navagate inside your directory
+ * navigate inside your directory
  * run `npm init` and answer the questions
  * now you should find a package.json inside your current directory :)
 
-#### Gulp 
+#### Gulp
 * Gulp is a tool that helps you automate time-consuming tasks that are a part of your dev workflow
 * Gulp is configured in pure javascript, so you can use any node module in a gulp task
 * Gulp has a awesome plugin ecosystem
 
 #### Node Errors
-###### Error 
-* a generic error 
+###### Error
+* a generic error
 * `.stack` - a **String** describe the point in the code where the `Error` was instantiated
 * `.message` - a **String** description set by calling the `new Error(message)`  
 
@@ -58,23 +58,23 @@
 * `SystemError` is **not** a subclass of `Error`
 * Common System Errors
  * `EACCESS` - An attempt to access a file without the right permissions
- * `EADDRINUSE` - An attempt to start a server on a PORT that is allready in use
- * `ECONNREFUSED` - A connection was deliberatly refused by the target machine
+ * `EADDRINUSE` - An attempt to start a server on a PORT that is already in use
+ * `ECONNREFUSED` - A connection was deliberately refused by the target machine
  * `ECONNRESET` - A connection was forcibly closed by a peer
- * `EEXIST` - A file exists and the attempted action required that it didnt
+ * `EEXIST` - A file exists and the attempted action required that it didn't
  * `EISDIR` - An action expected to act on a file but found a directory
  * `EMFILE` - To many files were open for your operating system to handle
  * `ENOENT` - An action expected a file, but did not find one
  * `ENOTDIR` - An action expected a directory, but found something else
  * `ENOTEMPTY` - An action expected an empty directory, but found one with data in it
- * `EPERM` - An attempt to do something that you currently dont have permissions to do
+ * `EPERM` - An attempt to do something that you currently don't have permissions to do
  * `EPIPE` - An attempt to write data to a connection that had been closed
 
 ###### Throw Try Catch
 * If an un handled error is thrown in javascript the program will crash
 * try catch blocks allow you to safely throw a an error and handle it
 ``` javascript
-  // call an function that does not exist and the program will crash 
+  // call an function that does not exist and the program will crash
   let data = {};
   data.name();
 ```
@@ -88,7 +88,7 @@ try {
 }
 ```  
 ``` javascript
-// explicly create and throw a custom error
+// explicitly create and throw a custom error
 try {
   let data = {name: 'adalove'};
   if (data.name !== 'ada lovelace')
@@ -124,7 +124,7 @@ describe('testing behavior of data passed by value', function() {
       expect(xyz).to.equal('hello world');
     });
   });
- 
+
   describe('testing that booleans are passed by value', function(){
     it('abc should not change when xyz is changed', () =>  {
       let abc = true;
@@ -163,7 +163,7 @@ describe('testing behavior of data passed by value', function() {
 
       // reference abc with xzy
       let xyz = abc;
-      
+
       // reassign xyz
       xyz = {
         info: 'cool er than cool',

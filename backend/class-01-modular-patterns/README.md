@@ -11,7 +11,7 @@
 * Skim [node and es6]
 
 ## NPM Resources
-* Read [what is npm] 
+* Read [what is npm]
 
 ## Testing Resources
 * Read [a gentle intro to tdd in js]
@@ -25,17 +25,17 @@
 * Students will be able explain the TDD philosophy of red, green, refactor
 
 ## Overview
-#### Seting up a DEV workspace and uing your computer like a DEV
+#### Setting up a DEV workspace and using your computer like a DEV
 * Before people are developers they often develop many habits of computer usage they will need to unlearn
 * It is highly important as a developer to keep their file system organized!
 * You have bigger challenges to worry about than trouble finding your code
 * Students should set up a directory for all their class work and never deviate from working inside of this dir
-* Create a dir stucture for keeping track of you class work
+* Create a dir structure for keeping track of you class work
  * **Never put space bars in your file names**
- * **Use `-` or `_` between words instead. Choose one and stick with it... dont use both!**
+ * **Use `-` or `_` between words instead. Choose one and stick with it... don't use both!**
  * **Never use capital letters in your filenames, unless its a convention (like README.md)**
-   * some file systems (like osx) don't keep track of Case and will cause git issues
-``` text
+   * some file systems (like OSX) don't keep track of Case and will cause git issues
+``` sh
  * $HOME/
   | - Desktop/
   | - Downloads/
@@ -49,22 +49,22 @@
   |   |   | - class-00-modular-patterns
   |   |   | - class-01-modular-testing
   |   |   | - ...
-  ```
+```
 #### Node.JS
 * Node is an asynchronous, event-driven framework for programming in javascript on your operating system.
 * Node only does work when events are triggered.
 * When Node has no work to be doing, Node sleeps.
-* Node input and output (I/O) is non-blocking. 
+* Node input and output (I/O) is non-blocking.
  * This saves developers from having to worry about complicated concurrency programming patterns!
 * Node is composed of four main components:
  * Node Javascript API - The Javascript interface to all the cool C++ APIs,
  * V8 - A javascript runtime,
- * libuv - A c library for asynchronous I/O (for the opperating system),
+ * libuv - A c library for asynchronous I/O (for the operating system),
  * Node C++ APIs - the glue between Node's Javascript APIs and libuv.
 * Node has great documentation online, but make sure you read the docs for the correct version of Node you're using
 * Node's documentation has a stability index
- * 0 - Deprecated - Dont use the feature
- * 1 - Experamental - Dont use this feature in something you care about
+ * 0 - Deprecated - Don't use the feature
+ * 1 - Experimental - Don't use this feature in something you care about
  * 2 - Stable - Fine to use
  * 3 - Locked - Fine to use
 
@@ -79,15 +79,15 @@
 #### Testing and TDD (Test-Driven Development)
 * TDD is a software development process
 * It relies on a very short development cycle
- * It encurages build small things at a time
+ * It encourages build small things at a time
 * TDD Process:
  * you make a plan for the features needed to make a program work
  * you choose a feature to implement
- * you write code that tests that feature's beahaior
+ * you write code that tests that feature's behavior
  * the tests now should fail, because the feature has not been implemented
  * you write the feature itself
  * the tests now should pass, because the feature has been implemented
- * you refactor you code to optimize it 
+ * you refactor you code to optimize it
  * the tests should still pass, because the behavior should not have changed
 * This process is called RED GREEN REFACTOR
  * RED - the test is written, but fail
@@ -95,7 +95,7 @@
  * REFACTOR - the code runs better, and the test still passes
 
 #### Mocha and Chai 
-* Mocha is a testing framwork
+* Mocha is a testing framework
  * Its job is to facilitate writing and running tests
 * Chai is an assertion library
  * Its job facilitate writing expectations and then throw errors when the expectations are not met
