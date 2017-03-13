@@ -7,14 +7,14 @@
 * Read [What is a rest api?]
 
 ## Learning Objectives
-* Students will be able to identify qualitys of the HTTP protocol
+* Students will be able to identify qualities of the HTTP protocol
 * Students will be able to implement an HTTP server using Nodejs
 * Students will be able to explain what a HTTP RESTful is
 
 ## Overview
 #### HTTP
 * **HTTP** stands for hyper text transport protocol
-* a statless `request/responce` protocol in the `client/server` computing model
+* a stateless `request/response` protocol in the `client/server` computing model
 * HTTP requests have
  * **METHOD** - used to indicate the type of action preformed on the resource
  * **URL** - used to indicate which resource to affect
@@ -36,12 +36,12 @@
 * stateless
  * the client and server to not maintain a connection for longer than request/response
 * cacheable
- * responses must implicity or explicity define themselfs as cacheable
+ * responses must implicitly or explicitly define themselves as cacheable
 * client-server
- * using client server architecture for thoughfully deviding seporations of concerns
- * servers store data 
- * clients mainain user state and create the user interface
-* layerd system
+ * using client server architecture for thoughtfully dividing separation of concerns
+ * servers store data
+ * clients maintain user state and create the user interface
+* layered system
  * clients can not tell how the backend is implemented
  * the server could be one server or it could be 1000, but the interface is the same
 
