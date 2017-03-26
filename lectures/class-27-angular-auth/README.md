@@ -1,61 +1,32 @@
-<<<<<<< HEAD
-401 JS -- class 32 Client Basic Authentication and Bearer Authorization 
-=======
-401 JS -- class 32 Client Auth
->>>>>>> e3caf6f8303296d7f52c1d075175a92eb5f80562
-=========================
+![cf](http://i.imgur.com/7v5ASc8.png) 27: Client Side Auth
+=====================================
 
-## Basic and Bearer Resources
-* Review [baisc auth wiki]
+## Auth Service
+  * **Overview**
+    * using a service, we can create a library for client side authentication
+    * this will rely on the `$http` service which will allow us to create AJAX requests
+    * for `window` properties and methods, we can use the `$window` object - this gives us the ability test properties and methods that we assign to it
+    * we'll be using a few common `$window` methods in our cfgram application build
+      * `$window.locationStorage` - allows us to test saved tokens in our auth service
+      * `$window.btoa` - let's us base 64 encode our username and password for basic authorization
 
-## Angular Resources
-* Read [$http api docs]
-* Skim [$window api docs]
-* Skim [$q api docs]
+## Webpack Constants
+  * **Overview**
+    * constants are configured in our `webpack.config.js` file and can be used throughout our application
+    * they are useful for information that we should keep unexposed to the user, such as an secret key or staging/production logging
 
-## Learning Objectives
-* Students will be identify when to use a webpack constent that can configured at build time
-* Students will be able to login to a rest API using basic authentiation
-* Students will be able to persist bearer tokens between sessions
-* Students will be able to create authorized requets using a bearer token
-* Students will be able to write test for $http ajaxs requets
-
-## Overview
-#### Webpack constants
-* constants can be configured in the webpack config that can be used throughout the app
-* we use webpack constants for all information that need to be kept secret like API SECRET KEYS
-* we also use webpack constants for all information that canges depending on what environment our app is runnin in (dev, testing, production)
-
-``` javascipt 
-let plugins = [
-  new ExtractTextPlugin('bundle.css'),
-  new HTMLPlugin({ template: `${__dirname}/app/index.html` }),
-  new webpack.DefinePlugin({
-    // __API_URL__ is a webpack constant that is used to point 
-    // our client at the right API depending on the environemet
-    __API_URL__: JSON.stringify(process.env.API_URL),
-    // __DEBUG__ is an webpack constat that is used to turn off $log's logging in production
-    __DEBUG__: JSON.stringify(!production),
-  }),
-];
-``` 
-
-#### Auth service
-* we use a service to create a libary for authentiation because it will be neaded through out our app
-* we use the $http service to create an AJAX request to our REST API to signup and login a user
-* we use webpack constants to be able to point are requets to a specific base URL depending on what environment are server is runinng in (dev, testing, production)
-* we use $window.localStorage instead of window.localStorage because $Window suports are ability to test our auth service
-* we use $window.btoa to base 64 encode the username:password in order to create a valid basic auth header
-
-#### Testing $http AJAX requests
-* `$httpBackend.expectGET(...)`, `$httpBackend.expectPUT(...)`, `$httpBackend.expectDELETE(...)`, and `$httpBackend.expectPOST(...)`  are used as an expect statement in our tests to make sure our client is making the right requests
-* after setting up each test `$httpBackend.flush()` needs to be called inorder to for $httpBackend's outstanding requtests to be validated
-* its also a wise idea to call `$httpBackend.verifyNoOutstandingRequest()` and `$httpBackend.verifyNoOutstandingExpectation()` in an afterEach block to make sure all requests have been validated
-* **IMPORTANT** for any test that is testing a function which uses a $q promises `$rootScope.apply()` must be called to allow the promise to resolve. Simular to `$httpBackend.fush()` in regards to a `$httpBackend.expectGET(...)`. 
-
-<!--links -->
-[$http api docs]: https://docs.angularjs.org/api/ng/service/$http
-[$window api docs]: https://docs.angularjs.org/api/ng/service/$window
-[$q api docs]: https://docs.angularjs.org/api/ng/service/$q
-
-[baisc auth wiki]: https://en.wikipedia.org/wiki/Basic_access_authentication
+  * **Example**
+  ``` javascript
+  let plugins = [
+    new ExtractTextPlugin('bundle.css'),
+    new HTMLPlugin({
+      template: `${__dirname}/app/index.html`
+    }),
+    new webpack.DefinePlugin({
+      // __API_URL__ is a webpack constant that is used to point our client at the right API, depending on the environment
+      __API_URL__: JSON.stringify(process.env.API_URL),
+      // __DEBUG__ is a webpack constant that is used to turn off logging in production
+      __DEBUG__: JSON.stringify(!production),
+    }),
+  ];
+  ```

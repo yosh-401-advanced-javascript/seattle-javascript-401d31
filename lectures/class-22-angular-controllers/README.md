@@ -1,53 +1,38 @@
-401 JS -- class 29 Angular's Built in Directives
-=========================
+![cf](http://i.imgur.com/7v5ASc8.png) 22: Angular Controllers
+=====================================
 
-## Resources
-* Skim [diretive components]
-* Read [form guide]
+## Getting Started with Controllers
+  * **Overview**
+    * controllers are constructor functions that are used to modify the angular **scope**
+    * when a controller is attached to the **DOM**, using the `ng-controller` directive, Angular will instantiate a new controller object
+      * this will create a new **child scope** that is made available as a parameter to a controller's constructor
+    * **note:** controllers are used to setup and add behavior to the `$scope` object
+    * **note:** controllers should not be used for DOM maniuplation or formatting of input and output
 
-## Learning Objectives
-* students will understand the functions of angular directives
-* students will be able to identify use cases for angular's built in diretives
-* students will be able to modify the view based on angulars form validation classes
+  * **`Controller as` Syntax**
+    * the `Controller as` syntax can be used to allow the use of `this` instead of `$scope` within our controllers
+      * this removes the need for us to inject `$scope` into our controller's constructor function
+    * **controller example:**
+    ``` javascript
 
-## Overview
-* Directives are markers on a DOM element that tells angular's HTML compiler to attach behavior to that DOM element
-* Directives can come in the form of a tag name, an attribue, or a class name
-* Angular has many built in directives that can be used to create powerful DOM interactions
+    // using the dependency injection system, we can inject dependencies
+    // into our controller for additional modularity and functionality
 
-#### Some General Puropse Directives
-* ng-app - binds an angular module's $rootScope to an element on the DOM
-* ng-controller - binds a controller and its $scope to an element on the DOM
-* ng-model - binds the value of a user input to a propery on the $scope
-* ng-init - used to run an expression when a template is loaded 
-* ng-href - like a href attribute, but it suports angular's template expressions `ng-href="{{someCtrl.nav.home}}"`
-* ng-src - like a src attribue, but it suports angular's template like ng-href
-* ng-cloak - is used to prevent angular from showing uncompiled templates during page load
-* ng-repeat - is used to create itterate over an array on $scope and create a $scope and template for each item in the array
+    // here, we are injecting $log for advanced logging capabilities
+    sampleApp.controller('SampleController', ['$log', SampleController]);
 
-#### Some Toggling Directives
-* ng-show - is used to toggle the css propery display none on a DOM element based on a truthy or falsey value
-* ng-hide - is used to toggle the css propery display none on a DOM element based on a truthy or falsey value
-* ng-if - is used to add or remove an element from the DOM based on a truthy or falsey value
-* ng-class - is used to add or remove class names on an element based on truthy or falsey values
+    // create a new controller and pass in $log for use in our controller's methods
+    function SampleController($log) { ... }
+    ```
 
-#### Some Event Directives
-* ng-click - is used to trigger an expression when a DOM element is clicked
-* ng-dblclick - is used to trigger an expression when a DOM element is double clicked
-* ng-submit - is used to trigger an expression when a form's submit event has been triggered
+    * **markup example:**
+    ``` html
 
-#### Some Form Directives
-* form - form tags are actualy an angular directive and have many awesome features includeing a scope with  dynamic validtation properties, and dynamic validation classes
- * to get access to a froms validation properties it must be named. the forms name will become a property on the $scope
- * formname.$submitted - set to true when the form has been submitted
- * formname.$invalid - set to true if the form is invalid
- * formname.$valid - set to true if the form is valid
-* input - input tags are also an angular diretive, if they are named they become a property on the $scope.formname
- * fromname.inputname.$invalid - set to true if the form is invalid
- * fromname.inputname.$valid - set to true if the form is valid
-* ng-required - is used to require a form input to have a value before the form is submitted
-* ng-disabled - is used to disabled a user input based on a truthy or falsey value
-
-<!--links -->
-[diretive components]: https://docs.angularjs.org/api/ng/directive
-[form guide]: https://docs.angularjs.org/guide/forms
+    <!-- using the ng-contoller directive, we can tell
+         our application to use the Controller as syntax -->
+    <nav ng-controller="SampleController as sampleCtrl">
+      <ul>
+        <li ng-repeat="item in sampleCtrl.items">...</li>
+      </ul>
+    </nav>
+    ```
