@@ -1,4 +1,4 @@
-401 JS - Big O and Functional Programming
+401 JS - List Data Structure and Big O w/ Functional Programming
 ===============================================
 
 # Big O Resources
@@ -36,33 +36,6 @@
 ## Functional Programing
 * In order to understand functional programing you must understand what a side-effect is.
  * A side effect is when a function alters state defined outside its scope.  
- **Below are some examples of side effects**
-``` javascript
-let state = {}
-function init(){ // has side effects
-  state.token = 'lalala secrets are no fun'; // side effect
-}
-```
-``` javascript
-document.getElementById('title').textContent = 'side effect'; // side effect
-```
-``` javascript
-console.log('side effect'); // side effect
-```
-* In functional programming the goal is to design functions that have no side effects
-* A function with no side effects has can still have an input and an output
-* Functions with no side-effects are called pure functions
-``` javascript
-// map has no side effects
-// the callback also has no side effects
-function map(input, callback){
-  let result = [];
-  for(var i=0;i<array.length;++i){
-    result.push(callback(input[i], i, input));
-  }
-  return result;
-}
-```
 * A program with no side effects at all is not very useful
  * No side effects means no input or output from or to devices and the user
 
@@ -82,74 +55,21 @@ function map(input, callback){
 ### Imperative vs Functional example
 #### Imperative alphabetical sort
 Imperative code is hard to read because you have to figure out what is happening on each line. Loops are generally very hard to read.
-``` javascript
-function alphabeticalSort(items) {  
-  var length = items.length;
-  for (var i = (length - 1); i >= 0; i--) {
-    for (var j = (length - i); j > 0; j--) {
-      if (items[j] && (items[j].toLowerCase() < items[j - 1].toLowerCase())) {
-        var tmp = items[j];
-        items[j] = items[j - 1];
-        items[j - 1] = tmp;
-      }
-    }
-  }
-}
 
-let spooky = ['grr', 'boo', 'creek', 'squeek', 'glimer'];
-alphabeticalSort(spooky);
-// spooky is now sorted: ['boo', 'creek', 'glimer', 'grr', squeek']
-```
 #### Functional alphabetical sort
 * Even though the following may seem complicated at first, it should be more readable at a glance than the imperative code above, which does the same thing.
 * sortAlphabetically is an example of function composition. sortAlphabetically is created by composing slice, sort, and a callback to sort.
 * One important thing to note is that the .sort() method on arrays will mutate the array, which is a side effect. because of this sortAlphabetically uses the .slice() method to create a copy of the original list before it runs sort(). This makes sortAlphabetically a pure function.
 
-``` javascript
-let sortAlphabetically = list => list.slice().sort((a, b) => a.toLowerCase() > b.toLowerCase());
-let names = ['Glorb', 'slorb', 'Jlorb', 'clorb'];
-
-// this line should be very readable as long as you pay attention to the function name
-let sorted = sortAlphabetically(['Glorb', 'slorb', 'Jlorb', 'clorb'])
-// sorted is now a sorted copy of names
-// names has not been mutated (i.e. no side effect!)
-```
 
 # Factory function
 A factory function is a pure function that acts like a constructor but without the new keyword.
-``` javascript
-// constructor
-function User(name, permissions){
-  this.name = name;
-  this.permissions = permissions
-}
-
-User.prototype.getName = function() { return this.name };
-
-let ada = new User('adalove', 'admin');
-console.log(ada.getName());
 
 
-// factory function
-function user(name, permissions){
-  let proto = {
-    getName: function(){ return this.name },
-  };
+# Whiteboard Exercise (Groups of 4)
+* Implement `forEach()` as a method of your List Data Structure
+* Implement `filter()` as a method of your List Data Structure
 
-  let result = Object.create(proto);
-  result.name = name;
-  result.permissions = permissions;
-
-  return result;
-}
-
-let delia = user('delia', 'moderator');
-console.log(delia.getName());
-```
-
-# Exercise
-* Implement a List constructor that acts like an array
-* For the List constructor implement the prototype methods, `map`, `filter`, `reduce`, and `forEach`
 
 [simple Wiki Big O]: https://simple.wikipedia.org/wiki/Big_O_notation
 [hacker Rank Big O video]: https://www.youtube.com/watch?v=v4cd1O4zkGw

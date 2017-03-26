@@ -17,7 +17,7 @@
 
 # Overview
 #### Abstract Data Types (ADT)
-In computer science, an abstract data type (ADT) is a mathematical model for data types where a data type is defined by its behavior (semantics) from the point of view of a user of the data, specifically in terms of possible values, possible operations on data of this type, and the behavior of these operations. This contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not a user. 
+In computer science, an abstract data type (ADT) is a mathematical model for data types where a data type is defined by its behavior (semantics) from the point of view of a user of the data, specifically in terms of possible values, possible operations on data of this type, and the behavior of these operations. This contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not a user.
 
 #### Stack
 * Stacks are a first in first out data structure (FIFO)
@@ -51,15 +51,11 @@ In computer science, an abstract data type (ADT) is a mathematical model for dat
  * Linked List
  * Dequeue (Double ended queue)
 
-# Exercise
-* Implement a Stack
- * the push and pop methods should have an "O(1)" runtime
-* Implement a Queue
- * the enqueue and dequeue methods should have an "O(1)" runtime
-* write a function that uses a stack to reverse an array
-* write a function to determine if a string is a palindrome
-* write a function to determine if a string has matching brackets "{}[]()" "[()]{}"
+# Whiteboard Exercise (Groups of 2)
+* implement `pop()` and `peek()` methods on the Stack Data Structure
+* implement a function to determine if a string has matching brackets "{}[]()" "[()]{}"
  * the string can have characters that are not brackets
+ * this method should be a pure function, returning a new Stack
 
 [stacks and queues]: https://www.youtube.com/watch?v=wjI1WNcIntg
 [stack wiki]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
