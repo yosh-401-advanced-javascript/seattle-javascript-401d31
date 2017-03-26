@@ -66,7 +66,7 @@ Imperative code is hard to read because you have to figure out what is happening
 A factory function is a pure function that acts like a constructor but without the new keyword.
 
 
-# Whiteboard Exercise (Groups of 3)
+# Whiteboard Exercise (Groups of 4)
 * Implement `forEach()` as a method of your List Data Structure
 * Implement `filter()` as a method of your List Data Structure
 

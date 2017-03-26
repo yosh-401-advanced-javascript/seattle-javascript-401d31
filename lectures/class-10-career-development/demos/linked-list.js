@@ -39,7 +39,7 @@ LinkedList.prototype.thirdToLastPointer = function(num){
 };
 
 LinkedList.prototype.thirdToLast = function(){
-  let last = this.head; 
+  let last = this.head;
   let second = null;
   let third = null;
 
@@ -55,7 +55,7 @@ LinkedList.prototype.thirdToLast = function(){
 
 LinkedList.prototype.prependNodeWithValue = function(value){
   // pass in a value
-  // create node 
+  // create node
   // add that node to the beginning of the list
   let node = new Node(value);
   if (!this.head) {
@@ -70,7 +70,7 @@ LinkedList.prototype.prependNodeWithValue = function(value){
 
 LinkedList.prototype.appendNodeWithValue = function(value){
   // pass in a value
-  // create node 
+  // create node
   // add that node to the end of the list
   let node = new Node(value);
   let lastNode = null;
