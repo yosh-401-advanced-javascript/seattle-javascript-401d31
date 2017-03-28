@@ -1,5 +1,5 @@
-401 JS -- class 03 Javascript Runtime and FS modules
-===
+![cf](http://i.imgur.com/7v5ASc8.png) 03: Parallel File Processing
+=====================================
 
 ## JS Runtime Resources
 * Watch [what the heck is the event loop anyway]
@@ -33,22 +33,7 @@ Javascript is a single threaded language. Which means that it can only do a sing
 #### Node asynchronous callback pattern
 * node functions that have asynchronous input or output take a callback as there last argument
 * node functions that do not pass back data always have callback functions take the form `(err) => { }`
-``` javascript
-someNodeFunction('arg', 'arg', function(err) {
-  if(err) {
-    // handle Error
-  }
-})
-```
 * node functions that do pass back data always have callback functions take the form `(err, data) => { }`
-``` javascript
-someNodeFunction('arg', 'arg', function(err, data) {
-  if(err) {
-    // handle Error
-  }
-  // do something with the data
-})
-```
 
 #### fs module
 * the fs module is the node interface to the file system
@@ -98,10 +83,11 @@ fs.unlink(`${__dirname}/hello-wolrd.txt`, (err) => {
 
 
 
+
+
 ======
 # *MERGE THIS CONTENT*
-![cf](http://i.imgur.com/7v5ASc8.png) 03: Parallel File Processing
-=====================================
+
 
 ## Advanced JS & Asynchronous Programming in NodeJS
   * **Passing By Value vs. Passing By Reference**
@@ -189,19 +175,7 @@ fs.unlink(`${__dirname}/hello-wolrd.txt`, (err) => {
         * `buff.toString('hex')`
 
 ## File System I/O
-  * the native NodeJS `fs` module gives us the ability to perform file system I/O operations
-  * we'll be using the asynchronous methods `fs.readFile` and `fs.writeFile`
-  * **`fs.readFile`**
-    * `readFile` creates a readable stream
-    * allows us to read the contents of a file
-    * **demo:** reading a file and logging its content
-      * [read-file-demo](/03-parallel_file_processing/demo/read-file-demo)
-
-  * **`fs.writeFile`**
-    * `writeFile` creates a writable stream
-    * allows us to write content to a file
-    * **demo:** reading a file and writing its content to a new file
-      * [write-file-demo](/03-parallel_file_processing/demo/write-file-demo)
+  *
 
 ## Asynchronous Testing with MochaJS
   * **Calling `done`**
@@ -210,4 +184,3 @@ fs.unlink(`${__dirname}/hello-wolrd.txt`, (err) => {
       * calling `done` in the wrong block will likely cause a false positive test result
 
   * **demo:** testing file system I/O
-      * [read-file-tests](/03-parallel_file_processing/demo/read-file-tests)

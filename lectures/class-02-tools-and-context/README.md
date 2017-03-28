@@ -1,4 +1,4 @@
-401 JS -- class 02 Tools and Context
+![cf](http://i.imgur.com/7v5ASc8.png) 02: Tools and Context
 ===
 
 ## package.json Resources
