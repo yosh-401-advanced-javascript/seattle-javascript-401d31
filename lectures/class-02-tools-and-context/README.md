@@ -1,4 +1,4 @@
-401 JS -- class 02 gulp, npm, ref vs val, errors
+401 JS -- class 02 Tools and Context
 ===
 
 ## package.json Resources
@@ -8,11 +8,26 @@
 * Skim [npm scripts as build tools]
 * Skim [npm scripts docs]
 
+# Context resources
+* Read [MDN this]
+* Watch the Video [Javascript Context Tutorial]
+
+# Prototype resources
+* Skim [MDN new]
+* Skim [MDN Object prototype]
+* Read [MDN inheritance and the prototype chain]
+
 ## Error Resources
 * Read [node Error docs]
 
 ## Learning Objectives
 <!-- unordered list of learning objectives -->
+*
+*
+*
+* understand the difference between context and scope
+* learn how to configure a functions context
+* understand the roll context plays in constructor functions
 
 ## Overview
 #### package.json
@@ -75,11 +90,40 @@
 * try catch blocks allow you to safely throw a an error and handle it
 
 ### Pass by reference vs Pass by value
-* 
 *
+*
+
+### Call, Bind, Apply
+* when a function has a `this` we say that `this` is the functions context
+* unlike scope a functions context can be configured
+* If a function is not a property on an object, by default it has no context
+* If a function is a property on an object, by default that object is the context for that function
+* `call`, `bind`, and `apply` are function prototype methods that allow us to change the context of a function
+* `call` is a methods on a function that invokes a function with a specified context and arguments  
+ * `call` passes comma separated arguments
+* `apply` is a methods on a function that invokes a function with a specified context and arguments  
+ * `apply` passes arguments from an array  
+* don't mess with `__proto__` its slow **not even to read a property**
+* if you want to determine an objects prototype use `Object.getPrototypeOf(someObject)`
+* don't nest a lot of prototype's it will have a speed impact on your code
+* if you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
+
+
+# Exercise
+* Write out the bdd framework from the class lecture
+* Add `beforeEach` and `afterEach` functionality
+* **SUPER BONUS**:
+ * refactor your bdd framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
+
 
 <!--links -->
 [node Error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html
 [about package.json]: https://docs.npmjs.com/files/package.json
 [npm scripts as build tools]: https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
 [npm scripts docs]: https://docs.npmjs.com/misc/scripts
+[MDN new]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
+
+[MDN Object prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
+[MDN inheritance and the prototype chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+[MDN this]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+[Javascript Context Tutorial]: https://www.youtube.com/watch?v=fjJoX9F_F5g
