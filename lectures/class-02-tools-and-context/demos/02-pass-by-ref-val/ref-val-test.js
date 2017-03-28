@@ -23,7 +23,7 @@ describe('testing behavior of data passed by value', function() {
       expect(xyz).to.equal('hello world');
     });
   });
- 
+
   describe('testing that booleans are passed by value', function(){
     it('abc should not change when xyz is changed', () =>  {
       let abc = true;
@@ -62,7 +62,7 @@ describe('testing behavior of data passed by value', function() {
 
       // reference abc with xzy
       let xyz = abc;
-      
+
       // reassign xyz
       xyz = {
         info: 'cool er than cool',

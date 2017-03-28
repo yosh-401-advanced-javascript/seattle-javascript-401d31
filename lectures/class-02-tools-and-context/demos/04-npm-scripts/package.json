@@ -1,0 +1,14 @@
+{
+  "name": "03-package.json",
+  "version": "1.0.0",
+  "description": "simple package.json example, using `npm init -y`",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "hello": "echo hello world!"
+  },
+  "keywords": ["Boots", "Scootin'", "Boogie"],
+  "author": "Code Fellows",
+  "license": "MIT"
+}
