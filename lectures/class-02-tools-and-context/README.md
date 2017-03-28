@@ -1,4 +1,4 @@
-401 JS -- class 02 Tools and Context
+![cf](http://i.imgur.com/7v5ASc8.png) 02: Tools and Context
 ===
 
 ## package.json Resources
@@ -107,13 +107,6 @@
 * if you want to determine an objects prototype use `Object.getPrototypeOf(someObject)`
 * don't nest a lot of prototype's it will have a speed impact on your code
 * if you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
-
-
-# Exercise
-* Write out the bdd framework from the class lecture
-* Add `beforeEach` and `afterEach` functionality
-* **SUPER BONUS**:
- * refactor your bdd framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
 
 
 <!--links -->
