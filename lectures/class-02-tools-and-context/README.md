@@ -109,13 +109,6 @@
 * if you look up a property that is not on any object on the prototype chain it will still look through the whole prototype chain
 
 
-# Exercise
-* Write out the bdd framework from the class lecture
-* Add `beforeEach` and `afterEach` functionality
-* **SUPER BONUS**:
- * refactor your bdd framework to support async `it`, `before`, `after`, `beforeEach`, and `afterEach` callbacks using a `done` callback, just like mocha!
-
-
 <!--links -->
 [node Error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html
 [about package.json]: https://docs.npmjs.com/files/package.json
