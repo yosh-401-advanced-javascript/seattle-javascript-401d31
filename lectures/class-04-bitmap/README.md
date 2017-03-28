@@ -1,4 +1,4 @@
-401 JS -- class 04 Event Emitters, Promises, and Bitmaps
+401 JS -- class 04 Event Emitters, Buffers, and Bitmaps
 ===
 
 ## Event Emitter Resources
