@@ -28,7 +28,10 @@ class NoteUpdateForm extends React.Component {
   // more than one input
   handleChange(e){
     let change = {};
-    change[e.target.name] = e.target.value;
+    if(e.target.type === 'checkbox')
+      change[e.target.name] = e.target.checked;
+    else 
+      change[e.target.name] = e.target.value;
     this.setState(change);
   }
 
@@ -44,7 +47,7 @@ class NoteUpdateForm extends React.Component {
 
   render(){
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="note-update-form" onSubmit={this.handleSubmit}>
         <input  
           onChange={this.handleChange}
           value={this.state.title}
@@ -54,23 +57,32 @@ class NoteUpdateForm extends React.Component {
 
         <input 
           onChange={this.handleChange}
-          value={this.state.completed}
+          checked={this.state.completed}
           type="checkbox"
           name="completed"
           />
 
-        <button disabled={!this.state.title} type="submit"> update note </button>
+        <button 
+          className="btn-edit"
+          disabled={!this.state.title} type="submit"> update note </button>
        </form>
     );
   }
 }
 
 const NoteItem = (props) => {
+  let className = 'note-item';
+  if(props.note.completed)
+    className += ' completed'
   return (
-    <div>
+    <div className={className}>
       <h2> {props.note.title} </h2>
-      <button onClick={() => props.noteDelete(props.note)}> delete </button>
-      <button onClick={() => props.noteEdit(props.note)}> edit </button>
+      <button 
+        className="btn-delete"
+        onClick={() => props.noteDelete(props.note)}> delete </button>
+      <button 
+        className="btn-edit"
+        onClick={() => props.noteEdit(props.note)}> edit </button>
     </div>
   );
 };
@@ -90,7 +102,7 @@ const NoteList = (props) => {
     // somehow this helps react's render engine be faster
     //
 
-    <ul>
+    <ul className="note-list">
       {props.notes.map(item => {
         return (
           <li key={item.id}>
@@ -109,7 +121,7 @@ const NoteList = (props) => {
 // by default react <input> tags depened on a react state. These
 // are called controlled inputs. It is possible to force react to
 // have uncontrolled inputs, but its not recomended.
-class NoteCreate extends React.Component {
+class NoteCreateForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -141,7 +153,7 @@ class NoteCreate extends React.Component {
       // controlled inputs require that you bind there value to a state
       // because of this you must also implement an onChange method to update
       // the state when the userchanges the input
-      <form onSubmit={this.handleSubmit}>
+      <form className="note-create-form" onSubmit={this.handleSubmit}>
         <input 
           onChange={this.titleUpdate} 
           value={this.state.title}  
@@ -172,6 +184,7 @@ class App extends React.Component {
     this.noteDelete = this.noteDelete.bind(this);
   }
 
+
   noteCreate(note){
     console.log('noteCreate', note);
     // add an id hash to the note so that we can find it later on updates and deletes
@@ -200,7 +213,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <NoteCreate noteCreate={this.noteCreate}/>
+        <NoteCreateForm noteCreate={this.noteCreate}/>
         <NoteList notes={this.state.notes} noteDelete={this.noteDelete} noteUpdate={this.noteUpdate}/>
       </div>
     );
