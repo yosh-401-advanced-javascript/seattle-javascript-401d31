@@ -11,9 +11,18 @@ import ReactDOM from 'react-dom';
 
 // if you want to create a component that manages its own state you 
 // must use the class syntax and extend React.Component 
+// by convention Components are allways named with a Capitiol Letter
+// even non class components
 class App extends React.Component {
+
+  // when createing a class Component 
+  // allways call super
   constructor(props){
     super(props);
+
+    // state is a special property that must be treated as immutable
+    // the only way to change it is by invoking this.setState which
+    // is inherited from super. 
     this.state = {
       count: 0,
       countDown: false,
@@ -30,6 +39,10 @@ class App extends React.Component {
   }
 
   directionToggle() {
+    // this.setState will take in a newState and 
+    // Object.assing(oldState, newState) then it will
+    // tell ReactDOM to check if the view needs to be
+    // re-rendered
     this.setState({countDown: !this.state.countDown});
     console.log(this.state)
   }
@@ -41,6 +54,7 @@ class App extends React.Component {
     console.log(this.state);
   }
 
+  // all react class Components 
   render() {
     return (
       <div className="app">
