@@ -73,7 +73,7 @@ class NoteUpdateForm extends React.Component {
 const NoteItem = (props) => {
   let className = 'note-item';
   if(props.note.completed)
-    className += ' completed'
+    className += ' completed';
   return (
     <div className={className}>
       <h2> {props.note.title} </h2>
@@ -145,7 +145,7 @@ class NoteCreateForm extends React.Component {
     this.props.noteCreate({title: this.state.title});
 
     // clear the component's state to clear the forms inputs
-    this.setState({title: ''}) 
+    this.setState({title: ''});
   }
 
   render(){
