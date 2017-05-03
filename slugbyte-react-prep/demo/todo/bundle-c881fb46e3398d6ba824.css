@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix {
+  clear: both; }
+
+.clearfix {
+  clear: both; }
+
+* {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none; }
+  *:focus {
+    border: none;
+    outline: none; }
+
+html {
+  font-size: 1em; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+h1, h2, h3, h4 {
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 2.441em; }
+
+h2 {
+  font-size: 1.953em; }
+
+h3 {
+  font-size: 1.563em; }
+
+h4 {
+  font-size: 1.25em; }
+
+input, button, pre, textarea, select {
+  padding: 0.5em; }
+
+input {
+  border: 1px solid #777; }
+  input:focus {
+    border: 1px solid #88c3e0; }
+
+a {
+  font-weight: bolder;
+  text-decoration: underline;
+  color: #88c3e0; }
+  a:hover {
+    color: #777; }
+  a:visited {
+    color: #ff7a7a; }
+
+button, input[type="submit"] {
+  background: #88c3e0;
+  border: 1px solid #88c3e0;
+  border-width: 2px;
+  border-radius: 0.25em;
+  font-weight: bold; }
+  button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background: #aaa;
+    border-color: #aaa; }
+  button:active, input[type="submit"]:active {
+    background: #777;
+    border-color: #777; }
+  button:disabled, input[type="submit"]:disabled {
+    color: #777;
+    background: #aaa;
+    border-color: #777; }
+
+strong {
+  font-weight: bolder; }
+
+em {
+  font-style: italic; }
+
+ul, ol {
+  margin-left: 1em;
+  padding-left: 1em;
+  color: #000025; }
+  ul ul, ol ul {
+    list-style: circle; }
+  ul ol, ol ol {
+    list-style: lower-roman; }
+
+ul {
+  list-style: initial; }
+
+ol {
+  list-style: decimal; }
+
+.clearfix {
+  clear: both; }
+
+body {
+  padding: 1em; }
+
+.app {
+  margin: 0 auto;
+  margin-top: 10%;
+  box-shadow: 0px 0px 10px #777; }
+
+.note-create-form {
+  height: 50px;
+  border-bottom: 1px solid #88c3e0; }
+  .note-create-form input, .note-create-form button {
+    border: none;
+    border-radius: 0;
+    height: 100%; }
+  .note-create-form input {
+    padding-left: 0.5em;
+    width: 80%;
+    float: left; }
+  .note-create-form button {
+    width: 20%;
+    float: right;
+    border: none; }
+
+.note-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .note-list * {
+    margin: 0;
+    padding: 0; }
+
+.note-item {
+  height: 50px;
+  border-bottom: 1px solid #88c3e0; }
+  .note-item p, .note-item button {
+    height: 100%; }
+  .note-item h2 {
+    padding-left: 0.25em;
+    padding-top: 0.25em;
+    width: 80%;
+    float: left; }
+  .note-item button {
+    display: none;
+    width: 10%;
+    float: left;
+    border: none;
+    border-radius: 0; }
+  .note-item:hover button {
+    display: block; }
+
+.note-item.completed h2 {
+  color: #aaa;
+  text-decoration: line-through; }
+
+.note-update-form {
+  height: 50px; }
+  .note-update-form input, .note-update-form button {
+    height: 100%;
+    float: left;
+    border: none;
+    border-radius: 0; }
+  .note-update-form input {
+    padding-left: 0.5em;
+    width: 80%; }
+  .note-update-form input[type="checkbox"] {
+    width: 10%; }
+  .note-update-form button {
+    width: 10%; }
+
+.btn-edit {
+  background: #88c3e0; }
+
+.btn-delete {
+  background: #ff7a7a; }
+
+.checkbox-slider {
+  display: block;
+  width: 10%;
+  height: 100%;
+  float: left;
+  padding: 0.25em; }
+  .checkbox-slider input {
+    display: none; }
+  .checkbox-slider .message, .checkbox-slider .slider {
+    display: block;
+    float: left;
+    height: 50%;
+    width: 100%;
+    padding-bottom: 0.5em; }
+  .checkbox-slider span, .checkbox-slider div {
+    transition: 200ms; }
+  .checkbox-slider .message {
+    font-weight: bold;
+    text-align: center; }
+  .checkbox-slider .slider {
+    border-radius: 20px;
+    padding: 5px;
+    background: #ff7a7a; }
+  .checkbox-slider .slider div {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #fff; }
+  .checkbox-slider input:checked + label .slider {
+    background: #4f7; }
+  .checkbox-slider input:checked + label .slider div {
+    transform: translateX(32px); }
+
+@media screen and (min-width: 600px) {
+  .app {
+    width: 600px; } }
