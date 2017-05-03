@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-db": "mkdir -p db && mongod --dbpath db",
     "start": "node main.js",
     "test": "./node_modules/mocha/bin/mocha"
   },
