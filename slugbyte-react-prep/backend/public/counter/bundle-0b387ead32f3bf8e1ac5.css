@@ -70,7 +70,7 @@ h3 {
 h4 {
   font-size: 1.25em; }
 
-input, button, pre, textarea, select {
+input, button, .app p, pre, textarea, select {
   padding: 0.5em; }
 
 input {
@@ -87,16 +87,16 @@ a {
   a:visited {
     color: #ff7a7a; }
 
-button, input[type="submit"] {
+button, .app p, input[type="submit"] {
   background: #88c3e0;
   border: 1px solid #88c3e0;
   border-width: 2px;
   border-radius: 0.25em;
   font-weight: bold; }
-  button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  button:hover, .app p:hover, button:focus, .app p:focus, input[type="submit"]:hover, input[type="submit"]:focus {
     background: #aaa;
     border-color: #aaa; }
-  button:active, input[type="submit"]:active {
+  button:active, .app p:active, input[type="submit"]:active {
     background: #777;
     border-color: #777; }
 
@@ -120,3 +120,26 @@ ul {
 
 ol {
   list-style: decimal; }
+
+body {
+  width: 60%;
+  margin: 0 auto;
+  height: 50px; }
+
+.app * {
+  float: left; }
+
+.app button, .app p, .app p {
+  font-size: 1em;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  border: 1px solid black !important; }
+
+.app p {
+  background: yellow;
+  padding: calc(25px - .9em); }
+
+.app h1 {
+  width: 100%;
+  float: left; }

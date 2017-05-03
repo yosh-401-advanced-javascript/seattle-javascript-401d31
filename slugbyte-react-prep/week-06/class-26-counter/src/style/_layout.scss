@@ -1,0 +1,33 @@
+body {
+  width: 60%;
+  margin: 0 auto;;
+  height: 50px;
+}
+
+.app {
+  * {
+    float: left;
+  }
+
+  button, p {
+    font-size: 1em;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black !important;
+  }
+
+  p {
+    @extend button;
+    background: yellow;
+    padding: calc(25px - .9em);
+  }
+
+  h1 {
+    width: 100%;
+    float: left;
+  }
+}
+
+
+
