@@ -15,6 +15,7 @@ class NoteUpdateForm extends React.Component {
     let {note} = this.props;
 
     this.state = {
+      id: note.id,
       title: note.title,
       completed: note.completed,
     };
@@ -55,12 +56,19 @@ class NoteUpdateForm extends React.Component {
           placeholder="title"
           /> 
 
-        <input 
-          onChange={this.handleChange}
-          checked={this.state.completed}
-          type="checkbox"
-          name="completed"
-          />
+        <div className="checkbox-slider">
+          <input 
+            onChange={this.handleChange}
+            checked={this.state.completed}
+            type="checkbox"
+            name="completed"
+            id={this.state.id + 'completed'}
+            />
+          <label htmlFor={this.state.id + 'completed'}>
+            <span className="message"> done </span>
+            <span className="slider"> <div> </div> </span>
+          </label>
+        </div>
 
         <button 
           className="btn-edit"
@@ -175,7 +183,26 @@ class App extends React.Component {
     // this state is the "single source of truth" for the entire app
     // all canges to the app state mus be defined in this component
     this.state = {
-      notes: [],
+      notes: [
+        {
+          title: 'hover a note to delete or edit', 
+          completed: false,
+          editing: false,
+          id: 'lskdfjlfkjdsk',
+        },
+        {
+          title: 'this task is complete', 
+          completed: true,
+          editing: false,
+          id: 'alaksjdflkja',
+        },
+        {
+          title: 'booyea!', 
+          completed: false,
+          editing: false,
+          id: 'lkjsdfj',
+        },
+      ],
     };
 
     // bind all methods to the state
