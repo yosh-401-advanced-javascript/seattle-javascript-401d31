@@ -22,7 +22,10 @@ const IpsumDisplay = ({state}) => {
   let ipsum = generateIpsum(vocab, state.limit);
   let lines = [];
   for(let i=0; i<state.count; i++){
-    lines.push(generateIpsum(vocab, state.limit));
+    var line = generateIpsum(vocab, state.limit);
+    if(!state.limitByWord) 
+      line = line.slice(0, state.limit);
+    lines.push(line);
   }
 
   return (
@@ -177,6 +180,7 @@ class App extends React.Component {
 
   settingsUpdate(update){
     this.setState(update);
+    console.log('state', this.state);
   }
 
   render() {
