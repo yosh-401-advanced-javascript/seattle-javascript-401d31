@@ -9,7 +9,7 @@ const API_URL = process.env.API_URL || 'http://localhost:3000';
 
 describe('testing KanbanCard router', function(){
   before(serverControl.start);
-  after(serverControl.start);
+  after(serverControl.stop);
   afterEach(mockKanbanCard.remove);
 
   describe('mockKanbanCard.create', function(){

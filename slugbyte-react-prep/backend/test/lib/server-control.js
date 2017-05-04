@@ -3,22 +3,24 @@
 const server = require('../../server.js');
 
 const serverControl = module.exports = {};
+let httpServer;
 
 serverControl.start = (done) => {
   if(!server.isOn){
     let PORT = process.env.PORT || 3000;
-    return server.listen(PORT, () => {
+    httpServer = server.listen(PORT, () => {
       console.log('server up', PORT);
       server.isOn = true;
       done();
     });
+    return;
   }
   done();
 };
 
 serverControl.stop = (done) => {
   if(server.isOn){
-    return server.close(() => {
+    return httpServer.close(() => {
       console.log('server down');
       server.isOn = false;
       done();

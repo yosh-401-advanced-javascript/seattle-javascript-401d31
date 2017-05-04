@@ -41,7 +41,6 @@ const CardColumn = ({state, setState, title, cards}) => {
       });
     });
 
-    window.lulwat = e.currentDragItem;
   };
 
   return (
