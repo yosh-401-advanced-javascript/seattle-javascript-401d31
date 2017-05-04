@@ -16,6 +16,6 @@ mockKanbanCard.create = function(){
   });
 };
 
-mockKanbanCard.remove = () => {
+mockKanbanCard.remove = function(){
   return KanbanCard.remove({});
 };

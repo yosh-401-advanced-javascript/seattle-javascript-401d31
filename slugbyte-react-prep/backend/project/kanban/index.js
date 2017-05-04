@@ -8,13 +8,13 @@ const KanbanCard = require('./model/kanban-card.js');
 const kanbanCardRouter = module.exports = new Router();
 
 kanbanCardRouter.post('/card', jsonParser, (req, res, next) => {
-  new KanbanCard(req.body).save()
+  return new KanbanCard(req.body).save()
   .then(data => res.json(data))
   .catch(next);
 });
 
 kanbanCardRouter.get('/card', (req, res, next) => {
-  KanbanCard.find({})
+  return KanbanCard.find({})
   .then(data => res.json(data))
   .catch(next);
 });

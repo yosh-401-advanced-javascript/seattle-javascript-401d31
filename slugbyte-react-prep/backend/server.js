@@ -17,16 +17,18 @@ const app = module.exports = express();
 app.use(cors());
 app.use(morgan('dev'));
 
-// require routes
 fs.readdir(`${__dirname}/project`, (err, dirs) => {
+  // require routes
   dirs.forEach(dir => {
     app.use(`/${dir}`, require(`${__dirname}/project/${dir}`));
   });
+
+  // add static server 
+  app.use(express.static(`${__dirname}/public`));
+  app.get('*', (req, res) => res.redirect('/'));
+  
+  // add error middleware
+  app.use(require('./lib/error-middleware.js'));
 });
 
-// add static server ?
-app.use(express.static(`${__dirname}/public`));
-app.get('*', (req, res) => res.redirect('/'));
 
-// add error middleware
-app.use(require('./lib/error-middleware.js'));
