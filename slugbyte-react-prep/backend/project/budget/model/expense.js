@@ -12,10 +12,12 @@ const BudgetExpense = mongoose.Schema({
   category: {type: String, minlength: 1, required: true},
 });
 
-BudgetExpense.pre('save', (next) => {
+// callback must be function or it will loose context
+BudgetExpense.pre('save', function (next) {
+
   BudgetProfile.findOne({name: this.profile})
   .then(profile => {
-    if(~profile.categorys.indexOf(this.category))
+    if(-1 === profile.categorys.indexOf(this.category))
       throw httpError(404, 'profile category not found');
     next();
   })

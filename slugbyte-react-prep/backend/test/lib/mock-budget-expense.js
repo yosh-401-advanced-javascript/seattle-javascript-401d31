@@ -6,10 +6,10 @@ const mockBudgetExpense = module.exports = {};
 
 mockBudgetExpense.create = function(){
   return new BudgetExpense({
-    profile: this.tempProfile,
-    category: 'food', 
+    profile: this.tempProfile.name,
+    category: this.tempProfile.categorys[0], 
     title: 'example' + Math.random(),
-    price: Math.floor(Math.random() * 20),
+    price: Math.floor(Math.random() * 20 + 10),
   })
   .save()
   .then(expense => this.tempExpense = expense);
