@@ -8,7 +8,7 @@ const mockBudgetExpense = require('./lib/mock-budget-expense.js');
 
 const API_URL = process.env.API_URL || 'http://localhost:3000/budget/expenses';
 
-describe.only('testing BudgetExpense', function(){
+describe('testing BudgetExpense', function(){
   before(serverControl.start);
   after(serverControl.stop);
   afterEach(mockBudgetExpense.remove);
