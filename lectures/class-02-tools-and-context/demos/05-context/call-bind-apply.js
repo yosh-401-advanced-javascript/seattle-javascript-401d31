@@ -17,9 +17,8 @@ var state = {
 
 state.addToHistory('move player', 'pickup item', 'update hp');
 // state.history === ['move player', 'pickup item', update hp']
-```
-* `bind` is a methods on a function that returns a new function with a specified context
-``` javascript
+// `bind` is a methods on a function that returns a new function with a specified context
+
 describe('bind example', function(){
   this.example = 'some data';
 
@@ -29,9 +28,7 @@ describe('bind example', function(){
   }).bind(this)) // binds "it's" callback to the describe block's callback's context
 })
 
-```
-* Arrow functions inherit their context from their parent context
-``` javascript
+// Arrow functions inherit their context from their parent context
 describe('arrow function example', function(){
   this.example = 'some data';
 
@@ -41,9 +38,9 @@ describe('arrow function example', function(){
     done();
   })
 })
-```
-* variables can be assigned to arrow functions
-``` javascript
+
+// variables can be assigned to arrow functions
+
 var doubleIt = num => num * 2;
 doubleIt(16);
 // 32
@@ -55,11 +52,10 @@ upper('hello');
 let removeOdds = list => list.filter(num => !(num & 1));
 removeOdds([1,2,3,4]);
 // [2,4]
-```
-* The `new` keyword creates a empty object and invokes a function with that object as its context
-* For constructor ABC to inherit constructor XYZ's property it should `XYZ.call(this)`
-* For constructor ABC to inherit constructor XYZ's methods it should `ABC.prototype = Object.create(XYZ.prototype)`
-``` javascript
+
+// The `new` keyword creates a empty object and invokes a function with that object as its context
+// For constructor ABC to inherit constructor XYZ's property it should `XYZ.call(this)`
+// For constructor ABC to inherit constructor XYZ's methods it should `ABC.prototype = Object.create(XYZ.prototype)`
 function XYZ(shape){
   this.name = 'XYZ';
   this.size = 10;

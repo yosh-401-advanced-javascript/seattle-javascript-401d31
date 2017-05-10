@@ -1,6 +1,11 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 03: Parallel File Processing
 =====================================
 
+## Daily Plan
+* Chrome / Browser isn't our runtime any longer. :-) Use Node's REPL
+  * Different environment, different API
+*
+
 ## JS Runtime Resources
 * Watch [what the heck is the event loop anyway]
 
@@ -87,7 +92,7 @@ Javascript is a single threaded language. Which means that it can only do a sing
     * buffers are an array of bytes
       * example:
         ```
-          var buff = new Buffer('welcome to bufferville');
+          var buff = Buffer.from('welcome to bufferville');
           console.log(buff);
 
           <Buffer 77 65 6c 63 6f 6d 65 20 74 6f 20 62 75 66 66 65 72 76 69 6c 6c 65>
