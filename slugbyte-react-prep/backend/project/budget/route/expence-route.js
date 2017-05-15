@@ -5,6 +5,7 @@ const jsonParser = require('body-parser').json();
 const BudgetExpense = require('../model/expense.js');
 const expenseRouter = module.exports = new Router();
 
+console.log('booooyea' );
 expenseRouter.post('/expenses', jsonParser, (req, res, next) => {
   new BudgetExpense(req.body).save()
   .then(expense => res.json(expense))
@@ -12,6 +13,7 @@ expenseRouter.post('/expenses', jsonParser, (req, res, next) => {
 });
 
 expenseRouter.get('/expenses/:profileName', (req, res, next) => {
+  console.log('hit /expenses/:profileName');
   BudgetExpense.find({profile: req.params.profileName})
   .then(expenses => res.json(expenses))
   .catch(next);

@@ -4,54 +4,63 @@ import React from 'react';
 import {subStateUpdaterCreate, changeHandlerCreate} from '../../lib/util.js';
 import budgetProfile from '../../lib/budget-proflie.js';
 
-const ProfileCreateForm = ({app}) => {
-  let {state, setState} = app;
-  let updateFormState = subStateUpdaterCreate('profileCreateForm', setState);
-  let resetFormState = () => updateFormState({total: 0, name: ''});
-  let handleChange = changeHandlerCreate(updateFormState);
+class ProfileCreateForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      name: '',
+      total: 0,
+    };
 
-  let handleSubmit = (e) => {
+    this.appSetState = props.app.setState;
+    this.resetFormState = () => this.setState({total: 0, name: ''});
+    this.handleChange = changeHandlerCreate(this.setState.bind(this));
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e){
     e.preventDefault();
 
     let data = {
-      name: state.profileCreateForm.name,
-      total: state.profileCreateForm.total,
+      name: this.state.name,
+      total: this.state.total,
     };
 
     if(!data.name){
-      return updateFormState({error: true});
+      return this.updateFormState({error: true});
     }
 
     budgetProfile.create(data)
-    .then(profile => setState({profile}))
-    .then(() => resetFormState())
+    .then(profile => this.appSetState({profile}))
+    .then(() => this.resetFormState())
     .catch(console.error);
   };
 
+  render() {
+    return (
+      <form
+        className='profile-create-form'
+        onSubmit={this.handleSubmit}>
+      <input
+        name='name'
+        placeholder='name'
+        onChange={this.handleChange}
+        value={this.state.name}
+        />
 
-  return (
-    <form
-    className='profile-create-form'
-    onSubmit={handleSubmit}>
-    <input
-    name='name'
-    placeholder='name'
-    onChange={handleChange}
-    value={state.profileCreateForm.name}
-    />
+      <input
+        min='0'
+        step='any'
+        name='total'
+        type='number'
+        onChange={this.handleChange}
+        value={this.state.total}
+        />
 
-    <input
-    min='0'
-    step='any'
-    name='total'
-    type='number'
-    onChange={handleChange}
-    value={state.profileCreateForm.total}
-    />
-
-    <button type='submit'> create budget </button>
-    </form>
-  );
+      <button type='submit'> create budget </button>
+      </form>
+    );
+  }
 };
 
 export default ProfileCreateForm;

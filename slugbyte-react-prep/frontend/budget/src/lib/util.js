@@ -10,14 +10,13 @@ export let subStateUpdaterCreate = (propName, setState) => update =>  {
   }));
 };
 
-// used to create onChange handler functions for forms whos state
-// is manages in the app's rootState
-export let changeHandlerCreate  = (subStateUpdater) => e => {
+// used to create onChange handler functions 
+export let changeHandlerCreate  = (stateUpdater) => e => {
   let target = e.target;
   let value = target.type === 'checkbox' ? target.checked : target.value;
   let targetName = target.name;
 
-  subStateUpdater({[targetName]: value});
+  stateUpdater({[targetName]: value});
 };
 
 // used in jsx templats like {renderIf(someValue, <p> lul </p>)} 

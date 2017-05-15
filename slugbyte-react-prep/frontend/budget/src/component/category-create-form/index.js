@@ -12,8 +12,8 @@ class CategoryCreateForm extends React.Component {
       title: '',
     };
 
-    this.rootState = props.app.state;
-    this.rootSetState = props.app.setState;
+    this.appState = props.app.state;
+    this.appSetState = props.app.setState;
     this.handleChange = changeHandlerCreate(this.setState.bind(this));
     this.resetFormState = this.resetFormState.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,15 +26,13 @@ class CategoryCreateForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
 
-    let profileData = this.rootState.profile;
-    console.log('profileData', this.rootState);
-    //profileData.categorys.push(this.state.title);
-    console.log('profileData', profileData);
+    let profileData = this.appState.profile;
+    profileData.categorys.unshift(this.state.title);
 
-    //budgetProfile.update(profileData)
-    //.then(profile => this.rootSetState({profile}))
-    //.then(() => this.resetFormState())
-    //.catch(console.error);
+    budgetProfile.update(profileData)
+    .then(profile => this.appSetState({profile}))
+    .then(() => this.resetFormState())
+    .catch(console.error);
   }
 
   render(){

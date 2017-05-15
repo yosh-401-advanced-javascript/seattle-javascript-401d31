@@ -5,37 +5,50 @@ require('./style/main.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {renderIf} from './lib/util.js';
+import budgetExpense from './lib/budget-expence.js';
+
 import ProfileCreateForm from './component/profile-create-form';
 import ProfileChangeForm from './component/profile-change-form';
+import ExpenseCreateFrom from './component/expense-create-form';
+import Category from './component/category';
 import CategoryCreateForm from './component/category-create-form';
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      profile: {},
+      profile: {
+        title: '',
+        categorys: [],
+      },
       expenses: [],
-      profileCreateForm: {name: '', total: 0},
-      profileChangeForm: {name: ''},
     };
 
     this.getApp = this.getApp.bind(this);
     this.setState = this.setState.bind(this);
   }
 
-  componentDidMount(){
+  componentWillMount(){
     // load the state from storage after app has been added to the dom
+    var state;
     try {
-      let state = JSON.parse(localStorage.state);
-      this.setState(state);
+      state = JSON.parse(localStorage.state);
+      if(state)
+        this.setState(state);
     } catch (e) {
       console.log(e);
     }
-  }
 
+    if(state && state.profile && state.profile.name){
+      budgetExpense.fetchAll(state.profile)
+      .then(expenses => this.setState({expenses}))
+      .catch(console.error);
+    }
+  }
+    
   componentDidUpdate(){
     // log and save the state after every state change
-    console.log('state', this.state);
     try {
       localStorage.state = JSON.stringify(this.state);
     } catch (e) {
@@ -49,16 +62,35 @@ class App extends React.Component {
   getApp(){
     return {
       state: this.state,
-      setState: this.setState,
+      setState: this.setState.bind(this),
     };
   }
 
   render() {
+    let totalExpenses =  this.state.expenses.reduce((p, n) => p + n.price, 0);
+
     return (
       <div className="app">
-        <ProfileCreateForm app={this.getApp()}/>
-        <ProfileChangeForm app={this.getApp()}/>
-        <CategoryCreateForm app={this.getApp()}/>
+        {renderIf(!this.state.profile.name, <ProfileCreateForm app={this.getApp()}/>)}
+        {renderIf(this.state.profile.name,
+          <div> 
+            <header>
+              <h1> { this.state.profile.name } </h1>
+              <p> total budget: { this.state.profile.total} </p>
+            </header>
+
+            <ProfileChangeForm app={this.getApp()}/>
+            <CategoryCreateForm app={this.getApp()}/>
+            <div className='category-scroll'>
+              {this.state.profile.categorys.map(item => <Category key={item} app={this.getApp()} category={item} />)}
+            </div>
+          </div>
+        )}
+
+        <footer>
+          <p> <strong> Total Expenses: </strong> ${ totalExpenses } </p>
+          <p> <strong> Remaining Budget: </strong> ${ this.state.profile.total - totalExpenses } </p>
+        </footer>
       </div>
     );
   }

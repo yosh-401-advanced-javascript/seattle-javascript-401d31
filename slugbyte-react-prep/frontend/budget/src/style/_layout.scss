@@ -1,0 +1,186 @@
+@import "./_vars.scss";
+
+body {
+  padding: $pad;
+}
+
+header {
+  width: 50%;
+  float: left;
+  padding-left: $pad / 2;
+}
+
+footer {
+  p {
+    color: $color-grey;
+  }
+  strong {
+    color: $color-black;
+  }
+}
+
+.clear-fix {
+  clear: both;
+}
+
+.app {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.profile-create-form {
+  width: 50%;
+  margin: 0 auto;
+
+  input:first-child {
+    width: 60%;
+    float: left;
+  }
+
+  input:nth-child(2){
+    width: calc(40% - 0.5em);
+    float: right;
+  }
+
+  button {
+    margin-top: $pad;
+  }
+}
+
+.profile-change-form {
+  width: calc(50% - 0.5em);
+  margin-top: $pad;
+  margin-left: $pad / 2;
+  float: left;
+
+  input {
+    width: 60%;
+    float: left;
+  }
+
+  button {
+    width: calc(40% - .5em);
+    float: right;
+    border: 1px solid $color-secondary;
+    padding: $pad;
+  }
+}
+
+.category-create-form {
+  width: calc(50% - 0.5em);
+  margin-right: $pad / 2;
+  margin-top: $pad;
+  float: right;
+
+  input {
+    width: 80%;
+    float: left;
+  }
+
+  button {
+    width: calc(20% - .5em);
+    float: right;
+    border: 1px solid $color-secondary;
+    padding: $pad;
+  }
+}
+
+.category-scroll {
+  overflow: scroll;
+  height: 300px;
+  overflow-x: scroll;
+}
+.category-container {
+  width: 100%;
+  height: 95%;
+
+}
+
+.category {
+  display: inline-block;
+  margin-top: $pad;
+  margin-right: $pad / 2;
+  margin-left: $pad / 2;
+  width: calc(24% - .5em);
+  height: 95%;
+
+  border: 1px solid $color-grey;
+  padding: $pad;
+  float: left;
+
+  p:last-child {
+    margin-top: 2 * $pad;
+    text-align: right;
+  }
+
+  .expense-container {
+    height: 55%;
+    overflow: scroll;
+    border-bottom: 1px solid $color-lightgrey;
+  }
+
+  .expense-create-form {
+    margin-bottom: $pad;
+    float: left;
+    input:first-child {
+      width: 60%;
+      float: left;
+    }
+
+    input:nth-child(2) {
+      width: calc(20% - 0.5em);
+      margin-left: $pad;
+      float: left;
+    }
+    
+    button {
+      width: calc(20% - 0.5em);
+      margin-left: $pad;
+      border: 1px solid $color-secondary;
+      float: left;
+    }
+
+  }
+}
+
+.expense {
+  float: left;
+  padding-bottom: $pad / 2;
+
+  span {
+    width: 50%;
+    float: left;
+    text-align: right;
+    color: $color-grey;
+  }
+
+  span:first-child {
+    float: left;
+    text-align: left;
+  }
+
+  button {
+   display: none;
+   width: 10%; 
+   float: right;
+   background: $color-error;
+   border: none;
+  }
+
+  &:hover {
+    span {
+      width: 40%;
+    }
+
+    button {
+      display: block;
+    }
+  }
+
+}
+
+
+.total-budget {
+
+}
+
