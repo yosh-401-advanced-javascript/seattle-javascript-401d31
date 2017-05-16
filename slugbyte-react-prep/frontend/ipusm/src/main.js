@@ -17,7 +17,8 @@ const generateIpsum = (vocab, count) => {
   return items.join(' ');
 };
 
-const IpsumDisplay = ({state}) => {
+const IpsumDisplay = ({app}) => {
+  let state = app.state;
   let vocab = state.languages[state.selectedLanguage];
   let ipsum = generateIpsum(vocab, state.limit);
   let lines = [];
@@ -38,11 +39,12 @@ const IpsumDisplay = ({state}) => {
 class IpsumSettingsForm extends React.Component {
   constructor(props){
     super(props);
+    let app = props.app;
     this.state = {
-      limit: props.state.limit,
-      count: props.state.count,
-      limitByWord: props.state.limitByWord,
-      selectedLanguage: props.state.selectedLanguage,
+      limit: app.state.limit,
+      count: app.state.count,
+      limitByWord: app.state.limitByWord,
+      selectedLanguage: app.state.selectedLanguage,
     };
 
     this.handleSumbit = this.handleSumbit.bind(this);
@@ -65,7 +67,7 @@ class IpsumSettingsForm extends React.Component {
 
   handleSumbit(e){
     e.preventDefault();
-    this.props.settingsUpdate({
+    this.props.app.setState({
       limit: this.state.limit,
       count: this.state.count,
       limitByWord: this.state.limitByWord,
@@ -91,7 +93,6 @@ class IpsumSettingsForm extends React.Component {
             />
             <label htmlFor="limitByWord"> <div></div> </label>
             <span> limit by word </span>
-
         </div>
 
         <label> {this.state.limitByWord ? 'word ' : 'character '} limit </label>
@@ -159,6 +160,7 @@ class IpsumSettingsForm extends React.Component {
   }
 }
 
+// App will mananage all application state
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -175,19 +177,30 @@ class App extends React.Component {
       },
     };
 
-    this.settingsUpdate = this.settingsUpdate.bind(this)
+    this.setState = this.setState.bind(this);
+    this.getApp = this.getApp.bind(this);
   }
 
-  settingsUpdate(update){
-    this.setState(update);
-    console.log('state', this.state);
+  // you can use a componentDidUpdate lifecycle hook to log state changes
+  componentDidUpdate(){
+    console.log('__STATE__', this.state);
+  }
+
+  getApp(){
+    // get app returns an object that can be past to child components 
+    // for acceessing and modifying the root state of the application
+    return {
+      state: this.state, 
+      setState: this.setState,
+    }
   }
 
   render() {
+    // passing the golabl state down into the child components
     return (
       <div className="app">
-        <IpsumSettingsForm state={this.state} settingsUpdate={this.settingsUpdate}/>
-        <IpsumDisplay state={this.state} />
+        <IpsumSettingsForm app={this.getApp()} />
+        <IpsumDisplay app={this.getApp()} />
       </div>
     );
   }
