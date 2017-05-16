@@ -7,6 +7,7 @@ import {classToggle} from '../../lib/util.js';
 class CardCreateForm extends React.Component {
   constructor(props){
     super(props);
+    // the form manages its on views state for controlled inputs
     this.state = {
       title: '',
     };
@@ -18,11 +19,11 @@ class CardCreateForm extends React.Component {
   handleSubmit(e){
     e.preventDefault();
 
-    // update the backend
+    // requst the backend to create a card with state of 0 (backlog)
+    // update the frontend if successfull
     cardRequests.create({
       state: 0,
       title: this.state.title,
-      comments: [],
     })
     .then(card => {
       this.props.app.setState(state => ({
@@ -35,6 +36,7 @@ class CardCreateForm extends React.Component {
     
   };
 
+  // update the input state on change
   handleChange(e){
     let change = {};
     change[e.target.name] = e.target.value;

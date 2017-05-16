@@ -1,12 +1,17 @@
 'use strict';
 
+// import node modules
 import React from 'react';
+
+// import helper modules
 import cardRequests from '../../lib/card-requests.js';
 import {renderIf} from '../../lib/util.js';
 
+// import custom components
 import Card from '../card';
 import CardCreateForm from '../card-create-form';
 
+// define componet that will be exporeted
 const CardColumn = ({app, title, cards}) => {
   let titleToStateMap = { 'backlog': 0, 'ready': 1, 'in progress': 2, 'done': 3 };
 
@@ -43,6 +48,9 @@ const CardColumn = ({app, title, cards}) => {
     .catch(console.error);
   };
 
+  // all columns render a title and the cards that have been passed in
+  // but if its the backlog coulmn it will also render the CardCreateForm
+  // so that users can add cards to the kanbanbord
   return (
     <div onDrop={onDrop} onDragOver={onDragOver} className='card-column'>
       <h2> {title} </h2>
