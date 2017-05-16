@@ -4,6 +4,7 @@ const {Router} = require('express');
 const jsonParser = require('body-parser').json();
 const httpError = require('http-errors');
 
+const ExpenseProfile = require('../model/expense.js');
 const BudgetProfile = require('../model/profile.js');
 const profileRouter = module.exports = new Router();
 
@@ -15,10 +16,24 @@ profileRouter.post('/profiles', jsonParser, (req, res, next) => {
 
 // create or update
 profileRouter.put('/profiles/:name', jsonParser, (req, res, next) => {
-  BudgetProfile.findOneAndUpdate(
-    {name: req.params.name},
-    req.body,
-    {new: true, runValidators: true})
+  BudgetProfile.findOne({name: req.params.name})
+  .then(profile => {
+    if(!profile) 
+      throw httpError(404, 'profile not found')
+    let categorySet = new Set(req.body.categorys);
+    let diff = profile.categorys.filter(item => !categorySet.has(item))
+
+    profile.categorys = req.body.categorys;
+    return Promise.all([
+      ExpenseProfile.remove({profile: profile.name, category: {$in: diff}}),
+      profile.save(),
+    ]);
+  })
+  .then(results => {
+    console.log('deleted results', results[0].result);
+    console.log('profile', results[1]);
+    return results[1];
+  })
   .then(profile => res.json(profile))
   .catch(next);
 });

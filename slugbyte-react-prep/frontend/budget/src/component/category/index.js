@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import budgetProfile from '../../lib/budget-proflie.js';
+import {curencyFormat} from '../../lib/util.js';
 import Expense from '../expense';
 import ExpenseCreateFrom from '../expense-create-form';
 
@@ -12,10 +14,28 @@ let Category = ({app, category}) => {
 
   let total = expenses.reduce((p, n) => p + n.price, 0);
 
-  console.log('expenses', expenses);
+  let handleDelete = () => {
+    let profile = app.state.profile;
+    profile.categorys = profile.categorys.filter(item => {
+      return item !== category;
+    });
+
+    budgetProfile.update(profile)
+    .then(profile => {
+      app.setState(state => ({
+        profile,
+        expenses: state.expenses.filter(item => {
+          return item.category !== category
+        }),
+      }))
+    })
+    .catch(console.error)
+  };
+
   return (
     <div className='category'>
       <h2> {category} </h2>
+      <button onClick={handleDelete} className='btn-delete'> - </button>
       <ExpenseCreateFrom app={app} category={category} />
 
       <div className='expense-container'>
@@ -25,7 +45,7 @@ let Category = ({app, category}) => {
           );
         })}
       </div>
-      <p> total: {total} </p>
+      <p> total: {curencyFormat(total)} </p>
     </div>
   );
 };

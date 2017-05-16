@@ -14,8 +14,6 @@ class ExpenseCreateFrom extends React.Component {
       category: props.category, 
     };
 
-    console.log('catttegory', props.category)
-
     this.appState = props.app.state;
     this.appSetState = props.app.setState;
     this.handleChange = changeHandlerCreate(this.setState.bind(this));
@@ -31,7 +29,6 @@ class ExpenseCreateFrom extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log('boooyea', this.state);
 
     budgetExpense.create(this.state)
     .then((data) => {

@@ -38,3 +38,9 @@ export let classToggler = (opts) => {
   return className;
 };
 
+export let curencyFormat = (amount) => {
+  if(!amount) return '$0.00';
+  amount = Math.round(amount * 100) + ''
+  amount = '$' + amount.slice(0, amount.length - 2) + '.' + amount.slice(amount.length - 2)
+  return amount;
+}

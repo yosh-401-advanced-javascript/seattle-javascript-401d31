@@ -6,7 +6,7 @@ const budgetProfile = {};
 
 let logResAndResolveData = (res) => {
   console.log('res', res);
-  console.log('data', res.data);
+  console.log('res.data', res.data);
   return res.data;
 };
 

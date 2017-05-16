@@ -5,7 +5,7 @@ require('./style/main.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {renderIf} from './lib/util.js';
+import {renderIf, curencyFormat} from './lib/util.js';
 import budgetExpense from './lib/budget-expence.js';
 
 import ProfileCreateForm from './component/profile-create-form';
@@ -37,7 +37,7 @@ class App extends React.Component {
       if(state)
         this.setState(state);
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
 
     if(state && state.profile && state.profile.name){
@@ -52,7 +52,7 @@ class App extends React.Component {
     try {
       localStorage.state = JSON.stringify(this.state);
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   }
 
@@ -88,8 +88,8 @@ class App extends React.Component {
         )}
 
         <footer>
-          <p> <strong> Total Expenses: </strong> ${ totalExpenses } </p>
-          <p> <strong> Remaining Budget: </strong> ${ this.state.profile.total - totalExpenses } </p>
+          <p> <strong> Total Expenses: </strong> { curencyFormat(totalExpenses) } </p>
+          <p> <strong> Remaining Budget: </strong> { curencyFormat(this.state.profile.total - totalExpenses) } </p>
         </footer>
       </div>
     );
