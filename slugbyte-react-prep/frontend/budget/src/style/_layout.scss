@@ -97,6 +97,7 @@ footer {
 }
 
 .category {
+  overflow: hidden;
   position: relative;
   display: inline-block;
   margin-top: $pad;

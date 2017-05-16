@@ -76,7 +76,7 @@ class App extends React.Component {
           <div> 
             <header>
               <h1> { this.state.profile.name } </h1>
-              <p> total budget: { this.state.profile.total} </p>
+              <p> total budget: { curencyFormat(this.state.profile.total)} </p>
             </header>
 
             <ProfileChangeForm app={this.getApp()}/>
@@ -84,13 +84,13 @@ class App extends React.Component {
             <div className='category-scroll'>
               {this.state.profile.categorys.map(item => <Category key={item} app={this.getApp()} category={item} />)}
             </div>
+            <footer>
+              <p> <strong> Total Expenses: </strong> { curencyFormat(totalExpenses) } </p>
+              <p> <strong> Remaining Budget: </strong> { curencyFormat(this.state.profile.total - totalExpenses) } </p>
+            </footer>
           </div>
         )}
 
-        <footer>
-          <p> <strong> Total Expenses: </strong> { curencyFormat(totalExpenses) } </p>
-          <p> <strong> Remaining Budget: </strong> { curencyFormat(this.state.profile.total - totalExpenses) } </p>
-        </footer>
       </div>
     );
   }
