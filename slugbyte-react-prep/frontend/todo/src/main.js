@@ -1,5 +1,20 @@
 'use strict';
 
+// READ THIS FILE FROM BOTTOM TO TOP
+// Start with ReactDom.render and then follow component definitions as they get changed
+// 
+// _________ component tree
+// APP
+//    NoteCreateForm
+//    NoteList 
+//      NoteItem
+//        NoteUpdateForm
+//        NoteItem
+//
+// for the first day I think it might be a good idea to build out thewhole app in a
+// single file. It makes navigation easy.
+
+// i allways load my main.scss at the top of the entry point to webpack
 require('./style/main.scss');
 
 // React must be imported in every file that uses jsx
@@ -46,6 +61,8 @@ class NoteUpdateForm extends React.Component {
     });
   }
 
+  // htmlFor is used to me the for attribute in jsx becase for 
+  // is allready a keyword in javascript
   render(){
     return (
       <form className="note-update-form" onSubmit={this.handleSubmit}>
@@ -82,6 +99,9 @@ const NoteItem = (props) => {
   let className = 'note-item';
   if(props.note.completed)
     className += ' completed';
+
+  // NoteItem gets is functionaly from props that is passed down through the App component
+  // look at the onClick handlers for the folowing buttons. 
   return (
     <div className={className}>
       <h2> {props.note.title} </h2>
@@ -109,7 +129,6 @@ const NoteList = (props) => {
     // node to have a key property set to a unique value
     // somehow this helps react's render engine be faster
     //
-
     <ul className="note-list">
       {props.notes.map(item => {
         return (
@@ -132,6 +151,7 @@ const NoteList = (props) => {
 class NoteCreateForm extends React.Component {
   constructor(props){
     super(props);
+    // you must set default state for all inputs of a form
     this.state = {
       title: '',
     };
@@ -140,6 +160,8 @@ class NoteCreateForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // the first way to start working with react forms 
+  // is to create a state update handler for each input
   titleUpdate(e){
     this.setState({title: e.target.value});
   }
@@ -160,7 +182,7 @@ class NoteCreateForm extends React.Component {
     return (
       // controlled inputs require that you bind there value to a state
       // because of this you must also implement an onChange method to update
-      // the state when the userchanges the input
+      // the state when the userchanges the input. 
       <form className="note-create-form" onSubmit={this.handleSubmit}>
         <input 
           onChange={this.titleUpdate} 
@@ -177,6 +199,10 @@ class NoteCreateForm extends React.Component {
 
 // app root
 // this component will be incharge of the entire application state
+// for a component to have state it must be implamented as a class that 
+// extends React.Component. this will not only give the app state, but
+// live cycle hooks look here https://facebook.github.io/react/docs/react-component.html
+// to see all the component hooks.
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -210,7 +236,6 @@ class App extends React.Component {
     this.noteUpdate = this.noteUpdate.bind(this);
     this.noteDelete = this.noteDelete.bind(this);
   }
-
 
   noteCreate(note){
     console.log('noteCreate', note);
