@@ -1,14 +1,23 @@
 'use strict';
 
+// READ THIS FILE FROM THE BOTTOM UP
+// ______component tree
+// APP
+//    IpsumSettingsForm
+//    IpsumDisplay
+
 require('./style/main.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// will return a random item from an array
 const getRandomArrayItem = (list) => {
   return list[Math.floor(Math.random() * list.length)];
 };
 
+// generateIpsum takes an array of words
+// and a number of words to genoratre and returns some ipusm
 const generateIpsum = (vocab, count) => {
   let items = [];
   for(let i=0; i<count; i++){
@@ -17,11 +26,14 @@ const generateIpsum = (vocab, count) => {
   return items.join(' ');
 };
 
+// IpsumDisplay will use infromation on the appState to 
+// generateIpsum and display it on the screeen
 const IpsumDisplay = ({app}) => {
   let state = app.state;
   let vocab = state.languages[state.selectedLanguage];
   let ipsum = generateIpsum(vocab, state.limit);
   let lines = [];
+
   for(let i=0; i<state.count; i++){
     var line = generateIpsum(vocab, state.limit);
     if(!state.limitByWord) 
@@ -40,6 +52,7 @@ class IpsumSettingsForm extends React.Component {
   constructor(props){
     super(props);
     let app = props.app;
+    // this form has its own state for mananign it's controlled inputs
     this.state = {
       limit: app.state.limit,
       count: app.state.count,
@@ -67,6 +80,10 @@ class IpsumSettingsForm extends React.Component {
 
   handleSumbit(e){
     e.preventDefault();
+    // this is using the app.setState 
+    // that was passed donw from the App component
+    // this allows us to update the root state of the appliction 
+    // from anywhere
     this.props.app.setState({
       limit: this.state.limit,
       count: this.state.count,
@@ -177,6 +194,9 @@ class App extends React.Component {
       },
     };
 
+    // bind all methods to the app constructor
+    // this time including setState, because its going to be passed down into other components 
+    // via getApp
     this.setState = this.setState.bind(this);
     this.getApp = this.getApp.bind(this);
   }

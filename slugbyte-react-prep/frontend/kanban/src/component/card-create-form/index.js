@@ -1,43 +1,60 @@
 'use strict';
 
 import React from 'react';
-import kanbanCard from '../../model/kanban-card.js';
-import {check, classToggle} from '../../lib/util.js';
+import cardRequests from '../../lib/card-requests.js';
+import {classToggle} from '../../lib/util.js';
 
-let CardCreateForm = ({state, setState}) => {
-  let handleSubmit = (e) => {
+class CardCreateForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      title: '',
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e){
     e.preventDefault();
-    kanbanCard.create({
+
+    // update the backend
+    cardRequests.create({
       state: 0,
-      title: state.cardCreateForm.title,
+      title: this.state.title,
       comments: [],
     })
     .then(card => {
-      setState({
-        kanbanCards: [card].concat(state.kanbanCards),
-        cardCreateForm: {title: ''},
-      });
+      this.props.app.setState(state => ({
+        cardRequestss: [card].concat(state.cardRequestss),
+      }));
     });
+
+    // reset the form state to clear it
+    this.setState({title: ''})
+    
   };
 
-  let onChange = (e) => {
+  handleChange(e){
     let change = {};
     change[e.target.name] = e.target.value;
-    setState({cardCreateForm: change});
+    this.setState(change);
   };
 
-  return (
-    <form 
-      className='card-create-form'
-      onSubmit={handleSubmit}>
-      <input 
-        onChange={onChange} 
-        name='title' 
-        autoComplete="off"
-        value={state.cardCreateForm.title} 
-        placeholder='title' />
-    </form>
-  );
+  render(){
+    return (
+      <form 
+        className='card-create-form'
+        onSubmit={this.handleSubmit}>
+        <input 
+          onChange={this.handleChange} 
+          name='title' 
+          autoComplete="off"
+          value={this.state.title} 
+          placeholder='title' />
+      </form>
+    );
+  }
 };
 
 export default CardCreateForm;

@@ -1,13 +1,13 @@
 'use strict';
 
-import React from 'React';
+import React from 'react';
 import CardColumn from '../card-column';
 
-const KanbanBoard = ({state, setState}) => {
+const KanbanBoard = ({app}) => {
   let stateNameMap = ['backlog', 'ready', 'in progress', 'done'];
   let columns = [[], [], [], []];
 
-  state.kanbanCards.reduce((columns, card) => {
+  columns = app.state.cardRequestss.reduce((columns, card) => {
     columns[card.state].push(card);
     return columns;
   }, columns);
@@ -19,8 +19,7 @@ const KanbanBoard = ({state, setState}) => {
                     key={i}
                     title={stateNameMap[i]} 
                     cards={column}
-                    state={state}
-                    setState={setState} />)}
+                    app={app} />)}
     </div>
   );
 };

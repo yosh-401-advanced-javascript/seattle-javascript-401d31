@@ -6,12 +6,15 @@ const {DefinePlugin} = require('webpack');
 const ExtractPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
+const production = process.env.NODE_ENV === 'production';
+
 const plugins = [
   // DefinePlugin creates constant variables that can be 
   // accesed throught the app and configured at build time
   new DefinePlugin({
     __API_URL__: JSON.stringify(process.env.API_URL),
     __TITLE__: JSON.stringify(process.env.TITLE),
+    __DEBUG__: JSON.stringify(!production),
   }),
   // creates the index.html and dynamicly injects script tags
   // and link tags. This is important because our script and 

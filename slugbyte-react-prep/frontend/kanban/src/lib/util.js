@@ -1,6 +1,6 @@
 'use strict';
 
-export let check = (test, result) => {
+export let renderIf = (test, result) => {
   if(test) return result;
 };
 
