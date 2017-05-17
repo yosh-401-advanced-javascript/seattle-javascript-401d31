@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-let budgetExpense = {}
+let expenseRequests = {}
 
 let logResAndResolveData = (res) => {
   console.log('res', res);
@@ -10,25 +10,25 @@ let logResAndResolveData = (res) => {
   return res.data;
 };
 
-budgetExpense.create = (expense) => {
+expenseRequests.create = (expense) => {
   return axios.post(`${__API_URL__}/budget/expenses`, expense)
   .then(logResAndResolveData);
 };
 
-budgetExpense.fetchAll = (profile) => {
+expenseRequests.fetchAll = (profile) => {
   console.log('profile name', profile.name);
   return axios.get(`${__API_URL__}/budget/expenses/${profile.name}`)
   .then(logResAndResolveData);
 };
 
-budgetExpense.update = (expense) => {
+expenseRequests.update = (expense) => {
   return axios.put(`${__API_URL__}/budget/expenses/${expense._id}`)
   .then(logResAndResolveData);
 };
 
-budgetExpense.delete = (expense) => {
+expenseRequests.delete = (expense) => {
   return axios.delete(`${__API_URL__}/budget/expenses/${expense._id}`)
   .then(logResAndResolveData);
 };
 
-export default budgetExpense;
+export default expenseRequests;

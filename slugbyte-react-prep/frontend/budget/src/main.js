@@ -6,7 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {renderIf, curencyFormat} from './lib/util.js';
-import budgetExpense from './lib/budget-expence.js';
+import expenseRequests from './lib/expense-requests.js';
 
 import ProfileCreateForm from './component/profile-create-form';
 import ProfileChangeForm from './component/profile-change-form';
@@ -19,7 +19,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       profile: {
-        title: '',
+        name: '',
         categorys: [],
       },
       expenses: [],
@@ -27,6 +27,7 @@ class App extends React.Component {
 
     this.getApp = this.getApp.bind(this);
     this.setState = this.setState.bind(this);
+    this.handleExit = this.handleExit.bind(this);
   }
 
   componentWillMount(){
@@ -41,7 +42,7 @@ class App extends React.Component {
     }
 
     if(state && state.profile && state.profile.name){
-      budgetExpense.fetchAll(state.profile)
+      expenseRequests.fetchAll(state.profile)
       .then(expenses => this.setState({expenses}))
       .catch(console.error);
     }
@@ -49,6 +50,10 @@ class App extends React.Component {
     
   componentDidUpdate(){
     // log and save the state after every state change
+    if(__DEBUG__){
+      console.log('____ STATE ____', this.state);
+    }
+
     try {
       localStorage.state = JSON.stringify(this.state);
     } catch (e) {
@@ -62,8 +67,17 @@ class App extends React.Component {
   getApp(){
     return {
       state: this.state,
-      setState: this.setState.bind(this),
+      setState: this.setState,
     };
+  }
+
+  handleExit(){
+    this.setState({
+      profile: {
+        name: '',
+        categorys: [],
+      },
+    })
   }
 
   render() {
@@ -71,19 +85,31 @@ class App extends React.Component {
 
     return (
       <div className="app">
-        {renderIf(!this.state.profile.name, <ProfileCreateForm app={this.getApp()}/>)}
+        {renderIf(!this.state.profile.name, 
+          <div className='setup'> 
+            <ProfileCreateForm app={this.getApp()}/>
+            <ProfileChangeForm app={this.getApp()}/>
+          </div>
+        )}
+
         {renderIf(this.state.profile.name,
           <div> 
             <header>
-              <h1> { this.state.profile.name } </h1>
-              <p> total budget: { curencyFormat(this.state.profile.total)} </p>
+              <div className='budget-info'>
+                <h1> { this.state.profile.name } </h1>
+                <p> total budget: { curencyFormat(this.state.profile.total)} </p>
+              </div>
+
+              <div className='actions'>
+                <button onClick={this.handleExit} className='btn-exit'> exit </button>
+                <CategoryCreateForm app={this.getApp()}/>
+              </div>
             </header>
 
-            <ProfileChangeForm app={this.getApp()}/>
-            <CategoryCreateForm app={this.getApp()}/>
-            <div className='category-scroll'>
+            <div className='category-container'>
               {this.state.profile.categorys.map(item => <Category key={item} app={this.getApp()} category={item} />)}
             </div>
+
             <footer>
               <p> <strong> Total Expenses: </strong> { curencyFormat(totalExpenses) } </p>
               <p> <strong> Remaining Budget: </strong> { curencyFormat(this.state.profile.total - totalExpenses) } </p>

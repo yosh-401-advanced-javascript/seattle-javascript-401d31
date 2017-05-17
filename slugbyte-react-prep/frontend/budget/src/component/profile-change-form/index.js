@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { changeHandlerCreate, classToggler, renderIf } from '../../lib/util.js';
-import budgetProfile from '../../lib/budget-proflie.js';
+import profileRequests from '../../lib/profile-requests.js';
 
 class ProfileChangeForm extends React.Component {
   constructor(props){
@@ -27,7 +27,7 @@ class ProfileChangeForm extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    budgetProfile.fetch({name: this.state.name})
+    profileRequests.fetch({name: this.state.name})
     .then(profile => this.appSetState({profile}))
     .then(() => this.resetFormState())
     .catch((err) => {
@@ -56,7 +56,7 @@ class ProfileChangeForm extends React.Component {
           value={this.state.name}
           />
 
-          <button type='submit'> change budget </button>
+          <button type='submit'> use budget </button>
       </form>
     );
   }

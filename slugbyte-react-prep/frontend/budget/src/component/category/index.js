@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import budgetProfile from '../../lib/budget-proflie.js';
+import profileRequests from '../../lib/profile-requests.js';
 import {curencyFormat} from '../../lib/util.js';
 import Expense from '../expense';
 import ExpenseCreateFrom from '../expense-create-form';
@@ -20,7 +20,7 @@ let Category = ({app, category}) => {
       return item !== category;
     });
 
-    budgetProfile.update(profile)
+    profileRequests.update(profile)
     .then(profile => {
       app.setState(state => ({
         profile,

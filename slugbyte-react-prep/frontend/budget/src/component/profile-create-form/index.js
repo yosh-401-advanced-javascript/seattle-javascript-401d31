@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {subStateUpdaterCreate, changeHandlerCreate} from '../../lib/util.js';
-import budgetProfile from '../../lib/budget-proflie.js';
+import profileRequests from '../../lib/profile-requests.js';
 
 class ProfileCreateForm extends React.Component {
   constructor(props){
@@ -30,7 +30,7 @@ class ProfileCreateForm extends React.Component {
       return this.updateFormState({error: true});
     }
 
-    budgetProfile.create(data)
+    profileRequests.create(data)
     .then(profile => this.appSetState({profile}))
     .then(() => this.resetFormState())
     .catch(console.error);

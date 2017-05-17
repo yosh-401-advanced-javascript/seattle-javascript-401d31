@@ -5,9 +5,35 @@ body {
 }
 
 header {
-  width: 50%;
   float: left;
   padding-left: $pad / 2;
+
+  .budget-info {
+    width: 50%;
+    float: left;
+  }
+
+  .actions {
+    width: 50%;
+    float: right;
+    button:first-child {
+      width: 20%;
+      width: calc(20% - 0.5em); 
+      background: $color-white;
+      border: 1px solid $color-secondary;
+      padding: $pad;
+      float: right;
+
+      &:hover {
+        border: 1px solid $color-black;
+      }
+
+      &:active {
+        border: 1px solid $color-error;
+      }
+    }
+  }
+
 }
 
 footer {
@@ -48,10 +74,9 @@ footer {
 }
 
 .profile-change-form {
-  width: calc(50% - 0.5em);
+  width: calc(50%);
+  margin: 0 auto;
   margin-top: $pad;
-  margin-left: $pad / 2;
-  float: left;
 
   input {
     width: 60%;
@@ -67,8 +92,7 @@ footer {
 }
 
 .category-create-form {
-  width: calc(50% - 0.5em);
-  margin-right: $pad / 2;
+  margin-right: $pad - 0.5em;
   margin-top: $pad;
   float: right;
 
@@ -85,15 +109,10 @@ footer {
   }
 }
 
-.category-scroll {
+.category-container {
   height: 300px;
   overflow-x: scroll;
   white-space: nowrap;
-}
-
-.category-container {
-  width: 100%;
-  height: 95%;
 }
 
 .category {
@@ -103,7 +122,7 @@ footer {
   margin-top: $pad;
   margin-right: $pad / 2;
   margin-left: $pad / 2;
-  width: calc(24% - .5em);
+  width: calc(25% - .5em);
   height: 95%;
 
   border: 1px solid $color-grey;
@@ -142,12 +161,12 @@ footer {
     margin-bottom: $pad;
     float: left;
     input:first-child {
-      width: 60%;
+      width: 50%;
       float: left;
     }
 
     input:nth-child(2) {
-      width: calc(20% - 0.5em);
+      width: calc(30% - 0.5em);
       margin-left: $pad;
       float: left;
     }

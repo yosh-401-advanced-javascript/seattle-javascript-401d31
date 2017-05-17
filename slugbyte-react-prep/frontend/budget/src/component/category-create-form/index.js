@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import budgetProfile from '../../lib/budget-proflie.js';
+import profileRequests from '../../lib/profile-requests.js';
 import {changeHandlerCreate} from '../../lib/util.js';
 
 class CategoryCreateForm extends React.Component {
@@ -29,7 +29,7 @@ class CategoryCreateForm extends React.Component {
     let profileData = this.appState.profile;
     profileData.categorys.unshift(this.state.title);
 
-    budgetProfile.update(profileData)
+    profileRequests.update(profileData)
     .then(profile => this.appSetState({profile}))
     .then(() => this.resetFormState())
     .catch(console.error);

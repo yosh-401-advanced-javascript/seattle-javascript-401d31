@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { changeHandlerCreate } from '../../lib/util.js';
-import budgetExpense from '../../lib/budget-expence.js';
+import expenseRequests from '../../lib/expense-requests.js';
+
 
 class ExpenseCreateFrom extends React.Component {
   constructor(props){
@@ -30,7 +31,7 @@ class ExpenseCreateFrom extends React.Component {
   handleSubmit(e){
     e.preventDefault();
 
-    budgetExpense.create(this.state)
+    expenseRequests.create(this.state)
     .then((data) => {
       this.appSetState(state => ({
           expenses: [data].concat(state.expenses),
