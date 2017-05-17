@@ -10,9 +10,7 @@ import expenseRequests from './lib/expense-requests.js';
 
 import ProfileCreateForm from './component/profile-create-form';
 import ProfileChangeForm from './component/profile-change-form';
-import ExpenseCreateFrom from './component/expense-create-form';
-import Category from './component/category';
-import CategoryCreateForm from './component/category-create-form';
+import Dashboard from './component/dashboard';
 
 class App extends React.Component {
   constructor(props){
@@ -27,7 +25,6 @@ class App extends React.Component {
 
     this.getApp = this.getApp.bind(this);
     this.setState = this.setState.bind(this);
-    this.handleExit = this.handleExit.bind(this);
   }
 
   componentWillMount(){
@@ -71,17 +68,8 @@ class App extends React.Component {
     };
   }
 
-  handleExit(){
-    this.setState({
-      profile: {
-        name: '',
-        categorys: [],
-      },
-    })
-  }
 
   render() {
-    let totalExpenses =  this.state.expenses.reduce((p, n) => p + n.price, 0);
 
     return (
       <div className="app">
@@ -92,31 +80,7 @@ class App extends React.Component {
           </div>
         )}
 
-        {renderIf(this.state.profile.name,
-          <div> 
-            <header>
-              <div className='budget-info'>
-                <h1> { this.state.profile.name } </h1>
-                <p> total budget: { curencyFormat(this.state.profile.total)} </p>
-              </div>
-
-              <div className='actions'>
-                <button onClick={this.handleExit} className='btn-exit'> exit </button>
-                <CategoryCreateForm app={this.getApp()}/>
-              </div>
-            </header>
-
-            <div className='category-container'>
-              {this.state.profile.categorys.map(item => <Category key={item} app={this.getApp()} category={item} />)}
-            </div>
-
-            <footer>
-              <p> <strong> Total Expenses: </strong> { curencyFormat(totalExpenses) } </p>
-              <p> <strong> Remaining Budget: </strong> { curencyFormat(this.state.profile.total - totalExpenses) } </p>
-            </footer>
-          </div>
-        )}
-
+        {renderIf(this.state.profile.name, <Dashboard app={this.getApp()} />)}
       </div>
     );
   }
