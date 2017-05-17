@@ -116,17 +116,14 @@ footer {
 }
 
 .category {
-  overflow: hidden;
   position: relative;
   display: inline-block;
-  margin-top: $pad;
-  margin-right: $pad / 2;
-  margin-left: $pad / 2;
-  width: calc(25% - .5em);
+  width: 26%;
   height: 95%;
-
-  border: 1px solid $color-grey;
+  margin: $pad ($pad / 2);
   padding: $pad;
+  overflow: hidden;
+  border: 1px solid $color-grey;
 
   .btn-delete {
     position: absolute;
