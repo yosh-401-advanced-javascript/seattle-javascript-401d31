@@ -1,0 +1,275 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix {
+  clear: both; }
+
+.clearfix {
+  clear: both; }
+
+* {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none; }
+  *:focus {
+    border: none;
+    outline: none; }
+
+html {
+  font-size: 1em; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+h1, h2, h3, h4 {
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  font-size: 2.441em; }
+
+h2 {
+  font-size: 1.953em; }
+
+h3 {
+  font-size: 1.563em; }
+
+h4 {
+  font-size: 1.25em; }
+
+input, button, pre, textarea, select {
+  padding: 0.5em; }
+
+input {
+  border: 1px solid #777; }
+  input:focus {
+    border: 1px solid #88c3e0; }
+
+a {
+  font-weight: bolder;
+  text-decoration: underline;
+  color: #88c3e0; }
+  a:hover {
+    color: #777; }
+  a:visited {
+    color: #ff7a7a; }
+
+button, input[type="submit"] {
+  background: #88c3e0;
+  border: 1px solid #88c3e0;
+  border-width: 2px;
+  border-radius: 0.25em;
+  font-weight: bold; }
+  button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background: #aaa;
+    border-color: #aaa; }
+  button:active, input[type="submit"]:active {
+    background: #777;
+    border-color: #777; }
+  button:disabled, input[type="submit"]:disabled {
+    color: #777;
+    background: #aaa;
+    border-color: #777; }
+
+strong {
+  font-weight: bolder; }
+
+em {
+  font-style: italic; }
+
+ul, ol {
+  margin-left: 1em;
+  padding-left: 1em;
+  color: #000025; }
+  ul ul, ol ul {
+    list-style: circle; }
+  ul ol, ol ol {
+    list-style: lower-roman; }
+
+ul {
+  list-style: initial; }
+
+ol {
+  list-style: decimal; }
+
+.clearfix {
+  clear: both; }
+
+body {
+  padding: 0.5em; }
+
+header {
+  float: left;
+  padding-left: 0.25em; }
+  header .budget-info {
+    width: 50%;
+    float: left; }
+  header .actions {
+    width: 50%;
+    float: right; }
+    header .actions button:first-child {
+      width: 20%;
+      width: calc(20% - 0.5em);
+      background: #fff;
+      border: 1px solid #88c3e0;
+      padding: 0.5em;
+      float: right; }
+      header .actions button:first-child:hover {
+        border: 1px solid #000025; }
+      header .actions button:first-child:active {
+        border: 1px solid #ff7a7a; }
+
+footer p {
+  color: #777; }
+
+footer strong {
+  color: #000025; }
+
+.clear-fix {
+  clear: both; }
+
+.app {
+  width: 960px;
+  margin: 0 auto; }
+
+.profile-create-form {
+  width: 50%;
+  margin: 0 auto; }
+  .profile-create-form input:first-child {
+    width: 60%;
+    float: left; }
+  .profile-create-form input:nth-child(2) {
+    width: calc(40% - 0.5em);
+    float: right; }
+  .profile-create-form button {
+    margin-top: 0.5em; }
+
+.profile-change-form {
+  width: calc(50%);
+  margin: 0 auto;
+  margin-top: 0.5em; }
+  .profile-change-form input {
+    width: 60%;
+    float: left; }
+  .profile-change-form button {
+    width: calc(40% - .5em);
+    float: right;
+    border: 1px solid #88c3e0;
+    padding: 0.5em; }
+
+.category-create-form {
+  margin-right: 0em;
+  margin-top: 0.5em;
+  float: right; }
+  .category-create-form input {
+    width: 80%;
+    float: left; }
+  .category-create-form button {
+    width: calc(20% - .5em);
+    float: right;
+    border: 1px solid #88c3e0;
+    padding: 0.5em; }
+
+.category-container {
+  height: 300px;
+  overflow-x: scroll;
+  white-space: nowrap; }
+
+.category {
+  position: relative;
+  display: inline-block;
+  width: 26%;
+  height: 95%;
+  margin: 0.5em 0.25em;
+  padding: 0.5em;
+  overflow: hidden;
+  border: 1px solid #777; }
+  .category .btn-delete {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: auto;
+    background: #fff;
+    border: 1px solid #ff7a7a; }
+    .category .btn-delete:hover {
+      background: #ff7a7a;
+      border: #ff7a7a; }
+    .category .btn-delete:active {
+      background: #aaa; }
+  .category p:last-child {
+    margin-top: 1em;
+    text-align: right; }
+  .category .expense-container {
+    height: 55%;
+    overflow: scroll;
+    border-bottom: 1px solid #aaa; }
+  .category .expense-create-form {
+    margin-bottom: 0.5em;
+    float: left; }
+    .category .expense-create-form input:first-child {
+      width: 50%;
+      float: left; }
+    .category .expense-create-form input:nth-child(2) {
+      width: calc(30% - 0.5em);
+      margin-left: 0.5em;
+      float: left; }
+    .category .expense-create-form button {
+      width: calc(20% - 0.5em);
+      margin-left: 0.5em;
+      border: 1px solid #88c3e0;
+      float: left; }
+
+.expense {
+  float: left;
+  padding-bottom: 0.25em; }
+  .expense span {
+    width: 50%;
+    float: left;
+    text-align: right;
+    color: #777; }
+  .expense span:first-child {
+    float: left;
+    text-align: left; }
+  .expense button {
+    display: none;
+    width: 10%;
+    float: right;
+    background: #ff7a7a;
+    border: none; }
+  .expense:hover span {
+    width: 40%; }
+  .expense:hover button {
+    display: block; }
