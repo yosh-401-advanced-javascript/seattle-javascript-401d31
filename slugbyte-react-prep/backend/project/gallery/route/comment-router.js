@@ -14,17 +14,28 @@ commentRouter.post('/comments', bearerAuth, jsonParser, (req, res, next) => {
     return next(httpErrors(400, 'bad request no content'));
 
   Profile.findOne({username: req.user.username})
-  .then(user => {
-    if(!user)
+  .then(profile => {
+    if(!profile)
       throw httpErrors(404, 'profile not found');
     return new Comment({
+      profile: profile._id,
+      userID: req.user._id,
+      photo: req.body.photoID,
       content: req.body.content,
-      user: req.user._id,
-      photo: req.user.photdId,
     }).save()
   })
-  .comment(comment => comment.populate('user'))
-  .then(comment => req.json(comment))
+  .then(comment => comment.populate('profile').execPopulate())
+  .then(comment => comment.populate('photo').execPopulate())
+
+  .then(comment => res.json(comment))
+  .catch(next);
+});
+
+commentRouter.get('/comments/:photoID', (req, res, next) => {
+  Comment.find({photo: req.params.photoID})
+  .populate('profile')
+  .populate('photo')
+  .then(photos => res.json(photos))
   .catch(next);
 });
 

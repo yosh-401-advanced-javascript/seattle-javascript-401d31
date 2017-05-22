@@ -13,12 +13,9 @@ const API_URL = `${process.env.API_URL}/gallery`
 describe('testing gallery photo router', function(){
   before(serverControl.start)
   after(serverControl.stop);
-  afterEach(() => Promise.all([
-      mockUser.remove(),
-      mockGalleryProfile.remove(),
-      mockGalleryPhoto.remove(),
-    ])
-  );
+  afterEach(mockUser.remove)
+  afterEach(mockGalleryProfile.remove)
+  afterEach(mockGalleryPhoto.remove)
 
   describe('testing POST /gallery/photos', function(){
     before(mockUser.create.bind(this));

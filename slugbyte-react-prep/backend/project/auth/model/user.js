@@ -35,8 +35,9 @@ UserSchema.methods.tokenHashCreate = function(){
   return new Promise((resolve, reject) => { 
     let tries = 3;
     let _gennerateFindHash = () => {
-      this.findHash = crypto.randomBytes(32).toString('hex');
-      this.save().then(() => resolve(this))
+      this.tokenHash = crypto.randomBytes(32).toString('hex');
+      this.save()
+      .then(() => resolve(this))
       .catch(err => {
         if (tries < 1) 
           return reject(err);

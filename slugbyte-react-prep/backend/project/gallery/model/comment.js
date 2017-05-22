@@ -1,16 +1,16 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const httpErrors = require('http-errors');
 
 const commentScheama = mongoose.Schema({
   content: {type: String, minlength:1, required: true},
+  userID: {type: String, required:true},
   photo: {
     type: mongoose.Schema.Types.ObjectId, 
     required: true,
     ref: 'GalleryPhoto'
   },
-  user: {
+  profile: {
     type: mongoose.Schema.Types.ObjectId, 
     required: true,
     ref: 'GalleryProfile'

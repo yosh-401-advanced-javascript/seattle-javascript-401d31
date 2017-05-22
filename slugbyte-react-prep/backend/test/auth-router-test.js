@@ -24,7 +24,7 @@ describe('testing user routes', function(){
     .then(res => {
 
       expect(res.status).toEqual(200);
-      expect(res.data.length).toEqual(105);
+      expect(res.data.length).toEqual(211);
     });
   });
 
@@ -42,7 +42,7 @@ describe('testing user routes', function(){
       return axios.get(`${API_URL}/auth/login`, options)
       .then(res => {
         expect(res.status).toEqual(200);
-        expect(res.data.length).toEqual(105);
+        expect(res.data.length).toEqual(211);
       });
     });
   });

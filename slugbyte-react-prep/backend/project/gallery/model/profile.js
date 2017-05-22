@@ -28,7 +28,7 @@ const Profile = module.exports = mongoose.model('GalleryProfile', profileSchema)
 
 // calling Profile.remove({}) will not trigger the pre remove hook
 // soo you have to remove each doc individualy 
-Profile.removeAll = () => Profile.find({})
+Profile.removeAll = (query={}) => Profile.find(query)
   .then(gallerys => Promise.all(gallerys.map(item => item.remove())))
 
 
