@@ -5,7 +5,7 @@ const Comment = require('../../project/gallery/model/comment.js');
 const mockGalleryComment = module.exports = {};
 
 mockGalleryComment.create = function(done){
-  Comment.create({
+  new Comment({
     userID: this.tempUser._id,
     profile: this.tempProfile._id, 
     photo: this.tempPhoto._id,

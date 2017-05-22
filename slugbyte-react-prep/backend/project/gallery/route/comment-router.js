@@ -26,7 +26,6 @@ commentRouter.post('/comments', bearerAuth, jsonParser, (req, res, next) => {
   })
   .then(comment => comment.populate('profile').execPopulate())
   .then(comment => comment.populate('photo').execPopulate())
-
   .then(comment => res.json(comment))
   .catch(next);
 });
@@ -40,17 +39,10 @@ commentRouter.get('/comments/:photoID', (req, res, next) => {
 });
 
 commentRouter.delete('/comments/:id', bearerAuth, (req, res, next) => {
-  Comment.findOneAndRemove({username: req.user.username, _id: req.params.id})
+  Comment.findOneAndRemove({userID: req.user._id, _id: req.params.id})
   .then(comment => {
     if(!comment)
       throw httpErrors(404, 'comment not found');
-    return Photo.findById(comment.photo)
-  })
-  .then(photo => {
-    if(!photo)
-      throw httpErrors(404, 'photo not found')
-    photo.comments = photoSchema.comments.filter(item => item !== this._id.toString());
-    return photo.save();
   })
   .then(() => res.sendStatus(204))
   .catch(next);

@@ -47,14 +47,35 @@ describe('testing gallery comment router', function(){
     before(mockGalleryProfile.create.bind(this));
     before(mockGalleryPhoto.create.bind(this));
     before(mockGalleryComment.create.bind(this));
+    before(mockGalleryComment.create.bind(this));
+    before(mockGalleryComment.create.bind(this));
 
     it('should create a comment', () => {
       return superagent.get(`${API_URL}/comments/${this.tempPhoto._id}`)
       .then(res => {
         expect(res.status).toEqual(200);
-        console.log('req.body', req.body);
+        res.body.forEach(comment => {
+          expect(comment.content.startsWith('example')).toEqual(true)
+          expect(comment.photo._id).toEqual(this.tempPhoto._id)
+          expect(comment.profile._id).toEqual(this.tempProfile._id)
+        })
         expect(res.body.length).toEqual(3);
       });
     });
   });
+
+  describe('testing DELETE /gallery/comments/:id', function(){
+    before(mockUser.create.bind(this));
+    before(mockGalleryProfile.create.bind(this));
+    before(mockGalleryPhoto.create.bind(this));
+    before(mockGalleryComment.create.bind(this));
+    it('should create a comment', () => {
+      return superagent.delete(`${API_URL}/comments/${this.tempComment._id}`)
+      .set('Authorization', `Bearer ${this.tempToken}`)
+      .then(res => {
+        expect(res.status).toEqual(204);
+      });
+    });
+
+  })
 })

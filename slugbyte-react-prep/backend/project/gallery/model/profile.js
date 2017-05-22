@@ -30,5 +30,3 @@ const Profile = module.exports = mongoose.model('GalleryProfile', profileSchema)
 // soo you have to remove each doc individualy 
 Profile.removeAll = (query={}) => Profile.find(query)
   .then(gallerys => Promise.all(gallerys.map(item => item.remove())))
-
-
