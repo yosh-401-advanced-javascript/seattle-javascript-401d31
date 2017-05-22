@@ -6,7 +6,7 @@ const serverControl = require('./lib/server-control.js');
 const mockBudgetProfile = require('./lib/mock-budget-profile.js');
 const mockBudgetExpense = require('./lib/mock-budget-expense.js');
 
-const API_URL = process.env.API_URL || 'http://localhost:3000/budget/expenses';
+const API_URL = `${process.env.API_URL}/budget/expenses` || 'http://localhost:3000/budget/expenses';
 
 describe('testing BudgetExpense', function(){
   before(serverControl.start);

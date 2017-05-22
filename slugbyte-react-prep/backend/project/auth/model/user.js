@@ -4,34 +4,26 @@ const bcrypt = require('bcrypt');
 const crypto = require('crypto');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
-const httpErrors = require('httpErrors');
+const httpErrors = require('http-errors');
 
 const UserSchema = mongoose.Schema({
   username: {type: String, minlength: 4, required: true, unique: true},
   email: {type: String, minlength: 4, required: true, unique: true},
-  tokenHash: {type: String, required: true, unique: true},
-  passwordHash: {type: String, required: true},
+  tokenHash: {type: String, unique: true},
+  password: {type: String, required: true},
 });
 
-UserSchema.pre('save', (next) => {
-  return bcrypt.hash(this.password, 8)
-  .then(hash => {
-    this.passwordHash = hash;
-    return this;
-  })
-  .catch(next);
-});
-
-UserSchema.methods.passwordHashCreate = function(password){
+// instance methods
+UserSchema.methods.passwordHash = function(password){
   return bcrypt.hash(password, 8)
   .then(hash => {
-    this.passwordHash = hash;
+    this.password = hash;
     return this;
   })
-};
+}
 
-UserSchema.methods.passwordHashCompare = function(password){
-  return bcrypt.compare(password, this.passwordHash)
+UserSchema.methods.passwordCompare = function(password){
+  return bcrypt.compare(password, this.password)
   .then(isCorrect => {
     if(!isCorrect) 
       throw httpErrors(401, 'incorrect password');
@@ -64,9 +56,17 @@ UserSchema.methods.tokenCreate = function(){
   });
 }
 
+const User = module.exports = mongoose.model('user', UserSchema);
 
+// Static Methods
+User.create = function(opts){
+  let password = opts.password;
+  delete opts.password;
+  return new User(opts).passwordHash(password)
+  .then(user => user.save())
+  .then(user => user.tokenCreate())
+}
 
-module.exports = mongoose.model('user', UserSchema);
 
 
 

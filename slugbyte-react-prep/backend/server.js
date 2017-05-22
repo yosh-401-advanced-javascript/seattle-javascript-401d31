@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config()
 const fs = require('fs');
 
 const cors = require('cors');
@@ -20,8 +21,10 @@ app.use(morgan('dev'));
 fs.readdir(`${__dirname}/project`, (err, dirs) => {
   // require routes
   dirs.forEach(dir => {
+    console.log('loading ', dir)
     app.use(`/${dir}`, require(`${__dirname}/project/${dir}`));
   });
+  console.log('loaded');
 
   // add static server 
   app.use(express.static(`${__dirname}/public`));

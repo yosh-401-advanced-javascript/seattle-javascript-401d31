@@ -23,6 +23,8 @@ profileRouter.put('/profiles/:name', jsonParser, (req, res, next) => {
     let categorySet = new Set(req.body.categorys);
     let diff = profile.categorys.filter(item => !categorySet.has(item))
 
+    profile.name = req.body.name;
+    profile.total = req.body.total;
     profile.categorys = req.body.categorys;
     return Promise.all([
       ExpenseProfile.remove({profile: profile.name, category: {$in: diff}}),
