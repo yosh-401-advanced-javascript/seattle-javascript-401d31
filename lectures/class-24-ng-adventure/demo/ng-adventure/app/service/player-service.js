@@ -1,21 +1,18 @@
-'use strict';
+'use strict'
 
-const angular = require('angular');
-const ngAdventure = angular.module('ngAdventure');
+require('angular')
+.module('ngAdventure')
+.factory('playerService', ['$q', '$log', 'mapService', function($q, $log, mapService) {
+  $log.debug('player service')
 
-ngAdventure.factory('playerService', ['$q', '$log', 'mapService', playerService]);
+  let service = {}
 
-function playerService($q, $log, mapService) {
-  $log.debug('player service');
-
-  let service = {};
-
-  let turn = 0;
+  let turn = 0
   let player = service.player = {
     name: 'bnates',
     location: 'cabin',
     hp: 16
-  };
+  }
 
   let history = service.history = [
     {
@@ -24,14 +21,14 @@ function playerService($q, $log, mapService) {
       location: 'cabin',
       hp: player.hp
     }
-  ];
+  ]
 
   service.movePlayer = function(direction) {
     return new $q((resolve, reject) => {
-      turn++;
+      turn++
 
-      let current = player.location;
-      let newLocation = mapService.mapData[current][direction];
+      let current = player.location
+      let newLocation = mapService.mapData[current][direction]
 
       if (!newLocation) {
         history.unshift({
@@ -39,21 +36,21 @@ function playerService($q, $log, mapService) {
           desc: 'You have run into a wall',
           location: player.location,
           hp: player.hp
-        });
-        return reject('no room in that direction');
-      };
+        })
+        return reject('no room in that direction')
+      }
 
       history.unshift({
         turn,
         location: player.location,
         desc: mapService.mapData[newLocation].desc,
         hp: player.hp
-      });
+      })
 
-      player.location = newLocation;
-      return resolve(player.location);
-    });
-  };
+      player.location = newLocation
+      return resolve(player.location)
+    })
+  }
 
-  return service;
-};
+  return service
+}])

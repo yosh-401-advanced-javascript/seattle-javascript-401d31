@@ -1,14 +1,11 @@
-'use strict';
+'use strict'
 
-const angular = require('angular');
-const ngAdventure = angular.module('ngAdventure');
+require('angular')
+.module('ngAdventure')
+.factory('mapService', ['$log', function($log) {
+  $log.debug('map service')
 
-ngAdventure.factory('mapService', ['$log', mapService]);
-
-function mapService($log) {
-  $log.debug('map service');
-
-  let service = {};
+  let service = {}
 
   service.mapData = {
     cabin: {
@@ -44,7 +41,7 @@ function mapService($log) {
       desc: "message from the snack room",
       west: "corridor"
     }
-  };
+  }
 
-  return service;
-};
+  return service
+}])
