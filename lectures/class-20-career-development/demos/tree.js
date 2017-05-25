@@ -29,8 +29,19 @@ Tree.prototype.preOrder = function(cb) {
   _walk(this.root)
 
   function _walk(node) {
-    console.log(node.val);
+    // console.log(node.val);
     cb(node)
     node.children.forEach(_walk)
   }
+}
+
+Tree.prototype.prettyPrint = function() {
+  let result = []
+  this.preOrder(node => {
+    if(node) {
+      result.push(node.val)
+      return
+    }
+  })
+  return result.toString()
 }
