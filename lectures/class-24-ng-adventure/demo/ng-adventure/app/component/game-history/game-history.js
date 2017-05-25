@@ -1,5 +1,8 @@
 'use strict';
 
+// NOTE: Showing the traditional style of require, reference vars, etc...
+// The other component controllers will simplify this syntax.
+
 const angular = require('angular');
 const ngAdventure = angular.module('ngAdventure');
 
