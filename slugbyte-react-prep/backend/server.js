@@ -22,7 +22,7 @@ fs.readdir(`${__dirname}/project`, (err, dirs) => {
   // require routes
   dirs.forEach(dir => {
     console.log('loading ', dir)
-    app.use(`/${dir}`, require(`${__dirname}/project/${dir}`));
+    app.use(`/api/${dir}`, require(`${__dirname}/project/${dir}`));
   });
   console.log('loaded');
 

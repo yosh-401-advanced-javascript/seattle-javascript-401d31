@@ -7,6 +7,7 @@ const httpErrors = require('http-errors');
 const profileRouter = module.exports = new require('express').Router();
 const Profile = require('../model/profile.js');
 const s3 = new AWS.S3();
+let fuzzyRegex = data  => new RegExp(`.*${data.split('').join('.*')}.*`)
 
 profileRouter.post('/profiles', bearerAuth, s3Upload('photo'),  (req, res, next) => {
   new Profile({
@@ -17,6 +18,15 @@ profileRouter.post('/profiles', bearerAuth, s3Upload('photo'),  (req, res, next)
   .then(profile => res.json(profile))
   .catch(next);
 });
+
+profileRouter.get('/profiles', bearerAuth, (req, res, next) => {
+  Profile.findOne({username: req.user.username})
+  .then(profile => {
+    if(!profile) 
+      return next(httpErrors(404, 'no profile found'))
+    res.json(profile)
+  })
+})
 
 profileRouter.put('/profiles/photo', bearerAuth, s3Upload('photo'), (req, res, next) => {
   let tempProfile;
@@ -38,4 +48,18 @@ profileRouter.put('/profiles/photo', bearerAuth, s3Upload('photo'), (req, res, n
   })
   .then(profile => res.json(profile))
   .catch(next)
-})
+});
+
+processRouter.get('/search/profile', (req, res, next) => {
+  let search = req.query
+
+  for(let key in search){
+    search[key] = {$regex: fuzzyRegex(search[key])};
+  }
+
+  Profile.find(search)
+  .limit(500)
+  .then(profiles => res.json(profiles))
+  .catch(next);
+});
+

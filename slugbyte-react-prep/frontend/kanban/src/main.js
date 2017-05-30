@@ -31,7 +31,7 @@ class App extends React.Component {
 
     // bind the menthods to the App constructor so they will allways 
     // apply to the current context
-    this.getApp = this.getApp;
+    this.getApp = this.getApp.bind(this);
     this.setState = this.setState.bind(this);
   }
 

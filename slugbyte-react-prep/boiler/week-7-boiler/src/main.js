@@ -1,11 +1,16 @@
 'use strict';
 
+// load sass 
 require('./style/main.scss');
 
+// require npm dependencies
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 
+// require app dependencies
+import store from './lib/store.js';
 
 class App extends React.Component {
   constructor(props){
@@ -14,9 +19,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <Route exact path='/' component={} />
-      </Router> 
+      <Provider store={store} />
+        <Router>
+          <Route exact path='/' component={} />
+        </Router> 
+      </Provider>
     );
   }
 }

@@ -64,7 +64,6 @@ User.create = function(opts){
   let password = opts.password;
   delete opts.password;
   return new User(opts).passwordHash(password)
-  .then(user => user.save())
   .then(user => user.tokenCreate())
 }
 
