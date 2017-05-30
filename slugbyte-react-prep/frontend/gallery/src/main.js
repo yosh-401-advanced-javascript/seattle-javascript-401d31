@@ -16,7 +16,7 @@ import Landing from './container/landing';
 import Dashboard from './container/dashboard';
 import {history, print} from './lib/util.js';
 import {tokenSet} from './actions/auth-actions.js';
-import {profileFetch} from './actions/profile-actions.js';
+import {userProfileFetch} from './actions/user-profile-actions.js';
 import ProfileDetail from './container/profile-detail';
 import Search from './container/search';
 
@@ -35,7 +35,7 @@ class App extends React.Component {
     try {
       let token = JSON.parse(localStorage.token);
       store.dispatch(tokenSet(token));
-      store.dispatch(profileFetch());
+      store.dispatch(userProfileFetch());
       let {pathname} = location;
       if(pathname.startsWith('/welcome') || pathname === '/')
         history.push('/dashboard')

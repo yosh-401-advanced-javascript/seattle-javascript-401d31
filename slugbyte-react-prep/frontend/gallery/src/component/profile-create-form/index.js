@@ -3,7 +3,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Field, reduxForm} from 'redux-form';
-import {profileCreate} from '../../actions/profile-actions.js';
+import {userProfileCreate} from '../../actions/user-profile-actions.js';
 import {renderIf, print, fileToDataURL} from '../../lib/util.js';
 import PhotoInput from '../photo-input';
 
@@ -32,7 +32,7 @@ class ProfileCreateForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault()
-    this.props.profileCreate({photo: this.state.photo})
+    this.props.userProfileCreate({photo: this.state.photo})
     .then(() => this.props.onSuccess())
   }
 
@@ -60,7 +60,7 @@ class ProfileCreateForm extends React.Component {
 
 let mapStateToProps = () => ({})
 let mapDispatchToProps = (dispatch, getState, props) => ({
-  profileCreate: (profile) => dispatch(profileCreate(profile)),
+  userProfileCreate: (profile) => dispatch(userProfileCreate(profile)),
 });
 
 ProfileCreateForm = connect(
@@ -68,4 +68,4 @@ ProfileCreateForm = connect(
   mapDispatchToProps,
 )(ProfileCreateForm);
 
-export default reduxForm({form: 'profileCreateForm'})(ProfileCreateForm);
+export default reduxForm({form: 'userProfileCreateForm'})(ProfileCreateForm);

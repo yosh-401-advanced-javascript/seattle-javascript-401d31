@@ -6,7 +6,9 @@ let profileReducer = (state={selected:null, photos:[]}, action) => {
       return {...state, selected: action.payload}
     case 'PROFILE_PHOTOS_SET': 
       return {...state, photos: action.payload}
-    default
+    default:
       return state;
   }
 }
+
+export default profileReducer;

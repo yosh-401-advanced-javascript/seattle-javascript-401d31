@@ -26,7 +26,8 @@ class Search extends React.Component {
 }
 
 let mapStateToProps = state => ({
-  photos: state.photos.search,
+  photos: state.search.photos,
+  profiles: state.search.profiles,
 })
 let mapDispatchToProps = dispatch => ({})
 

@@ -19,7 +19,7 @@ export let commentAdd = (comment) => ({
 });
 
 // async 
-export let photosSelectedFetch = id => dispatch => {
+export let photoSelectedFetch = id => dispatch => {
   return superagent.get(`${__API_URL__}/gallery/photos/${id}`)
   .then(res => {console.log('response', res);return res.body})
   .then(photo => dispatch(photosSelectedSet(photo)))
@@ -35,6 +35,6 @@ export let photoCommentCreate = comment => (dispatch, getState) => {
   return superagent.post(`${__API_URL__}/gallery/comments`)
   .set('Authorization', `Bearer ${getState().auth.token}`)
   .send(comment)
-  .then(res => {console.log('commentCreate', res); return res.data})
+  .then(res => {console.log('commentCreate', res); return res.body})
   .then(comment => dispatch(commentAdd(comment)))
 }

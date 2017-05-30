@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
-import {photosFromSearchFetch} from '../../actions/photo-actions.js';
+import {searchPhotosFetch, searchProfilesFetch} from '../../actions/search-actions.js';
 import throttle from 'lodash.throttle';
 
 class PhotoSearchForm extends React.Component {
@@ -20,7 +20,7 @@ class PhotoSearchForm extends React.Component {
 
   fetchData(){
     if(this.state.searchBy == 'photo')
-      this.props.photosFromSearchFetch({description: this.state.description})
+      this.props.searchPhotosFetch({description: this.state.description})
     else 
       console.log('fix me');
   }
@@ -79,7 +79,7 @@ class PhotoSearchForm extends React.Component {
 
 let mapStateToProps = state => ({})
 let mapDispatchToProps = dispatch => ({
-  photosFromSearchFetch: query => dispatch(photosFromSearchFetch(query)),
+  searchPhotosFetch: query => dispatch(searchPhotosFetch(query)),
 });
 
 export default connect(

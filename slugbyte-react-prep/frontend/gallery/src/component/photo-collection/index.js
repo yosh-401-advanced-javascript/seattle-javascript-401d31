@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-import {connect} from 'react-redux';
 
 let PhotoCollection = ({history, photos}) => {
   console.log('photos', photos);

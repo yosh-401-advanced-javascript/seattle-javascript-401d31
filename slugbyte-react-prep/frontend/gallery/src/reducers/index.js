@@ -2,6 +2,7 @@
 
 import {combineReducers} from 'redux';
 import authReducer from './auth-reducer.js';
+import searchReducer from './search-reducer.js';
 import photosReducer from './photos-reducer.js';
 import profileReducer from './profile-reducer.js';
 import userPhotosReducer from './user-photos-reducer.js';

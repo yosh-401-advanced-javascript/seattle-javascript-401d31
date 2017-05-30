@@ -3,7 +3,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Navbar from '../../component/navbar';
-import {photosFromProfileFetch} from '../../actions/photo-actions.js';
+import {profilePhotosFetch} from '../../actions/profile-actions.js';
 import PhotoCollection from '../../component/photo-collection';
 
 class ProfileDetail extends React.Component {
@@ -18,13 +18,15 @@ class ProfileDetail extends React.Component {
     let {username} = this.props.match.params;
     console.log('username', username);
     this.setState({username});
-    this.props.photosFromProfileFetch(username)
+    this.props.profilePhotosFetch(username)
     .then(action => action.payload)
     .then(photos => {
+      console.log('cooool', photos)
       if(photos.length > 0){
         this.setState({profile: photos[0].profile})
       }
     })
+    .catch(console.error)
   }
 
   render(){
@@ -42,12 +44,12 @@ class ProfileDetail extends React.Component {
 }
 
 let mapStateToProps = state => ({
-  photos: state.photos.search,
+  photos: state.profile.photos,
 })
 
 let mapDispatchToProps = dispatch => ({
-  photosFromProfileFetch: (username) => 
-    dispatch(photosFromProfileFetch(username)),
+  profilePhotosFetch: (username) => 
+    dispatch(profilePhotosFetch(username)),
 })
 
 export default connect(

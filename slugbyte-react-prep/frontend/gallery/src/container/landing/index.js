@@ -84,7 +84,7 @@ class Landing extends React.Component {
 let mapStateToProps = (state) => ({
     title: state.title,
     token: state.auth.token,
-    profileUrl: state.profile.photoURL,
+    profileUrl: state.userProfile.photoURL,
 });
 
 // used to map functions that can dispatch actions

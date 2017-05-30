@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
-import {commentCreate} from '../../actions/comment-actions.js';
+import {photoCommentCreate} from '../../actions/photo-actions.js';
 
 class CommentCreateForm extends React.Component {
   constructor(props){
@@ -23,7 +23,7 @@ class CommentCreateForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.commentCreate({
+    this.props.photoCommentCreate({
       content: this.state.content,
       photoID: this.props.photo._id,
     })
@@ -52,12 +52,12 @@ class CommentCreateForm extends React.Component {
 }
 
 let mapStateToProps = state => ({
-  photo: state.photos.selected,
-  profile: state.profile,
+  photo: state.photo.selected,
+  profile: state.userProfile,
 })
 
 let mapDispatchToProps = dispatch => ({
-  commentCreate: (comment) => dispatch(commentCreate(comment)),
+  photoCommentCreate: (comment) => dispatch(photoCommentCreate(comment)),
 })
 
 export default connect(

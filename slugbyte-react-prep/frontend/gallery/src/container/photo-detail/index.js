@@ -5,8 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import CommentCreateForm from '../../component/comment-create-form';
-import {photosSelectedFetch} from '../../actions/photo-actions.js';
-import {commentsFetch} from '../../actions/comment-actions.js';
+import {photoSelectedFetch, photoCommentsFetch} from '../../actions/photo-actions.js';
 
 class PhotoDetail extends React.Component {
   constructor(props){
@@ -19,8 +18,8 @@ class PhotoDetail extends React.Component {
     console.log(this.props.match)
     console.log('photoID', photoID)
     Promise.all([
-      this.props.photosSelectedFetch(photoID),
-      this.props.commentsFetch(photoID),
+      this.props.photoSelectedFetch(photoID),
+      this.props.photoCommentsFetch(photoID),
     ])
     .then(res => console.log('res', res))
     .catch(console.error)
@@ -53,14 +52,14 @@ class PhotoDetail extends React.Component {
 
 let mapStateToProps = (state) => {
   return {
-    selected: state.photos.selected,
-    comments: state.comments,
+    selected: state.photo.selected,
+    comments: state.photo.comments,
   }
 }
 
 let mapDispatchToProps = dispatch => ({
-  photosSelectedFetch: (id) => dispatch(photosSelectedFetch(id)),
-  commentsFetch: (id) => dispatch(commentsFetch(id)),
+  photoSelectedFetch: (id) => dispatch(photoSelectedFetch(id)),
+  photoCommentsFetch: (id) => dispatch(photoCommentsFetch(id)),
 })
 
 export default connect(
