@@ -1,4 +1,4 @@
-# 401 JS -- class 31 react and reduc
+# 401 JS -- class 31 react and redux
 
 ## Learning Objectives
 * students will learn to use redux with react 
