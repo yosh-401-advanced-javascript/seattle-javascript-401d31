@@ -5,9 +5,11 @@
 * Students will learn about lifting up state in react
 * Students will be able to pass data and callbacks into components using props
 * Students will be able to explain one way data binding
+* Students will be able to configure react router to have multipul views
 
 ## Readings 
 * [Lifting up State](https://facebook.github.io/react/docs/lifting-state-up.html)
+* [Brouse the React-Router Example Code](https://reacttraining.com/react-router/web/example/basic)
 
 ## White Board Challenge
 
@@ -29,3 +31,6 @@
 * Create an App with one root component that manages all Application state
   * Pass the root component state and setState through props to all child components
   * All components can manage their own view state, but application should be stored in the root component
+* `react-router-dom` is the defacto frontend router for react web apps
+  * routes can have params like express
+  * route component get access to a `history` prop that enables users to programaticly controll the route

@@ -16,7 +16,7 @@
 * 1hr Code Review
 * 1.5hr Code Demo
 
-## Lifecycle Hooks
+#### Lifecycle Hooks
 * `componentWillMount/componentDidMount` are great tools for fetching and validating data when a component appears on the page
 * `componentWillUpdate/componentDidUpdate` are great tools for triggering events on state changes. Useing these hooks makes the state act like an observable. If you `setState` in these lifecycle methods, be carful not to create an infnate loop!
 * `componentWillRecieveProps` is a great tool for validating, filtering, and modifying props that come in

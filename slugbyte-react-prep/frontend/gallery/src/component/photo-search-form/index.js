@@ -9,8 +9,7 @@ class PhotoSearchForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      description: '',
-      searchBy: 'photo'
+      searchText: '',
     };
 
     this.fetchData = throttle(this.fetchData, 300);
@@ -18,11 +17,17 @@ class PhotoSearchForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillMount(){
+    this.props.searchPhotosFetch({})
+    this.props.searchProfilesFetch({})
+  }
+
   fetchData(){
-    if(this.state.searchBy == 'photo')
-      this.props.searchPhotosFetch({description: this.state.description})
+    console.log('this.props.searchBy', this.props.searchBy)
+    if(this.props.searchBy == 'photo')
+      this.props.searchPhotosFetch({description: this.state.searchText})
     else 
-      console.log('fix me');
+      this.props.searchProfilesFetch({username: this.state.searchText})
   }
 
   handleChange(e){
@@ -46,31 +51,10 @@ class PhotoSearchForm extends React.Component {
         <input 
           type='text'
           placeholder='search'
-          name='description'
+          name='searchText'
           value={this.state.content}
           onChange={this.handleChange}
           />
-
-        <input
-          type='radio'
-          id='search-by-photo'
-          value='photo'
-          name='searchBy'
-          onChange={this.handleChange}
-          checked={this.state.searchBy === 'photo'}
-          />
-          <label htmlFor='search-by-photo'> photo </label>
-
-        <input
-          type='radio'
-          id='search-by-profile'
-          value='profile'
-          name='searchBy'
-          onChange={this.handleChange}
-          checked={this.state.searchBy === 'profile'}
-          />
-          <label htmlFor='search-by-profile'> profile </label>
-        
 
       </form>
     );
@@ -80,6 +64,7 @@ class PhotoSearchForm extends React.Component {
 let mapStateToProps = state => ({})
 let mapDispatchToProps = dispatch => ({
   searchPhotosFetch: query => dispatch(searchPhotosFetch(query)),
+  searchProfilesFetch: query => dispatch(searchProfilesFetch(query)),
 });
 
 export default connect(

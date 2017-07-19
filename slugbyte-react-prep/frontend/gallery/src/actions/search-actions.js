@@ -8,7 +8,7 @@ export let searchPhotosSet = (photos) => ({
 });
 
 export let searchProfilesSet = (profiles) => ({
-  type: 'SEARCH_PHOTOS_SET',
+  type: 'SEARCH_PROFILES_SET',
   payload: profiles,
 });
 
@@ -19,3 +19,9 @@ export let searchPhotosFetch = query => dispatch => {
   .then(photos => dispatch(searchPhotosSet(photos)))
 }
 
+export let searchProfilesFetch = query => dispatch => {
+  return superagent.get(`${__API_URL__}/gallery/search/profiles`)
+  .query(query)
+  .then(res => {console.log('response', res);return res.body})
+  .then(profiles => dispatch(searchProfilesSet(profiles)))
+}

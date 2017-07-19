@@ -50,7 +50,7 @@ profileRouter.put('/profiles/photo', bearerAuth, s3Upload('photo'), (req, res, n
   .catch(next)
 });
 
-processRouter.get('/search/profile', (req, res, next) => {
+profileRouter.get('/search/profiles', (req, res, next) => {
   let search = req.query
 
   for(let key in search){
