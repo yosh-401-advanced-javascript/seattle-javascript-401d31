@@ -38,7 +38,7 @@ store.dispatch({
 People often create convience functions called "action creators" that create action objects to be dispatched...  
 ``` javascript
 // an action creator for creating notes
-const createNote = (note) => ({ type: 'CREATE_NOTE", payload: note })
+const createNote = (note) => ({ type: 'CREATE_NOTE', payload: note })
 
 dispatch(createNote({id: '123456', content: 'hello again, world'}))
 ```
