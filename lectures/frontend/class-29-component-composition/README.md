@@ -9,6 +9,9 @@
 * [Lists and Keys](https://facebook.github.io/react/docs/lists-and-keys.html)
 * [Composition vs Inheritance](https://facebook.github.io/react/docs/composition-vs-inheritance.html)
 * [Thinking in React](https://facebook.github.io/react/docs/thinking-in-react.html)
+* Skim [Jest Docs](https://facebook.github.io/jest/docs/en/getting-started.html)
+* Skim [Enzyme Docs](https://github.com/airbnb/enzyme)
+
 
 ## Overview
 #### Component Composition
