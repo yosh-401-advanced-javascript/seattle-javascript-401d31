@@ -1,10 +1,12 @@
 import React from 'react'
+import Navbar from '../navbar'
 
 class AboutContainer extends React.Component {
   render(){
     return (
       <div className='about-container'>
-        <p> aslkdfj alskfj alksfjdlkajdf  cool </p>
+        <Navbar />
+        <p> about </p> 
       </div>
     )
   }

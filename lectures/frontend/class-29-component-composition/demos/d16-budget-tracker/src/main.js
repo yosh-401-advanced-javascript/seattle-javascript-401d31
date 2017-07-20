@@ -1,49 +1,44 @@
-import './style/main.scss'
-
-// npm modules
 import React from 'react'
 import ReactDom from 'react-dom'
 import {BrowserRouter, Route} from 'react-router-dom'
 
-// app modules
-import AboutContainer from './component/about-container';
-import DashboardContainer from './component/dashboard-container';
+import AboutContainer from './component/about-container'
+import DashboardContainer from './component/dashboard-container'
 
-
-// App's job is to hold all applicaiton state
 class App extends React.Component {
+  // constructor
   constructor(props){
     super(props)
     this.state = {
-      budget: 400,
+      total: 400,
       expenses: [],
     }
 
-    this.getApp = this.getApp.bind(this);
+    this.getApp = this.getApp.bind(this)
   }
 
+  //hooks 
   componentDidUpdate(){
-    console.log(':::STATE:::', this.state)
+    console.log('__STATE__', this.state)
   }
 
+  //methods
   getApp(){
     return {
       state: this.state,
-      setState: this.setState.bind(this),
+      setState: this.setState.bind(this)
     }
   }
 
+  //render
   render(){
     return (
-      <main>
+      <main className='app'>
         <BrowserRouter>
-          <div>
-            <Route exact path='/' component={AboutContainer} />
-            <Route exact path='/about' component={AboutContainer} />
-            <Route 
-              exact 
-              path='/dashboard' 
+          <div> 
+            <Route exact path='/' 
               component={() => <DashboardContainer app={this.getApp()} />} />
+            <Route exact path='/about' component={AboutContainer} />
           </div>
         </BrowserRouter>
       </main>
@@ -51,4 +46,8 @@ class App extends React.Component {
   }
 }
 
-ReactDom.render(<App />, document.getElementById('root'))
+// identical statements
+//<DashboardContainer app={this.getApp()} />
+//new DashboardContainer({app: this.getApp()})
+
+ReactDom.render(<App title='cool beans' />, document.getElementById('root'))
