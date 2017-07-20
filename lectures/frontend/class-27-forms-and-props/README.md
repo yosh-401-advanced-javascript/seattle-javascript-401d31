@@ -10,8 +10,6 @@
 * [State and Lifecycle](https://facebook.github.io/react/docs/state-and-lifecycle.html)
 * [Handling Events](https://facebook.github.io/react/docs/handling-events.html)
 * [Forms](https://facebook.github.io/react/docs/forms.html)
-* Skim [Jest Docs](https://facebook.github.io/jest/docs/en/getting-started.html)
-* Skim [Enzyme Docs](https://github.com/airbnb/enzyme)
 
 ## Overview
 
