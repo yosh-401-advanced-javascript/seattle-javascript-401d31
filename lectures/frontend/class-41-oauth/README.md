@@ -1,4 +1,4 @@
-# 401 JS -- class 
+# 401 JS -- class 41 OAuth Backend
 
 ## Learning Objectives
 * Students will learn to set up a Google Cloud appliction
