@@ -1,4 +1,4 @@
-# 401 JS -- class OAuth Continued
+# 401 JS -- class 42 OAuth Continued
 
 ## Learning Objectives
 * Students will learn Front End Oauth Workflow
