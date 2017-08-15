@@ -6,6 +6,7 @@
 
 ## fs Module Resources
 * Read [fs module docs]
+* Read [Understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 
 ## Learning Objectives
 * students will be able to create asynchronous programs using the node.js callback pattern
