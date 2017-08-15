@@ -2,14 +2,15 @@
 =====================================
 
 # Big O Resources
-* read [simple wiki big o]
-* watch [hacker rank big o video]
-* look at [big o cheat sheet]
+* Read [simple wiki big o]
+* Watch [hacker rank big o video]
+* Skim at [big o cheat sheet]
 
 # Functional programming resources
-* watch [funfunfunction functional programming video series]
-* read [what is functional programming]
-* skim [functional programming jargon]
+* Watch [funfunfunction functional programming video series]
+* Read [what is functional programming]
+* Read [Why functional programming](https://github.com/getify/Functional-Light-JS/blob/master/ch1.md)
+* Skim [functional programming jargon]
 
 # Learning Objectives
 * students will be able to determine and describe the runtime complexity of an algorithm
