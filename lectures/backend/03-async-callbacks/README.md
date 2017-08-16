@@ -44,11 +44,11 @@ When an asyncronous function called *foo* is invoked it is pushed on to the V8 C
 #### Event Loop
 The event loop is in charge of dequeueing callbacks from the V8 Callback Queue and pushing them on to the Call Stack. It has one rule for doing this. It will only push a callback on to the Call Stack if it is empty.
 * When the Call Stack pops its last function
- * The Event Loop will check if any callbacks are in the Callback Queue
- * If it finds a callback it will dequeue it from the Callback Queue and Push it on the Call Stack
+  * The Event Loop will check if any callbacks are in the Callback Queue
+  * If it finds a callback it will dequeue it from the Callback Queue and Push it on the Call Stack
 * When both the Call Stack and Callback Queue are empty
- * The Event Loop will watch the Callback Queue for new callbacks
- * When a callback is encuded it will be immediatly dequeued and pushed on to the Call Stack
+  * The Event Loop will watch the Callback Queue for new callbacks
+  * When a callback is encuded it will be immediatly dequeued and pushed on to the Call Stack
 
 ## NodeJS Callback Pattern
 NodeJS made the decision to have all asyncronus events be handled using error first callbacks. The main advantage of this is that all aysncrouns methods have a consisitant interface. This means that when you are working with Asyncrouns NodeJS code, you can allways assume how the callback is going to be fromated, making your life as a developer much easier! 
@@ -103,27 +103,23 @@ fs.readFile('/path/to/input.txt', (err, buffer) => {
       console.log(data.readFloatLE()) // prints the floating point number stored in the first 4 bytes
     ```
     
-## Working With Binary Data (Part 1)
-  * **High Level Overview**
-    * bits and bytes
-      * a bit is the smallest unit of data in a computer
-      * a bit contains a single binary value, 0 or 1
-      * a byte is comprised of 8 bits
-        * we often refer to a nibble as 4 bits (half of a byte)
-    * endianness
-      * refers to the order of bytes
-      * little endian
-        * bytes are written from left to right
-      * big endian
-        * bytes are written from right to left
 
+## Asynchronous Testing 
+ * Mocha, Jasmine, and Jest give us 2 sec to call `done` before a timeout error occurs
+   * invoke done after all the assertions have completed
+   * calling done to early will cause false positives
+   * passing a value into the done callback tells the testing framework that an error has occured
 
-
-## Asynchronous Testing with MochaJS
-  * **Calling `done`**
-    * MochaJS gives us 2 sec to call `done` before a timeout error occurs
-      * be sure to call `done` in the appropriate location (usually, this in your internal logic)
-      * calling `done` in the wrong block will likely cause a false positive test result
+``` javascript
+// example using it tests
+it('true should be true', (done) => {
+  setTimeount(() => {
+    expect(true).toBe(true)
+    done()
+  }, 0)
+  // invoking done here will be a false positve
+})
+```
 
 <!--links -->
 [what the heck is the event loop anyway]: https://www.youtube.com/watch?v=8aGhZQkoFbQ
