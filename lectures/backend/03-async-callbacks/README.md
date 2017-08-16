@@ -16,6 +16,7 @@
 
 ## Javascript Runtime
 #### Hoisting
+In javascript variable and function declartions get "hoisted" to top of your code before it runs. When the javascript runtime runs your code, it first re-organizes what you written so that all variable de... ** TO BE CONTINUED **
 * hoisting is JS default behavior of moving all declarations to the top of the current scope
 * only declarations are hoisted, not the initilization
   * declaring a variable is the actual creation of a variable, not the initilization
