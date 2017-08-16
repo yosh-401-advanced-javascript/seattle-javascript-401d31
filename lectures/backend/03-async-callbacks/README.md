@@ -82,7 +82,7 @@ fs.readFile('/path/to/input.txt', (err, buffer) => {
   fs.writeFile('path/to/output.txt', content, (err) => {
     if(err)
       throw err
-    console.log('done)
+    console.log('done')
   })
 })
 ```
