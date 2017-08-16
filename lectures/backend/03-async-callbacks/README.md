@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 03: Parallel File Processing
+![cf](http://i.imgur.com/7v5ASc8.png) 03: async callbacks
 =====================================
 
 ## JS Runtime Resources
@@ -14,49 +14,97 @@
 * students will be able to utilize the built-in `fs` module for basic file system I/O
 * students will be able to use the `done` parameter (provided by mocha.js) for creating asynchronous tests
 
-#### Advanced JS & Asynchronous Programming in NodeJS
-  * **Hoisting**
-    * hoisting is JS default behavior of moving all declarations to the top of the current scope
-    * only declarations are hoisted, not the initilization
-      * declaring a variable is the actual creation of a variable, not the initilization
-        * initilization refers to when a variable is assigned a value
-    * hoisting example:
-      ```
-        adder(num1, num2);
+## Javascript Runtime
+#### Hoisting
+* hoisting is JS default behavior of moving all declarations to the top of the current scope
+* only declarations are hoisted, not the initilization
+  * declaring a variable is the actual creation of a variable, not the initilization
+    * initilization refers to when a variable is assigned a value
+* hoisting example:
+  ```
+    adder(num1, num2);
 
-        var num1 = 10;
-        var num2 = 20;
+    var num1 = 10;
+    var num2 = 20;
 
-        function adder(a, b) {
-          return a + b;
-        };
-      ```
-    * in the above example, we are still able to call our `adder` function as the function declaration has been hoisted to the top of the current scope
+    function adder(a, b) {
+      return a + b;
+    };
+  ```
+* in the above example, we are still able to call our `adder` function as the function declaration has been hoisted to the top of the current scope
 
-  * **The Event Loop**
-    * the NodeJS event loop operates under a single thread
-      * it supports concurrency through the use of events and callbacks
-    * NodeJS uses many threads "underneath the hood" (libuv)
-      * we are programming at a higher abstraction - removing the need to deal with lower level threading
-    * when NodeJS starts up, it processes the input script then begins processing the event loop
-    * phases of the event loop:
-      * **poll** - retrieve new I/O events
-      * **check** - `setImmediate` callbacks are invoked
-      * **close callbacks** - connections are closed (`socket.on('close', function(){...})`)
-      * **timers** - scheduled callbacks are invoked
-      * **I/O callbacks** - executes all callbacks (with the exception of close callbacks, callbacks scheduled by timers, and `setImmediate`)
-      * **idle/prepare** - NodeJS sits in an idle state - only used internally
+#### Call Stack
+In javascript every syncronus function that is called is push onto a stack. When the function that is running returns it is poped off a stack. The function on top of the stack is allways the function that is currently running. 
 
-  * **NodeJS Callback Pattern**
-    * a callback is simply a function that is passed as an argument to another function
-    * defining an "error first" callback
-      * `(err, result)`
-      * the first callback is reserved for an error
-      * the second callback is reserved for any successful response data
-    * no more `if/else` statements!
-      * checking for errors first - `if (err) throw err`
-      * success code goes below error handling
+This stack is referd to as a callstack. The callstack is allways printed to the screen when an error is thrown, which helps developers to trace where errors have occurd in their code.
 
+#### Event Loop
+* the NodeJS event loop operates under a single thread
+  * it supports concurrency through the use of events and callbacks
+* NodeJS uses many threads "underneath the hood" (libuv)
+  * we are programming at a higher abstraction - removing the need to deal with lower level threading
+* when NodeJS starts up, it processes the input script then begins processing the event loop
+* phases of the event loop:
+  * **poll** - retrieve new I/O events
+  * **check** - `setImmediate` callbacks are invoked
+  * **close callbacks** - connections are closed (`socket.on('close', function(){...})`)
+  * **timers** - scheduled callbacks are invoked
+  * **I/O callbacks** - executes all callbacks (with the exception of close callbacks, callbacks scheduled by timers, and `setImmediate`)
+  * **idle/prepare** - NodeJS sits in an idle state - only used internally
+
+## NodeJS Callback Pattern
+NodeJS made the decision to have all asyncronus events be handled using error first callbacks. The main advantage of this is that all aysncrouns methods have a consisitant interface. This means that when you are working with Asyncrouns NodeJS code, you can allways assume how the callback is going to be fromated, making your life as a developer much easier! 
+
+Having a consistant callback interface also has made it possible for librarys to be written that javascript developers in handling complex async code. 
+
+* a callback is simply a function that is passed as an argument to another function
+* defining an "error first" callback
+  * `(err, result) => {}`
+  * the first paramiter is reserved for an error 
+    * the value will be null or undefiend if there is no error
+  * the second callback is reserved for any successful response data 
+    * the value will be null or undefiend if there is no data
+    * not every NodeJS method passes data into the callback. In methods that do not resolve data success is defined as a lack of an error
+
+## File System I/O
+* The NodeJS `fs` module gives us the ability to perform file system I/O operations. 
+* Most methods on the fs module have syncronous and asyncronous implimations
+* syncronous methos end in sync `readFileSync`
+* asyncronous methods do not contain the word sync `readFile`
+* Syncronus methods block javascript from exicuting further code until complete. This is a huge drawback, theirfor Syncronous methods are rarely if not used in webserver development
+
+``` javascript
+// example of how to copy a file using nodejs
+const fs = require('fs')
+
+fs.readFile('/path/to/input.txt', (err, buffer) => {
+  if(err)
+    throw err
+  let content = buffer.toString()
+  fs.writeFile('path/to/output.txt', content, (err) => {
+    if(err)
+      throw err
+    console.log('done)
+  })
+})
+```
+
+## Buffer
+* Buffer is a global constructor in nodejs
+* buffers are the data type used in node to work with binary data
+* a buffers hold Arrays of Bytes
+* The data in buffers can be decoded as integers, floating point numbers, and strings
+  * example:
+    ```
+      var dat = new Buffer('welcome to bufferville');
+      console.log(data);
+      console.log(data.toString()) // prints the original string
+      console.log(data.toString('hex')) // prints the strings data as hex digits
+      console.log(data.toString('utf8', 0, 1)) // prints the character stored in the first byte
+      console.log(data.readUInt8()) // prints the intiger stored in the first byte 
+      console.log(data.readFloatLE()) // prints the floating point number stored in the first 4 bytes
+    ```
+    
 ## Working With Binary Data (Part 1)
   * **High Level Overview**
     * bits and bytes
@@ -71,34 +119,7 @@
       * big endian
         * bytes are written from right to left
 
-  * **Working with Buffers**
-    * buffers are an array of bytes
-      * example:
-        ```
-          var buff = new Buffer('welcome to bufferville');
-          console.log(buff);
 
-          <Buffer 77 65 6c 63 6f 6d 65 20 74 6f 20 62 75 66 66 65 72 76 69 6c 6c 65>
-        ```
-    * NodeJS [buffer documentation](https://nodejs.org/api/buffer.html#buffer_buffer)
-    * common encoding types:
-      * utf-8 (default)
-        * `buff.toString()`
-      * base64
-        * `buff.toString('base64')`
-      * hex
-        * `buff.toString('hex')`
-
-## File System I/O
-  * the native NodeJS `fs` module gives us the ability to perform file system I/O operations
-  * we'll be using the asynchronous methods `fs.readFile` and `fs.writeFile`
-  * **`fs.readFile`**
-    * `readFile` creates a readable stream
-    * allows us to read the contents of a file
-
-  * **`fs.writeFile`**
-    * `writeFile` creates a writable stream
-    * allows us to write content to a file
 
 ## Asynchronous Testing with MochaJS
   * **Calling `done`**
