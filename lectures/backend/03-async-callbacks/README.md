@@ -34,23 +34,21 @@
 * in the above example, we are still able to call our `adder` function as the function declaration has been hoisted to the top of the current scope
 
 #### Call Stack
-In javascript every syncronus function that is called is push onto a stack. When the function that is running returns it is poped off a stack. The function on top of the stack is allways the function that is currently running. 
+In javascript every syncronus function that is called is push onto a stack in V8. When the function that is running returns it is poped off a stack. The function on top of the stack is allways the function that is currently running. 
 
-This stack is referd to as a callstack. The callstack is allways printed to the screen when an error is thrown, which helps developers to trace where errors have occurd in their code.
+This stack is referd to as a **Call Stack**. The Call Stack is allways printed to the screen when an error is thrown, which helps developers to trace where errors have occurd in their code.
+
+#### Callback Queue
+When an asyncronous function called *foo* is invoked it is pushed on to the V8 Call Stack. Then foo makes a call to A Browser API or Node API and passes on a callback. Then the *foo* function is poped of the V8 Call Stack, and V8 keeps on exicuting Syncronous. Meanwhile the external Browser/Node API is still running. Once the external API has completed its task it will pass any results into the callback and enqueue the callback on V8s **Callback Queue**. Functions stored on the Callback Queue are not exicuting, they are only waiting to be put on to the Call Stack so they can exicuted their code.
 
 #### Event Loop
-* the NodeJS event loop operates under a single thread
-  * it supports concurrency through the use of events and callbacks
-* NodeJS uses many threads "underneath the hood" (libuv)
-  * we are programming at a higher abstraction - removing the need to deal with lower level threading
-* when NodeJS starts up, it processes the input script then begins processing the event loop
-* phases of the event loop:
-  * **poll** - retrieve new I/O events
-  * **check** - `setImmediate` callbacks are invoked
-  * **close callbacks** - connections are closed (`socket.on('close', function(){...})`)
-  * **timers** - scheduled callbacks are invoked
-  * **I/O callbacks** - executes all callbacks (with the exception of close callbacks, callbacks scheduled by timers, and `setImmediate`)
-  * **idle/prepare** - NodeJS sits in an idle state - only used internally
+The event loop is in charge of dequeueing callbacks from the V8 Callback Queue and pushing them on to the Call Stack. It has one rule for doing this. It will only push a callback on to the Call Stack if it is empty.
+* When the Call Stack pops its last function
+ * The Event Loop will check if any callbacks are in the Callback Queue
+ * If it finds a callback it will dequeue it from the Callback Queue and Push it on the Call Stack
+* When both the Call Stack and Callback Queue are empty
+ * The Event Loop will watch the Callback Queue for new callbacks
+ * When a callback is encuded it will be immediatly dequeued and pushed on to the Call Stack
 
 ## NodeJS Callback Pattern
 NodeJS made the decision to have all asyncronus events be handled using error first callbacks. The main advantage of this is that all aysncrouns methods have a consisitant interface. This means that when you are working with Asyncrouns NodeJS code, you can allways assume how the callback is going to be fromated, making your life as a developer much easier! 
