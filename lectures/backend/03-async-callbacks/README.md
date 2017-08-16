@@ -94,7 +94,7 @@ fs.readFile('/path/to/input.txt', (err, buffer) => {
 * The data in buffers can be decoded as integers, floating point numbers, and strings
   * example:
     ```
-      var dat = new Buffer('welcome to bufferville')
+      var data = new Buffer('welcome to bufferville')
       console.log(data)
       console.log(data.toString()) // prints the original string
       console.log(data.toString('hex')) // prints the strings data as hex digits
