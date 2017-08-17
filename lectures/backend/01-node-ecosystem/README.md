@@ -6,20 +6,20 @@
 * Students will be able to write commonjs modules
 * Students will be able to to write unit tests for syncronous Javascript code.
 * Students will be able to use to test driven development methodologies
-
-## Node.js Resources
+## Resources 
+#### Node.js 
 * read [about nodejs]
 * skim [libuv docs]
 * skim [about v8]
 
-## NPM Resources
+#### NPM
 * read [what is npm]
 
-## ES6 Resources
+#### ES6 
 * read [just another guide to ES6]
 * skim [node and es6 docs]
 
-## Testing Resources
+#### Testing 
 * read [a gentle intro to tdd in js]
 * read [expect docs](http://chaijs.com/api/bdd/)
 * read [mocha getting started guide]
