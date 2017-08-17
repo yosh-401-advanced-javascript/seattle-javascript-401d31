@@ -24,31 +24,11 @@
 * students will be able to construct and run basic unit tests
 * students will be able explain the TDD philosophy of red, green, refactor
 
-#### Using Your Computer Like A Dev
-* people often develop bad habits of computer usage - these need to be unlearned
-* as a developer, it is **highly important** that you keep your file system organized
-* setup a directory for all your class work and don't deviate from working outside of this directory
-* here's some helpful tips:
-  * never put space bars in your file names
-  * use `-` or `_` instead - choose one and stick with it... *don't use both!*
-  * don't use capital letters in your file names, unless it's the standard convention (ex: README.md)
-    * some file systems (such as osx) don't keep track of casing - this can cause git issues
-* example directory structure:
-``` text
- * $HOME/
-  | - Desktop/
-  | - Downloads/
-  | - ...
-  | - cf-401/
-  |   | - labs/
-  |   |   | - lab-01-node-echosystem
-  |   |   | - lab-02-tools-and-context
-  |   |   | - ...
-  |   | - lecture-notes/
-  |   |   | - class-01-node-ecosystem
-  |   |   | - class-02-tools-and-context
-  |   |   | - ...
-  ```
+## Use Your Computer Like A Developer
+It's time to unlearn any bad computer usage habbits, you may have developed in you pre-programmer years. It is critical that you keep your file system organized. Writing code is dificult enough, so dont allow your problem to be finding your code on the file system. You should also come up with a system for naming your files, and never deviate from it!!! Keep all of your projects in one place, and allways use version control. Use best git pratices even when you are working on personal projects! Use the command line when ever posible, in the long run it will save you many hours of time. 
+
+#### File Naming Tips
+Name all of your files with cabob-case ("-" seporated words). Don't use uppercase letters unless you want the file to appear first when you run `ls`. It is standard to capitalize README.md for this reason.
 
 #### Node.JS
 * open source JS framework for programming JS on your operating system
