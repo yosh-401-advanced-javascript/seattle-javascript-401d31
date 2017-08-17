@@ -97,20 +97,21 @@ By default when a Javascript function belongs to an object, it is called a metho
 
 A functions context can be redefiend using the function methods `call`, `apply` and `bind`. 
 #### Call 
-`call` is a method on a function that invokes the function with a specified context and comma seporated arguments
+`call` is a function method that invokes the function with a specified context and comma seporated arguments
   
 ``` javascript
 Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpperCase(), '') 
 ```
 #### Apply 
-`apply` is a method on a function that invokes the function with a specified context and an array of arguments
+`apply` is a function method that invokes the function with a specified context and an array of arguments
 
 ``` javascript
 Array.prototype.reduce.apply('hello world', [(result, char) => char.toUpperCase(), '']) 
 ```
 #### Bind 
-bind is a method on a function that creates a new function with specified conttext and comma seporated default args
+`bind` is a function method that returns a new function with specified conttext and comma seporated default args
 ``` javascript
+// copy this code in a browser repl
 function childrenSet(...children){
   this.innerHTML = children.join(' ')
 }
