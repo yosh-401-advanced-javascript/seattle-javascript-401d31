@@ -16,23 +16,41 @@
 
 ## Javascript Runtime
 #### Hoisting
-In javascript variable and function declartions get "hoisted" to top of your code before it runs. When the javascript runtime runs your code, it first re-organizes what you written so that all variable de... ** TO BE CONTINUED **
-* hoisting is JS default behavior of moving all declarations to the top of the current scope
-* only declarations are hoisted, not the initilization
-  * declaring a variable is the actual creation of a variable, not the initilization
-    * initilization refers to when a variable is assigned a value
-* hoisting example:
-  ```
-    adder(num1, num2);
+In javascript variable and function declartions get "hoisted" to top of your code before it runs. When the javascript runtime executes your code, it first reorganizes what you have written so that all variable and function definitions are at the top of their current function scope. Developers that are new to Javascript often find hoisting strange, but its a feature of the language that cannot be disabled. Learn to use hoisting as a tool!
 
-    var num1 = 10;
-    var num2 = 20;
+``` javascript
+// code before hoisting (how a programmer wrote the code)
+var chars = ['a', 'b', 'c'];
+var result = upperCharList(chars);
+console.log(result);
 
-    function adder(a, b) {
-      return a + b;
-    };
-  ```
-* in the above example, we are still able to call our `adder` function as the function declaration has been hoisted to the top of the current scope
+function upperCharList(list){
+  var result = [];
+  for(var i=0; i<list.length; i++){
+    var upper = list[i].toUpperCase());
+    result.push(upper);
+  }
+  return result;
+}
+```
+
+``` javascript
+// after hoisting (how the code actualy runs)
+var chars, result;
+function upperCharList(list){
+  var result, i, upper;
+  result = [];
+  for(i=0; i<list.length; i++){
+    upper = list[i].toUpperCase();
+    result.push(upper);
+  }
+  return result;
+}
+
+chars = ['a', 'b', 'c'];
+result = upperCharList(chars);
+console.log(result)
+```
 
 #### Call Stack
 In javascript every syncronus function that is called is push onto a stack in V8. When the function that is running returns it is poped off a stack. The function on top of the stack is allways the function that is currently running. 
@@ -56,9 +74,9 @@ NodeJS made the decision to have all asyncronus events be handled using error fi
 
 Having a consistant callback interface also has made it possible for librarys to be written that javascript developers in handling complex async code. 
 
+#### Defining an error first callback
 * a callback is simply a function that is passed as an argument to another function
-* defining an "error first" callback
-  * `(err, result) => {}`
+* "error first" callbacks have the function signature `(err, result) => {}`
   * the first paramiter is reserved for an error 
     * the value will be null or undefiend if there is no error
   * the second callback is reserved for any successful response data 
@@ -66,11 +84,7 @@ Having a consistant callback interface also has made it possible for librarys to
     * not every NodeJS method passes data into the callback. In methods that do not resolve data success is defined as a lack of an error
 
 ## File System I/O
-* The NodeJS `fs` module gives us the ability to perform file system I/O operations. 
-* Most methods on the fs module have syncronous and asyncronous implimations
-* syncronous methos end in sync `readFileSync`
-* asyncronous methods do not contain the word sync `readFile`
-* Syncronus methods block javascript from exicuting further code until complete. This is a huge drawback, theirfor Syncronous methods are rarely if not used in webserver development
+The NodeJS `fs` module gives Node proggrammers the ability to perform file system opperations. The `fs` module has the ability to Create, Read, Update, and Delete files using many different methods. Most methods on the fs module have syncronous and asyncronous implimentatins. Syncronous methods end in _Sync_, like `fs.readFileSync`, and asyncronous method's lack the word _Sync_ in their names, like `fs.readFile`. This naming pattern is true across all the built in node modules. Syncronous methods block javascript from exicuting further code until they finish. This is a can be a huge drawback, therefor Syncronous methods are rarley used in web server development.
 
 ``` javascript
 // example of how to copy a file using nodejs
@@ -89,34 +103,29 @@ fs.readFile('/path/to/input.txt', (err, buffer) => {
 ```
 
 ## Buffer
-* Buffer is a global constructor in nodejs
-* buffers are the data type used in node to work with binary data
-* a buffers hold Arrays of Bytes
-* The data in buffers can be decoded as integers, floating point numbers, and strings
-  * example:
-    ```
-      var data = new Buffer('welcome to bufferville')
-      console.log(data)
-      console.log(data.toString()) // prints the original string
-      console.log(data.toString('hex')) // prints the strings data as hex digits
-      console.log(data.toString('utf8', 0, 1)) // prints the character stored in the first byte
-      console.log(data.readUInt8()) // prints the intiger stored in the first byte 
-      console.log(data.readFloatLE()) // prints the floating point number stored in the first 4 bytes
-    ```
+Buffers are nodes built in constuctor for woking with binary data, also called raw data. `Buffer` is a global constructor in NodeJs. When reading from the filesystem, network, or elsewhere data ususaly is presented to the devloper in the form of a buffer. Buffers are an array of bytes, with many useful methods for reading and writing data. The data in buffers can be decoded as integers, floating point numbers, and strings.
+ ```
+   var data = new Buffer('welcome to bufferville') // create a buffer using a string
+   console.log(data) // looks like hex when console logged, but its a buffer not a string!!!!
+   
+   console.log(data.toString()) // prints the original string
+   console.log(data.toString('hex')) // prints the strings data as hex digits
+   console.log(data.toString('utf8', 0, 1)) // prints the character stored in the first byte
+   console.log(data.readUInt8()) // prints the intiger stored in the first byte 
+   console.log(data.readFloatLE()) // prints the floating point number stored in the first 4 bytes
+ ```
     
 
-## Asynchronous Testing 
- * Mocha, Jasmine, and Jest give us 2 sec to call `done` before a timeout error occurs
-   * invoke done after all the assertions have completed
-   * calling done to early will cause false positives
-   * passing a value into the done callback tells the testing framework that an error has occured
+## Asynchronous Testing
+Testing frameworks like Mocha, Jasmine, and Jest support testing asyncronus code, by giving us a callback to invoke when our assertions are done. Tests have two seconds to call `done` callback before a timeout error occurs. The testing frameworks will treat any value passed into the `done` callback as an error.
 
 ``` javascript
-// example using it tests
+// example using done in "it" tests
 it('true should be true', (done) => {
   setTimeount(() => {
     expect(true).toBe(true)
     done()
+    // done('any value`) // passing a value into done makes the test fail
   }, 0)
   // invoking done here will be a false positve
 })
