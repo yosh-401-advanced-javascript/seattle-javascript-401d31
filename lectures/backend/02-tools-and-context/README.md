@@ -12,6 +12,9 @@
 #### package.json Resources
 * read [about package.json]
 
+#### Error Resources
+* read [node error docs]
+
 #### NPM Script Resources
 * skim [npm scripts as build tools]
 * skim [npm scripts docs]
@@ -25,13 +28,10 @@
 * skim [mdn object prototype]
 * read [mdn inheritance and the prototype chain]
 
-#### Error Resources
-* read [node error docs]
-
 ## package.json
 The `package.json` file is used to descibe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version`. If a package has external dependieces they are list by name and version under the fields `dependencies` and `devDependencies`. If the package depenends on an extenral package to run the external package should be listed under `dependencies`. If the external package is only needed in development (like a testing framework) it should be listend under `devDependencies`. package.json files can have a `scripts` field where keys can be associated with unix commands. npm scripts have the added benifit that they can run any command line utility (CLI) defined in a dependencie, without globally installing the CLI on you opperating system. 
 
-## Node Errors
+## Errors
 Error messages are super important tools for debugging broken code. Javascript has many built in error messages, but you can also define your own errors in your programs. Its important to not to forget that errors will happen in production. Error logs are kept in order to fix bugs in prodctions. Writing good error messages is critical for finding and fixing bugs in deployed applications. 
 
 #### Writing good error messages
