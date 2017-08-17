@@ -28,35 +28,10 @@
 It's time to unlearn any bad computer usage habbits, you may have developed in you pre-programmer years. It is critical that you keep your file system organized. Writing code is dificult enough, so dont allow your problem to be finding your code on the file system. You should also come up with a system for naming your files, and never deviate from it!!! Keep all of your projects in one place, and allways use version control. Use best git pratices even when you are working on personal projects! Use the command line when ever posible, in the long run it will save you many hours of time. 
 
 #### File Naming Tips
-Name all of your files with cabob-case ("-" seporated words). Don't use uppercase letters unless you want the file to appear first when you run `ls`. It is standard to capitalize README.md for this reason.
+Name all of your files with cabob-case ("-" seporated words). Don't use uppercase letters unless you want the file to appear first when you run `ls`. In git projects it is standard to capitalize README.md for this reason.
 
-#### Node.JS
-* open source JS framework for programming JS on your operating system
-* built for creating dynamic web applications
-* built on Chrome’s JS runtime, V8
-  * V8 compiles JS to native machine code
-  * code ran in the browser gets compiled in V8
-* written in C++ (libuv) and JS
-* built for asynchronous I/O operations (using libuv)
-  * this save developers from having to worry about complicated concurrent programming patterns!
-* utilizes an event driven, non-blocking architecture
-  * node.js only does work when events are triggered
-  * when node.js has no work to be done, it sleeps
-* lightweight and efficient
-* contains a rich ecosystem of available packages (NPM)
-* the node.js docs include a stability index
-  * 0 - deprecated - don't use the feature
-  * 1 - experimental - don't use this feature in something you care about
-  * 2 - stable - fine to use
-  * 3 - locked - fine to use
-
-#### NPM
-* NPM is the primary package manager for installing javascript in node.js
-* NPM is composed of the following
-  * a registry where all the packages are hosted
-  * a search engine where you can find packages
-  * a CLI where that helps you interface with the registry
-  * a for profit organization
+## NodeJS
+NodeJS is an open source framework for writing javascript on your operating system. Node is compromised of the **V8** Javascript runtime, and the **NodeAPIs**. V8 is the Javascript runtime developed for the Chrome browser, and is written in C and C++. The Node APIs are writtend in C, C++, and Javascript. Node was developed to enabled developers to easily write code with asynchronous input and output (IO). In many other langauges asyncronous IO creates a lot of work for developers, and can be error prone. Node uses an event loop driven non-blocking architecture, that enables node to have a very low overhead when it is not running. Node has an increadibly rich ecosystem of packages available through the Node Package Manager (NPM). 
 
 #### Testing and TDD
 * test driven development
