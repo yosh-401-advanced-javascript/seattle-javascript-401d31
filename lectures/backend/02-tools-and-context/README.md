@@ -92,7 +92,39 @@ try {
 * `EPERM` - an attempt to do something that you currently don't have permissions to do
 * `EPIPE` - an attempt to write data to a connection that had been closed
 
-### Call, Bind, Apply
+## Context 
+By default when a Javascript function belongs to an object, it is called a method. The object the method belongs to is called the methods **context**. In a function the keyword `this` points to the it's context. 
+
+A functions context can be redefiend using the function methods `call`, `apply` and `bind`. 
+#### Call 
+`call` is a method on a function that invokes the function with a specified context and comma seporated arguments
+  
+``` javascript
+Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpperCase(), '') 
+```
+#### Apply 
+`apply` is a method on a function that invokes the function with a specified context and an array of arguments
+
+``` javascript
+Array.prototype.reduce.apply('hello world', [(result, char) => char.toUpperCase(), '']) 
+```
+#### Bind 
+bind is a method on a function that creates a new function with specified conttext and comma seporated default args
+``` javascript
+function setTextContent(...args){
+  this.textContent = args.join(' ')
+}
+
+const clearBody = setTextContent.bind(document.body)
+const setLogo = setTextContent.bind(document.getElementById('logo'), 'code fellows')
+const setWarning = setTextContent.bind(document.getElementById('warning'), 'WARNING:')
+
+clearBody()
+setLogo()
+setWarning('password is required')
+
+```
+
 * when a function has a `this`, we say that `this` is the function's context
 * unlike scope, a function's context can be configured
 * if a function is not a property on an object, by default it has no context
