@@ -91,14 +91,13 @@ The NodeJS `fs` module gives Node proggrammers the ability to perform file syste
 ``` javascript
 // example of how to copy a file using nodejs
 const fs = require('fs')
+const inputFile = './path/to/input.txt'
+const outputFile = './path/to/output.txt'
 
-fs.readFile('/path/to/input.txt', (err, buffer) => {
-  if(err)
-    throw err
-  let content = buffer.toString()
-  fs.writeFile('path/to/output.txt', content, (err) => {
-    if(err)
-      throw err
+fs.readFile(inputFile, (err, buffer) => {
+  if(err) throw err
+  fs.writeFile(outputFile, buffer, (err) => {
+    if(err) throw err
     console.log('done')
   })
 })
