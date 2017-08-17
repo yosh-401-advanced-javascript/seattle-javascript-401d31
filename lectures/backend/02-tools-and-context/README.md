@@ -100,7 +100,7 @@ Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpp
 `apply` is a function method that invokes the function with a specified context and an array of arguments
 
 ``` javascript
-let args = [(result, char) => char.toUpperCase(), '']
+let args = [(result, char) => result + char.toUpperCase(), '']
 Array.prototype.reduce.apply('hello world', args) 
 ```
 #### Bind 
