@@ -138,19 +138,6 @@ warningGet().addEventListener('click', () => {
 })
 ```
 
-* when a function has a `this`, we say that `this` is the function's context
-* unlike scope, a function's context can be configured
-* if a function is not a property on an object, by default it has no context
-* if a function is a property on an object, by default, that object is the context for that function
-* `call`, `bind`, and `apply` are function prototype methods that allow us to change the context of a function
-* `call` is a method on a function that invokes a function with a specified context and arguments  
-  * `call` passes comma separated arguments
-* `apply` is a method on a function that invokes a function with a specified context and arguments  
-  * `apply` passes arguments from an array  
-* note: don't mess with the `__proto__` property - it's slow
-  * if you want to determine an object's prototype, use `Object.getPrototypeOf(someObject)`
-  * nesting a large amount of prototype methods will have a performance impact on your code - be careful!
-
 <!--links -->
 [node error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html
 [about package.json]: https://docs.npmjs.com/files/package.json
