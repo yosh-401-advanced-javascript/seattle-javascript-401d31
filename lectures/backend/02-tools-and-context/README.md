@@ -43,6 +43,7 @@ A great error message should have the following features
 * a severity level (low, med high) or (0 - 10)
 
 ``` javascript
+// creating a smart error
 class Bug extends Error {
   constructor({problem, cause, level=0, timestamp=new Date().toISOString()}){
     super(`__ERROR__ ${problem}: ${cause} (LEVEL ${level}) (TIMESTAMP ${timestamp})`)
