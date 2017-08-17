@@ -2,10 +2,11 @@
 =====================================
 
 ## Learning Objectives
-* students will be able to create asynchronous programs using the node.js callback pattern
-* students will be able to read, write, and encode binary data using the `Buffer` class
-* students will be able to utilize the built-in `fs` module for basic file system I/O
-* students will be able to use the `done` parameter (provided by mocha.js) for creating asynchronous tests
+* Students will understand the how syncronous and asyncronous code runs in the Javascript runtime
+* Students will be able to manage asyncrous data flow using error first callbacks
+* Students will be able to utilize the asyncronous methods on the built-in node modules
+* Students will be able to work with raw data using Node's Buffers
+* Students will be able to test asyncronous code using a BDD testing framework 
 
 ## Resources
 #### JS Runtime Resources
