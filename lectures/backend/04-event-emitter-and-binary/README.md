@@ -105,7 +105,7 @@ Signed |Unsigned
 ```
 
 #### Floating Point Numbers
-Modern floting point numbers come in 16, 32, and 64 bits. The bits are devided into three unsigned numbers used to form scientific notation. 
+Modern floting point numbers come in 16, 32, and 64 bits. The bits are devided into three unsigned numbers used to form scientific notation. The first bit is aboolean value that determine the sign of the numer. The next few bits are an exponent. and the following bits are the significant digits
 
 | TYPE | Sign | Exponent | Significant digits | Total Bits |
 | ---- | ---- | -------- | ------------------ | ---------- |
@@ -113,6 +113,15 @@ Modern floting point numbers come in 16, 32, and 64 bits. The bits are devided i
 | Single | 1 | 8 | 23 | 32 | 
 | Double | 1 | 11 | 52 | 64 |
 
+```
+signed 
+s 5     2
+1 00101 0000000010   (
+
+unsigned
+u 10    9
+0 01010 0000001001
+```
 * below is decimal hex binary conversion chart
 ``` text
 DEC |HEX |BIN
