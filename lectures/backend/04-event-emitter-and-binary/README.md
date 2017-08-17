@@ -25,6 +25,8 @@
 ## Binary
 You probably know that everything in the computer is stored in 0s and 1s. As web developers we don't often have to work with data at such a low level, instead we usualy get to work with Strings, Numbers, Arrays, Objects, and so on. Though most of the time we are lucky enough to work with such abstracted data types, sometimes we are required to undestand how data is stored in binary. There are predefined specifications for how to decode number and strings from binary. The majority of the data we work with is made up of numbers and strings. For example Numbers and Strings are used to make more compex things like JSON, XML, HTML, JPEG, GIF, MP3, MP4, and even Javascript. Undersanding how to manipulate binary data on a more fundamental leval, can open up doors for having much more control over the data in our applications.
 
+#### Bytes
+
 #### Strings 
 ```
   0 nul    1 soh    2 stx    3 etx    4 eot    5 enq    6 ack    7 bel
