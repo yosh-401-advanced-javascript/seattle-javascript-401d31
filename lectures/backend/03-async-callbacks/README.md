@@ -2,10 +2,10 @@
 =====================================
 ## Resources
 #### JS Runtime Resources
-* Watch [what the heck is the event loop anyway]
+* Watch [what the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
 #### fs Module Resources
-* Read [fs module docs]
+* Read [fs module docs](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
 * Read [Understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 
 #### Learning Objectives
@@ -15,6 +15,8 @@
 * students will be able to use the `done` parameter (provided by mocha.js) for creating asynchronous tests
 
 ## Javascript Runtime
+There are many Javscript runtimes. V8 is the name of the runtime used in Chrome browsers and NodeJS. V8 will be used in the following descriptions of how javascript a runtime works, but other browsers and javascript environments have the same behaveiors.
+
 #### Hoisting
 In javascript variable and function declartions get "hoisted" to top of your code before it runs. When the javascript runtime executes your code, it first reorganizes what you have written so that all variable and function definitions are at the top of their current function scope. Developers that are new to Javascript often find hoisting strange, but its a feature of the language that cannot be disabled. Learn to use hoisting as a tool!
 
@@ -53,12 +55,10 @@ console.log(result)
 ```
 
 #### Call Stack
-In javascript every syncronus function that is called is push onto a stack in V8. When the function that is running returns it is poped off a stack. The function on top of the stack is allways the function that is currently running. 
-
-This stack is referd to as a **Call Stack**. The Call Stack is allways printed to the screen when an error is thrown, which helps developers to trace where errors have occurd in their code.
+In javascript every syncronus function that is called is push onto a stack in V8. The function on top of the stack is allways the function that is currently executing. When the function that is running returns it is poped off a stack. This stack is referd to as a **Call Stack**. V8 has a single Call Stack, therefor only one function can be running at a time. The Call Stack is allways printed to the screen when an error is thrown, which helps developers to trace where errors have occurd in their code. 
 
 #### Callback Queue
-When an asyncronous function called *foo* is invoked it is pushed on to the V8 Call Stack. Then foo makes a call to A Browser API or Node API and passes on a callback. Then the *foo* function is poped of the V8 Call Stack, and V8 keeps on exicuting Syncronous. Meanwhile the external Browser/Node API is still running. Once the external API has completed its task it will pass any results into the callback and enqueue the callback on V8s **Callback Queue**. Functions stored on the Callback Queue are not exicuting, they are only waiting to be put on to the Call Stack so they can exicuted their code.
+When an asyncronous function called *"foo"* is invoked it is pushed onto the V8 Call Stack. Then *"foo"* makes a call to a Browser/Node API and passes on a callback. Then the *"foo"* function returns and is poped of the Call Stack, and V8 keeps on exicuting Syncronous code. Meanwhile the external Browser/Node API is still running. Once the external API has completed its task it will pass any results into the callback and enqueue the callback on V8s **Callback Queue**. Functions stored on the Callback Queue are not executing, they are only waiting to be put on to the Call Stack.
 
 #### Event Loop
 The event loop is in charge of dequeueing callbacks from the V8 Callback Queue and pushing them on to the Call Stack. It has one rule for doing this. It will only push a callback on to the Call Stack if it is empty.
@@ -130,7 +130,3 @@ it('true should be true', (done) => {
   // invoking done here will be a false positve
 })
 ```
-
-<!--links -->
-[what the heck is the event loop anyway]: https://www.youtube.com/watch?v=8aGhZQkoFbQ
-[fs module docs]: https://nodejs.org/dist/latest-v6.x/docs/api/fs.html
