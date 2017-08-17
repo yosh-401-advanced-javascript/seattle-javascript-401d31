@@ -69,6 +69,16 @@ try {
 }
 ```
 
+#### Error Cheat Sheet
+| Type |  Reason |
+| --- | --- | 
+| Error | generic error |
+| ReferenceError | an attempt was made to access a variable that is not defiend |
+| SyntaxError | the javascript is not valid |
+| TypeError | a provided argument was no the allowable type |
+| SystemError | a NodeJS error that occurs when a system error has occured | 
+
+
 #### Error
 * a generic error
 * `.stack` - a **String** describing the point in the code where the `Error` was instantiated
