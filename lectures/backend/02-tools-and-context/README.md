@@ -111,25 +111,30 @@ Array.prototype.reduce.apply('hello world', [(result, char) => char.toUpperCase(
 #### Bind 
 bind is a method on a function that creates a new function with specified conttext and comma seporated default args
 ``` javascript
-function setTextContent(...args){
-  this.textContent = args.join(' ')
-}
-
-function setInnerChildren(children){
+function childrenSet(...children){
   this.innerHTML = children.join(' ')
 }
 
-const bodyClear = setTextContent.bind(document.body)
-const viewInit = setInnerChildren.bind(document.body, ['<div id="logo"></div>', '<div id="warning"></div>'])
+// init view
+childrenSet.call(document.body, '<div id="logo"></div>', '<div id="warning"></div>')
 
-clearBody()
-initView()
+// create dom helpers
+const bodyClear = childrenSet.bind(document.body)
+const logoGet = () => document.getElementById('logo')
+const warningGet = () => document.getElementById('warning')
+const logoSet = childrenSet.bind(logoGet(), 'code fellows')
+const warningSet = childrenSet.bind(warningGet(), 'WARNING:')
 
-const setLogo = setTextContent.bind(document.getElementById('logo'), 'code fellows')
-const setWarning = setTextContent.bind(document.getElementById('warning'), 'WARNING:')
+logoSet()
+warningSet('password is required')
 
-setLogo()
-setWarning('password is required')
+logoGet().addEventListener('click', () => {
+  bodyClear()
+})
+
+warningGet().addEventListener('click', () => {
+  warningSet('the sky is falling')
+})
 ```
 
 * when a function has a `this`, we say that `this` is the function's context
