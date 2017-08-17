@@ -78,42 +78,19 @@ try {
 | TypeError | a provided argument was no the allowable type |
 | SystemError | a NodeJS error that occurs when a system error has occured | 
 
-
-#### Error
-* a generic error
-* `.stack` - a **String** describing the point in the code where the `Error` was instantiated
-* `.message` - a **String** description set by calling the `new Error(message)`  
-
-#### ReferenceError
-* indicates that an attempt is being made to access a variable that is not defined
-* `ReferenceError` is a subclass of `Error`  
-
-#### SyntaxError
-* indicates a program is not valid javascript
-* `SyntaxError` is a subclass of `Error`  
-
-#### TypeError
-* indicates that a provided argument is not an allowable type
-* `TypeError` is a subclass of `Error`    
-
-#### SystemError
-* `.code` - A **String** describing the error code
-* `.errno` - A **Number** describing the error code
-* `.syscall` - A **String** describing the system call that failed
-* `SystemError` is **not** a subclass of `Error`
-* Common System Errors
-  * `EACCESS` - an attempt to access a file without the right permissions
-  * `EADDRINUSE` - an attempt to start a server on a PORT that is already in use
-  * `ECONNREFUSED` - a connection was deliberately refused by the target machine
-  * `ECONNRESET` - a connection was forcibly closed by a peer
-  * `EEXIST` - a file exists and the attempted action required that it didn't
-  * `EISDIR` - an action expected to act on a file but found a directory
-  * `EMFILE` - too many files were open for your operating system to handle
-  * `ENOENT` - an action expected a file, but did not find one
-  * `ENOTDIR` - an action expected a directory, but found something else
-  * `ENOTEMPTY` - an action expected an empty directory, but found one with data in it
-  * `EPERM` - an attempt to do something that you currently don't have permissions to do
-  * `EPIPE` - an attempt to write data to a connection that had been closed
+###### System Error Cheat Sheet 
+* `EACCESS` - an attempt to access a file without the right permissions
+* `EADDRINUSE` - an attempt to start a server on a PORT that is already in use
+* `ECONNREFUSED` - a connection was deliberately refused by the target machine
+* `ECONNRESET` - a connection was forcibly closed by a peer
+* `EEXIST` - a file exists and the attempted action required that it didn't
+* `EISDIR` - an action expected to act on a file but found a directory
+* `EMFILE` - too many files were open for your operating system to handle
+* `ENOENT` - an action expected a file, but did not find one
+* `ENOTDIR` - an action expected a directory, but found something else
+* `ENOTEMPTY` - an action expected an empty directory, but found one with data in it
+* `EPERM` - an attempt to do something that you currently don't have permissions to do
+* `EPIPE` - an attempt to write data to a connection that had been closed
 
 ### Call, Bind, Apply
 * when a function has a `this`, we say that `this` is the function's context
