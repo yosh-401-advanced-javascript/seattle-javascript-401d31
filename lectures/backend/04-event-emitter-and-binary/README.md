@@ -27,6 +27,9 @@ You probably know that everything in the computer is stored in 0s and 1s. As web
 
 #### Bytes
 
+> bash line for printing out a 0 - 255 in decimal and binary
+`$ i=-1; for x in {0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1};do (( i += 1 )); echo $i $x; done |less`
+
 #### Strings 
 ```
   0 nul    1 soh    2 stx    3 etx    4 eot    5 enq    6 ack    7 bel
@@ -50,6 +53,7 @@ You probably know that everything in the computer is stored in 0s and 1s. As web
 #### Integers
 #### Floating Point Numbers
 
+```
 
 ```
 HOW DECMAL WORKS...
