@@ -8,7 +8,7 @@
 * Read [fs module docs](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
 * Read [Understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 
-#### Learning Objectives
+## Learning Objectives
 * students will be able to create asynchronous programs using the node.js callback pattern
 * students will be able to read, write, and encode binary data using the `Buffer` class
 * students will be able to utilize the built-in `fs` module for basic file system I/O
