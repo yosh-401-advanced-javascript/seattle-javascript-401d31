@@ -111,25 +111,22 @@ Array.prototype.reduce.apply('hello world', [(result, char) => char.toUpperCase(
 #### Bind 
 bind is a method on a function that creates a new function with specified conttext and comma seporated default args
 ``` javascript
-function initView(){
-  let logo = document.createElement('div') 
-  let warning = document.createElement('div')
-  logo.id = 'logo'
-  warning.id = 'warning'
-  document.body.appendChild(logo)
-  document.body.appendChild(warning)
-}
-
 function setTextContent(...args){
   this.textContent = args.join(' ')
 }
 
-const clearBody = setTextContent.bind(document.body)
-const setLogo = setTextContent.bind(document.getElementById('logo'), 'code fellows')
-const setWarning = setTextContent.bind(document.getElementById('warning'), 'WARNING:')
+function setInnerChildren(children){
+  this.innerHTML = children.join(' ')
+}
+
+const bodyClear = setTextContent.bind(document.body)
+const viewInit = setInnerChildren.bind(document.body, ['<div id="logo"></div>', '<div id="warning"></div>'])
 
 clearBody()
 initView()
+
+const setLogo = setTextContent.bind(document.getElementById('logo'), 'code fellows')
+const setWarning = setTextContent.bind(document.getElementById('warning'), 'WARNING:')
 
 setLogo()
 setWarning('password is required')
