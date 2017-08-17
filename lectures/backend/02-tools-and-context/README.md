@@ -100,7 +100,8 @@ Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpp
 `apply` is a function method that invokes the function with a specified context and an array of arguments
 
 ``` javascript
-Array.prototype.reduce.apply('hello world', [(result, char) => char.toUpperCase(), '']) 
+let args = [(result, char) => char.toUpperCase(), '']
+Array.prototype.reduce.apply('hello world', args) 
 ```
 #### Bind 
 `bind` is a function method that returns a new function with specified conttext and comma seporated default args
