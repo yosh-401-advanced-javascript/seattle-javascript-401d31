@@ -57,6 +57,18 @@ class Bug extends Error {
 let error = new Bug({problem: 'cannot create user', cause: 'requires password'})
 ```
 
+#### Handling Thrown Errors
+Javascript functions can throw errors. Throwing errors is a great way to force developers to use a function correctly, because unhandled errors will crash javascript and stop progam execution. The is a saying to describe this "Fail Fast". The idea is the sooner the code fails the sooner a developer will find their bugs and fix them. Though throwing errors is a useful feature of the langauge, programs like servers need a way to continue running inspite of bugs in the code. Javascript has a `try {} catch (error) {}` syntax for handling ths. 
+``` javascript 
+let userInput = '{'
+try {
+ let data = JSON.parse(userInput)
+ // do something with data
+} catch(e) {
+  console.error(e)
+}
+```
+
 #### Error
 * a generic error
 * `.stack` - a **String** describing the point in the code where the `Error` was instantiated
@@ -92,19 +104,6 @@ let error = new Bug({problem: 'cannot create user', cause: 'requires password'})
   * `ENOTEMPTY` - an action expected an empty directory, but found one with data in it
   * `EPERM` - an attempt to do something that you currently don't have permissions to do
   * `EPIPE` - an attempt to write data to a connection that had been closed
-
-## Throw Try Catch
-* if an error is thown and is not handled, the program will crash
-* `try`/`catch` blocks allow you to safely throw an error and handle it
-``` javascript
-let userInput = '{'
-try {
- let data = JSON.parse(userInput)
- // do something with data
-} catch(e) {
-  console.error(e)
-}
-```
 
 ### Call, Bind, Apply
 * when a function has a `this`, we say that `this` is the function's context
