@@ -104,12 +104,12 @@ Array.prototype.reduce.apply('hello world', [(result, char) => char.toUpperCase(
 #### Bind 
 `bind` is a function method that returns a new function with specified conttext and comma seporated default args
 ``` javascript
-// copy this code in a browser repl
+// define a generic dom mutation function
 function childrenSet(...children){
   this.innerHTML = children.join(' ')
 }
 
-// init view
+// reset the dom using childrenSet and call
 childrenSet.call(document.body, '<div id="logo"></div>', '<div id="warning"></div>')
 
 // create dom mutation helpers using bind 
@@ -119,6 +119,7 @@ const warningGet = () => document.getElementById('warning')
 const logoSet = childrenSet.bind(logoGet(), 'code fellows')
 const warningSet = childrenSet.bind(warningGet(), 'WARNING:')
 
+// use the dom mutation helpers
 logoSet()
 warningSet('password is required')
 
