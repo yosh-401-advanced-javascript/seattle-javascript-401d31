@@ -1,5 +1,12 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 03: async callbacks
 =====================================
+
+## Learning Objectives
+* students will be able to create asynchronous programs using the node.js callback pattern
+* students will be able to read, write, and encode binary data using the `Buffer` class
+* students will be able to utilize the built-in `fs` module for basic file system I/O
+* students will be able to use the `done` parameter (provided by mocha.js) for creating asynchronous tests
+
 ## Resources
 #### JS Runtime Resources
 * Watch [what the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
@@ -7,12 +14,6 @@
 #### fs Module Resources
 * Read [fs module docs](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
 * Read [Understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
-
-## Learning Objectives
-* students will be able to create asynchronous programs using the node.js callback pattern
-* students will be able to read, write, and encode binary data using the `Buffer` class
-* students will be able to utilize the built-in `fs` module for basic file system I/O
-* students will be able to use the `done` parameter (provided by mocha.js) for creating asynchronous tests
 
 ## Javascript Runtime
 There are many Javscript runtimes. V8 is the name of the runtime used in Chrome browsers and NodeJS. V8 will be used in the following descriptions of how javascript a runtime works, but other browsers and javascript environments have the same behaveiors.
