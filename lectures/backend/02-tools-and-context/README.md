@@ -52,6 +52,8 @@ class Bug extends Error {
     this.timestamp = timestamp
   }
 }
+
+let error = new Bug({problem: 'cannot create user', cause: 'requires password'})
 ```
 
 #### Error
