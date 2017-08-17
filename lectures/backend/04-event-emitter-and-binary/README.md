@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 04: Bitmap Transformer & Event Emitter
+![cf](http://i.imgur.com/7v5ASc8.png) 04: EventEmitter and Binary Data
 =====================================
 
 ## Event Emitter Resources
