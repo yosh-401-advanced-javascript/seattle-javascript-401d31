@@ -26,12 +26,12 @@
 You probably know that everything in the computer is stored in 0s and 1s. As web developers we don't often have to work with data at such a low level, instead we usualy get to work with Strings, Numbers, Arrays, Objects, and so on. Though most of the time we are lucky enough to work with such abstracted data types, sometimes we are required to undestand how data is stored in binary. There are predefined specifications for how to decode number and strings from binary. The majority of the data we work with is made up of numbers and strings. For example Numbers and Strings are used to make more compex things like JSON, XML, HTML, JPEG, GIF, MP3, MP4, and even Javascript. Undersanding how to manipulate binary data on a more fundamental leval, can open up doors for having much more control over the data in our applications.
 
 #### Bytes
+A byte is 8 zeros and ones `00101101`. Bytes are one of the fundamental units that programmers use to work with binary data. A byte can hold one ascii character, a number between 0 and 255, a number between -128 and 127, and anything else that has up to 256 units. 
 
-> bash line for printing out a 0 - 255 in decimal and binary  
+#### Strings
+Strings are made from arrays of characters. Every byte in a binary file can be decoded as a character using the `ascii` or `utf8` charicter specifications. The ASCII standard has been around since the early sixtys, and was used to encode charicters of a single locale (language). It is litteraly a map between numbers 0 to 127 and specific characters. Meaning that when you find the number 97 in a byte, that byte can also be decoded as the letter 'a'. This only works by making computers and programers conform to the specification. As computers gained more memory and found reasons to support more charicter sets, the `utf8` specification was created. UTF8 is a variable length byte encoding that allows bytes to be chained together to form a  charicter set large enough to suport every loacle, symbols, and emojii at once. UTF8 was designed as a superset of ASCII in order keep backwards compatability.  
 
-`i=-1; for x in {0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1};do (( i += 1 )); printf "%3d %s\n" $i $x; done |less`
-
-#### Strings 
+###### ASCII Table
 ```
   0 nul    1 soh    2 stx    3 etx    4 eot    5 enq    6 ack    7 bel
   8 bs     9 ht    10 nl    11 vt    12 np    13 cr    14 so    15 si
@@ -52,9 +52,7 @@ You probably know that everything in the computer is stored in 0s and 1s. As web
 ```
 
 #### Integers
-#### Floating Point Numbers
-
-```
+In order to understand how integers are encoded in zeros and ones, its important to understand how decimal notation works. In decimal every digit is worth it self times ten to the power of its place. In binary this only changes slightly, every digit is worth it self times **TWO** to the power of its place. Integers can either be decoded as `signed` or `unsigned`. Signed numbers can be negitiave or postive, and unsigned numbers can only be positive.
 
 ```
 HOW DECMAL WORKS...
@@ -70,7 +68,7 @@ value     06974
 
 ----------------------------------------------------------------------
 
-HOW BINARY WORKS
+HOW UNSIGNED BINARY WORKS
 
 places    43210
 _______________
@@ -80,11 +78,33 @@ value     01011
 1010 base 2 is the same as (1 * 8) + (0 * 4) + (1 * 2) + (1 * 1)
 1010 base 2 is the same as (8) + (0) + (2) + (1)
 1010 base 2 is the same as 11
-
-----------------------------------------------------------------------
-
-Hex is the same ...
 ```
+
+###### Signed vs Unsigned
+Signed integers make a rule that the first bit represets weather or not a numbers is positive or negative. Unsigned numbers use that bit as a noth place to hold a value. In twos complament the number after the singed bit is added two the minimum possible value for the total number of bits
+```
+Signed |Unsigned 
+-----------------.
+ 0     |0        |0000
+ 1     |1        |0001   
+ 2     |2        |0010   
+ 3     |3        |0011   
+ 4     |4        |0100   
+ 5     |5        |0101   
+ 6     |6        |0110   
+ 7     |7        |0111   _________NEGITIVE_VALUES
+-8     |8        |1000   (-8 + 0)
+-7     |9        |1001   (-8 + 1)
+-6     |10       |1010   (-8 + 2)
+-5     |11       |1011   (-8 + 3)
+-4     |12       |1100   (-8 + 4)
+-3     |13       |1101   (-8 + 5)
+-2     |14       |1110   (-8 + 6)
+-1     |15       |1111   (-8 + 7)
+```
+
+#### Floating Point Numbers
+
 * below is decimal hex binary conversion chart
 ``` text
 DEC |HEX |BIN
