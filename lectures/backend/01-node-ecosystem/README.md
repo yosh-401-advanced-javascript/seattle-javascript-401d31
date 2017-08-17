@@ -33,36 +33,17 @@ Name all of your files with cabob-case ("-" seporated words). Don't use uppercas
 ## NodeJS
 NodeJS is an open source framework for writing javascript on your operating system. Node is compromised of the **V8** Javascript runtime, and the **NodeAPIs**. V8 is the Javascript runtime developed for the Chrome browser, and is written in C and C++. The Node APIs are writtend in C, C++, and Javascript. Node was developed to enabled developers to easily write code with asynchronous input and output (IO). In many other langauges asyncronous IO creates a lot of work for developers, and can be error prone. Node uses an event loop driven non-blocking architecture, that enables node to have a very low overhead when it is not running. Node has an increadibly rich ecosystem of packages available through the Node Package Manager (NPM). 
 
-#### Testing and TDD
-* test driven development
-* TDD relies on a very short development cycle
-  * this encourages developers to create small, testable, features
-* TDD process
-  * make a plan for the feature(s) needed to make your program work
-  * choose a feature to implement
-  * write code that tests that feature's behavior
-  * your tests should fail - the feature has not been implemented yet
-  * create the feature
-  * your tests should pass - the feature has been implemented
-  * refactor for optimization
-  * your tests should still pass - the behavior of your featured should not have changed
-    * this is process is referred to as **red, green, refactor**
-  * **red** - the test is written, but fails
-  * **green** - the test passes - the feature has been implemented
-  * **refactor** - the code runs better and all tests still pass
+## Test Driven Development
+Test driven development (TDD) is a methodology for writing code. TDD relies on a very short development cycle, this means that it expects developers to create small testable features. TDD can speed up development time, validate the integrity of new code, and help developers understand their goals. TDD is brokend down in to the three steps called **RED**, **GREEN**, and **REFACTOR**.
 
-#### Mocha
-* what is MochaJS?
-  * feature rich JS testing framework
-  * gives us access to use `describe` and `it` blocks for greater abstraction
-  * globally install MochaJS: `npm install -g mocha`
-* what are assertions?
-  * expressions that encapsulate logic and are evaluated in a targeted test
-  * we create assertion tests to check against our logic
-* difference between unit, e2e, and integration testing
-  * e2e: tests if the flow of an application, from start to finish, works as expected
-  * unit: smallest testable parts of an application are tested
-  * integration: phase of testing where individual modules are combined and tested as a group
+###### RED
+Make a plan for the code that needs to be written, in order to solve your goal. Write tests that will run that code and check for expected behaviors. At this point if you run your tests, they should fail (red).
+
+###### GREEN
+Write code to pass the specifcations of your tests, without making it perfect. If you succeed, when you run your tests they should pass (green) 
+
+###### REFACTOR
+Refactor your code for speed, memory optimization, and most important **readability**. Your tests should still pass after this step.
 
 <!--links -->
 [about nodejs]: https://nodejs.org/en/about/
