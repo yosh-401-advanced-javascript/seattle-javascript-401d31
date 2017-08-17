@@ -9,15 +9,15 @@
 * Students will be able to interperate the diffent types of errors in Javascript
 
 ## Resources 
-#### package.json Resources
+#### package.json
 * read [about package.json]
 * skim [npm scripts as build tools]
 * skim [npm scripts docs]
 
-#### Error Resources
+#### Error
 * read [node error docs]
 
-#### Context resources
+#### Context
 * read [mdn this]
 * watch [javascript context tutorial]
 
