@@ -81,7 +81,8 @@ value     01011
 ```
 
 ###### Signed vs Unsigned
-Signed integers make a rule that the first bit represets weather or not a numbers is positive or negative. Unsigned numbers use that bit as a noth place to hold a value. In twos complament the number after the singed bit is added two the minimum possible value for the total number of bits
+Signed integers add a rule that states the first bit represets weather or not a numbers is positive or negative. Negitive values then follow a rule called `twos complament`. In twos complament the value after the singed bit is added to the number of positions suported by the the remaining bits and then multipiyed by -1. When decoding a four bit signed number the first bit is a boolean value indicating negitive or repostive. The reamaing three can support 8 unique values (0-7). So a signed four bit number can represet positive numbers from 0 to 7 and negitive numbers -1 to -8.
+
 ```
 Signed |Unsigned 
 -----------------.
@@ -93,14 +94,14 @@ Signed |Unsigned
  5     |5        |0101   
  6     |6        |0110   
  7     |7        |0111   _________NEGITIVE_VALUES
--8     |8        |1000   (-8 + 0)
--7     |9        |1001   (-8 + 1)
--6     |10       |1010   (-8 + 2)
--5     |11       |1011   (-8 + 3)
--4     |12       |1100   (-8 + 4)
--3     |13       |1101   (-8 + 5)
--2     |14       |1110   (-8 + 6)
--1     |15       |1111   (-8 + 7)
+-8     |8        |1000   (8 + 0) * -1 
+-7     |9        |1001   (8 + 1) * -1
+-6     |10       |1010   (8 + 2) * -1
+-5     |11       |1011   (8 + 3) * -1
+-4     |12       |1100   (8 + 4) * -1
+-3     |13       |1101   (8 + 5) * -1
+-2     |14       |1110   (8 + 6) * -1
+-1     |15       |1111   (8 + 7) * -1
 ```
 
 #### Floating Point Numbers
