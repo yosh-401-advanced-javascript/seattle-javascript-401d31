@@ -16,7 +16,7 @@
 * Read [fs module docs](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
 * Read [Understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 
-## Javascript
+## Javascript Runtime
 There are many Javscript runtimes. V8 is the name of the runtime used in Chrome browsers and NodeJS. V8 will be used in the following descriptions of how javascript a runtime works, but other browsers and javascript environments have the same behaveiors.
 
 #### Hoisting
