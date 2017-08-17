@@ -1,66 +1,65 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 02: Tools and Context
 =====================================
 
-## package.json Resources
+
+## Learning Objectives
+* Students will be able to define npm scripts for automating command line tasks
+* Students will be able to control a functions context using call, apply, and bind
+* Studnets will be able to handle thrown errors using try and catch 
+* Students will be able to interperate the diffent types of errors in Javascript
+
+## Resources 
+#### package.json Resources
 * read [about package.json]
 
-## NPM Script Resources
+#### NPM Script Resources
 * skim [npm scripts as build tools]
 * skim [npm scripts docs]
 
-## Context resources
+#### Context resources
 * read [mdn this]
 * watch [javascript context tutorial]
 
-## Prototype resources
+#### Prototype resources
 * skim [mdn new]
 * skim [mdn object prototype]
 * read [mdn inheritance and the prototype chain]
 
-## Error Resources
+#### Error Resources
 * read [node error docs]
 
-## Learning Objectives
-<!-- unordered list of learning objectives -->
-* understand the difference between context and scope
-* learn how to configure a function's context
-* understand the roll context plays when using constructor functions
+## package.json
+The `package.json` file is used to descibe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version`. If a package has external dependieces they are list by name and version under the fileds `dependencies` and `devDependencies`. If the core package depenends on an extenral package to run the external package should be listed under `dependencies`. If the external package is only need by its developers (like a testing framework) that package should be listend under `devDependencies`. package.json files can have a `scripts` section where keys can be associated with unix commands. npm scripts have an added benifit that they can run any command line utility (CLI) defined in a dependiecie, without globally installing the CLI on you opperating system. 
 
-## Overview
+## Node Errors
+Error messages are super important tools for debuging broken code. Javscript has many built in Error messages, but you can create your own errors through your program. Errors happen not only in development, but while a product is in production. Error logs are usually kept in order to debug applications in production. Writing good error messages is difficult, but a very important skill. 
 
-#### package.json
-* `package.json` is a config file that is used for configuring metadata about a node project
-* it only requires a name and version, but typically contains much more information
-* dependencies vs developer dependencies
-  * dependencies - a list of packages required to run the main program
-  * developer dependencies - a list of packages required to develop the project
-* npm scripts are used to manage common tasks when working a node.js project  
-* setting up a project
-  * create a new directory for your project
-  * navigate to that directory
-  * run `npm init` and answer the questions
-    * note: you can also run `npm init -y` to automate this process
+#### Writing good error messages
+A great error message should have the following features
+* a timestamp so that a timeline of the error can be made
+* a message about the problem that occured
+* a message about the cause of the problem
+* a consistent format (so that it can be parsed and searched)
+* a severity level (low, med high) or (0 - 10)
 
-#### Node Errors
-
-###### Error
+#### Error
 * a generic error
 * `.stack` - a **String** describing the point in the code where the `Error` was instantiated
 * `.message` - a **String** description set by calling the `new Error(message)`  
 
-###### ReferenceError
+#### ReferenceError
 * indicates that an attempt is being made to access a variable that is not defined
 * `ReferenceError` is a subclass of `Error`  
 
-###### SyntaxError
+#### SyntaxError
 * indicates a program is not valid javascript
 * `SyntaxError` is a subclass of `Error`  
 
-###### TypeError
+#### TypeError
 * indicates that a provided argument is not an allowable type
 * `TypeError` is a subclass of `Error`    
 
-###### SystemError
+#### SystemError
 * `.code` - A **String** describing the error code
 * `.errno` - A **Number** describing the error code
 * `.syscall` - A **String** describing the system call that failed
@@ -79,9 +78,18 @@
   * `EPERM` - an attempt to do something that you currently don't have permissions to do
   * `EPIPE` - an attempt to write data to a connection that had been closed
 
-###### Throw Try Catch
-* if an unhandled error is thrown, the program will crash
+## Throw Try Catch
+* if an error is thown and is not handled, the program will crash
 * `try`/`catch` blocks allow you to safely throw an error and handle it
+``` javascript
+let userInput = '{'
+try {
+ let data = JSON.parse(userInput)
+ // do something with data
+} catch(e) {
+  console.error(e)
+}
+```
 
 ### Call, Bind, Apply
 * when a function has a `this`, we say that `this` is the function's context
