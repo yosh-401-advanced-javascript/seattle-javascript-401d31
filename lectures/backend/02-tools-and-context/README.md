@@ -112,7 +112,7 @@ function childrenSet(...children){
 // init view
 childrenSet.call(document.body, '<div id="logo"></div>', '<div id="warning"></div>')
 
-// create dom helpers
+// create dom mutation helpers using bind 
 const bodyClear = childrenSet.bind(document.body)
 const logoGet = () => document.getElementById('logo')
 const warningGet = () => document.getElementById('warning')
