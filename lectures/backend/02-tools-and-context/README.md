@@ -88,7 +88,7 @@ try {
 ## Context 
 By default when a Javascript function belongs to an object, it is called a method. The object the method belongs to is called the methods **context**. In a function the keyword `this` points to the it's context. 
 
-A functions context can be redefiend using the function methods `call`, `apply` and `bind`. 
+A functions context can be assigned using the function methods `call`, `apply` and `bind`. 
 #### Call 
 `call` is a function method that invokes the function with a specified context and comma seporated arguments
   
