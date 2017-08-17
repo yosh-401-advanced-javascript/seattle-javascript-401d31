@@ -27,8 +27,9 @@ You probably know that everything in the computer is stored in 0s and 1s. As web
 
 #### Bytes
 
-> bash line for printing out a 0 - 255 in decimal and binary
-`$ i=-1; for x in {0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1};do (( i += 1 )); echo $i $x; done |less`
+> bash line for printing out a 0 - 255 in decimal and binary  
+
+`i=-1; for x in {0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1}{0,1};do (( i += 1 )); printf "%3d %s\n" $i $x; done |less`
 
 #### Strings 
 ```
