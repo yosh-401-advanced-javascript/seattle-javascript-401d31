@@ -22,7 +22,15 @@ Programmers and engineers have been able to network computers since the early 19
 | 2 | Data Link | Frame | Reliable transmision of frames beteen to physical layer nodes | Ethernet and IEEE 802.11 wireless LAN | 
 | 1 | Physical | bit | transmission and reception of raw data streams over a physical medium | USB, Bluetooth, Ethernet physical layer, SMB, Telephone newtwork modem |
 
+## Internet Protocol Suite
+The Internet Protocol Suite is the conceputal model for the protocols used by the internet. It is often refert to as **TCP/IP** because the IP and TCP were the original protocols in the suite. On the Internt Network communications are decribed in four layers. 
+
+| Layer | Functin | Examples | 
+| Application | Provides high level data exchange for use in user application development |  HTTP, SMTP, FTP, DHCP |
+| Transport | Provides process to process data exchange | TCP, UDP, µTP| 
+| Internet | Maintains computer addressing and identification and manages packet routing | IPv4, IPv6, ICMP | 
+| Link layer | Used to move packets between two different hosts | MAC, ARP, DSL, Ethernet | 
 
 #### TCP 
-#### UDP
+The Transmission Control Protocal (TCP) is widley used in by application layers in the Internet Protocol Suite.
 
