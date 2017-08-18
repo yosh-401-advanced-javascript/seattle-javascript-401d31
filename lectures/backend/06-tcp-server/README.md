@@ -32,5 +32,5 @@ The Internet Protocol Suite is the conceputal model for the protocols used by th
 | Link layer | Used to move packets between two different hosts | MAC, ARP, DSL, Ethernet | 
 
 ## TCP 
-The Transmission Control Protocal (TCP) is widley used in by application layers in the Internet Protocol Suite.
+The Transmission Control Protocal (TCP) is widley used in by application layers in the Internet Protocol Suite.  TCP creates connections with two way communication between two hosts and provides reliable, ordered, and error checked byte steams between applications.
 
