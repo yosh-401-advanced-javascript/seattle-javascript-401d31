@@ -23,7 +23,7 @@ Programmers and engineers have been able to network computers since the early 19
 | 1 | Physical | bit | transmission and reception of raw data streams over a physical medium | USB, Bluetooth, Ethernet physical layer, SMB, Telephone newtwork modem |
 
 ## Internet Protocol Suite
-The Internet Protocol Suite is the conceputal model for the protocols used by the internet. It is often refered to only as **TCP/IP ** because the IP and TCP were the original protocols in the suite. IP/TCP communications are decribed in four layers. Web and related technology developers often reference the Internet Protocol Suite model when communicating about network comunications and data exchange.
+The Internet Protocol Suite is the conceputal model for the protocols used by the internet. It is often refered to only as **TCP/IP** because the IP and TCP were the original protocols in the suite. IP/TCP communications are decribed in four layers. Web and related technology developers often reference the Internet Protocol Suite model when communicating about network comunications and data exchange.
 
 | Layer | Function | Examples | 
 | ---- | ---- | ---- |
