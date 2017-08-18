@@ -26,6 +26,7 @@ Programmers and engineers have been able to network computers since the early 19
 The Internet Protocol Suite is the conceputal model for the protocols used by the internet. It is often refert to as **TCP/IP** because the IP and TCP were the original protocols in the suite. On the Internt Network communications are decribed in four layers. 
 
 | Layer | Functin | Examples | 
+| ---- | ---- | ---- |
 | Application | Provides high level data exchange for use in user application development |  HTTP, SMTP, FTP, DHCP |
 | Transport | Provides process to process data exchange | TCP, UDP, µTP| 
 | Internet | Maintains computer addressing and identification and manages packet routing | IPv4, IPv6, ICMP | 
