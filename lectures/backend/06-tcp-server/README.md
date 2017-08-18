@@ -19,9 +19,14 @@
 #### OSI Model  
 | Layer | Protocol Data Unit | Function | Examples |   
 | ---- | ----- | ----- | ----- |
-| Application | Data | Hight Level APIs | HTTP, IMAP, POP, BITTOURANT |  
-| Presintation | Data | Data translating, including encryption, character encoding, and compression | Null terminated strings vs Strings defined by an Integer |  
-| Session | Data | Manages a session though passing data back and fourth | NetBios, RPC, ADSP |  
+| Application | Data | Hight Level APIs | HTTP, IMAP, POP, SSH |  
+| Presintation | Data | Data translating, including encryption, character encoding, and compression | Strings encoded with null terminated strings vs Strings defined by an Integer Length |  
+| Session | Data | Manages a session though passing data back and fourth | NetBios and Remote Procedure Protocol (RPC) |
+| **Transport** | Segment / Datagram | Reliable transmision of data between points on a network | TCP and UDP | 
+| Network | Packet | Managing the network thourgh addressing, routing, and trafic controll | IP and ICMP 
+| Data Link | Frame | Reliable transmision of frames beteen to physical layer nodes | Ethernet and IEEE 802.11 wireless LAN | 
+| Physical | bit | transmission and reception of raw data streams over a physical medium | USB, Bluetooth, Ethernet physical layer, SMB, Telephone newtwork modem |
+
 
 #### TCP 
 #### UDP
