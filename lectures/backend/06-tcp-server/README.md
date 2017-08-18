@@ -15,7 +15,7 @@ Programmers and engineers have been able to network computers since the early 19
 | Layer | Protocol Data Unit | Function | Examples |   
 | ---- | ----- | ----- | ----- |
 | Application | Data | Hight Level APIs | HTTP, IMAP, POP, SSH |  
-| Presintation | Data | Data translating, including encryption, character encoding, and compression | Strings encoded with null terminated strings vs Strings defined by an Integer Length |  
+| Presentation | Data | Data translating, including encryption, character encoding, and compression | Strings encoded with null terminated strings vs Strings defined by an Integer Length |  
 | Session | Data | Manages a session though passing data back and fourth | NetBios and Remote Procedure Protocol (RPC) |
 | **Transport** | Segment / Datagram | Reliable transmision of data between points on a network | TCP and UDP | 
 | Network | Packet | Managing the network thourgh addressing, routing, and trafic controll | IP and ICMP 
