@@ -14,6 +14,18 @@
 * students will understand how to work with node.js EventEmitter's
 
 ## Requirements
+
+
+#### OSI Model 
+| Layer | Protocol Data Unit | Function | Examples | 
+| Application | Data | Hight Level APIs | HTTP, IMAP, POP, BITTOURANT | 
+| Presintation | Data | Data translating, including encryption, character encoding, and compression | Null terminated strings vs Strings defined by an Integer |
+| Session | Data | Manages a session though passing data back and fourth | NetBios, RPC, ADSP |
+
+#### TCP 
+#### UDP
+
+
 #### Configuration  
 <!-- list of files, configurations, tools, etc that are required -->
 Your lab directory must include  
