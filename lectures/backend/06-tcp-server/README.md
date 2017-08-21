@@ -80,7 +80,7 @@ ACK    |
 ```
 
 #### Connection Termination
-One end sends a FIN Segment and the other sends an ACK segment followd by a FIN segment. The inita
+One end sends a FIN Segment and the other sends an ACK segment followd by a FIN segment. The termination initation will then respond with an ACK segment.
 ```
 CLIENT   SERVER
 ________________
