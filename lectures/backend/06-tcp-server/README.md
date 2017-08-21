@@ -71,6 +71,13 @@ Byte 20: Options
 
 #### Connection Establishment
 The client sends a SYN packet with an random inital sequence number. The server sends a SYN-ACK packet with the acknoledgement number set to one more than the inital sequnce number. The clinet responds with an ACK and an acknoldegement number incramented by one.
+```
+CLIENT   SERVER
+________________
+SYN    |
+       |   SYN-ACK
+ACK    |
+```
 
 #### Connection Termination
 One end sends a FIN Segment and the other sends an ACK segment followd by a FIN segment. The inita
