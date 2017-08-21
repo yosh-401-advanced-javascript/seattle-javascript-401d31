@@ -32,5 +32,41 @@ The Internet Protocol Suite is the conceputal model for the protocols used by th
 | Link layer | Used to move packets between two different hosts | MAC, ARP, DSL, Ethernet | 
 
 ## TCP 
-The Transmission Control Protocal (TCP) is widley used in by application layers in the Internet Protocol Suite.  TCP creates connections with two way communication between two hosts and provides reliable, ordered, and error checked byte steams between applications.
+The Transmission Control Protocal (TCP) is widley used in by application layers in the Internet Protocol Suite.  TCP creates connections with two way communication between two hosts and provides reliable, ordered, and error checked byte steams between applications. The TCP protocol is used insed a IP packet. Each packet sent caries a TCP Segment that defines the type of interaction and data being sent. A TCP segment is made up of header and data section. 
+
+#### TCP HEADER
+The TCP Header is used at each end to control the type of interaction being sent. It contains the following information.
+```
+Byte 0: Source port
+Byte 3: Destination port
+Byte 4: Sequence number
+Byte 8: Acknowledgement number
+Byte 12: Data Offset, NS flag, and 3 undefined bits
+Byte 13: CWR, ECE, URG, ACK, PSH, RST, SYN, and FYN flags
+Byte 14: Window size
+Byte 16: Checksum
+Byte 18: Urgent pointer
+Byte 20: Options
+```
+* a 16 bit `source port` 
+* a 16 bit `destination port`
+* a 32 bit `sequence number` that sets the inital sequence number and manages the acumulated sequence number.
+* if ACK is set it contains a 32 bit `acknowledgement number` that is the next sequence number that the sender is expecting. It is used for acknowledging the bytes it has so far recieved.  
+* a 4 bit `data offset` specifies the size of the tcp header in 32 bit words.
+* 9 flag bits 
+  * `NS` 
+  * `CWR` - Used to acknowlege that a TCP segment with the ECE flag has been recieved, and the Window has been reduced to alieviate congestion.
+  * `ECE` - if SYN is 1 it indicates that the peer is ECN capable, other otherwise its used to indcate that there is network conjestion.
+  * `URG` - Indicates that the Urgent pointer filed is significant
+  * `ACK` - Indicates that the Ack field is significant. All packets after the initalSYN should have this flag set.
+  * `PSH` - Used to ask to push the buffered data to the recieving application.
+  * `RST` - Used to reset the connection
+  * `SYN` - Sent only on the first packet sent from each end to syncronize the sequence numbers.
+  * `FIN` - Indicates the last package from a sender, and is used in closing a connection.
+* a 16 bit `window size`
+* a 16 bit `checksum`
+* if URG is set it contains a 16 bit `urgent Pointer` 
+* a variable 0 to 320 bit (divisible by 32) `opions` section
+
+#### Connection 
 
