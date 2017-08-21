@@ -54,7 +54,7 @@ Byte 20: Options
 * if ACK is set it contains a 32 bit `acknowledgement number` that is the next sequence number that the sender is expecting. It is used for acknowledging the bytes it has so far recieved.  
 * a 4 bit `data offset` specifies the size of the tcp header in 32 bit words.
 * 9 flag bits 
-  * `NS` 
+  * `NS` - an expieramental feature for a nonce sum. a nonse is a random cryptograpic number used to prevent people from lying about who they are (authentication).
   * `CWR` - Used to acknowlege that a TCP segment with the ECE flag has been recieved, and the Window has been reduced to alieviate congestion.
   * `ECE` - if SYN is 1 it indicates that the peer is ECN capable, other otherwise its used to indcate that there is network conjestion.
   * `URG` - Indicates that the Urgent pointer filed is significant
@@ -68,5 +68,17 @@ Byte 20: Options
 * if URG is set it contains a 16 bit `urgent Pointer` 
 * a variable 0 to 320 bit (divisible by 32) `opions` section
 
-#### Connection 
 
+#### Connection Establishment
+The client sends a SYN packet with an random inital sequence number. The server sends a SYN-ACK packet with the acknoledgement number set to one more than the inital sequnce number. The clinet responds with an ACK and an acknoldegement number incramented by one.
+
+#### Connection Termination
+One end sends a FIN Segment and the other sends an ACK segment followd by a FIN segment. The inita
+```
+CLIENT   SERVER
+________________
+FIN    |
+       |   ACK
+       |   FIN
+ACK    |
+```
