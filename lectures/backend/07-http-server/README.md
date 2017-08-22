@@ -1,10 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 07: HTTP and REST APIs
+![cf](http://i.imgur.com/7v5ASc8.png) 07: HTTP
 ===
 
 ## HTTP Resources
-* skim [nodejs http module]
-* skim [wiki list of header fields]
-* read [what is a rest api?]
+* skim [nodejs http module](https://nodejs.org/api/http.html)
+* skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
+* skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ## Learning Objectives
 * students will be able to identify qualities of the HTTP protocol
@@ -63,8 +63,3 @@ Connection: close
 
 {"id":"1234123412341324","title":"kata","content":"get 100 points on hacker rank"}
 ```
-
-<!--links -->
-[nodejs http module]: https://nodejs.org/api/http.html
-[what is a rest api?]: https://medium.com/@lazlojuly/what-is-a-restful-api-fabb8dc2afeb#.nm7uiiltt
-[wiki list of header fields]: https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields
