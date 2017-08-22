@@ -32,7 +32,7 @@ The Internet Protocol Suite is the conceputal model for the protocols used by th
 | Link layer | Used to move packets between two different hosts | MAC, ARP, DSL, Ethernet | 
 
 ## TCP 
-The Transmission Control Protocal (TCP) is widley used in by application layers in the Internet Protocol Suite.  TCP creates connections with two way communication between two hosts and provides reliable, ordered, and error checked byte steams between applications. The TCP protocol is used insed a IP packet. Each packet sent caries a TCP Segment that defines the type of interaction and data being sent. A TCP segment is made up of header and data section. 
+The Transmission Control Protocal (TCP) is widley used by application layer protocols in the Internet Protocol Suite. TCP creates connection with two way communication between two hosts and provides reliable, ordered, and error checked byte streams between applications. TCP data transfers manage network congestion and use flow control to limit the rate a sender transfers data to guarantee reliable delivery. Each IP packet between the hosts caries a single TCP Segment. A TCP segment is made up of header and data section. 
 
 #### TCP HEADER
 The TCP Header is used at each end to control the type of interaction being sent. It contains the following information.
@@ -64,10 +64,9 @@ Byte 20: Options
   * `SYN` - Sent only on the first packet sent from each end to syncronize the sequence numbers.
   * `FIN` - Indicates the last package from a sender, and is used in closing a connection.
 * a 16 bit `window size`
-* a 16 bit `checksum`
+* a 16 bit `checksum` used for error checking the header
 * if URG is set it contains a 16 bit `urgent Pointer` 
 * a variable 0 to 320 bit (divisible by 32) `opions` section
-
 
 #### Connection Establishment
 The client sends a SYN packet with an random inital sequence number. The server sends a SYN-ACK packet with the acknoledgement number set to one more than the inital sequnce number. The clinet responds with an ACK and an acknoldegement number incramented by one.
