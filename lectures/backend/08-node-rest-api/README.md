@@ -16,7 +16,7 @@ The HTTP specication descibes an interface for making requests to an HTTP server
 | Constraint | Explanation | 
 | --- | --- | 
 | Resource identification in requests  | The resource (model) is identifed using the URI |
-| Resource manipulation through representations | The representation of a resource (JSON) should be enough information to modify or delete a resource | 
+| Resource manipulation through representations | The representation of a resource (JSON) should contain enough information for a client to modify or delete a resource | 
 | Self-descriptive messages | Each request should descibe how it should be processed (ie. Content-Type and Accept) | 
 | Hypermedia as the engine of application state | The client should be able to dynamicly descover all the available actions and resouces it needs using an OPTIONS request |
 
