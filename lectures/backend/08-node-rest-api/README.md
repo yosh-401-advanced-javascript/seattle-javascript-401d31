@@ -44,12 +44,12 @@ The HTTP specication descibes an interface for making requests to an HTTP server
 | Hypermedia as the engine of application state | The client should be able to dynamicly descover all the available actions and resouces it needs using an OPTIONS request |
 
 #### RESTful HTTP Methods
-| METHOD | Function | Example URI | 
+| METHOD | URI | Function | 
 | --- | --- | --- | 
-| POST | Create a resource | /api/notes |
-| GET | Read a resource | /api/notes/:id | 
-| Put/Patch | Update a resource | /api/notes/:id | 
-| Delete | Delete a resource | /api/notes/:id | 
-| HEAD | Read metadata about a resource | /api/notes/:id | 
-| OPTIONS | Discover methods available for a resource | /api/notes | 
+| POST | /api/notes | Create a note resource | 
+| GET | /api/notes or /api/notes/:id  | Read a note resource | 
+| Put/Patch | /api/notes/:id | Update a note resource |
+| Delete |  /api/notes/:id | Delete a note resource |
+| HEAD | /api/notes or /api/notes/:id | Read metadata about note a resource |
+| OPTIONS |  /api/notes | Discover methods available for a note resource |
 
