@@ -44,6 +44,7 @@ The HTTP specication descibes an interface for making requests to an HTTP server
 
 ###### HTTP Methods
 | METHOD | Functoin | 
+| --- | --- |
 | POST | Create a resource | 
 | GET | Read a resource | 
 | Put/Patch | Update a resource |
