@@ -40,6 +40,9 @@ The HTTP specication descibes an interface for making requests to an HTTP server
 | HEAD | /api/notes/:id | Read metadata about note a resource |
 | OPTIONS |  /api/notes | Discover methods available for a note resources |
 
+## Server Side Routers
+Server side routers provide an interface to define how server should respond to a given endpoint. An endpoint is defined as a HTTP method in combanation with a URI path. Routers help simpify complexity and increase readablitiy.
+
 ## Promises
 Promises are objects that represent an asyncronous event that will either succed or fail. They are an amazing tool for improving readablity and data flow control between syncronous and asyncrouns code.
 
