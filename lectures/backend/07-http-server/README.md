@@ -16,7 +16,7 @@ The Hyper Text Transfer Protocol (HTTP) is a stateless request-response applicat
 ## HTTP Requests
 A HTTP/1.1 request is formated in text and transfered using TCP. The first line of the request contains the `METHOD`, `URL`, and `HTTP VERSION` of the request. The folowing lines are the request `HEADERS`. Each header is seporated by a newline character. A header is a key value pair seporated using a colon. Headers containing more than one value seporate each value using a semicolon. The Headers are termaned with an empty line. An optional body follows the headers.
 
-####### Example HTTP Request
+####### Example HTTP Request  
 ``` 
 POST /api/note HTTP/1.1
 Host: api.example.com
