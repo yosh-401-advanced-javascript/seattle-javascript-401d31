@@ -29,6 +29,9 @@ A HTTP/1.1 request is formated in text and transfered using TCP. The first line 
 | TRACE 	| No	      | Yes	| Yes | Yes	| No |
 | PATCH  	| Yes	      | Yes	| No	| No	| No |
 
+`Safe` methods should only be used for information retrieval and should not change the server state.  
+`Idempotent` methods means if two indentical requests are made they should get an identical response.  
+
 ###### Example HTTP Request  
 ``` 
 POST /api/note HTTP/1.1
