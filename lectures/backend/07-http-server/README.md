@@ -18,7 +18,7 @@ A HTTP/1.1 request is formated in text and transfered using TCP. The first line 
 
 
 |HTTP Method	| Request Has Body	| Response Has Body |	Safe	| Idempotent	| Cacheable | Function | 
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- |
 | GET	    | No	      | Yes	| Yes | Yes	| Yes | Retrieve a resource | 
 | HEAD	  | No	      | No	| Yes | Yes	| Yes | Like GET but headers only |
 | POST	  | Yes	      | Yes	| No	| No	| Yes | Create a resource |
@@ -26,7 +26,7 @@ A HTTP/1.1 request is formated in text and transfered using TCP. The first line 
 | DELETE	| No	      | Yes	| No	| Yes	| No | Delete a resource |
 | CONNECT	| Yes	      | Yes	| No	| No	| No | Create TCP/IP tunnel |
 | OPTIONS	| Optional	| Yes	| Yes | Yes	| No | Returns suported methods for a URL |
-| TRACE 	| No	      | Yes	| Yes | Yes	| No | Echos retrieved request | |
+| TRACE 	| No	      | Yes	| Yes | Yes	| No | Echos retrieved request | 
 | PATCH  	| Yes	      | Yes	| No	| No	| No | Partial modifactoin of resource |
 
 `Safe` methods should only be used for information retrieval and should not change the server state.  
