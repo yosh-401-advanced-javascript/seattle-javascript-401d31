@@ -26,7 +26,8 @@
 The `package.json` file is used to descibe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version`. If a package has external dependieces they are list by name and version under the fields `dependencies` and `devDependencies`. If the package depenends on an extenral package to run the external package should be listed under `dependencies`. If the external package is only needed in development (like a testing framework) it should be listend under `devDependencies`. package.json files can have a `scripts` field where keys can be associated with unix commands. npm scripts have the added benifit that they can run any command line utility (CLI) defined in a dependencie, without globally installing the CLI on you opperating system. 
 
 #### Semantic Versioning
-The NodeJS/NPM community follows semantic versioning (semver). Semantic vesrsioning describes how to manage version changes to a software product. Semver formats the vesrion number using `MAJOR.MINOR.PATCH`. A MAJOR version when you make incompatible API changes,a MINOR version when you add functionality in a backwards-compatible manner, and PATCH version when you make backwards-compatible bug fixes.
+The NodeJS/NPM community follows semantic versioning (semver). Semantic vesrsioning describes how to manage version changes to a software product. Semver formats the vesrion number using `MAJOR.MINOR.PATCH`.
+> A MAJOR version when you make incompatible API changes,a MINOR version when you add functionality in a backwards-compatible manner, and PATCH version when you make backwards-compatible bug fixes.
 
 
 ## Errors
