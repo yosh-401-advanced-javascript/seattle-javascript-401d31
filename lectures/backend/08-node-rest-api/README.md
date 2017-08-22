@@ -47,9 +47,9 @@ The HTTP specication descibes an interface for making requests to an HTTP server
 | METHOD | URI | Function | 
 | --- | --- | --- | 
 | POST | /api/notes | Create a note resource | 
-| GET | /api/notes or /api/notes/:id  | Read a note resource | 
+| GET | /api/notes or /api/notes/:id  | Read a note resources or a note resource | 
 | Put/Patch | /api/notes/:id | Update a note resource |
 | Delete |  /api/notes/:id | Delete a note resource |
-| HEAD | /api/notes or /api/notes/:id | Read metadata about note a resource |
-| OPTIONS |  /api/notes | Discover methods available for a note resource |
+| HEAD | /api/notes/:id | Read metadata about note a resource |
+| OPTIONS |  /api/notes | Discover methods available for a note resources |
 
