@@ -14,7 +14,7 @@
 The Hyper Text Transfer Protocol (HTTP) is a stateless request-response application layer protocol. HTTP is used to build distributed, collaborative, hypermedia information systems. HTTP is the foundation for the world wibe web. Applications built using HTTP subscribe to the client-server computing model. In the client-server computing model servers are designed to listen for requests, and respond. The HTTP specification defines how requests and responses should be formated, but not what information they should contain. HTTP is often associated with serving `.html` files but also used to transfer images, videos, json, xml, binary executables, and much more. 
 
 #### HTTP Requests
-A HTTP/1.1 request is formated in text and transfered using TCP. The first line of the request contains the `METHOD`, `URL`, and `HTTP VERSION` of the request. The folowing lines are the request `HEADERS`. Each header is seporated by a newline character. A header is a key value pair seporated using a colon. Headers containing more than one value seporate each value using a semicolon. The Headers are termaned with an empty line. An optional body follows the headers.
+A HTTP/1.1 request is formated in text and transfered using TCP. The first line of the request contains the `METHOD`, `URL`, and `HTTP VERSION` of the request. The folowing lines are the request `HEADERS`. Each header is seporated by a newline character. A header is a key value pair seporated using a colon. Headers containing more than one value seporate each value using a semicolon. The headers are termaned with an empty line. An optional body follows the headers.
 
 ###### Example HTTP Request  
 ``` 
@@ -30,7 +30,7 @@ Content-Length: 58
 ```
 
 #### HTTP Response
-A HTTP/1.1 response is also formated in text and transfered using TCP. The first line of the response contains the `HTTP VEERSION`, `STATUS CODE`, and `STATUS MESSAGE`. The folowing lines are the request headers and are formated exactly the same way as the request headers. The headers are terminated with an empty line. An optional body follows the headers
+A HTTP/1.1 response is also formated in text and transfered using TCP. The first line of the response contains the `HTTP VEERSION`, `STATUS CODE`, and `STATUS MESSAGE`. The folowing lines are the request headers and are formated exactly the same way as the request headers. The headers are terminated with an empty line. An optional body follows the headers.
 
 ###### Example HTTP Response
 ```
