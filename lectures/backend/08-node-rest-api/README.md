@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 08: Vanilla REST API
+![cf](http://i.imgur.com/7v5ASc8.png) 08: REST and Promises
 ===
 
 ## Vanilla REST API Resources
@@ -31,26 +31,14 @@
     * `catch()` - returns a `Promise` that deals with rejected cases only
     * `then()` - returns a `Promise` that deals with fulfilled cases
 
-## Vanilla REST API
-  * **Overview**
-    * we'll be creating a vanilla REST API, with a custom router, that uses custom built and native NodeJS modules (with the exception of `node-uuid`)
-      * the router we will be creating will mimic the core functionality of the router supplied by `express.js`
-    * in addition to the creation of our API, we'll be adding tests that check our API calls for the expected response data
-      * this will be done through the use of `superagent` and ChaiJS (`expect`)
-      * **remember:** include the server in your test file so that your server is running during the testing process
 
-  * **Helper Commands**
-    * start the server: `node server.js`
-    * quit the server (mac osx): `ctrl c`
-    * get a note *(be sure to use your port number and note id)*:
-      * `http localhost:8000/api/note?id=123456789` *or* `http localhost:8000/api/note id==123456789`
-    * post a note *(be sure to use your port number)*:
-      * `http POST localhost:8000/api/note name="name of the note" content="some content for the note"`
-    * for more useful commands when using `httpie`, check out the docs: [httpie docs](https://httpie.org/doc)
+## [Rest](https://www.w3.org/2001/sw/wiki/REST)
+The HTTP specication descibes an interface for making requests to an HTTP server, but does not provide semanitc guidelines on how that interface should be used. There are many semantic schemas for how HTTP servers should be designed, but Represational State Transfer (REST) is the most common. REST places constraints on how servers can manage requests in order to improve scalability, simplicity, modifiability, visibility, portability, and reliability. RESTful services must subscribe to a client-server architecture inorder to seporate teh user interface concers from data storage conserns. RESTful services must be stateless, which prevents the server manage session state and forces all requtes to contain all the information necessary to service the request. RESTful services must suport caching. RESTful services should support a layerd system, which means clients should not care if the server is the end server or an intermediary server (load balencer or cache).  RESTful services should enfoce a uniform interface. 
 
-  * **More ES6**
-    * **`let`** - declares a block scope local variable (this limits it's usage to the block, statement, or expression in which it is used)
-    * **arrow functions (aka fat arrow functions)** `() =>` offer a more concise syntax for writing function expressions and change the way that `this` binds in functions
-
-## Vanilla REST API Visualization Map
-  ![visualization](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/vanilla-rest-api.png)
+###### Uniform interace constrains 
+| Constraint | Explanation | 
+| --- | --- | 
+| Resource identification in requests  | The resource (model) is identifed using the URI |
+| Resource manipulation through representations | The representation of a resource (JSON) should be enough information to modify or delete a resource | 
+| Self-descriptive messages | Each request should descibe how it should be processed (ie. Content-Type and Accept) | 
+| Hypermedia as the engine of application state | The client should be able to dynamicly descover all the available actions and resouces it needs using an OPTIONS request |
