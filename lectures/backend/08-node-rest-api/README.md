@@ -39,8 +39,8 @@ Promises are objects that represent an asyncronous event that will either succed
   * **rejected** - the operation failed
   
 #### Promise Static methods
-  * `Promise.all()` - returns a promise that fulfills when all of the promises in an array have succeded or one has failed
-  * `Promise.race()` - returns a promise that fulfills when one of the promises in an array has succeded or failed
+  * `Promise.all(array)` - returns a promise that fulfills when all of the promises in an array have succeded or one has failed
+  * `Promise.race(array)` - returns a promise that fulfills when one of the promises in an array has succeded or failed
   * `Promise.reject(value)` - returns a `Promise` object that is rejected with a given value
   * `Promise.resolve(value)` - returns a `Promise` object that is resolved with a given value
   
