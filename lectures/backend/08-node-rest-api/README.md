@@ -17,7 +17,7 @@ The HTTP specication descibes an interface for making requests to an HTTP server
 | --- | --- | 
 | Resource identification in requests  | The resource (model) is identifed using the URI |
 | Resource manipulation through representations | The representation of a resource (JSON) should contain enough information for a client to modify or delete a resource | 
-| Self-descriptive messages | Each request should descibe how it should be processed (ie. The client should configure set headers like `Content-Type: application/json` and query strings like `page=3`) | 
+| Self-descriptive messages | Each request should descibe how it should be processed (The client should set headers like `Content-Type: application/json` and query strings like `page=3`) | 
 | Hypermedia as the engine of application state | The client should be able to dynamicly descover all the available actions and resouces it needs using an OPTIONS request |
 
 #### RESTful HTTP Methods
