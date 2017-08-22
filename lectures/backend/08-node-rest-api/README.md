@@ -35,8 +35,8 @@
 ## [Rest](https://www.w3.org/2001/sw/wiki/REST)
 The HTTP specication descibes an interface for making requests to an HTTP server, but does not provide semanitc guidelines on how that interface should be used. There are many semantic schemas for how HTTP servers should be designed, but Represational State Transfer (REST) is the most common. REST places constraints on how servers can manage requests in order to improve scalability, simplicity, modifiability, visibility, portability, and reliability. RESTful services must subscribe to a client-server architecture inorder to seporate teh user interface concers from data storage conserns. RESTful services must be stateless, which prevents the server manage session state and forces all requtes to contain all the information necessary to service the request. RESTful services must suport caching. RESTful services should support a layerd system, which means clients should not care if the server is the end server or an intermediary server (load balencer or cache).  RESTful services should enfoce a uniform interface. 
 
-###### Uniform interace constrains 
-| Constraint | Explanation | 
+###### Uniform Interace Constrains 
+| Uniform Interace Constraint | Explanation | 
 | --- | --- | 
 | Resource identification in requests  | The resource (model) is identifed using the URI |
 | Resource manipulation through representations | The representation of a resource (JSON) should be enough information to modify or delete a resource | 
