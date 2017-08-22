@@ -17,17 +17,17 @@ The Hyper Text Transfer Protocol (HTTP) is a stateless request-response applicat
 A HTTP/1.1 request is formated in text and transfered using TCP. The first line of the request contains the `METHOD`, `URL`, and `HTTP VERSION` of the request. The folowing lines are the request `HEADERS`. Each header is seporated by a newline character. A header is a key value pair seporated using a colon. Headers containing more than one value seporate each value using a semicolon. The headers are termaned with an empty line. An optional body follows the headers.
 
 
-|HTTP Method	| Request Has Body	| Response Has Body |	Safe	| Idempotent	| Cacheable | 
+|HTTP Method	| Request Has Body	| Response Has Body |	Safe	| Idempotent	| Cacheable | Function | 
 | --- | --- | --- | --- | --- | --- |
-| GET	    | No	      | Yes	| Yes | Yes	| Yes |
-| HEAD	  | No	      | No	| Yes | Yes	| Yes |
-| POST	  | Yes	      | Yes	| No	| No	| Yes |
-| PUT	    | Yes	      | Yes	| No	| Yes	| No |
-| DELETE	| No	      | Yes	| No	| Yes	| No |
-| CONNECT	| Yes	      | Yes	| No	| No	| No |
-| OPTIONS	| Optional	| Yes	| Yes | Yes	| No |
-| TRACE 	| No	      | Yes	| Yes | Yes	| No |
-| PATCH  	| Yes	      | Yes	| No	| No	| No |
+| GET	    | No	      | Yes	| Yes | Yes	| Yes | Retrieve a resource | 
+| HEAD	  | No	      | No	| Yes | Yes	| Yes | Like GET but headers only |
+| POST	  | Yes	      | Yes	| No	| No	| Yes | Create a resource |
+| PUT	    | Yes	      | Yes	| No	| Yes	| No | Update a resource |
+| DELETE	| No	      | Yes	| No	| Yes	| No | Delete a resource |
+| CONNECT	| Yes	      | Yes	| No	| No	| No | Create TCP/IP tunnel |
+| OPTIONS	| Optional	| Yes	| Yes | Yes	| No | Returns suported methods for a URL |
+| TRACE 	| No	      | Yes	| Yes | Yes	| No | Echos retrieved request | |
+| PATCH  	| Yes	      | Yes	| No	| No	| No | Partial modifactoin of resource |
 
 `Safe` methods should only be used for information retrieval and should not change the server state.  
 `Idempotent` methods means if two indentical requests are made they should get an identical response.  
