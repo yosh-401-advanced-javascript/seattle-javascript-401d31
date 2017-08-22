@@ -31,6 +31,7 @@ A HTTP/1.1 request is formated in text and transfered using TCP. The first line 
 
 `Safe` methods should only be used for information retrieval and should not change the server state.  
 `Idempotent` methods means if two indentical requests are made they should get an identical response.  
+`Cacheable` means the client should be able to cache the response.  
 
 ###### Example HTTP Request  
 ``` 
