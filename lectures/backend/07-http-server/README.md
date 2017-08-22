@@ -19,7 +19,7 @@ A HTTP/1.1 request is formated in text and transfered using TCP. The first line 
 ####### Example HTTP Request
 ``` 
 POST /api/note HTTP/1.1
-HOST: localhost:7070
+Host: localhost:7070
 Origin: www.example.com
 Authorization: Beader bHVsIHRoaXMgaXMgYSBmYWtlIHNlY3JldCB0b2tlbg==
 Accept: application/json
