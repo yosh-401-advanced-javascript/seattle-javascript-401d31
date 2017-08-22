@@ -14,13 +14,9 @@ A URI is a string of characters used to identify a resource. A URI could be an b
 
 #### Generic URI Anatomy 
 ```
-                    hierarchical part
-        ┌───────────────────┴─────────────────────┐
-                    authority               path
-        ┌───────────────┴───────────────┐┌───┴────┐
-  abc://username:password@example.com:123/path/data?key=value&key2=value2#fragid1
-  └┬┘   └───────┬───────┘ └────┬────┘ └┬┘           └─────────┬─────────┘ └──┬──┘
-scheme  user information     host     port                  query         fragment
+   scheme       user data             host      port      path             query        fragment
+  ┌───┴────┐┌───────┴────────┐┌───────┴───────┐┌─┴─┐┌──────┴──────┐┌────────┴──────────┐ ┌──┴──┐
+  protocol://username:password@api.example.com:3000/path/resource?key=value&key2=value2#fragid1
 ```
 
 ## [REST](https://www.w3.org/2001/sw/wiki/REST)
