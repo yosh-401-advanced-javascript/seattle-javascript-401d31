@@ -10,9 +10,9 @@
 * students will learn to create a vanilla RESTful API with in-memory persistence
 
 ## URI vs URL
-A URI is a string of characters used to identify a resource. A URI could be an book ISBN, a street address, a web address, or anything else. URLs are URIs that idedentify resources on the world wide web. 
+A URI is a string of characters used to identify a resource. A URI could be an book ISBN, a street address, a web address, or anything else. URLs are URIs that idedentify resources on the world wide web. A URL must contain everything it needs to retrieve a resource. `/dashboard` is a URI where `https://www.example.com/dashboard` is a URL.
 
-#### URL Anatomy 
+#### Generic URI Anatomy 
 ```
                     hierarchical part
         ┌───────────────────┴─────────────────────┐
