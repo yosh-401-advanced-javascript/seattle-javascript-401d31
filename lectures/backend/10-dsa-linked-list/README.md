@@ -12,7 +12,7 @@
 
 ## Overview
 
-![linked-list](https://i.imgur.com/l9gjLVU.png)
+![linked-list](https://i.imgur.com/FtlrEWM.jpg)
 
 #### Singly Linked List
 * there are no FILO/FIFO-style constraints on singly linked lists
