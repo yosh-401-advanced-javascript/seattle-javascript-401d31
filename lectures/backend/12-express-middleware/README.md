@@ -12,7 +12,7 @@
 * students will be able to create custom routers for a specific resource
 
 ## Express middleware 
-Express middleware are functions that have access to the request object, response object, and next. Middleware are chained together, and can effect the entire app or a single route. Middleware often process the request or application state and then modify request or respnse. Modifying the request and or response object is usful because future middleware and routes will have access to that information. Middlware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodys, logging, interacting with external APIs to send or retrive data, and much more. 
+Express middleware are functions that have access to the request object, response object, and next. Middleware are chained together, and can effect the entire app or a single route. Middleware often process the request or application state and then modify request or respnse. Modifying the request and or response object is usful because future middleware and routes will have access to that information. Middlware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodys, logging, interacting with external APIs to send or retrive data, and much more. Any middleware can end the middleware chain by sending a response. 
 
 #### middleware example 
 If the function has an airty of 3, it will be treated as normal middlware.  
@@ -42,6 +42,6 @@ If the function is defined with an airty of 4, it will be treated as error middl
 // log errors and respond with 500 status code
 module.exports = (err, req, res, next) => {
   console.error(err)
-  res.sendStatus(500)
+  res.sendStatus(500) // ends the middleware chain
 }
 ```
