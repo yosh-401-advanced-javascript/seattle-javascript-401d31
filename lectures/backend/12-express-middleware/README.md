@@ -49,4 +49,6 @@ module.exports = (err, req, res, next) => {
 ## CORS
 The Browsers have been designed to limit client access to servers that the client source is not being hosed on, due to the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). Cross Site Origin Resource Scripting (CORS) is a mechanisum that servers can implament to communicate to browsers which requests that an external script (script hosted on a different domain) are allowed to make. 
 
-![cool](https://www.html5rocks.com/static/images/cors_server_flowchart.png)
+ 
+ 
+* ![](https://www.html5rocks.com/static/images/cors_server_flowchart.png)
