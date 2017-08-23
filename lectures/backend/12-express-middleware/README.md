@@ -15,11 +15,8 @@
 Express middleware are functions that have access to the request object, response object, and next. Middleware are chained together, and can effect the entire app or a single route. Middleware often process the request or application state and then modify request or respnse. Modifying the request and or response object is usful because future middleware and routes will have access to that information. Middlware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodys, logging, interacting with external APIs to send or retrive data, and much more. 
 
 #### middleware example 
+If the function has an airty of 3, it will be treated as normal middlware.  
 ``` javascript
-const User = require('../model/user.js')
-
-// normal middlware has three paramiters
-
 // parses the request body as JSON 
 // onSuccess the request will have a body and text properties
 // onFailure an error will be passed to the next error middleware
@@ -40,8 +37,8 @@ module.exports = (req, res, next) => {
 ```
 
 #### error middlware example 
+If the function is defined with an airty of 4, it will be treated as error middleware.  
 ``` javascript
-// error middleware has four paramiters
 // when an unhandled error has occured it will be logged and then a 500 status will be sent to the cleint
 module.exports = (err, req, res, next) => {
   console.error(err)
