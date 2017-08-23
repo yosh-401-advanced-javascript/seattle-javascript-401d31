@@ -10,6 +10,9 @@
 * students will be able to create custom data models *(schemas)* through the use of mongoose.js
 * students will be able to use mongoose.js helper methods for interacting with their database persistence layer
 
+## ORM and ODM 
+Object Relational Mapping (ORM) and Object 
+
 ## Overview
 #### MongoDB
   * **Overview**
