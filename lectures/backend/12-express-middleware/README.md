@@ -16,20 +16,33 @@ Express middleware are functions that have access to the request object, respons
 
 #### middleware example 
 ``` javascript
+const User = require('../model/user.js')
+
 // normal middlware has three paramiters
+
+// parses the request body as JSON 
+// onSuccess the request will have a body and text properties
+// onFailure an error will be passed to the next error middleware
 module.exports = (req, res, next) => {
-  // do something 
-  // if(err)
-  //   next(err)
-  // else
-  //   next()
+   let text = ''
+   req.on('err', next)
+   req.on('data', (data) => text += data.toString())
+   req.on('end', () => {
+      try {
+        req.body = JSON.parse(text)
+        req.text = text
+        next()
+      } catch (err) {
+        next(err)
+      }
+   })
 }
 ```
 
 #### error middlware example 
 ``` javascript
-
 // error middleware has four paramiters
+// when an unhandled error has occured it will be logged and then a 500 status will be sent to the cleint
 module.exports = (err, req, res, next) => {
   console.error(err)
   res.sendStatus(500)
