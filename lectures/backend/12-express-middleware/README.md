@@ -11,31 +11,27 @@
 * students will be able to implement custom middleware through the use of express.js
 * students will be able to create custom routers for a specific resource
 
-## Overview
-#### Middleware
-  * **Overview**
-    * middleware functions are functions that have access to the `req` and `res` objects
-    * middleware can also access the next middleware function in the middleware chain by calling `next()`
+## Express middleware 
+Express middleware are functions that have access to the request object, response object, and next. Middleware are chained together, and can effect the entire app or a single route. Middleware often process the request or application state and then modify request or respnse. Modifying the request and or response object is usful because future middleware and routes will have access to that information. Middlware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodys, logging, interacting with external APIs to send or retrive data, and much more. 
 
-  * **Types of Middleware**
-    * **application level:** binds middleware to an instance of the `app` object through the use of:
-      * `app.use()`
-      * `app.METHOD()` *get, post, put, delete*
-    * **router level:** binds middleware to an instance of `express.Router`
-    * **error handling:** handles error status codes, messages, etc in a single location
-      * error middleware must be used below other `app.use` calls
-      * it contains 4 arguments `(err, req, res, next)`
-    * **built-in:** helper methods provided by `express`
-      * ex: `express.static()`
-    * **3rd party:** is used by passing 3rd party middleware into an `app.use` call
-      * ex: `app.use(bodyParser.json())`
-      * ex: `app.use(cors())`
+#### middleware example 
+``` javascript
+// normal middlware has three paramiters
+module.exports = (req, res, next) => {
+  // do something 
+  // if(err)
+  //   next(err)
+  // else
+  //   next()
+}
+```
 
-#### Express `Router`
-  * **Overview**
-    * `express.Router` is used to create modular route handlers
-      * this is done through an instance of `express.Router`
-    * today, we'll use an instance of the `express.Router` to create a custom `note-router` with **GET**, **POST**, and **PUT** route functionality
+#### error middlware example 
+``` javascript
 
-#### Express API Visualization
-  ![visualization](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/express-api.png)
+// error middleware has four paramiters
+module.exports = (err, req, res, next) => {
+  console.error(err)
+  res.sendStatus(500)
+}
+```
