@@ -39,7 +39,7 @@ module.exports = (req, res, next) => {
 #### error middlware example 
 If the function is defined with an airty of 4, it will be treated as error middleware.  
 ``` javascript
-// when an unhandled error has occured it will be logged and then a 500 status will be sent to the cleint
+// log errors and respond with 500 status code
 module.exports = (err, req, res, next) => {
   console.error(err)
   res.sendStatus(500)
