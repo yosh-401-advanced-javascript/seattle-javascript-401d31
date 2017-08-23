@@ -52,4 +52,4 @@ The Browsers have been designed to limit client access to servers that the clien
  
  
 
-![hey](https://www.html5rocks.com/static/images/cors_server_flowchart.png)
+![hey](http://www.html5rocks.com/static/images/cors_server_flowchart.png)
