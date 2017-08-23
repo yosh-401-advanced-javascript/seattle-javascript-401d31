@@ -9,8 +9,6 @@
 * students will be able to create a single resource API using the express framework
 * students will be able to leverage 3rd party helper modules for debugging, logging, and handling errors
 
-## Overview
-
 ## Express
 ExpressJS is a lightweight framework for building web servers. ExpressJS extends the NodeJS http module with a minimal feature set that enables developers to build quickly build powerful web applications. Express features include routing with url params, error handling, a static server, cookie and link helpers, convienience methods for sending json and jsonp, locataion and redirect management, request parsing, server side redning, and a framework for creating middleware to extend express. 
 
