@@ -34,15 +34,13 @@ Basic Authorization is a common method used to send a username and password in a
 ``` javascript
 let encoded = window.btoa('slugbyte:secretpassword')
 
-let headers = {
-  Authorization: `Basic ${encoded}`
-}
-
-ajax({
-  headers,
+request({
   url: 'https://api.example.com/login',
+  headers: {
+    Authorization: `Basic ${encoded}`
+  },
 })
 .then(handleLogin)
-.catch(console.error)
+.catch(handleLoginError)
 ``` 
 
