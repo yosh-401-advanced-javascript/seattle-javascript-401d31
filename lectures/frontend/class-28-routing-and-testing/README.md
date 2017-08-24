@@ -1,4 +1,5 @@
-# 401 JS -- class 28 react router
+![cf](http://i.imgur.com/7v5ASc8.png) 28: Frontend Routing
+===
 
 ## Learning Objectives
 * Students will learn to create front end routes using react-router-dom 
@@ -14,33 +15,32 @@
 * Skim [mdn import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 * Skim [mdn export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
-## Overview
-#### Frontend React Routing
+## Frontend React Routing
 The defacto routing libray for react web apps is `react-router-dom`. It manages switching between components based off state or the window location, meanwile controlling the browser history api. By using the browser history api, it enables users to hit the back button on their browser and revert to the last route without re-rendering the page.
 
-#### Types of State
-###### Application State
+## Types of State
+#### Application State
 Application state is any state that represends the core data of your application. This is your all your models. Examples Include...  
 * Auth
 * User
 * Note
 * Article
 
-###### View State
+#### View State
 View state is any state that has to do with how a specific component should look. Examples include...  
 * Input's values
 * Which menu item is focused
 * When to hide/show a section of the view
 * When  a hamburger menu is open or closed 
 
-#### Lifting State
+## Lifting State
 Because data can only flow from parents to children, if more than one component needs to reflect the same changing data, that data must be manged higher on the tree by a mutual parrent. One solution to this probem is to lift all **application state** to the top of the app, enabling the entire app to share changing state. **View State** does not often have to be lifted.
 
-#### ES6 modules
+## ES6 modules
 ES6 now suports its own ability to define JS modules. ES6 Modules are like commonJS modules, except they are automaticly strict-mode code, even if you don't write use-strict. ES6 now uses `export` and `import` to define and load modules
 
-#### Testing 
-###### Jest
+## Testing 
+#### Jest
 Jest is a javascript testing framework with out of the box react support. Jest has a very simular API to mocha. Jest methods include...  
 * describe (same as mocha)
 * beforeAll, afterAll (same as mocha before and after)
@@ -48,7 +48,7 @@ Jest is a javascript testing framework with out of the box react support. Jest h
 * test (same as mocha it)
 * expect (simular to expect js)
 
-###### Enzyme 
+#### Enzyme 
 Enzyme is a utility designed to ease the testing of react components. It has a JQuery like api that helps interact with React components. It provides several methods for compiling/rendering components 
 * `shallow(<Component />)` - Shallow rendering is useful to test a component witout indirectly asserting behavior of child components
 * `render(<Component />)` - Static rendring is used to render components to static html (text) and analyze the resulting HTML structure 
