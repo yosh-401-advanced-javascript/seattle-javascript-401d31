@@ -9,10 +9,7 @@
 * Students will be able to test asyncronous code using a BDD testing framework 
 
 ## Resources
-#### JS Runtime
 * Watch [what the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-
-#### fs Module
 * Read [fs module docs](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
 * Read [Understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
 
