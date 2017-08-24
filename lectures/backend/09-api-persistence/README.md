@@ -5,8 +5,8 @@
 * read [wiki persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science))
 
 ## Learning Objectives
-* Students will learn different solutions for persiting data
-* Students will learn to persist data to the file system
+* Students will learn about different solutions for persiting data
+* Students will be able to persist data using the file system
 
 ## Persistence
 Programers have designed many ways to persist data in their applications. Three common froms of persistance are in-memory stoarge, file system storage, and database storage. Each of theses persistance solutions have circomestantial pros and cons. 
