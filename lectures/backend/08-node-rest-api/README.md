@@ -6,8 +6,8 @@
 * watch [promises](https://www.youtube.com/watch?v=2d7s3spWAzo)
 
 ## Learning Objectives
-* students will learn to use promise constructs to manage asynchronous code
-* students will learn to create a vanilla RESTful API with in-memory persistence
+* Students will learn to use ES6 Promises to manage asyncronus javascript
+* Students will learn to build RESTful HTTP servers
 
 ## URI vs URL
 A URI is a string of characters used to identify a resource. A URI could be an book ISBN, a street address, a web address, or anything else. URLs are URIs that idedentify resources on the world wide web. A URL must contain everything it needs to retrieve a resource. `/dashboard` is a URI where `https://www.example.com/dashboard` is a URL.
