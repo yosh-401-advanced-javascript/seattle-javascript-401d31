@@ -49,6 +49,9 @@ module.exports = (err, req, res, next) => {
 ## CORS
 All Browsers follow the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) and have been designed to limit client access to HTTP servers that a client source is not being hosed on. Cross Site Origin Resource Scripting (CORS) is a mechanisum that clients and servers can implament so that browsers will know which HTTP requests an external script (script hosted on a different domain) is allowed to make. CORS use a set of headers on both the client request and server response to dictate to the browser what Access Controlls are in place. 
 
+#### Preflighted Requests
+Preflighted requests are HTTP requests sent using the OPTIONS method to the resource on the domain. Preflight requests are sent to gather information about the resource before making the actual request. Cross-Site requests are automaticly preflighted by the browser to make sure the actual request is valid to send.
+
 #### CORS Request Headers
 * The `Origin` header is required to be set on all CORS Requests. Its value should be the domain that the client is hosted on. 
 * The `Access-Control-Request-Method` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
