@@ -6,8 +6,8 @@
 * Students will be ablue to create one to one, one to many, and many to many model relationships using a MongoDB ODM
 
 ## Resources
-* read [mongoose populate docs](http://mongoosejs.com/docs/populate.html)
-* skim [mongoose api docs](http://mongoosejs.com/docs/api.html)
+* Read [mongoose populate docs](http://mongoosejs.com/docs/populate.html)
+* Skim [mongoose api docs](http://mongoosejs.com/docs/api.html)
 
 ## Model Relationships
 When the modeling real world as data you will quickly discover that data has relationships to other data. Infact in the real world it is rare, if not impossible, for something to exist that has no relationships to other things. On the other hand in theretical world we can describe a thing with out describing its relationships to other things. Software enginers have discoverd useful ways to discribe the relationships (or lack of) between data that can easily be maped to a database. 
