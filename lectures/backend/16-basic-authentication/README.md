@@ -14,8 +14,9 @@ Modern web applications need to model sensitive information about their users. W
 User models that have sensitive data should **NEVER** be sent to client applications. If your application requires that users be able to read each others personal information, create a second Profile model to hold that data, and strictly limit access controlls to the Profile model. Safely using a second model will ensure that no users will accidenlty or mallisiously get access to sensitive information. 
 
 ## Cryptography 
-[GNU Collaborative International Dictionary of English](http://gcide.gnu.org.ua) defines crpotography as
-> The science which studies methods for encoding messages so that they can be read only by a person who knows the secret information required for decoding, called the key; it includes cryptanalysis, the science of decoding encrypted messages without possessing the proper key, and has several other branches.
+> The science which studies methods for encoding messages so that they can be read only by a person who knows the secret information required for decoding, called the key; it includes cryptanalysis, the science of decoding encrypted messages without possessing the proper key, and has several other branches.  
+
+- [GNU Collaborative International Dictionary of English](http://gcide.gnu.org.ua) 
 
 #### Hash Algorythems
 #### Cyper Algorythems
