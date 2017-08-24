@@ -1,4 +1,5 @@
-# 401 JS -- class 33 Redux Middleware
+![cf](http://i.imgur.com/7v5ASc8.png) 33: Redux Middleware
+===
 
 ## Learning Objectives
 * Students will learn to write middleware for redux
