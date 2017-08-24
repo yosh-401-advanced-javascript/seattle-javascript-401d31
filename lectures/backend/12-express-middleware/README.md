@@ -63,7 +63,7 @@ OPTIONS /api/note HTTP/1.1
 Host: api.some-service.com
 Origin: https://www.example.com
 Access-Control-Request-Method: POST,PUT,GET,DELETE
-Access-Control-Request-Headers: Content-Type, Authorization
+Access-Control-Request-Headers: Content-Type, Authorization, App-Token
 ```
 
 #### CORS Response Headers
