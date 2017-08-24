@@ -6,9 +6,9 @@
 * Students will learn to write HTTP servers for handling HTTP requests
 
 ## Resources
-* skim [nodejs http module](https://nodejs.org/api/http.html)
-* skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
-* skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+* Skim [nodejs http module](https://nodejs.org/api/http.html)
+* Skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
+* Skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ## [HTTP](https://tools.ietf.org/html/rfc7231)
 The Hyper Text Transfer Protocol (HTTP) is a stateless request-response application layer protocol. HTTP is used to build distributed, collaborative, hypermedia information systems. HTTP is the foundation for the world wibe web. Applications built using HTTP subscribe to the client-server computing model. In the client-server computing model a host designed to provide a service is called a server and clients are hosts that make requests to the service. The HTTP specification defines how requests and responses should be formated, but not what a service should represent. HTTP is often associated with serving `.html` files but is also used to transfer images, videos, json, xml, binary executables, and much more. 
