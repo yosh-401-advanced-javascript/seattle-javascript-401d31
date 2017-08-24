@@ -2,9 +2,9 @@
 ===
 
 ## Learning Objectives
-* students will learn to use redux with react 
-* students will learn to design redux reducer's for contolling app state
-* students will learn to design action creater functions for working with redux
+* Students will learn to use redux with react 
+* Students will learn to design redux reducer's for contolling app state
+* Students will learn to design action creater functions for working with redux
 
 ## Readings
 * Read [redux readme](http://redux.js.org/)
