@@ -1,12 +1,13 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 09: Vanilla REST API w/ Persistence
 ===
 
-## Persistence Resources
-* read [wiki persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science))
-
 ## Learning Objectives
 * Students will learn about different solutions for persiting data
 * Students will be able to persist data using the file system
+
+## Persistence Resources
+* Read [wiki persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science))
+* Read [a Breif Histor of Databases](http://avant.org/project/history-of-databases/)
 
 ## Persistence
 Programers have designed many ways to persist data in their applications. Three common froms of persistance are in-memory stoarge, file system storage, and database storage. Each of theses persistance solutions have circomestantial pros and cons. 
