@@ -50,9 +50,16 @@ module.exports = (err, req, res, next) => {
 All Browsers follow the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) and have been designed to limit client access to HTTP servers that a client source is not being hosed on. Cross Site Origin Resource Scripting (CORS) is a mechanisum that clients and servers can implament so that browsers will know which HTTP requests an external script (script hosted on a different domain) is allowed to make. CORS use a set of headers on both the client request and server response to dictate to the browser what Access Controlls are in place. 
 
 #### CORS Request Headers
-* `Origin: https://www.example.com` The `Origin` header is required to be set on all CORS Requests. Its value should be the domain that the client is hosted on. 
-* `Access-Control-Request-Method: POST,PUT,PATCH,GET,DELETE,HEAD` The `Access-Control-Request-Method` Header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
-* `Access-Control-Request-Headers: Content-Type, Authorization` the `Access-Control-Request-Headers` Header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
+* The `Origin` header is required to be set on all CORS Requests. Its value should be the domain that the client is hosted on. 
+* The `Access-Control-Request-Method` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
+* The `Access-Control-Request-Headers` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
+
+```
+OPTIONS /api/note HTTP/1.1
+Origin: https://www.example.com
+Access-Control-Request-Method: POST,PUT,GET,DELETE
+Access-Control-Request-Headers: Content-Type, Authorization
+```
 
 #### CORS Response Headers
 * `Access-Control-Allow-Origin: *`
