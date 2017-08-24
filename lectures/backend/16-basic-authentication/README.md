@@ -31,6 +31,8 @@ User tokens can be created by associated a random unique string (tokenSeed) with
 ## Basic Authorizaton
 Basic Authorization is a common method used to send a username and password in an HTTP request. The username and password are joined with a ':' then base64 encoded and then placed after the string 'Basic '. The resulting string is set to the value of the Authorization header.
 
+A Server can decode the Basic Authorization header to retrieve the username and passowrd. Its important to note that base64 encodeing is not a form of encryption. The client and server must use HTTPS to protect the username and password as it travels across the network.
+
 ``` javascript
 let encoded = window.btoa('slugbyte:secretpassword')
 // c2x1Z2J5dGU6c2VjcmV0cGFzc3dvcmQ=
