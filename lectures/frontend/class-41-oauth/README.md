@@ -6,11 +6,11 @@
 * Students will learn to implament OAuth2 on the server side 
 
 ## Readings
-* (OAuth wiki)[https://en.wikipedia.org/wiki/OAuth]
-* (OAuth2 simplified)[https://aaronparecki.com/oauth-2-simplified/]
-* (Google OAuth2 Docs)[https://developers.google.com/identity/protocols/OAuth2]
-* (Google OAuth Server Side)[https://developers.google.com/identity/protocols/OAuth2WebServer]
-* (Google Openid Docs)[https://developers.google.com/identity/protocols/OpenIDConnect]
+* [OAuth wiki](https://en.wikipedia.org/wiki/OAuth)
+* [OAuth2 simplified](https://aaronparecki.com/oauth-2-simplified/)
+* [Google OAuth2 Docs](https://developers.google.com/identity/protocols/OAuth2)
+* [Google OAuth Server Side](https://developers.google.com/identity/protocols/OAuth2WebServer)
+* [Google Openid Docs](https://developers.google.com/identity/protocols/OpenIDConnect)
 
 ## OAUTH2.0
 OAuth is an open standard for access delegation. It servers as a way to give users the ability to grant apps access to services, without giving the apps their password. 
