@@ -54,19 +54,33 @@ All Browsers follow the [same-origin policy](https://en.wikipedia.org/wiki/Same-
 * The `Access-Control-Request-Method` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
 * The `Access-Control-Request-Headers` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
 
+###### Example CORS Preflight Request
 ```
 OPTIONS /api/note HTTP/1.1
+Host: api.some-service.com
 Origin: https://www.example.com
 Access-Control-Request-Method: POST,PUT,GET,DELETE
 Access-Control-Request-Headers: Content-Type, Authorization
 ```
 
 #### CORS Response Headers
-* `Access-Control-Allow-Origin: *`
-* `Access-Control-Allow-Credentials: true`
-* `Access-Control-Expose-Headers: `
-* `Access-Control-Max-Age:`
-* `Access-Control-Allow-Methods:`
-* `Access-Control-Allow-Headers:`
+* The `Access-Control-Allow-Origin` specifies that a URI may access the resource
+* The `Access-Control-Allow-Methods` is used in a preflight response to specifie which methods are allowed when accessing a resource
+* The `Access-Control-Allow-Headers` is used in a preflight response to specifie which headers are allowed when making the actual request
+
+* The `Access-Control-Allow-Credentials` is used in preflight response to specifie if the actual request can be made using credentials (cookies)
+* The `Access-Control-Expose-Headers` is used in preflight response to specifie that which custom server headers should be exposed to the browser
+* The `Access-Control-Max-Age` is used in a preflight response to specifie in seconds how long the response can be cached
+
+###### Example CORS Preflight Response
+```
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: http://www.example.com
+Access-Control-Allow-Method: POST,GET
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Expose-Headers: App-Token
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 900000
+```
 
  
