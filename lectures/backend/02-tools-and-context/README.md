@@ -9,18 +9,13 @@
 * Students will be able to interperate the diffent types of errors in Javascript
 
 ## Resources 
-#### package.json
-* read [about package.json]
-* skim [npm scripts as build tools]
-* skim [npm scripts docs]
+* Read [about package.json]
+* Skim [npm scripts as build tools]
+* Skim [npm scripts docs]
 * Read [semver](http://semver.org/)
-
-#### Error
-* read [node error docs]
-
-#### Context
-* read [mdn this]
-* watch [javascript context tutorial]
+* Read [node error docs]
+* Read [mdn this]
+* Watch [javascript context tutorial]
 
 ## package.json
 The `package.json` file is used to descibe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version`. If a package has external dependieces they are list by name and version under the fields `dependencies` and `devDependencies`. If the package depenends on an extenral package to run the external package should be listed under `dependencies`. If the external package is only needed in development (like a testing framework) it should be listend under `devDependencies`. package.json files can have a `scripts` field where keys can be associated with unix commands. npm scripts have the added benifit that they can run any command line utility (CLI) defined in a dependencie, without globally installing the CLI on you opperating system. 
