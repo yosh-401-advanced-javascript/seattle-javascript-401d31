@@ -38,9 +38,10 @@ let encoded = window.btoa('slugbyte:secretpassword')
 // c2x1Z2J5dGU6c2VjcmV0cGFzc3dvcmQ=
 
 request({
+  method: 'GET',
   url: 'https://api.example.com/login',
   headers: {
-    Authorization: `Basic ${encoded}`
+    Authorization: `Basic ${encoded}`,
   },
 })
 .then(handleLogin)
