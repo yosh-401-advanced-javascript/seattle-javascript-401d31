@@ -1,15 +1,15 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 12: Express Middleware
 ===
 
-## Resources
-* skim [morgan docs](https://github.com/expressjs/morgan)
-* skim [cors docs](https://github.com/expressjs/cors)
-* skim [dotenv docs](https://github.com/motdotla/dotenv)
-
 ## Learning Objectives
 * Students will be able to use and write express middleware
 * Students will learn about Cross Site Origin Resoruce Scripting (CORS)
 * Students will be able to implamnet CORS on an HTTP server
+
+## Resources
+* Skim [morgan docs](https://github.com/expressjs/morgan)
+* Skim [cors docs](https://github.com/expressjs/cors)
+* Skim [dotenv docs](https://github.com/motdotla/dotenv)
 
 ## Express middleware 
 Express middleware are functions that have access to the request object, response object, and next. Middleware are chained together, and can effect the entire app or a single route. Middleware often process the request or application state and then modify request or respnse. Modifying the request and or response object is usful because future middleware and routes will have access to that information. Middlware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodys, logging, interacting with external APIs to send or retrive data, and much more. Any middleware can end the middleware chain by sending a response. 
