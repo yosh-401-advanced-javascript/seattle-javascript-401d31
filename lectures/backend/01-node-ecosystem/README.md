@@ -6,23 +6,17 @@
 * Students will be able to write commonjs modules
 * Students will be able to to write unit tests for syncronous Javascript code.
 * Students will be able to use to test driven development methodologies
+
 ## Resources 
-#### Node.js 
-* read [about nodejs]
-* skim [libuv docs]
-* skim [about v8]
-
-#### NPM
-* read [what is npm]
-
-#### ES6 
-* read [just another guide to ES6]
-* skim [node and es6 docs]
-
-#### Testing 
-* read [a gentle intro to tdd in js]
-* read [expect docs](http://chaijs.com/api/bdd/)
-* read [mocha getting started guide]
+* Read [about nodejs]
+* Skim [libuv docs]
+* Skim [about v8]
+* Read [what is npm]
+* Read [just another guide to ES6]
+* Skim [node and es6 docs]
+* Read [a gentle intro to tdd in js]
+* Read [expect docs](http://chaijs.com/api/bdd/)
+* Read [mocha getting started guide]
 
 ## Use Your Computer Like A Developer
 It's time to unlearn any bad computer usage habbits, you may have developed in you pre-programmer years. It is critical that you keep your file system organized. Writing code is dificult enough, so dont allow your problem to be finding your code on the file system. You should also come up with a system for naming your files, and never deviate from it!!! Keep all of your projects in one place, and allways use version control. Use best git pratices even when you are working on personal projects! Use the command line when ever posible, in the long run it will save you many hours of time. 
