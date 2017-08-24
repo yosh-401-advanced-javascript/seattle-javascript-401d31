@@ -1,16 +1,16 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 11: Single Resource Express API
 ===
 
-## Express Resources
-* Skim [express api docs](http://expressjs.com/en/4x/api.html)
-* Read [express routing](http://expressjs.com/en/guide/routing.html)
-* Read [MongoDB Driver QuickStart](http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/)
-* Skim [MongoDB Driver Collection API Docs](http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html)
-
 ## Learning Objectives
 * Students will learn about MongoDB and Express
 * Students will be able to build RESTful HTTP servers uing express
 * Students will be able to persist data using MongoDB
+
+## Resources
+* Skim [express api docs](http://expressjs.com/en/4x/api.html)
+* Read [express routing](http://expressjs.com/en/guide/routing.html)
+* Read [MongoDB Driver QuickStart](http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/)
+* Skim [MongoDB Driver Collection API Docs](http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html)
 
 ## Express
 ExpressJS is a lightweight framework for building web servers. ExpressJS extends the NodeJS http module with a minimal feature set that enables developers to build quickly build powerful web applications. Express features include routing with url params, error handling, a static server, cookie and link helpers, convienience methods for sending json and jsonp, locataion and redirect management, request parsing, server side redning, and a framework for creating middleware to extend express. 
