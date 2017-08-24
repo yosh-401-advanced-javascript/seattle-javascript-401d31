@@ -1,4 +1,5 @@
-# 401 JS -- class 41 OAuth Backend
+![cf](http://i.imgur.com/7v5ASc8.png) 41: OAuth Backend
+===
 
 ## Learning Objectives
 * Students will learn to set up a Google Cloud appliction
