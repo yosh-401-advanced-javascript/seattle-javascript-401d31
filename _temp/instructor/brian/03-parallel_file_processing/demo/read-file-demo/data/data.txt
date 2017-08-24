@@ -1,1 +1,0 @@
-sample data to be read from the read file demo
