@@ -10,28 +10,7 @@
 * students will be able to retrieve a cdn url that contains the previously uploaded static asset
 * students will be able to work with secret and public access keys
 
-## Overview
-#### AWS S3
-* **Overview**
-  * S3 *(Amazon Simple Storage Service)* is a scalable object storage platform
-  * S3 will be used as a way to store images used within our application
-  * using the `aws-sdk` module, each time a new file is saved we will be provided with a url to the associated file
-    * this url is what we will be saving to the database in our application, not the actual file
-  * when uploading files to S3, we consider each file to be an "object"
-  * "objects" can then be contained in buckets for later use
+## AWS S3
+Amazon Simple Storage Service (AWS S3) is simple but powerful cloud data storage solution. It can hold assets of any size. File assets can be uploaed to S3 Buckets. Buckets are essentialy file systems that can hold files and folders. In an S3 Bucket a filename is called a Key. Each asset in stored in a Bucket has a URI and specific permissions. If the asset has public read permisions anyone can retrieve the asset using a GET request. 
 
-#### Additional Helpers
-* **`.env` config**
-``` javascript
-  PORT='8000'
-  MONGODB_URI='mongodb://localhost/yourdbname'
-  APP_SECRET='yourdbsecret'
-  AWS_BUCKET='yourbucketname'
-  AWS_ACCESS_KEY_ID='youraccesskey'
-  AWS_SECRET_ACCESS_KEY='yoursecretkey'
-```
-
-* **newly added `npm` modules**
-  * `multer` - used for handling multipart form data (`entype="multipart/form-data"`)
-  * `del` - deletes files and folders
-  * `aws-sdk` - official sdk (software development kit) with helper tools for working with AWS
+S3 is used for storing large data assets that databases can not handle. S3 is commonly used to host images, videos, audio, 3D models, CSV files, application files, binary executables, and much more. 
