@@ -5,8 +5,8 @@
 * read [wiki persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science))
 
 ## Learning Objectives
-* students will learn how to save resource data to the file system for a layer of data persistence
-* students will learn how to refactor commonly used coding constructs into custom helper modules
+* Students will learn different solutions for persiting data
+* Students will learn to persist data to the file system
 
 ## Persistence
 Programers have designed many ways to persist data in their applications. Three common froms of persistance are in-memory stoarge, file system storage, and database storage. Each of theses persistance solutions have circomestantial pros and cons. 
