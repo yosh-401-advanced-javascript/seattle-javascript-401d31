@@ -1,4 +1,5 @@
-# 401 JS -- class 36 Async Actions 
+![cf](http://i.imgur.com/7v5ASc8.png) 36: Async Actions 
+===
 
 ## Learning Objectives
 * Students will learn to write thunk middleware for redux
@@ -7,5 +8,5 @@
 ## Readings
 * [Async Actions](http://redux.js.org/docs/advanced/AsyncActions.html)
 
-## Overview
+## Redux Thunk
 Redux thunk middlware allows you to dispatch function actions as well as function actions. Function actions will have asccess to dispatch, and getState. Function actions can trigger async events and dispatch new actions when they are completed. This is often used to make AJAX requests to the a HTTP server.
