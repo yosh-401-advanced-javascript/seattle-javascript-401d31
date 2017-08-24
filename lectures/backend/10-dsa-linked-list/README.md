@@ -1,14 +1,14 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 10: DSA - Linked List
 ===
 
-## Linked List Resources
-* watch [linked lists]
-* skim [linked list wiki]
-
 ## Learning Objectives
 * students will be able to implement a linked list
 * students will be able to implement a doubly linked list
 * students will be able create and implement common linked list methods
+
+## Linked List Resources
+* Watch [linked lists]
+* Skim [linked list wiki]
 
 ## Overview
 
