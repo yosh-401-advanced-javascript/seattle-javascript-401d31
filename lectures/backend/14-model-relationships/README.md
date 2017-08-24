@@ -64,3 +64,17 @@ Comment
 #### Many to Many
 Many Foo modles that can each have relationships to many Bar Models. a web app examples includes every user having a relation ship with many friends and each of those users have relationships with a many different freinds. 
 
+```
+User 
+  id: 1234
+  username: 'teapot'
+  friends: [ 1001 3333 4321 ]
+
+User 
+  id: 1001
+  username: 'peach'
+  friends: [ 1234 5000 ]
+```
+
+
+
