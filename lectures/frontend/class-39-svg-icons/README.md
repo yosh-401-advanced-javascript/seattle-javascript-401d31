@@ -1,4 +1,5 @@
-# 401 JS -- class 39 svg icons
+![cf](http://i.imgur.com/7v5ASc8.png) 39: Working with SVG 
+===
 
 ## Learning Objectives
 * Loading fonts with sass and webpack
@@ -9,9 +10,8 @@
 * [url-loader docs](https://webpack.js.org/loaders/url-loader/)
 * [icon-font vs inline-vg](https://css-tricks.com/icon-fonts-vs-svg/)
 
-## Overview
-#### url loader
+## url loader
 the url loader works can eather copy an imported asset into the build path, or turn it into a DataURL. 
 
-#### svg 
+## svg 
 SVGs are nativly supported in HTML. By using inline SVG's you open the potential for much more styling control. 
