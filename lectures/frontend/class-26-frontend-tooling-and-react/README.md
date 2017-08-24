@@ -9,11 +9,11 @@
 * Students will be able to update React component state
 
 ## Resources
-* [Webpack Concepts](https://webpack.js.org/concepts/)
-* [Webpack Configuration](https://webpack.js.org/configuration/)
-* [React Hello World](https://facebook.github.io/react/docs/hello-world.html) 
-* [Introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
-* [Rendering Elements](https://facebook.github.io/react/docs/rendering-elements.html)
+* Read [Webpack Concepts](https://webpack.js.org/concepts/)
+* Skim [Webpack Configuration](https://webpack.js.org/configuration/)
+* Read [React Hello World](https://facebook.github.io/react/docs/hello-world.html) 
+* Read [Introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
+* Read [Rendering Elements](https://facebook.github.io/react/docs/rendering-elements.html)
 
 ## Webpack
 Webpack is a module bundler for JS applications. It compiles modern JavaScript applications into bundles that can be loaded into a browser. **All of your projects' assets should be managed by webpack**, including JSON, JS, CSS, SCSS, HTML, IMAGES, FONTS, etc.
