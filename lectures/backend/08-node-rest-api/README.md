@@ -1,13 +1,13 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 08: REST and Promises
 ===
 
-## Vanilla REST API Resources
-* read [getting started with promises](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
-* watch [promises](https://www.youtube.com/watch?v=2d7s3spWAzo)
-
 ## Learning Objectives
 * Students will learn to use ES6 Promises to manage asyncronus javascript
 * Students will learn to build RESTful HTTP servers
+
+## Resources
+* Read [getting started with promises](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
+* Watch [promises](https://www.youtube.com/watch?v=2d7s3spWAzo)
 
 ## URI vs URL
 A URI is a string of characters used to identify a resource. A URI could be an book ISBN, a street address, a web address, or anything else. URLs are URIs that idedentify resources on the world wide web. A URL must contain everything it needs to retrieve a resource. `/dashboard` is a URI where `https://www.example.com/dashboard` is a URL.
