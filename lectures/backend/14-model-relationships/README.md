@@ -6,9 +6,8 @@
 * skim [mongoose api docs](http://mongoosejs.com/docs/api.html)
 
 ## Learning Objectives
-* students will be able to create a 2 resource MongoDB and Express API
-* students will be able to reference additional resources as part of their mongoose.js based data models
-* students will be able to use the `populate` method to allow for resource query population
+* Students will learn about realtionship modeling
+* Students will be ablue to create one to one, one to many, and many to many model relationships using a MongoDB ODM
 
 ## Model Relationships
 When the modeling real world as data you will quickly discover that data has relationships to other data. Infact in the real world it is rare, if not impossible, for something to exist that has no relationships to other things. On the other hand in theretical world we can describe a thing with out describing its relationships to other things. Software enginers have discoverd useful ways to discribe the relationships (or lack of) between data that can easily be maped to a database. 
