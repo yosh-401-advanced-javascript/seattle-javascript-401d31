@@ -16,7 +16,9 @@ Bearer authorization is a common way send a user token in an http request. The u
 let token = '98asdf7987asfd987as98df79a8s7f9d87as98df79a8s7f98as7fd9a8s7df987adfs798'
 
 request({
-  url: 'https://api.example.com/login',
+  method: 'POST'
+  url: 'https://api.example.com/notes',
+  data: {content: 'get milk!'},
   headers: {
     Authorization: `Bearer ${token}`
   },
