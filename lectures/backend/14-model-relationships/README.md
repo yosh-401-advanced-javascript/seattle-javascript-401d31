@@ -62,7 +62,9 @@ Comment
   
   
 #### Many to Many
-Many Foo modles that can each have relationships to many Bar Models. a web app examples includes every user having a relation ship with many friends and each of those users have relationships with a many different freinds. 
+Many Foo modles that can each have relationships to many Bar Models. A web app examples includes every user having a relation ship with many friends and each of those users have relationships with a many different freinds. 
+
+Some databases (including mongodd) do not nativly support models having many to many relationships, but many to many can still be created through the use of a second model.
 
 ###### Using One Model
 ```
