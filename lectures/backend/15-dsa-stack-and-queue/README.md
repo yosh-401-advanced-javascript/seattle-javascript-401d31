@@ -1,18 +1,17 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 15: Stacks and Queues
 ===
 
-## Stacks and Queues Resources
-* watch [stacks and queues]
-* read [stack wiki]
-* skim [queue wiki]
-
 # Learning Objectives
 * students will be able to implement a stack
 * students will be able to identify use cases for a stack
 * students will be able to implement a queue
 * students will be able to identify use cases for a queue
 
-## Overview
+## Resources
+* watch [stacks and queues]
+* read [stack wiki]
+* skim [queue wiki]
+
 #### Stacks
   * stacks are a data structure that serve as a collection of elements
   * these elements are *stacked* in a last in, first out sequence **aka: (LIFO - last in first out)**
