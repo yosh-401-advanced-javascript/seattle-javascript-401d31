@@ -79,7 +79,7 @@ User
   friends: [ 1234 5000 ]
 ```
 
-#### Using A Second Model
+###### Using A Second Model
 ```
 User 
   id: 1234
