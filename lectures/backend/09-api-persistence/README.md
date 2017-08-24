@@ -7,7 +7,7 @@
 
 ## Persistence Resources
 * Read [wiki persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science))
-* Read [a Breif Histor of Databases](http://avant.org/project/history-of-databases/)
+* Read [a Breif History of Databases](http://avant.org/project/history-of-databases/)
 
 ## Persistence
 Programers have designed many ways to persist data in their applications. Three common froms of persistance are in-memory stoarge, file system storage, and database storage. Each of theses persistance solutions have circomestantial pros and cons. 
