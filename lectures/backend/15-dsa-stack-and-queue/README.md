@@ -2,15 +2,15 @@
 ===
 
 # Learning Objectives
-* students will be able to implement a stack
-* students will be able to identify use cases for a stack
-* students will be able to implement a queue
-* students will be able to identify use cases for a queue
+* Students will be able to implement a stack
+* Students will be able to identify use cases for a stack
+* Students will be able to implement a queue
+* Students will be able to identify use cases for a queue
 
 ## Resources
-* watch [stacks and queues]
-* read [stack wiki]
-* skim [queue wiki]
+* Watch [stacks and queues](https://www.youtube.com/watch?v=wjI1WNcIntg)
+* Read [stack wiki](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+* Skim [queue wiki](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
 
 #### Stacks
   * stacks are a data structure that serve as a collection of elements
@@ -34,7 +34,3 @@
     * implement `push` and `pop` prototype methods
   * implement a queue
     * implement `enqueue` and `dequeue` prototype methods
-
-[stacks and queues]: https://www.youtube.com/watch?v=wjI1WNcIntg
-[stack wiki]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
-[queue wiki]: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
