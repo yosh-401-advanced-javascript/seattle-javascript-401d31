@@ -5,7 +5,7 @@
 * Students will learn to read and write HTTP Request and Response packets
 * Students will learn to write HTTP servers for handling HTTP requests
 
-## HTTP Resources
+## Resources
 * skim [nodejs http module](https://nodejs.org/api/http.html)
 * skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
 * skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
