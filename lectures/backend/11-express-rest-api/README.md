@@ -4,6 +4,8 @@
 ## Express Resources
 * Skim [express api docs](http://expressjs.com/en/4x/api.html)
 * Read [express routing](http://expressjs.com/en/guide/routing.html)
+* Read [MongoDB Driver QuickStart](http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/)
+* Skim [MongoDB Driver Collection API Docs](http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html)
 
 ## Learning Objectives
 * Students will learn about MongoDB and Express
