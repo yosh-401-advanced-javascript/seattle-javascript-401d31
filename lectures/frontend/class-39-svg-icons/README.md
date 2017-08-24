@@ -7,8 +7,8 @@
 * Stuendts will learn the difference between icon-fonts and inline svgs
 
 ## Readings
-* [url-loader docs](https://webpack.js.org/loaders/url-loader/)
-* [icon-font vs inline-vg](https://css-tricks.com/icon-fonts-vs-svg/)
+* Skim [url-loader docs](https://webpack.js.org/loaders/url-loader/)
+* Read [icon-font vs inline-vg](https://css-tricks.com/icon-fonts-vs-svg/)
 
 ## url loader
 the url loader works can eather copy an imported asset into the build path, or turn it into a DataURL. 
