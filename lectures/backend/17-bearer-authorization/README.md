@@ -6,7 +6,7 @@
 * Students will learn to implament Access Controls in there HTTP server routes
 
 ## Resources
-* read [intro to jwt](https://jwt.io/introduction/)
+* Read [intro to jwt](https://jwt.io/introduction/)
 
 ## Access Controlls
 Access Controlls are the selective restriction of resources. Access Controlls are implamented everywhere in computer systems. Unix files have read write and execute permissions assiged to owners, groups, and everyone else. Websites have limit access to pages based on the credentials of a user. APIs restrict access to internal and external developers differnaly. 
