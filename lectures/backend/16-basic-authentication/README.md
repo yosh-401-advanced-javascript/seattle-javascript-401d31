@@ -28,5 +28,21 @@ A Cryptographic Cyper Algorythem takes a piece of data and a key and produces en
 
 User tokens can be created by associated a random unique string (tokenSeed) with a user account and encrypting the tokenSeed with a secret key only the server knows. We can then send the encrypted token to a client application. When the client makes a future request they can send back the token. The server can reverse the token into the tokenSeed by decrypting it with the secret key, and because the tokenSeed was unique the database can be quiered to produce the user who made the request. 
 
-#### Basic Authorizaton
+## Basic Authorizaton
+Basic Authorization is a common method used to send a username and password in an HTTP request. The username and password are joined with a ':' then base64 encoded and then placed after the string 'Basic '. The resulting string is set to the value of the Authorization header.
+
+``` javascript
+let encoded = window.btoa('slugbyte:secretpassword')
+
+let headers = {
+  Authorization: `Basic ${encoded}`
+}
+
+ajax({
+  headers,
+  url: 'https://api.example.com/login',
+})
+.then(handleLogin)
+.catch(console.error)
+``` 
 
