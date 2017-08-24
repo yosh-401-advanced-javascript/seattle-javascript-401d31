@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Frontend Tooling and React
+![cf](http://i.imgur.com/7v5ASc8.png) 26: Frontend Tooling and React
 ===
 
 ## Learning Objectives
