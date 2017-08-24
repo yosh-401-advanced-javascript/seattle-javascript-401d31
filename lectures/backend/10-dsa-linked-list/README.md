@@ -6,7 +6,7 @@
 * students will be able to implement a doubly linked list
 * students will be able create and implement common linked list methods
 
-## Linked List Resources
+## Resources
 * Watch [linked lists]
 * Skim [linked list wiki]
 
