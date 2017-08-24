@@ -1,24 +1,21 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 04: Lists and Big O Notation
 =====================================
 
-# Big O Resources
-* Read [simple wiki big o]
-* Watch [hacker rank big o video]
-* Skim at [big o cheat sheet]
-
-# Functional programming resources
-* Watch [funfunfunction functional programming video series]
-* Read [what is functional programming]
-* Read [Why functional programming](https://github.com/getify/Functional-Light-JS/blob/master/ch1.md)
-* Skim [functional programming jargon]
-
 # Learning Objectives
 * students will be able to determine and describe the runtime complexity of an algorithm
 * students will understand the difference between a constructor function and a factory function
 * students will be able to identify and explain the qualities of imperative and functional code
 * students will be able to implement a functional array-like list with map, filter, reduce, and forEach methods
 
-# Overview
+# Resources
+* Read [simple wiki big o]
+* Watch [hacker rank big o video]
+* Skim at [big o cheat sheet]
+* Watch [funfunfunction functional programming video series]
+* Read [what is functional programming]
+* Read [Why functional programming](https://github.com/getify/Functional-Light-JS/blob/master/ch1.md)
+* Skim [functional programming jargon]
+
 ## Big O
 * big-o is a way of describing the speed and memory usage of an algorithm
 * algorithms can run faster or slower given a specific input thus we only use big-o to describe the worst case
