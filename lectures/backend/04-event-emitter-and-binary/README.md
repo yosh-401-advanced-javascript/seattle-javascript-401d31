@@ -1,17 +1,16 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 04: EventEmitter and Binary Data
 =====================================
 
-## Event Emitter Resources
-* [events api docs]
-
-## Bitmap Resources
-* read [bitmap file format]
-* read  [node buffer api docs]
-* watch [endian and little endian]
-
 ## Learning Objectives
-* students will be able to manipulate binary data using the node.js `Buffer` class
-* students will be able to architect modular solutions to solving problems
+* Students will learn how binary data is encoded and decoded
+* Students will be able to manipulate binary data using Nodes Buffers
+* Students will be able to use EventEmitters for managing asyncronous code
+
+## Resources
+* Skim [events api docs]
+* Read [bitmap file format]
+* Read  [node buffer api docs]
+* Watch [endian and little endian]
 
 ## EventEmitter
 * much of the node.js architecture is built around the use of events
@@ -103,26 +102,7 @@ Signed |Unsigned
 -2     |14       |1110   (8 + 6) * -1
 -1     |15       |1111   (8 + 7) * -1
 ```
-
-#### Floating Point Numbers
-Modern floting point numbers come in 16, 32, and 64 bits. The bits are devided into three unsigned numbers used to form scientific notation. The first bit is aboolean value that determine the sign of the numer. The next few bits are an exponent. and the following bits are the significant digits
-
-| TYPE | Sign | Exponent | Significant digits | Total Bits |
-| ---- | ---- | -------- | ------------------ | ---------- |
-| Half | 1    | 5        | 10 | 16 |
-| Single | 1 | 8 | 23 | 32 | 
-| Double | 1 | 11 | 52 | 64 |
-
-```
-signed 
-s 5     2
-1 00101 0000000010   (
-
-unsigned
-u 10    9
-0 01010 0000001001
-```
-* below is decimal hex binary conversion chart
+###### Hex Cheat Sheet
 ``` text
 DEC |HEX |BIN
 --------------
