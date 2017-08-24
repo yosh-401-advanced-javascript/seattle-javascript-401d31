@@ -2,12 +2,13 @@
 ===
 
 ## Express Resources
-* skim [express api docs](http://expressjs.com/en/4x/api.html)
-* read [express routing](http://expressjs.com/en/guide/routing.html)
+* Skim [express api docs](http://expressjs.com/en/4x/api.html)
+* Read [express routing](http://expressjs.com/en/guide/routing.html)
 
 ## Learning Objectives
-* students will be able to create a single resource API using the express framework
-* students will be able to leverage 3rd party helper modules for debugging, logging, and handling errors
+* Students will learn about MongoDB and Express
+* Students will be able to build RESTful HTTP servers uing express
+* Students will be able to persist data using MongoDB
 
 ## Express
 ExpressJS is a lightweight framework for building web servers. ExpressJS extends the NodeJS http module with a minimal feature set that enables developers to build quickly build powerful web applications. Express features include routing with url params, error handling, a static server, cookie and link helpers, convienience methods for sending json and jsonp, locataion and redirect management, request parsing, server side redning, and a framework for creating middleware to extend express. 
