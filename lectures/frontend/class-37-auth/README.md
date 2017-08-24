@@ -1,4 +1,5 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 37: Authorzation and Authentication 
+===
 
 ## Learning Objectives
 * Stuents will learn to manage Basic and Bearer authentication on the client side
