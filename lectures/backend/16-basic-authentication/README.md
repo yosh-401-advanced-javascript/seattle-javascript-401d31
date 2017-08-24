@@ -16,7 +16,7 @@ User models that have sensitive data should **NEVER** be sent to client applicat
 ## Cryptography 
 > The science which studies methods for encoding messages so that they can be read only by a person who knows the secret information required for decoding, called the key; it includes cryptanalysis, the science of decoding encrypted messages without possessing the proper key, and has several other branches.  
 
-- [GNU Collaborative International Dictionary of English](http://gcide.gnu.org.ua) 
+\- [GNU Collaborative International Dictionary of English](http://gcide.gnu.org.ua) 
 
 #### Hash Algorythems
 #### Cyper Algorythems
