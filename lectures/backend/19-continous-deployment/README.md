@@ -1,16 +1,15 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 19: Production Deplyoment
 ===
 
+## Learning Objectives
+* Students will be able to deploy their application on Heroku with a continupus delivery pipeline
+* Students will be able to configure TravisCI to run their tests on all pushes to GitHub
+* Studetns will learn about Continuous Integration
+* Studetns will learn about Continuous Delivery
+
 ## Resources
 * Read [Deploing NodeJS Apps on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs)
 * Read [Getting started with NodeJS on TravisCI](https://docs.travis-ci.com/user/languages/javascript-with-nodejs)
-
-## Learning Objectives
-* students will be able to deploy their application on Heroku
-* students will be able to create staging and production pipelines
-* students will be able to configure TravisCI to run their tests on all pushes to GitHub
-* students will be able to configure Coveralls to check their code coverage rate
-* students will be able to identify common issues during the deployment process
 
 ## Continuous Integration
 Continuous Intigraion (CI) is the process of regulary merging individauly developed features of code into a shared repository as frequently as they are made. In the most basic setup a team could simpaly use Git to merge code into a master branch. However more advanced CI patterns can be develped, that automate static analysis (lining), running unit and integration tests, testing platform support, enforcing code reviews, and much more. 
