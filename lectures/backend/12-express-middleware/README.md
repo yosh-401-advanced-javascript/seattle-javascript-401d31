@@ -47,6 +47,19 @@ module.exports = (err, req, res, next) => {
 ```
 
 ## CORS
-The Browsers have been designed to limit client access to servers that the client source is not being hosed on, due to the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). Cross Site Origin Resource Scripting (CORS) is a mechanisum that servers can implament to communicate to browsers which requests that an external script (script hosted on a different domain) are allowed to make. 
+All Browsers follow the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) and have been designed to limit client access to HTTP servers that a client source is not being hosed on. Cross Site Origin Resource Scripting (CORS) is a mechanisum that clients and servers can implament so that browsers will know which HTTP requests an external script (script hosted on a different domain) is allowed to make. CORS use a set of headers on both the client request and server response to dictate to the browser what Access Controlls are in place. 
+
+#### CORS Request Headers
+* `Origin: https://www.example.com` The `Origin` header is required to be set on all CORS Requests. Its value should be the domain that the client is hosted on. 
+* `Access-Control-Request-Method: POST,PUT,PATCH,GET,DELETE,HEAD` The `Access-Control-Request-Method` Header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
+* `Access-Control-Request-Headers: Content-Type, Authorization` the `Access-Control-Request-Headers` Header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
+
+#### CORS Response Headers
+* `Access-Control-Allow-Origin: *`
+* `Access-Control-Allow-Credentials: true`
+* `Access-Control-Expose-Headers: `
+* `Access-Control-Max-Age:`
+* `Access-Control-Allow-Methods:`
+* `Access-Control-Allow-Headers:`
 
  
