@@ -1,4 +1,5 @@
-# 401 JS -- class 33 drag and drop
+![cf](http://i.imgur.com/7v5ASc8.png) 34: drag and drop 
+===
 
 ## Learning Objectives
 * Students will learn 
@@ -6,10 +7,9 @@
 ## Readings
 * [Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 
-## Overview
-#### Drag and Drop
+## Drag and Drop
 Browsers now nativly implment drag and drop! 
-###### dragable attribute
+#### dragable attribute
 To make a component dragable it needs a `dragable` attribute. Dragable elements will triger the drag and drop api events.
 
 ``` html
@@ -18,11 +18,11 @@ To make a component dragable it needs a `dragable` attribute. Dragable elements 
 </div>
 ```
 
-###### Events 
+#### Events 
 There are many drag events `onDrag`, `onDrop`, `onDragStart`, `onDragEnd`, `onDragEnter`, `onDragLeave`, `onDragOver`, `onDragExit`.
 When an item is dragable you can store data on its onDragStart event, to be handled onDrop on the `dropzone`.
 
-###### DataTransfer 
+#### DataTransfer 
 Drag events have a dataTransfer propery that can hold data. Its a great idea to store data here during an onDragStart event on the dragable item. dataTransfer data must be encoded unicode data with MIME types like 'text/plain', 'text/html', 'application/json', ect. 
 ``` javascript
 
@@ -32,7 +32,7 @@ document.getElementById('todo-item-01')
 })
 ```
 
-###### Dropzone
+#### Dropzone
 Dropzone is the term used to describe a element where dragable elements can be droped. To create a dropzone an element it must implament an `onDragOver` handler and `onDropHandler`.
 
 ``` html
