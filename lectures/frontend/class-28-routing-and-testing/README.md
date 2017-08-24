@@ -9,9 +9,9 @@
 * Students will learn to create and import sass partials
  
 ## Readings
-* [es6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
-* [react-router-dom philosophy](https://reacttraining.com/react-router/web/guides/philosophy)
-* [Lifting State Up](https://facebook.github.io/react/docs/lifting-state-up.html)
+* Skim [es6 modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
+* Read [react-router-dom philosophy](https://reacttraining.com/react-router/web/guides/philosophy)
+* Read [Lifting State Up](https://facebook.github.io/react/docs/lifting-state-up.html)
 * Skim [mdn import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 * Skim [mdn export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
