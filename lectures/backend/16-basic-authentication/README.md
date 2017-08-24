@@ -19,7 +19,14 @@ User models that have sensitive data should **NEVER** be sent to client applicat
 \- [GNU Collaborative International Dictionary of English](http://gcide.gnu.org.ua) 
 
 #### Hash Algorythems
-#### Cyper Algorythems
-#### Basic Authorizaton
+A Cryptographic Hash Algorythem takes a piece of data and produses a hash that is deliberatly dificult to reverse. If identical data is passed into the algorythem the same hash will allways be produced. Hash algorythems are often used for checking the integrity of data. 
 
+In a User model a hash password can be stored when the user signs up. When the user needs to login they can resend their password and the server can hash the login password using the same hash algorythem. The server can then compare the hashed login password with previously stored hashed password to determin if the user should be authenticated.
+
+#### Cyper Algorythems
+A Cryptographic Cyper Algorythem takes a piece of data and a key and produces encrypted data. Later the encrypted data can be reversed into the original data, by decrypting it using the same key. 
+
+User tokens can be created by associated a random unique string (tokenSeed) with a user account and encrypting the string with a secret key only the server knows. We can then send the encrypted token to a client application. When the client makes a future request they can send back the token. The server can reverse the token into the tokenSeed by decrypting it with the secret key, and because the tokenSeed was unique the database can be quiered to produce the user who made the request. 
+
+#### Basic Authorizaton
 
