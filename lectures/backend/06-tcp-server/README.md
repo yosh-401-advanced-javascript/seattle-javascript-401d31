@@ -6,7 +6,7 @@
 * Students will learn to describe computer newworking using the Internet Protocol Suite
 
 ## Resources
-* [Net Module Docs](https://nodejs.org/api/net.html)
+* Skim [Net Module Docs](https://nodejs.org/api/net.html)
 
 ## OSI Model  
 Programmers and engineers have been able to network computers since the early 1970s. As the needs of networked compotuers evolved, there where many soutions developed to conect two ore more computers together, and share information between them. Over time several differnt conceptual modles have also been developed to help describe the differnet networking solutions. In the mid 1980s the _"Open Systems Interconnection Reference Model"_ (OSI model) was developed as a seven layer model. This seven layer OSI model has continued to acuratly describe the different processes in computer networking, and is still widely used as a point of reference while working in networked systems today. A programer or engineer is usualy responsible for the goals of a specific layer and communicating with the layer above and below. Not every computer network solution uses all seven layers, for example HTTP skips the Presentation an Session layers and lives directly on top of the Transport layer.
