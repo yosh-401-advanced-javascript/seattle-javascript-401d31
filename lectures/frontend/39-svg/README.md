@@ -1,8 +1,8 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 39: Working with SVG 
+![cf](http://i.imgur.com/7v5ASc8.png) 39: Working with SVG Files
 ===
 
 ## Learning Objectives
-* Loading fonts with sass and webpack
+* Students will learn to load fonts with webpack
 * Stuendts will learn how to create icons using svgs
 * Stuendts will learn the difference between icon-fonts and inline svgs
 
