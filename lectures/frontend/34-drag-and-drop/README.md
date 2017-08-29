@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 34: drag and drop 
+![cf](http://i.imgur.com/7v5ASc8.png) 34: Drag and Drop 
 ===
 
 ## Learning Objectives
