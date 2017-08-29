@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 32: Combine Reducers
+![cf](http://i.imgur.com/7v5ASc8.png) 32: Combineing Reducers
 ===
 
 ## Learning Objectives
