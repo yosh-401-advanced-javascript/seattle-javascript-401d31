@@ -2,7 +2,7 @@
 ===
 
 ## Learning Objectives
-* Students will learn 
+* Students will learn to utilize the html5 Drag and Drop API
 
 ## Readings
 * [Drag and Drop API](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
