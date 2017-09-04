@@ -1,4 +1,5 @@
-# functional programing
+# White board problem questions
+## functional programing
 0. create a recursive function named loop that takes a count and a callback `let loop = (count, callback) => ... ` and calls the callback count times
 0. create a curied add function that returns a function that adds by a number each time
 0. implament combine and partial 
@@ -17,7 +18,7 @@
 0. implament lodash.throttle or lodash.debounce (look up lodash docs)
 0. implament lodash.zip 
 
-# linked list 
+## linked list 
 0. write a function called `prettyPrint()` that uses a while loop to print every value in a linked list
 0. write a recursive function called `prettyPrint(list)` to print every value in a linked list
 0. write a function called toArray(list) that creates an array of the values of a linked list
@@ -26,7 +27,7 @@
 0. write a function that will concat intersect two linked lists
 0. write splice
 
-# stack / queue
+## stack / queue
 0. write a function called reverse(likedList) that will reverse a linked list using a stack
 0. write a function called dedupe(linked) that will remove consective duplicate values of a linked list (using a stack)
 0. use queues to call a list of async (err, data) node functions one after the other
@@ -36,7 +37,7 @@
 0. validate a palindrome
 0. implament a stack using queues
 
-# tree 
+## tree 
 0. write a function that uses a while loop to prettyPrint a trees values
 0. write a function that uses recusion to prettyPrint a tress values
 0. write a function called getLeafCount that computes the number of leaves in a tree
@@ -44,7 +45,7 @@
 0. write a function that determines the max child count of a node in the tree
 0. remove nth child from a tree return true or false on success
 
-# bst 
+## bst 
 0. write a function that will find a value in a bst 
 0. write a function that will compute the sum of all elements in a bst
 0. write a function that will compute the depth of the bst
@@ -54,7 +55,7 @@
 0. write a functino that will validate a binary search tree 
 0. write a function to flatten a bst into a linked list (bonus sorted linked list)
 
-# hash table
+## hash table
 0. write a function that will hash a string into a number with a size limit
 0. write a function that finds the first duplicate letter in a string (using a hashmap)
 0. write a historam function that prints the count of each letter in a string
