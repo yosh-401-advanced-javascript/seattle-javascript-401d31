@@ -1,4 +1,4 @@
-# White board problem questions
+# Whiteboard Questions
 ## functional programing
 0. create a recursive function named loop that takes a count and a callback `let loop = (count, callback) => ... ` and calls the callback count times
 0. create a curied add function that returns a function that adds by a number each time
