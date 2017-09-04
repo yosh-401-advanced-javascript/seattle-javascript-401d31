@@ -1,4 +1,4 @@
-# Class 
+# Class 39
 
 ## How do I prep for today?
  

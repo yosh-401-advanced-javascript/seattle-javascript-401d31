@@ -1,4 +1,4 @@
-# Class 
+# Class 06
 
 ## How do I prep for today?
  
