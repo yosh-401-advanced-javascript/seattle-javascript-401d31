@@ -15,12 +15,12 @@
 
 ## Configuration 
 Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
-* **README.md** - contains documentation about your lab
+* **README.md** - contains documentation
 * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc** - contains the course `.eslintrc` file
-* **.eslintignore** - contains the course `.eslintignore` file
-* **lib/** - contains your module definitions
-* **__test__/** - contains your unit tests
+* **.eslintrc** - contains the course linter configuratoin
+* **.eslintignore** - contains the course linter ignore configuration
+* **lib/** - contains module definitions
+* **__test__/** - contains unit tests
 
 ## Feature Tasks
 #### Greet Module
