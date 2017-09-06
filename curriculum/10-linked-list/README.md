@@ -1,53 +1,58 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Singly Linked List Data Structure
-====
+![cf](http://i.imgur.com/7v5ASc8.png) 10: DSA - Linked List
+===
 
-## To Submit this Assignment
-  * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+## Learning Objectives
+* students will be able to implement a linked list
+* students will be able to implement a doubly linked list
+* students will be able create and implement common linked list methods
 
-## Requirements  
-#### Configuration  
-  <!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include  
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **test/** -- directory for holding your programs unit and integration tests
+## Resources
+* Watch [linked lists]
+* Skim [linked list wiki]
 
-#### Testing  
-  * write at least three test assertions for each method of the Singly Linked List Data Structure
-  * organize your tests into appropriate describe/it blocks for test output readability
+## Overview
 
-####  Documentation  
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block useage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+![linked-list](https://s3-us-west-2.amazonaws.com/slugbyte-assets/linked-list.svg)
 
-#### Feature Tasks  
-* implement a Singly Linked List (SLL) data structor  
-* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL prototype
-* in a comment within each function, note the it's Big-O runtime
+#### Singly Linked List
+* there are no FILO/FIFO-style constraints on singly linked lists
+  * **FILO** - first in last out
+  * **FIFO** - first in first out
+* singly linked lists contain a series of nodes where each node contains a value as well as a `next` property - this points to the next node in a line of interconnected nodes
+* operations that can be performed on singly linked lists include:
+  * insertion (ie: `append` and `prepend` methods)
+  * deletion (ie: `remove` method)
+  * traversal (ie: `find` method)
+* singly linked lists can contain pointers to both the head and the tail, yet this is not a common or simplified implementation and is usually reserved for doubly linked lists
 
-## Bonus Points:
-  * 2pts
-  * implement `findNthNodeFromEnd(n)` as a method on the SLL prototype
-    * takes `n` as an input/argument, representing the offset from the end to return
-    * returns the nth node from the end (opposite of head) of the list
-  * implement `findMiddleNode()` as a pure method on the SLL prototype
-    * returns the middle node within the list
+#### Doubly Linked List
+* there are no FILO/FIFO-style constraints on doubly linked lists
+* doubly linked lists contain a series of nodes where each node contains a value, a `next` property, and a `prev` property - these properties point to the previous and next node in a line of interconnected nodes
+* Operations that can be performed on singly linked lists include:
+  * insertion (ie: `append` and `prepend` methods)
+  * deletion (ie: `remove` method)
+  * traversal (ie: `find` method)
+* doubly linked lists generally contain pointers to both the head and the tail
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
+#### Whiteboard Exercise (Groups of 3-4)
+* **note:**
+  * you **may not** use your computer, notes, or the internet to implement the following items
+  * once implemented, you **may** use your computer, notes, or the internet to check your work
+
+* **singly linked list**
+  * implement a singly linked list constructor
+  * implement a `prepend` method - this should prepend a node with a value
+  * implement an `append` method - this should append a node with a value
+  * **optional:** implement a `remove` method - this should remove a node from the list, keeping the list interconnected after the removal
+  * **optional:** implement a `find` method - this should find a node and return the node
+  * **stretch:** implement a `findMiddle` method - this should find and return the middle node
+
+* **doubly linked list**
+  * implement a doubly linked list constructor
+  * implement a `prepend` method - this should prepend a node with a value
+  * implement an `append` method - this should append a node with a value
+  * **optional:** implement a `remove` method - this should remove a node from the list, keeping the list interconnected after the removal
+  * **optional:** implement a `find` method - this should find a node and return the node
+
+[linked lists]: https://www.youtube.com/watch?v=njTh_OwMljA
+[linked list wiki]: https://en.wikipedia.org/wiki/Linked_list
