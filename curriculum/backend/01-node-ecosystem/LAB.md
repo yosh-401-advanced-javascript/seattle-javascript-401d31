@@ -6,7 +6,7 @@
 * Work in a branch on your fork
 * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
 * Open a pull request to this repository
-* Submit a link to your pull request and write a question, observation, and how long you spent on canvas  
+* Submit on canvas a question and observation, how long you spent, and a link to your pull request
 
 ## Resources  
 * [Jest Getting Started](https://facebook.github.io/jest/docs/en/getting-started.html)
