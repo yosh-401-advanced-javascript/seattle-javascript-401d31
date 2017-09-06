@@ -49,4 +49,4 @@ Create a NodeJS module in the lib/ directory named `arithmetic.js` that exports 
 * Test each method for inproper use (invoded with one or more non-numner arguments)
 
 ## Documentation  
-Describe the exported values of each module defined in your lib/ directory in your README.md. Every function description should include the functinos airty (expected number of paramiters), expected data type for each paramiter, and expected output (for both valid and invalued use). Any additional information. 
+In your README.md describe the exported values of each module defined in your lib/ directory. Every function description should include it's airty (expected number of paramiters), expected data for each paramiter (type and limitations), and the it's output behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
