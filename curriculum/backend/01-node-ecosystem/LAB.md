@@ -2,57 +2,51 @@
 ===
 
 ## Submission Instructions
-  * work in a fork of this repository
-  * work in a branch on your fork
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-  * submit a pull request to this repository
-  * submit a link to your pull request on canvas
-  * submit a question, observation, and how long you spent on canvas  
+* Work in a fork of this repository
+* Work in a branch on your fork
+* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
+* Open a pull request to this repository
+* Submit a link to your pull request and write a question, observation, and how long you spent on canvas  
 
 ## Resources  
-* [node assert docs](https://nodejs.org/dist/latest-v4.x/docs/api/assert.html)
-* [mocha docs](http://mochajs.org/#getting-started)
+* [Jest Getting Started](https://facebook.github.io/jest/docs/en/getting-started.html)
+* [Jest Globals](https://facebook.github.io/jest/docs/en/api.html#content)
+* [Jest Expect](https://facebook.github.io/jest/docs/en/expect.html#content)
 
-## Requirements
+## Configuration 
+Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+* **README.md** - contains documentation about your lab
+* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
+* **.eslintrc** - contains the course `.eslintrc` file
+* **.eslintignore** - contains the course `.eslintignore` file
+* **lib/** - contains your module definitions
+* **__test__/** - contains your unit tests
 
-#### Configuration  
-<!-- list of files, configurations, tools, etc that are required -->
-* include the following:
-  * **README.md** - contains documentation about your lab
-  * **.gitignore** - contains a robust `.gitignore` file
-  * **.eslintrc** - contains the provided `.eslintrc` file
-  * **.eslintignore** - contains the provided `.eslintignore` file
-  * **lib/** - should contain your modules
-  * **test/** - should contain your unit tests
+## Feature Tasks
+#### Greet Module
+Create a NodeJS module in the lib/ directory named `greet.js` that exports a single function. 
+* The `greet` function should have a single parameter (arity of one) that should expect a string as it's input
+* The `greet` function should return the input name, concatenated with "hello ": eg. ("hello susan")
+* The `greet` function should return `null` if the input is not a string
 
-#### Feature Tasks  
-* create a node.js module (`greet.js`) that exports a single function
-  * the `greet` function should have a single parameter that should expect a string as it's input
-  * the `greet` function should return the input name, concatenated with "hello <name>"
-  * the `greet` function should return `null` if the input is not a string
-* create a node.js module named `arithmetic.js`
-  * this module should have `add` and `sub` methods
-  * the `add` method should contain 2 parameters
-    * these parameters should be numbers and the method should return the sum of the 2 numbers
-  * the `sub` method should contain 2 parameters
-    * these parameters should be numbers and the method should return the first number minus the second number
-* decide on the expected behavior for non-number inputs
+#### Arithmetic Module
+Create a NodeJS module in the lib/ directory named `arithmetic.js` that exports an object. This module should have `add` and `sub` methods that implament addition and subtraction.  
+* The `add` method should have an arity of two (define two paramiters)
+  * If either parameter is a non-number the function should return null
+  * Else return the sum of the 2 numbers
+* The `sub` method should have an arity of two (define two paramiters)
+  * If either parameter is a non-number the function should return null
+  * Else return the second paramiter subtracted from the first paramiter
 
-#### Testing  
-* write a test the expects the greet module to return "hello world!"
-  * this should happen when invoked with "world!" as a parameter
-* write a test for the `add` and `subtract` methods on the arithmetic module
-  * this should ensure that your functions work with number inputs
+## Testing  
+#### Greet Module Tests
+* Write a test that expects the greet module to return `null` when you supply non string values
+* Write a test the expects the greet module to return "hello world"
+  * This should happen when invoked with `'world'` as the first argument
 
-####  Documentation  
-* write a description of your project (this should be in your `README.md` file)
+#### Arithmetic Module Tests
+* Test each method for proper use (invoded with number arguments)
+* Test each method for inproper use (invoded with one or more non-numner arguments)
 
-###### BONUS 1pt
-* write a test that expects the greet module to return null when you use non string values
-* write a test that ensures the functions work as expected with non number inputs
-
-## Rubric  
-* 2pts configuration
-* 3pts feature tasks
-* 3pts tests
-* 2pts documentation
+## Documentation  
+Describe the exported values of each module defined in your lib/ directory in your README.md. Every function description should include the functinos airty (expected number of paramiters), expected data type for each paramiter, and expected output (for both valid and invalued use). Any additional information. 
