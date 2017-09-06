@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 14: Mongo/Express 2 Resource API
+![cf](http://i.imgur.com/7v5ASc8.png) 14: Relationship Modeling
 ===
 
 ## Learning Objectives

@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 05: Lists and Big O Notation
+![cf](http://i.imgur.com/7v5ASc8.png) 05: Collections and Functional Programming
 =====================================
 
 # Learning Objectives

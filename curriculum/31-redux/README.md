@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 31: React and Redux
+![cf](http://i.imgur.com/7v5ASc8.png) 31: Redux
 ===
 
 ## Learning Objectives

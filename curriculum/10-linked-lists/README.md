@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 10: DSA - Linked List
+![cf](http://i.imgur.com/7v5ASc8.png) 10: Linked Lists
 ===
 
 ## Learning Objectives

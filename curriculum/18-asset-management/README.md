@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 18: Image Uploads w/ AWS S3
+![cf](http://i.imgur.com/7v5ASc8.png) 18: Asset Management
 ===
 
 ## Learning Objectives

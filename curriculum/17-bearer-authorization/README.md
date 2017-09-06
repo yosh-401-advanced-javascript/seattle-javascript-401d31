@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 17: Bearer Auth
+![cf](http://i.imgur.com/7v5ASc8.png) 17: Bearer Authorization
 ===
 
 ## Learning Objectives

@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 11: Single Resource Express API
+![cf](http://i.imgur.com/7v5ASc8.png) 11: Express and Mongo
 ===
 
 ## Learning Objectives

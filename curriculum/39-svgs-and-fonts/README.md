@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 39: Working with SVG Files
+![cf](http://i.imgur.com/7v5ASc8.png) 39: SVGS and Fonts 
 ===
 
 ## Learning Objectives

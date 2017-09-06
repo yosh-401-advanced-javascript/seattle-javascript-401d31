@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 28: Frontend Routing and Testing
+![cf](http://i.imgur.com/7v5ASc8.png) 28: Routing and Testing
 ===
 
 ## Learning Objectives

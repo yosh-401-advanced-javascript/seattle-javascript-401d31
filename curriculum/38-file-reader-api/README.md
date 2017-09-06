@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 38: Photo Preview and Upload
+![cf](http://i.imgur.com/7v5ASc8.png) 38: File Reader API 
 ====
 
 ## Learning Objectives

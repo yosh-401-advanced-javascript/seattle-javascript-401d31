@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 04: EventEmitter and Binary Data
+![cf](http://i.imgur.com/7v5ASc8.png) 04: Event Emitters and Binary Data
 =====================================
 
 ## Learning Objectives

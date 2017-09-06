@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 09: Vanilla REST API w/ Persistence
+![cf](http://i.imgur.com/7v5ASc8.png) 09: Persistence
 ===
 
 ## Learning Objectives

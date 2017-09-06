@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 27: Forms and Testing
+![cf](http://i.imgur.com/7v5ASc8.png) 27: Forms and Props
 ===
 
 ## Learning Objectives

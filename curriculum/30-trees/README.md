@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 20 - Tree Data Struture
+![cf](http://i.imgur.com/7v5ASc8.png) Trees
 ====
 
 ## To Submit this Assignment

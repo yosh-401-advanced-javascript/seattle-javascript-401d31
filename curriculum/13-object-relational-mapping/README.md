@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 13: MongoDB and Express
+![cf](http://i.imgur.com/7v5ASc8.png) 13: Object Relational Mapping
 ===
 
 ## Learning Objectives

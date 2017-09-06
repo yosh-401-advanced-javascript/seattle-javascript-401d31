@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 03: async callbacks
+![cf](http://i.imgur.com/7v5ASc8.png) 03: Asynchronous Callbacks
 =====================================
 
 ## Learning Objectives
