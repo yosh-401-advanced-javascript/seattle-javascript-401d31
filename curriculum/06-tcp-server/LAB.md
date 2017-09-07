@@ -11,17 +11,19 @@
 ## Configuration 
 Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
 * **README.md** - contains documentation
+* **.env** - contains env variables (should be git ignored)
 * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
 * **.eslintrc** - contains the course linter configuratoin
 * **.eslintignore** - contains the course linter ignore configuration
 * **package.json** - contains npm package config
   * create a `lint` script for running eslint
   * create a `test` script for running tests
+  * create a `start` script for running your server
 * **lib/** - contains module definitions
 * **\_\_test\_\_/** - contains unit tests
 
 ## Feature Tasks  
-For this assignment you will be building a TCP chatroom. Clients should be able to connect using a telnet client nickname them selfs and talk to each other. Clients should also be able to run special commands to quit, list users, reset their nickname, and send direct messages. You may add as many featrues to the chat as you would like. 
+For this assignment you will be building a TCP chatroom. Clients should be able to connect using a telnet client nickname them selfs and talk to each other. Clients should also be able to run special commands to quit, list users, reset their nickname, and send direct messages. You may add as many featrues to the chat as you would like. Do not use any third party librarys in your chatroom modules.
 
 #### Minimum Requirements 
 * Create a TCP Server using the NodeJS native `net` module
@@ -47,3 +49,6 @@ Also write documention for starting your server and connection using tellnet. Wr
 
 ## Testing  
 No testing required for this lab. Yay!
+
+## Bonus 1pt
+Use net.Socket to test your server. Your tests should include the ability to connect, send and recieve messages, and run special commands.
