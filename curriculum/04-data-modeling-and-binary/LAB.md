@@ -55,7 +55,7 @@ You will want to define a strategy for solving the problem before you begin to c
 0. Write the mutated buffer to the output file path
 
 ###### Transfrom Ideas
-* Color
+* Color Pallet Transforms 
   * Invert 
   * Randomize
   * Black and White
@@ -63,7 +63,7 @@ You will want to define a strategy for solving the problem before you begin to c
   * Add or Mutiply a Hue
   * Add or Subtract Contrast
   
-* Raster
+* Raster Data Transforms
   * Pixilate
   * Add a border
   * Add a watermark
