@@ -42,7 +42,7 @@ For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It w
 ##  Documentation
 In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
 
-#### Tips
+## Tips
 You will want to define a strategy for solving the problem before you begin to code. Once you have a strategy defined, you can break it into steps that can be split into helper modules. Each helper module should solve a small specific problem. The main module should utilize the helper modules to execute your original stratagy.
 
 ###### Example Stragegy 
