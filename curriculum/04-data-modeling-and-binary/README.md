@@ -94,6 +94,7 @@ Signed |Unsigned
 -2     |14       |1110   (8 + 6) * -1
 -1     |15       |1111   (8 + 7) * -1
 ```
+
 ###### Hex Cheat Sheet
 ``` text
 DEC |HEX |BIN
@@ -115,11 +116,6 @@ DEC |HEX |BIN
 14  |e   |1110   
 15  |f   |1111   
 ```
-* to convert to text there is an encoding called **ascii** - this maps all characters to a corresponding number
-* run the command `man ascii` in your command line to see an ascii chart
-* modern computing provides us with a character encoding called `utf8` - this is an extension for ascii, that supports multiple languages
-
-
 
 <!--links -->
 [events api docs]: https://nodejs.org/api/events.html
