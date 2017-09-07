@@ -46,14 +46,24 @@ In your README.md describe the exported values of each module you have defined. 
 You will want to define a strategy for solving the problem before you begin to code. Once you have a strategy defined, you can break it into steps that can be split into helper modules. Each helper module should solve a small specific problem. The main module should utilize the helper modules to execute your original stratagy.
 
 ###### Example Stragegy 
-1. Open the original bitmap file using fs and read it into a buffer
-2. Convert the buffer header data into a Javascript Object (using constructors)
-3. Run a transform on the buffer directly (mutate the buffers color or raster data)
-4. Write the mutated buffer to a new file
+0. Gather user input (infile, outfile, and transform)
+0. Read the input bitmap file using the fs module 
+0. Parse the bitmap's buffer into object represeting a bitmap (using a constructor)
+0. Using metadata from the parsed bitmap object run a transform on the buffer directly (mutate the color or raster data)
+0. Write the mutated buffer to the output file path
 
 ###### Transfrom Ideas
-| **COLOR** | **Raster** | 
-| --- | --- |
-| Invert | Horizontal or Vertical Mirror | 
-| Grayscale | Add a Border |
-| Darken or Lighten | Pixalate |
+* Color
+  * Invert 
+  * Black and White
+  * Darken or Lighten
+  * Randomize
+  * Add a Hue
+  * Add Contrast
+* Raster
+  * Pixilate
+  * Add a border
+  * Add a watermark
+  * Vertically or Horizontaly Filp
+  * Verticaly or Horizontaly Mirror
+  * Verticaly or Horizontaly Stretch
