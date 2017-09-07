@@ -57,11 +57,12 @@ You will want to define a strategy for solving the problem before you begin to c
 ###### Transfrom Ideas
 * Color
   * Invert 
+  * Randomize
   * Black and White
   * Darken or Lighten
-  * Randomize
-  * Add a Hue
-  * Add Contrast
+  * Add or Mutiply a Hue
+  * Add or Subtract Contrast
+  
 * Raster
   * Pixilate
   * Add a border
