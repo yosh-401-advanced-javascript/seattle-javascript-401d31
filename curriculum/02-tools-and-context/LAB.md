@@ -39,6 +39,9 @@ Create a NodeJS module in the \_\_test\_\_/ named fp.test.js that asserts the co
   * Assert that the correct errors are thrown with invalid arguments
 * Write tests to ensure the fp module functions returns the correct results when invoked with valid arguments
 
+##  Documentation
+In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
+
 ## Bonus 2pts
 * Create a second module fp-curry.js that is a refactered version of fp.js, where each function has curried arguments
 * Create a fp-curry.test.js that is a refactured version of fp.curry.js that tests fp-curry.js
