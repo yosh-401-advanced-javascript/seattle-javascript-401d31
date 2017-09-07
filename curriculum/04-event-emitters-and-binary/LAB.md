@@ -1,61 +1,51 @@
 ![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) Lab 04: Bitmap Transformer
 ===
 
-## To Submit this Assignment
-* have team leader fork this repository
-* have team leader add team members as collaborators to the team fork
-* team members should clone team fork
-* write all of your code in a directory name `bitmap-` + `<team name>` **e.g.** `bitmap-weasels`
-* submit a pull request to this repository when done
-* each person will submit a link to their own PR in canvas
-* each person write a question and observation on canvas
-
-## Learning Objectives  
-* students will be able to manipulate binary data using the node.js `Buffer` class
-* students will be able to architect modular solutions to solving problems
+## Submission Instructions
+* Work in a fork of this repository
+* Work in a branch on your fork
+* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
+* Open a pull request to this repository
+* Submit on canvas a question and observation, how long you spent, and a link to your pull request
 
 ## Resources  
 * [Bitmap Specification](https://en.wikipedia.org/wiki/BMP_file_format)
-* [NodeJS Buffer docs](https://nodejs.org/api/buffer.html)
+* [Buffer docs](https://nodejs.org/api/buffer.html)
 
-#### Feature Tasks
+## Configuration 
+Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+* **README.md** - contains documentation
+* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
+* **.eslintrc** - contains the course linter configuratoin
+* **.eslintignore** - contains the course linter ignore configuration
+* **package.json** - contains npm package config
+  * create a `lint` script for running eslint
+  * create a `test` script for running tests
+* **lib/** - contains module definitions
+* **assets/** - contains the text files used by the program
+* **\_\_test\_\_/** - contains unit tests
 
-For this assignment you will be building a bitmap (`.bmp`) reader and transformer. It will read a bitmap in from disk, run one or more color transforms on the bitmap and then write it out to a new file. This project will require the use of node buffers in order to manipulate binary data. Your project should include tests, as well as a `package.json`, `.eslintrc`, `README.md`, and a `.gitignore`. Make sure to run all your code through eslint. The process will look something like this:
 
-1. open the original bitmap file using fs and read it into a buffer
-2. convert the buffer header data into a Javascript Object (using constructors)
-3. run a transform on the buffer directly
-4. write the buffer to a new file
+## Feature Tasks
 
-The wikipedia article found here [Bitmap Specification](https://en.wikipedia.org/wiki/BMP_file_format) describes the byte specification of a "windows bitmap file." We'll be working with the simplest version, meaning no compression.
+For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It will read a bitmap in from disk, run one or more color or raster transforms and then write it out to a new file. This project will require the use of node buffers in order to manipulate binary data. Your solution should be composed of small tested modules that solve specific problems. Your modules should be thoughfuly named and well documented. The entry point to your CLI should be an index.js file in the root of your package, and all helper modules should be placed in your lib/ directory. 
 
-* your project should have three ***(or more)*** transforms
-* invert the colors (***hint:*** subtract every color value from the max color value which is 255),
-* grayscale the colors (***hint:*** multiply each color value by a constant, just make sure your values don't go over 255)
-* (red|green|blue)scale the colors (***hint:*** same as above but only multiply one of the colors)
+* The CLI should require three arguments `input-file-path output-file-path transfrom-name` 
+* The CLI should support a minimum of three transforms
+* The CLI should log useful Error messages if used incorrectly
 
-#### Bonus:
-* ability to handle various sized bitmap
-* ability to handle LE and BE computers with a single if statement
-* utilizes a command line interface (CLI)
-* CLI can select the transforms
+#### Tips
+You will want to define a strategy for solving the problem before you begin to code. Once you have a strategy defined, you can break it into steps that can be split into helper modules. Each helper module should solve a small specific problem. The main module should utilize the helper modules to execute your original stratagy.
 
-#### Suggested Directory Structure (this is optional):
-* suggested directory structure:
-  - **index.js**
-  - **lib**
-    - bitmap file helper
-  - **model**
-    - bitmap constructor
-    - color constructor
-  - **test**
-    - bitmap file helper test
-    - bitmap constructor test
-    - color constructor test
+###### Example Stragegy 
+1. Open the original bitmap file using fs and read it into a buffer
+2. Convert the buffer header data into a Javascript Object (using constructors)
+3. Run a transform on the buffer directly (mutate the buffers color or raster data)
+4. Write the mutated buffer to a new file
 
-#### Rubric:
-* **tests:** 3pts
-* **package.json:** 2pts
-* **read bitmap meta data:** 5pts
-* **successfully apply transforms:** 5pts
-* **project design and organization:** 5pts
+###### Transfrom Ideas
+| **COLOR** | **Raster** | 
+| --- | --- |
+| Invert | Horizontal or Vertical Mirror | 
+| Grayscale | Add a Border |
+| Darken or Lighten | Pixalate |
