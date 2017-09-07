@@ -27,7 +27,7 @@ module.exports = function(router) {
     debug('/api/child GET')
 
     return Child.find()
-    .then(ids => res.json(ids))
+    .then(children => res.json(children.map(child => child._id)))
     .catch(err => errorHandler(err, req, res))
   })
 
