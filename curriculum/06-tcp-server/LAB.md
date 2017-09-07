@@ -32,9 +32,9 @@ For this assignment you will be building a TCP chatroom. Clients should be able 
 * Clients should be able to send messages to one another
 * Clients should be able to run special commands by sending messages that start with a command name
   * The client should send `@quit` to disconnect
-  * The client should send `@list` should list all connectued users
-  * The client should send `@nickname <new-name>` should allow a user change their nickname
-  * The client should send `@dm <to-username> <message>` should allow a user to send a message directly to another user by nick name
+  * The client should send `@list` to list all connectued users
+  * The client should send `@nickname <new-name>` to change their nickname
+  * The client should send `@dm <to-username> <message>` to  send a message directly to another user by nickname
 * Connected clients should be maintained in an in memory collection called the `clientPool`
   * When a socket emits the `close` event, the socket should be removed from the client pool
   * When a socket emits the `error` event, the error should be logged on the server
