@@ -46,4 +46,4 @@ In your README.md describe the exported values of each module you have defined. 
 Also write documention for starting your server and connection using tellnet. Write documentation for the chat room usage.
 
 ## Testing  
-* no testing required for this lab - yay!
+No testing required for this lab. Yay!
