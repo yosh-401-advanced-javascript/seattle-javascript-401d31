@@ -31,7 +31,7 @@ Create a NodeJS module in the lib/ directory named fp.js that exports an object.
 
 ## Testing
 #### FP Module Tests
-Create a NodeJS module in the __test__/ named fp.test.js that asserts the correctness of the fp module.  
+Create a NodeJS module in the \_\_test\_\_/ named fp.test.js that asserts the correctness of the fp module.  
 
 * Use BDD `describe` and `test` methods to define discriptive tests and increase readablity
 * Each `test` callback should aim to test a small well defined feature of a function
