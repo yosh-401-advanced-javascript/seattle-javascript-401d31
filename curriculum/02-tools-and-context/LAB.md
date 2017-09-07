@@ -18,7 +18,7 @@ Configure the root of your repository with the following files and directories. 
   * create a `lint` script for running eslint
   * create a `test` script for running tests
 * **lib/** - contains module definitions
-* **__test__/** - contains unit tests
+* **\_\_test\_\_/** - contains unit tests
 
 ## Feature Tasks
 #### FP Module
