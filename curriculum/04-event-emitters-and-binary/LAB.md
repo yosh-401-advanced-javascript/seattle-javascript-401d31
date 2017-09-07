@@ -10,7 +10,7 @@
 
 ## Resources  
 * [Bitmap Specification](https://en.wikipedia.org/wiki/BMP_file_format)
-* [Buffer docs](https://nodejs.org/api/buffer.html)
+* [Buffer Docs](https://nodejs.org/api/buffer.html)
 
 ## Configuration 
 Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
@@ -22,22 +22,24 @@ Configure the root of your repository with the following files and directories. 
   * create a `lint` script for running eslint
   * create a `test` script for running tests
 * **lib/** - contains module definitions
-* **assets/** - contains the text files used by the program
+* **\_\_test\_\_/asset/** - contains bitmaps for testing
 * **\_\_test\_\_/** - contains unit tests
 
-
 ## Feature Tasks
+For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It will read a bitmap in from disk, run one or more color or raster transforms and then write it out to a new file. This project will require the use of node buffers in order to manipulate binary data. Your solution should be composed of small tested modules that solve specific problems. Your modules should be thoughfuly named and well documented. The entry point to your CLI should be an index.js file in the root of your package, and all helper modules should be placed in your lib/ directory. Your bitmap transformer modules should not use any third party librarys.
 
-For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It will read a bitmap in from disk, run one or more color or raster transforms and then write it out to a new file. This project will require the use of node buffers in order to manipulate binary data. Your solution should be composed of small tested modules that solve specific problems. Your modules should be thoughfuly named and well documented. The entry point to your CLI should be an index.js file in the root of your package, and all helper modules should be placed in your lib/ directory. 
-
-* The CLI should require three arguments `input-file-path output-file-path transfrom-name` 
-* The CLI should support a minimum of three transforms
+#### Minimum Requirements
+* The CLI should be architected using best modularization practices
+* The CLI should require at least three arguments `input-file-path output-file-path transfrom-name` 
+* The CLI should support a minimum of four transforms
 * The CLI should log useful Error messages if used incorrectly
+* The CLI should log a success message on completion
 
 ## Testing 
 * Use BDD `describe` and `test` methods to define discriptive tests and increase readablity
 * Each `test` callback should aim to test a small well defined feature of a function
 * Write tests to ensure each behaves correctly with valid and invalud inputs
+* The CLI should be tested without using `child_process` or any equivilant third party librarys
 
 ##  Documentation
 In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
