@@ -1,5 +1,5 @@
 {
-  "name": "01-express-mongo",
+  "name": "00-code-review-express-middleware",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,9 @@
   "jest": {
     "verbose": true,
     "testEnvironment": "node",
+    "setupFiles": [
+      "./__test__/lib/jest-setup.js"
+    ],
     "collectCoverage": true,
     "coverageDirectory": "./coverage",
     "coverageThreshold": {
@@ -36,7 +39,6 @@
   "devDependencies": {
     "debug": "^3.0.1",
     "eslint": "^4.5.0",
-    "faker": "^4.1.0",
     "jest": "^20.0.4",
     "superagent": "^3.6.0"
   },
@@ -46,6 +48,7 @@
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
+    "faker": "^4.1.0",
     "mongoose": "^4.11.10",
     "uuid": "^3.1.0"
   }

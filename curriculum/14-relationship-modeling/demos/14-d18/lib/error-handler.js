@@ -1,8 +1,10 @@
 'use strict'
 
-const debug = require('debug')('http:error-middleware')
+const debug = require('debug')('http:error-handler')
 
 module.exports = function(err, req, res) {
+  debug(`#error-handler: ${err.message}`)
+  
   let msg = err.message.toLowerCase()
 
   switch(true) {

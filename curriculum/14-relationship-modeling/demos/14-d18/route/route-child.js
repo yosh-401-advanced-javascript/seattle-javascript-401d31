@@ -1,11 +1,12 @@
 'use strict'
 
-const Child = require('../model/child')
 const debug = require('debug')('http:route-child')
 const errorHandler = require('../lib/error-handler')
-
+const Child = require('../model/child')
 
 module.exports = function(router) {
+  debug('#route-child')
+
   router.post('/api/child', (req, res) => {
     debug('/api/child POST')
 
@@ -18,7 +19,6 @@ module.exports = function(router) {
     debug('/api/child/:_id GET')
 
     return Child.findById(req.params._id)
-    // .populate('toys')
     .then(child => res.json(child))
     .catch(err => errorHandler(err, req, res))
   })
@@ -27,6 +27,7 @@ module.exports = function(router) {
     debug('/api/child GET')
 
     return Child.find()
+    .populate('toy')
     .then(children => res.json(children.map(child => child._id)))
     .catch(err => errorHandler(err, req, res))
   })
@@ -35,7 +36,7 @@ module.exports = function(router) {
     debug('/api/child/:_id PUT')
 
     return Child.findByIdAndUpdate(req.params._id, req.body, { upsert: true, runValidators: true })
-    .then(() => res.sendStatus(204))
+    .then(child => res.sendStatus(204))
     .catch(err => errorHandler(err, req, res))
   })
 
@@ -43,7 +44,7 @@ module.exports = function(router) {
     debug('/api/child/:_id DELETE')
 
     return Child.findByIdAndRemove(req.params._id)
-    .then(() => res.sendStatus(204))
+    .then(child => res.sendStatus(204))
     .catch(err => errorHandler(err, req, res))
   })
 }

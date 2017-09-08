@@ -1,21 +1,18 @@
 'use strict'
 
-// debugging setup
 const debug = require('debug')('http:server')
 
 // express setup
-// const PORT = process.env.PORT || 3000
 const express = require('express')
 const router = express.Router()
-const app = module.exports = express()
+const app = express()
 
-// mongo setup
+// mongoose setup
 const mongoose = require('mongoose')
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/toy-dev'
 mongoose.Promise = require('bluebird')
-mongoose.connect(MONGODB_URI, { useMongoClient: true }) 
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
 
-// routes 
+// routes (middleware)
 require('../route/route-toy')(router)
 require('../route/route-child')(router)
 
@@ -27,32 +24,31 @@ app.use(router)
 app.all('/*', (req, res) => res.sendStatus(404))
 
 
-// let server
-// const serverControl = module.exports = {}
-// serverControl.start = () => {
-//   return new Promise((resolve, reject) => {
-//     if(!server || !server.isOn){
-//       server = app.listen(PORT, () => {
-//         console.log('server up', PORT)
-//         server.isOn = true
-//         resolve(server)
-//       })
-//       return 
-//     }
-//     reject()
-//   })
-// }
+// NOTE: This is a nesessary separation of concerns for running our tests.
+// Within each test file we can explicitely start and stop a server instance
+const server = module.exports = {}
+server.isOn = false;
+server.start = () => {
+  return new Promise((resolve, reject) => {
+    if(!server || !server.isOn) {
+      server.http = app.listen(process.env.PORT, () => {
+        server.isOn = true;
+        resolve();
+      })
+      return
+    }
+    reject(new Error('server allread running'))
+  })
+}
 
-// serverControl.stop = () => {
-//   return new Promise((resolve, reject) => {
-//     if(server && server.isOn){
-//       server.close(() => {
-//         console.log('server down')
-//         server.isOn = false 
-//         resolve()
-//       })
-//       return 
-//     }
-//     reject()
-//   })
-// }
+server.stop = () => {
+  return new Promise((resolve, reject) => {
+    if(server.http && server.isOn) {
+      return server.http.close(() => {
+        server.isOn = false
+        resolve()
+      })
+    }
+    reject(new Error('ther server is not running'))
+  })
+}
