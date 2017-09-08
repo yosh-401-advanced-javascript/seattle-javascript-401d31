@@ -26,7 +26,7 @@ Configure the root of your repository with the following files and directories. 
 For this assignment you will be building a TCP chatroom. Clients should be able to connect using a telnet client nickname them selfs and talk to each other. Clients should also be able to run special commands to quit, list users, reset their nickname, and send direct messages. You may add as many featrues to the chat as you would like. Do not use any third party librarys in your chatroom modules.
 
 #### Minimum Requirements 
-* Create a TCP Server using the NodeJS native `net` module
+* Create a TCP Server using the NodeJS `net` module
 * Create a Client constructor that models an individual connection. 
   * Each client instance should contain at least an `id`, `nickname`, and `socket`.
 * Clients should be able to send messages to all other clients by sending it to the server
