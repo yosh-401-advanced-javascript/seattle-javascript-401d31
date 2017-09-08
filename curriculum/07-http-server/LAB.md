@@ -71,27 +71,29 @@ When a client makes a GET request to /cowsay?text={message} the server should pa
 ###### GET /api/cowsay?text={message}
 When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.  
 
-| Request | Response Status Code | Response Type | Response Body |
-| -- | -- | -- | -- |
-| With out text query | 400 | JSON | `{"error": "invalid request: text query required"}` |
-| With text query | 200 | JSON | `{"content": "<cowsay cow text>"}` |
-| With text query | 200 | JSON | `{"content": "<cowsay cow text>"}` |
+A response for a valid Requests should have a status code of 200 and the JSON body   
+``` json 
+{
+  "content": "<cowsay cow text>" 
+}
+```
 
+A response for a invalid Requests should have a status code of 400 and the JSON body...
+```
+{
+  "error": "invalid request: text query required"
+}
+```
 
 ###### POST /api/cowsay 
 When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
 
-* With no body 
-  * Status 400  
-  
-``` json
-{
- "content": whhhhhhooo"
-}
-```  
+| Request | Response Status Code | Response Type | Response Body |
+| -- | -- | -- | -- |
+| With out a body | 400 | JSON | `{"error": "invalid request: body required"}` |
+| With out text property on the body | 400 | JSON | `{"error": "invalid request: text query required"}` |
+| With text query | 200 | JSON | `{"content": "<cowsay cow text>"}` |
 
-* With an invalid body
-* With a valid body
 
 ## Bonus
 **1pts:** add the ability to change the cowfile on GET /cowsay, GET /api/cowsay, and POST /api/cowsay - **ex: dragon, sheep, etc**
