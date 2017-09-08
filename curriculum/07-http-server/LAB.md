@@ -2,50 +2,56 @@
 ======
 
 ## Submission Instructions
-  * fork this repository & create a new branch for your work
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+* Work in a fork of this repository
+* Work in a branch on your fork
+* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
+* Open a pull request to this repository
+* Submit on canvas a question and observation, how long you spent, and a link to your pull request
 
-## Learning Objectives  
-* students will be able to identify key qualities of the HTTP protocol
-* students will be able to implement an HTTP server using the node.js `http` module
+## Configuration 
+Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+* **README.md** - contains documentation
+* **.env** - contains env variables (should be git ignored)
+* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
+* **.eslintrc** - contains the course linter configuratoin
+* **.eslintignore** - contains the course linter ignore configuration
+* **package.json** - contains npm package config
+  * create a `lint` script for running eslint
+  * create a `test` script for running tests
+  * create a `start` script for running your server
+* **lib/** - contains module definitions
+* **\_\_test\_\_/** - contains unit tests
 
-## Requirements
-#### Configuration  
-<!-- list of files, configurations, tools, etc that are required -->
-Your lab directory must include  
-* `.gitignore`
-* `.eslintrc`
-* `package.json`
-* `README.md`
+## Feature Tasks  
+For this assignment you will be building a HTTP server. 
+#### Body Parser Module
+#### URL Parser Module
+#### Server Module 
+The server module is responsible for creating an http server defining all route behavior and exporting an interface for starting and stoping the server. It should export an object with `start` and `stop` methods. The start and stop methods should each return a promise that resolves on success and rejects on error. 
+###### GET /
+When a client makes a GET request to / the server should send baack html with a project description and a anchor to /cowsay.
 
-#### Feature Tasks  
-* create an HTTP Server using the NodeJS `http` module
-* create a *custom* body parsing module that is used for parsing the body of all **POST** requests
-* for all requests made to `/`, the server should respond with the following:
-  * a header containing `Content-Type: text/plain`
-  * a status code of **200**
-  * a response with the string "hello from my server!"
-* for all **GET** requests made to `/cowsay`, the server should respond with the following:
-  * the query string should have the key value `text=<message>`
-  * the response header should include `Content-Type: text/plain`
-  * if the query `text=messsage` is set, respond with:
-    * a status code of 200
-    * a response body that includes the value returned from `cowsay.say({ text: <querystring text> })`
-  * if the query `text=message` is **not** set, respond with:
-    * status code = 400
-    * a body including the value returned from `cowsay.say({ text: 'bad request' })`
-* for all **POST** requests made to `/cowsay`, the server should respond with the following:
-  * the response header should include `Content-Type: text/plain`
-  * if the JSON `{text: messsage}` is set in the body, respond with:
-    * a status code of 200
-    * a response body including the value returned from `cowsay.say({ text: <querystring text> })`
-  * if the JSON `{text: messsage}` is **not** set in the body, respond with:
-      * a status code of 400
-      * a body including the value returned from `cowsay.say({ text: 'bad request' })`
+###### GET /cowsay?text={message}
+When a client makes a GET request to /cowsay?text={message} the server should parse the querystring for a text key. It should then send a rendered HTML page with a cowsay cow speaking the value of the text query. If their is no text query the cow message should say `'I need something good to say!'`. 
+
+###### GET /api/cowsay?text={message}
+When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.  
+
+| Request | Response Status Code | Response Body |
+| -- | -- | -- |
+| With out text query | 400 | JSON `{"error": "invalid request: text query required"}` |
+| With text query | 200 | JSON `{"content": "<cowsay cow text>"}` |
+
+
+###### POST /api/cowsay 
+When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
+
+| Request | Response Status Code | Response Body |
+| -- | -- | -- |
+| With out body | 400 | JSON `{"error": "invalid request: request body required"}` |
+| With out valid body | 400 | JSON `{"error": "invalid request: text required"}` |
+| With valid body | 200 | JSON `{"content": "<cowsay cow text>"}` |
+
 
 ## Bonus
-* **2pts:** add the ability to change the cowfile - **ex: dragon, sheep, etc** _(note: this should be done through the querystring)_
+**1pts:** add the ability to change the cowfile on GET /cowsay, GET /api/cowsay, and POST /api/cowsay - **ex: dragon, sheep, etc**
