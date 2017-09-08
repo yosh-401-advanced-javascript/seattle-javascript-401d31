@@ -38,7 +38,7 @@ For this assignment you will be building a bitmap (`.bmp`) transformer CLI. It w
 ## Testing 
 * Use BDD `describe` and `test` methods to define discriptive tests and increase readablity
 * Each `test` callback should aim to test a small well defined feature of a function
-* Write tests to ensure each behaves correctly with valid and invalud inputs
+* Write tests to ensure each function behaves correctly with valid and invalud inputs
 * The CLI should be tested without using `child_process` or any equivilant third party librarys
 
 ##  Documentation
