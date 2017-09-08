@@ -82,13 +82,14 @@ When a client makes a POST request to /api/cowsay it should send JSON that inclu
 When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
 
 * With no body 
-  * Status 400
-  * Body   
-  ```
+  * Status 400  
+  
+``` json
 {
  "content": whhhhhhooo"
 }
-  ```  
+```  
+
 * With an invalid body
 * With a valid body
 
