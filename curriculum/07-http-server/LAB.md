@@ -88,24 +88,35 @@ When a client makes a POST request to /api/cowsay it should send JSON that inclu
   <th> Response Type </th>
   <th> Response Body </th>
  </tr>
+ 
  <tr>
   <td> With out a body </td>
   <td> 400 </td>
   <td> JSON </td>
   <td> <pre>{
-  "error": "invalid request: request body required"}
+  "error": "invalid request: request body required"
+  }</pre> </td>
+ </tr>
+ 
+ <tr>
+  <td> With an invalid body </td>
+  <td> 400 </td>
+  <td> JSON </td>
+  <td> <pre>{
+  "error": "invalid request: text required"
+  }</pre> </td>
+ </tr>
+ 
+ <tr>
+  <td> With a valid body </td>
+  <td> 200 </td>
+  <td> JSON </td>
+  <td> <pre>{
+  "content": "<cowsay cow text>"
   }</pre> </td>
  </tr>
 
 </table>
-
-| Request | Response Status Code | Response Type | Response Body |
-| -- | -- | -- | -- |
-| With out body | 400 | JSON  | <pre> {"error": "invalid request: request body required"}
-</pre> |
-| With out valid body | 400 | JSON | `{"error": "invalid request: text required"}` |
-| With valid body | 200 | JSON | `{"content": "<cowsay cow text>"}` |
-
 
 ## Bonus
 **1pts:** add the ability to change the cowfile on GET /cowsay, GET /api/cowsay, and POST /api/cowsay - **ex: dragon, sheep, etc**
