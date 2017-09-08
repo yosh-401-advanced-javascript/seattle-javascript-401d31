@@ -81,9 +81,28 @@ When a client makes a POST request to /api/cowsay it should send JSON that inclu
 ###### POST /api/cowsay 
 When a client makes a POST request to /api/cowsay it should send JSON that includes `{"text": "<message>"}`. The server should respond with a JSON body `{"content": "<cowsay cow>"}`.
 
+<table>
+ <tr>
+  <th> Request </th>
+  <th> Response Status Code </th>
+  <th> Response Type </th>
+  <th> Response Body </th>
+ </tr>
+ <tr>
+  <td> With out a body </td>
+  <td> 400 </td>
+  <td> JSON </td>
+  <td> <pre>{
+  "error": "invalid request: request body required"}
+  }</pre> </td>
+ </tr>
+
+</table>
+
 | Request | Response Status Code | Response Type | Response Body |
 | -- | -- | -- | -- |
-| With out body | 400 | JSON  |`{"error": "invalid request: request body required"}` |
+| With out body | 400 | JSON  | <pre> {"error": "invalid request: request body required"}
+</pre> |
 | With out valid body | 400 | JSON | `{"error": "invalid request: text required"}` |
 | With valid body | 200 | JSON | `{"content": "<cowsay cow text>"}` |
 
