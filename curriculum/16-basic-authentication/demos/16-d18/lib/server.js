@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('http:server')
+const debug = require('debug')('cfgram:server')
 
 // express setup
 const express = require('express')
@@ -10,11 +10,10 @@ const app = express()
 // mongoose setup
 const mongoose = require('mongoose')
 mongoose.Promise = require('bluebird')
-let mongoConnection = mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true })
 
-// routes (middleware)
-require('../route/route-toy')(router)
-require('../route/route-child')(router)
+// router middleware
+require('../route/route-auth')(router)
 
 // mount middleware
 app.use(require('body-parser').json())
@@ -23,9 +22,7 @@ app.use(router)
 
 app.all('/*', (req, res) => res.sendStatus(404))
 
-
-// NOTE: This is a nesessary separation of concerns for running our tests.
-// Within each test file we can explicitely start and stop a server instance
+// explicit control over server start and stop
 const server = module.exports = {}
 server.isOn = false;
 server.start = () => {
@@ -37,7 +34,7 @@ server.start = () => {
       })
       return
     }
-    reject(new Error('server allread running'))
+    reject(new Error('server already running'))
   })
 }
 
@@ -45,11 +42,10 @@ server.stop = () => {
   return new Promise((resolve, reject) => {
     if(server.http && server.isOn) {
       return server.http.close(() => {
-        mongoConnection.close()
         server.isOn = false
         resolve()
       })
     }
-    reject(new Error('ther server is not running'))
+    reject(new Error('the server is not running'))
   })
 }

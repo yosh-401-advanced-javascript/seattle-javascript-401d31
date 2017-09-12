@@ -12,6 +12,7 @@ describe('Testing Toy Routes', function () {
   beforeAll(server.start)
   afterAll(server.stop)
   afterAll(toyMock.removeAll)
+  afterAll(childMock.removeAll)
 
   describe('POST requests', function () {
     beforeAll(() => {

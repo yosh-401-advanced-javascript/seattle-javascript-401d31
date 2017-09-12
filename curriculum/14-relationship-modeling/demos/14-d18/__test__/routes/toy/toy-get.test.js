@@ -1,6 +1,7 @@
 'use strict'
 
 const toyMock = require('../../lib/mocks').toy
+const childMock = require('../../lib/mocks').child
 const server = require('../../../lib/server')
 const superagent = require('superagent')
 const faker = require('faker')
@@ -11,13 +12,14 @@ describe('Testing Toy Routes', function () {
   beforeAll(server.start)
   afterAll(server.stop)
   afterAll(toyMock.removeAll)
+  afterAll(childMock.removeAll)
 
   describe('GET requests', function () {
     beforeAll(() => {
       return toyMock.createOne()
-      .then(toy => {
-        this.toy = toy.toy
-        this.child = toy.child
+      .then(res => {
+        this.toy = res.toy
+        this.child = res.child
       })
     })
 

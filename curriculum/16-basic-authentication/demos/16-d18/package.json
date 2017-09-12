@@ -1,5 +1,5 @@
 {
-  "name": "00-code-review-express-middleware",
+  "name": "01-cf-gram",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,29 +26,38 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon index.js",
-    "start:debug": "DEBUG=http* nodemon index.js",
-    "test": "jest",
+    "start:debug": "DEBUG=cfgram* nodemon index.js",
+    "start-db": "mkdir -p ./db && mongod --dbpath ./db",
+    "stop-db": "killall mongod",
+    "test": "jest --runInBand",
+    "test:exit": "jest --forceExit",
     "test:watch": "jest --watchAll",
     "lint": "eslint .",
     "lint:test": "npm run lint && npm test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "images",
+    "photos",
+    "uploads",
+    "codez"
+  ],
+  "author": "Code Fellows, LLC",
+  "license": "MIT",
   "devDependencies": {
     "debug": "^3.0.1",
     "eslint": "^4.5.0",
+    "faker": "^4.1.0",
     "jest": "^20.0.4",
     "superagent": "^3.6.0"
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.4",
-    "faker": "^4.1.0",
-    "mongoose": "^4.11.10",
-    "uuid": "^3.1.0"
+    "jsonwebtoken": "^8.0.0",
+    "mongoose": "^4.11.10"
   }
 }
