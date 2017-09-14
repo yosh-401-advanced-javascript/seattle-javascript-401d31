@@ -5,8 +5,8 @@ const del = require('del')
 const path = require('path')
 const Gallery = require('./gallery')
 const mongoose = require('mongoose')
-const dataDir = `${__dirname}/../data`
-const s3UploadProm = require('../lib/aws-s3')
+const tempDir = `${__dirname}/../temp`
+const awsS3 = require('../lib/aws-s3')
 const debug = require('debug')('cfgram:Photo')
 
 const Photo = mongoose.Schema({
@@ -20,8 +20,8 @@ const Photo = mongoose.Schema({
 
 Photo.statics.upload = function(req) {
   return new Promise((resolve, reject) => {
-    if(!req.file) return reject(new Error('multi-part form-data failed; file not present'))
-    if(!req.file.path) return reject(new Error('multi-part form-data failed; file path not present'))
+    if(!req.file) return reject(new Error('multi-part form-data failed; file not present for create'))
+    if(!req.file.path) return reject(new Error('multi-part form-data failed; file path not present for create'))
   
     let params = {
       ACL: 'public-read',
@@ -30,12 +30,9 @@ Photo.statics.upload = function(req) {
       Body: fs.createReadStream(req.file.path)
     }
   
-    return Gallery.findById(req.body.galleryId)
-    .then(() => s3UploadProm(params))
+    return awsS3.uploadProm(params)
     .then(s3Data => {
-      del([`${dataDir}/*`])
-      
-      console.log(req.user)
+      del([`${tempDir}/*`])
 
       let photoData = {
         name: req.body.name,
@@ -45,8 +42,57 @@ Photo.statics.upload = function(req) {
         userId: req.user._id,
         galleryId: req.body.galleryId
       }
+
       resolve(photoData)
     })
+    .catch(reject)
+  })
+}
+
+Photo.methods.update = function(req) {
+  return new Promise((resolve, reject) => {
+    if(!req.file) return reject(new Error('form-data failed; file not present for update'))
+    
+    debug('inside update prom')
+
+    let params = {
+      ACL: 'public-read',
+      Bucket: process.env.AWS_BUCKET,
+      Key: this.objectKey,
+      Body: fs.createReadStream(req.file.path)
+    }
+
+    return awsS3.updateProm(params)
+    .then(s3Data => {
+      del([`${dataDir}/*`])
+
+      let name = req.body.name || this.name
+      let desc = req.body.desc || this.desc
+      let objectKey = s3Data.Key || this.objectKey
+      let imageURI = s3Data.Location || this.imageURI
+      let userId = req.body.userId || this.userId
+      let galleryId = req.body.galleryId || this.galleryId
+
+      let photoData = { name, desc, objectKey, imageURI, userId, galleryId }
+
+      debug(`photoData ${photoData}`)
+
+      resolve(photoData)
+    })
+    .catch(reject)
+  })
+}
+
+Photo.methods.delete = function() {
+  return new Promise((resolve, reject) => {
+    let params = {
+      Bucket: process.env.AWS_BUCKET,
+      Key: this.objectKey
+    }
+
+    return awsS3.deleteProm(params)
+    .then(this.remove)
+    .then(resolve)
     .catch(reject)
   })
 }

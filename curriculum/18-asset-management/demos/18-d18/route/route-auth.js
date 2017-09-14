@@ -10,7 +10,7 @@ module.exports = function(router) {
   router.post('/api/signup', jsonParser, (req, res, next) => {
     debug('POST /api/signup')
 
-    // get rid of the PW on req.body before the req is handed back as a nested object in the res
+    // Validation required for pw, username, and email (try pre-save hook)
     let pw = req.body.password
     delete req.body.password
 
