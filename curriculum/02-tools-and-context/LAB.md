@@ -22,11 +22,10 @@ Configure the root of your repository with the following files and directories. 
 
 ## Feature Tasks
 #### FP Module
-Create a NodeJS module in the lib/ directory named fp.js that exports an object. Create iteratee-first data-last stand alone `map`, `filter`, `reduce`, `concat`, and `slice` functions using the `call` and `apply` function methods. Define each function using ES6 lexical arrow function syntax. In each function error-check each paramiter and throw an Error with a meaningful message if the function is invoked with invalled arguments. Do not use any third party librarys in the FP module.
+Create a NodeJS module in the lib/ directory named fp.js that exports an object. Create iteratee-first data-last stand alone `map`, `filter`, `reduce`, and `slice` functions using the `call` and `apply` function methods. Define each function using ES6 lexical arrow function syntax. In each function error-check each paramiter and throw an Error with a meaningful message if the function is invoked with invalled arguments. Do not use any third party librarys in the FP module.
 
 * `fp.map` and `fp.filter` should have the function signature `(callback, collection) => Array`
 * `fp.reduce` should have the function signature `(callback, initialState, collection) => data`
-* `fp.concat` should have the function signature `(collectionB, collectionA) => Array`
 * `fp.slice` should have the function signature `(begin, end, collection) => Array`
 
 ## Testing
