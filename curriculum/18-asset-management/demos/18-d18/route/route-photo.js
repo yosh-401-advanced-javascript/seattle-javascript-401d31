@@ -43,15 +43,15 @@ module.exports = function(router) {
     .catch(err => errorHandler(err, req, res))
   })
 
-  router.put('/api/photo/:_id', bearerAuth, upload.single('image'), (req, res) => {
-    debug('PUT /api/route/:_id')
+  // router.put('/api/photo/:_id', bearerAuth, upload.single('image'), (req, res) => {
+  //   debug('PUT /api/route/:_id')
 
-    Photo.findById(req.params._id)
-    .then(photo => photo.update(req))
-    .then(photoData => Photo.findByIdAndUpdate(req.params._id, photoData, { upsert: true, runValidators: true }))
-    .then(photo => res.status(200).json(photo))
-    .catch(err => errorHandler(err, req, res))
-  })
+  //   Photo.findById(req.params._id)
+  //   .then(photo => photo.update(req))
+  //   .then(photoData => Photo.findByIdAndUpdate(req.params._id, photoData, { upsert: true, runValidators: true }))
+  //   .then(photo => res.status(200).json(photo))
+  //   .catch(err => errorHandler(err, req, res))
+  // })
 
   router.delete('/api/photo/:_id', bearerAuth, (req, res) => {
     debug('DELETE /api/route/:_id')

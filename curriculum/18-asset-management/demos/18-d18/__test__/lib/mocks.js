@@ -1,6 +1,7 @@
 'use strict'
 
 const User = require('../../model/user')
+const Photo = require('../../model/photo')
 const Gallery = require('../../model/gallery')
 const faker = require('faker')
 
@@ -11,7 +12,7 @@ mocks.photo = {}
 
 mocks.user.createOne = function() {
   this.result = {}
-  result.password = faker.internet.password()
+  this.result.password = faker.internet.password()
   
   let user = new User({
     username: faker.internet.userName(),

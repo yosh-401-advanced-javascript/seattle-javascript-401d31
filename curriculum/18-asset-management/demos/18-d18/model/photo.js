@@ -49,39 +49,39 @@ Photo.statics.upload = function(req) {
   })
 }
 
-Photo.methods.update = function(req) {
-  return new Promise((resolve, reject) => {
-    if(!req.file) return reject(new Error('form-data failed; file not present for update'))
+// Photo.methods.update = function(req) {
+//   return new Promise((resolve, reject) => {
+//     if(!req.file) return reject(new Error('form-data failed; file not present for update'))
     
-    debug('inside update prom')
+//     debug('inside update prom')
 
-    let params = {
-      ACL: 'public-read',
-      Bucket: process.env.AWS_BUCKET,
-      Key: this.objectKey,
-      Body: fs.createReadStream(req.file.path)
-    }
+//     let params = {
+//       ACL: 'public-read',
+//       Bucket: process.env.AWS_BUCKET,
+//       Key: this.objectKey,
+//       Body: fs.createReadStream(req.file.path)
+//     }
 
-    return awsS3.updateProm(params)
-    .then(s3Data => {
-      del([`${dataDir}/*`])
+//     return awsS3.updateProm(params)
+//     .then(s3Data => {
+//       del([`${dataDir}/*`])
 
-      let name = req.body.name || this.name
-      let desc = req.body.desc || this.desc
-      let objectKey = s3Data.Key || this.objectKey
-      let imageURI = s3Data.Location || this.imageURI
-      let userId = req.body.userId || this.userId
-      let galleryId = req.body.galleryId || this.galleryId
+//       let name = req.body.name || this.name
+//       let desc = req.body.desc || this.desc
+//       let objectKey = s3Data.Key || this.objectKey
+//       let imageURI = s3Data.Location || this.imageURI
+//       let userId = req.body.userId || this.userId
+//       let galleryId = req.body.galleryId || this.galleryId
 
-      let photoData = { name, desc, objectKey, imageURI, userId, galleryId }
+//       let photoData = { name, desc, objectKey, imageURI, userId, galleryId }
 
-      debug(`photoData ${photoData}`)
+//       debug(`photoData ${photoData}`)
 
-      resolve(photoData)
-    })
-    .catch(reject)
-  })
-}
+//       resolve(photoData)
+//     })
+//     .catch(reject)
+//   })
+// }
 
 Photo.methods.delete = function() {
   return new Promise((resolve, reject) => {

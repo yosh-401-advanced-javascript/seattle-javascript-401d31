@@ -18,18 +18,18 @@ uploads.uploadProm = function(params) {
   })
 }
 
-uploads.updateProm = function(params) {
-  return new Promise((resolve, reject) => {
-    // s3.putObject(params, (err, s3Data) => {
-    //   if(err) {
-    //     console.log(err)
-    //     reject(err)
-    //   }
-    //   console.log(s3Data)
-    //   resolve(s3Data)
-    // })
-  })
-}
+// uploads.updateProm = function(params) {
+//   return new Promise((resolve, reject) => {
+//     s3.putObject(params, (err, s3Data) => {
+//       if(err) {
+//         console.log(err)
+//         reject(err)
+//       }
+//       console.log(s3Data)
+//       resolve(s3Data)
+//     })
+//   })
+// }
 
 uploads.deleteProm = function(params) {
   return new Promise((resolve, reject) => {

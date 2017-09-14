@@ -59,45 +59,50 @@ describe('Testing Gallery Routes', function() {
       })
 
       test('should return 400 given bad request body', () => {
-        return superagent.post(':4444/api/gallery')
-        .set('Authorization', `Bearer ${this.userData.token}`)
-        .send({ name: 'wat' })
-        .catch(err => {
-          // console.log(err)
-          expect(err.status).toBe(400)
+        this.galleryFake = { name: faker.random.word(), desc: faker.random.words(12) }
+        
+        return mocks.user.createOne()
+        .then(userData => this.invalidUserData = userData)
+        .then(() => {
+          return superagent.post(':4444/api/gallery')
+          .set('Authorization', `Bearer ${this.invalidUserData.token}`)
+          .send({ name: 'wat' })
+          .catch(err => {
+            expect(err.status).toBe(400)
+          })
         })
       })
     })
   })
 
-  describe('GET', function() {
-    describe('Valid Requests', () => {
+  // describe('GET', function() {
+  //   describe('Valid Requests', () => {
 
-    })
+  //   })
 
-    describe('Invalid Requests', () => {
+  //   describe('Invalid Requests', () => {
 
-    })
-  })
+  //   })
+  // })
 
-  describe('PUT', function() {
-    describe('Valid Requests', () => {
+  // describe('PUT', function() {
+  //   describe('Valid Requests', () => {
 
-    })
+  //   })
 
-    describe('Invalid Requests', () => {
+  //   describe('Invalid Requests', () => {
 
-    })
-  })
+  //   })
+  // })
 
-  describe('DELETE', function() {
-    describe('Valid Requests', () => {
+  // describe('DELETE', function() {
+  //   describe('Valid Requests', () => {
 
-    })
+  //   })
 
-    describe('Invalid Requests', () => {
+  //   describe('Invalid Requests', () => {
 
-    })
-  })
+  //   })
+  // })
 
 })
