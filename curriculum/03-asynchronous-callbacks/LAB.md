@@ -2,44 +2,47 @@
 ===
 
 ## Submission Instructions
-  * fork this repository & create a new branch for your work
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
-
-## Learning Objectives  
-  * students will be able to create asynchronous programs using the node.js callback pattern
-  * students will be able to read, write, and encode binary data using the Buffer class
-  * students will be able to utilize the built-in `fs` module for basic file system I/O operations
-  * students will be able to use `done` (provided by mocha.js) for creating asynchronous tests
+* Work in a fork of this repository
+* Work in a branch on your fork
+* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
+* Open a pull request to this repository
+* Submit on canvas a question and observation, how long you spent, and a link to your pull request
 
 ## Resources  
   * [fs module docs](https://nodejs.org/api/fs.html)
 
-## Requirements  
+## Configuration 
+Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+* **README.md** - contains documentation
+* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
+* **.eslintrc** - contains the course linter configuratoin
+* **.eslintignore** - contains the course linter ignore configuration
+* **package.json** - contains npm package config
+  * create a `lint` script for running eslint
+  * create a `test` script for running tests
+* **lib/** - contains module definitions
+* **assets/** - contains the text files used by the program
+* **\_\_test\_\_/** - contains unit tests
 
-#### Configuration  
-<!-- list of files, configurations, tools, etc that are required -->
-* include the following:
-  * **README.md** - contains documentation about your lab
-  * **.gitignore** - contains a robust `.gitignore` file
-  * **.eslintrc** - contains the provided `.eslintrc` file
-  * **.eslintignore** - contains the provided `.eslintignore` file
-  * **lib/** - contains your modules
-  * **test/** - contains your unit tests
-  * **assets/** - contains the text files used by the program
-  * **index.js** - contains main program file
+## Feature Tasks  
+#### Reader Module
+In the lib/ directory create a reader.js module that exports a single function. The reader module should take an array of three file paths and resolve a mapped array of strings loaded from each file using an error-first callback. The string data should be in the same order as the file path data (mapped). If an error occurs it should immediatly reject the error using the callback and stop execution.
 
-#### Feature Tasks  
-  * for this assignment you will need to read three files and `console.log` the first 8 bytes ***(in hex)*** of each file
-  * regardless of file size, all three files should be read and logged in the order `'one.txt'`, `'two.txt'`, `'three.txt'`
+* The reader module should have the function signature `(paths, callback) => undefined`
+* On a failure the reader module should invoke the callback with an error `callback(error)`
+* On success the reader module should invoke the callback with null as the first paramiter, and the result as the second paramiter `callback(null, result)`
 
-#### Testing  
-  * create a test that guarantees that the files are logged in the proper order
-  * create a test that checks for improper file paths
+## Testing  
+#### Reader Module Tests
+* Use BDD `describe` and `test` methods to define discriptive tests and increase readablity
+* Each `test` callback should aim to test a small well defined feature of a function
+* Write tests to ensure the reader function rejects errors with invalid file paths
+* Write tests to ensure the reader function correctly resolves mapped string data for an array of file paths
 
-####  Documentation
-  * create a simple description of your project
-  * create a simple layer of documentation that describes how to use `done` in mocha callbacks
+##  Documentation
+In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
+
+## Bonus 1pt
+Write the reader function recursivly so that it will be able to support 0 or more paths.
+
+
