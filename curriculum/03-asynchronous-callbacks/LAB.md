@@ -26,7 +26,7 @@ Configure the root of your repository with the following files and directories. 
 
 ## Feature Tasks  
 #### Reader Module
-In the lib/ directory create a reader.js module that exports a single function. The reader module should take an array of file paths and resolve a mapped array of strings loaded from each file using an error-first callback. The string data should be in the same order as the file path data (mapped). If an error occurs it should immediatly reject the error using the callback and stop execution.
+In the lib/ directory create a reader.js module that exports a single function. The reader module should take an array of three file paths and resolve a mapped array of strings loaded from each file using an error-first callback. The string data should be in the same order as the file path data (mapped). If an error occurs it should immediatly reject the error using the callback and stop execution.
 
 * The reader module should have the function signature `(paths, callback) => undefined`
 * On a failure the reader module should invoke the callback with an error `callback(error)`
@@ -41,3 +41,7 @@ In the lib/ directory create a reader.js module that exports a single function. 
 
 ##  Documentation
 In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
+
+## Bonus 1pt
+* Create a second module fp-curry.js that is a refactered version of fp.js, where each function has curried arguments
+* Create a fp-curry.test.js that is a refactured version of fp.curry.js that tests fp-curry.js
