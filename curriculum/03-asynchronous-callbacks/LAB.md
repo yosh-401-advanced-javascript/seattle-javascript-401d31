@@ -43,5 +43,6 @@ In the lib/ directory create a reader.js module that exports a single function. 
 In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
 
 ## Bonus 1pt
-* Create a second module fp-curry.js that is a refactered version of fp.js, where each function has curried arguments
-* Create a fp-curry.test.js that is a refactured version of fp.curry.js that tests fp-curry.js
+Write the reader function recursivly so that it will be able to support 0 or more paths.
+
+
