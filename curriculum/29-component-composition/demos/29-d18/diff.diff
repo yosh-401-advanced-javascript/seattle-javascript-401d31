@@ -1,0 +1,192 @@
+Only in ./: .dev.env
+
++++ ./src/component/about-container/index.js
+ import React from 'react'
+ import './_about-container.scss'
++import Navbar from '../navbar'
+ 
+ class AboutContainer extends React.Component {
+   render() {
++    console.log(this)
+     return (
+       <div className='about-container'>
++        <Navbar />
+         <p>say hi to the world!</p>
+       </div>
+     )
+
++++ ./src/component/dashboard-container/index.js	
+ import React from 'react'
+ import uuid from 'uuid/v1'
+ 
+-import ExpenseCreateForm from '../expense-create-form'
++import Modal from '../modal'
++import Navbar from '../navbar'
+ import ExpenseList from '../expense-list'
++import ExpenseForm from '../expense-form'
++
++let renderIf = (test, component) => test ? component : undefined
+ 
+ class DashboardContainer extends React.Component {
+   constructor(props) {
+     super(props)
++    
++    this.state = {
++      showErrors: true
++    }
++
+     this.expenseCreate = this.expenseCreate.bind(this)
++    this.expenseRemove = this.expenseRemove.bind(this)
++    this.expenseUpdate = this.expenseUpdate.bind(this)
+   }
+ 
+   expenseCreate(expense) {
+@@ -18,13 +29,54 @@
+     }))
+   }
+ 
++  expenseRemove(expense) {
++    this.props.app.setState(prevState => ({
++      expenses: prevState.expenses.filter(item => {
++        return item.id !== expense.id
++      })
++    }))
++  }
++
++  expenseUpdate(expense) {
++    this.props.app.setState(prevState => ({
++      expenses: prevState.expenses.map(item => {
++        return item.id === expense.id ? expense : item
++      })
++    }))
++  }
++
+   render() {
++    let totalSpent = this.props.app.state.expenses.reduce((a, b) => a + b.price, 0)
++    let remainingBudget = this.props.app.state.budget - totalSpent
++
++    console.log('__STATE__', this.props.app.state)
++
+     return (
+-      <div className='dashboard-container'>
+-        <ExpenseCreateForm handleExpenseCreate={this.expenseCreate} />
+-        <ExpenseList app={this.props.app}/>
+-        {/* <ExpenseList app={this.props.app}/> */}
+-      </div>
++      <section className='dashboard-container'>
++        <Navbar />
++
++        <div>
++          <p>total budget: {this.props.app.state.budget}</p>
++          <p>total spent: {totalSpent}</p>
++          <p>remaining budget: {remainingBudget}</p>
++        </div>
++
++        <ExpenseForm 
++          handleSubmit={this.expenseCreate}
++          submitTitle='add expense'/>
++
++        <ExpenseList 
++          expenseRemove={this.expenseRemove}
++          expenseUpdate={this.expenseUpdate}
++          expenses={this.props.app.state.expenses}/>
++
++        {renderIf(remainingBudget < 0 && this.state.showErrors,
++          <Modal close={() => this.setState({ showErrors: false })}>
++            <h1>sorry, you have used all of your available funds</h1>
++            <p>current balance: {remainingBudget}</p>
++          </Modal>
++        )}
++      </section>
+     )
+   }
+ }
+
+Only in ../../../28-routing-and-testing/demos/28-d18/src/component: expense-create-form
+Only in ./src/component: expense-form
+
++++ ./src/component/expense-list/index.js
+ import React from 'react'
++import ExpenseForm from '../expense-form'
+ 
+ class ExpenseList extends React.Component {
+   constructor(props) {
+     super(props)
+-    this.state = {
+-      expenseList: this.props.app.state.expenses.map(e => <li key={e.id}>{e.title}: {e.price}</li>)
+-    }
+   }
+   
+-  // componentDidMount() {
+-  //   console.log('__STATE__S', this.state)
+-  //   console.log('__PROPS__S', this.props)
+-  // }
+-
+   render() {
+     return (
+-      <div className="expense-list">
+-        <ul>{this.state.expenseList}</ul>
+-      </div>
++      <section className="expense-list">
++        <ul>
++          {this.props.expenses.map(item => {
++            return <li key={item.id}>
++              <button onClick={() => this.props.expenseRemove(item)}>x</button>
++
++              <div>
++                <p>title: {item.title}</p>
++                <p>price: {item.price}</p>
++              </div>
++
++              <ExpenseForm 
++                expense={item}
++                submitTitle='update expense'
++                handleSubmit={expense => {
++                  expense.id = item.id
++                  this.props.expenseUpdate(expense)
++                }}/>
++            </li>
++            }
++          )}
++        </ul>
++      </section>
+     )
+   }
+ }
+
+Only in ./src/component: modal
+Only in ./src/component: navbar
+
++++ ./src/main.js 
+   render() {
+     return (
+-      <div>
+-        <header>
+-          <nav>
+-            <ul>
+-              <li><a href="/">home</a></li>
+-              <li><a href="/about">about</a></li>
+-              <li><a href="/dashboard">dashboard</a></li>
+-            </ul>
+-          </nav>
+-        </header>
+-        <main>
+-          <BrowserRouter>
+-            <section>
+-              <Route exact path='/about' component={AboutContainer} />
+-              <Route exact path='/dashboard' component={() => <DashboardContainer app={this.getApp()} />} />
+-            </section>
+-          </BrowserRouter>
+-        </main>
+-      </div>
++      <main>
++        <BrowserRouter>
++          <section>
++            <Route exact path='/about' component={AboutContainer} />
++            <Route exact path='/' component={() => <DashboardContainer app={this.getApp()} />} />
++          </section>
++        </BrowserRouter>
++      </main>
+     )
+   }
+ }
