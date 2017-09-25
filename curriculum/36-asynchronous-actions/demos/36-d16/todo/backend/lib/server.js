@@ -9,7 +9,7 @@ const mongoose = require('mongoose')
 // module logic 
 //    * config and connect to monogo
 mongoose.Promise = Promise
-mongoose.connect(process.env.MONGODB_URI)
+let mongoConnection = mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
 
 //    * create app
 const app = express()
@@ -50,6 +50,7 @@ server.stop = () => {
    return new Promise((resolve, reject) => {
      if(server.http && server.isOn){
        return server.http.close(() => {
+         mongoConnection.close()
          server.isOn = false
          console.log('server down')
          resolve()
