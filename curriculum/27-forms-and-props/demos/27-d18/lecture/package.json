@@ -1,11 +1,11 @@
 {
-  "name": "26-d18",
+  "name": "27-d18",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack",
-    "build:watch": "webpack-dev-server --inline --hot"
+    "watch": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
   "author": "Code Fellows, LLC",
@@ -22,6 +22,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "sass-loader": "^6.0.6",
+    "superagent": "^3.6.0",
     "webpack": "^3.5.6",
     "webpack-dev-server": "^2.8.2"
   }

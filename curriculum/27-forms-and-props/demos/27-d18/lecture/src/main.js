@@ -1,18 +1,43 @@
-'use strict'
+import './style/main.scss'
 
 import React from 'react'
 import ReactDom from 'react-dom'
+import superagent from 'superagent'
 
-class Navbar extends React.Component {
+const API_URL = 'https://pokeapi.co/api/v2'
+
+class PokemonForm extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      pokeName: '',
+    }
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    this.props.pokemonSelect(this.state.pokeName)
+  }
+
+  handleChange(e) {
+    this.setState({pokeName: e.target.value})
   }
 
   render() {
     return (
-      <header>
-        <h1>Counter App</h1>
-      </header>
+      <form 
+        className="pokemon-form"
+        onSubmit={this.handleSubmit}>
+
+        <input 
+          type="text"
+          name="pokemonName"
+          placeholder="search for a pokemon"
+          value={this.state.pokeName}
+          onChange={this.handleChange}/>
+      </form>
     )
   }
 }
@@ -21,27 +46,97 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      title: 'hello world',
-      count: 0
+      pokemonLookup: {},
+      pokemonSelected: null,
+      pokemonNameError: null,
     }
-
-    this.happening = 'eclipse'
-    this.handleClick = this.handleClick.bind(this)
+    this.pokemonSelect = this.pokemonSelect.bind(this)
   }
 
-  handleClick(e) {
-    this.setState(state => {
-      return {count: state.count + 1}
-    })
+  componentDidUpdate() {
+    console.log('__STATE__', this.state)
+  }
+
+  componentDidMount() {
+    if(localStorage.pokemonLookup) {
+      try {
+        let pokemonLookup = JSON.parse(localStorage.pokemonLookup)
+        this.setState({pokemonLookup})
+      } catch(e) {
+        console.error(e)
+      }
+    } else {
+      superagent.get(`${API_URL}/pokemon/`)
+      .then(res => {
+        let pokemonLookup = res.body.results.reduce((lookup, n) => {
+          lookup[n.name] = n.url
+          return lookup
+        }, {})
+
+        try {
+          localStorage.pokemonLookup = JSON.stringify(pokemonLookup)
+          this.setState({pokemonLookup})
+        } catch(e) {
+          console.error(e)
+        }
+      })
+      .catch(console.error)
+    }
+  }
+
+  pokemonSelect(name) {
+    if(!this.state.pokemonLookup[name]) {
+      this.setState({
+        pokemonSelected: null,
+        pokemonNameError: name,
+      })
+    } else {
+      console.log(this.state.pokemonLookup[name])
+      superagent.get(this.state.pokemonLookup[name])
+      .then(res => {
+        this.setState({
+          pokemonSelected: res.body,
+          pokemonNameError: null,
+        })
+      })
+      .catch(console.error)
+    }
   }
 
   render() {
     return (
-      <div>
-        <Navbar />
-        <p onClick={this.handleClick}>Counter: {this.state.count}</p>
-        <p>{this.happening}</p>
-      </div>
+      <section className="application">
+        <h1>Pokemon Form Demo</h1>
+        <PokemonForm pokemonSelect={this.pokemonSelect} />
+
+        {this.state.pokemonNameError ?
+          <div>
+            <h2>Selected: {this.state.pokemonSelected} does not exist</h2>
+            <h3>Please make another request</h3>
+          </div> :
+          <div>
+            { this.state.pokemonSelected ?
+              <div>
+                <section className="pokemon selected">
+                  <h2>Selected: {this.state.pokemonSelected.name}</h2>
+                  <img src={this.state.pokemonSelected.sprites.front_default} alt={this.state.pokemonSelected.name}/>
+                </section>
+                <section className="pokemon abilities">
+                  <h3>Abilities</h3>
+                  <ul>
+                    {this.state.pokemonSelected.abilities.map((item, i) => {
+                      return <li key={i}>{item.ability.name}</li>
+                    })}
+                  </ul>
+                </section>
+              </div> :
+              <div>
+                <p>Please make a request to see pokemon data</p>
+              </div>
+            }
+          </div>
+        }
+      </section>
     )
   }
 }

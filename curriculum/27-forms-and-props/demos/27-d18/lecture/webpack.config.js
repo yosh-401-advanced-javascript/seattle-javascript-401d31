@@ -27,5 +27,5 @@ module.exports = {
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       }
     ]
-  }
+  },
 }
