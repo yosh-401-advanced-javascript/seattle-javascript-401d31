@@ -16,6 +16,11 @@ class PokemonForm extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+  componentDidMount() {
+    console.log('__FORM_PROPS__', this.props)
+    console.log('__FORM_STATE__', this.state)
+  }
+
   handleSubmit(e) {
     e.preventDefault()
     this.props.pokemonSelect(this.state.pokeName)
@@ -107,7 +112,7 @@ class App extends React.Component {
     return (
       <section className="application">
         <h1>Pokemon Form Demo</h1>
-        <PokemonForm pokemonSelect={this.pokemonSelect} />
+        <PokemonForm pokemonSelect={this.pokemonSelect}/>
 
         {this.state.pokemonNameError ?
           <div>
