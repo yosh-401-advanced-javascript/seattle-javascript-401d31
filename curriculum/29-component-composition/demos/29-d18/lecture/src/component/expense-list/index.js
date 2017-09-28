@@ -1,36 +1,31 @@
 import React from 'react'
-import ExpenseForm from '../expense-form'
 
 class ExpenseList extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      expenseList: this.props.app.state.expenses
+    }
+    this.handleDelete = this.handleDelete.bind(this)
   }
-  
+
+  handleDelete(e, id) {
+    this.props.app.setState(prevState => ({
+      expenses: prevState.expenses.filter(expense => expense.id !== id)
+    }))
+  }
+
   render() {
     return (
-      <section className="expense-list">
-        <ul>
-          {this.props.expenses.map(item => {
-            return <li key={item.id}>
-              <button onClick={() => this.props.expenseRemove(item)}>x</button>
-
-              <div>
-                <p>title: {item.title}</p>
-                <p>price: {item.price}</p>
-              </div>
-
-              <ExpenseForm 
-                expense={item}
-                submitTitle='update expense'
-                handleSubmit={expense => {
-                  expense.id = item.id
-                  this.props.expenseUpdate(expense)
-                }}/>
-            </li>
-            }
-          )}
-        </ul>
-      </section>
+      <div className="expense_list">
+        {this.state.expenseList.length ?
+          <ul>
+            {this.state.expenseList
+              .map(expense => <li key={expense.id}>{expense.title}: {expense.price}<button onClick={(event) => this.handleDelete(event, expense.id)}>x</button></li>)}
+          </ul> :
+          <h2>There are no expenses...</h2>
+        }
+      </div>
     )
   }
 }

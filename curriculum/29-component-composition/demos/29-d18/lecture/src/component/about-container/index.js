@@ -1,14 +1,11 @@
 import React from 'react'
-import './_about-container.scss'
-import Navbar from '../navbar'
 
 class AboutContainer extends React.Component {
   render() {
-    console.log(this)
     return (
-      <div className='about-container'>
-        <Navbar />
-        <p>say hi to the world!</p>
+      <div className="about-container">
+        <h2>Welcome to the About page!</h2>
+        <p>this is where I tell you all about me!</p>
       </div>
     )
   }

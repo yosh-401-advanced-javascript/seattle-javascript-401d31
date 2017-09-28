@@ -6,29 +6,29 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   devtool: 'source-map',
   devServer: {
-    'historyApiFallback': true
+    'historyApiFallback': true,
   },
   entry: `${__dirname}/src/main.js`,
   output: {
     path: `${__dirname}/build`,
     filename: 'bundle-[hash].js',
-    publicPath: '/'
+    publicPath: '/',
   },
   plugins: [
     new HtmlPlugin({ template: `${__dirname}/src/index.html` }),
-    new ExtractTextPlugin('bundle-[hash].css')
+    new ExtractTextPlugin('bundle-[hash].css'),
   ],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader']),
       }
     ]
-  }
+  },
 }

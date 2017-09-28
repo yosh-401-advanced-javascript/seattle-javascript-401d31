@@ -1,21 +1,23 @@
-'use strict'
-
-import './style/main.scss'
 import React from 'react'
 import ReactDom from 'react-dom'
 import {BrowserRouter, Route} from 'react-router-dom'
-import AboutContainer from './component/about-container'
 import DashboardContainer from './component/dashboard-container'
+import AboutContainer from './component/about-container'
+import Navbar from './component/navbar'
+
 
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      budget: 400,
+    this.state ={
       expenses: [],
+      budget: 400,
     }
-
     this.getApp = this.getApp.bind(this)
+  }
+
+  componentDidUpdate() {
+    console.log('__STATE__', this.state)
   }
 
   getApp() {
@@ -25,20 +27,19 @@ class App extends React.Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log('__STATE__', this.state)
-  }
-
   render() {
     return (
-      <main>
-        <BrowserRouter>
-          <section>
-            <Route exact path='/about' component={AboutContainer} />
-            <Route exact path='/' component={() => <DashboardContainer app={this.getApp()} />} />
-          </section>
-        </BrowserRouter>
-      </main>
+      <div className="application">
+          <BrowserRouter>
+            <section>
+              <Navbar />
+              <main>
+                <Route exact path="/" component={() => <DashboardContainer app={this.getApp()}/>} />
+                <Route exact path="/about" component={AboutContainer} />   
+              </main>
+            </section>
+          </BrowserRouter>
+      </div>
     )
   }
 }
