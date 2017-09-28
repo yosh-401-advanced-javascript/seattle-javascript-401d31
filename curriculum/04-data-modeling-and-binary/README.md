@@ -3,24 +3,24 @@
 
 ## Learning Objectives
 * Students will learn how binary data is encoded and decoded
-* Students will be able to manipulate binary data using Nodes Buffers
-* Students will be able to use EventEmitters for managing asyncronous code
+* Students will be able to manipulate binary data using NodeJS Buffers
+* Students will be able to use EventEmitters to manage asynchronous code
 
 ## Resources
-* Read  [node buffer api docs]
+* Read [node buffer api docs]
 * Watch [endian and little endian]
 
 ## Javascript Data Modeling
-Javascript has a limited number of built in data types including objects, arrays, strings, numbers, and booleans. Data modeling in Javscript is the process of taking a real world or conceptual idea and encoding it into Javascript's built in data-types. There isn't technicaly a right or wrong way to model data in software development, because it has been proven that any idea can be represented using any data structure. However it is important to follow several practices to boost software readbility and maintainability. Booleans should be used when the data can have only two states. Numbers should be used when the data could support arithmatic opperaions. Strings should be used when the data is representing natrual language. Arrays should be used to bundle multiple pieces of like data. Objects should be used to bundle multiple pieces of different data. 
+Javascript has a limited number of built-in data types including objects, arrays, strings, numbers, and booleans. Data modeling in Javascript is the process of taking a real world or conceptual idea and encoding it into Javascript's built in data types. There technically isn't a right or wrong way to model data in software development, because it has been proven that any idea can be represented using any data structure. However it is important to follow several practices to boost software readability and maintainability. Booleans should be used when the data can have only two states. Numbers should be used when the data could support arithmetic operations. Strings should be used when the data is representing a natural language. Arrays should be used to bundle multiple pieces of like data. Objects should be used to bundle multiple pieces of different data.
 
 ## Binary
-You probably know that everything in the computer is stored in 0s and 1s. As web developers we don't often have to work with data at such a low level, instead we usualy get to work with Strings, Numbers, Arrays, Objects, and so on. Though most of the time we are lucky enough to work with such abstracted data types, sometimes we are required to undestand how data is stored in binary. There are predefined specifications for how to decode number and strings from binary. The majority of the data we work with is made up of numbers and strings. For example Numbers and Strings are used to make more compex things like JSON, XML, HTML, JPEG, GIF, MP3, MP4, and even Javascript. Undersanding how to manipulate binary data on a more fundamental leval, can open up doors for having much more control over the data in our applications.
+You probably know that everything in the computer is stored in 0s and 1s. As web developers, we don't often have to work with data at such a low level, instead we get to work with Strings, Numbers, Arrays, Objects, and so on. Though most of the time we are lucky enough to work with such abstracted data types, sometimes we are required to understand how data is stored in binary. There are predefined specifications for how to decode number and strings from binary. The majority of the data we work with is made up of numbers and strings. For example, Numbers and Strings are used to make more complex things like JSON, XML, HTML, JPEG, GIF, MP3, MP4, and even Javascript. Understanding how to manipulate binary data on a more fundamental level can open up doors for having much more control over the data in our applications.
 
 #### Bytes
-A byte is 8 zeros and ones `00101101`. Bytes are one of the fundamental units that programmers use to work with binary data. A byte can hold one ascii character, a number between 0 and 255, a number between -128 and 127, and anything else that has up to 256 units. 
+A byte is 8 zeros and ones `00101101`. Bytes are one of the fundamental units that programmers use to work with binary data. A byte can hold one ascii character, a number between 0 and 255, a number between -128 and 127, along with anything else that has up to 256 units.
 
 #### Strings
-Strings are made from arrays of characters. Every byte in a binary file can be decoded as a character using the `ascii` or `utf8` charicter specifications. The ASCII standard has been around since the early sixtys, and was used to encode charicters of a single locale (language). It is litteraly a map between numbers 0 to 127 and specific characters. Meaning that when you find the number 97 in a byte, that byte can also be decoded as the letter 'a'. This only works by making computers and programers conform to the specification. As computers gained more memory and found reasons to support more charicter sets, the `utf8` specification was created. UTF8 is a variable length byte encoding that allows bytes to be chained together to form a  charicter set large enough to suport every loacle, symbols, and emojii at once. UTF8 was designed as a superset of ASCII in order keep backwards compatability.  
+Strings are made from an array of characters. Every byte in a binary file can be decoded as a character using the `ascii` or `utf8` character specifications. The ASCII standard has been around since the early sixties, and was used to encode characters of a single locale (language). It is literally a map between numbers 0 to 127 and specific characters. Meaning that when you find the number 97 in a byte, that byte can also be decoded as the letter 'a'. This only works by making computers and programers conform to the specification. As computers gained more memory and found reasons to support more character sets, the `utf8` specification was created. UTF8 is a variable length byte encoding that allows bytes to be chained together to form a character set large enough to support every locale, symbols, and emoji at once. UTF8 was designed as a superset of ASCII in order keep backwards compatibility.  
 
 ###### ASCII Table
 ```
@@ -43,7 +43,7 @@ Strings are made from arrays of characters. Every byte in a binary file can be d
 ```
 
 #### Integers
-In order to understand how integers are encoded in zeros and ones, its important to understand how decimal notation works. In decimal every digit is worth it self times ten to the power of its place. In binary this only changes slightly, every digit is worth it self times **TWO** to the power of its place. Integers can either be decoded as `signed` or `unsigned`. Signed numbers can be negitiave or postive, and unsigned numbers can only be positive.
+In order to understand how integers are encoded in zeros and ones, it is important to understand how decimal notation works. In decimal notation, every digit is worth itself times ten to the power of it's place. In binary this only changes slightly, every digit is worth itself times **TWO** to the power of it's place. Integers can either be decoded as `signed` or `unsigned`. Signed numbers can be negative or positive, and unsigned numbers can only be positive.
 
 ```
 HOW DECMAL WORKS...
@@ -72,10 +72,10 @@ value     01011
 ```
 
 ###### Signed vs Unsigned
-Signed integers add a rule that states the first bit represets weather or not a numbers is positive or negative. Negitive values then follow a rule called `twos complament`. In twos complament the value after the singed bit is added to the number of positions suported by the the remaining bits and then multipiyed by -1. When decoding a four bit signed number the first bit is a boolean value indicating negitive or repostive. The reamaing three can support 8 unique values (0-7). So a signed four bit number can represet positive numbers from 0 to 7 and negitive numbers -1 to -8.
+Signed integers add a rule that states the first bit represents weather or not a number is positive or negative. Negative values then follow a rule called `twos compliment`. In twos compliment, the value after the singed bit is added to the number of positions supported by the the remaining bits and then multiplied by -1. When decoding a four bit signed number, the first bit is a boolean value indicating negative or positive. The remaining three can support 8 unique values (0-7). So a signed four bit number can represent positive numbers from 0 to 7 and negative numbers -1 to -8.
 
 ```
-Signed |Unsigned 
+Signed |Unsigned
 -----------------.
  0     |0        |0000
  1     |1        |0001   
@@ -85,7 +85,7 @@ Signed |Unsigned
  5     |5        |0101   
  6     |6        |0110   
  7     |7        |0111   _________NEGITIVE_VALUES
--8     |8        |1000   (8 + 0) * -1 
+-8     |8        |1000   (8 + 0) * -1
 -7     |9        |1001   (8 + 1) * -1
 -6     |10       |1010   (8 + 2) * -1
 -5     |11       |1011   (8 + 3) * -1
