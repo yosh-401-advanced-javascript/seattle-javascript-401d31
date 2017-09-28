@@ -13,6 +13,7 @@ class DashboardContainer extends React.Component {
 
   expenseCreate(expense) {
     expense.id = uuid()
+    this.setState({})
     this.props.app.setState(state => ({
       expenses: [...state.expenses, expense] 
     }))
