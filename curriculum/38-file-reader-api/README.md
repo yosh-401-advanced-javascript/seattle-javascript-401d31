@@ -1,8 +1,8 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 38: File Reader API 
+![cf](http://i.imgur.com/7v5ASc8.png) 38: File Reader API
 ====
 
 ## Learning Objectives
-* Students will learn to use the FileReader API to  preview files 
+* Students will learn to use the `FileReader` API to preview image files 
 
 ## Readings
 * Read [Using files in web applications](https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications)
