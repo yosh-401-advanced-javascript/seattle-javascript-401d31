@@ -8,7 +8,7 @@ import {categoryUpdate, categoryDelete} from '../../action/category-actions'
 
 class CategoryItem extends React.Component {
   render() {
-    let {category, categoryUpdate, categoryDelete, cards} = this.props
+    let {category, categoryUpdate, categoryDelete, cardCreate, cards} = this.props
     console.log('__CARDS__', cards)
 
     return (
@@ -30,7 +30,7 @@ class CategoryItem extends React.Component {
           <CardForm
             categoryId={category.id}
             buttonText="create card"
-            onComplete={this.props.cardCreate} />
+            onComplete={cardCreate} />
 
           <ul className="card-items">
             {cards.map(card => <CardItem key={card.id} card={card} />)}
