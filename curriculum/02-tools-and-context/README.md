@@ -1,14 +1,13 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) 02: Tools and Context
 =====================================
 
-
 ## Learning Objectives
 * Students will be able to define npm scripts for automating command line tasks
-* Students will be able to control a functions context using call, apply, and bind
-* Studnets will be able to handle thrown errors using try and catch 
-* Students will be able to interperate the diffent types of errors in Javascript
+* Students will be able to control function context by using `call`, `apply`, and `bind`
+* Students will be able to handle thrown errors using `try` and `catch`
+* Students will be able to interpret the different types of errors in Javascript
 
-## Resources 
+## Resources
 * Read [about package.json]
 * Skim [npm scripts as build tools]
 * Skim [npm scripts docs]
@@ -18,18 +17,18 @@
 * Watch [javascript context tutorial]
 
 ## package.json
-The `package.json` file is used to descibe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version`. If a package has external dependieces they are list by name and version under the fields `dependencies` and `devDependencies`. If the package depenends on an extenral package to run the external package should be listed under `dependencies`. If the external package is only needed in development (like a testing framework) it should be listend under `devDependencies`. package.json files can have a `scripts` field where keys can be associated with unix commands. npm scripts have the added benifit that they can run any command line utility (CLI) defined in a dependencie, without globally installing the CLI on you opperating system. 
+The `package.json` file is used to describe and configure a NodeJS package. The only two fields that are required by a package.json are `name` and `version`. If a package has external dependencies, they are listed by name and version under the fields `dependencies` and `devDependencies`. If the package depends on an external package to run, the external package should be listed under `dependencies`. If the external package is only needed in development (like a testing framework), it should be listed under `devDependencies`. `package.json` files can have a `scripts` field where keys can be associated with unix commands. NPM scripts have the added benefit that they can run any command line utility (CLI) defined in a dependency, without globally installing the CLI on you operating system.
 
 #### Semantic Versioning
-The NodeJS/NPM community follows semantic versioning (semver). Semantic vesrsioning describes how to manage version changes to a software product. Semver formats the vesrion number using `MAJOR.MINOR.PATCH`. You should change a MAJOR version when you make incompatible API changes, a MINOR version when you add functionality in a backwards-compatible manner, or a PATCH version when you make backwards-compatible bug fixes.
+The NodeJS/NPM community follows semantic versioning (semver). Semantic versioning describes how to manage version changes to a software product. Semver formats the version number using a `MAJOR.MINOR.PATCH` construct. You should change a MAJOR version when you make incompatible API changes, a MINOR version when you add functionality in a backwards-compatible manner, or a PATCH version when you make backwards-compatible bug fixes.
 
 ## Errors
-Error messages are super important tools for debugging broken code. Javascript has many built in error messages, but you can also define your own errors in your programs. Its important to not to forget that errors will happen in production. Error logs are kept in order to fix bugs in prodctions. Writing good error messages is critical for finding and fixing bugs in deployed applications. 
+Error messages are super important tools for debugging broken code. Javascript has many built in error messages, but you can also define your own errors in your programs. It is important to not forget that errors will happen in production. Error logs are kept in order to fix bugs in productions. Writing good error messages is critical for finding and fixing bugs in deployed applications.
 
 #### Writing good error messages
 A great error message should have the following features
 * a timestamp so that a timeline of the error can be made
-* a message about the problem that occured
+* a message about the problem that occurred
 * a message about the cause of the problem
 * a consistent format (so that it can be parsed and searched)
 * a severity level (low, med high) or (0 - 10)
@@ -50,8 +49,9 @@ let error = new Bug({problem: 'cannot create user', cause: 'requires password'})
 ```
 
 #### Handling Thrown Errors
-Javascript functions can throw errors. Throwing errors is a great way to force developers to use a function correctly, because unhandled errors will crash javascript and stop progam execution. The is a saying to describe this "Fail Fast". The idea is the sooner the code fails the sooner a developer will find their bugs and fix them. Though throwing errors is a useful feature of the langauge, programs like servers need a way to continue running inspite of bugs in the code. Javascript has a `try {} catch (error) {}` syntax for handling ths. 
-``` javascript 
+Javascript functions can throw errors. Throwing errors is a great way to force developers to use a function correctly, because un-handled errors will crash Javascript and stop program execution. This is often referred to as *failing fast*. The idea is that the sooner the code fails, the sooner a developer will find their bugs and fix them. Though throwing errors is a useful feature of the language itself, programs like servers need a way to continue running in spite of bugs in the code. Javascript has a `try {} catch (error) {}` syntax for handling this.
+
+``` javascript
 let userInput = '{'
 try {
  let data = JSON.parse(userInput)
@@ -63,14 +63,14 @@ try {
 
 #### Error Cheat Sheet
 | Type |  Reason |
-| --- | --- | 
+| --- | --- |
 | Error | generic error |
-| ReferenceError | an attempt was made to access a variable that is not defiend |
+| ReferenceError | an attempt was made to access a variable that is not defined |
 | SyntaxError | the javascript is not valid |
 | TypeError | a provided argument was no the allowable type |
-| SystemError | a NodeJS error that occurs when a system error has occured | 
+| SystemError | a NodeJS error that occurs when a system error has occurred |
 
-###### System Error Cheat Sheet 
+###### System Error Cheat Sheet
 * `EACCESS` - an attempt to access a file without the right permissions
 * `EADDRINUSE` - an attempt to start a server on a PORT that is already in use
 * `ECONNREFUSED` - a connection was deliberately refused by the target machine
@@ -84,43 +84,44 @@ try {
 * `EPERM` - an attempt to do something that you currently don't have permissions to do
 * `EPIPE` - an attempt to write data to a connection that had been closed
 
-## Context 
-By default when a Javascript function belongs to an object, it is called a method. The object the method belongs to is called the methods **context**. In a function the keyword `this` points to the it's context. 
+## Context
+By default, when a Javascript function belongs to an object, it is called a method. The object the method belongs to is called the methods **context**. In a function, the keyword `this` points to it's context.
 
-A functions context can be reassigned using the function methods `call`, `apply` and `bind`. Arrow functions inherit their parrent context, and cannot use call, apply, and bind.
+A functions context can be reassigned using the function methods `call`, `apply` and `bind`. Arrow functions inherit their parent context, and cannot use call, apply, and bind.
 
-#### Call 
-`call` is a function method that invokes the function with a specified context and comma seporated arguments
-  
+#### Call
+`call` is a function method that invokes a function with a specified context and comma separated arguments
+
 ``` javascript
-Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpperCase(), '') 
+Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpperCase(), '')
 ```
-#### Apply 
-`apply` is a function method that invokes the function with a specified context and an array of arguments
+#### Apply
+`apply` is a function method that invokes a function with a specified context and an array of arguments
 
 ``` javascript
 let args = [(result, char) => result + char.toUpperCase(), '']
-Array.prototype.reduce.apply('hello world', args) 
+Array.prototype.reduce.apply('hello world', args)
 ```
-#### Bind 
-`bind` is a function method that returns a new function with specified conttext and comma seporated default args
+#### Bind
+`bind` is a function method that returns a new function with specified context and comma separated default args
+
 ``` javascript
-// define a generic dom mutation function
+// define a generic DOM mutation function
 function childrenSet(...children){
   this.innerHTML = children.join(' ')
 }
 
-// reset the dom using childrenSet and call
+// reset the DOM using childrenSet and call
 childrenSet.call(document.body, '<div id="logo"></div>', '<div id="warning"></div>')
 
-// create dom mutation helpers using bind 
+// create DOM mutation helpers using bind
 const bodyClear = childrenSet.bind(document.body)
 const logoGet = () => document.getElementById('logo')
 const warningGet = () => document.getElementById('warning')
 const logoSet = childrenSet.bind(logoGet(), 'code fellows')
 const warningSet = childrenSet.bind(warningGet(), 'WARNING:')
 
-// use the dom mutation helpers
+// use the DOM mutation helpers
 logoSet()
 warningSet('password is required')
 

@@ -1,55 +1,21 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Trees
-====
+![cf](http://i.imgur.com/7v5ASc8.png) 30: Trees
+===
 
-## To Submit this Assignment
-  * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+## Learning Objectives
+* Students will learn about the tree data structure
 
-## Requirements  
-#### Configuration  
-  <!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include  
-  * **README.md** -- with a documentation about your lab
-  * **.gitignore** -- with a robust .gitignore
-  * **.eslintrc** -- with the class .eslintrc file
-  * **.eslintignore** -- with the class .eslintignore
-  * **.package.json** -- with all dependencies and dev-dependencies
-  * **lib/** -- directory for holding your programs helper modules
-  * **test/** -- directory for holding your programs unit and integration tests
+## What is a Tree?
+![trees](https://s3-us-west-2.amazonaws.com/s.cdpn.io/154088/Screen%20Shot%202017-03-30%20at%204.47.30%20PM.png)
 
-#### Testing  
-  * write at least three test assertions for each constructor method
-  * organize your tests into appropriate describe/it blocks for test output readability
+Trees are a widely used data structure that simulate a hierarchical "tree" structure. These data structures contain a **root**, which may or may not contain a series of child sub-trees. They can also be defined recursively as a collection of nodes, which starts at the root node and each node is a data structure consisting of a value and an array of references to any child nodes. Trees are also considered to be a directed, acyclic, connected graph.
 
-####  Documentation  
-  * in your README, write documentation for you data structures
-  * your documentation should includes code block usage examples
-  * provide instructions for:
-    * installing and using your data structure
-    * accessing each method
-    * running your tests
+## Breaking Down A Tree
+  * **root:** - the top node in a tree
+  * **child:** - a node that's a direct sub-tree of another node
+  * **siblings:** - a group of nodes with the same parent
+  * **leaf:** - a node with node children
 
-#### Feature Tasks  
-* implement a TreeNode constructor
-  * implement the TreeNode's children using your SinglyLinkedList constructor
-* implement the following prototype methods
-  * `appendChild(node)` append an instance of a TreeNode to the list
-  * `removeChild(node)` should take a reference to node as an argument and remove any child that is a reference to that node and  should return a boolean success value
-  * `find(value)` should iterate over all child nodes using a breadth first traversal and return the first node that has that value, it should return null if a node with the value is not found
-  * `toString()` should iterate over all child nodes using a depth first traversal and concatenate their values separated by newlines in to a string
-
-## Bonus Points:
-  * 2pts
-  * implement a `.map(cb)` that clones the tree and uses the callback to alter each value
-  * implement a `.copy()` that uses map to clone the tree with no modification
-
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 3pts
-  * Completed FP methods: 2pts
-  * Big-O notation: 2pts
+## Useful Implementations of Trees**
+  * the DOM
+  * a computer file system
+  * sorting and searching
