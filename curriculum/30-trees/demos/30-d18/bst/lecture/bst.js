@@ -77,19 +77,21 @@ const BstNode = module.exports = class {
     }
   }
 
-  insert(node, balance=false) {
+  insert(node, balance=true) {
     if(!node instanceof BstNode) throw new Error('VALIDATION ERROR: Value must be BstNode')
     if(node.key === this.key) throw new Error('VALIDATION ERROR: Value must be unique')
     if(node.key > this.key) {
       if(!this.right) {
         this.right = node
         this.right.parent = this
-      } else this.right.insert(node)
+        if(balance) this.right.selfBalance()
+      } else this.right.insert(node, balance)
     } else if(node.key < this.key) {
       if(!this.left) {
         this.left = node
         this.left.parent = this
-      } else this.left.insert(node)
+        if(balance) this.left.selfBalance()
+      } else this.left.insert(node, balance)
     }
     return 
   }
@@ -117,20 +119,46 @@ const BstNode = module.exports = class {
     return leftDepth - rightDepth
   }
 
-  // isLeft() {
-  //  // Do I need this?
-  // }
-
   rotateRight() {
+    let pivot = this.left
+    if(!pivot) return
 
+    
   }
 
   rotateLeft() {
+    let pivot = this.right
+    if(!pivot) return
+    // [this.val, pivot.val] = [pivot.val, this.val]
+    [this.key, pivot.key] = [pivot.key, this.key]
+    this.right = pivot.right
 
+    if(this.right) this.right.parent = this
+    pivot.right = pivot.left
+
+    if(pivot.right) pivot.right.parent = pivot
+    pivot.left = this.left
+
+    if(pivot.left) pivot.left.parent = pivot
+    [this.left, pivot.parent] = [pivot, this]
   }
 
   selfBalance() {
-    
+    let balance = this.isBalanced()
+    console.log('balance', balance)
+    if(balance === 2) {
+      if(this.left.isBalanced() <= -1) this.left.rotateLeft()
+      this.rotateRight()
+      if(this.parent) this.parent.selfBalance()
+    } else if(balance === -2) {
+      if(this.right.isBalanced() >= 1) this.right.rotateRight()
+      this.rotateLeft()
+      if(this.parent) this.parent.selfBalance()
+    } 
+    else {
+      if(this.parent) this.parent.selfBalance()
+      console.log('parent', this.parent)
+    }
   }
 
   getDotInfo() {
@@ -148,4 +176,11 @@ const BstNode = module.exports = class {
   treeify() {
     return Viz(this.getDotInfo())
   }
+}
+
+function compareTrees(bstOne, bstTwo) {
+  if(!!bstOne !== !!bstTwo) return false
+  if(bstOne.left && bstTwo.left) compareTrees(bstOne.left, bstTwo.left)
+  if(bstOne.right && bstTwo.right) compareTrees(bstOne.right, bstTwo.right)
+  return true
 }

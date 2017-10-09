@@ -41,7 +41,6 @@ export const childCreateRequest = child => dispatch => {
 }
 
 export const childDeleteRequest = child => dispatch => {
-  console.log(typeof child._id)
   return superagent.delete(`${__API_URL__}/api/child/${child._id}`)
   .then(res => {
     dispatch(childDelete(child))
