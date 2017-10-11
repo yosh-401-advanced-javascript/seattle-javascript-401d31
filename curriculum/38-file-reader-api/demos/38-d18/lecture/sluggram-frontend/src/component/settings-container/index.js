@@ -7,7 +7,7 @@ class SettingsContainer extends React.Component {
   componentWillMount() {
     this.props.profileFetch()
   }
-
+  
   render() {
     return (
       <div className="settings-container">
@@ -19,7 +19,7 @@ class SettingsContainer extends React.Component {
               onComplete={this.props.profileCreate}/>
           </div>
           :
-          undefined // look at props and redirect with component history to last page
+          undefined
         }
       </div>
     )
