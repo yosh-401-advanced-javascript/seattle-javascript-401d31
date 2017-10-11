@@ -2,22 +2,21 @@
 ===
 
 ## Learning Objectives
-* Students will be able to use and write express middleware
-* Students will learn about Cross Site Origin Resoruce Scripting (CORS)
-* Students will be able to implamnet CORS on an HTTP server
+* Students will be able to create and use Express middlewar
+* Students will learn about Cross Site Origin Resource Scripting (CORS)
+* Students will be able to implement CORS on an HTTP server
 
 ## Resources
 * Skim [morgan docs](https://github.com/expressjs/morgan)
 * Skim [cors docs](https://github.com/expressjs/cors)
 * Skim [dotenv docs](https://github.com/motdotla/dotenv)
 
-## Express middleware 
-Express middleware are functions that have access to the request object, response object, and next. Middleware are chained together, and can effect the entire app or a single route. Middleware often process the request or application state and then modify request or respnse. Modifying the request and or response object is usful because future middleware and routes will have access to that information. Middlware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodys, logging, interacting with external APIs to send or retrive data, and much more. Any middleware can end the middleware chain by sending a response. 
+## Express middleware
+Express middleware are functions that have access to the request object, response object, and `next`. Middleware is chained together, and can effect the entire app or a single route. Middleware often processes the request or application state and then modifies the request or response. Modifying the request and/or response object is useful because future middleware and routes will have access to that information. Middleware use cases include parsing authorization and authentication, parsing json, xml, or mulitpart/form-data request bodies, logging, interacting with external APIs to send or retrieve data, and much more. Any middleware can end the middleware chain by sending a response.
 
-#### middleware example 
-If the function has an airty of 3, it will be treated as normal middlware.  
+#### middleware example  
 ``` javascript
-// parses the request body as JSON 
+// parses the request body as JSON
 // onSuccess the request will have a body and text properties
 // onFailure an error will be passed to the next error middleware
 module.exports = (req, res, next) => {
@@ -36,8 +35,7 @@ module.exports = (req, res, next) => {
 }
 ```
 
-#### error middlware example 
-If the function is defined with an airty of 4, it will be treated as error middleware.  
+#### error middlware example   
 ``` javascript
 // log errors and respond with 500 status code
 module.exports = (err, req, res, next) => {
@@ -47,15 +45,15 @@ module.exports = (err, req, res, next) => {
 ```
 
 ## CORS
-All Browsers follow the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) and have been designed to limit client access to HTTP servers that a client source is not being hosed on. Cross Site Origin Resource Scripting (CORS) is a mechanisum that clients and servers can implament so that browsers will know which HTTP requests an external script (script hosted on a different domain) is allowed to make. CORS use a set of headers on both the client request and server response to dictate to the browser what Access Controlls are in place. 
+All Browsers follow the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) and have been designed to limit client access to HTTP servers that a client source is not being hosed on. Cross Site Origin Resource Scripting (CORS) is a mechanism that clients and servers can implement so that browsers will know which HTTP requests an external script (script hosted on a different domain) is allowed to make. CORS use a set of headers on both the client request and server response to dictate to the browser what Access Controls are in place.
 
 #### Preflighted Requests
-Preflighted requests are HTTP requests sent using the OPTIONS method to the resource on the domain. Preflight requests are sent to gather information about the resource before making the actual request. Cross-Site requests are automaticly preflighted by the browser to make sure the actual request is valid to send.
+Preflighted requests are HTTP requests sent using the OPTIONS method to the resource on the domain. Preflight requests are sent to gather information about the resource before making the actual request. Cross-Site requests are automatically preflighted by the browser to make sure the actual request is valid to send.
 
 #### CORS Request Headers
-* The `Origin` header is required to be set on all CORS Requests. Its value should be the domain that the client is hosted on. 
-* The `Access-Control-Request-Method` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
-* The `Access-Control-Request-Headers` header is used in a pre-flight request to determine which types of request methods are available for a given URI path. 
+* The `Origin` header is required to be set on all CORS Requests. Its value should be the domain that the client is hosted on.
+* The `Access-Control-Request-Method` header is used in a pre-flight request to determine which types of request methods are available for a given URI path.
+* The `Access-Control-Request-Headers` header is used in a pre-flight request to determine which types of request methods are available for a given URI path.
 
 ###### Example CORS Preflight Request
 ```
@@ -85,5 +83,3 @@ Access-Control-Expose-Headers: App-Token
 Access-Control-Allow-Credentials: true
 Access-Control-Max-Age: 900000
 ```
-
- 
