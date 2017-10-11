@@ -11,7 +11,7 @@ class LandingContainer extends React.Component {
       this.props.login : 
       this.props.signup
     
-    let redirectToSettings = path => this.props.history.push(path)
+    let redirectToSettings = path => this.props.history.replace(path)
 
     return (
       <div>
