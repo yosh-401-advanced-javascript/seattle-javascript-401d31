@@ -44,7 +44,7 @@
 ### `/api/signup`
 * `POST` request
 * the client should pass the username and password in the body of the request
-* the server should respond with a token (generated using `jwt` and `findHash`
+* the server should respond with a token (generated using `jwt`)
 * the server should respond with **400 Bad Request** to a failed request
 
 ### `/api/signin`
