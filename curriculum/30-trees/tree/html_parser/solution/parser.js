@@ -12,7 +12,7 @@ module.exports = function (filePath) {
     .then(fileStr => fileStr.split('>'))
     .then(validHTML)
     .then(eleArray => buildTree(tree, eleArray))
-    .then(console.log)
+    .then(tree => console.log(tree.toString()))
     .catch(console.error)
 }
 

@@ -49,6 +49,19 @@ class BinaryTree {
       return this._contains(node.right, value);
     }
   }
+
+  toString() {
+    return this._toString(this.root);
+  }
+
+  _toString(node, indentation='') {
+    if (!node) {
+      return '';
+    }
+    return indentation + node.value + '\n' +
+      this._toString(node.left, indentation + '  ') +
+      this._toString(node.right, indentation + '  ');
+  }
 }
 
 module.exports = BinaryTree;
