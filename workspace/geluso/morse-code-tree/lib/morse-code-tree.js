@@ -19,7 +19,7 @@ class MorseCodeTree {
   encode(str) {
     return str.toLowerCase()
     .split('')
-    .map(this.encodeChar.bind(this))
+    .map(charr => this.encodeChar(charr))
     .filter(el => el)
     .join(' ');
   }
@@ -42,7 +42,7 @@ class MorseCodeTree {
   // a space seperates each character
   decode(str) {
     let codes = str.split(' ');
-    return codes.map(this.decodeChar.bind(this)).join('');
+    return codes.map(charr => this.decodeChar(charr)).join('');
   }
 
   // accepts a code representing one character.
