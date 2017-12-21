@@ -7,7 +7,7 @@ const fs = Promise.promisifyAll(require('fs'), { suffix: 'Prom' })
 module.exports = function (filePath) {
   let tree = new Tree()
 
-  fs.readFileProm(`${__dirname}/../data/${filePath}`)
+  fs.readFileProm(filePath)
     .then(fileData => fileData.toString().replace(/\s+/g, ''))
     .then(fileStr => fileStr.split('>'))
     .then(validHTML)
@@ -52,52 +52,3 @@ function buildTree(tree, elements) {
   return tree
 }
 
-
-
-// <!DOCTYPE html>
-// <html>
-//   <head>
-//     <title></title>
-//   </head>
-//   <body>
-//     <p></p>
-//   </body>
-// </html>
-//
-// === Parsed into the following ===
-//
-// {
-//   root: {
-//     data: 'html',
-//     type: 'element',
-//     children: [
-//       {
-//         data: 'head',
-//         type: 'element',
-//         children: [
-//           {
-//             data: 'title'
-//             type: 'element',
-//           }
-//         ]
-//       },
-//       {
-//         data: 'body',
-//         type: 'element',
-//         children: [
-//           {
-//             data: 'p',
-//             type: 'element',
-//             children: [
-//               {
-//                 data: 'sometext',
-//                 type: 'text'
-//                 children: []
-//               }
-//             ]
-//           }
-//         ]
-//       }
-//     ]
-//   }
-// }
