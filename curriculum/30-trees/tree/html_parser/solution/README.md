@@ -1,3 +1,5 @@
+This tiny HTML produces the following tree:
+
 ```
 <!DOCTYPE html>
 <html>
@@ -10,9 +12,7 @@
 </html>
 ```
 
-=== Parsed into the following ===
-
-```json
+```
 {
   root: {
     data: 'html',
