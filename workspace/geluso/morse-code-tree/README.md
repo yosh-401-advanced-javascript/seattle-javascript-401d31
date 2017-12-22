@@ -1,3 +1,22 @@
+![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) Morse Code Tree
+===
+
+## Submission Instructions
+* Work in a fork of this repository
+* Work in a branch on your fork
+* Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
+* Open a pull request to this repository
+* Submit on canvas a question and observation, how long you spent, and a link to your pull request
+
+## Configuration
+Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+* **README.md** - contains documentation
+* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file
+* **.eslintrc** - contains the course linter configuratoin
+* **.eslintignore** - contains the course linter ignore configuration
+* **lib/** - contains module definitions
+* **__test__/** - contains unit tests
+
 # Morse Code Tree
 Morse code stores letters, numbers and symbols in a tree. The short "bip bip
 booop" sounds Morse Code sounds like represent traversing the tree left or
