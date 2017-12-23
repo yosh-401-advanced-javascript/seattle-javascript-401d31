@@ -19,6 +19,7 @@ parameter, and the result as the second parameter callback(null, result)
 const fs = require('fs');
 
 function read(paths, cb) {
+  let numFinished = 0;
   let result = [];
 
   function handleDone(err, data, i) {
@@ -26,9 +27,11 @@ function read(paths, cb) {
       cb(err);
       return;
     }
+    console.log("FILE", i, "finished");
 
     result[i] = data.toString('utf-8');
-    if (result.length === paths.length) {
+    numFinished++;
+    if (numFinished === paths.length) {
       cb(null, result);
     }
   }
