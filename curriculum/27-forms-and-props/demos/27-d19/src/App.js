@@ -53,6 +53,10 @@ class App extends Component {
       this.setState({results: posts})
       this.setState({loading: false});
     })
+    .catch(()=> {
+      this.setState({results: []})
+      this.setState({loading: false});
+    });
   }
 }
 
