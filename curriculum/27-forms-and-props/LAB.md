@@ -47,7 +47,8 @@ App
 * should contain a number input for the user to limit the number of results to return 
   * the number must be less than 0 and greater than 100
 * `onSubmit` the form should make a request to reddit 
-  * it should make a get request to `http://reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
+  * it should make a get request to `http://www.reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
+    * **NOTE:** the `www` in `www.reddit.com` is very important here! You'll have CORS problems without it.
   * on success it should pass the results to the application state
   * on failure it should add a class to the form called error and turn the form's inputs borders red
 
