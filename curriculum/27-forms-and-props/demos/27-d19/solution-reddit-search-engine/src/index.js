@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
+import './styles/main.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import SearchForm from './components/SearchForm';
 import SearchResultList from './components/SearchResultList';
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props)
 
@@ -60,4 +61,4 @@ class App extends Component {
   }
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));

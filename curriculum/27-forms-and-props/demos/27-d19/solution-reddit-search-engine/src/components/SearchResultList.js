@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SearchResultList extends Component {
+class SearchResultList extends React.Component {
   noResults() {
     return <p>No results.</p>
   }
