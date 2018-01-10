@@ -15,7 +15,7 @@ class App extends React.Component {
 
   componentWillMount() {
     cowsay.list((err, cows) => {
-      let current = cows[0]
+      let current = 'stegosaurus'
       this.setState({cows, current})
     });
   }
