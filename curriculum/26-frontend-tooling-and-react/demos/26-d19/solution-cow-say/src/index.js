@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles/main.scss';
 import faker from 'faker';
 import cowsay from 'cowsay-browser';
 
-class App extends Component {
+class App extends React.Component {
   constructor() {
     super();
     this.state = {content: 'heeeelllooo', cows: []};
@@ -54,4 +55,4 @@ class App extends Component {
   }
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
