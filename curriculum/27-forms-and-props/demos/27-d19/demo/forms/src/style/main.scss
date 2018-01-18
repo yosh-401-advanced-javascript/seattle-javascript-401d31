@@ -11,3 +11,8 @@ body {
   padding: $language-spacing;
   margin: $language-spacing;
 }
+
+textarea {
+  width: 40em;
+  height: 12em;
+}
