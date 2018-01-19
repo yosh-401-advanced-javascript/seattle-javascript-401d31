@@ -1,6 +1,5 @@
 'use strict'
 
-const expect = require('expect');
 const SLL = require('../singly-linked-list');
 
 describe('testing singlyLinkedList', function(){

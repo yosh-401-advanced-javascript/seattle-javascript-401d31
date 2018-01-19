@@ -1,6 +1,5 @@
 'use strict'
 
-const expect = require('expect');
 const DLL = require('../doubly-linked-list');
 
 describe('testing singlyLinkedList', function(){
