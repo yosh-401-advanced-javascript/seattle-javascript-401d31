@@ -93,9 +93,10 @@ class LinkedList {
 
   find(value) {
     let current = this.root;
-    while(current){
-      if(current.value === value)
+    while(current) {
+      if(current.value === value) {
         return current;
+      }
       current = current.next;
     }
   }
@@ -172,13 +173,14 @@ class LinkedList {
     return this.getNth(2);
   }
 
-  fromArray(items) {
+  static fromArray(items) {
     // Build the list up backwards.
     // Start by creating the last node that points to nothing.
     // Then make the second-to-last node and point it
     // to the last node.
     // Then make another node and point it to the second-to-last node.
     // Do this until the list is entirely built up.
+
     let previousNode = null
     for (var i = items.length - 1; i >= 0; i--) {
       let value = items[i];
@@ -188,10 +190,9 @@ class LinkedList {
     }
 
     // set the root to point to the last node added at the front of the chain.
-    this.root = previousNode;
-
-    // return a reference to this list.
-    return this;
+    let list = new LinkedList();
+    list.root = previousNode;
+    return list
   }
 }
 
