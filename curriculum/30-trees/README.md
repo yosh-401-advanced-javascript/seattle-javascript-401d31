@@ -19,3 +19,6 @@ Trees are a widely used data structure that simulate a hierarchical "tree" struc
   * the DOM
   * a computer file system
   * sorting and searching
+
+## Reading
+https://khan4019.github.io/front-end-Interview-Questions/bst.html
