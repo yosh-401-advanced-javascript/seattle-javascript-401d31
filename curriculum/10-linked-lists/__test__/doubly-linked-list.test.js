@@ -1,160 +1,121 @@
 'use strict'
 
-const DLL = require('../doubly-linked-list');
+const {
+  DoublyLinkedList,
+  DoublyLinkedNode } = require('../doubly-linked-list');
 
 describe('testing singlyLinkedList', function(){
-  it('new DLL should create a node', () => {
-    let node = new DLL(4);
+  it('new DequeueNode should create a node', () => {
+    let node = new DoublyLinkedNode(4);
     expect(node.value).toEqual(4);
     expect(node.next).toEqual(null);
 
-    let head = new DLL(3, node);
+    let head = new DoublyLinkedNode(3, node);
     expect(head.value).toEqual(3);
     expect(head.next).toEqual(node);
   });
 
-  it('DLL.fromArray should return a linked list', () => {
-    let head = DLL.fromArray([1,2,3,4])
-    expect(head.next.prev).toEqual(head)
-    expect(head.value).toEqual(1)
-    expect(head.next.value).toEqual(2)
-    expect(head.next.next.value).toEqual(3)
-    expect(head.next.next.next.value).toEqual(4)
-  })
-
-  it('DLL.append(list, node, should append node to list', () => {
-    let head = new DLL(0);
-    DLL.append(head, new DLL(3));
-    DLL.append(head, new DLL(4));
-    expect(head.value).toEqual(0);
-    expect(head.next.value).toEqual(3);
-    expect(head.next.next.value).toEqual(4);
-  });
-
-  it('node.append(value), should append node to list', () => {
-    let head = new DLL(0)
-    head.append(new DLL(4)).append(new DLL(5))
-    expect(head.value).toEqual(0)
-    expect(head.next.value).toEqual(4)
-    expect(head.next.next.value).toEqual(5)
-  });
-
-  it('DLL.prepend(list, node) should return a list with node as head', () => {
-    let list = DLL.fromArray([0, 4, 5])
-    let head = new DLL(-1);
-    let result = DLL.prepend(list, head);
-    expect(result.value).toEqual(-1);
-    expect(result.next).toEqual(list);
-    expect(result).toEqual(head);
+  it('DoublyLinkedList.fromArray should return a linked list', () => {
+    let list = DoublyLinkedList.fromArray([1,2,3,4])
+    expect(list.root.next.prev).toEqual(list.root)
+    expect(list.root.value).toEqual(1)
+    expect(list.root.next.value).toEqual(2)
+    expect(list.root.next.next.value).toEqual(3)
+    expect(list.root.next.next.next.value).toEqual(4)
   })
 
   it('list.prepend(node) should return a list with node as head', () => {
-    let list = DLL.fromArray([0, 4, 5])
-    let head = new DLL(-1);
-    let result = list.prepend(head);
-    expect(result.value).toEqual(-1);
-    expect(result.next).toEqual(list);
-    expect(result).toEqual(head);
+    let list = DoublyLinkedList.fromArray([0, 4, 5])
+    list.prepend(-1);
+    expect(list.root.value).toEqual(-1);
+    expect(list.root.next.value).toEqual(0);
+    expect(list.root.next.prev).toEqual(list.root);
   })
 
-  it('DLL.remove(list, node) should remove a list with node as head', () => {
-    let removeMe = new DLL('delete')
-    let head = new DLL('head')
+  it('list.append(value), should append node to list', () => {
+    let list = new DoublyLinkedList()
+    list.append(4);
+    expect(list.root.value).toEqual(4);
+    expect(list.root.next).toEqual(null);
 
-    DLL.append(head, removeMe)
-    DLL.append(head, new DLL('first'))
-    expect(head.value).toEqual('head')
-    expect(head.next).toEqual(removeMe)
+    list.append(5);
+    expect(list.root.next.value).toEqual(5);
+    expect(list.root.next.next).toEqual(null);
 
-    DLL.remove(head, removeMe)
-    expect(head.value).toEqual('head')
-    expect(head.next.value).toEqual('first')
+    list.append(6);
+    expect(list.root.next.next.value).toEqual(6);
+    expect(list.root.next.next.next).toEqual(null);
   });
 
-  it('list.remove(node) should remove a list with node as head', () => {
-    let removeMe = new DLL('delete')
-    let head = new DLL('head')
+  it('list.remove(value) should remove from single-node list', () => {
+    let list = new DoublyLinkedList();
+    list.append(1);
+    list.remove(1);
 
-    head.append(removeMe).append(new DLL('first'))
-    expect(head.value).toEqual('head')
-    expect(head.next).toEqual(removeMe)
-
-    head.remove(removeMe)
-    expect(head.value).toEqual('head')
-    expect(head.next.value).toEqual('first')
+    expect(list.root).toBe(null);
+    expect(list.isEmpty()).toBe(true);
+    expect(list.size()).toBe(0);
   });
 
-  it('DLL.reverse(list) should reverse the list', () => {
-    let list = DLL.fromArray([4, 5, 6])
-    let result = DLL.reverse(list)
-    expect(result.value).toEqual(6)
-    expect(result.next.value).toEqual(5)
-    expect(result.next.next.value).toEqual(4)
-  })
+  if ('list.remove(value) should remove from middle of list', () => {
+    let list = DoublyLinkedList.fromArray([1,2,3,4,5]);
+    list.remove(3);
 
-  it('list.reverse() should reverse the list', () => {
-    let list = DLL.fromArray([4, 5, 6])
-    let result = list.reverse()
-    expect(result.value).toEqual(6)
-    expect(result.next.value).toEqual(5)
-    expect(result.next.next.value).toEqual(4)
-  })
+    expect(list.size()).toBe(4);
+    expect(list.root.next.value).toBe(2);
+    expect(list.root.next.next.value).toBe(4);
 
-  it('DLL.findMiddle(list) should return middle node', () => {
-    let list = DLL.fromArray([4, 5, 6])
-    let middle = DLL.findMiddle(list)
-    expect(middle.value).toEqual(5)
-
-    list = DLL.fromArray([3, 4, 5, 6])
-    middle = DLL.findMiddle(list)
-    expect(middle.value).toEqual(5)
+    let two = list.root.next.next;
+    let four = list.root.next.next.next;
+    expect(four.prev).toBe(two);
   });
+
+  if ('list.remove(value) should remove from end of list', () => {
+    let list = DoublyLinkedList.fromArray([1,2,3]);
+    list.remove(3);
+
+    expect(list.size()).toBe(4);
+    expect(list.root.next.value).toBe(2);
+    expect(list.root.next.next).toBe(null);
+  });
+
+
+  // it('list.reverse() should reverse the list', () => {
+  //   let list = DoublyLinkedList.fromArray([4, 5, 6])
+  //   let result = list.reverse()
+  //   expect(result.value).toEqual(6)
+  //   expect(result.next.value).toEqual(5)
+  //   expect(result.next.next.value).toEqual(4)
+  // })
 
   it('list.findMiddle() should return middle node', () => {
-    let list = DLL.fromArray([4, 5, 6])
-    let middle = list.findMiddle()
-    expect(middle.value).toEqual(5)
-    expect(middle.prev).toEqual(list)
+    let list = DoublyLinkedList.fromArray([4, 5, 6]);
+    let middle = list.findMiddle();
+    expect(middle.value).toEqual(5);
+    expect(middle.prev.value).toEqual(4);
+    expect(middle.next.value).toEqual(6);
 
-    list = DLL.fromArray([3, 4, 5, 6])
-    middle = list.findMiddle()
-    expect(middle.value).toEqual(5)
-    expect(middle.prev).toEqual(list.next)
+    list = DoublyLinkedList.fromArray([3, 4, 5, 6]);
+    middle = list.findMiddle();
+    expect(middle.value).toEqual(5);
+    expect(middle.prev.value).toEqual(4);
+    expect(middle.next.value).toEqual(6);
   });
 
   it('list.findLast() should return last node', () => {
-    let list = DLL.fromArray([3, 4, 5, 6]);
+    let list = DoublyLinkedList.fromArray([3, 4, 5, 6]);
     let result = list.findLast();
     expect(result.value).toEqual(6);
   });
 
-  it('DLL.findLast(list) should return last  node', () => {
-    let list = DLL.fromArray([3, 4, 5, 6]);
-    let result = DLL.findLast(list);
-    expect(result.value).toEqual(6);
-  });
-
-  it('DLL.findSecondFromLast(list) should return second to last node', () => {
-    let list = DLL.fromArray([3, 4, 5, 6]);
-    let result = DLL.findSecondFromLast(list);
-    expect(result.value).toEqual(5);
-  });
-
   it('list.findSecondFromLast() should return second to last node', () => {
-    let list = DLL.fromArray([3, 4, 5, 6]);
+    let list = DoublyLinkedList.fromArray([3, 4, 5, 6]);
     let result = list.findSecondFromLast();
     expect(result.value).toEqual(5);
   });
 
-  it('DLL.findThirdFromLast(list) should return third from lastnode', () => {
-    let list = DLL.fromArray([3, 4, 5, 6]);
-    let result = DLL.findThirdFromLast(list);
-    expect(result.value).toEqual(4);
-    expect(result.next.prev).toEqual(result)
-  });
-
   it('list.findThirdFromLast() should return third from last node', () => {
-    let list = DLL.fromArray([3, 4, 5, 6]);
+    let list = DoublyLinkedList.fromArray([3, 4, 5, 6]);
     let result = list.findThirdFromLast();
     expect(result.value).toEqual(4);
   });
