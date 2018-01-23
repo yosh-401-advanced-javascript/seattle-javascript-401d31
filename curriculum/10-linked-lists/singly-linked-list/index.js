@@ -12,6 +12,43 @@ class LinkedList {
     this.root = null
   }
 
+  static fromArray(items) {
+    // Build the list up backwards.
+    // Start by creating the last node that points to nothing.
+    // Then make the second-to-last node and point it
+    // to the last node.
+    // Then make another node and point it to the second-to-last node.
+    // Do this until the list is entirely built up.
+
+    let previousNode = null
+    for (var i = items.length - 1; i >= 0; i--) {
+      let value = items[i];
+      let node = new ListNode(value);
+      node.next = previousNode;
+      previousNode = node;
+    }
+
+    // set the root to point to the last node added at the front of the chain.
+    let list = new LinkedList();
+    list.root = previousNode;
+    return list
+  }
+
+  isEmpty() {
+    return this.root === null;
+  }
+
+  size() {
+    let size = 0;
+    let current = this.root;
+    while (current) {
+      current = current.next;
+      size++;
+    }
+
+    return size;
+  }
+
   append(value) {
     if (!this.root) {
       this.root = new ListNode(value);
@@ -102,20 +139,18 @@ class LinkedList {
   }
 
   reverse() {
-    let rest = this.root.next;
-    let result = this.root;
-    result.next = null;
+    let current = this.root;
+    let prev = null;
+    let next = null;
 
-    let _reverse = (node) => {
-      let rest = node.next
-      let temp = node 
-      temp.next = null
-      result = SLL.prepend(result, temp)
-      if(rest) _reverse(rest)
+    while (current !== null) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
     }
 
-    _reverse(rest);
-    return result;
+    this.root = prev;
   }
 
   getMiddle(list) {
@@ -129,17 +164,23 @@ class LinkedList {
   }
 
   getNthFromLast(n) {
-    var i;
-    let result = list;
-    let offset = list;
-    for(i=0; i<n && offset.next; i++) {
+    // make two pointers and start them at the front.
+    let offset = this.root;
+    let nBehind = this.root;
+
+    // move the offset pointer N nodes forward
+    for(let i=0; i < n; i++) {
       offset = offset.next 
     }
+
+    // now move both nodes forward simultaneously.
+    // When the offset node hits the end of the list
+    // the nBehind node will be N nodes from the end of the list.
     while(offset.next){
-      result = result.next;
       offset = offset.next
+      nBehind = nBehind.next;
     }
-    return result
+    return nBehind;
   }
 
   getLast() {
@@ -173,26 +214,52 @@ class LinkedList {
     return this.getNth(2);
   }
 
-  static fromArray(items) {
-    // Build the list up backwards.
-    // Start by creating the last node that points to nothing.
-    // Then make the second-to-last node and point it
-    // to the last node.
-    // Then make another node and point it to the second-to-last node.
-    // Do this until the list is entirely built up.
-
-    let previousNode = null
-    for (var i = items.length - 1; i >= 0; i--) {
-      let value = items[i];
-      let node = new ListNode(value);
-      node.next = previousNode;
-      previousNode = node;
+  map(cb) {
+    let list = new LinkedList();
+    if (this.isEmpty()) {
+      return list;
     }
 
-    // set the root to point to the last node added at the front of the chain.
+    let current = this.root;
+    let other = new ListNode(cb(this.root));
+    list.root = other;
+
+    while (current.next) {
+      current = current.next;
+      other.next = new ListNode(cb(current));
+      other = other.next;
+    }
+    return list;
+  }
+
+  filter(cb) {
     let list = new LinkedList();
-    list.root = previousNode;
-    return list
+    let current = this.root;
+    let other = null;
+    while (current) {
+      if (cb(current)) {
+        let node = new ListNode(current.value);
+        if (!list.root) {
+          list.root = node;
+          other = list.root;
+        } else {
+          other.next = node;
+          other = other.next;
+        }
+      }
+      current = current.next;
+    }
+    return list;
+  }
+
+  reduce(cb, initial) {
+    let accumulator = initial;
+    let current = this.root;
+    while (current) {
+      accumulator = cb(accumulator, current)
+      current = current.next;
+    }
+    return accumulator;
   }
 }
 

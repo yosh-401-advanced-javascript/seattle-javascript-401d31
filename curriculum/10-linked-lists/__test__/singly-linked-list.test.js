@@ -20,7 +20,34 @@ describe('testing LinkedList', function(){
     expect(list.root.next.value).toEqual(2)
     expect(list.root.next.next.value).toEqual(3)
     expect(list.root.next.next.next.value).toEqual(4)
-  })
+  });
+
+  test('list.isEmpty() should be true for empty list', () => {
+    let list = new LinkedList();
+    expect(list.isEmpty()).toEqual(true)
+  });
+
+  test('list.isEmpty() should be false for non-empty list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    expect(list.isEmpty()).toEqual(false)
+  });
+
+  test('list.size() should be 0 for empty list', () => {
+    let list = new LinkedList();
+    expect(list.size()).toEqual(0);
+  });
+
+  test('list.size() should be 1 for one-node list', () => {
+    let list = new LinkedList();
+    list.append(1);
+    expect(list.size()).toEqual(1)
+  });
+
+  test('list.size() should be correct for many node list.', () => {
+    let list = LinkedList.fromArray([1,2,3,4])
+    expect(list.size()).toEqual(4)
+  });
 
   test('append(value) should append node to empty list', () => {
     let list = new LinkedList();
@@ -82,21 +109,13 @@ describe('testing LinkedList', function(){
     expect(list.root.next.next.next.next.next.next.next.next).toBe(null);
   });
 
-  // test('SLL.reverse(list) should reverse the list', () => {
-  //   let list = SLL.fromArray([4, 5, 6]);
-  //   let result = SLL.reverse(list);
-  //   expect(result.value).toEqual(6);
-  //   expect(result.next.value).toEqual(5);
-  //   expect(result.next.next.value).toEqual(4);
-  // });
-
-  // test('list.reverse() should reverse the list', () => {
-  //   let list = SLL.fromArray([4, 5, 6]);
-  //   let result = list.reverse();
-  //   expect(result.value).toEqual(6);
-  //   expect(result.next.value).toEqual(5);
-  //   expect(result.next.next.value).toEqual(4);
-  // });
+  test('list.reverse() should reverse the list', () => {
+    let list = LinkedList.fromArray([4, 5, 6]);
+    list.reverse();
+    expect(list.root.value).toEqual(6);
+    expect(list.root.next.value).toEqual(5);
+    expect(list.root.next.next.value).toEqual(4);
+  });
 
   test('getMiddle() should return middle node', () => {
     let list = LinkedList.fromArray([4, 5, 6]);
@@ -108,89 +127,56 @@ describe('testing LinkedList', function(){
     expect(middle.value).toEqual(5);
   });
 
-  // test('list.getLast() should return last node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = list.getLast();
-  //   expect(result.value).toEqual(6);
-  // });
+  test('list.getLast() should return last node', () => {
+    let list = LinkedList.fromArray([3, 4, 5, 6]);
+    let result = list.getLast();
+    expect(result.value).toEqual(6);
+  });
 
-  // test('SLL.getLast(list) should return last  node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = SLL.getLast(list);
-  //   expect(result.value).toEqual(6);
-  // });
+  test('list.getSecondFromLast() should return second to last node', () => {
+    let list = LinkedList.fromArray([3, 4, 5, 6]);
+    let result = list.getSecondFromLast();
+    expect(result.value).toEqual(5);
+  });
 
-  // test('SLL.getSecondFromLast(list) should return second to last node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = SLL.getSecondFromLast(list);
-  //   expect(result.value).toEqual(5);
-  // });
+  test('list.getThirdFromLast() should return third from last node', () => {
+    let list = LinkedList.fromArray([3, 4, 5, 6]);
+    let result = list.getThirdFromLast();
+    expect(result.value).toEqual(4);
+  });
 
-  // test('list.getSecondFromLast() should return second to last node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = list.getSecondFromLast();
-  //   expect(result.value).toEqual(5);
-  // });
+  test('list.getNthFromLast() should return nth from last node', () => {
+    let list = LinkedList.fromArray([3, 4, 5, 6]);
+    let result = list.getNthFromLast(0);
+    expect(result.value).toEqual(6);
 
-  // test('SLL.getThirdFromLast(list) should return third from lastnode', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = SLL.getThirdFromLast(list);
-  //   expect(result.value).toEqual(4);
-  // });
+    result = list.getNthFromLast(1);
+    expect(result.value).toEqual(5);
 
-  // test('list.getThirdFromLast() should return third from last node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = list.getThirdFromLast();
-  //   expect(result.value).toEqual(4);
-  // });
+    result = list.getNthFromLast(2)
+    expect(result.value).toEqual(4);
 
-  // test('list.getNthFromLast() should return nth from last node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = list.getNthFromLast(0);
-  //   expect(result.value).toEqual(6);
+    result = list.getNthFromLast(3)
+    expect(result.value).toEqual(3);
+  });
 
-  //   result = list.getNthFromLast(1);
-  //   expect(result.value).toEqual(5);
+  test('list.map(doubler) should double a list', () => {
+    let list = LinkedList.fromArray([1,2,3]);
+    let result = list.map(n => n.value * 2);
+    expect(result).toEqual(LinkedList.fromArray([2,4,6]));
+  });
 
-  //   result = list.getNthFromLast(2)
-  //   expect(result.value).toEqual(4);
+  test('list.filter(isEven) should filter out odd numbers', () => {
+    let list = LinkedList.fromArray([1,2,3,4]);
+    let result = list.filter(n => n.value % 2 === 0);
+    expect(result).toEqual(LinkedList.fromArray([2,4]));
+  })
 
-  //   result = list.getNthFromLast(3)
-  //   expect(result.value).toEqual(3);
-  // });
-
-  // test('SLL.getNthFromLast(list, n) should return nth from last node', () => {
-  //   let list = SLL.fromArray([3, 4, 5, 6]);
-  //   let result = SLL.getNthFromLast(list, 0)
-  //   expect(result.value).toEqual(6);
-
-  //   result = SLL.getNthFromLast(list, 1);
-  //   expect(result.value).toEqual(5);
-
-  //   result = SLL.getNthFromLast(list, 2);
-  //   expect(result.value).toEqual(4);
-
-  //   result = SLL.getNthFromLast(list, 3);
-  //   expect(result.value).toEqual(3);
-  // });
-
-  // test('list.reduce(cb) should reduce list', () => {
-  //   let list = SLL.fromArray([1,2,3]);
-  //   let result = list.reduce((p, n) => p + n.value, 0);
-  //   expect(result).toEqual(6);
-  // });
-
-  // test('list.map(doubler) should double a list', () => {
-  //   let list = SLL.fromArray([1,2,3]);
-  //   let result = list.map(n => n.value * 2);
-  //   expect(result).toEqual(SLL.fromArray([2,4,6]));
-  // });
-
-  // test('list.filter(isEven) should filter out odd numbers', () => {
-  //   let list = SLL.fromArray([1,2,3,4]);
-  //   let result = list.filter(n => n.value % 2 === 0);
-  //   expect(result).toEqual(SLL.fromArray([2,4]));
-  // })
+  test('list.reduce(cb) should reduce list', () => {
+    let list = LinkedList.fromArray([1,2,3]);
+    let result = list.reduce((p, n) => p + n.value, 0);
+    expect(result).toEqual(6);
+  });
 
   test('list.find(value) return fist node containg value', () => {
     let list = LinkedList.fromArray([1,2,3,2,1]);
@@ -198,7 +184,7 @@ describe('testing LinkedList', function(){
     expect(list.root.next).toEqual(result);
   });
 
-  test('getNth shuold return the corect node', () => {
+  test('getNth should return the corect node', () => {
     let list = LinkedList.fromArray([1,2,3,4]);
     expect(list.getNth(0)).toEqual(list.root);
     expect(list.getNth(1)).toEqual(list.root.next);
