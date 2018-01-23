@@ -79,14 +79,29 @@ describe('testing singlyLinkedList', function(){
     expect(list.root.next.next).toBe(null);
   });
 
+  it('list.reverse() should reverse the list', () => {
+    let list = DoublyLinkedList.fromArray([4, 5, 6])
+    let result = list.reverse()
 
-  // it('list.reverse() should reverse the list', () => {
-  //   let list = DoublyLinkedList.fromArray([4, 5, 6])
-  //   let result = list.reverse()
-  //   expect(result.value).toEqual(6)
-  //   expect(result.next.value).toEqual(5)
-  //   expect(result.next.next.value).toEqual(4)
-  // })
+    let six = list.root
+    let five = list.root.next
+    let four = list.root.next.next
+
+    expect(six.next).toBe(five);
+    expect(six.prev).toBe(null);
+
+    expect(five.next).toBe(four);
+    expect(five.prev).toBe(six);
+
+    expect(four.next).toBe(null);
+    expect(four.prev).toBe(five);
+
+    expect(list.root.prev).toBe(null)
+    expect(list.root.value).toEqual(6)
+    expect(list.root.next.value).toEqual(5)
+    expect(list.root.next.next.value).toEqual(4)
+    expect(list.root.next.next.next).toBe(null)
+  })
 
   it('list.findMiddle() should return middle node', () => {
     let list = DoublyLinkedList.fromArray([4, 5, 6]);

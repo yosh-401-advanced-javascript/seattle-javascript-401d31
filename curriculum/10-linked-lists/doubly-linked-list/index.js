@@ -113,20 +113,26 @@ class DoublyLinkedList {
   }
 
   reverse() {
-    let rest = list.next;
-    let result = list;
-    result.next = null;
-
-    let _reverse = (list) => {
-      let rest = list.next
-      let temp = list 
-      temp.next = null
-      result = DLL.prepend(result, temp)
-      if(rest) _reverse(rest)
+    if (this.isEmpty()) {
+      return;
     }
 
-    _reverse(rest);
-    return result;
+    let current = this.root.next;
+    let reversed = this.root;
+    reversed.next = null;
+
+    while (current) {
+      let remaining = current.next;
+
+      current.next = reversed;
+      reversed.prev = current;
+      reversed = current;
+
+      current = remaining;
+    }
+
+    this.root = reversed;
+    this.root.prev = null;
   }
 
 
