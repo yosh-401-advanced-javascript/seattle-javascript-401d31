@@ -24,21 +24,3 @@ noteRouter.get('/api/notes/:id', (req, res, next) => {
   .then(note => res.json(note))
   .catch(next)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
