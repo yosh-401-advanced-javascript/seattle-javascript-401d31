@@ -12,6 +12,7 @@ module.exports = function(router) {
 
     if(req.params._id) {
       return Track.findById(req.params._id)
+      .populate('album')
       .then(track => res.status(200).json(track))
       .catch(err => errorHandler(err, res))
     }

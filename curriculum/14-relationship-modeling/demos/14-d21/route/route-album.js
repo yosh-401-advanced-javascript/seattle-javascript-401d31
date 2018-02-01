@@ -1,7 +1,7 @@
 'use strict'
 
 const Album = require('../model/album')
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser').json()
 const errorHandler = require('../lib/error-handler')
 
 module.exports = function(router) {

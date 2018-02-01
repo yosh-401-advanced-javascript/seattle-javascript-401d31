@@ -24,7 +24,7 @@ const Track = mongoose.Schema({
   "number": {type: Number},
   "artist": {type: String, required: true},
   "title": {type: String, required: true},
-  "album": {type: mongoose.Schema.Types.ObjectId, required: true},
+  "album": {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'album'},
 }, { timestamps: true })
 
 Track.pre('save', function(next) {
