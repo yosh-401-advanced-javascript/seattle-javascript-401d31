@@ -1,10 +1,12 @@
 'use strict'
 
-const Auth = require('../../model/auth')
 const faker = require('faker')
+const Auth = require('../../model/auth')
+const Gallery = require('../../model/gallery')
 
 const mocks = module.exports = {}
 mocks.auth = {}
+mocks.gallery = {}
 
 mocks.auth.createOne = function() {
   let result = {}
@@ -24,4 +26,20 @@ mocks.auth.createOne = function() {
   })
 }
 
+// mocks.gallery.createOne = function () {
+  // let result = {}
+
+  // return mocks.user.createOne()
+  //   .then(userData => result = userData)
+  //   .then(userData => {
+  //     return new Gallery({
+  //       name: faker.internet.domainWord(),
+  //       desc: faker.random.words(12),
+  //       userId: userData.user._id
+  //     }).save()
+  //   })
+  //   .then(gallery => result.gallery = gallery)
+// }
+
 mocks.auth.removeAll = () => Promise.all([Auth.remove()])
+mocks.gallery.removeAll = () => Promise.all([Gallery.remove()])

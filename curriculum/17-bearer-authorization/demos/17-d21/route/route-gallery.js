@@ -11,18 +11,18 @@ module.exports = function (router) {
     req.body.userId = req.user._id
 
     new Gallery(req.body).save()
-    .then(gallery => res.json(gallery))
+    .then(gallery => res.status(201).json(gallery))
     .catch(err => errorHandler(err, res))
   })
   .get(bearerAuth, (req, res) => {
     if(req.params._id) {
       return Gallery.findById(req.params._id)
-      .then(gallery => res.json(gallery))
+      .then(gallery => res.status(200).json(gallery))
       .catch(err => errorHandler(err, res))
     }
 
     Gallery.find()
-    .then(galleries => res.json(galleries.map(gal => gal._id)))
+    .then(galleries => res.status(200).json(galleries.map(gal => gal._id)))
     .catch(err => errorHandler(err, res))
   })
   .put(bearerAuth, bodyParser, (req, res) => {
