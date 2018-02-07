@@ -9,14 +9,14 @@ const ERROR_MESSAGE = 'Authorization Failed';
 
 
 module.exports = router => {
-  
+
   router.route('/gallery/:id?')
     .post(bearerAuthMiddleware,bodyParser,(request,response) => {
       // vinicio - do I have a user in my request?
       // vinicio - TODO: Add error checking
 
       request.body.userId = request.user._id;
-      console.log(request.user);
+      // console.log(request.user);
 
       return new Gallery(request.body).save()
         .then(createdGallery => response.status(201).json(createdGallery))
@@ -62,7 +62,7 @@ module.exports = router => {
         .then(gallery => {
           if(gallery.userId.toString() === request.user._id.toString())
             return gallery.remove();
-          
+
           return errorHandler(new Error(ERROR_MESSAGE),response);
         })
         .then(() => response.sendStatus(204))
