@@ -49,19 +49,19 @@ Photo.statics.upload = function(req) {
 }
 
 
-// Photo.methods.delete = function() {
-//   return new Promise((resolve, reject) => {
-//     let params = {
-//       Bucket: process.env.AWS_BUCKET,
-//       Key: this.objectKey,
-//     }
+Photo.methods.delete = function() {
+  return new Promise((resolve, reject) => {
+    let params = {
+      Bucket: process.env.AWS_BUCKET,
+      Key: this.objectKey,
+    }
 
-//     return awsS3.deleteProm(params)
-//     .then(this.remove)
-//     .then(resolve)
-//     .catch(reject)
-//   })
-// }
+    return awsS3.deleteProm(params)
+    .then(() => this.remove())
+    .then(resolve)
+    .catch(reject)
+  })
+}
 
 
 module.exports = mongoose.model('photo', Photo)
