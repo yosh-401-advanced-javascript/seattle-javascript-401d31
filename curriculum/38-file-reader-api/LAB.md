@@ -9,13 +9,11 @@
   * Submit a link to your pull request on canvas
   * Submit a question, observation, and how long you spent on canvas  
 
-
 ## Requirements  
 #### backend setup
 * use [sluggram](http://github.com/slugbyte/sluggram) 
 * or use your mid 401 project
 
- 
 #### Feature Tasks 
 * Create a SettingsContainer
   * give the user the ablity to create or update their profile
@@ -30,5 +28,5 @@
 ## Stretch Goals
 * Create full crud for two resources 
 
-####  Documentation  
+#### Documentation  
 Write a description of the project in your README.md

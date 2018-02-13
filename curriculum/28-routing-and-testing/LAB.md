@@ -30,7 +30,6 @@ Your lab directory must include
 * **src/components/note-item/index.js** -- containing your NoteItem component
 * **src/style** -- containing your sass
 * **src/style/main.scss** -- for importing and including reset and base
-
  
 #### Feature Tasks 
 Create the following components and structure them according to the following diagram.  
@@ -51,7 +50,7 @@ App
 * The Landing component should display a brief description of the notes app
 
 ###### Dashboard Component 
-* The Dashboard component should manage the entire **application state**. 
+* The Dashboard component should manage the entire **application state**
 * The state should contain a notes array
 * It should have a bound `addNote(note)` method that adds a note to `state.notes`
   * each note that gets added should have the following data
@@ -79,5 +78,5 @@ App
 * Test NoteCreateForm
   * Test the initial state
 
-####  Documentation  
+#### Documentation  
 Write a description of the project in your README.md

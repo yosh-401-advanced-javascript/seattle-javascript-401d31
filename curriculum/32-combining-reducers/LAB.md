@@ -2,8 +2,12 @@
 ===
 
 ## Submission Instructions
-  * continue working from lab-31
-  * make a **new branch** and create a **new pull request** and submit a link on canvas
+  * Work in a fork of this repository
+  * Work in a branch on your fork
+  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
+  * Submit a pull request to this repository
+  * Submit a link to your pull request on canvas
+  * Submit a question, observation, and how long you spent on canvas 
 
 ## Requirements  
 #### Feature Tasks 
@@ -20,7 +24,6 @@
 ###### app reducer
 * export a reducer that holds the entire app state from `reducer/index.js`
 * create a reducer that will combine your categories reducer and expenses reducer
-
 
 ###### expenses reducer
 * create a category reducer in your your reducer directory
@@ -56,7 +59,6 @@ App
 * add an ExpenseForm to your category item that enables the user to create expenses on your app state
 * display a list of all the ExpenseItems belonging to the category
 
-
 ##### ExpenseForm Component 
 * should have an `onComplete` prop that will be invoked with the form state onSubmit
 * should support an `expense` prop that will both set the initial form state, and update the state in the hook on `componentWillReceiveProps()`
@@ -72,5 +74,5 @@ App
 * Test all of your action creators
 * Test each reducer used in your combineReducers
 
-####  Documentation  
+#### Documentation  
 Write a description of the project in your README.md

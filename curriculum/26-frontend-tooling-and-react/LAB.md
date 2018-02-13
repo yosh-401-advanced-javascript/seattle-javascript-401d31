@@ -44,8 +44,8 @@ Create the following component
     * `onClick` the button should generate new content on the app state using cowsay and faker
   * A pre tag that displays the App state (content)
 
-####  Documentation  
-Write a description of the project in your README.md
-
 #### Stretch Goal 
 * add a select menu that enables you to change the type of cowfile currently being used
+
+#### Documentation  
+Write a description of the project in your README.md
