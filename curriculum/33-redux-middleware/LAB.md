@@ -1,10 +1,9 @@
-![cf](https://i.imgur.com/7v5ASc8.png) 28: Redux Middleware
+![cf](http://i.imgur.com/7v5ASc8.png) 33: Budget Tracker
 ======
 
 ## Submission Instructions
-* continue working on the fork you created from lab 26
-* open a **new branch** for today's assignment
-* upon completion, create a **new pull request** in github
+* continue working on the fork you created from lab-31
+* make a **new branch** and create a **new pull request** on github
 * submit a link to your PR in canvas
 
 ## Learning Objectives
@@ -21,9 +20,8 @@
 * `src/main.js`
 * `src/style`
 * `src/style/main.scss`
-
-## Requirements  
+ 
 #### Feature Tasks
-* complete all remaining lab 26 and 27 feature tasks
+* complete all remaining lab-31 and 32 feature tasks
 * add a reporter middleware to your application's redux store
 * add validation to your redux reducers

@@ -1,23 +1,25 @@
-401 JS --  Lab 42 OAUTH FRONTEND
+![cf](http://i.imgur.com/7v5ASc8.png) 42: OAuth Continued
 ===
 
 ## Submission Instructions
-* continue working from lab 42
+* continue working from lab-41
+* make a **new branch** and create a **new pull request** and submit a link on canvas
+  
   
 ## Learning Objectives  
-* Students will learn to add google OAUTH to a react/redux app
+* Students will learn to add Google OAuth to a react/redux app
 
 ## Requirements  
 #### Configuration  
-* **README.md** -- with a documention about your lab
+* **README.md** -- with documention about your lab
 * **.babelrc** -- with all dependencies and dev-dependencies 
-* **.eslintrc** -- with the class .eslintrc file
+* **.eslintrc.json** -- with the class .eslintrc.json file
 * **.gitignore** -- with a robust gitignore
 * **.eslintignore** -- with the class .eslintignore
 * **yarn.lock** -- with the yarn lockfile
 * **package.json** -- with all dependencies and dev-dependencies 
 * **webpack.config.js** -- with webpack config
-* **src/** -- containing the front end code
+* **src/** -- containing the frontend code
 * **src/main.js** -- renders the app
 * **src/style** -- containing your sass
 * **src/style/main.scss** -- for importing and including reset and base
@@ -27,12 +29,13 @@
 * **src/style/_layout.scss** -- layout styles
 
 #### Feature Tasks  
+
 #### backend
 * no new backend routes
 
 #### frontend 
 * create a token reducer for managing your token
-* create an auth acicons file for making signup and login requests, storing, and clearing the token in the app state. 
+* create an auth actions file for making signup and login requests, storing, and clearing the token in the app state. 
   * remember to remove the cookie when the token is removed from the app state
 * create at least the folowing two routes
   * `/landing` - display a login with google anchor

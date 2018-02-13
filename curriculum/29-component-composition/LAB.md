@@ -1,22 +1,21 @@
-401 JS --  Lab 29 Todo
+![cf](http://i.imgur.com/7v5ASc8.png) 29: To Do
 ===
 
 ## Submission Instructions
-  * continue working from lab 28
-  * open a **new branch** and create **new pull request** and submit a link on canvas
+  * continue working from lab-28
+  * make a **new branch** and create a **new pull request** and submit a link on canvas
   
 ## Learning Objectives  
-* Students will learn to about composition vs inheritance
+* Students will learn about composition vs inheritance
 * Students will learn to compose react components using props
 
 ## Requirements  
  
 #### Feature Tasks 
-Refactor and add the following components. 
+Refactor and add the following components 
 
 ###### NoteUpdateForm 
-Create a NoteUpdateForm component that inherits a note through props and on submit is able to
-update the App's state with an updated note.
+Create a NoteUpdateForm component that inherits a note through props and onSubmit is able to update the App's state with an updated note.
 
 ###### Refactor the NoteItem to have the following behavior
 If the user double clicks on the notes content it should switch to the Edit View  
@@ -25,7 +24,7 @@ If the user double clicks on the notes content it should switch to the Edit View
   * Display a delete button that will remove the Note from the application's state
 * Edit View 
   * Show the NoteUpdateForm and a Cancel Button
-  * onNoteUpdateForm Submit or click of the cancel button it should switch back to the default view
+    * onSubmit or click of the cancel button in NoteUpdateForm it should switch back to the default view
 
 ###### App Component Tree
 Your components should be nested in the following layout  
@@ -42,7 +41,7 @@ App
   * Test your onChange handler
   * Test your onSubmit handler
 * Test NoteItem
-  * Test the NoteItem's ability defined to remove a note from the App's state
+  * Test the NoteItem's ability to remove a note from the App's state
 * Test NoteUpdateForm
   * Test the NoteUpdatesForm's ability to update a note in the App's state
 

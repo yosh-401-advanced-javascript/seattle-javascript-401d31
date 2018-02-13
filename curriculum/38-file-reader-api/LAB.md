@@ -1,4 +1,4 @@
-401 JS --  Lab 38 photo uploads
+![cf](http://i.imgur.com/7v5ASc8.png) 38: Photo Uploads
 ===
 
 ## Submission Instructions
@@ -18,7 +18,7 @@
  
 #### Feature Tasks 
 * Create a SettingsContainer
-  * give the user the ablity to create or update thier profile
+  * give the user the ablity to create or update their profile
   
 * Create a DashboardContainer
   * give the user the abilty to create, read, update and destroy photos
@@ -27,7 +27,7 @@
 * Test your redux reducers 
 * Test your util methods
 
-## Bonus 2pts
+## Stretch Goals
 * Create full crud for two resources 
 
 ####  Documentation  

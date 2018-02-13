@@ -1,4 +1,4 @@
-401 JS --  Lab 27 Reddit Search Engine
+![cf](http://i.imgur.com/7v5ASc8.png) 27: Reddit Search Engine
 ===
 
 ## Submission Instructions
@@ -17,21 +17,21 @@
 ## Requirements  
 #### Configuration  
 Your lab directory must include  
-* **README.md** -- with a documention about your lab
+* **README.md** -- with documentation about your lab
 * **.gitignore** -- with a robust gitignore
-* **.eslintrc** -- with the class .eslintrc file
+* **.eslintrc.json** -- with the class .eslintrc.json file
 * **.eslintignore** -- with the class .eslintignore
 * **.babelrc** -- with all dependencies and dev-dependencies 
 * **package.json** -- with all dependencies and dev-dependencies 
 * **yarn.lock** -- with the yarn lockfile
 * **webpack.config.js** -- with webpack config
-* **src/** -- containing the front end code
+* **src/** -- containing the frontend code
 * **src/main.js** -- containing the entire app
 * **src/style** -- containing your sass
-* **src/style/main.scss** -- containing the front end code
+* **src/style/main.scss** -- containing the frontend code
  
 #### Feature Tasks 
-Create the following components and structure them according to the following diagram.  
+Create the following components and structure them according to the following diagram 
 ```
 App
   SearchForm
@@ -45,17 +45,16 @@ App
 ###### SearchForm Component
 * should contain a text input for the user to supply a reddit board to look up
 * should contain a number input for the user to limit the number of results to return 
-  * the number must be less than 0 and greater than 100
-* `onSubmit` the form should make a request to reddit 
-  * it should make a get request to `http://www.reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
-    * **NOTE:** the `www` in `www.reddit.com` is very important here! You'll have CORS problems without it.
+  * the number must be more than 0 and less than 100
+  * `onSubmit` the form should make a request to reddit 
+  * it should make a get request to `http://reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
   * on success it should pass the results to the application state
   * on failure it should add a class to the form called error and turn the form's inputs borders red
 
 ###### SearchResultList Component
-* Should inerrit all search results through props
-* This component does not need to have its own state!
-* If there are topics in the application state it should display the unordered list 
+* Should inherit all search results through props
+* This component does not need to have its own state
+* If there are topics in the application state it should display an unordered list 
 * Each list item in the unordered list should contain the following
   * an anchor tag with a href to the topic.url 
     * inside the anchor a heading tag with the topic.title 
