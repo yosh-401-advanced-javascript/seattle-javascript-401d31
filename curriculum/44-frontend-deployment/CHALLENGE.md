@@ -2,9 +2,19 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Implement an algorithm to print all valid (properly opened and closed) combinations of n pairs of braces
+
+example:
+```javascript
+Input: 3
+
+Output: 
+{{{}}} 
+{{}{}}
+{{}}{} 
+{}{{}}
+{}{}{}
+```
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

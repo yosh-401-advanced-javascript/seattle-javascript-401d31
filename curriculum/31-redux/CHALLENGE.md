@@ -2,9 +2,9 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Write a function that calculates the height of a Binary Search Tree
+* it should take in a tree
+* it should return an integer
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

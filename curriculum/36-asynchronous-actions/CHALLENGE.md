@@ -2,11 +2,11 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Create a BST constructor using ES6 (with insert and remove methods)
+Create a HashTable constructor (with _hash, set, get, and remove methods)
+* Each Bucket Index should store collisions in a BST
 
-Write at least four tests for this function
+Unit test each method of your constructors
 * your tests should cover basic (*expected*) functionality
 * your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
 

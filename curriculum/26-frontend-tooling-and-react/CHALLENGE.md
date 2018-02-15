@@ -2,9 +2,8 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Write a function that performs depth first traversal using whichever order you prefer on a Binary Tree:
+* print the values of the tree
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

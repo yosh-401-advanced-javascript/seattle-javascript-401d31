@@ -2,9 +2,10 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Write a function that finds the closest element in a Binary Search Tree.
+* given a binary search tree and target node K
+* find the node with minimum absolute difference with given target value K
+* return the node with the value that has the minimum absolute difference
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

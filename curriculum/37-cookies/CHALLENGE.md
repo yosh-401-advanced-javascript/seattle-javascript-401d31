@@ -2,9 +2,9 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Given a list of strings `words` representing an English Dictionary, find the longest word in `words` that can be built one character at a time by other words in `words`.
+* if there is more than one possible answer, return the longest word with the smallest lexicographical order
+* if there is no answer return the empty string
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

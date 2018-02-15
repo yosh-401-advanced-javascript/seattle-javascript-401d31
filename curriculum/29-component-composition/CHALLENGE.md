@@ -2,9 +2,9 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Write a function that compares two Binary Trees in any traversal as long as the nodes are the same in both traversals:
+* if the nodes are the same return true
+* if they are not the same return false
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

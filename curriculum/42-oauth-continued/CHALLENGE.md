@@ -2,13 +2,10 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
-
-Write at least four tests for this function
-* your tests should cover basic (*expected*) functionality
-* your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
+Create a MaxHeap prototype.
+* Research and implement Bubble Sort, Insertion Sort, or Selection Sort
+* your function should take an integer array as a single arg and sort it in place (mutate the array)
+* you may use helper functions if you need extra arguments in your sorting procedure
 
 ## Submission Instructions
 

@@ -1,10 +1,10 @@
-![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 39: Whiteboard Challenge
+![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 35: Whiteboard Challenge
 ===
 
 ## Requirements
-Some HashTable problem that I have not created yet because HashTable Problems are hard to find
-*
-*
+Use a Hash Table to remove duplicates from an array:
+* 
+* 
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

@@ -2,9 +2,21 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+You're given strings `J` representing the types of stones that are jewels, and `S` representing the stones you have.  Each character in `S` is a type of stone you have.  You want to know how many of the stones you have are also jewels.
+
+The letters in `J` are guaranteed to be distinct, and all characters in `J` and `S` are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+example1:
+```javascript
+Input: J = "aA", S = "aAAbbbb"
+Output: 3
+```
+
+example2:
+```javascript
+Input: J = "z", S = "ZZ"
+Output: 0
+```
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

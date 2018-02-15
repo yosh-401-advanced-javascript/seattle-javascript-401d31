@@ -2,9 +2,16 @@
 ===
 
 ## Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
-* the highest value in the array
-* the second highest value in the array
+Write a method to sort an array of strings so that all the anagrams are next to each other
+
+Note - we can use a hash table to map the sorted version of a word to a list of its anagrams
+
+example:
+```javascript
+acre : {acre, race, care}
+```
+
+Once all the words have been grouped into lists by anagram we can put them back into the array. 
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality
