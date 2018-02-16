@@ -1,31 +1,18 @@
 # Class 01
 
 ## How do I prep for today?
-Skim through past course demo to prep for explaining commonJS modules. Review the orientation slide deck.
+It's day 1!  Having a good handle on how much time you'll need to discuss each topic, and the way that you'll transition into subsequent topics, is a key factor of getting consistency and efficency into your daily lecture format.  Be sure to follow the same general flow throughout the course and feel free to create a checklist (in GitHub or on the whiteboard) to outline the content of the day.
 
-##### Brian - d22:
-* for this day, it's important to be really comfortable creating basic NodeJS modules, methods on those modules, and the ability to work with basic testing constructs
+You'll want to have a solid level of comfort with the NodeJS `module.exports` pattern, how to export a single function vs multiple methods on a custom module, and how to test a custom module and the methods you've added to it. The only third party `npm` package you'll be working with on this day is `jest` - let students know that you'll start talking about the `npm` ecosystem, `package.json`, `npm` scripts, etc the following lecture.
  
 ## What changed from yesterday? 
-N/A
-
-##### Brian - d22:
-* nothing - it's day 1!
+N/A - it's the first day!
 
 ## What might students struggle with today? 
-Students will struggle with the command line and testing. Some students will have trouble setting up NVM.
-
-##### Brian - d22:
-* students are going to likely have trouble getting used to the syntax of creating basic, but meaningful, tests.  Be sure to emphasize all components of creating a series of tests for a specific module - I often start this process by diagramming a standard test flow on the whiteboard.
+Students will struggle with getting acclimated to the course assignment workflow and basic computer setup (from the 401 prework).  Some students will not have Slack, NodeJS, NVM, or Homebrew (for MacOS) properly installed - be prepared to address these issues first thing in lab. Some students (primarily those that have tested into 401) may need assitance with Canvas configuration and setup.
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-Some students will need help setting up slack and canvas. Students also will not follow lab instructions correctly. Students will need help finding the you tube channel.
-
-##### Brian - d22:
-* some students will not have NodeJS or `nvm` properly installed - be ready to combat this during the first few hours of lab - sometimes the best approach is to uninstall their current versions and do a fresh reinstall
+Many students will not follow the lab instructions correctly. You'll want your TA's to do regular check-in's during the first couple of hours of lab to make sure everyone is on the right track. Students may also have a hard time finding daily course resources, like the YouTube playlist and course repository - be sure to put those links in Slack and pin them so that students will always be able to access them quickly.
 
 ## General comments
-Start the day with ice breakers to learn student names, and introduce your self.
-
-##### Brian - d22:
-* to second the above comment - introductions - be sure to introduce yourself, the TAs, and have each student introduce themselves and their "why" behind taking 401JS
+Start the day off with instructor/student/TA introductions and, depending on the size of the class, take the time to personalize each student's "who am i and why am i here" comments with your own tie-in's back to the course content and/or future job opportunities.
