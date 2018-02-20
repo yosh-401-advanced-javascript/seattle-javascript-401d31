@@ -18,14 +18,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
-        test: /\.scss$/,
+        test: /.scss$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-      },
+      }
     ]
   },
 }

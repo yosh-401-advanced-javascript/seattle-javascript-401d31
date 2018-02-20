@@ -1,5 +1,5 @@
 {
-  "name": "27-d18",
+  "name": "27-d21",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -8,8 +8,8 @@
     "watch": "webpack-dev-server --inline --hot"
   },
   "keywords": [],
-  "author": "Code Fellows, LLC",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

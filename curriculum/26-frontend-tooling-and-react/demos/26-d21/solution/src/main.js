@@ -34,6 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="application">
+        {console.log('hello')}
         <h1>Welcome to cowville!</h1>
         <select onChange={this.handleClick}>
           {this.state.cows.map((cow, i) => {
