@@ -1,0 +1,1 @@
+# Proposed Course Repository Structure
