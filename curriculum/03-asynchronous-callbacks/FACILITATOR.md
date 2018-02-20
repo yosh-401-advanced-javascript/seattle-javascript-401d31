@@ -1,19 +1,23 @@
 # Class 03
 
 ## How do I prep for today?
-Review past lecture code. Pratice using the FS module, and writing helloworld async functions using setTimeout. Review the event loop video from the readme.
+Review the `fs` module documentation and be familiar with the `readFile` and `writeFile` methods.  You'll be discussing asynchronous programming concepts and will want to share random "gotchas" that could take place when testing.  For example:
+  * what happens when you pass `done` into an `it` (or `test`) block but forget to invoke it?
+  * what happens when you don't pass `done` into an `it` (or `test`) block (for async tests)?
+
+Students should have experience working with callback functions by this point.  That said, many will not have an in-depth understanding of them.  Review the callback demos in the **demos** directory and/or create your own.  It's important to discuss callbacks from a vanilla stance so that students fully understand how they work.  Once you've done that, start moving into the "error first" callback pattern.
  
 ## What changed from yesterday? 
-Students use `done` callbacks when testing async code. Students learn to pass data with callbacks instead of return or throw.
+Students will now be using `done` callbacks when testing their asynchronous code.  They will now be required to pass data with callbacks instead of using `return` or `throw`.
 
 ## What might students struggle with today? 
-Students struggle with the differnce between callback paramiters and arguments. When students are defining functions they ofthen wonder where the callback is coming from. You have to teach them that the callback will be provied when the function is invoked. Its a difference between definiton and usage.
+Students struggle with the "error first" callback pattern and how to create/handle async functionality.  Spend as much time as you can with these 2 topics.  Conceptually, they should have a solid understanding of callbacks and how to work with asynchronous behavior before going into lab for the day.  Students will struggle testing async code. When checking their code, lookout for missing `done` parameters/invocations and false positives.
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-Students will use return statments and throw in async code, instead of using a callback.
+Students will use `return` statements and `throw` in async code - they should be using a callback.
 
 ## General comments
-Walk them through SYNC code using a stack on the whiteboard. Then Walk them through a ASYNC code using call stack, event loop, callback queue, and API diagram on the whiteboard.
+It's helpful to do a walkthrough of synchronous vs asynchronous code on the whiteboard. Talk about blocking vs non-blocking code and walk students through the basics of the call stack, event loop, and callback queue.  You can even draw or diagram a visualization of this.
 
 
 
