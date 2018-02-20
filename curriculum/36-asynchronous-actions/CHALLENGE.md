@@ -2,11 +2,11 @@
 ===
 
 ## Requirements
-Create a BST constructor using ES6 (with insert and remove methods)
-Create a HashTable constructor (with _hash, set, get, and remove methods)
-* Each Bucket Index should store collisions in a BST
+Write a function that validates a Binary Search Tree:
+* It should return true if the tree is a valid Binary Search Tree
+* It should return false if the tree is not a valid Binary Search Tree
 
-Unit test each method of your constructors
+Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality
 * your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
 

@@ -2,9 +2,7 @@
 ===
 
 ## Requirements
-Write a function that finds the first common ancestor of a Binary Tree:
-* finds the first common ancestor of two nodes
-* you should avoid storing additional nodes in a separate data structure
+Use a Hash Table to remove duplicates from an array
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

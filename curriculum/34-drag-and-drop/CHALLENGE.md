@@ -2,10 +2,18 @@
 ===
 
 ## Requirements
-Write a function that finds the closest element in a Binary Search Tree.
-* given a binary search tree and target node K
-* find the node with minimum absolute difference with given target value K
-* return the node with the value that has the minimum absolute difference
+Create a BST constructor using ES6 (with insert and remove methods)
+Create a HashTable constructor (with _hash, set, get, and remove methods)
+* Each Bucket Index should store collisions in a BST
+
+Unit test each method of your constructors
+* your tests should cover basic (*expected*) functionality
+* your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
+
+## Requirements
+Write a function that compares two Binary Trees in any traversal as long as the nodes are the same in both traversals:
+* if the nodes are the same return true
+* if they are not the same return false
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

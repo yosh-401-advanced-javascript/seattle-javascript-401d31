@@ -2,9 +2,9 @@
 ===
 
 ## Requirements
-Use a Hash Table to remove duplicates from an array:
-* 
-* 
+Write a function that calculates the height of a Binary Search Tree
+* it should take in a tree
+* it should return an integer
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

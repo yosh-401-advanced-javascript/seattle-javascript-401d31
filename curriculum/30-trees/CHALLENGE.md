@@ -2,8 +2,19 @@
 ===
 
 ## Requirements
-First implement insert then implement find on a Binary Search Tree
-* assume that you have a binary search tree constructor available to you
+Implement an algorithm to print all valid (properly opened and closed) combinations of n pairs of braces
+
+example:
+```javascript
+Input: 3
+
+Output: 
+{{{}}} 
+{{}{}}
+{{}}{} 
+{}{{}}
+{}{}{}
+```
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

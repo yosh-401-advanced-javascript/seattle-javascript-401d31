@@ -2,10 +2,8 @@
 ===
 
 ## Requirements
-Given two arrays, write a function to compute their intersection
-
-example:
-Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
+Write a function calculateMissing = (array) => {...} to find the missing number in an array
+* You have an integer array which contains numbers from 1 to 100 but one number is missing
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

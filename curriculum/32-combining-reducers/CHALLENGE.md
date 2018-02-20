@@ -2,13 +2,19 @@
 ===
 
 ## Requirements
-Write a function that validates a Binary Search Tree:
-* It should return true if the tree is a valid Binary Search Tree
-* It should return false if the tree is not a valid Binary Search Tree
+The fibonacci series is an ordering of numbers where each number is the sum of the preceeding two.
+* print out the nth entry in the fibonacci series, recursive
+
+ex: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] forms the first ten entries of the fibonacci series
+
+ex: fib(4) === 3
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality
 * your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
+
+In your README.md explain why you would NOT use recursion to solve fibonacci, even though you CAN. 
+* It takes way more time / space to solve this problem recursively than iteratively.
 
 ## Submission Instructions
 

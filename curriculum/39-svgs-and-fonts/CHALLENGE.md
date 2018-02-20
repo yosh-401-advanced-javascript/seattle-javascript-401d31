@@ -2,9 +2,9 @@
 ===
 
 ## Requirements
-Some HashTable problem that I have not created yet because HashTable Problems are hard to find
-*
-*
+Write a function that finds all leaves in a Binary Tree:
+* the function will accept a tree
+* it will return an array of all of the leaves in the Binary Tree
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

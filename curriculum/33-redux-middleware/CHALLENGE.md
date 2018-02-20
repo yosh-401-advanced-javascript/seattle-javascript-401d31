@@ -2,9 +2,8 @@
 ===
 
 ## Requirements
-Write a function that finds the paths to all leaves in a Binary Tree:
-* 
-* 
+First implement insert then implement find on a Binary Search Tree
+* assume that you have a binary search tree constructor available to you
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

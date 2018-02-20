@@ -2,9 +2,16 @@
 ===
 
 ## Requirements
-Write a function that compares two Binary Trees in any traversal as long as the nodes are the same in both traversals:
-* if the nodes are the same return true
-* if they are not the same return false
+Write a method to sort an array of strings so that all the anagrams are next to each other
+
+Note - we can use a hash table to map the sorted version of a word to a list of its anagrams
+
+example:
+```javascript
+acre : {acre, race, care}
+```
+
+Once all the words have been grouped into lists by anagram we can put them back into the array. 
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality

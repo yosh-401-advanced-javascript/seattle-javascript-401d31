@@ -1,25 +1,6 @@
 ![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 44: Whiteboard Challenge
 ===
 
-## Requirements
-Implement an algorithm to print all valid (properly opened and closed) combinations of n pairs of braces
-
-example:
-```javascript
-Input: 3
-
-Output: 
-{{{}}} 
-{{}{}}
-{{}}{} 
-{}{{}}
-{}{}{}
-```
-
-Write at least four tests for this function
-* your tests should cover basic (*expected*) functionality
-* your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
-
 ## Submission Instructions
 
 1. With your assigned partner, pseudocode your solution on the whiteboard. Take a picture of your proposed solution for your repo.

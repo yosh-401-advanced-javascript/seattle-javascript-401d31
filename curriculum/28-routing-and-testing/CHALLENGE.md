@@ -2,9 +2,9 @@
 ===
 
 ## Requirements
-Write a function that finds all leaves in a Binary Tree:
-* the function will accept a tree
-* it will return an array of all of the leaves in the Binary Tree
+Given a list of strings `words` representing an English Dictionary, find the longest word in `words` that can be built one character at a time by other words in `words`.
+* if there is more than one possible answer, return the longest word with the smallest lexicographical order
+* if there is no answer return the empty string
 
 Write at least four tests for this function
 * your tests should cover basic (*expected*) functionality
