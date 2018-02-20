@@ -10,10 +10,12 @@
 * Skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
 * Skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-## [HTTP](https://tools.ietf.org/html/rfc7231)
-The Hyper Text Transfer Protocol (HTTP) is a stateless request-response application layer protocol. HTTP is used to build distributed, collaborative, hypermedia information systems. HTTP is the foundation for the world wide web. Applications built using HTTP subscribe to the client-server computing model. In the client-server computing model a host designed to provide a service is called a server and clients are hosts that make requests to the service. The HTTP specification defines how requests and responses should be formatted, but not what a service should represent. HTTP is often associated with serving `.html` files but is also used to transfer images, videos, json, xml, binary executables, and much more.
+## Outline
 
-#### HTTP Requests
+### [HTTP](https://tools.ietf.org/html/rfc7231)
+The Hyper Text Transfer Protocol (HTTP) is a stateless request-response application layer protocol. HTTP is used to build distributed, collaborative, hypermedia information systems. HTTP is the foundation for the world wide web. Applications built using HTTP subscribe to the client-server computing model. In the client-server computing model a host designed to provide a service is called a server. Clients are hosts that make requests to that service. The HTTP specification defines how requests and responses should be formatted, but not what a service should represent. HTTP is often associated with serving `.html` files but is also used to transfer images, videos, `.json`, `.xml`, binary executables, and much more.
+
+### HTTP Requests
 A HTTP/1.1 request is formatted in text and transferred using TCP. The first line of the request contains the `METHOD`, `URL`, and `HTTP VERSION`. The following lines are the request `HEADERS`. Each header is separated by a newline character. A header is a key value pair separated using a colon. Headers containing more than one value separate each value using a semicolon. The header section of the request is terminated with an empty line. An optional body follows the header section.
 
 
@@ -33,7 +35,7 @@ A HTTP/1.1 request is formatted in text and transferred using TCP. The first lin
 `Idempotent` methods means if two identical requests are made they should get an identical response.  
 `Cacheable` means the client should be able to cache the response.  
 
-###### Example HTTP Request  
+##### Example HTTP Request  
 ```
 POST /api/note HTTP/1.1
 Host: api.example.com
@@ -46,10 +48,10 @@ Content-Length: 58
 {"title":"kata","content":"get 100 points on hacker rank"}
 ```
 
-#### HTTP Response
+### HTTP Response
 A HTTP/1.1 response is also formatted in text and transferred using TCP. The first line of the response contains the `HTTP VERSION`, `STATUS CODE`, and `STATUS MESSAGE`. The following lines are the request headers and are formatted exactly the same way as the request headers. The header section of the request is terminated with an empty line. An optional body follows the header section.
 
-###### Example HTTP Response
+##### Example HTTP Response
 ```
 HTTP/1.1 200 OK
 Date: Tue, 22 Aug 2017 06:34:16 GMT

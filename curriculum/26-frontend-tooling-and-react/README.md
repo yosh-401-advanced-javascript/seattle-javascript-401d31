@@ -9,30 +9,32 @@
 * Students will be able to update React component state
 
 ## Resources
-* Read [Webpack Concepts](https://webpack.js.org/concepts/)
-* Skim [Webpack Configuration](https://webpack.js.org/configuration/)
-* Read [React Hello World](https://facebook.github.io/react/docs/hello-world.html) 
-* Read [Introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
-* Read [Rendering Elements](https://facebook.github.io/react/docs/rendering-elements.html)
+* Read [webpack concepts](https://webpack.js.org/concepts/)
+* Skim [webpack configuration](https://webpack.js.org/configuration/)
+* Read [react hello world](https://facebook.github.io/react/docs/hello-world.html) 
+* Read [introducing JSX](https://facebook.github.io/react/docs/introducing-jsx.html)
+* Read [rendering elements](https://facebook.github.io/react/docs/rendering-elements.html)
 
-## Webpack
-Webpack is a module bundler for JS applications. It compiles modern JavaScript applications into bundles that can be loaded into a browser. **All of your projects' assets should be managed by webpack**, including JSON, JS, CSS, SCSS, HTML, IMAGES, FONTS, etc.
+## Outline
 
-#### Plugins 
-Plugins can be added to webpack to add extra functionality. Some examples include...  
- * Creating HTML files with dynamic script and link tags
- * Creating CSS files
- * Uglifying and minifying your code
- * Creating project global vars at compile time
+### Webpack
+Webpack is a module bundler for JS applications. It compiles modern JavaScript applications into bundles that can be loaded into a browser. **All of your project assets should be managed by webpack**, including JSON, JS, CSS, SCSS, HTML, IMAGES, FONTS, etc.
 
-#### Loaders
-Loaders can be added to webpack to transform the data (code/json/images/etc.) imported into a project. Loaders are configured to only apply their transformations to files that match user defined regular expressions. Loaders can be chained together to transform data. Some examples include...
-* Transform ES6 files into ES5 files with Babel
-* Transform SASS files into CSS files
-* Transform images/fonts into base64 data embedded into your SASS/CSS
+### Plugins 
+Plugins can be added to webpack to add extra functionality. Some examples include:  
+ * creating HTML files with dynamic script and link tags
+ * creating CSS files
+ * uglifying and minifying your code
+ * creating project global vars at compile time
 
-## React
-React is a component based view and state management library. It's designed to be declarative, making it "painless" to create interactive UIs. React can run in browsers and natively on mobile devices.
+### Loaders
+Loaders can be added to webpack to transform the data (code/json/images/etc.) imported into a project. Loaders are configured to only apply their transformations to files that match user defined regular expressions. Loaders can be chained together to transform data. Some examples include:
+* transform ES6 files into ES5 files with Babel
+* transform SASS files into CSS files
+* transform images/fonts into base64 data embedded into your SASS/CSS
 
-#### Components  
-React components have a render method that returns a view to be rendered to the page. React developers use JSX to make their applications more readable and have a more expressive workflow when writing React views. JSX looks like HTML, but gets transpiled to ordinary JavaScript `React.createElement()` invocations by Babel. React components can also have `state` and `lifecycle hooks`. When the state of a React component bound to a view changes, the view will automatically re-render itself, eliminating the pain of manual DOM manipulation under most circumstances. React components can implement specific methods that will get called at specific points. These are called lifecycle hooks. React components can also pass data into their children through what is called one way data binding. We say that React applications have one-way data flow, because data is only passed from the top down.
+### React
+React is a component based view and state management library. It's designed to be declarative, making it "painless" to create interactive user interfaces. React can run in browsers and natively on mobile devices.
+
+### Components  
+React components have a render method that returns a view to be rendered to the page. React developers use JSX to make their applications more readable and have a more expressive workflow when writing React views. JSX looks like HTML, but gets transpiled to ordinary JavaScript `React.createElement()` invocations by Babel. React components can also have `state` and lifecycle hooks. When the state of a React component bound to a view changes, the view will automatically re-render itself, eliminating the pain of manual DOM manipulation under most circumstances. React components can implement specific methods that will get called at specific points. These are called lifecycle hooks. React components can also pass data into their children through what is called one way data binding. We say that React applications have one-way data flow, because data is only passed from the top down.
