@@ -1,8 +1,12 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {renderIf} from '../../lib/utils'
-import {categoryCreate} from '../../action/category-actions'
 import CategoryForm from '../category/category-form/category-form'
+import CategoryItem from '../category/category-item/category-item'
+import {
+  categoryCreate,
+  categoryUpdate,
+  } from '../../action/category-actions'
 
 class Dashboard extends React.Component {
   render() {
@@ -16,7 +20,10 @@ class Dashboard extends React.Component {
 
         {renderIf(this.props.categories,
           this.props.categories.map(cat =>
-            <div className="category-items" key={cat._id}><h3>{cat.title}</h3></div>)
+            <CategoryItem
+              className="category-items"
+              key={cat._id}
+              category={cat}></CategoryItem>)
         )}
       </section>
     )
@@ -30,6 +37,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, getState) => ({
   categoryCreate: category => dispatch(categoryCreate(category)),
+  categoryUpdate: category => dispatch(categoryUpdate(category)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

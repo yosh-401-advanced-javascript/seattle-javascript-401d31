@@ -32,14 +32,14 @@ class CategoryForm extends React.Component {
   render() {
     return (
       <form className="category-form" onSubmit={this.handleSubmit}>
-        <input 
+        <input
           type="text"
           name="name"
           placeholder="name"
           value={this.state.name}
           onChange={this.handleChange}/>
 
-        <input 
+        <input
           type="number"
           name="budget"
           placeholder="budget"
