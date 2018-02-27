@@ -7,7 +7,7 @@ import CategoryForm from '../category/category-form/category-form'
 class Dashboard extends React.Component {
   render() {
     return (
-      <section>
+      <section className="dashboard">
         <h1>Welcome to The Kanban!</h1>
 
         <CategoryForm
@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
 
         {renderIf(this.props.categories,
           this.props.categories.map(cat =>
-            <div key={cat._id}><h3>{cat.title}</h3></div>)
+            <div className="category-items" key={cat._id}><h3>{cat.title}</h3></div>)
         )}
       </section>
     )
