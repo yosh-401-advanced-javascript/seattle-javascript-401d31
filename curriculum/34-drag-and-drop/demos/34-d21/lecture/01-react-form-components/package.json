@@ -1,17 +1,15 @@
 {
-  "name": "32-d21-kanban-demo",
+  "name": "01-react-form-components",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "watch": "webpack-dev-server --inline --hot",
-    "test": "jest --verbose",
-    "test:watch": "jest --watchAll"
+    "build": "webpack",
+    "watch": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -37,8 +35,7 @@
     "uglifyjs-webpack-plugin": "^1.2.1",
     "url-loader": "^0.6.2",
     "uuid": "^3.2.1",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.9",
-    "webpack-dev-server": "^3.1.0"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
