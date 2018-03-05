@@ -1,0 +1,11 @@
+{
+  "name": "lecture-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "greet.js",
+  "scripts": {
+    "test": "jest -i --verbose --coverage"
+  },
+  "author": "",
+  "license": "ISC"
+}

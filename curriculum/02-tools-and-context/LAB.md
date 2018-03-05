@@ -9,10 +9,10 @@
 * Submit on canvas a question and observation, how long you spent, and a link to your pull request
 
 ## Configuration 
-Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+Configure the root of your repository with the following files and directories. Thoughtfully name and organize any additional configuration or module files.
 * **README.md** - contains documentation
 * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc** - contains the course linter configuratoin
+* **.eslintrc.json** - contains the course linter configuratoin
 * **.eslintignore** - contains the course linter ignore configuration
 * **package.json** - contains npm package config
   * create a `lint` script for running eslint
@@ -21,26 +21,24 @@ Configure the root of your repository with the following files and directories. 
 * **\_\_test\_\_/** - contains unit tests
 
 ## Feature Tasks
-#### FP Module
-Create a NodeJS module in the lib/ directory named fp.js that exports an object. Create iteratee-first data-last stand alone `map`, `filter`, `reduce`, and `slice` functions using the `call` and `apply` function methods. Define each function using ES6 lexical arrow function syntax. In each function error-check each paramiter and throw an Error with a meaningful message if the function is invoked with invalled arguments. Do not use any third party librarys in the FP module.
 
+##### FP Module
+Create a module in the lib/ directory named fp.js that exports an object and it's associated methods. Create stand alone `map`, `filter`, `reduce`, and `slice` functions that use the `call` and `apply` function methods. In each function, error-check all parameters and throw an `Error` (with a meaningful message) if the function is invoked with invalid arguments. Do not use any third party libraries in the FP module - only use `jest` for testing.
+
+##### Method Requirements
 * `fp.map` and `fp.filter` should have the function signature `(callback, collection) => Array`
 * `fp.reduce` should have the function signature `(callback, initialState, collection) => data`
 * `fp.slice` should have the function signature `(begin, end, collection) => Array`
 
 ## Testing
-#### FP Module Tests
-Create a NodeJS module in the \_\_test\_\_/ named fp.test.js that asserts the correctness of the fp module.  
+##### FP Module Tests
+Create a NodeJS module in the \_\_test\_\_/ directory named `fp.test.js` that asserts the correctness of the fp module.  
 
-* Use BDD `describe` and `test` methods to define discriptive tests and increase readablity
-* Each `test` callback should aim to test a small well defined feature of a function
-* Write tests to ensure the fp module functions correctly error-check paramiters
-  * Assert that the correct errors are thrown with invalid arguments
-* Write tests to ensure the fp module functions returns the correct results when invoked with valid arguments
+1. Use the `describe` and `it` (or `test`) methods to define descriptive tests and increase readablity
+1. Each `it` callback should aim to test a small, well defined, feature of a function - this may include:
+  * tests that ensure the fp module functions correctly with error-check parameters
+  * tests that the correct errors are thrown with invalid arguments exist
+  * tests to ensure that the fp module functions return the correct results when invoked with valid arguments
 
 ##  Documentation
-In your README.md describe the exported values of each module you have defined. Every function description should include it's airty (expected number of paramiters), the expected data for each paramiter (data-type and limitations), and it's behavior (for both valid and invalued use). Feel free to write any additional information in your README.md.
-
-## Bonus 1pts
-* Create a second module fp-curry.js that is a refactered version of fp.js, where each function has curried arguments
-* Create a fp-curry.test.js that is a refactured version of fp.curry.js that tests fp-curry.js
+In your `README.md`, describe the exported values of each module you have defined. Every function description should include it's airty (expected number of parameters), the expected data for each parameter (data-type and limitations), and it's behavior (for both valid and invalid use). Feel free to add any additional information in your `README.md` that you would like.
