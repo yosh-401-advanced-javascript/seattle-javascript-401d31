@@ -1,55 +1,62 @@
-401 JS --  Lab 34 Budget Tracker
+![cf](http://i.imgur.com/7v5ASc8.png) 34: Budget Tracker
 ===
 
 ## Submission Instructions
-  * continue working from lab 33
-  * submit a pull request to the project
+  * Work in a fork of this repository
+  * Work in a branch on your fork
+  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
+  * Submit a pull request to this repository
+  * Submit a link to your pull request on canvas
+  * Submit a question, observation, and how long you spent on canvas 
 
 ## Requirements  
 #### Feature Tasks 
-* complete the lab 31, 32, and 33 tasks
+* complete the Lab 31, 32, and 33 tasks
+
 ##### SCSS
 Style the application using sass best practices  
  * Create a _reset.scss _vars.scss and _base.scss
  * style your components 
 
 ##### Components
-add and refactor  the following components and organzie them according to the following tree
+* add and refactor the following components and organize them according to the following tree
 ``` 
 App
   Provider 
     BrowserRouter
       Route / Dashboard
-        CategoryForm -- for creating categorys
-        [Category Item] -- list of Category items
+        CategoryForm -- for creating categories
+        [CategoryItem] -- list of CategoryItems
            Dropzone
-             CategoryForm  -- for updating categorys
+             CategoryForm  -- for updating categories
              ExpenseForm -- for creating expenses
-             [ExpenseItem]  -- list of expense items
+             [ExpenseItem]  -- list of ExpenseItems
                 Draggable 
                   ExpenseForm -- for updating an expense
 ```
-###### Daggable
-* Create a component that enable users to drag its children
-* It store data passed into its `dataTransferItem` prop on the event handler for `onDragStart`
-  * data should be stored as json under the MIME 'application/json'
+###### Draggable
+  * Create a component that enables users to drag its children
+  * It stores data passed into its `dataTransferItem` prop on the event handler for `onDragStart`
+    * data should be stored as json under the MIME 'application/json'
 
-###### Dropable 
-* Create a component that enables users to drop a Draggable component
-* onDrop it should invoke a callback with the data passed using the events dataTransferObject
-  * remember to parse the json 
+###### Droppable 
+  * Create a component that enables users to drop a Draggable component
+  * onDrop it should invoke a callback with the data passed using the events dataTransferObject
+    * remember to parse the json 
+
 ###### ExpenseItem
-* Wrap the contents of the ExpenseItem in a Draggable 
-* Pass the expense data into the Draggables dataTransferItem prop
+  * Wrap the contents of the ExpenseItem in a Draggable 
+  * Pass the expense data into the Draggables dataTransferItem prop
+
 ###### CategoryItem
-* Wrap the contents of a category item in a dropzone 
-* When the onComplete of a Dropzone is fired update the expense so that it appears on the correct category
+  * Wrap the contents of a CategoryItem in a dropzone 
+  * When the onComplete of a dropzone is fired update the expense so that it appears on the correct category
 
 #### Test
-* Test every component except app
-* Test all of your action creators
-* Test each reducer used in your apps combineReducers
-  * test that the validation is working!
+  * Test every component except app
+  * Test all of your action creators
+  * Test each reducer used in your apps combineReducers
+    * test that the validation is working!
 
-####  Documentation  
+#### Documentation  
 Write a description of the project in your README.md

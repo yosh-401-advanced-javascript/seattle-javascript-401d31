@@ -1,4 +1,4 @@
-401 JS --  Lab 38 photo uploads
+![cf](http://i.imgur.com/7v5ASc8.png) 38: Photo Uploads
 ===
 
 ## Submission Instructions
@@ -9,16 +9,14 @@
   * Submit a link to your pull request on canvas
   * Submit a question, observation, and how long you spent on canvas  
 
-
 ## Requirements  
 #### backend setup
 * use [sluggram](http://github.com/slugbyte/sluggram) 
 * or use your mid 401 project
 
- 
 #### Feature Tasks 
 * Create a SettingsContainer
-  * give the user the ablity to create or update thier profile
+  * give the user the ablity to create or update their profile
   
 * Create a DashboardContainer
   * give the user the abilty to create, read, update and destroy photos
@@ -27,8 +25,8 @@
 * Test your redux reducers 
 * Test your util methods
 
-## Bonus 2pts
+## Stretch Goals
 * Create full crud for two resources 
 
-####  Documentation  
-Write a description of the project in your README.md
+#### Documentation  
+Write a description of the project in your README.md, including detailed instructions for how to build your app. In your frontend README.md add a code block with your frontend .env vars, and in your backend README.md add a code block with your backend .env vars. 
