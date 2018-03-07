@@ -8,11 +8,13 @@
 * Students will be able to implement collision handling
 
 ## Resources
-* Watch [What is a Hash Table?](https://www.youtube.com/watch?v=MfhjkfocRR0)
-* Read [Basics of Hash Tables](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
-* Skim [Wikipedia: Hash Table](https://en.wikipedia.org/wiki/Hash_table)
+* Watch [what is a hash table?](https://www.youtube.com/watch?v=MfhjkfocRR0)
+* Read [basics of hash tables](https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/)
+* Skim [hash table wiki](https://en.wikipedia.org/wiki/Hash_table)
 
-#### Hash Tables
+## Outline
+
+### Hash Tables
 Hash Tables (also called "Hash Maps", or even just a "Dictionary") are an
 incredibly powerful data structure that offer us `O(1)` read and `O(1)` write
 access. Yes, you read that correctly. They're incredibly efficient.
@@ -31,7 +33,7 @@ console.log(hashMap[key]);
 Now let's imagine JavaScript didn't give us these objects for free, and let's
 find out how to build our own!
 
-#### Hash Table API
+### Hash Table API
 A hash table should support at least the following methods:
 
 * `.put(key, value)` - store a value with the given key
@@ -40,7 +42,7 @@ A hash table should support at least the following methods:
 * `.remove(key)` - delete a value associated with a key
 * `.keys()` - return a collection of all the keys
 
-#### O(N) Lookup vs O(1) Lookup
+### O(N) Lookup vs O(1) Lookup
 Let's say we have data of Seattle neighborhood names and their corresponding zip
 codes.
 
@@ -73,7 +75,7 @@ run it through the hash code to get a number, use that number to index the
 array. Calculating the hash code and reading an array at that index is all
 constant time to the hash map has `O(1)` read access!
   
-#### Calculating Hash Codes
+### Calculating Hash Codes
 Basically, a hash code turns a key into an integer. It's very important that
 hash codes are deterministic: their output is determined only by their input.
 Hash codes should never have randomness to them. The same key should always
@@ -95,7 +97,7 @@ function multHash(str) {
 }
 ```
 
-#### Using Hash Codes With Buckets
+### Using Hash Codes With Buckets
 The array inside the hash map can be any size. Whenever a key/value pair is
 `.put()` in the hash map the hash map calculates the hash of the key, uses the
 modulus operator to constrain the key to be within the range of indexes in the
@@ -127,7 +129,7 @@ get(key) {
 }
 ```
 
-#### Collisions
+### Collisions
 The example above is actually a bit simplified. There's one more thing hash maps
 have to deal with. What would happen if two different keys resolved to be the
 same index of the array? This is called a collision. The hash map needs to be
@@ -177,20 +179,20 @@ Bucket 92: [98104, 98116]
 ```
 
 Hash maps do this to store values:
-* Accept a key
-* Calculate the hash of the key
-* Use modulus to convert the hash into an array index
-* Store the key **with** the value by appending both to the end of a linked list
+* accept a key
+* calculate the hash of the key
+* use modulus to convert the hash into an array index
+* store the key **with** the value by appending both to the end of a linked list
 
 Hash maps do this to read value:
-* Accept a key
-* Calculate the hash of the key
-* Use modulus to convert the hash into an array index
-* Use the array index to access the short LinkedList representing a bucket
-* Search through the bucket looking for a node with a key/value pair that
+* accept a key
+* calculate the hash of the key
+* use modulus to convert the hash into an array index
+* use the array index to access the short LinkedList representing a bucket
+* search through the bucket looking for a node with a key/value pair that
   matches the key you were given
     
-#### Hash Code Examples
+### Hash Code Examples
 Consider these examples running Seattle neighborhood names as Strings through
 two different hash functions.
 
@@ -225,7 +227,7 @@ MULT INDEX: 1062823936 % 99 = 31
 MULT INDEX:  578867200 % 99 = 43
 ```
 
-#### Bucket Sizes
+### Bucket Sizes
 Hash Maps can have any number of buckets. If a hash map has only a few buckets
 it will be densely full and have many collisions. If a hash map has more buckets
 it will be more sparsely populated, there will be less collisions, but there
