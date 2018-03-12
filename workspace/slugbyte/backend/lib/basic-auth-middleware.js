@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
   if(!encoded)
     return next(httpErrors(401, 'no basic auth found'));
 
-  let decoded = new Buffer(encoded, 'base64').toString();
+  let decoded = Buffer.from(encoded, 'base64').toString();
   let [username, password] = decoded.split(':');
   if(!username || !password)
     return next(httpErrors(401, 'basic auth invalid'));

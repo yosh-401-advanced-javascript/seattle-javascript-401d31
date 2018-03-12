@@ -4,7 +4,7 @@
 // Mock the 'fs' module so that we don't do anything real
 let fs = require("fs");
 let mockRead = (filename, cb) => {
-    cb(null, new Buffer("fake contents from " + filename));
+    cb(null, Buffer.from("fake contents from " + filename));
 };
 jest.spyOn(fs, 'readFile').mockImplementation(mockRead);
 

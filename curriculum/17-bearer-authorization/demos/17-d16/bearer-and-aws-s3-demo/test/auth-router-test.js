@@ -43,7 +43,7 @@ describe('testing auth router', () => {
       .then(userData => {
         tempUser = userData.user
         console.log('tempUser', tempUser)
-        let encoded = new Buffer(`${tempUser.username}:${userData.password}`).toString('base64')
+        let encoded = Buffer.from(`${tempUser.username}:${userData.password}`).toString('base64')
         return superagent.get(`${API_URL}/api/login`)
         .set('Authorization', `Basic ${encoded}`)
       })
