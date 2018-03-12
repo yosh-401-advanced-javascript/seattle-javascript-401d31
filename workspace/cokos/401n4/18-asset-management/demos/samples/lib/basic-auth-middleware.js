@@ -11,7 +11,7 @@ module.exports = (req, res, next) => {
   const encoded = req.headers.authorization.split('Basic ')[1]
   if(!encoded)
     return next(httpErrors(400, '__REQUEST_ERROR__ Basic auth required'))
-  let decoded = new Buffer(encoded, 'base64').toString()
+  let decoded = Buffer.from(encoded, 'base64').toString()
   let [username, password] = decoded.split(':')
   if(!username || !password)
     return next(httpErrors(400, '__REQUEST_ERROR__ username and password are required'))

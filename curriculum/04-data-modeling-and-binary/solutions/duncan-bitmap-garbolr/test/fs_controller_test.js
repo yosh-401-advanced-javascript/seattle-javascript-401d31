@@ -22,7 +22,7 @@ describe('fs_controller.js', function(){
 
 			before(function(done){
 					var str = 'lulwat\n';
-					var buffer = new Buffer(str.length);
+					var buffer = Buffer.alloc(str.length);
 					buffer.write(str, 0, 'ascii');
 					fsCntrl.writeBitmap(buffer, './lul.wat', function(err){
 						result = err;

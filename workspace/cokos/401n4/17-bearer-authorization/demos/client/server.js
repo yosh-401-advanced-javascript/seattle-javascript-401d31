@@ -66,7 +66,7 @@ app.post('/login', (req, res) => {
   let username = req.body.username;
   let password = req.body.password;
   
-  let basicToken = new Buffer(`${username}:${password}`).toString('base64')
+  let basicToken = Buffer.from(`${username}:${password}`).toString('base64')
   let url = `http://${service}/signin`;
   
   agent.get(url)

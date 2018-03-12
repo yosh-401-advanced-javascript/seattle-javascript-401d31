@@ -3,7 +3,7 @@
 const basicHttp = require(__dirname + '/../lib/basic-http');
 
 it('should parse basic http authentication', () => {
-  let testBuf = new Buffer('test:guest1234')
+  let testBuf = Buffer.from('test:guest1234')
   let req = {headers: 
     {
       authorization: `Basic ${testBuf.toString('base64')}`
