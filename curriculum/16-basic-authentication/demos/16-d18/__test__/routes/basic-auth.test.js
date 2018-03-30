@@ -38,7 +38,7 @@ describe('Testing basic auth routes', function() {
       mocks.user.createOne()
       .then(userData => {
         this.tempUser = userData.user
-        let encoded = new Buffer(`${this.tempUser.username}:${this.tempUser.password}`).toString('base64')
+        let encoded = Buffer.from(`${this.tempUser.username}:${this.tempUser.password}`).toString('base64')
 
         return superagent.get(':4000/api/signin')
         .set('Authorization', `Basic ${encoded}`)

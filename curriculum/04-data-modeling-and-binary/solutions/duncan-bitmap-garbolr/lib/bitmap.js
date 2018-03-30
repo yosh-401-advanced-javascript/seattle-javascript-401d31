@@ -62,7 +62,7 @@ Bitmap.prototype._getColorTable = function(){
 };
 
 Bitmap.prototype._colorTableToBuffer = function(){
-	var buf = new Buffer(256 * 4);
+	var buf = Buffer.alloc(256 * 4);
 	var offset = 0;
 	for (var i in this.colorTable) {
 		buf.writeUInt8(this.colorTable[i].red, offset );
@@ -82,5 +82,5 @@ Bitmap.prototype._getRasterData = function(){
 
 Bitmap.prototype.toBuffer = function(){
 	this._colorTableToBuffer();
-	return new Buffer.concat([this.headerBuf,this.infoHeaderBuf,this.colorTableBuf,this.rasterDataBuf]);	
+	return Buffer.from([this.headerBuf,this.infoHeaderBuf,this.colorTableBuf,this.rasterDataBuf]);
 };

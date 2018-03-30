@@ -10,7 +10,7 @@ export default (req, res, next) => {
   if(!encoded)
     return next(createError(400, 'AUTH ERROR: not basic auth'))
 
-  let decoded = new Buffer(encoded, 'base64').toString()
+  let decoded = Buffer.from(encoded, 'base64').toString()
   let [username, password] = decoded.split(':')
   if(!username || !password)
     return next(createError(401, 'AUTH ERROR: username or password missing'))

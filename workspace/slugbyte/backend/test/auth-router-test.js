@@ -32,7 +32,7 @@ describe('testing user routes', function(){
     before(mockUser.create)
 
     it('should login a user and create a token', function(){
-      let encoded = new Buffer(`${this.tempUser.username}:password`).toString('base64');
+      let encoded = Buffer.from(`${this.tempUser.username}:password`).toString('base64');
       var options = {
         headers: {
           Authorization: `Basic ${encoded}`
