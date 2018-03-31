@@ -1,5 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import CreateForm from '../category-form'
+import { categoryDelete } from '../../action/category-actions'
 
 class CategoryItem extends React.Component {
   constructor(props) {
@@ -12,7 +14,8 @@ class CategoryItem extends React.Component {
   }
 
   handleDelete(e) {
-    console.log(this.props)
+    // console.log(this.props)
+    this.props.categoryDelete(this.props.category)
   }
 
   toggleEdit() {
@@ -22,8 +25,8 @@ class CategoryItem extends React.Component {
   render() {
     return (
       <li onDoubleClick={this.toggleEdit}>
-        {this.state.editing ? 
-          <CreateForm 
+        {this.state.editing ?
+          <CreateForm
             buttonText="update category"
             onComplete={this.props.onComplete}
             category={this.props.category}
@@ -39,4 +42,9 @@ class CategoryItem extends React.Component {
   }
 }
 
-export default CategoryItem
+let mapStateToProps = () => ({})
+let mapDispatchToProps = (dispatch, getState) => ({
+  categoryDelete: category => dispatch(categoryDelete(category))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryItem)

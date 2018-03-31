@@ -28,7 +28,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  devtool: production ? undefined : 'eval',
+  devtool: production ? undefined : 'source-maps',
   output: {
     path: `${__dirname}/build`,
     filename: 'bundle-[hash].js',

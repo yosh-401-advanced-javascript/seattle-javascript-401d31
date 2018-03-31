@@ -32,11 +32,11 @@ class PokemonForm extends React.Component {
 
   render() {
     return (
-      <form 
+      <form
         className="pokemon-form"
         onSubmit={this.handleSubmit}>
 
-        <input 
+        <input
           type="text"
           name="pokemonName"
           placeholder="search for a pokemon"

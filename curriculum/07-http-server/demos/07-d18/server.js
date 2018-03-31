@@ -11,10 +11,10 @@ const server = module.exports = http.createServer((req, res) => {
 
   console.log('req.url', req.url)
   console.log('req.method', req.method)
-  
+
   bodyParse(req, (err, body) => {
     if (err) {
-      // resond to the user with a 500 server error
+      // respond to the user with a 500 server error
       res.writeHead(500)
       res.end()
       return
