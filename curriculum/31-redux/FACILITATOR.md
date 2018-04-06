@@ -12,4 +12,4 @@ Last week was vanilla state management through the use of ReactJS.  This week, i
 Students will need several days to gain a solid understanding of the Redux workflow.  Continue to touch on this during code review each day this week.
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-As noted above, the main suprise for students is how complex they perceive the Redux workflow to be.  Placing an emphasis on the fact that Redux was meant to simplify state management may help ease their concerns.
+As noted above, the main suprise for students is how complex they perceive the Redux workflow to be.  Placing an emphasis on the concept that Redux was meant to simplify state management may help ease their concerns.
