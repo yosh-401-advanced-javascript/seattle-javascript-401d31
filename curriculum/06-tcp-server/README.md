@@ -9,6 +9,7 @@
 ## Resources
 * Skim [net module docs](https://nodejs.org/api/net.html)
 * Skim [events api docs](https://nodejs.org/api/events.html)
+* **Windows users only**: Please watch [this video](https://www.youtube.com/watch?v=WkSOHBrdeB8&index=21&list=PLVngfM2hsbi_DnO3_JQSgt0Wvipc5Edl5&t=0s) to install a tool called Putty that you will need to prepare for Lab 6. 
 
 ## Outline
 
