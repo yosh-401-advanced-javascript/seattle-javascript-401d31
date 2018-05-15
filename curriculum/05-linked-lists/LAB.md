@@ -1,9 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 15 - Stacks and Queues Data Structures
+![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure
 ====
 
 ## To Submit this Assignment
+  * Do all your work in a public repository called `data-structures-and-algorithms`
   * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
+  * write all of your code in a directory named `linked-lists`
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -11,8 +12,9 @@
 
 ## Requirements  
 #### Configuration  
-<!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include   
+  <!-- list of files, configurations, tools, etc that are required -->
+  Your lab directory must include  
+  * **index.js** -- The entry point to your module
   * **README.md** -- with a documentation about your lab
   * **.gitignore** -- with a robust .gitignore
   * **.eslintrc** -- with the class .eslintrc file
@@ -22,7 +24,7 @@
   * **test/** -- directory for holding your programs unit and integration tests
 
 #### Testing  
-  * write at least three test assertions for each method of the Stack and Queue List Data Structures
+  * write at least three test assertions for each method of the Singly Linked List Data Structure
   * organize your tests into appropriate describe/it blocks for test output readability
 
 ####  Documentation  
@@ -34,15 +36,10 @@
     * running your tests
 
 #### Feature Tasks  
-  * implement a Stack constructor
-  * implement `push(value)` and `pop()` methods on the Stack prototype
-  * implement a Queue constructor
-  * implement `enqueue(value)` and `dequeue()` methods on the Queue prototype
-
-## Bonus Points:
-  * 2pts
-  * implement Reverse Polish Notation using your Stack data structure
-    * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
+* implement a Singly Linked List (SLL) data structure
+* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
+* implement `serialize()` and `deserialize()` methods on the class
+* in a comment within each function, note the it's Big-O runtime
 
 #### Rubric:
   * Tests: 2pts

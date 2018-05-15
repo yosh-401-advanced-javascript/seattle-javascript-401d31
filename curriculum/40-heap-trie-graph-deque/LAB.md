@@ -1,9 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 35 - Sorting Algorithms
+![cf](http://i.imgur.com/7v5ASc8.png) Heaps, Tries, Graphs, DeQueue
 ====
 
 ## To Submit this Assignment
+  * Do all your work in a public repository called `data-structures-and-algorithms`
   * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
+  * write all of your code in a directories named `heap`, `trie`, `graph`, `dequeue`
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -11,8 +12,9 @@
 
 ## Requirements  
 #### Configuration  
-<!-- list of files, configurations, tools, etc that are required -->
-  Your lab directory must include   
+  <!-- list of files, configurations, tools, etc that are required -->
+  Your lab directories must include  
+  * **index.js** -- The entry point to your module
   * **README.md** -- with a documentation about your lab
   * **.gitignore** -- with a robust .gitignore
   * **.eslintrc** -- with the class .eslintrc file
@@ -34,15 +36,7 @@
     * running your tests
 
 #### Feature Tasks  
-  * implement a Stack constructor
-  * implement `push(value)` and `pop()` methods on the Stack prototype
-  * implement a Queue constructor
-  * implement `enqueue(value)` and `dequeue()` methods on the Queue prototype
-
-## Bonus Points:
-  * 2pts
-  * implement Reverse Polish Notation using your Stack data structure
-    * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
+  * implement multiple data structures
 
 #### Rubric:
   * Tests: 2pts

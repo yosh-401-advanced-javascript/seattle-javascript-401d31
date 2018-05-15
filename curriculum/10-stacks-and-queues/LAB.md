@@ -1,9 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) lab 10 - Singly Linked List Data Structure
+![cf](http://i.imgur.com/7v5ASc8.png) Stacks and Queues Data Structures
 ====
 
 ## To Submit this Assignment
+  * Do all your work in a public repository called `data-structures-and-algorithms`
   * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
+  * write all of your code in a directory named `stacks-and-queues`
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -13,6 +14,7 @@
 #### Configuration  
   <!-- list of files, configurations, tools, etc that are required -->
   Your lab directory must include  
+  * **index.js** -- The entry point to your module
   * **README.md** -- with a documentation about your lab
   * **.gitignore** -- with a robust .gitignore
   * **.eslintrc** -- with the class .eslintrc file
@@ -22,7 +24,7 @@
   * **test/** -- directory for holding your programs unit and integration tests
 
 #### Testing  
-  * write at least three test assertions for each method of the Singly Linked List Data Structure
+  * write at least three test assertions for each method of the Stack and Queue List Data Structures
   * organize your tests into appropriate describe/it blocks for test output readability
 
 ####  Documentation  
@@ -34,17 +36,11 @@
     * running your tests
 
 #### Feature Tasks  
-* implement a Singly Linked List (SLL) data structor  
-* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL prototype
-* in a comment within each function, note the it's Big-O runtime
-
-## Bonus Points:
-  * 2pts
-  * implement `findNthNodeFromEnd(n)` as a method on the SLL prototype
-    * takes `n` as an input/argument, representing the offset from the end to return
-    * returns the nth node from the end (opposite of head) of the list
-  * implement `findMiddleNode()` as a pure method on the SLL prototype
-    * returns the middle node within the list
+  * implement a Stack constructor
+  * implement `push(value)` and `pop()` methods on the Stack class
+  * implement a Queue constructor
+  * implement `enqueue(value)` and `dequeue()` methods on the Queue class
+  * implement `serialize()` and `deserialize()` methods on both classes
 
 #### Rubric:
   * Tests: 2pts

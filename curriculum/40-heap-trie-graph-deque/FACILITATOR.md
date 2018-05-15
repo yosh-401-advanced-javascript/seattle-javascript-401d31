@@ -1,4 +1,4 @@
-# Class 35
+# Heaps, Tries, Graphs, DeQueue
 
 ## How do I prep for today?
  

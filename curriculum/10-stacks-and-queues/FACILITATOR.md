@@ -1,4 +1,4 @@
-# Class 10
+# Stacks and Queues
 
 ## How do I prep for today?
  

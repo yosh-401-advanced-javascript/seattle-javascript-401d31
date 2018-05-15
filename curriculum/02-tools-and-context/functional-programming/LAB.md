@@ -2,8 +2,9 @@
 ====
 
 ## To Submit this Assignment
+  * Do all your work in a public repository called `data-structures-and-algorithms`
   * fork this repository
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
+  * write all of your code in a directory named `list`
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -13,6 +14,7 @@
 #### Configuration  
   <!-- list of files, configurations, tools, etc that are required -->
   Your lab directory must include  
+  * **index.js** -- The entry point to your module
   * **README.md** -- with a documentation about your lab
   * **.gitignore** -- with a robust .gitignore
   * **.eslintrc** -- with the class .eslintrc file

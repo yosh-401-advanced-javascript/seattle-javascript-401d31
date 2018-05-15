@@ -1,4 +1,4 @@
-# Class 15
+# Linked Lists
 
 ## How do I prep for today?
  

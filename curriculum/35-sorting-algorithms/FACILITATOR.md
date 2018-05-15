@@ -1,4 +1,4 @@
-# Class 30
+# Sorting Algorithms
 
 ## How do I prep for today?
  
