@@ -6,6 +6,9 @@
 * Students will be able to create commonjs modules
 * Students will be able to to create unit tests for synchronous Javascript code
 * Students will be able to use to test driven development methodologies
+* Students will be able to connect their github repository to travis-ci for hot build testing
+* Students will learn about continuous integration and continuous delivery
+* Students will be able to configure TravisCI to run their tests on all pushes to GitHub
 
 ## Resources
 * Read [about nodejs]
@@ -15,6 +18,7 @@
 * Read [just another guide to ES6]
 * Skim [node and es6 docs]
 * Read [a gentle intro to tdd in js]
+* Read [getting started with nodeJS on travisCI]
 
 ## Outline
 
@@ -43,6 +47,43 @@ Write code to pass the specifications of your tests, without making it perfect. 
 ###### REFACTOR
 Refactor your code for speed, memory optimization, and most importantly **readability**. Your tests should still pass after this step.
 
+### Continuous Integration
+Continuous Integration (CI) is the process of regularly merging individually developed features of code into a shared repository as frequently as they are made. In the most basic setup, a team could simply use git to merge code into a master branch. However more advanced CI patterns can be developed. These patterns can automate static analysis (lining), running unit and integration tests, testing platform support, enforcing code reviews, and much more.
+
+### Continuous Delivery
+Continuous Delivery (CD) is the process of deploying software in short cycles by ensuring that software can be deployed at any time. CD pairs very will with advanced CI setups that help ensure the core product is always a stable code base.
+
+### TravisCI
+Travis CI is a hosted and distributed continuous integration service (CI) that is most often used to build and test software projects hosted on GitHub.
+
+Travis CI is configured by adding a file named `.travis.yml` to the root directory of the repository. This file specifies the programming language used, the desired building and testing environment and various other parameters.
+
+Once you have this file, create an account at travis-ci.com (login with your github account information) and install the "travis-ci" app into your github account when prompted. Travis will automatically pull your code and run your tests on every push.
+
+##### Example .travis.yml
+
+``` javascript
+  language: node_js
+  node_js:
+    - 'stable'
+  services:
+    - mongodb
+  addons:
+    apt:
+      sources:
+        - ubuntu-toolchain-r-test
+      packages:
+        - gcc-4.8
+        - g++-4.8
+  env:
+    - CXX=g++-4.8
+  sudo: required
+  before_script: npm i
+  script:
+    - npm test
+    - npm run lint
+```
+
 <!--links -->
 [about nodejs]: https://nodejs.org/en/about/
 [node and es6 docs]: https://nodejs.org/en/docs/es6/
@@ -51,3 +92,4 @@ Refactor your code for speed, memory optimization, and most importantly **readab
 [what is npm]: https://docs.npmjs.com/getting-started/what-is-npm
 [a gentle intro to tdd in js]: http://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/
 [just another guide to ES6]: https://medium.com/sons-of-javascript/javascript-an-introduction-to-es6-1819d0d89a0f#.wb7rj1gin
+ [getting started with nodeJS on travisCI]: https://docs.travis-ci.com/user/languages/javascript-with-nodejs
