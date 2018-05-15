@@ -25,9 +25,15 @@
 * `src/style/main.scss`
  
 #### Feature Tasks
-* complete all remaining lab-31 and 32 feature tasks
+* complete all remaining lab 31 and 32 feature tasks
 * add a `logger` middleware to your application's redux store
 * add validation to your redux reducers
+
+Decide what validation you want to add to your reducers. Ideas might include:
+
+* Prevent an item from being added if it's over budget.
+* Prevent a budget from being created with zero or less dollars.
+* Prevent a budget or item from being created without a name.
 
 ## Example Validation Middleware
 Here's an example validating middleware for an application that implements a
@@ -50,7 +56,7 @@ const validateCard = store => next => action => {
         }
       } catch (err) {
         console.error(err);
-    } 
+    }
   } else {
     return next(action);
   }
