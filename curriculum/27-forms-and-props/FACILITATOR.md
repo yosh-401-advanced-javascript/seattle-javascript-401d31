@@ -1,7 +1,7 @@
 # Class 27
 
 ## How do I prep for today?
-Today is all about detailing `state` and `props` within React.  State management is a huge topic so be sure to have a good understanding of their differences.  Here's a basic rundown:
+Today is about the proper handling and utilization of `state` and `props` within ReactJS.  State management is a major part of most modern frontend applications and students will often struggle with the differences/uses of `state` vs `props`.  Here's a basic rundown:
 
 **State:**
 - can get it's initial value from a parent component
@@ -19,16 +19,13 @@ Today is all about detailing `state` and `props` within React.  State management
 - can set initial values for child components
 - can change in child components
 
-You'll also be detailing the creation and use of a form within React.  Be sure to spend time discussing the basics of how forms work and how we can create modular form components that work for multiple use cases.
+As you demo and discuss these concepts, also focus on the usage of `<form>`'s within ReactJS. Spend time revewing the basics of vanilla HTML `<form>`'s and how they work.  This will set them up for seeing the advantages of creating modular `<form>` components, for multiple use cases, in a component framework, like ReactJS.
 
 ## What changed from yesterday? 
-Today, we begin to work with forms.  You'll still be using the same `webpack.config.js` file but be sure to rebuild it with students in order to further their understanding of it.
+Today, we begin to work with `<form>`'s.  You may still use the same `webpack.config.js` file from previous demos but be sure to rebuild it with students in order to further their understanding of it.
 
 ## What might students struggle with today? 
-Student will struggle in lab.  They'll have a hard time managing `state` and `props`, along with generally dealing with basic syntax errors since they've just been introduced to a new framework.
+Students will struggle in lab.  Have your TAs ready to assist!
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-Lot's of Webpack compiling issues and lot's of state management confusion.  Spend the time that you need to spend of these topics - it's worth it in the longrun!
-
-## General comments
-N/A
+Webpack compiling issues are common and `state` managament issues will continue to persist.  Spend the time recapping these topics - it's worth it in the longrun!

@@ -1,16 +1,13 @@
 # Class 26
 
 ## How do I prep for today?
-Today is the first day of React!  Going through the React documentation, getting started guide, and building a simple (view only) React application is a great way to start.  Be sure to have a good starting `webpack.config.js` file prepared and your demo for today should only utilize vanilla React constructs and all components/logic should be contained in a single file, for easing students into the content that is to come.
+Today is the first day of ReactJS!  Going through the ReactJS documentation, getting started guide, and building a simple ReactJS application is a great way to get started.  Be sure to have a simple, but solid, starting `webpack.config.js` file prepared.  Your demo for the day should only utilize vanilla React constructs and all components/logic should be contained in a single file.  This technique is simply meant to ease students into future content that is to come.
 
 ## What changed from yesterday? 
-Time for frontend development!  Get your students excited!
+Time for frontend development!
 
 ## What might students struggle with today? 
-Students will struggle with making the mental transistion out of backend development and into frontend development.  React abstracts away many of the direct DOM manipulation styles of frontend JS that they've likely used in the past.  Be sure to talk about the benefits of a component framework and why it's awesome that they won't have to work about jQuery/vanilla DOM queries anymore!
+Students will struggle with making the mental transistion out of backend development and into frontend development.  ReactJS abstracts away many of the direct DOM manipulation styles of frontend Javascript development that students are used to.  Be sure to talk about the benefits of a component framework and why it's awesome that they won't have to work about jQuery or vanilla DOM methods anymore!
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-Students will struggle with getting Webpack to compile and working through basic debugging within React.  If you'd like, get them started with extra debugging tools earlier on (such as the React Dev Tools Chrome extension) to help with this!
-
-## General comments
-Yay - Frontend Development!
+Students will struggle with properly configuring Webpack and working through basic debugging within ReactJS.  You are welcome to introduce extra debugging tools, such as the ReactJS Dev Tools Chrome extension, to help with this process!
