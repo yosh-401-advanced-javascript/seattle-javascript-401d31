@@ -1,10 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Tree Data Structure
+![cf](http://i.imgur.com/7v5ASc8.png) Stacks and Queues Data Structures
 ====
 
 ## To Submit this Assignment
   * Do all your work in a public repository called `data-structures-and-algorithms`
   * fork this repository
-  * write all of your code in a directory named `trees`
+  * write all of your code in a directory named `stacks-and-queues`
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -36,10 +36,11 @@
     * running your tests
 
 #### Feature Tasks  
-  * implement a Tree Constructor
-  * implement `insert(node)` and `remove(node)` methods on the class
-  * implement `find(node)` methods on the class
-  * implement `serialize()` and `deserialize()` methods on the class
+  * implement a Stack constructor
+  * implement `push(value)` and `pop()` methods on the Stack class
+  * implement a Queue constructor
+  * implement `enqueue(value)` and `dequeue()` methods on the Queue class
+  * implement `serialize()` and `deserialize()` methods on both classes
 
 #### Rubric:
   * Tests: 2pts

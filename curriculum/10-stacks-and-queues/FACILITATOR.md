@@ -1,4 +1,4 @@
-# Heaps, Tries, Graphs, DeQueue
+# Stacks and Queues
 
 ## How do I prep for today?
  

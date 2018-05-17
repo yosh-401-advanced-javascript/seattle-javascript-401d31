@@ -1,4 +1,4 @@
-# Class 15
+# K-Ary Trees
 
 ## How do I prep for today?
  

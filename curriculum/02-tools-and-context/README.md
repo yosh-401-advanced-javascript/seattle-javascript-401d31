@@ -6,6 +6,10 @@
 * Students will be able to control function context by using `call`, `apply`, and `bind`
 * Students will be able to handle thrown errors through the use of `try` and `catch`
 * Students will be able to interpret the different types of errors in Javascript
+* Students will be able to determine and describe the runtime complexity of an algorithm
+* Students will understand the difference between a constructor function and a factory function
+* Students will be able to identify and explain the qualities of imperative and functional code
+* Students will be able to implement a functional, array-like, list with `map`, `filter`, `reduce`, and `forEach` methods
 
 ## Resources
 * Read [about package.json]
@@ -135,6 +139,9 @@ warningGet().addEventListener('click', () => {
   warningSet('the sky is falling')
 })
 ```
+
+### Functional Programming
+
 
 <!--links -->
 [node error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html

@@ -1,10 +1,10 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Tree Data Structure
+![cf](http://i.imgur.com/7v5ASc8.png) Linked List Data Structure
 ====
 
 ## To Submit this Assignment
   * Do all your work in a public repository called `data-structures-and-algorithms`
   * fork this repository
-  * write all of your code in a directory named `trees`
+  * write all of your code in a directory named `linked-lists`
   * push to your repository
   * submit a pull request to this repository
   * submit a link to your PR in canvas
@@ -24,7 +24,7 @@
   * **test/** -- directory for holding your programs unit and integration tests
 
 #### Testing  
-  * write at least three test assertions for each method of the Stack and Queue List Data Structures
+  * write at least three test assertions for each method of the Singly Linked List Data Structure
   * organize your tests into appropriate describe/it blocks for test output readability
 
 ####  Documentation  
@@ -36,10 +36,10 @@
     * running your tests
 
 #### Feature Tasks  
-  * implement a Tree Constructor
-  * implement `insert(node)` and `remove(node)` methods on the class
-  * implement `find(node)` methods on the class
-  * implement `serialize()` and `deserialize()` methods on the class
+* implement a Singly Linked List (SLL) data structure
+* implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
+* implement `serialize()` and `deserialize()` methods on the class
+* in a comment within each function, note the it's Big-O runtime
 
 #### Rubric:
   * Tests: 2pts

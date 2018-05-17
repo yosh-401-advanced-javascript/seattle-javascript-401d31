@@ -1,4 +1,4 @@
-# Class 10
+# Tree Data Structure
 
 ## How do I prep for today?
  
