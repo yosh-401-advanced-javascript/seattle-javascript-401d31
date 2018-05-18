@@ -14,8 +14,10 @@ Configure the root of your repository with the following files and directories. 
 * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
 * **.eslintrc.json** - contains the course linter configuratoin
 * **.eslintignore** - contains the course linter ignore configuration
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint
+* **.travis.yml** - contains your travis testing instructions
+* **package.json** - contains npm package config 
+  * jest and eslint must be dependencies
+  * create a `lint` script for running eslint `"lint": "eslint **/.js"`
   * create a `test` script for running tests
 * **lib/** - contains module definitions
 * **\_\_test\_\_/** - contains unit tests
