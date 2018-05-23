@@ -3,7 +3,6 @@
 
 ## To Submit this Assignment
   * Do all your work in a public repository called `data-structures-and-algorithms`
-  * fork this repository
   * write all of your code in a directory named `linked-lists`
   * push to your repository
   * submit a pull request to this repository
@@ -19,9 +18,10 @@
   * **.gitignore** -- with a robust .gitignore
   * **.eslintrc** -- with the class .eslintrc file
   * **.eslintignore** -- with the class .eslintignore
+  * **.travis.yml** -- travis-ci instructions
   * **.package.json** -- with all dependencies and dev-dependencies
   * **lib/** -- directory for holding your programs helper modules
-  * **test/** -- directory for holding your programs unit and integration tests
+  * **__tests__/** -- directory for holding your programs unit and integration tests
 
 #### Testing  
   * write at least three test assertions for each method of the Singly Linked List Data Structure
