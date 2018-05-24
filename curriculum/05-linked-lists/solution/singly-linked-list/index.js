@@ -97,34 +97,6 @@ class LinkedList {
     return result;
   }
 
-  reduce(list, cb, result) {
-    let i=0;
-    let current = list;
-    while(current){
-      result = cb(result, current, i++, list);
-      current = current.next;
-    }
-    return result;
-  }
-
-  map(list, cb) {
-    let result = SLL.reduce(list, (prev, curr, i , self) => {
-      prev.append(new SLL(cb(curr, i, self)));
-      return prev;
-    }, new SLL());
-    return result.next;
-  }
-
-  filter(list, cb) {
-    let result = SLL.reduce(list, (prev, curr, i, self) => {
-      if(cb(curr, i, self)) {
-        prev.append(new SLL(curr.value));
-      }
-      return prev;
-    }, new SLL());
-    return result.next;
-  }
-
   find(value) {
     let current = this.head;
     while(current) {
@@ -183,12 +155,6 @@ class LinkedList {
   getLast() {
     return this.getNthFromLast(0);
   }
-  getSecondFromLast() {
-    return this.getNthFromLast(1);
-  }
-  getThirdFromLast() {
-    return this.getNthFromLast(2);
-  }
 
   getNth(n) {
     // step forward N times.
@@ -201,14 +167,6 @@ class LinkedList {
 
   getFirst() {
     return this.getNth(0);
-  }
-
-  getSecond() {
-    return this.getNth(1);
-  }
-
-  getThird() {
-    return this.getNth(2);
   }
 
   map(cb) {

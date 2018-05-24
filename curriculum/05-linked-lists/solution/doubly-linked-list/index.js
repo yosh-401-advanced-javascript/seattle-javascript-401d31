@@ -170,13 +170,6 @@ class DoublyLinkedList {
     return current;
   }
 
-  findSecondFromLast() {
-    return this.findNthFromLast(1);
-  }
-
-  findThirdFromLast() {
-    return this.findNthFromLast(2);
-  }
 }
 
 

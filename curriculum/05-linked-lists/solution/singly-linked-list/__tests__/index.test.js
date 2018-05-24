@@ -123,18 +123,6 @@ describe('testing LinkedList', function(){
     expect(result.value).toEqual(6);
   });
 
-  test('list.getSecondFromLast() should return second to last node', () => {
-    let list = LinkedList.fromArray([3, 4, 5, 6]);
-    let result = list.getSecondFromLast();
-    expect(result.value).toEqual(5);
-  });
-
-  test('list.getThirdFromLast() should return third from last node', () => {
-    let list = LinkedList.fromArray([3, 4, 5, 6]);
-    let result = list.getThirdFromLast();
-    expect(result.value).toEqual(4);
-  });
-
   test('list.getNthFromLast() should return nth from last node', () => {
     let list = LinkedList.fromArray([3, 4, 5, 6]);
     let result = list.getNthFromLast(0);
@@ -182,10 +170,4 @@ describe('testing LinkedList', function(){
     expect(list.getNth(3)).toEqual(list.head.next.next.next);
   });
 
-  test('getFirst getSecond and getThird', () => {
-    let list = LinkedList.fromArray([1,2,3,4]);
-    expect(list.getFirst()).toEqual(list.head);
-    expect(list.getSecond()).toEqual(list.head.next);
-    expect(list.getThird()).toEqual(list.head.next.next);
-  });
 });

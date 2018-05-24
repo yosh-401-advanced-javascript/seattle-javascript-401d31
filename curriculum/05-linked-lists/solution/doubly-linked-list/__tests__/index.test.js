@@ -122,15 +122,4 @@ describe('testing singlyLinkedList', function(){
     expect(result.value).toEqual(6);
   });
 
-  it('list.findSecondFromLast() should return second to last node', () => {
-    let list = DoublyLinkedList.fromArray([3, 4, 5, 6]);
-    let result = list.findSecondFromLast();
-    expect(result.value).toEqual(5);
-  });
-
-  it('list.findThirdFromLast() should return third from last node', () => {
-    let list = DoublyLinkedList.fromArray([3, 4, 5, 6]);
-    let result = list.findThirdFromLast();
-    expect(result.value).toEqual(4);
-  });
-})
+});
