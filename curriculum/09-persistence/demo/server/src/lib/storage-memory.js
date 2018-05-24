@@ -22,22 +22,3 @@ storage.save = (data) => {
   });
 };
 
-storage.update = (data) => {
-  return new Promise( (resolve,reject) => {
-    if ( database[data.id] ) {
-      database[data.id] = data;
-      resolve(database[data.id]);
-    }
-    else { reject(`${data.id} not found`); }
-  });
-};
-
-storage.delete = (id) => {
-  return new Promise( (resolve,reject) => {
-    if ( database[id] ) {
-      delete(database[id]);
-      resolve(true);
-    }
-    else { reject(`${id} not found`); }
-  });
-};

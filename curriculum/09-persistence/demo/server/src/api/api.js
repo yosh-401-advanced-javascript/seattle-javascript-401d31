@@ -1,33 +1,49 @@
 'use strict';
 
 const router = require('../lib/router.js');
+const Notes = require('../models/notes.js');
 
-/**
- * GET Route (/)
- * Accepts an optional "name" query string parameter and says Hello
- * test with httpie:
- *     http http://localhost:8080
- *     http http://localhost:8080?name=John
- */
-router.get('/', (req,res) => {
+let sendJSON = (res,data) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
-  let name = req.url.query.name || '';
-  res.write(`Hello ${name}`);
+  res.setHeader('Content-Type', 'application/json');
+  res.write( JSON.stringify(data) );
   res.end();
+};
+
+router.get('/api/v1/notes', (req,res) => {
+  let model = new Notes();
+  if ( req.url.query.id ) {
+    model.findOne(req.url.query.id)
+      .then( data => sendJSON(res,data) )
+      .catch(console.error);
+  }
+  else {
+    model.fetchAll()
+      .then( data => sendJSON(res,data) )
+      .catch(console.error);
+  }
 });
 
-/**
- * POST Route (/data)
- * Accepts a JSON object and simply regurgitates it back to the browser
- * test with httpie:
- *     echo '{"title":"Go Home","content":"foobar"}' | http post http://localhost:8080/data
- */
-router.post('/data', (req,res) => {
-  res.statusCode = 200;
-  res.statusMessage = 'OK';
-  res.write( JSON.stringify(req.body) );
-  res.end();
+router.delete('/api/v1/notes', (req,res) => {
+  let model = new Notes();
+  if ( req.url.query.id ) {
+    model.deleteOne(req.url.query.id)
+      .then( success => {
+        let data = {id:req.url.query.id,deleted:success};
+        sendJSON(res,data);
+      })
+      .catch(console.error);
+  }
+});
+
+router.post('/api/v1/notes', (req,res) => {
+
+  let record = new Notes(req.body);
+  record.save()
+    .then(data => sendJSON(res,data))
+    .catch(console.error);
+
 });
 
 module.exports = {};

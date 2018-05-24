@@ -7,8 +7,11 @@ let http = require('http');
 const router = require('./lib/router.js');
 const api = require('./api/api.js');
 
+// Flag to know if we are up and going
 let isRunning = false;
 
+// This will open up an http server connection, using router.route
+// as our entry point.  That method will get run on every connection
 const app = http.createServer( router.route );
 
 module.exports = {
@@ -16,6 +19,7 @@ module.exports = {
     if(! isRunning) {
       app.listen(port, (err) => {
         if(err) { throw err; }
+        // Tick the running flag
         isRunning = true;
         console.log('Server is up on port', port);
       });
@@ -26,6 +30,9 @@ module.exports = {
   },
 
   stop: () => {
-    console.log('Stop not implemented');
+    app.close( () => {
+      isRunning = false;
+      console.log('Server has been stopped');
+    });
   },
 };
