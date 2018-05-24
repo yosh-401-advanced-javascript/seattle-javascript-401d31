@@ -3,6 +3,11 @@
 const router = require('../lib/router.js');
 const Notes = require('../models/notes.js');
 
+/**
+ * Simple method to send a JSON response (all of the API methods will use this)
+ * @param res
+ * @param data
+ */
 let sendJSON = (res,data) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
@@ -11,24 +16,31 @@ let sendJSON = (res,data) => {
   res.end();
 };
 
+let serverError = (res,err) => {
+  let error = { error:err };
+  res.statusCode = 500;
+  res.statusMessage = 'Server Error';
+  res.setHeader('Content-Type', 'application/json');
+  res.write( JSON.stringify(error) );
+  res.end();
+};
+
 router.get('/api/v1/notes', (req,res) => {
-  let model = new Notes();
   if ( req.url.query.id ) {
-    model.findOne(req.url.query.id)
+    Notes.findOne(req.url.query.id)
       .then( data => sendJSON(res,data) )
-      .catch(console.error);
+      .catch( err => serverError(res,err) );
   }
   else {
-    model.fetchAll()
+    Notes.fetchAll()
       .then( data => sendJSON(res,data) )
-      .catch(console.error);
+      .catch( err => serverError(res,err) );
   }
 });
 
 router.delete('/api/v1/notes', (req,res) => {
-  let model = new Notes();
   if ( req.url.query.id ) {
-    model.deleteOne(req.url.query.id)
+    Notes.deleteOne(req.url.query.id)
       .then( success => {
         let data = {id:req.url.query.id,deleted:success};
         sendJSON(res,data);
