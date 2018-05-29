@@ -26,8 +26,8 @@ let serverError = (res,err) => {
 };
 
 router.get('/api/v1/notes', (req,res) => {
-  if ( req.url.query.id ) {
-    Notes.findOne(req.url.query.id)
+  if ( req.query.id ) {
+    Notes.findOne(req.query.id)
       .then( data => sendJSON(res,data) )
       .catch( err => serverError(res,err) );
   }
@@ -39,10 +39,10 @@ router.get('/api/v1/notes', (req,res) => {
 });
 
 router.delete('/api/v1/notes', (req,res) => {
-  if ( req.url.query.id ) {
-    Notes.deleteOne(req.url.query.id)
+  if ( req.query.id ) {
+    Notes.deleteOne(req.query.id)
       .then( success => {
-        let data = {id:req.url.query.id,deleted:success};
+        let data = {id:req.query.id,deleted:success};
         sendJSON(res,data);
       })
       .catch(console.error);
