@@ -1,13 +1,37 @@
-![cf](https://i.imgur.com/7v5ASc8.png) 11: Single Resource Express API
+![cf](https://i.imgur.com/7v5ASc8.png) 11: Express and Babel
 ======
 
-## Submission Instructions
-  * fork this repository & create a new branch for your work
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+### Submission Instructions
+ * Work in a fork of this repository
+ * Work in a branch on your fork
+ * Create a PR to your master from your working branch.
+ * Ensure that your repository/branch is connected to travis-ci.com
+ * Ensure that your repository/branch is connected to a dyno at heroku.com
+ * Heroku and Travis should pick you up and deploy
+ * Submit on canvas:
+   * a question and observation
+   * how long you spent
+   * link to your pull request
+   * link to your build at travis-ci URL
+   * Heroku Server URL
+ 
+ ## Configuration 
+ Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
+ * **README.md** - contains documentation
+ * **.env** - contains env variables (should be git ignored)
+ * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
+ * **.eslintrc** - contains the course linter configuratoin
+ * **.eslintignore** - contains the course linter ignore configuration
+ * **.travis.yml** - contains the course linter ignore configuration
+ * **package.json** - contains npm package config
+   * create a `lint` script for running eslint (eslint **/*.js)
+   * create a `test` script for running tests
+   * create a `start` script for running your server
+ * **index.js** - the entry point for your application
+ * **src/** - contains your core application files and folders
+ * **src/app.js** - (or main.js) contains your core application bootstrap
+ * **src/lib/** - contains module definitions
+ * **\_\_test\_\_/** - contains unit tests
 
 ## Learning Objectives  
 * students will be able to create a single resource API using the express framework
@@ -15,14 +39,8 @@
 
 ## Requirements
 
-#### Configuration
-* `package.json`
-* `.eslintrc`
-* `.gitignore`
-* `README.md`
-  * your `README.md` should include detailed instructions on how to use your API
-
 #### Feature Tasks
+* implement all code using ES6 Modules (import/export) using Babel
 * create an HTTP server using `express`
 * create a object constructor that creates a _simple resource_ with at least 3 properties
   * it can **not** have the same properties as the in-class sample code (other than the `id`)
@@ -34,13 +52,13 @@
 * persist your API data using the storage module and file system persistence
 
 #### Server Endpoints
-* **`/api/simple-resource-name`**
+* **`/api/vi/resource-name`**
 * `POST` request
  * pass data as stringifed JSON in the body of a **POST** request to create a new resource
 * `GET` request
- * pass `?id=<uuid>` as a query string parameter to retrieve a specific resource (as JSON)
+ * pass `/:id` as a route parameter to **GET** a specific resource (as JSON)
 * `DELETE` request
- * pass `?id=<uuid>` in the query string to **DELETE** a specific resource
+ * pass `/:id` as a route parameter to **DELETE** a specific resource (as JSON)
  * this should return a 204 status code with no content in the body
 
 #### Tests
