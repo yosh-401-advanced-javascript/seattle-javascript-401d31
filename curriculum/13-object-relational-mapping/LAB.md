@@ -2,36 +2,7 @@
 ===
 
 ## Submission Instructions
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Create a PR to your master from your working branch.
-* Ensure that your repository/branch is connected to travis-ci.com
-* Ensure that your repository/branch is connected to a dyno at heroku.com
-* Heroku and Travis should pick you up and deploy
-* Submit on canvas:
-  * a question and observation
-  * how long you spent
-  * link to your pull request
-  * link to your build at travis-ci URL
-  * Heroku Server URL
-
-## Configuration 
-Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
-* **README.md** - contains documentation
-* **.env** - contains env variables (should be git ignored)
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc** - contains the course linter configuratoin
-* **.eslintignore** - contains the course linter ignore configuration
-* **.travis.yml** - contains the course linter ignore configuration
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint (eslint **/*.js)
-  * create a `test` script for running tests
-  * create a `start` script for running your server
-* **index.js** - the entry point for your application
-* **src/** - contains your core application files and folders
-* **src/app.js** - (or main.js) contains your core application bootstrap
-* **src/lib/** - contains module definitions
-* **\_\_test\_\_/** - contains unit tests
+Follow the instructions in the "Lab Submission Instructions" document in the course reference folder
 
 ## Learning Objectives  
 * students will be able to work with the MongoDB database management system
@@ -58,7 +29,9 @@ Configure the root of your repository with the following files and directories. 
   * should pass the id of a resource through the url endpoint to get a resource
     * **this should use `req.params`, not querystring parameters**
 * `PUT` request
-  * should pass data as stringifed JSON in the body of a put request to update a pre-existing resource
+  * should pass data as stringifed JSON in the body of a put request to overwrite a pre-existing resource
+* `PATCH` request
+    * should pass data as stringifed JSON in the body of a put request to update a pre-existing resource
 * `DELETE` request
   * should pass the id of a resource though the url endpoint to delete a resource
     * **this should use `req.params`**
@@ -73,6 +46,3 @@ Configure the root of your repository with the following files and directories. 
  * `PUT` - test 404, responds with 'not found' for valid requests made with an id that was not found
  * `POST` - test 400, responds with 'bad request' if no request body was provided
  * `POST` - test 200, returns a resource for requests made with a valid body
-
-### Bonus
-* **2pts:** a `GET` request to `/api/resource-name` should return an array of stored resources
