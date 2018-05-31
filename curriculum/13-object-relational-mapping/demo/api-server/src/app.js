@@ -26,14 +26,13 @@ app.use(router);
 app.use(notFound);
 app.use(errorHandler);
 
-let isRunning = false;
+let server = false;
 
 module.exports = {
   start: (port) => {
-    if(! isRunning) {
-      app.listen(port, (err) => {
+    if(! server) {
+      server = app.listen(port, (err) => {
         if(err) { throw err; }
-        isRunning = true;
         console.log(`Server up on ${port}`);
       });
     }
@@ -42,8 +41,7 @@ module.exports = {
     }
   },
   stop: () => {
-    app.close( () => {
-      isRunning = false;
+    server.close( () => {
       console.log('Server has been stopped');
     });
   },
