@@ -19,7 +19,7 @@ const requestHandler = (req,res) => {
   parser(req)
     .then( req => {
 
-      if ( req.method === 'GET' && req.url.pathname === '/' ) {
+      if ( req.method === 'GET' && req.parsed.pathname === '/' ) {
         fs.readFile( `${__dirname}/../public/index.html`, (err,data) => {
           if ( err ) { return errorPage(); }
           res.setHeader('Content-Type', 'text/html');
@@ -31,11 +31,11 @@ const requestHandler = (req,res) => {
         });
 
       }
-      else if ( req.method === 'GET' && req.url.pathname === '/cowsay' ) {
+      else if ( req.method === 'GET' && req.parsed.pathname === '/cowsay' ) {
         fs.readFile( `${__dirname}/../public/cowsay.html`, (err,data) => {
           if ( err ) { return errorPage(); }
           let html = data.toString();
-          let text = cowsay.say({text: req.url.query.text});
+          let text = cowsay.say({text: req.query.text});
           res.setHeader('Content-Type', 'text/html');
           res.statusCode = 200;
           res.statusMessage = 'OK';
@@ -43,7 +43,7 @@ const requestHandler = (req,res) => {
           res.end();
         });
       }
-      else if ( req.method === 'POST' && req.url.pathname === '/cowsay' ) {
+      else if ( req.method === 'POST' && req.parsed.pathname === '/cowsay' ) {
         fs.readFile( `${__dirname}/../public/cowsay.html`, (err,data) => {
           if ( err ) { return errorPage(); }
 

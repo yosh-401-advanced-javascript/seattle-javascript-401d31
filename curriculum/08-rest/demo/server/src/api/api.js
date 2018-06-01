@@ -12,7 +12,7 @@ const router = require('../lib/router.js');
 router.get('/', (req,res) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
-  let name = req.url.query.name || '';
+  let name = req.query.name || '';
   res.write(`Hello ${name}`);
   res.end();
 });
