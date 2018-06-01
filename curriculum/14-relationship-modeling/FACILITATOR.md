@@ -3,6 +3,15 @@
 ## How do I prep for today?
 Today is all about creating "relationships" in MongoDB.  Be sure to have a good grasp on how to use the MongooseJS method `populate` for query population at the database level.  Students will need to understand how `ObjectId`'s are used to create pointers to other resources.  Relating this to SQL based DBMS's and how tables can contains primary/foriegn keys to create relationships may be a good idea.  That said, be sure to discuss the differences, pros, and cons of using a SQL based VS noSQL based DBMS.
 
+Building up and using these relationships will require the use of some pre hooks
+
+- pre('save') to inject into the parent object's "array" of references
+- pre('findOne') to populate detail information from your relationship into the document
+
+This is a great time to talk about mongoose middleware and the different hooks offered.
+
+Additionally, cement the idea that in a true MVC, the business logic lives in the model and htose hooks give you the inroads to do jus that.
+
 ## What changed from yesterday? 
 Time to connect our resources!  Students have been working with a single resource API up until this point.  Today, that changes.
 
