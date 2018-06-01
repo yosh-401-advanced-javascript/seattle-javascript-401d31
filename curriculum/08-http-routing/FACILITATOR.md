@@ -6,6 +6,7 @@ Today is all about the understanding the REST architectural style and the beginn
 The lecture for this day requires **lots and lots** of code. Be sure to build out a demo beforehand (or review the ones in this directory) to help you get started and figure out proper pacing. Students will need to review your lecture videos for this day rather heavily - be sure to screen capture the entire build.
 
 As a primary goal, we will be refactoring the simplistic HTTP server from Class 07. Principally, we will be adding 2 new pieces of architecture:
+
 **Routing Tables and Methods**
 This will require you to build out system that allows the developer to declare routes "express-style" and have the server respond to those when called and run the defined function. You'll need to support all of the RESTful verbs.
  - i.e. `router.route.get('/home', (req,res) => { ... })`

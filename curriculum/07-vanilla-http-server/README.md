@@ -1,4 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 07: HTTP Server
+![cf](http://i.imgur.com/7v5ASc8.png) 07: Vanilla HTTP Server
 ===
 
 ## Learning Objectives
