@@ -36,9 +36,12 @@
     * running your tests
 
 #### Feature Tasks  
-  * implement a Tree Constructor
+  * implement a Binary Tree Constructor
   * implement `insert(node)` and `remove(node)` methods on the class
   * implement `find(node)` methods on the class
+  * Implement **in-order** (left-root-right) traversal function that returns an array of the visited nodes.
+  * Implement a **pre-order** (root-left-right) traversal function that returns an array of the visited nodes.
+  * Implement a **post-order** (left-right-root) traversal function that returns an array of the visited nodes.
   * implement `serialize()` and `deserialize()` methods on the class
 
 #### Rubric:
