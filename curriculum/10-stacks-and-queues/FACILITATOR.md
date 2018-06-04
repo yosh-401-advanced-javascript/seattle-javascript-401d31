@@ -15,7 +15,7 @@ You'll also notice a file in the demo folder called 'event-loop.js' ... at the e
 ## What changed from yesterday? 
 
 ## What might students struggle with today? 
-They will definitely want to know WHY these exist as data structures when Arrays already do all of this stuff. Make sure that they know that not only was it not always that way, but by having classes with finely scoped methods like these, end users are put into the proper mindsent on their purposeful use.
+They will definitely want to know WHY these exist as data structures when Arrays already do all of this stuff. Make sure that they know that not only was it not always that way, but by having classes with finely scoped methods like these, end users are put into the proper mindset on their purposeful use.
 
 The students may also press you on how to implement these using linked lists or other compositions. They need to dig in and figure that out!
 
