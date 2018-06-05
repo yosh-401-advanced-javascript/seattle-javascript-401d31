@@ -2,12 +2,7 @@
 ===
 
 ## Submission Instructions
-  * fork this repository & create a new branch for your work
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+  * Follow the lab submission instructions in the reference folder 
 
 ## Learning Objectives  
 * students will be able to create bearer authentication middleware
@@ -15,12 +10,6 @@
 * students will be able to test against authenticated routes
 
 ## Requirements
-#### Configuration
-* `package.json`
-* `.eslintrc`
-* `.gitignore`
-* `.env`
-* `README.md`
 
 ## Description
 * create a new branch and use the same forked repository from lab 15
@@ -32,6 +21,8 @@
 * using the express `Router`, create routes for doing **RESTFUL CRUD** operations against your resource
 
 ## Server Endpoints
+### Incorporate the authentication and authorization model, routes and middleware into your express server, putting `auth` in front of every API route, ensuring they all require a login for access.
+
 ### `/api/resource-name`
 * `POST` request
 * pass data as stringifed JSON in the body of a post request to create a new resource
@@ -58,6 +49,3 @@
 * `POST` - test **401**, if no token was provided
 * `POST` - test **400**, if no body was provided or if the body was invalid
 
-## Bonus
-* **1pt:** a `GET` request to `/api/resource-name` should return an array of all of the ids for that resource
-* **1pt:** create a series of tests for a `DELETE` request
