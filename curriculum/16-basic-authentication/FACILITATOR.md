@@ -7,6 +7,8 @@ Today is a great opportunity to talk about how ciphers work, how bcrypt work, wh
 
 When coding this out, use the newly created middleware in the /signin route as your ONLY logic.  The middleware acts as a gateway to the route.  Ony if it can authenticate you, does it ever call `next()` and get into the actual route code.  The route should repond (for now) with "hello" and the token.
 
+Our demo leads you down the road of having some mongoose `.statics` and `.methods` for static and instance methods of your model. This is a great opportunity to recap what that means and how it works. (maybe have a simple Class worked up to demo it)
+
 We will use this middleware gatweay to protect all routes that require security in the future. This is really cool stuff and that "gatekeeper" point needs to be made clearly for students to understand this lesson's takeaway.
 
 Focus on students' understanding of the full authentication cycle:
