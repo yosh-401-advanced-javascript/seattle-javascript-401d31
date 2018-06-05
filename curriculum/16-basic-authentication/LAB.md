@@ -2,31 +2,16 @@
 ===
 
 ## Submission Instructions
-  * fork this repository & create a new branch for your work
-  * write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-susan`
-  * push to your repository
-  * submit a pull request to this repository
-  * submit a link to your PR in canvas
-  * write a question and observation on canvas
+  * Follow the lab submission instructions in the reference folder 
 
 ## Learning Objectives  
 * students will be able to create basic authorization middleware
 * students will be able to test basic authorization for signup/signin routes
 
 ## Requirements
-#### Configuration
-* `package.json`
-* `.eslintrc`
-* `.gitignore`
-* `.env`
-* `README.md`
 
 ## Feature Tasks
-* create the following directories to organize your code:
-  * **lib**
-  * **model**
-  * **route**
-  * **test**
+
 * create an HTTP server using `express`
 * using `mongoose`, create a **User** model with the following properties and options:
   * `username` - *required and unique*
@@ -50,6 +35,8 @@
 ### `/api/signin`
 * `GET` request
 * the client should pass the username and password to the server using a `Basic:` authorization header
+* use middleware to parse the auth header for username/password
+* perform some basic validation
 * the server should respond with a token for authenticated users
 * the server should respond with **401 Unauthorized** for non-authenticated users
 
