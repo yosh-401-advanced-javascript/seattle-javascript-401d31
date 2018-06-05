@@ -1,3 +1,0 @@
-For now, the solution is the same as the demo.
-
-We need to bake this out with better error checking, more complete testing, etc to match the lab requirements.
