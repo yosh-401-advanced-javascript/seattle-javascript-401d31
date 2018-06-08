@@ -1,26 +1,19 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 41: OAuth
+![cf](http://i.imgur.com/7v5ASc8.png) OAuth
 ===
 
 ## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-  * Submit a question, observation, and how long you spent on canvas 
+  * Follow the instructions in the "Lab Instructions" documentation in the reference folder of the class repository
   
 ## Learning Objectives  
-* Students will learn to add Google OAuth to an express/mongo app
+* Students will learn to add OAuth from any provider to an express/mongo app
 
 ## Requirements  
-#### Configuration  
-* make a copy of slugchat-backend-starter-code in the `/lab-<yourname>/slugchat-backend` directory
-* create a `/lab-<yourname>/slugchat-frontend` directory
+- Your instructor will assign you a (not-Google) OAuth provider to integrate with. Sites such as Yahoo, Github, Facebook, and AWS all have OAuth mechanisms that work almost exactly like Google. 
 
-#### Feature Tasks  
+This is a paired lab that will have you integrating OAuth with any provider.
 
 #### backend
-* create an app on the google dev console
+* create an account/app/credential on your assigned OAuth Provider
  * configure oauth credentials to support a client app on `http://localhost`
  * configure oauth credentials to support a server redirect uri to `http://localhost:3000/oauth/google/code`
 * create a backend route `GET /oauth/google/code` for handling google oauth 
