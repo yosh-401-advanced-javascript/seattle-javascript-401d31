@@ -36,16 +36,8 @@
     * running your tests
 
 #### Feature Tasks  
-  * implement a Binary Tree Constructor
+  * implement a Tree Constructor
   * implement `insert(node)` and `remove(node)` methods on the class
   * implement `find(node)` methods on the class
-  * Implement **in-order** (left-root-right) traversal function that returns an array of the visited nodes.
-  * Implement a **pre-order** (root-left-right) traversal function that returns an array of the visited nodes.
-  * Implement a **post-order** (left-right-root) traversal function that returns an array of the visited nodes.
   * implement `serialize()` and `deserialize()` methods on the class
-
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
+    * Why?  You cannot simply use `JSON.stringify` and `JSON.parse` because your tree will be made up of class instances.  For that reason, you'll need to concoct a way to traverse the tree into a structure that you **can** run through `JSON.parse/stringify`.  One idea might be to do a traversal, building up an object literal with all of the right references, or perhaps an in-order array that simply notes all of the node values and links...
