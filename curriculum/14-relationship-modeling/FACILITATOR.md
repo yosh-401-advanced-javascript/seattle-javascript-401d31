@@ -10,7 +10,9 @@ Building up and using these relationships will require the use of some pre hooks
 
 This is a great time to talk about mongoose middleware and the different hooks offered.
 
-Additionally, cement the idea that in a true MVC, the business logic lives in the model and htose hooks give you the inroads to do jus that.
+Additionally, cement the idea that in a true MVC, the business logic lives in the model and those hooks give you the inroads to do just that.
+
+This day should also bring to the forefront WHY we use the `/api/v1/:model/` pattern. As you'll recall, we genericized the REST API routes so that you can pass any valid model in there.  This keeps the API code really DRY (we don't need a separate route for every model).  This layer of abstraction really helps to create an extensible system.
 
 ## What changed from yesterday? 
 Time to connect our resources!  Students have been working with a single resource API up until this point.  Today, that changes.
