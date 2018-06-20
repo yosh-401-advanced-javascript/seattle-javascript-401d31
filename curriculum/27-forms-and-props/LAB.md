@@ -2,12 +2,7 @@
 ===
 
 ## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-  * Submit a question, observation, and how long you spent on canvas  
+* Follow the instructions in the "Lab Instructions" documentation in the reference folder of the class repository 
   
 ## Learning Objectives  
 * Students will learn to test react components using jest and enzyme 
@@ -15,20 +10,6 @@
 * Students will learn to pass data from parent to child through props
 
 ## Requirements  
-#### Configuration  
-Your lab directory must include  
-* **README.md** -- with documentation about your lab
-* **.gitignore** -- with a robust gitignore
-* **.eslintrc.json** -- with the class .eslintrc.json file
-* **.eslintignore** -- with the class .eslintignore
-* **.babelrc** -- with all dependencies and dev-dependencies 
-* **package.json** -- with all dependencies and dev-dependencies 
-* **yarn.lock** -- with the yarn lockfile
-* **webpack.config.js** -- with webpack config
-* **src/** -- containing the frontend code
-* **src/main.js** -- containing the entire app
-* **src/style** -- containing your sass
-* **src/style/main.scss** -- containing the frontend code
  
 #### Feature Tasks 
 Create the following components and structure them according to the following diagram 
@@ -47,7 +28,7 @@ App
 * should contain a number input for the user to limit the number of results to return 
   * the number must be more than 0 and less than 100
   * `onSubmit` the form should make a request to reddit 
-  * it should make a get request to `http://reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
+  * it should make a get request to `https://wwwreddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
   * on success it should pass the results to the application state
   * on failure it should add a class to the form called error and turn the form's inputs borders red
 

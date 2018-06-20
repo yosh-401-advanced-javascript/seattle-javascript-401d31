@@ -21,6 +21,13 @@ Today is about the proper handling and utilization of `state` and `props` within
 
 As you demo and discuss these concepts, also focus on the usage of `<form>`'s within ReactJS. Spend time revewing the basics of vanilla HTML `<form>`'s and how they work.  This will set them up for seeing the advantages of creating modular `<form>` components, for multiple use cases, in a component framework, like ReactJS.
 
+The demo code is presented here twice.
+* `/demo/simple` is a basic implementation, with superagent rolled into the app.js and functions that call upon it.
+* `/demo/advanced` takes that a step further and introduces a utility file that handles the loading using superagent and also caches data into local storage.
+  * this will eventually become the home for future library functions
+  
+The 2nd demo might be tough to get to in your initial lecture, but this is a great thing to use as a refactoring target during Code Review during the next lecture.  Using code review to refactor gives you the opportunity to revisit the functionality as well as to talk through opportunities for "engineer-ship"
+
 ## What changed from yesterday? 
 Today, we begin to work with `<form>`'s.  You may still use the same `webpack.config.js` file from previous demos but be sure to rebuild it with students in order to further their understanding of it.
 
