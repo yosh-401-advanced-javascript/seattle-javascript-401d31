@@ -25,27 +25,68 @@ class App extends React.Component {
     console.log('__STATE__', this.state);
   }
 
-  async componentDidMount() {
-    const data = await this.pokemonListing();
-    this.setState( Object.assign(...this.state,data) );
+  /**
+   * Fetching using the async/await pattern instead of Promises
+   * not required, but this is an alternative (and more modern)
+   * way to do asynchronous work.
+   */
+
+  /*
+    async componentDidMount() {
+      const data = await this.loadPokemonList();
+      this.setState( Object.assign(...this.state, data) );
+    }
+
+    async loadPokemonList() {
+      const pokeData = await this.load(pokemonAPI);
+      let pokemonList = pokeData.results;
+      return {pokemonList};
+    }
+
+    async pokemonDetails(e) {
+      let url = e.target.value;
+      let loading = true;
+      const pokemon = await(this.load(url));
+      this.setState( Object.assign(...this.state, {pokemon}) );
+    }
+
+    async pokemonSearch(search) {
+      let url = `${pokemonAPI}/${search}`;
+      const pokemon = await(this.load(url));
+      this.setState( Object.assign(...this.state, {pokemon}) );
+    }
+  */
+
+  componentDidMount() {
+    this.loadPokemonList()
+      .then(data =>
+        this.setState( Object.assign(...this.state, data) )
+      );
   }
 
-  async pokemonListing() {
-    const pokeData = await this.load(pokemonAPI);
-    let pokemonList = pokeData.results;
-    return {pokemonList}
+  loadPokemonList() {
+    return this.load(pokemonAPI)
+      .then(pokeData => {
+        let pokemonList = pokeData.results;
+        return {pokemonList};
+      });
   }
 
-  async pokemonDetails(e) {
+  pokemonDetails(e) {
     let url = e.target.value;
-    const pokemon = await(this.load(url));
-    this.setState( Object.assign(...this.state, {pokemon}) );
+    let loading = true;
+    return this.load(url)
+      .then( pokemon =>
+        this.setState( Object.assign(...this.state, {pokemon}) )
+      );
   }
 
-  async pokemonSearch(search) {
+  pokemonSearch(search) {
     let url = `${pokemonAPI}/${search}`;
-    const pokemon = await(this.load(url));
-    this.setState( Object.assign(...this.state, {pokemon}) );
+    return this.load(url)
+      .then(pokemon =>
+        this.setState( Object.assign(...this.state, {pokemon}) )
+      );
   }
 
   load(url) {
@@ -59,13 +100,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <main className={this.state.loading ? "loading" : null}>
+      <main className={this.state.loading ? 'loading' : null}>
         <PokemonList pokemon={this.state.pokemonList} pokemonLoader={this.pokemonDetails} searchMethod={this.pokemonSearch}/>
         <PokemonDetail pokemon={this.state.pokemon}/>
       </main>
     );
   }
-  
+
 }
 
 export default App;
