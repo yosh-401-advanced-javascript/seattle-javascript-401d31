@@ -26,6 +26,8 @@ The demo code is presented here twice.
 * `/demo/advanced` takes that a step further and introduces a utility file that handles the loading using superagent and also caches data into local storage.
   * this will eventually become the home for future library functions
   
+* In the demos, we show the fetching using promises but also have commented code using the `async/await` pattern. This is a great time to introduce (or cement) that pattern if you've not done so already.
+  
 The 2nd demo might be tough to get to in your initial lecture, but this is a great thing to use as a refactoring target during Code Review during the next lecture.  Using code review to refactor gives you the opportunity to revisit the functionality as well as to talk through opportunities for "engineer-ship"
 
 ## What changed from yesterday? 
