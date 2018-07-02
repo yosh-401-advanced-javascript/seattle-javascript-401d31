@@ -1,4 +1,4 @@
-![CF](https://camo.githubusercontent.com/70edab54bba80edb7493cad3135e9606781cbb6b/687474703a2f2f692e696d6775722e636f6d2f377635415363382e706e67) 45: Whiteboard Challenge
+![CF](http://i.imgur.com/7v5ASc8.png) 45: Whiteboard Challenge
 ===
 
 ## Requirements
