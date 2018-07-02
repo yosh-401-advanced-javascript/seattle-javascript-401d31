@@ -40,10 +40,9 @@
   * implement `insert(value)` and `remove()` methods on the class
   * implement `serialize()` and `deserialize()` methods on the class
 
-## Bonus Points:
-  * 2pts
-  * implement Reverse Polish Notation using your Stack data structure
-    * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
+## Stretch Goals
+* implement Reverse Polish Notation using your Stack data structure
+  * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
 
 #### Rubric:
   * Tests: 2pts
