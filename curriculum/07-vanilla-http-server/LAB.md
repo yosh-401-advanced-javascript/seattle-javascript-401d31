@@ -106,5 +106,6 @@ When a client makes a POST request to /api/cowsay it should send JSON that inclu
 | With text query | 200 | JSON | `{"content": "<cowsay cow text>"}` |
 
 
-## Bonus
-**1pts:** add the ability to change the cowfile on GET /cowsay, GET /api/cowsay, and POST /api/cowsay - **ex: dragon, sheep, etc**
+## Stretch Goals
+Add the ability to change the cowfile on GET /cowsay, GET /api/cowsay, and POST
+/api/cowsay - **ex: dragon, sheep, etc**
