@@ -7,10 +7,7 @@
     "es6": true
   },
   "globals": {
-    "err": true,
-    "req": true,
-    "res": true,
-    "next": true,
+    "fail": true,
     "__API_URI__": false,
     "__TITLE__": false,
     "__DEBUG__": false
@@ -18,7 +15,7 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 6,
+    "ecmaVersion": 2018,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "module": true,
@@ -27,7 +24,7 @@
   },
   "rules": {
     "no-console": "off",
-    "no-unused-vars": "off",
+    "no-unused-vars": [1, {"vars": "local", "args": "none"}],
     "indent": [ "error", 2, { "SwitchCase": 1 } ],
     "react/prop-types": [0],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
