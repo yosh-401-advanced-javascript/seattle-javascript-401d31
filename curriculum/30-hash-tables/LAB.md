@@ -40,8 +40,3 @@
   * implement `hash(value)`, `set()`, `get()`, and `remove()` methods on the class
   * implement `serialize()` and `deserialize()` methods on the class
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
