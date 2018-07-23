@@ -43,9 +43,3 @@
 ## Stretch Goals
 * implement Reverse Polish Notation using your Stack data structure
   * refer to the [Wiki](https://en.wikipedia.org/wiki/Reverse_Polish_notation) for more information on RPN
-
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
