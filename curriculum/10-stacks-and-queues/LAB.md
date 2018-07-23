@@ -42,8 +42,3 @@
   * implement `enqueue(value)` and `dequeue()` methods on the Queue class
   * implement `serialize()` and `deserialize()` methods on both classes
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
