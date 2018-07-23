@@ -38,8 +38,3 @@
 #### Feature Tasks  
   * implement multiple data structures
 
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
