@@ -40,9 +40,3 @@
 * implement `append(value)`, `prepend(value)`, `reverse()`, and `remove(offset)` methods to the SLL class
 * implement `serialize()` and `deserialize()` methods on the class
 * in a comment within each function, note the it's Big-O runtime
-
-#### Rubric:
-  * Tests: 2pts
-  * Passes linter: 1pts
-  * Completed Data Structure: 5pts
-  * Big-O notation: 2pt
