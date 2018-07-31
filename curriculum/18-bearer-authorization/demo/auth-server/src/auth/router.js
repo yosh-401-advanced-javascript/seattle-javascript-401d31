@@ -11,18 +11,16 @@ import auth from './middleware.js';
 
 authRouter.post('/signup', (req, res, next) => {
   let user = new User(req.body);
-  user.save()
-    .then( user => res.send(user.generateToken()) )
-    .catch(next);
+  user.save().then((user) => res.send(user.generateToken())).catch(next);
 });
 
-authRouter.get('/signin',auth, (req, res, next) => {
+authRouter.post('/login', auth, (req, res, next) => {
   res.cookie('Token', req.token);
   res.send(req.token);
 });
 
-authRouter.get('/showMeTheMoney', auth, (req,res,next) => {
+authRouter.get('/showMeTheMoney', auth, (req, res, next) => {
   res.send('Here is all the ca$h');
-})
+});
 
 export default authRouter;
