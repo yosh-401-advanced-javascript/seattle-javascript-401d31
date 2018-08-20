@@ -4,7 +4,7 @@ import superagent from 'superagent';
 import PokemonList from './pokemon/list.js';
 import PokemonDetail from './pokemon/detail.js';
 
-const pokemonAPI = 'https://pokeapi.co/api/v2/pokemon';
+const pokemonAPI = 'https://www.pokeapi.co/api/v2/pokemon';
 
 export default class App extends React.Component {
 
