@@ -90,7 +90,7 @@
               let password = $(this).find('[name=password]').val();
               let authstring = btoa(`${username}:${password}`);
               $.ajax({
-                type: "GET",
+                type: "POST",
                 url: "http://localhost:3000/signin",
                 async: false,
                 headers: {

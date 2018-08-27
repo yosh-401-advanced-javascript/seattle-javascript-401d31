@@ -6,7 +6,7 @@ import {fetchData} from '../lib/utils.js';
 
 import '../style/app.scss';
 
-const pokemonAPI = 'https://pokeapi.co/api/v2/pokemon/';
+const pokemonAPI = 'https://www.pokeapi.co/api/v2/pokemon/';
 
 class App extends React.Component {
 
