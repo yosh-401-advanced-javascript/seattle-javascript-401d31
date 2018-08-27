@@ -3,11 +3,10 @@
 
 ## Learning Objectives
 * Students will be able to create npm scripts for automating command line tasks
-* Students will be able to control function context by using `call`, `apply`, and `bind`
 * Students will be able to handle thrown errors through the use of `try` and `catch`
 * Students will be able to interpret the different types of errors in Javascript
 * Students will be able to determine and describe the runtime complexity of an algorithm
-* Students will understand the difference between a constructor function and a factory function
+* Students will understand the difference between a constructor function, a factory function, and a class.
 * Students will be able to identify and explain the qualities of imperative and functional code
 * Students will be able to implement a functional, array-like, list with `map`, `filter`, `reduce`, and `forEach` methods
 
@@ -93,55 +92,7 @@ try {
 ### Context
 By default, when a Javascript function belongs to an object, it is called a method. The object the method belongs to is called the methods **context**. In a function, the keyword `this` points to it's context.
 
-A functions context can be reassigned using the function methods `call`, `apply` and `bind`. Arrow functions inherit their parent context, and cannot use call, apply, and bind.
-
-##### Call
-`call` is a function method that invokes a function with a specified context and comma separated arguments.
-
-``` javascript
-Array.prototype.reduce.call('hello world', (result, char) => result + char.toUpperCase(), '')
-```
-##### Apply
-`apply` is a function method that invokes a function with a specified context and an array of arguments.
-
-``` javascript
-let args = [(result, char) => result + char.toUpperCase(), '']
-Array.prototype.reduce.apply('hello world', args)
-```
-##### Bind
-`bind` is a function method that returns a new function with specified context and comma separated default arguments.
-
-``` javascript
-// define a generic DOM mutation function
-function childrenSet(...children){
-  this.innerHTML = children.join(' ')
-}
-
-// reset the DOM using childrenSet and call
-childrenSet.call(document.body, '<div id="logo"></div>', '<div id="warning"></div>')
-
-// create DOM mutation helpers using bind
-const bodyClear = childrenSet.bind(document.body)
-const logoGet = () => document.getElementById('logo')
-const warningGet = () => document.getElementById('warning')
-const logoSet = childrenSet.bind(logoGet(), 'code fellows')
-const warningSet = childrenSet.bind(warningGet(), 'WARNING:')
-
-// use the DOM mutation helpers
-logoSet()
-warningSet('password is required')
-
-logoGet().addEventListener('click', () => {
-  bodyClear()
-})
-
-warningGet().addEventListener('click', () => {
-  warningSet('the sky is falling')
-})
-```
-
 ### Functional Programming
-
 
 <!--links -->
 [node error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html
