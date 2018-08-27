@@ -20,9 +20,9 @@ This is a paired lab that will have you integrating OAuth with any provider.
  * configure oauth credentials to support a client app on `http://localhost:PORT`
  * configure oauth credentials to support a server redirect uri to `http://localhost:PORT/oauth`
 * create an implementation library (/auth/lib/providers/`provider`) that holds your logic
-* create an oauth library (/auth/lib/oauth.js) that can identify and use your provider implementation
+* modify the oauth library (/auth/lib/oauth.js) to identify and use your provider implementation
 * create a backend route `GET /oauth` for handling oauth handshaking
-* this route should interface with the oauth library created above
+*can this route should interface with the oauth library created above
 
 #### frontend
 * create an index.html with an anchor tag pointing to the google authorization page
