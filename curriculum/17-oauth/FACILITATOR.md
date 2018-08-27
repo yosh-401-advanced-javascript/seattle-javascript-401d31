@@ -9,6 +9,10 @@ Practice, practice practice. By its nature, OAuth is a 5 step handshake process.
 
 - First, it gives you a chance to explain each part of this long process step by step, and see things build up.
 - Second, because this process is such a pain, it gives YOU a chance to either force error conditions (to have some teaching moments) or recover from unforseen issues that come up in the process
+
+The "golden" implementation of this implementation ends with an "oauth.js" file in the auth/lib folder, which does an import of a provider implmentation in the "providers" folder. We do "Google" in class as a live demo. For lab, the students will be implementing other providers with their partner. We want them to create a new "provider" implementation in the `providers` folder.
+ 
+During code review in the next class, demonstrate dynamically pulling out the individual OAuth implementations and using the correct implementation/provider based on either a configuration setting or even from a queue or hint from the web request (like the user chose to login with facebook vs google). This will be a challenge for them to understand initially, but really ramps up their ability to think wide and write dynamic/responsive code that scales well.
  
 ## What changed from yesterday? 
 In the last class, we introduced the students to BASIC Authentication, which is a simple username/password combination.  Our server would validate a hashed password, create a token, and send that out as both a cookie and plain text.
