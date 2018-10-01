@@ -1,10 +1,5 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) Sorting Algorithms
 ===
 
-## Learning Objectives
-* Students will learn about multiple sorting algorithms
-
-## Readings
-* Read 
-
-## Outline
+## Common Resources
+* [Core Curriculum](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-35/DISCUSSION)
