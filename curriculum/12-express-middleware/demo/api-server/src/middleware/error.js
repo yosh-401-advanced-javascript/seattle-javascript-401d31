@@ -1,6 +1,8 @@
 'use strict';
 
 export default  (err,req,res,next) => {
+  console.error(err);
+
   let error = { error:err };
   res.statusCode = 500;
   res.statusMessage = 'Server Error';

@@ -47,6 +47,7 @@ methods.forEach( (method) => {
 });
 
 router.route = (req,res) => {
+  console.log(`${req.method} ${req.url}`);
 
   return parser(req)
     .then(req => {

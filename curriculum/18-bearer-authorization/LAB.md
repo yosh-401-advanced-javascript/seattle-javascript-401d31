@@ -17,7 +17,6 @@
 * create a new resource that has at least three properties
   * this resource must have a property of `userID` that references the `_id` of the user that created the resource
   * the `userID` property can only be set from an `_id` found using your bearer auth middleware module
-* as always, use the **npm** `debug` module to log function calls that are used within your application
 * using the express `Router`, create routes for doing **RESTFUL CRUD** operations against your resource
 
 ## Server Endpoints

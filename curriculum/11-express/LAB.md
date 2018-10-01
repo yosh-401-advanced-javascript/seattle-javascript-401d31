@@ -35,7 +35,6 @@
 
 ## Learning Objectives  
 * students will be able to create a single resource API using the express framework
-* students will be able to leverage 3rd party helper modules for debugging, logging, and handling errors
 
 ## Requirements
 
@@ -47,8 +46,6 @@
   * a unique `id` property should be included *(node-uuid)*
   * include two additional properties of your choice
 * use the JSON parser included with the `body-parser` module as a middleware component to parse the request body on `POST` and `PUT` routes
-* use the npm `debug` module to log the methods in your application
-* create an `npm` script to automate the `debug` process and start the server
 * persist your API data using the storage module and file system persistence
 
 #### Server Endpoints

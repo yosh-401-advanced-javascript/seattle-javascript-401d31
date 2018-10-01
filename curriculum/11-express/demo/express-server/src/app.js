@@ -7,9 +7,22 @@ let app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+// Log each request, as we had been doing in our http requestHandler
+// We will talk about `next` tomorrow
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
 // Our modules -- import the api and "use" it as middleware for express
 import router from './api/api.js';
 app.use( router );
+
+// Log unhandled errors
+app.use((err, req, res, next) => {
+  console.error(err);
+  next(err);
+});
 
 // Flag to know if we are up and going
 let isRunning = false;
