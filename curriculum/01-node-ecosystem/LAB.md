@@ -18,7 +18,7 @@ Configure the root of your repository with the following files and directories. 
 * **.travis.yml** - contains your travis testing instructions
 * **package.json** - contains npm package config 
   * jest and eslint must be dependencies
-  * create a `lint` script for running eslint `"lint": "eslint **/.js"`
+  * create a `lint` script for running eslint `"lint": "eslint **/*.js"`
   * create a `test` script for running tests
 * **lib/** - contains module definitions
 * **__test__/** - contains unit tests
