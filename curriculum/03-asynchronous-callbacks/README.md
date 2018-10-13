@@ -8,11 +8,6 @@
 * Students will be able to work with raw data using Buffers
 * Students will be able to test asynchronous code using a BDD testing framework
 
-## Resources
-* Watch [what the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-* Read [fs module docs](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
-* Read [understanding error first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
-
 ## Outline
 
 ### Javascript Runtime
