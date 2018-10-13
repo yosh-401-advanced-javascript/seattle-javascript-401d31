@@ -6,10 +6,6 @@
 * Students will be able to manipulate binary data using NodeJS Buffers
 * Students will be able to use EventEmitters to manage asynchronous code
 
-## Resources
-* Read [node buffer api docs]
-* Watch [endian and little endian]
-
 ## Outline
 
 ### Javascript Data Modeling
@@ -118,9 +114,3 @@ DEC |HEX |BIN
 14  |e   |1110   
 15  |f   |1111   
 ```
-
-<!--links -->
-[events api docs]: https://nodejs.org/api/events.html
-[bitmap file format]: https://en.wikipedia.org/wiki/BMP_file_format
-[node buffer api docs]: https://nodejs.org/api/buffer.html
-[endian and little endian]: https://www.youtube.com/watch?v=B50mNoVw21k
