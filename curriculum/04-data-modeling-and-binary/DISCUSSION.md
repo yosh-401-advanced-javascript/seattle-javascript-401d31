@@ -11,11 +11,11 @@ Wiki Entry Ideas:
 * Notes in outline form
 
 ## Skim
-* [Bitmap file format](https://en.wikipedia.org/wiki/BMP_file_format)
+* [Bitmap file format](https://en.wikipedia.org/wiki/BMP_file_format){:target="_blank"}
 
 ## Watch
-* [Endian and little endian](https://www.youtube.com/watch?v=B50mNoVw21k)
+* [Endian and little endian](https://www.youtube.com/watch?v=B50mNoVw21k){:target="_blank"}
 
 ## Bookmark
-* [Node docs: buffers](https://nodejs.org/api/buffer.html)
-* [Node docs: events](https://nodejs.org/api/events.html)
+* [Node docs: buffers](https://nodejs.org/api/buffer.html){:target="_blank"}
+* [Node docs: events](https://nodejs.org/api/events.html){:target="_blank"}

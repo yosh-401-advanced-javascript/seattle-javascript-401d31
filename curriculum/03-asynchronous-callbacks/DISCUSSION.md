@@ -11,11 +11,11 @@ Wiki Entry Ideas:
 * Notes in outline form
 
 ## Read
-* [Understanding error-first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/)
-* [YDKJS: Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md)
+* [Understanding error-first callbacks](http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/){:target="_blank"}
+* [YDKJS: Callbacks](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch2.md){:target="_blank"}
 
 ## Watch
-* [What the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+* [What the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target="_blank"}
 
 ## Bookmark
-* [Node docs: fs module](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html)
+* [Node docs: fs module](https://nodejs.org/dist/latest-v6.x/docs/api/fs.html){:target="_blank"}
