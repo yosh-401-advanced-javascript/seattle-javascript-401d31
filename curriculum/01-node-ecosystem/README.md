@@ -10,16 +10,6 @@
 * Students will learn about continuous integration and continuous delivery
 * Students will be able to configure TravisCI to run their tests on all pushes to GitHub
 
-## Resources
-* Read [about nodejs]
-* Skim [libuv docs]
-* Skim [about v8]
-* Read [what is npm]
-* Read [just another guide to ES6]
-* Skim [node and es6 docs]
-* Read [a gentle intro to tdd in js]
-* Read [getting started with nodeJS on travisCI]
-
 ## Outline
 
 ### Use Your Computer Like A Developer
