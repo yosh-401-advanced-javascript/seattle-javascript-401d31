@@ -28,5 +28,3 @@ Wiki Entry Ideas:
 * [Node error docs](https://nodejs.org/dist/latest-v6.x/docs/api/errors.html){:target="_blank"}
 * [MDN docs: Object prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype){:target="_blank"}
 * [MDN docs: Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes){:target="_blank"}
-
-
