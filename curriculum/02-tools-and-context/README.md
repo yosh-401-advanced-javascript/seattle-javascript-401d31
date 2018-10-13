@@ -10,15 +10,6 @@
 * Students will be able to identify and explain the qualities of imperative and functional code
 * Students will be able to implement a functional, array-like, list with `map`, `filter`, `reduce`, and `forEach` methods
 
-## Resources
-* Read [about package.json]
-* Skim [npm scripts as build tools]
-* Skim [npm scripts docs]
-* Read [semver](http://semver.org/)
-* Read [node error docs]
-* Read [mdn this]
-* Watch [javascript context tutorial]
-
 ## Outline
 
 ### package.json
