@@ -12,7 +12,7 @@ Wiki Entry Ideas:
 
 ## Read
 * [Inheritance](https://medium.com/javascript-scene/3-different-kinds-of-prototypal-inheritance-es6-edition-32d777fa16c9){:target="_blank"}
-* [You Don't Know JS (YDKJS) - Pbjects](https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes){:target="_blank"}
+* [You Don't Know JS (YDKJS) - Objects](https://github.com/getify/You-Dont-Know-JS/tree/master/this%20%26%20object%20prototypes){:target="_blank"}
 * [Eloquent JS - Functional Programming](https://eloquentjavascript.net/1st_edition/chapter6.html){:target="_blank"}
 * [Functional Programming in JS - Free Code Camp](https://medium.freecodecamp.org/functional-programming-in-js-with-practical-examples-part-1-87c2b0dbc276){:target="_blank"}
 
