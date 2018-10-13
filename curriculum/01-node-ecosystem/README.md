@@ -73,13 +73,3 @@ Once you have this file, create an account at travis-ci.com (login with your git
     - npm test
     - npm run lint
 ```
-
-<!--links -->
-[about nodejs]: https://nodejs.org/en/about/
-[node and es6 docs]: https://nodejs.org/en/docs/es6/
-[libuv docs]: https://github.com/libuv/libuv
-[about v8]: https://developers.google.com/v8/
-[what is npm]: https://docs.npmjs.com/getting-started/what-is-npm
-[a gentle intro to tdd in js]: http://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/
-[just another guide to ES6]: https://medium.com/sons-of-javascript/javascript-an-introduction-to-es6-1819d0d89a0f#.wb7rj1gin
- [getting started with nodeJS on travisCI]: https://docs.travis-ci.com/user/languages/javascript-with-nodejs

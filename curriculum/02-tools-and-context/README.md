@@ -84,15 +84,3 @@ try {
 By default, when a Javascript function belongs to an object, it is called a method. The object the method belongs to is called the methods **context**. In a function, the keyword `this` points to it's context.
 
 ### Functional Programming
-
-<!--links -->
-[node error docs]: https://nodejs.org/dist/latest-v6.x/docs/api/errors.html
-[about package.json]: https://docs.npmjs.com/files/package.json
-[npm scripts as build tools]: https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
-[npm scripts docs]: https://docs.npmjs.com/misc/scripts
-[mdn new]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
-
-[mdn object prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype
-[mdn inheritance and the prototype chain]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
-[mdn this]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
-[Javascript Context Tutorial]: https://www.youtube.com/watch?v=fjJoX9F_F5g
