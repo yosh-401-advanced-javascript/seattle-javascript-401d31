@@ -6,4 +6,4 @@
 
 ## Discuss
 
-Make notes in the Wiki in your fork of class repository. Also, ask questions on Slack and put the nuggets in the Wiki too.
+Reply to this discussion with a quiz question to test your classmates’ knowledge of the readings. Alternatively, if you found yourself curious or found a topic unclear, ask a question to further your own knowledge. Then review your classmates' responses and answer one of their questions. If you are the first student to post a question, you do not need to go back and answer a question.
