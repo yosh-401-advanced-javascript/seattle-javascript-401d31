@@ -6,7 +6,7 @@ Below is a collection of resources of varying types and lengths which describe t
 ## Read
 
 * [Just another guide to ES6](https://medium.com/sons-of-javascript/javascript-an-introduction-to-es6-1819d0d89a0f#.wb7rj1gin){:target="_blank"}
-* [A gentle intro to TDD in JS](http://jrsinclair.com/articles/2016/gentle*introduction-to-javascript-tdd-intro/){:target="_blank"} - **Stop** reading once you get to the 'a worked example' section
+* [A gentle intro to TDD in JS](http://jrsinclair.com/articles/2016/gentle-introduction-to-javascript-tdd-intro/){:target="_blank"} - **Stop** reading once you get to the 'a worked example' section
 
 ## Skim
 
