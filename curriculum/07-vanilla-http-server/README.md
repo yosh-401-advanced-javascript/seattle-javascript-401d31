@@ -5,11 +5,6 @@
 * Students will learn to read and write HTTP Request and Response packets
 * Students will be able to create HTTP servers for handling HTTP requests
 
-## Resources
-* Skim [nodejs http module](https://nodejs.org/api/http.html)
-* Skim [wiki list of header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#Request_fields)
-* Skim [wiki list of status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-
 ## Outline
 
 ### [HTTP](https://tools.ietf.org/html/rfc7231)
