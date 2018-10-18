@@ -5,10 +5,6 @@
 * Students will learn about different solutions for persisting data
 * Students will be able to persist data using the file system
 
-## Resources
-* Read [wiki persistence](https://en.wikipedia.org/wiki/Persistence_(computer_science))
-* Read [a brief history of databases](http://avant.org/project/history-of-databases/)
-
 ## Outline
 
 ### Persistence

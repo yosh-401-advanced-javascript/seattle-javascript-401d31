@@ -5,10 +5,6 @@
 * Students will learn to use ES6 Promises to manage asynchronous Javascript
 * Students will learn to build RESTful HTTP servers
 
-## Resources
-* Read [getting started with promises](https://developers.google.com/web/fundamentals/getting-started/primers/promises)
-* Watch [promises](https://www.youtube.com/watch?v=2d7s3spWAzo)
-
 ## Outline
 
 ### URI vs URL
