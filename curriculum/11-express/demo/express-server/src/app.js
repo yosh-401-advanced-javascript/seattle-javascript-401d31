@@ -1,6 +1,9 @@
 'use strict';
 
 import express from 'express';
+
+import router from './api/api.js';
+
 let app = express();
 
 // Express body and URL parsers
@@ -14,8 +17,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Our modules -- import the api and "use" it as middleware for express
-import router from './api/api.js';
+// Our modules -- import the api(above) and "use" it as middleware for express
 app.use( router );
 
 // Log unhandled errors

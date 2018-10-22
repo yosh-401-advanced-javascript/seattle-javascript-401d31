@@ -7,6 +7,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
+import router from './api/api.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/404.js';
 
@@ -38,7 +39,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 // Our API
-import router from './api/api.js';
 app.use(router);
 
 // Our 404 Handling Middleware
