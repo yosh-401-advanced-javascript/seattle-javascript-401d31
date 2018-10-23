@@ -6,11 +6,6 @@
 * Students will learn about Cross Site Origin Resource Scripting (CORS)
 * Students will be able to implement CORS on an HTTP server
 
-## Resources
-* Skim [morgan docs](https://github.com/expressjs/morgan)
-* Skim [cors docs](https://github.com/expressjs/cors)
-* Skim [dotenv docs](https://github.com/motdotla/dotenv)
-
 ## Outline
 
 ### Express middleware
