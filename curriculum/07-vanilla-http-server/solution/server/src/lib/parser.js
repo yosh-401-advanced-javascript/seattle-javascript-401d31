@@ -1,7 +1,7 @@
 'use strict';
 
-const url = require('url');
-const queryString = require('querystring');
+const parseBody = require('./bodyParser.js');
+const parseUrl = require('./urlParser.js');
 
 module.exports = (req) => {
 
@@ -9,42 +9,13 @@ module.exports = (req) => {
 
     if( !(req || req.url) ) { reject('Invalid Request Object. Cannot Parse'); }
 
-    // req.url = http://localhost:3000/api/v1/notes?id=12345
-    req.parsed = url.parse(req.url);
-    /*
-        req.parsed = {
-          pathname: '/api/vi/notes',
-          query: '?id=12345&name=John',
-        }
-       */
-
-    req.query = queryString.parse(req.parsed.query);
-    /*
-        req.query = {
-          id:12345,
-          name:'John'
-        }
-       */
+    parseUrl(req);
 
     if(! req.method.match(/POST|PUT|PATCH/) ) {
       resolve(req);
     }
 
-    let text = '';
-
-    req.on('data', (buffer) => {
-      text += buffer.toString();
-    });
-
-    req.on('end', () => {
-      try{
-        req.body = JSON.parse(text);
-        resolve(req);
-      }
-      catch(err) { reject(err); }
-    });
-
-    req.on('err', reject);
+    parseBody(req, resolve, reject);
 
   });
 
