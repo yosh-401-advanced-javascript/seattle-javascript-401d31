@@ -6,13 +6,6 @@
 * Students will learn about Transpilation with Babel and ESM
 * Students will be able to create fully functional RESTful HTTP servers through the use of Express
 
-## Resources
-* Skim [express api docs](http://expressjs.com/en/4x/api.html)
-* Read [express routing](http://expressjs.com/en/guide/routing.html)
-* Skim [babel api docs](https://babeljs.io/docs/usage/api/)
-* Read [es6 features](https://babeljs.io/learn-es2015/)
-
-
 ## Outline
 
 ### Express

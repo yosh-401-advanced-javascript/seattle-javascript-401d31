@@ -5,10 +5,6 @@
 * Students will learn about relationship modeling
 * Students will be able to create "one to one", "one to many", and "many to many" model relationships
 
-## Resources
-* Read [mongoose populate docs](http://mongoosejs.com/docs/populate.html)
-* Skim [mongoose api docs](http://mongoosejs.com/docs/api.html)
-
 ## Outline
 
 ### Model Relationships

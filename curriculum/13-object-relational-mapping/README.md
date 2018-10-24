@@ -6,11 +6,6 @@
 * Students will learn about Object Document Mapping (ODM)
 * Students will learn to model data using a MongoDB ODM
 
-## Resources
-* Read [mongoDB driver quick start](http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/)
-* Skim [mongoDB driver collection API docs](http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html)
-* Read [mongoose guide](http://mongoosejs.com/docs/guide.html)
-
 ### Outline
 
 ### MongoDB
