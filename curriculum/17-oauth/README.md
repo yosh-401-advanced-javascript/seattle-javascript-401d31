@@ -1,16 +1,9 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 41: OAuth 
+![cf](http://i.imgur.com/7v5ASc8.png) 17: OAuth 
 ===
 
 ## Learning Objectives
 * Students will learn to setup a Google Cloud appliction
 * Students will learn to implement OAuth2 on the server side 
-
-## Readings
-* Skim [OAuth wiki](https://en.wikipedia.org/wiki/OAuth)
-* Read [OAuth2 simplified](https://aaronparecki.com/oauth-2-simplified/)
-* Read [google OAuth2 docs](https://developers.google.com/identity/protocols/OAuth2)
-* Read [google OAuth server side](https://developers.google.com/identity/protocols/OAuth2WebServer)
-* Read [google openid docs](https://developers.google.com/identity/protocols/OpenIDConnect)
 
 ## Outline
 

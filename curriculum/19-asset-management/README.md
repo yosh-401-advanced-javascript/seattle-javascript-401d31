@@ -1,13 +1,8 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 18: Asset Management
+![cf](http://i.imgur.com/7v5ASc8.png) 19: Asset Management
 ===
 
 ## Learning Objectives
 * Students will be able to upload static assets to AWS S3
-
-## Resources
-* Read [multer docs](https://github.com/expressjs/multer)
-* Skim [aws-sdk s3 docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html)
-* Create [AWS account](https://aws.amazon.com/)
 
 ## Outline
 
