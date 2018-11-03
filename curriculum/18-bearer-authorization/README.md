@@ -1,12 +1,9 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 17: Bearer Authorization
+![cf](http://i.imgur.com/7v5ASc8.png) 18: Bearer Authorization
 ===
 
 ## Learning Objectives
 * Students will be able to create a Bearer Authentication parser
 * Students will be able to implement Access Controls in their HTTP server routes
-
-## Resources
-* Read [intro to jwt](https://jwt.io/introduction/)
 
 ## Outline
 
