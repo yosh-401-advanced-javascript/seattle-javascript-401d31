@@ -6,9 +6,6 @@
 * Students will be able to model a User and safely store their sensitive data
 * Students will be able to implement a Basic Authorization parser
 
-## Resources
-* Read [basic auth](https://en.wikipedia.org/wiki/Basic_access_authentication)
-
 ## Outline
 
 ### User Modeling
