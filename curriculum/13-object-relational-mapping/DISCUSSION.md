@@ -4,11 +4,14 @@
 Below is a collection of resources of varying types and lengths which describe the topics for the upcoming lecture.  As you go through the readings each day, you'll find that certain sources work better for your reading and learning style. Focus on those, but also branch out and consume the material in different forms.
 
 ## Read
-* [mongoDB driver quick start](http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/){:target="_blank"}
-* [mongoose guide](http://mongoosejs.com/docs/guide.html){:target="_blank"}
+* [MongoDB vs SQL](https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2){:target="_blank"}
+* [MongoDB Driver Quick Start](http://mongodb.github.io/node-mongodb-native/2.2/quick-start/quick-start/){:target="_blank"}
 
 ## Skim
-* [MongoDB driver collection API docs](http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html){:target="_blank"}
+* [Mongoose guide](http://mongoosejs.com/docs/guide.html){:target="_blank"}
+
+## Bookmark
+* [MongoDB Driver API docs: Collection](http://mongodb.github.io/node-mongodb-native/2.2/api/Collection.html){:target="_blank"}
 
 ## Discuss
 

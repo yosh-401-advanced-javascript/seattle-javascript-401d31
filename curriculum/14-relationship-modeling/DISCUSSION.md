@@ -4,8 +4,7 @@
 Below is a collection of resources of varying types and lengths which describe the topics for the upcoming lecture.  As you go through the readings each day, you'll find that certain sources work better for your reading and learning style. Focus on those, but also branch out and consume the material in different forms.
 
 ## Read
-* [MongoDB vs SQL](https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2){:target="_blank"}
-* [Mongoose populate docs](http://mongoosejs.com/docs/populate.html){:target="_blank"}
+* [Mongoose docs: Populate](http://mongoosejs.com/docs/populate.html){:target="_blank"}
 
 ## Skim
 * [Mongoose API docs](http://mongoosejs.com/docs/api.html){:target="_blank"}
