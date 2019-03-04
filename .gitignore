@@ -5,6 +5,11 @@ temp
 data
 .env 
 *.env
+package-lock.json
+aws.yml
+
+# ignore the webstorm ide dir
+.idea/
 
 ### Vim ###
 # swap

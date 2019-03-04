@@ -15,7 +15,7 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 8,
+    "ecmaVersion": 2018,
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
       "module": true,
