@@ -1,7 +1,0 @@
-language: node_js
-node_js:
-  - "current"
-
-script:
-  - npm run lint
-  - npm test
