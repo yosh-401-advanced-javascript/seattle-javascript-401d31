@@ -2,7 +2,7 @@
 ============================================================================
 
 ## Canvas Submission
-* Link to the README.md in your lab repo
+* Link to the LAB.md in your lab repo
 * **Code Sandbox Submissions**
   * Create a folder called `docs` (under `/public` for React apps)
   * Upload your README.md and any supportive images to this folder.
@@ -11,8 +11,7 @@
 ## Operation
 * In the folder for each class in the class repository, you will find a `lab` folder
 * The folder for each day in the repo contains:
-  * LAB.md - The instructions for the lab
-  * README.md - A template which you will fill out each day to submit your lab 
+  * README.md - The instructions for the lab
   * `starter-code` folders - Contains any starter code for your lab
 * Create a new github repository for each lab
   * If there is a `starter-code` folder for the lab, **copy it's contents** *(not the folder itself)* into your new repository
@@ -23,7 +22,8 @@
     
 ## Configuration
  Configure the root of your code folder with the following files and directories. Thoughtfully name and organize any additional configuration or module files.
- * **README.md** - contains your lab documentation
+ * **README.md** - contains the lab description and instructions
+ * **LAB.md** - contains your lab documentation
  * **.env** - contains env variables (should be git ignored)
  * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
  * **.eslintrc** - contains the course linter configuratoin
@@ -61,7 +61,7 @@
  * Run `jsdoc` and target the docs folder as the target for the build.
  * For API Servers, put an updated `swagger.json` file in the docs/config folder
    * Ensure that your API server has a /doc route to serve the swagger doc, using that config file as its source
- * Copy the README-template.md file from the instructions folder, rname it to `README.md` and include it in your lab folder.
+ * Copy the LAB-template.md file from the reference/submission-instructions folder, rname it to `README.md` and include it in your lab folder.
    * Be sure to include the URLs to your server, api docs, and jsdocs at Heroku
    * Be sure to include a UML / Flow Drawing of your application
  
