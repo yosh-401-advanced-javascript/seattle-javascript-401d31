@@ -12,6 +12,8 @@ These could be added in, swapped, or used as bonus content for the JS curriculum
   - Using node as an aggregation/service layer rather than an API server
   - Scalable Theming (Build over time during 2nd half)
   - Accessibility
+  - Style Guides
+  - HCI and Usability Psychology
   - Schema.org / JSON-ld
   - SEO
   - Material Design and Bootstrap
