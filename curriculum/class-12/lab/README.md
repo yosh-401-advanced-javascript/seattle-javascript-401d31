@@ -2,7 +2,7 @@
 
 ## Before you begin
 * This lab contains 2 folders
-  * `www-server` - The Web Server with the login form 
+  * `www-server` - The Web Server with the login form
   * `auth-server` - The Backend Server that takes care of the authentication and user creation processes
 * **You will need to create 2 new repositories from the contents of these folders**
   * All files/folders must be at the root of the new repository, not in the sub folders they currently reside in.
@@ -39,13 +39,10 @@ Spend no more than 4 hours on this assignment.
 * Your server must be deployed to and working on Heroku, with tests passing in Travis.
 
 ###  Documentation and Presentation
-* Complete the README.md file included in the lab folder, with your deployed resources.
 * Complete the REPORT.md file included in the lab folder and prepare a group presentation for the class based on your findings.
-
 
 ### Assignemnt Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
-
 
 ## Provider Documentation Reference
 * [GitHub](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)

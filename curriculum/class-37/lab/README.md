@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB -  `<Login />` and `<Auth />`
+# LAB -  `<Login />` and `<Auth />`
 =================================================
 
 
@@ -41,6 +41,5 @@
 * Write a suite of UI tests that assert the existence of components based on user login state.
 * You will need to create some mocking interface to fake a server/login to simulate.
 
-
-##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 401 Advanced Javascript 
+![CF](http://i.imgur.com/7v5ASc8.png) 401 Advanced Javascript
 -------------------------------------------------------------
 
 ## Instructor Overview
@@ -10,7 +10,7 @@ This week, they will see TDD for the first time and start to use CI (Travis) and
 
 They will NOT be doing daily Warm-Ups, Practice or Design Challenges for the first 5 classes (they start on Class 06). That said, the instructor should begin each of the first 4 classes with what would be the daily warm-up and practice exercise (and post the code). This sets the stage with the students for how they should be preparing to work each day, and also provides them code as guidance as they (inevitably) fumble through the first set of warm-ups
 
-* Class 00/01: 
+* Class 00/01:
   * On nights and weekends, this will actually be on a Saturday
   * This is a long day, and a brain melter. Lots of demos, lots of good video. Defintely do each of the sections in managagle chunks, record and label each video for easy access in  youtube.
   * Plan for a 6 hour session.
@@ -20,11 +20,11 @@ They will NOT be doing daily Warm-Ups, Practice or Design Challenges for the fir
     * Complete a full lab to serve as the "Gold Standard"
     * Complete CI/CD/TDD Demo
 * Class 02: Working with objects (constructors, factories, classes) at a deep level.
-* Class 03: Async - event loop, callbacks, promises, async/await  
+* Class 03: Async - event loop, callbacks, promises, async/await
 * Class 04: Buffers and file read/write
 * Data Structure: Linked Lists
-* Project: Bitmap Transformer 
-  * Traditionally, this is a beast. Having some experience with buffers on Class 04 should ease that part of the burden, but this is still a monster. 
+* Project: Bitmap Transformer
+  * Traditionally, this is a beast. Having some experience with buffers on Class 04 should ease that part of the burden, but this is still a monster.
   * Students must work in pairs to get it done.
 
 
@@ -65,11 +65,11 @@ We finish out with implementing an Access Control system. More advanced middlewa
 
 The block-end project is a fully baked, authenticated, dynamic modeled, completely tested API server. This is their "Golden Server" that will serve as a primary takeaway from the course and will also power much of the 2nd half (React) projects.
 
-* Data Structure: None 
+* Data Structure: None
 * Project: Complete API Server
 
 ### Block 4 - Realtime
-This block deals with event driven programming at a core level.  We begin the week with a simple lab that uses events within itself to signify that "jobs are done" rather than call a series of functions. 
+This block deals with event driven programming at a core level.  We begin the week with a simple lab that uses events within itself to signify that "jobs are done" rather than call a series of functions.
 
 Students have done some event driven apps before (jQuery) but not at a business level. This will be their first time actually writing and working with multiple servers, clients, and seemingly disconnected codebases.
 
@@ -87,7 +87,7 @@ Focus on getting the students to "start thinking in React", which really means a
 
 From a coding/concept standpoint, the takeaway from this block must be an understanding of how to manage component and application state, how to pass state and methods to child components through props, and how things generally connect.
 
-**State Management** - We will only be using native app/component state. 
+**State Management** - We will only be using native app/component state.
 
 **Build** - We will only be using create-react-app during this first block.
 
@@ -104,7 +104,7 @@ The project at the end of the block is a rebuild of City Explorer. In 301, they 
 
 **State Management** - In this Block, we introduce Redux and manage state globally for all classes.
 
-**Build** - Continue to use create-react-app for labs.  Their focus still needs to be on code.  
+**Build** - Continue to use create-react-app for labs.  Their focus still needs to be on code.
 
 For the end of block build, students will create a CMS that re-involves their API server from earlier in the course. This is a big build that has them getting a list of models, a list of records for each model and then CRUD on each record.
 
@@ -113,7 +113,7 @@ For the end of block build, students will create a CMS that re-involves their AP
 
 ### Block 8 - Auth and Realtime
 
-**State Management** - In this Block, we introduce both the Context API and Hooks and manage state using these methods instead of Native State or Redux.  This is all about teaching the students about choice and choosing the best state manager for the task at hand. 
+**State Management** - In this Block, we introduce both the Context API and Hooks and manage state using these methods instead of Native State or Redux.  This is all about teaching the students about choice and choosing the best state manager for the task at hand.
 
 Once Authentication and Login are wired in, we will revisit Real-Time with socket.io and start creating a chat-like application that requires a login to function and operate.
 
@@ -121,10 +121,10 @@ Once Authentication and Login are wired in, we will revisit Real-Time with socke
 
 For the end of block build, students will work locally (not in code sandbox) and will be required to use webpack instead of create-react-app. The course configs folder contains a working config.  Students should use that as a reference.
 
-The build itself uses socket.io to create an app called 'Hot Takes' - this is a combination of Twitter+Slack. Multiple Channels (namespaces) and Rooms within them. This should feel like slack. The messages themselves should feel more like twitter. They should show in order, have like and dislikes. The "hot take" piece of this requires that the app only shows the most recent 15 messages in any room. History can cloud good conversation!
+The build itself uses socket.io to create an app that uses the Q server from the first half of the course and builds a live front-end dashboard. The API server should already be hooked up to post messages to the Queue on all write activity. (If not, then this should be done in class). The class should re-do their UML of that API and the Q server to cement how it works. On the React side, they'll be connecting to the Q server using the "subscriber" library that they wrote for that Project in block 4. Using it, their app can now "see" all database activity in real time. The project is to connect all of those pieces and make a living dashboard with a killer UI that operates in real time.
 
 * Data Structure: Sorting Algorithms
-* Project: Hot Takes
+* Project: Databae Dashboard
 
 ### Block 9 - React Native and UI Frameworks
 The last block traditionally is difficult. Students have their eyes on their final exam, final projects and graduation.  For that reason, this week is light and fun.

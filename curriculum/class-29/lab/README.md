@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Component Composition
+# LAB - Component Composition
 =================================================================
 
 ## Before you begin
@@ -28,7 +28,7 @@
   * Repeat the process with functional components in different files
     * `<FunctionalStory />` and `<FunctionalDetails />`
   * Your output should repeat, once with each component set
-  
+
 ### Assignment 3  - Conditionals
 * Create a new component (in its own folder) called `If`
 * Code this component to use logic to hide/show it's `props.children`
@@ -38,19 +38,18 @@
 * Use this component to conditionally render items from the previous assignments.
 
 ### Assignment 4  - Modal
-* Fork the [star wars fetcher sandbox](https://codesandbox.io/s/1o64l8pqm4) 
+* Fork the [star wars fetcher sandbox](https://codesandbox.io/s/1o64l8pqm4)
 * Create a new component (in its own folder) called `Modal`
 * Replace the `<h3>` tag that shows the person with a `<Modal>` with the `<h3>` inside it
 * Code out the modal component with the following features:
   * When active, it should render it's `{props.children}`
   * It should draw itself with a close icon/link
   * It should be able to close (i.e. not render)
-  
+
 
 ### Testing
 * Complete basic render testing on these components
 * Complete logical and render testing on the if components
 
-
-##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Dynamic Forms
+# LAB - Dynamic Forms
 =========================================================
 
 ## Before you begin
@@ -44,5 +44,5 @@ In the first phase, you created a form that can edit a single model. In this pha
 * Test the reducers to make sure that each action is properly manipulating state
 * Test the form behavior to ensure that added items are showing in the list, updates are showing real time changes, etc.
 
-##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
