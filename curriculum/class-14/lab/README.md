@@ -32,5 +32,6 @@ Implement Role Based Authentication
 * Add tests to the api routes, asserting restricted access to the routes as shown.
 * Add tests to the mongoose model for the created static and instance methods.
 
-###  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+

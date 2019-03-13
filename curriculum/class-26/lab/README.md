@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Component Based UI
+# LAB - Component Based UI
 ==============================================================
 
 ## Assignment
@@ -27,6 +27,5 @@ Create a counter application using React
     * Where would the buttons look best?
     * Can you make the number "pop"
 
-### Submission Instructions
-* Upload the completed README.md, with diagram to your Code Sandbox
-* Submit a link to your Application running at Code Sandbox
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

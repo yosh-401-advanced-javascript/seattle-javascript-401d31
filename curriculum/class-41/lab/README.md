@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - React Native
+# LAB - React Native
 ========================================================
 
 ## Before you begin

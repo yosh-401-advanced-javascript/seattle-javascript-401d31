@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Socket.io Pub/Sub
+# LAB - Socket.io Pub/Sub
 =====================================================
 
 ## Before you begin
@@ -27,19 +27,19 @@ You should give careful consideration to the visual layout of your application, 
   * Heroku will assign you a port
 * Alter your API server to connect to the Q server at startup
 * Edit your models and make the following changes
-  * Add "post" hooks for `save`, `delete` 
+  * Add "post" hooks for `save`, `delete`
   * For each, publish a new event to the Q server
   * Make sure and publish separate events for `create` and `update`, not just `save`
-  
+
 
 ### Notes - Connections
 * Ensure that you can use `Postman` or `httpie` to hit your server properly.
   * Ensure that all write actions publish the appropriate event and payload into the queue.
   * You can use Postman and your original "logger" client to do this.
   * Once you are confident in the wiring, begin work on the react client.
-  
+
 ### Testing
 * Cover your React application in tests
 
-###  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Application State
+# LAB - Application State
 =============================================================
 
 
@@ -52,7 +52,5 @@ In this assignment, we have a working app that uses Redux for it's state managem
 * Add a third reducer and subscribe to both bits of state
 
 
-##  Documentation
-* Complete the README.md file included in the lab folder
-* A solid UML Diagram of your soulution code is required.
-
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

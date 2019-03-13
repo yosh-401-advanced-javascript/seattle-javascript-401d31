@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Remote CRUD
+# LAB - Remote CRUD
 =======================================================
 
 
@@ -24,5 +24,5 @@ Conver the forms lab into using remote APIs to source the schema and save the re
 ### Stretch Goals:
 * Style it!
 
-###  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

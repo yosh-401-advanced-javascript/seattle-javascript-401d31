@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Context and Hooks
+# LAB - Context and Hooks
 =============================================================
 
 ## Before you begin
@@ -27,5 +27,5 @@ Specifically, build a counter that uses 3 separate components that subscribe to 
   * Can they see context?
   * Can they interact via published functions?
 
-##  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

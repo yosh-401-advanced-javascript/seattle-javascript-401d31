@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - React Testing and Deployment
+# LAB - React Testing and Deployment
 ==============================================================
 
 ## Assignment
@@ -23,7 +23,6 @@
 * Prepare an automated deployment through Cloud Formation
 * Make sure that 'aws.yml' and 'build' are in your .gitignore, and then commit your code back to github to auto-deploy
 
-### Submission Instructions
-* Upload the completed README.md, with diagram to your Code Sandbox
-* Submit a link to your fork of the application running at Code Sandbox with full test coverage
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
 * Submit links to both deployments at AWS

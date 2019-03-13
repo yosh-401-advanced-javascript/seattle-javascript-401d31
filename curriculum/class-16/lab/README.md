@@ -13,7 +13,7 @@ The application currently uses a nested callback to accept a file from the user,
 The task for today is to refactor the application to use events to surface errors and completion status, while also moving away from the big un-testable callback.
 
 
-### Requirements 
+### Requirements
 * The application must accept a filename as a command line parameter
   * Read the file from the file system
   * Convert it's contents to upper case
@@ -29,7 +29,7 @@ The task for today is to refactor the application to use events to surface error
   * Read in a file
   * Uppercase it's contents (stringify the buffer, upper case it, re-buffer-ize it)
   * Save back to the file.
-* Rather than throwing errors and console.log() inline, fire events 
+* Rather than throwing errors and console.log() inline, fire events
 * Implement a separate event listener to "hear" and "deal" with those events
 * Modularize the system
   * Create an event module that has a single event emitter instance
@@ -38,7 +38,7 @@ The task for today is to refactor the application to use events to surface error
     * Read/Write should be done in promises, not callbacks
   * Subscribers to file status events should be in a separate module (maybe called "logger")
     * On a successful conversion and save-back, the logger should send a message
-    * If an error happens, throw it.  
+    * If an error happens, throw it.
 
 ### Testing
 * Write tests around all of your units
@@ -47,5 +47,5 @@ The task for today is to refactor the application to use events to surface error
 * Test event handlers (not events themselves)
 * Use spies to help testing your logger methods (assert that console.log was called right)
 
-###  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations

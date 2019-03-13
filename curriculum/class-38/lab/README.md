@@ -1,4 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Socket.io Client
+# LAB - Socket.io Client
 ============================================================
 
 Today, we begin the construction of a Twitter-like application called "Yakker"
@@ -30,5 +30,5 @@ Extend the functionality of the base **Yakker** application
 * Write tests around all of your units
 * Test event handlers (not events themselves)
 
-###  Documentation
-Complete the README.md file included in the lab folder
+### Assignemnt Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
