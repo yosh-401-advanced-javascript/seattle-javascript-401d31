@@ -42,7 +42,7 @@ Spend no more than 4 hours on this assignment.
 * Complete the REPORT.md file included in the lab folder and prepare a group presentation for the class based on your findings.
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
 
 ## Provider Documentation Reference
 * [GitHub](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
