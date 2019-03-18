@@ -1,46 +1,39 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
+## Lab 00 - Deployment
 
-### Author: Student/Group Name
+### Author: Student Name
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
 
-#### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+![Build Status]()
+* [repo](https://)
+* [travis](https://) 
+* [server](https://)
 
 ### Modules
-#### `modulename.js`
+#### `arithmetic.js`
 ##### Exported Values and Methods
+* `arithmetic.add` - function that returns sum of two numbers
+* `arithmetic.subtract` - function that returns difference of two numbers
+* `arithmetic.multiply` - function that returns product of two numbers
+* `arithmetic.divide`- funtion that returns quotient of two numbers
 
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
+#### `greet.js`
+##### Exported Values and Methods
+* `exports.greet` - function that returns the argument prefreced by string 'hello'
 
 ### Setup
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT` - Defined in the ENV
+
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-  
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* Endpoint: `/`
+  * Returns `true`
 
-#### UML
-Link to an image of the UML for your application and response to events
+#### Tests
+* `npm run test` runs the unit test
+* `npm run lint` runs linter tests
