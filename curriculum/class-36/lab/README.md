@@ -28,4 +28,4 @@ Specifically, build a counter that uses 3 separate components that subscribe to 
   * Can they interact via published functions?
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

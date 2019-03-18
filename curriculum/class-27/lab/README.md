@@ -24,5 +24,5 @@
 * Make sure that 'aws.yml' and 'build' are in your .gitignore, and then commit your code back to github to auto-deploy
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs) for the complete lab submission process and expectations
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
 * Submit links to both deployments at AWS
