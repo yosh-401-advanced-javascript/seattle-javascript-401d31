@@ -1,8 +1,10 @@
 'use strict';
 
+const VehicleFactory = require('../vehicle-factory.js');
 const VehicleConstructor = require('../vehicle-constructor.js');
+const VehicleClass = require('../vehicle-class.js');
 
-let types = ['Constructor'];
+let types = ['Constructor','Factory', 'Class'];
 
 describe('Vehicles', () => {
 
