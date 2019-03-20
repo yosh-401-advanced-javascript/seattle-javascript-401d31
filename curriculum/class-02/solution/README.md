@@ -10,8 +10,16 @@
       
 #### Grading Standards & Notes
   * Features
+    * Students must implement both the `factory` and `class` implementations
+    * The interface must not be changed from that of the `constructor`
+    * i.e. `let something = new Car('whatever');`
   * Code Quality
+    * Ensure that they are exporting both the Car and Motorcycle from the modules, using `module.exports = {Car,Motorcycle}
+    * Ensure that the `factory` implementation exports 2 factory functions that act like constructors, but use Object.assign.
+    * Objects should be frozen.
   * Testing
+    * Test suites should not be touched
+    * The test should run the same tests for all 3 implementation types
   * Deployment
     * Travis Only
   * Documentation
@@ -36,16 +44,15 @@
 
 **Stretch Goals**: `map()`, `filter()`, `reduce()`, `splice()`, `reverse()`
 
-#### Tests
-* This is a class so they'll need to instantiate it to test it
-* Dataset should be built up and manipulated as they run through te tests.
-* Verify length changing as they add/remove
-* Can you foreach/map/etc with only one?
-      
 #### Grading Standards & Notes
   * Features
   * Code Quality
+    * Monitor how they manage the .length and move the indexes around on `shift()` and `unshift()`
   * Testing
+    * This is a class so they'll need to instantiate it to test it
+    * Dataset should be built up and manipulated as they run through te tests.
+    * Verify length changing as they add/remove
+    * Can you foreach/map/etc with only one?
   * Deployment
     * Travis Only
   * Documentation
