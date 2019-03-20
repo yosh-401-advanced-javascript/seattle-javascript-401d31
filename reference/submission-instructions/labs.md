@@ -3,7 +3,13 @@
 
 ## Canvas Submission
 * Link to the README.md in your lab repo
+* README should contain link to open PR on submission branch
+* Keep submission branch PR open in case of resubmit
+* Do NOT merge to master
 
+#### Resubmits
+* Any commits made to submission branch will be updated in the PR
+* In event of assignment resubmission, submit submission branch PR on canvas 
 * **Code Sandbox Submissions**
   * Create a folder called `docs` (under `/public` for React apps)
   * Upload your README.md and any supportive images to this folder.
