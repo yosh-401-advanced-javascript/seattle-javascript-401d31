@@ -53,6 +53,14 @@ In the files folder, you'll see 3 files: `1.txt`, `2.txt`, `3.txt`
 * Do you need to nest?
 * You'll need to change the tests to work with promises instead of callbacks.
 
+#### Task 3: Use async/await to read 3 files
+* Make a copy of the reader.js library called `reader-async.js`
+* Make a copy of the reader.test.js library called `reader-async.test.js`
+* In this new file, convert the code you fixed in task 1 to use the async/await to read in 3 files instead of callbacks
+  * HINT: Use util.promisify() to make fs.readFile work like a promise so that you can await it ...
+* Do you need to nest?
+* You'll need to change the tests to work with async instead of callbacks/promises
+
 #### Testing
 * valid input params from the cli
 * handle errors (i.e. file not found) in a consistent way
