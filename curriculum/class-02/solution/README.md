@@ -14,7 +14,7 @@
     * The interface must not be changed from that of the `constructor`
     * i.e. `let something = new Car('whatever');`
   * Code Quality
-    * Ensure that they are exporting both the Car and Motorcycle from the modules, using `module.exports = {Car,Motorcycle}
+    * Ensure that they are exporting both the Car and Motorcycle from the modules, using `module.exports = {Car,Motorcycle}`
     * Ensure that the `factory` implementation exports 2 factory functions that act like constructors, but use Object.assign.
     * Objects should be frozen.
   * Testing
