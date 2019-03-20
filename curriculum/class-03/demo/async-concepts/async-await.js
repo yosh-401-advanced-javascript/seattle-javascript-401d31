@@ -6,11 +6,11 @@ let request = (url) => {
 
 async function getData(url) {
   let result = await(request(url));
-  console.log(JSON.parse(result));
+  console.log(result);
 }
 
-console.log( getData('http://www.google.com') ); // does nothing
-getData('http://www.google.com'); // code runs in the function
+console.log( getData('http://www.google.com') ); // does nothing (actually logs the promise object);
+getData('http://www.google.com');  // code runs in the function and logs
 
 
 // You can treat these like promises on the client side ...

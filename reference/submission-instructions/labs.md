@@ -10,8 +10,6 @@
 #### Resubmits
 * Any commits made to submission branch will be updated in the PR
 * In event of assignment resubmission, submit submission branch PR on canvas 
-
-
 * **Code Sandbox Submissions**
   * Create a folder called `docs` (under `/public` for React apps)
   * Upload your README.md and any supportive images to this folder.
@@ -68,12 +66,13 @@
 ##  Documentation
  * Write JSDoc for every function
  * Run `jsdoc` and target the docs folder as the target for the build.
+ * UML Diagram [reference](https://www.uml-diagrams.org/index-examples.html)
  * For API Servers, put an updated `swagger.json` file in the docs/config folder
    * Ensure that your API server has a /doc route to serve the swagger doc, using that config file as its source
- * Copy the LAB-template.md file from the reference/submission-instructions folder, rname it to `README.md` and include it in your lab folder.
+ * Copy the REDME-template.md file from the reference/submission-instructions folder, rname it to `README.md` and include it in your lab reposity in the root folder.
    * Be sure to include the URLs to your server, api docs, and jsdocs at Heroku
    * Be sure to include a UML / Flow Drawing of your application
-o
+
 
 ## Grading Rubric
 Note: Not every lab will require all facets below. In these cases, points application from other (perhaps higher focus areas) will be increased.
