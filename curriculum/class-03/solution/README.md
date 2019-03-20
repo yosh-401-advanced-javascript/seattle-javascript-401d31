@@ -43,12 +43,15 @@
 ### Task 2: 
   * They must refactor the code from callbacks to chained promises
       
-### Task 3 (Stretch Goal)
+### Task 3: 
+  * They must refactor the code from callbacks to chained async/await
+        
+### Task 4 (Stretch Goal)
   * Use Promise.all()
   * Create an array of fs.readFile promises
   * Bring in the results in order
 
-### Task 4 (Stretch Goal)
+### Task 5 (Stretch Goal)
   * Use a recursive function to do a callback for each file
   * Load the list of files into an array
   * For the recursion, keep shifting the array until it's empty

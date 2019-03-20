@@ -2,6 +2,17 @@
 
 let util = require('util');
 
+// Turn any function that uses the error first callback pattern into a promise...
+let promisify = (fn) => (...args) => {
+  return new Promise( (resolve, reject) => {
+    fn(...args, (err, data) => {
+      if ( err ) { reject(err); }
+      else { resolve(data); }
+    });
+  });
+};
+
+
 let someFunction = function(word, cb) {
   cb(null, word);
 };
@@ -11,14 +22,7 @@ someFunction('foo', (err, data) => {
   else { console.log('cb style', data); }
 });
 
-let promisify = (fn) => (...args) => {
-  return new Promise( (resolve, reject) => {
-    fn(...args, (err, data) => {
-      if ( err ) { reject(err); }
-      else { resolve(data); }
-    });
-  });
-};
+
 
 let customPromisedWay = promisify(someFunction);
 customPromisedWay('bar')
