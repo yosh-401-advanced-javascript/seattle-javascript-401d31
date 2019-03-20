@@ -13,7 +13,6 @@ let myCallback = (data) => {
 };
 
 let useTheCallback = (cb) => {
-  // do lots of work and come up with some text
   let text = 'some random text';
   console.log('1: Calling the callback');
   cb(text);
@@ -21,7 +20,6 @@ let useTheCallback = (cb) => {
 };
 
 useTheCallback(myCallback);
-
 
 // ERROR FIRST Callbacks --- always expect to be called with the first parameter being either an
 // error when an error occurs, or as undefined when not.  In the "good" case, data is given as
@@ -49,16 +47,16 @@ useTheErrorFirstCallback(errorFirstCallback);
 // It goes into the callback queue, not the call stack (until it finishes)
 let asyncCallback = (err, data) => {
   if ( err ) { throw err; }
-  setTimeout(
-    () => console.log('2: Received', data), 500
-  );
+  console.log('2: Received', data);
 };
 
 let useTheAsyncCallback = (cb) => {
   // do lots of work and come up with some text
   let text = 'some random text';
   console.log('1: Calling the async callback');
-  cb(undefined, text);
+  setTimeout( () => {
+    cb(undefined, text);
+  },1000);
   console.log('3: After the async callback');
 };
 
