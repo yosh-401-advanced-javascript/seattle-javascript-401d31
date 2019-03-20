@@ -1,19 +1,37 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) Solution: Async
 =====================================================
 
-## Overview
-  * Use the fs module to read a file, change its contents, and save it out
-    * Stretch Goal: Modularize that and Write tests around this, using a mocked fs module
-    * This will be a "start from scratch" assignment, students must complete this before tackling the 2nd assignment.
-  * Read in 3 files, in order, and output their contents (in order)
-    * Write modular code
-    * Write tests
-    * Use Callbacks and Promises
-    * Students will get starter code here, which is a monolithic file that reads in 3 files in series, using a callbacks, with a mocked test.
-      * This code doesn't work 
-        * callbacks aren't nested
-        * the callback function isn't called right
-        * as-is, it can't be tested.
+## Lab Requirements
+
+### Lab Assignment 1
+* Use the fs module to read a file, change its contents, and save it out
+  * This will be a "start from scratch" assignment, students must complete this before tackling the 2nd assignment.* 
+      
+#### Grading Standards & Notes
+  * Features
+    * Must read from CLI
+    * Must write back to the file something different
+  * Code Quality
+  * Testing
+    * Must use the mocked fs to test this
+  * Deployment
+    * Travis Only
+  * Documentation
+    * README Standards 
+    * JSDoc Required
+    
+#### Lab Assistance Notes
+* They will need help understanding process.argv and reading in options from the command line. Drive them to the docs, and help them verbalize what they'll want to be searching for.
+* This will be their first time dealing with a mock.  
+
+---
+
+### Lab Assignment 2
+* Students will get starter code here, which is a monolithic file that reads in 3 files in series, using a callbacks, with a mocked test.
+  * This code doesn't work 
+  * callbacks aren't nested
+  * the callback function isn't called right
+  * as-is, it can't be tested.
         
 ### Task 1:
   * They must first nest the callbacks and get the right data back to the calling function, index.js will work and the tests will also pass
@@ -35,3 +53,24 @@
   * Load the list of files into an array
   * For the recursion, keep shifting the array until it's empty
   * Load up the response array and return on the last iteration
+      
+#### Grading Standards & Notes
+  * Features
+    * Must read from CLI
+    * Must read and print file contents in order
+  * Code Quality
+  * Testing
+    * Must use the mock
+    * Assert that we're getting the order right
+    * Assertions around error handling and bad input/output
+  * Deployment
+    * Travis Only
+  * Documentation
+    * README Standards 
+    * JSDoc Required
+    
+#### Lab Assistance Notes
+* Promises are tough to understand at first. 
+* Have them verbalize what they want to do in english
+  * "Do this thing, **then** give me some data and I'll deal with it"
+
