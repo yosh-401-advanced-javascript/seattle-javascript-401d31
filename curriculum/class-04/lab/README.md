@@ -6,11 +6,8 @@
 * You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
 
 ## Getting Started
-In the `______` folder, there is _____.
 
-In the `______` folder, you'll find a file called `______` that does _______.
-
-## Resources  
+#### Resources  
 * [Buffer Docs](https://nodejs.org/api/buffer.html)
 
 ## Requirements
@@ -22,7 +19,7 @@ In the `______` folder, you'll find a file called `______` that does _______.
   * Iterate them with a forEach loop
   * `console.log()` each name
 * You may not use `Buffer.from()` to simply create a buffer `from` chunks of your target code. Rather, you will need to work character by character.
-* Verify your work by running `node loop.js` from within the `files` folder and seeing the array items printed out.
+* Verify your work by running `node loop.js` from within the `files` folder and seeing the array items printed out
 
 ### Part 2: Create an `<article>`
 * Using only buffers and bit manipulation, read the file `pair-programming.txt` from the `files` folder and make the following transformations:
@@ -35,9 +32,11 @@ In the `______` folder, you'll find a file called `______` that does _______.
 * Verify your work by rendering it in a browser (use live-server)
 
 ### Testing
-* mock the fs so that you can fudge the file contents for your tests
-* That should let you control what is in the buffers and the output
+* test all your units 
+  * break down the challenges into small, focused functions
+* mock the fs so that you can fudge the file contents for your tests 
+  * should let you control what is in the buffers and the output
 
 
-### Assignemnt Submission Instructions
+### Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
