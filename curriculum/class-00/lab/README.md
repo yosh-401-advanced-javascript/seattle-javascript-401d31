@@ -8,7 +8,6 @@
 #### Getting Started
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-
 ## Requirements
 
 - Create a branch rule disallowing merges to master unless Travis builds are green
