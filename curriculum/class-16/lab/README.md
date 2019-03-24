@@ -1,19 +1,19 @@
-# Lab - Event Driven Applications
+# LAB: Event Driven Applications
 
 Create an event driven "smart app"
 
-### Before you begin
-* You'll need to perform an `npm install` in this folder to have jest installed as a dependency.
+## Before you begin
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-## Assignment
+## Requirements
+
 Refactor the provided application using best practices for modularization, asynchronous file access, and test-ability.
 
 The application currently uses a nested callback to accept a file from the user, open it, uppercase its contents, and then save it back. It throws errors on failure and logs out success messages.
 
 The task for today is to refactor the application to use events to surface errors and completion status, while also moving away from the big un-testable callback.
 
-
-### Requirements
+### Assignment
 * The application must accept a filename as a command line parameter
   * Read the file from the file system
   * Convert it's contents to upper case
@@ -40,6 +40,7 @@ The task for today is to refactor the application to use events to surface error
     * On a successful conversion and save-back, the logger should send a message
     * If an error happens, throw it.
 
+
 ### Testing
 * Write tests around all of your units
   * File Read, File Save, Uppercase
@@ -47,5 +48,6 @@ The task for today is to refactor the application to use events to surface error
 * Test event handlers (not events themselves)
 * Use spies to help testing your logger methods (assert that console.log was called right)
 
-### Assignemnt Submission Instructions
+
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
