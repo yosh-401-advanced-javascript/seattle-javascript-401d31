@@ -1,13 +1,15 @@
 # LAB - Data Modeling
 
-## Before you begin
-* Create a new repository and copy the contents of this lab folder into it.
-* You'll need to initialize this folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
-
-## Overview
 You have been provided a partially working API server. The assignment for today is to complete the server's functionality by creating the data models and writing a full test suite
 
-## Assignment 1: MODELING
+## Before you begin
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+
+
+## Requirements
+
+
+### Task 1: Modeling
 The provided API server is setup to work, but the data models are missing
 
 * Work in the `models` folder in the starter code
@@ -34,19 +36,24 @@ The provided API server is setup to work, but the data models are missing
   * How is the server calling each of the model methods?
   * What does the server expect back in terms of data?
   * How do the models need to return that data?
-    
-## Assignment 2: INTEGRATING
-* Once the models are completed and tested, you can intergrate them into the API Server.
+
+  
+---
+
+### Task 2: INTEGRATING
+* Once the models are completed and tested, you can integrate them into the API Server.
 * Copy those models into the server's `src` folder and the the server routes should begin to call into your newly minted models and "just work", 
   * Don't forget to copy over your tests as well...
 * So long as your models obey the interface contract, your API routes should work.
   * Verify this manually
-  * Write supergoose tests to verify that your routes are functioning
+  * Write supertest tests to verify that your routes are functioning
     * /post saves a new record
     * /get gets all records
     * ...etc
     
-## Assignment 3: MODULARIZING
+---
+
+### Task 3: MODULARIZING
 
 * Move the 2 sets of routes and functions into separate, external routers
   * They should go into a `routes` folder as separate files
@@ -54,12 +61,14 @@ The provided API server is setup to work, but the data models are missing
   * The app will now need to import and use these routes
 * Once you've moved the routes out, the tests that you wrote should still work.
   * This is a main benefit of testing -- asserting that major changes don't effect functionality!
-   
+
 ### Testing
 * Write a complete set of tests for all data models, independent of the server
-* For testing the server and routes, use `supertest` to do end-to-end testing
-  * What we're testing is not whether express works, but whether your routes are doing the correct things.
-* Your tests must be running green on travis.com
+* For testing the server and routes, use `supergoose` to do end-to-end testing
 
-### Assignemnt Submission Instructions
+
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+
+
+
