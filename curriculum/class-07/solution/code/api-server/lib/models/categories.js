@@ -1,13 +1,11 @@
 'use strict';
 
-class Posts  {
+class Categories  {
 
   constructor() {
     this.schema = {
       id: {required:true},
-      author: {required:true},
-      title: {required:true},
-      article: {},
+      name: {required:true}
     };
     this.database = [];
   }
@@ -61,4 +59,4 @@ class Posts  {
 
 }
 
-module.exports = Posts;
+module.exports = Categories;

@@ -1,9 +1,19 @@
 # LAB: Express 
 
-## Assignments
 **This is a paired Lab**
 
-### Middleware and Routing Practice
+## Before you begin
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+
+## Getting Started
+In the `objects` folder, there is a full implementation of a Car and Motorcycle object created using a constructor function, with an index.js file that you can use to visually play with the objects as well as tests.
+
+In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` that tests the implementation of both a `Car` and a `Motorcycle` using the constructor pattern.
+
+## Requirements
+
+
+### Middleware, Routing, Modularization Practice
 * Create a repository called `lab-07-middleware` and copy the contents of the `starter-code/middleware` folder into it.
 * Complete the following tasks in the `server.js` file
   * Write error handling middleware
@@ -23,12 +33,16 @@
 ### Testing Practice
 * Create a repository called `lab-07-testing` and copy the contents of the `starter-code/testing` folder into it.
 * Complete the following tasks
-  * Convert the server.js from an app into a module
-  * Create an index.js file that imports the server and starts it
-  * Start the server and manually your routes (/a should work, /e should error, anything else should 404)
-  * Stop the server and complete the tests.
+  * Write unit tests for the middleware
+    * Mock `request`, `response`, `next`
+    * Make assertions on their use/modifications
+    * Spy on next
+  * Start the server and visually verify your routes 
+    * /a should work
+    * /e should error
+    * anything else should 404
+  * Stop the server and complete tests for it using `supertest`
     * Make note of how things are wired and provide answers to the embedded questions
- 
 
 ### API Server
 * Create a repository called `lab-07-api-server` and copy the contents of the `starter-code/api-server` folder into it.
@@ -39,7 +53,32 @@
   * Create a constructor that all input for new and updated records (POST and PUT) can be run through.
   * This constructor should return a properly formatted and validated object (type checked, and required fields)
   * Only with a good object, should a write operation be allowed to occur
-* Add support for a second model (with it's own routes and "database")
+* JSDoc for all methods, routes
+* Provide full swagger documentation
+  * Your Lab-06 Swagger should be suitable as a starting point
+  * Wire up to a route called `/docs/api` using the `swagger-ui-express` npm module
+  * Note that your routes might be different as well as the returned data shape ... update accordingly
+
+  
+### Testing
+* Server tests have been partially provided.
+  * Complete the tests to cover all of your routes.
+* Write unit tests for the middleware
+* Write unit tests for the data model.
+
+
+### Stretch Goal:
+* Add support for `products`
+  * New Model
+  * Additional Routes
+
+
+## Assignment Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+
+
+
+
 
 
 #### API Server Documentation
