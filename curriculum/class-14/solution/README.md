@@ -1,7 +1,23 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Access Control (ACL)
-==========================================================
+# Solution: Access Control
 
-## Solution Notes
+## Lab Requirements
+
+Most of the requirements are completed for the students by the instructor in lecture.  This is mainly going to involve the students doing some re-implementations, troubleshooting, and digging in for testing.
+
+#### Grading Standards & Notes
+
+There's plenty of opportunity here for modularization and simplification. While simply getting tests written and the features to work warrants a "complete", only go to a 10 if the students take the extra steps of code cleanup and modularization.
+
+  * Features
+  * Code Quality
+  * Testing
+  * Deployment
+    * Travis and Heroku
+  * Documentation
+    * README Standards
+    * JSDoc Required
+
+#### Lab Assistance Notes
 
 `src/auth/middleware.js`
 
@@ -42,8 +58,3 @@ A small change has to be made to the signup route. After `save()`, you need to t
 **TESTING**
 There are examples of the test patterns given in the starter code. Students should complete the full gamut of tests and flesh out the suite.
 
-## Grading Notes
-
-Most of the requirements are completed for the students by the instructor in lecture.  This is mainly going to involve the students doing some re-implementations, troubleshooting, and digging in for testing. 
-
-There's plenty of opportunity here for modularization and simplification. While simply getting tests written and the features to work warrants a "complete", only go to a 10 if the students take the extra steps of code cleanup and modularization.
