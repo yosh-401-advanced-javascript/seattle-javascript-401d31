@@ -9,7 +9,7 @@ describe('web server', () => {
   it('should respond with a 500 on an error', () => {
 
     return mockRequest
-      .put('/posts/0')
+      .put('/categories/0')
       .then(results => {
         expect(results.status).toBe(500);
       });
@@ -36,10 +36,10 @@ describe('web server', () => {
 
   });
 
-  it('should respond properly on request to /posts', () => {
+  it('should respond properly on request to /categories', () => {
 
     return mockRequest
-      .get('/posts')
+      .get('/categories')
       .then(results => {
         expect(results.status).toBe(200);
       });
