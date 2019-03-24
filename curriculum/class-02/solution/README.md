@@ -27,10 +27,11 @@
     * JSDoc Required
     
 #### Lab Assistance Notes
-* They will feel like this is a copy/paste exercise, but encourage to reference their previous iteration and continutally re-implement, from different starting points.
+###Vehicles
+* They will feel like this is a copy/paste exercise, but encourage students to reference their previous iteration and continutally re-implement, from different starting points
 * Hammer in the point of never changing the tests, only the implementation
-* There's no package.json provided, and the tests/index don't require all of the files in.
-* They'll need to figure out how to wire all of that in.
+* There's no package.json provided, and the tests/index don't require all of the files in
+* They'll need to figure out how to bring in the starter files
 * Show them how the tests are running in a loop, that may confuse them.
 
 
