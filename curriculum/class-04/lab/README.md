@@ -6,6 +6,7 @@
 * You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
 
 ## Getting Started
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
 #### Resources  
 * [Buffer Docs](https://nodejs.org/api/buffer.html)
@@ -36,7 +37,6 @@
   * break down the challenges into small, focused functions
 * mock the fs so that you can fudge the file contents for your tests 
   * should let you control what is in the buffers and the output
-
 
 ### Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

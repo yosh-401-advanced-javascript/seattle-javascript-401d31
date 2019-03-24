@@ -1,12 +1,7 @@
 # LAB: Title
 
-#### Before you begin
-* Example: You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
-
 #### Getting Started
-In the `______` folder, there is _____.
-
-In the `______` folder, you'll find a file called `______` that does _______.
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
 ## Requirements
 #### Part 1

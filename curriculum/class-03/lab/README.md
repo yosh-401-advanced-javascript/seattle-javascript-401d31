@@ -1,12 +1,9 @@
 # LAB: Async
 
-## Before you begin
-* Create a new git repository for this lab
-* Copy the starter-code contents into it
-* You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+## Getting Started
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
 ## Requirements
-
 ### Part 1 - Read and Write to a File
 Write a node application, called `edit-file.js` in the root of your project that will modify a file on your computer;
 

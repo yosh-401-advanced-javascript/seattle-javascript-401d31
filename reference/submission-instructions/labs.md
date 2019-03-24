@@ -1,6 +1,8 @@
 ![cf](http://i.imgur.com/7v5ASc8.png) Lab Submission Instructions
 ============================================================================
 
+
+
 ## Canvas Submission
 * Link to the README.md in your lab repo
 * README should contain link to open PR on submission branch
@@ -28,9 +30,16 @@
     * Create a new one for each day that contains a server deployment
 
 ## Configuration
+
+#### Getting Started
+
+* Create a new git repository
+* Copy the contents of this `lab` folder into that repository at the root level
+* Initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+
+#### Configure your repository
  Configure the root of your code folder with the following files and directories. Thoughtfully name and organize any additional configuration or module files.
- * **README.md** - contains the lab description and instructions
- * **LAB.md** - contains your lab documentation
+ * **README.md** - contains your lab documentation
  * **.env** - contains env variables (should be git ignored)
  * **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file
  * **.eslintrc** - contains the course linter configuratoin

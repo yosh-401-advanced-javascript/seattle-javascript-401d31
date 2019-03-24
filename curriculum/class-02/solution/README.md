@@ -14,7 +14,7 @@
     * The interface must not be changed from that of the `constructor`
     * i.e. `let something = new Car('whatever');`
   * Code Quality
-    * Ensure that they are exporting both the Car and Motorcycle from the modules, using `module.exports = {Car,Motorcycle}
+    * Ensure that they are exporting both the Car and Motorcycle from the modules, using `module.exports = {Car,Motorcycle}`
     * Ensure that the `factory` implementation exports 2 factory functions that act like constructors, but use Object.assign.
     * Objects should be frozen.
   * Testing
@@ -27,10 +27,11 @@
     * JSDoc Required
     
 #### Lab Assistance Notes
-* They will feel like this is a copy/paste exercise, but encourage to reference their previous iteration and continutally re-implement, from different starting points.
+###Vehicles
+* They will feel like this is a copy/paste exercise, but encourage students to reference their previous iteration and continutally re-implement, from different starting points
 * Hammer in the point of never changing the tests, only the implementation
-* There's no package.json provided, and the tests/index don't require all of the files in.
-* They'll need to figure out how to wire all of that in.
+* There's no package.json provided, and the tests/index don't require all of the files in
+* They'll need to figure out how to bring in the starter files
 * Show them how the tests are running in a loop, that may confuse them.
 
 

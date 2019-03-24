@@ -1,46 +1,57 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+# ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 
-## Project Name
+## Project Name: Classes-Inheritance
 
-### Author: Student/Group Name
+### Author: Author Name
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
 
-#### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
+- [pr](https://github.com/hingham/02)
+- [travis](http://xyz.com)
+- [back-end](https://dashboard.heroku.com/apps/classes)
+- [jsdocs](https://dashboard.heroku.com/apps/classes/docs)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### `vehicle-constructor.js`
 
-###### `bar(array) -> array`
-Usage Notes or examples
+`Vehicle.drive()`
+`Vehicle.stop()`
+`Vehicle.Car`
+`Vehicle.Motorcycle`
+`Vehicle.Motorcycle.wheelie()`
+
+#### `list.js`
+
+`List.push`
+`List.pop()`
+`List.shift()`
+`List.unshift(item)`
+`List.unshift(item)`
+`List.forEach(item)`
+`List.map(item)`
+`List.filter(item)`
+`List.reduce(item)`
 
 ### Setup
+
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+
+- `PORT` - assign a port number
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-  
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
 
-#### UML
-Link to an image of the UML for your application and response to events
+- `npm start`
+- Endpoint: `/`
+
+#### Tests
+
+- How do you run tests? 
+`npm run test`
+`npm run lint`
+- Assertions made:
+  \*\* Array methods work correctly and handle appropriate input
+- vehicle-class.js, vehicle-constructor.js, and vehicle-factory.js
+  ** Car has 4 wheels, can drive, can stop, cannot do a wheelie
+  ** Motorcycle has 2 wheels, can drive, can stop, cannot do a wheelie
+
