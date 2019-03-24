@@ -17,7 +17,7 @@ There's plenty of opportunity here for modularization and simplification. While 
     * README Standards
     * JSDoc Required
 
-#### Lab Assistance Notes
+#### Solution Code Notes
 
 `src/auth/middleware.js`
 
@@ -57,4 +57,8 @@ A small change has to be made to the signup route. After `save()`, you need to t
 ---
 **TESTING**
 There are examples of the test patterns given in the starter code. Students should complete the full gamut of tests and flesh out the suite.
+
+
+#### Lab Assistance Notes
+
 
