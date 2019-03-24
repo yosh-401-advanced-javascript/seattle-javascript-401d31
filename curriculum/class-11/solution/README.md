@@ -20,10 +20,9 @@
     * JSDoc Required
     * UML
 
-### Lab Assistance Notes
+#### Solution Code Notes
 
-#### Bugs ...
-
+**BUGS...**
 * `app.js` requires authRouter, but never uses it
 * `auth/router.js` - `/signin` route is configured as a .get instead of a .post
 * `routes/books.js`
@@ -36,3 +35,5 @@
   * Line 24: Function needs a parameter (authString) to work
   * Line 28: Need to create from object, not array
   * ~ line 36, they'll need to set `res.user` and `res.token` before calling next()
+
+#### Lab Assistance Notes
