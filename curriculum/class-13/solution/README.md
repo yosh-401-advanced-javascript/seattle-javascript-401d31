@@ -19,7 +19,7 @@
     * JSDoc Required
     * UML
 
-#### Lab Assistance Notes
+#### Solution Code Notes
 
 The code samples below from the solution code indicate some good pathways for students to follow to implement the requirements
 
@@ -77,4 +77,5 @@ users.statics.authenticateToken = function(token) {
 };
 ```
 
+#### Lab Assistance Notes
 
