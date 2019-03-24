@@ -1,5 +1,10 @@
 # LAB: Buffers - File Transformers
 
+## Before you begin
+* Create a new git repository for this lab
+* Copy the starter-code contents into it
+* You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+
 ## Getting Started
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
@@ -27,13 +32,11 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
 * Save the file as `index.html` in the `files` folder
 * Verify your work by rendering it in a browser (use live-server)
 
-
-***Software Engineering Note!***
-*Break down the challenges into small, focused and testable functions*
-
-## Testing 
-* Test each function/unit 
-* Create a target file to use as comparison so that you have something to assert your work against
+### Testing
+* test all your units 
+  * break down the challenges into small, focused functions
+* mock the fs so that you can fudge the file contents for your tests 
+  * should let you control what is in the buffers and the output
 
 ### Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
