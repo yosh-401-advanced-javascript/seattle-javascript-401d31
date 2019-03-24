@@ -1,22 +1,24 @@
-# Lab - TCP Chat Server
-
-For this assignment, you will be building a TCP chatroom. Clients should be able to connect to the chatroom through the use of telnet. Clients should also be able to run special commands to exit the chatroom, list all users, reset their nickname, and send direct messages. You may add as many features to this application as you would like. Do not use any third party libraries and testing is *not* required.
+# LAB: TCP Chat Server
 
 ## Before you begin
-* You'll need to perform an `npm install` in this folder to have jest installed as a dependency.
+Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-## Assignment
-Refactor the provided application using best practices for modularization, events, test-ability
+## Getting Started
 
-## Requirements 
-Refactor the provided chat server code as follows ...
+## Requirements
+
+For this assignment, you will be building a TCP chatroom. Clients should be able to connect to the chatroom through the use of telnet. Clients should also be able to run special commands to exit the chatroom, list all users, reset their nickname, and send direct messages. You may add as many features to this application as you would like. Do not use any third party libraries.
+
+### Assignment
+Refactor the provided application using best practices for modularization, events, test-ability as follows...
+
 * Ensure that every function has JSDoc Notation
 * Convert to the use of events to trigger actions
 * Create a TCP Server using the NodeJS `net` module
 * Modularize the parser and socket pool into separately loadable (and test-able) modules
 * Modularize the actions into separately loadable (and test-able) modules
   * You can use a node module called 'require-directory' to read those in all at once.
-* Create a Client constructor module that models an individual connection 
+* Create a Client constructor module that models an individual connection
   * Each client instance should contain (at least) `id`, `nickname`, and `socket` properties
 * Clients should be able to send messages to all other clients by sending it to the server
 * Clients should be able to run special commands by sending messages that start with a command name which in-turn emit an event that is handled by an action module.
@@ -33,13 +35,8 @@ Refactor the provided chat server code as follows ...
 ### Testing
 * Write tests around all of your units
 * Test event handlers (not events themselves)
-* Use spies to assert that you're calling event handlers 
+* Use spies to assert that you're calling event handlers
 
-### Deployment
-* Your server need not be deployed to Heroku for this lab. However, installing it remotely will allow it to be publicly tested and played with.
 
-###  Documentation
-Complete the README.md file included in the lab folder
-
-### Assignemnt Submission Instructions
+## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
