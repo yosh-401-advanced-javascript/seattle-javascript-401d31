@@ -34,10 +34,7 @@ app.use(v1Router);
 app.use(notFound);
 app.use(errorHandler);
 
-/**
- * Start Server on specified port
- * @param port {integer} (defaults to process.env.PORT)
- */
+
 let start = (port = process.env.PORT) => {
   app.listen(port, () => {
     console.log(`Server Up on ${port}`);
