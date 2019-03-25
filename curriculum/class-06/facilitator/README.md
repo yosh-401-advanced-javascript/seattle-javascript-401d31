@@ -31,6 +31,9 @@
 * API Servers
   * Handle REST Requests
   * Documented with [Swagger](https://swagger.io/)
+    * Document routes, params, query strings
+    * Create schemas for input and output specification
+    * Documentation is "live" and runs against your actual API
 * Multiple Tiers of Servers and Services
   * Most services require auth/auth
   * Web servers usually don't go directly to a REST API
