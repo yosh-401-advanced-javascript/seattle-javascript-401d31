@@ -1,7 +1,29 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Solution: Bearer Authorization
-====================================================================
+# Solution: Bearer Authorization
 
-## Token Expiration
+## Lab Requirements
+
+
+#### Grading Standards & Notes
+  * Features
+    * Students must implement at least 1 alternative means of token expiration
+  * Code Quality
+    * Follow best practices
+    * Code should be extensible
+      * Modular logic, based on configuration from ENV
+  * Testing
+    * Tests must be provided to assert token security and expiration
+  * Deployment
+    * Travis and Heroku
+  * Documentation
+    * README Standards
+    * JSDoc Required
+    * UML
+
+#### Solution Code Notes
+
+The code samples below from the solution code indicate some good pathways for students to follow to implement the requirements
+
+**Token Expiration**
 
 `users-model.js`
 
@@ -25,7 +47,7 @@
   };
 ```
   
-## Single Use Tokens
+**Single Use Tokens**
 
 `users-model.js`
 
@@ -55,4 +77,5 @@ users.statics.authenticateToken = function(token) {
 };
 ```
 
+#### Lab Assistance Notes
 
