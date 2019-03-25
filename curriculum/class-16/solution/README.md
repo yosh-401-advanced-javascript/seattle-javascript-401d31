@@ -1,7 +1,25 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Event Driven Applications
-==========================================================================
+# Solution: Event Driven Applications
 
-## Notes
+## Lab Requirements
+
+
+#### Grading Standards & Notes
+  * Features
+    * Event Driven
+    * Modularized Properly
+  * Code Quality
+    * Look for succinct, testable units
+  * Testing
+    * Tests should be written only for the event handlers (units/functions)
+    * Students should not endeavor to test any actual events
+  * Deployment
+    * Travis Only
+  * Documentation
+    * README Standards
+    * JSDoc Required
+
+
+#### Solution Code Notes
 
 * The tests include
   * a mock of the `fs` module
@@ -13,4 +31,4 @@
 * We don't test `emit()` or `on()` directly.  Those are already tested
 
 
-
+#### Lab Assistance Notes
