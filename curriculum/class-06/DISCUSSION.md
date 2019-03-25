@@ -11,11 +11,14 @@ Wiki Entry Ideas:
 
 ## Read
 * [http basics](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+* [why swagger api documentation](https://swagger.io/solutions/api-documentation/)
 
 ## Watch
 * [http and rest](https://www.youtube.com/watch?v=Q-BpqyOT3a8)
 
 ## Bookmark
+* [swagger documentation](https://swagger.io/docs/)
+* [swagger editor](https://editor.swagger.io)
 * [http reference](https://code-maze.com/the-http-reference/)
 * [rest reference](https://www.restapitutorial.com/lessons/httpmethods.html)
 

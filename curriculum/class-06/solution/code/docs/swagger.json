@@ -1,10 +1,15 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.1",
   "info": {
+    "title": "Core API",
     "description": "The worlds funnest little API",
-    "version": "1.0.0",
-    "title": "Core API"
+    "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "http://localhost:8080/"
+    }
+  ],
   "paths": {
     "/categories": {
       "get": {
@@ -12,132 +17,157 @@
         "responses": {
           "200": {
             "description": "Returned a list of categories",
-            "schema": {
-              "$ref": "#/definitions/getAll"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/getAll"
+                }
+              }
             }
           }
         }
       },
       "post": {
         "description": "Create a new category",
-        "consumes": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "record",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Category"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
             }
-          }
-        ],
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "Returned the created category",
-            "schema": {
-              "$ref": "#/definitions/Category"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
             }
           }
         }
       }
     },
     "/categories/{id}": {
-      "parameters": [
-        {
-          "in": "path",
-          "name": "id",
-          "required": true,
-          "type": "integer"
-        }
-      ],
       "get": {
         "description": "Get one category",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Returned a single category",
-            "schema": {
-              "$ref": "#/definitions/getOne"
-            }
-          }
-        }
-      },
-      "delete": {
-        "description": "Delete one category",
-        "responses": {
-          "200": {
-            "description": "Deletes a single category",
-            "schema": {
-              "$ref": "#/definitions/getOne"
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/getOne"
+                }
+              }
             }
           }
         }
       },
       "put": {
         "description": "Create a new category",
-        "consumes": [
-          "application/json"
-        ],
         "parameters": [
           {
-            "name": "record",
-            "in": "body",
+            "name": "id",
+            "in": "path",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Category"
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Category"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Returned the created category",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Category"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "description": "Delete one category",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
             }
           }
         ],
         "responses": {
           "200": {
-            "description": "Returned the created category",
-            "schema": {
-              "$ref": "#/definitions/Category"
+            "description": "Deletes a single category",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/getOne"
+                }
+              }
             }
           }
         }
       }
     }
   },
-  "definitions": {
-    "Category": {
-      "type": "object",
-      "required": [
-        "name"
-      ],
-      "properties": {
-        "name": {
-          "type": "string"
+  "components": {
+    "schemas": {
+      "Category": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
         }
-      }
-    },
-    "getAll": {
-      "type": "object",
-      "items": {
-        "type": "object",
-        "properties": {}
       },
-      "example": {
-        "count": 2,
-        "results": [
-          "{}",
-          "{}"
-        ]
-      }
-    },
-    "getOne": {
-      "type": "object",
-      "items": {
+      "getAll": {
         "type": "object",
-        "properties": {}
+        "example": {
+          "count": 2,
+          "results": [
+            "{}",
+            "{}"
+          ]
+        }
       },
-      "example": {}
+      "getOne": {
+        "type": "object",
+        "example": {}
+      }
     }
-  },
-  "host": "localhost:3000",
-  "basePath": "/",
-  "schemes": [
-    "http"
-  ]
+  }
 }
