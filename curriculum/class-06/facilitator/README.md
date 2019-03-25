@@ -28,6 +28,9 @@
   * Addresses the METHODS you can run against a RESOURCE
   * Usually JSON
   * Generally Versioned
+* API Servers
+  * Handle REST Requests
+  * Documented with [Swagger](https://swagger.io/)
 * Multiple Tiers of Servers and Services
   * Most services require auth/auth
   * Web servers usually don't go directly to a REST API
