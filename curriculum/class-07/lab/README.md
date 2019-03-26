@@ -6,12 +6,9 @@
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
 ## Getting Started
-In the `objects` folder, there is a full implementation of a Car and Motorcycle object created using a constructor function, with an index.js file that you can use to visually play with the objects as well as tests.
-
-In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` that tests the implementation of both a `Car` and a `Motorcycle` using the constructor pattern.
+In the `starter-code`, there are folders that map to each of the lab assignments. You'll be creating 3 new repositories today, one for each part of the assignment.
 
 ## Requirements
-
 
 ### Middleware, Routing, Modularization Practice
 * Create a repository called `lab-07-middleware` and copy the contents of the `starter-code/middleware` folder into it.
@@ -29,6 +26,8 @@ In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` t
   * Move the `/c` and `/d` routes into it
   * Export it
   * Import it into the server file and properly `use()` it.
+  
+**Engineering Note** - *Modularity is a tool that not only makes your code more readable and consumable by other developers, it helps you to think about how to break problems down*
 
 ### Testing Practice
 * Create a repository called `lab-07-testing` and copy the contents of the `starter-code/testing` folder into it.
@@ -43,6 +42,8 @@ In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` t
     * anything else should 404
   * Stop the server and complete tests for it using `supertest`
     * Make note of how things are wired and provide answers to the embedded questions
+    
+**Engineering Note** - *Testing servers without side-effects is crucial. More critical is not having to manage starting/stopping a server in multiple environments.*
 
 ### API Server
 * Create a repository called `lab-07-api-server` and copy the contents of the `starter-code/api-server` folder into it.
