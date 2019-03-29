@@ -2,8 +2,10 @@
 
 jest.mock('fs');
 
+const ioClient = require('socket.io-client');
+const socketSpy = jest.spyOn(ioClient.socket, 'emit').mockImplementation( () => {console.log('foobar'); });
+
 const file = require('../lib/files.js');
-console.log('file', file);
 
 describe('files module', () => {
 
@@ -19,6 +21,7 @@ describe('files module', () => {
     const b = Buffer.from(str);
     return file.saveFile('foo.txt', b)
       .then( success => {
+        expect(socketSpy).toHaveBeenCalledWith('foo');
         expect(success).toBeUndefined();
       })
       .catch( err => {
@@ -37,7 +40,7 @@ describe('files module', () => {
         expect(err).toBeDefined();
       });
   });
-  
+
   it('can uppercase a buffer', () => {
     const str = 'test words';
     const STR = 'TEST WORDS';
@@ -45,7 +48,7 @@ describe('files module', () => {
     const B = Buffer.from(STR);
     expect(file.convertBuffer(b)).toEqual(B);
   });
-  
+
   it('can alter a file', () => {
     return file.alterFile('foo.txt')
       .then( success => {
@@ -61,5 +64,5 @@ describe('files module', () => {
       })
       .catch( err => expect(err).toBeDefined() );
   });
-  
+
 });
