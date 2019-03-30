@@ -73,8 +73,20 @@
  * Your tests must be running green on travis.com
 
 ##  Documentation
- * Write JSDoc for every function
- * Run `jsdoc` and target the docs folder as the target for the build.
+
+#### Write JSDoc for every function
+* Copy a proper jsdoc config file (ref: configs folder, class repo) into the `/docs/config` folder
+* Create a `jsdoc` script in your package.json that will use that config file to generate documentation in the `/docs` folder
+* Write proper jsdoc for every function, module, and class.
+  * Be descriptive about the functions' purpose
+  * Declare data types for params and return values
+* For API labs:
+  * Create a static route in `/api/v1.js` that uses `express.static()` to map `/doc` to the `/docs` folder that will house the generated jsdoc
+* Run `jsdoc` and target the docs folder as the target for the build.
+
+
+
+
  * UML Diagram [reference](https://www.uml-diagrams.org/index-examples.html)
  * For API Servers, put an updated `swagger.json` file in the docs/config folder
    * Ensure that your API server has a /doc route to serve the swagger doc, using that config file as its source
