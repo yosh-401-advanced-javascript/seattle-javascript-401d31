@@ -5,9 +5,10 @@ You have been provided a partially working API server. The assignment for today 
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
+* install uuid, supertest, mongodb-memory-server
+* start mongo server: `mongod --dbpath=/Users/path/to/data/db`
 
 ## Requirements
-
 
 ### Task 1: Modeling
 The provided API server is setup to work, but the data models are missing
@@ -17,6 +18,7 @@ The provided API server is setup to work, but the data models are missing
 * Implement each data model, in different manners, using only TDD
 * **Categories**
   * Create this as a class
+  * Create a mongoose schemas for this collection
   * The model class should hold and manage the data in memory
   * The model class should expose methods that match REST verbs
     * `get()`
@@ -44,7 +46,7 @@ The provided API server is setup to work, but the data models are missing
 * Once the models are completed and tested, you can integrate them into the API Server.
 * Copy those models into the server's `src` folder and the the server routes should begin to call into your newly minted models and "just work", 
   * Don't forget to copy over your tests as well...
-* So long as your models obey the interface contract, your API routes should work.
+* So long as your models obey the interface contract, your API routes should work
   * Verify this manually
   * Write supertest tests to verify that your routes are functioning
     * /post saves a new record
@@ -63,7 +65,7 @@ The provided API server is setup to work, but the data models are missing
   * This is a main benefit of testing -- asserting that major changes don't effect functionality!
 
 ### Testing
-* Write a complete set of tests for all data models, independent of the server
+* Write a complete set of tests for all data routes and REST operations, independent of the server
 * For testing the server and routes, use `supergoose` to do end-to-end testing
 
 
