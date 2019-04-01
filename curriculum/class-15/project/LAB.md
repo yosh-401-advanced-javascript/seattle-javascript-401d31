@@ -1,4 +1,4 @@
-# LAB: API Server
+# Block 3 Project: API Server
 
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions

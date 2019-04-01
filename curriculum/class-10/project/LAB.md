@@ -1,4 +1,4 @@
-# Project: Book App v2
+# Block 2 Project: Book App v2
 
 Refactor the Code Fellows 301 Book App, migrating it from Postgres(SQL) into Mongo(noSQL) for data storage and modularize the server.
 

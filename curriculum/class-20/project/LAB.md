@@ -1,4 +1,4 @@
-# LAB: Q Server
+# Block 4 Project: Q Server
 
 **Project: Build a Multi-Tenant Message Queue Server.**
 
@@ -44,11 +44,6 @@ The Queue server has the ability to see which clients are connected,  to which Q
 
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
-
-## Getting Started
-
-## Requirements
-
 
 ### Assignment: Queue Server
 
