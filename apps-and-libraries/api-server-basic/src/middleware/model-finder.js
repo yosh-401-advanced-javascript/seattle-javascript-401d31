@@ -2,7 +2,8 @@
 const fs = require('fs');
 const util = require('util');
 const readdir = util.promisify(fs.readdir);
-const state = util.promisify(fs.stat);
+
+const modelsFolder = `${__dirname}/../models`;
 
 /**
  * Model Finder Middleware
@@ -20,20 +21,19 @@ const state = util.promisify(fs.stat);
  */
 const load = (req,res,next) => {
   let modelName = req.params.model.replace(/[^a-z0-9-_]/gi, '');
-  req.model = require(`../models/${modelName}/${modelName}-model.js`);
+  req.model = require(`${modelsFolder}/${modelName}/${modelName}-model.js`);
   next();
 };
 
 
 const list = () => {
-  const modelsFolder = `${__dirname}/../models`;
   return readdir(modelsFolder)
-    .then(contents =>
-      contents.filter((entry) =>
-        fs.lstatSync(`${modelsFolder}/${entry}`).isDirectory() && fs.statSync(`${modelsFolder}/${entry}/${entry}-model.js`)
-      )
+  .then(contents =>
+    contents.filter((entry) =>
+      fs.lstatSync(`${modelsFolder}/${entry}`).isDirectory() && fs.statSync(`${modelsFolder}/${entry}/${entry}-model.js`)
     )
-    .catch(console.error);
+  )
+  .catch(console.error);
 };
 
 module.exports = {load,list};

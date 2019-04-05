@@ -10,7 +10,6 @@ Over the course of the previous 2 blocks, you have separately created an `auth-s
 
 In this project, the core requirement is to marry those 2 servers to create a single, authenticated API server.
 
-
 ### Assignment Title
 * API Routes must now be protected with the proper permissions based on user capability
   * `app.get(...)` should should not require authentication
@@ -26,7 +25,8 @@ In this project, the core requirement is to marry those 2 servers to create a si
 
 **Implementation Notes/Advice**
   * Use the code you've already written for the `auth-server` and the `api-server`!
-  * Add the auth module from the `auth-server` to the API server
+  * Add the `auth` module/folder from the `auth-server` to the API server
+  * Import and use the auth routes in the API server
   * Create users and roles in the mongo database
 
 ### Testing
