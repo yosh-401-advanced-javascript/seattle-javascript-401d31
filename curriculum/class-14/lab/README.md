@@ -21,9 +21,10 @@ Implement Role Based Authentication
   * `router.delete('/bye-bye)` should require the `delete` capability
   * `router.get('/everything')` should require the `superuser` capability
 * You will need to restrict based on the given permission via middleware
-* Implementation of the ACL itself should be completed as a separate model populated virtually (not as a hard-coded table within the User Model as done in the demo)
-  * Hint: This might impact the .can() function and how you build out the token
-  * You will need to create, allocate, and identify roles and capabilities permissions in a new collection called 'roles' in  your mongoose database
+* Implementation of the ACL itself should be re-written using a separate model populated as a virtual field in the users table
+   * *not as a hard-coded table within the User Model as done in the demo*
+   * Hint: This might impact the .can() function and how you build out the token
+   * You will need to create, allocate, and identify roles and capabilities permissions in a new collection called 'roles' in  your mongoose database
 
 ### Testing
 * Add tests to the api routes, asserting restricted access to the routes as shown.
