@@ -39,6 +39,7 @@ The provided API server is setup to work, but the data models are missing
   * What does the server expect back in terms of data?
   * How do the models need to return that data?
 
+**Engineering Note** Data contracts (APIs) are the heart of a system. When it's well established and agreed upon, code is movable and extendable
   
 ---
 
@@ -62,7 +63,8 @@ The provided API server is setup to work, but the data models are missing
   * They will need to export an express router instance
   * The app will now need to import and use these routes
 * Once you've moved the routes out, the tests that you wrote should still work.
-  * This is a main benefit of testing -- asserting that major changes don't effect functionality!
+
+**Engineering Note** This is a main benefit of testing -- asserting that major changes don't effect functionality!
 
 ### Testing
 * Write a complete set of tests for all data routes and REST operations, independent of the server

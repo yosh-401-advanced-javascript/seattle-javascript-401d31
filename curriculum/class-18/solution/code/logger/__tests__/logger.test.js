@@ -1,10 +1,9 @@
 'use strict';
 
-const events = require('../lib/events');
-const logger = require('../lib/logger.js');
+const logger = require('../logger.js');
 
 describe('logger', () => {
-  
+
   it('throws an error on file-error with payload', () => {
     expect(() => {
       logger.err('octopus');
@@ -13,7 +12,7 @@ describe('logger', () => {
 
   it('ignores errors on file-error without payload', () => {
     expect(() => {
-      logger.err();
+      logger.error();
     }).not.toThrow();
   });
 
@@ -30,5 +29,5 @@ describe('logger', () => {
     expect(spy).not.toHaveBeenCalled();
     spy.mockRestore();
   });
-  
+
 });

@@ -2,12 +2,21 @@
 
 const fs = require('fs');
 const util = require('util');
+const net = require('net');
 
-// Our event pool/monitor
-const events = require('./lib/events.js');
+const socket = new net.Socket();
 
-// Listen for things to happen and log them out
-const logger = require('./lib/logger.js');
+const options = {
+  port: process.env.PORT || 3001,
+  host: process.env.HOST || 'localhost',
+};
+
+socket.connect(options, () => {});
+
+socket.on('close', function() {
+  console.log('Connection closed');
+});
+
 
 // -------------------------------------------------
 // Read in a file, save it, throw up some events...
@@ -27,6 +36,9 @@ const convertBuffer = buffer => Buffer.from(buffer.toString().trim().toUpperCase
 loadFile(file)
   .then( contents => convertBuffer(contents) )
   .then( buffer => saveFile(file,buffer) )
-  .then( () => events.emit('file-save', file) )
-  .catch( error => events.emit('file-error', error) );
+  .then( () => socket.write(`save ${file}`) )
+  // .then( () => socket.destroy() )
+  .catch( error => socket.write( `error ${error}`) );
+
+
 

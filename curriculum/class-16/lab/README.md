@@ -25,20 +25,16 @@ The task for today is to refactor the application to use events to surface error
 * Ensure that every function has JSDoc Notation
 * Refactor the use of callbacks for fs operations into promises
   * You can use util.promisify() to do this.
-* Separate the functionality of that big callback into it's parts, so that you can run them indepedently as well as test.
+* Separate the functionality of that big callback into it's parts, so that you can run them independently as well as test.
   * Read in a file
   * Uppercase it's contents (stringify the buffer, upper case it, re-buffer-ize it)
   * Save back to the file.
 * Rather than throwing errors and console.log() inline, fire events
 * Implement a separate event listener to "hear" and "deal" with those events
 * Modularize the system
-  * Create an event module that has a single event emitter instance
-  * File Reading/Writing/Uppercasing should happen in one module
-    * Each operation should be in a separate function
-    * Read/Write should be done in promises, not callbacks
-  * Subscribers to file status events should be in a separate module (maybe called "logger")
-    * On a successful conversion and save-back, the logger should send a message
-    * If an error happens, throw it.
+  * Create an `event` module that has a single event emitter instance
+  * Create a `logger` module that listens for and responds to events by doing a `console.log()` with something useful about the event.
+
 
 
 ### Testing
