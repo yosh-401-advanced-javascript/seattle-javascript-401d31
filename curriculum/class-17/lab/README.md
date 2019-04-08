@@ -18,11 +18,17 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
 
 ## Requirements
 
+Refactor the provided application (`app.js`) using best practices for modularization, asynchronous file access, and test-ability.
+
 Connect the application (app.js) to the server (server.js) and emit messages related to file access.  Connect a new application (logger.js) to the server and log all file activity.
+
 
 ### Assignment
 
-* Clean up the `app.js` code to use promises and a more stable/testable approach
+* Refactor `app.js` to be modular, testable, and clean
+  * Read/Write should be done in promises, not callbacks
+  * File Reading/Writing/Uppercasing should happen in one module
+    * Each operation should be in a separate function
 * Alter `app.js` to connect to the running server using TCP
   * On file errors, write an error message to the socket
   * On file save, write a save message to the socket.
