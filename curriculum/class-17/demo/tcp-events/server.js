@@ -25,8 +25,11 @@ let dispatchEvent = (buffer) => {
 
   // Push to the pool that matches the event name
   if ( allowedEvents.includes(event) ) {
+
+    let eventPayload = {event,payload};
+
     for (let socket in socketPool) {
-      socketPool[socket].write(`${event} ${payload}`);
+      socketPool[socket].write(JSON.stringify(eventPayload));
     }
   }
   else {

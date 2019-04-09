@@ -17,7 +17,6 @@ socket.on('close', function() {
   console.log('Connection closed');
 });
 
-
 // -------------------------------------------------
 // Read in a file, save it, throw up some events...
 // -------------------------------------------------
@@ -33,12 +32,12 @@ const saveFile = (file,buffer) => writeFile(file,buffer);
 
 const convertBuffer = buffer => Buffer.from(buffer.toString().trim().toUpperCase());
 
-loadFile(file)
-  .then( contents => convertBuffer(contents) )
-  .then( buffer => saveFile(file,buffer) )
-  .then( () => socket.write(`save ${file}`) )
-  // .then( () => socket.destroy() )
-  .catch( error => socket.write( `error ${error}`) );
+const alterFile = file => {
+  return loadFile(file)
+    .then(contents => convertBuffer(contents))
+    .then(buffer => saveFile(file, buffer))
+    .then(() => socket.write(`save ${file}`) && socket.end() )
+    .catch(error => socket.write(`error ${error}`) && socket.end() );
+};
 
-
-
+module.exports = {loadFile, saveFile, convertBuffer, alterFile};

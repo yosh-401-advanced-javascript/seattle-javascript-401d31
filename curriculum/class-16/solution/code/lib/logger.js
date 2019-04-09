@@ -6,13 +6,13 @@ const logger = module.exports = exports = {};
 
 logger.err = (payload) => {
   if(payload) {
-    throw new Error(payload);
+    console.error(payload);
   }
 };
 
 logger.save = (payload) => {
   if ( payload ) {
-    console.log(`File Saved, ${payload}`);
+    console.log(payload);
   }
 };
 

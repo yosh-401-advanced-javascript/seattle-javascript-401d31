@@ -20,6 +20,7 @@ This server will manage all connections, receive all inbound messages and broadc
 * Adds connected sockets to a pool (object, keyed by random ID)
 * On disconnect, remove socket from the pool
 * Whenever data comes in, see if the first word is a recognized "event" and then broadcast it by looping all sockets
+* At this point, you can have the students use netcat (`nc`) to connect to your server and type things and have the server start spitting the words out. This is fun and makes the demo more interactive
 
 **Talking Points** - 
     * How can we better manage the events? 
@@ -34,6 +35,7 @@ This "server" connects to the event server and just listens for it to broadcast 
 
 * Connect to the server by host and IP
 * On incoming data, log it out.
+* While this is running alongside the server, as you and students continue to type into the terminal, the logger will now start showing the output, too.
 
 **Talking Points** - How can this be setup to care about specific events, and maybe even handle them differently?
 

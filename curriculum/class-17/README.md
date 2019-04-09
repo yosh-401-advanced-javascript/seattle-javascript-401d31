@@ -22,8 +22,10 @@
 ## CS Concept:
 * TCP Packets
 
-### EventEmitter
+### Event Queues
 Much of the NodeJS architecture is built around the use of events. All objects that emit events in NodeJS are instances of the `EventEmitter` constructor. EventEmitter's are a great way to handle controlling asynchronous events. Functions can be registered as listeners for an event on instances of the EventEmitter class. These instances can emit events and pass the listener's data.
+
+In practical applications, multiple "disconnected" services can communicate with one another using various protocols using proprietary APIs.  Generally, this is done through a central "Hub" server (or Queue) which recieves all inbound messages, scrubs the content, and then broadcasts those messages to connected subscribers.
 
 ### OSI Model  
 Programmers and engineers have been able to network computers since the early 1970s. As the needs of networked computers evolved, there where many solutions developed to connect two ore more computers together and share information between them. Over time, several different conceptual models have also been developed to help describe the different networking solutions. In the mid 1980s the _"Open Systems Interconnection Reference Model"_ (OSI model) was developed as a seven layer model. This seven layer OSI model has continued to accurately describe the different processes in computer networking, and is still widely used as a point of reference while working in networked systems today. A programer or engineer is usually responsible for the goals of a specific layer and communicating with the layer above and below. Not every computer network solution uses all seven layers, for example HTTP skips the Presentation and Session layers and lives directly on top of the Transport layer.
