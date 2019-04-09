@@ -17,33 +17,17 @@ In the `starter-code`, there are folders that map to each of the lab assignments
   * Write not found middleware and a catch-all route that uses it
   * Write middleware that runs on every route that adds a property called `requestTime` with a value of the current Date/Time to the request object
   * Write middleware that runs on every route that will run a `console.log()` containing the **method**, **path**, and the new property `requestTime` from the request
-  * Write middleware that runs on the `/d` route that raises an error using `next`
-  * Write middleware that runs on the and `/b` route that takes a number as a parameter, squares it, and and sets that value on the request object in a property called `number`
+  * Write middleware that runs only on the `/d` route that raises an error using `next`
+  * Write middleware that runs only on the `/b` route that takes a number as a parameter, squares it, and and sets that value on the request object in a property called `number`
     * Alter the `/b` route to `.send()` that number from the request object to the browser
 * Ensure that all of your routes and middleware work as expected
 * Create a router in a separate file called `routes.js`
-  * Move the `/c` and `/d` routes into it
+  * Move just the `/c` and `/d` routes into it
   * Export it
   * Import it into the server file and properly `use()` it
   
 **Engineering Note** - *Modularity is a tool that not only makes your code more readable and consumable by other developers, it helps you to think about how to break problems down*
 
-
-### Implement Middleware Tests
-* Create a repository called `lab-07-testing` and copy the contents of the `starter-code/testing` folder into it
-* Complete the following tasks
-  * Write unit tests for the middleware
-    * Mock `request`, `response`, `next`
-    * Make assertions on their use/modifications
-    * Spy on next
-  * Start the server and visually verify your routes
-    * /a should work
-    * /e should error
-    * anything else should 404
-  * Stop the server and complete tests for it using `supertest`
-    * Make note of how things are wired and provide answers to the embedded questions
-    
-**Engineering Note** - *Testing servers without side-effects is crucial. More critical is not having to manage starting/stopping a server in multiple environments.*
 
 ### API Server
 * Create a repository called `lab-07-api-server` and copy the contents of the `starter-code/api-server` folder into it
@@ -59,6 +43,8 @@ In the `starter-code`, there are folders that map to each of the lab assignments
   * Your Lab-06 Swagger should be suitable as a starting point
   * Wire up to a route called `/docs/api` using the `swagger-ui-express` npm module
   * Note that your routes might be different as well as the returned data shape ... update accordingly
+
+**Engineering Note** - *Testing servers without side-effects is crucial. More critical is not having to manage starting/stopping a server in multiple environments.*
 
 ### Testing
 * Server tests have been partially provided
