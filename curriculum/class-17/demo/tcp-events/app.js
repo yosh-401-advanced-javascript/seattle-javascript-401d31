@@ -10,7 +10,7 @@ const events = ['create','foo','read','baz','update','bing','rain','attack','err
 
 setInterval( () => {
   let event = events[ Math.floor( Math.random() * events.length ) ];
-  client.write( `${event} just happened!` );
+  client.write( `${event} an event (${event}) just happened!` );
 },500);
 
 client.on('close', function() {

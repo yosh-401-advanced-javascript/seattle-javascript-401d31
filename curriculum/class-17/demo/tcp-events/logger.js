@@ -7,7 +7,8 @@ const client = new net.Socket();
 client.connect(3001, 'localhost', () => {});
 
 client.on('data', function(data) {
-  console.log('Received: ' + data);
+  let payload = JSON.parse(data);
+  console.log(payload);
 });
 
 client.on('close', function() {

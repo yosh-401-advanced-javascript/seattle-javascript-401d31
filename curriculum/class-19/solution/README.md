@@ -1,27 +1,35 @@
-# Solution: Socket.io Namespaces and Rooms
+# Solution: Socket.io Message Queue Server
 
 ## Lab Requirements
-Students will be writing a server that accepts connections to 2 namespaces: `numbers` and `letters`, each with a room (`negative` and `lowercase`) that can be optionally joined by a client.
 
-Students should also compose an `app.js` that runs an interval and emits the `next-number` and `next-letter` events periodically.
-
-[Running Client Application](https://pmww0ww42q.codesandbox.io/)
+### Assignment 1: File Writer
+* This is effectively the same solution as from Class 06
+* The difference being the use of the queue server instead of straight socket.io
+  * Requirement of a server to be running
+  * Requirement of logger to be running
+  
+### Assignment 2: API Server
+* Adding Q Publishing to the API
+* To execute, students need to:
+  * Require `@nmq/q/client` in the `models/mongo.js` file
+  * Publish "database" / "create|update|delete" events in the appropriate methods, following those operations
 
 #### Grading Standards & Notes
   * Features
-    * The server must respond to 2 events: `next-number` and `next-letter` and emit `number` and `letter` events with some payload.
-    * For connections that join the rooms, those rooms must emit `_number` and `_letter` events **only to sockets that have joined** the `negative` and `lowercase` channels, respectively.
+    * Server and Logger need to be running and passing events
+    * File reader (4th run) should be perfect by now
+      * Uses the Message Queue server
+    * API Server needs to have the correct events firing on CRUD operations (or errors)
   * Code Quality
-    *
   * Testing
-    *
+    * Spies should be placed on the event running functions
   * Deployment
-    * Travis Only
-    * React app is the visual validator
+    * All servers to deployed to Heroku
+    * Heroku logs should show the output
+    * Since TAs can't get there, students should provide a screenshot to prove.
   * Documentation
     * README Standards
     * JSDoc Required
 
 #### Lab Assistance Notes
-
 

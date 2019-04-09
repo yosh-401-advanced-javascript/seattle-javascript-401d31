@@ -1,22 +1,17 @@
 # Solution: Q Server
 
-#### Grading Standards & Notes
-  * Features
-    * Server Library and App
-    * Client (subscriber) Library
-    * Publisher Library
-    * Multiple subscribers and publishers going at the same time to use the server
-  * Code Quality
-    * Classes
-    * Modularity
-    * Make creative use of namespaces and rooms to handle pub/sub
-  * Testing
-    * Units
-    * Functional tests require mocking of socket.io
+## Grading Standards & Notes
   * Deployment
-    * Travis, AWS
-  * Documentation
-    * README Standards
-    * JSDoc Required
+    * API Server running at Heroku
+    * Queue Server running at AWS
+    * Logger Server running at Azure
+  * Testing / Verification
+    * Use Postman to POST, PUT, DELETE records in the API
+    * View logs on Azure Server
+      * The Q Server at AWS should broadcast the events
+      * The Logger server at Azure should respond to them
 
-#### Lab Assistance Notes
+## Lab Assistance Notes
+  * Ensure that all servers have the correct ENV variables set
+    * QUEUE_SERVER is required for the API and the Logger
+    * Likely, AWS will not require a specific port, just a URL
