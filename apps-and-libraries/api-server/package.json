@@ -17,6 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nmq/q": "^1.0.2",
     "bcrypt": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",

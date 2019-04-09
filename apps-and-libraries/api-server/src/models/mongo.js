@@ -1,8 +1,6 @@
 'use strict';
 
-// players.post('save', function() {
-//   Q.publish('database', 'create', {action:'save', collection:'players',id:this.id});
-// });
+const Q = require('@nmq/q/client');
 
 /** Class representing a generic mongo model. */
 class Model {
