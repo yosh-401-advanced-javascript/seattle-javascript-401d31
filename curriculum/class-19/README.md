@@ -1,11 +1,11 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Socket.io Namespaces and Rooms
-============================================================
+#  Socket.io - Message Queue Server
 
 ## Learning Objectives
 
 **Students will be able to ...**
 
-* Manage a grouped connection pool in a socket.io server application
+* Describe and Draw the architecture for a Message Queue server
+* Describe namespaces and rooms in Socket.io
 
 ## Outline
 * :05 **Housekeeping/Recap**
@@ -20,10 +20,7 @@
 ## Computer Science Concept:
 * Namespaces and Clustering
 
-## UI Concept:
-* SASS Modules
-
-## Main Topic:
+## How do the `@nmq/q` client and server work?
 
 Within a socket.io server, by default, every socket that connects is in the same 'pool' of sockets. Everyone potentially hears every event.
 
