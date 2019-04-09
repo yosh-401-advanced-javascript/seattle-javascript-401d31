@@ -18,6 +18,12 @@
   * Documentation
     * README Standards 
     * Swagger Required
+
+* Grading Process:
+  * Pull down the student lab
+  * Start json-server
+  * Copy and paste terminal commands from their readme and checkout localhost:3000 to see if the commands perform expected function
+    * Insist that students have clear commands and examples in the readme that can be copy and pasted to push students towards good documentation habits and facilitate more quality grading 
     
     
 ### API: json-server
@@ -44,8 +50,9 @@ This is the students second "RTFM" lab, so push them in that direction.
   * They need to first build their server and tinker with it so they know how it works.
   * Leave it running
   * Write swagger doc that they can run against their own server.
-  * They have been provided a simple starter swagger.json file (GET only) that they can paste into the swagger online editor.
+  * They have been provided a simple starter swagger.json file (GET only) that they can paste into the swagger online editor
     * They must document all of the rest routes (GET,PUT,POST,PATCH,DELETE) and the correct schema in the swagger.json file
+    * Suggest that they refer to the Pet Store for examples of how the different HTTP methods -- this is a good resource and point of reference  
 * To prove that this works, you will need to fire up json-server at their db.json file and then paste in their swagger.json into the editor at swagger.io. 
  * Once you've done that, you can do the "Try It Ot" button in the swagger website to actually run their routes.
   
@@ -54,6 +61,7 @@ This is the students second "RTFM" lab, so push them in that direction.
   * It should respond to /api/v1/:model routes
   * It should return a properly formatted object (see below) instead of an array of objects
   * The Swagger Docs should reflect this.
+
   
 ```json
 {

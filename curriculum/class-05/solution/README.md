@@ -23,6 +23,11 @@ Perform 2+ Transformations on an 8-bit bitmap file
   * Documentation
     * README Standards
     * JSDoc Required
+    * Documentation should be VERY clear about how to run the transformations in the terminal
+      * Getting good habits for documenting terminal commands is important for students, so be strict about this
+      * Enforcing clear documentation now will make or better documentation and easier grading later on
+
+
 
 #### Lab Assistance Notes
 * Don't hand hold them

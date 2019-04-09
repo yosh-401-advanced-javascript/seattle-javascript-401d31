@@ -25,15 +25,20 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
     * `/categories/:id/` PUT, DELETE
     * `/products`  GET, POST
     * `/products/:id/` PUT, DELETE
-* Document your new api with Swagger
-  * Within your API, Create a folder called `docs`
-  * Write and publish swagger documentation for your API
-  * Compose with [Swagger Editor](https://swagger.io/tools/swagger-editor/)
+
 * Connect a web server
   * Open this [React Application](https://codesandbox.io/s/w638oyk7o8) and "Fork" it
   * Open the .env file and enter the URL to your API Server
   * This server is configured to use the routes noted in the first lab requirement
   * If your lab is working, this app will show your API Data!
+
+* Swagger Documentation
+  * In your API, Create a folder called `docs`
+  * Write and publish swagger documentation with Swagger Editor
+    * Open [Swagger Editor](https://swagger.io/tools/swagger-editor/)
+    * Review and use swagger's default **Pet Store** documentation for reference
+    * Copy and paste swagger.json from starter code into the editor, resolve errors, and complete missing documentation
+
 
 ### Testing
 **No automated testing is required for this assignment**
