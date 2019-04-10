@@ -19,6 +19,30 @@ You can even open up https://amritb.github.io/socketio-client-tool and connect i
 * Every 750ms, emits a 'speak' event.
 * This simulates a database api server that is notifying the world when a record gets saved
 
-### Client -- `demo/some-other-app.js`
+### Logger -- `demo/logger.js`
 * Connects to the server
 * Has a listener on 'message' events, which logs out the contents.
+
+Once all of the above demos are built up, running and well understood, talk with the students about Socket.io support for **namespaces** and **rooms**, which allow you to segment your connections (even within the same client)
+
+Then, build up the 2nd part of the demo:
+
+#### Server
+* Add support for 2 namespaces, and within one of them an event ('join') with a room.
+* Handle a new event just for that room
+
+#### App
+* Join the 2 new namespaces from the server
+* Push events to them both
+
+#### school-logger, home-logger, codefellows-logger
+* New apps that look like the main logger, but with some exceptions
+* They each connect to either the school or home namespace
+* The codefellows one only connects to the codefellows room in the school namespace
+
+When you run the app, it'll fire additional events. Each of the loggers should see different info:
+
+* logger.js - sees events on the main connection (CORE) only
+* home-logger.js - sees events in the "home" namespace only
+* school-logger.js - sees events in the "school" namespace only (will not see events in any rooms in the school naespace, however)
+* codefellows-logger.js - Sees school namespace events AND codefellows room events.

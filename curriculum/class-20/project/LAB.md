@@ -21,6 +21,3 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
 
 ## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
-
-
-
