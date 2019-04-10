@@ -165,11 +165,10 @@ var parentSchema = new Schema({
 
 * As a concept, "joins" are great for linking common/shared data such as players and baseball teams
 * Note that noSQL Databases don't really join in the same way a relational database such as SQL does, and doing so generally is considered an anti-pattern. Ensure that you're modeling things in the most logical way for this data store.
-* `populate()` is a method we can use in Mongoose to connect 2 collections
-  * Method 1: physically joining using a reference to another collection
-  * Method 2: Virtual Population
-    * Create a virtual field in a document pointed to a field in another one.
-    * In `pre('find')` you do a collection "on the fly" which can be more efficient than storing the relation.
+* `populate()` is a method we can use in Mongoose to connect 2 collections in multiple ways
+  * Direct Population physically joins using a reference to another collection
+  * Virtual Population creates a virtual field in a document pointed to a field in another one.
+    * In `pre('find')` you do a popluate "on the fly" which can be more efficient than storing the relation.
 * Pre and Post hooks (middleware)
   * Mongoose allows you to inject logic at various points in the lifecycle of a data record.
     * User can perform validation, normalization

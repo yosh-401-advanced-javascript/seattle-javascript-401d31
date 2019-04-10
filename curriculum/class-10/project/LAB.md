@@ -48,6 +48,7 @@ The key change here is the addition of the `pg.js` file which does the postgres 
     * This should allow you to see them rendering in the browser
   * Then work on the Update & Delete routes
 
+**Software Engineering Notes!** *When you refactor, the heart of the task is to keep things the same (visually and functionally) while completely replacing the underlying implementation*
 
 ### Implementation Notes & Advice
 * You are not required to use the "API Server" or RESTful routes that were developed as part of your lab assignments during this block.
@@ -63,7 +64,7 @@ The key change here is the addition of the `pg.js` file which does the postgres 
 * Can you a RESTful API instead of direct mongo methods to do the database work?
 * Can you create data models for PG and Mongo that look the same, that have the logic, but that simply implement the CRUD operations differently? (think back to how we did the memory vs mongo implementations)
 
-**Software Engineering Notes!** *When you refactor, the heart of the task is to keep things the same (visually and functionally) while completely replacing the underlying implementation*
+
   
 
 ## Assignment Submission Instructions
