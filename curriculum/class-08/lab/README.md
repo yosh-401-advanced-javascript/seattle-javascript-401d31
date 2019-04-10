@@ -40,12 +40,12 @@ The provided API server is setup to work, but the data models are not implemente
   * How do the models need to return that data?
 * Use **supergoose** to write tests that ensure that your mongo models work properly
 
-**Engineering Note** Data contracts (APIs) are the heart of a system. When it's well established and agreed upon, code is movable and extendable
+**Engineering Note** APIs that enforce a data contract that define the shape of the data are the heart of a scalable and extensible system. When it's well established and agreed upon, code is movable and extendable
   
 ---
 
 ### Task 2: INTEGRATE WITH THE API
-* Once the models are completed and tested, you can integrate them into the API Server.
+* Once the models are completed and tested, they should integrate well with the API Server.
 * So long as your models obey the interface contract, your API routes should begin working
   * Verify this manually by visiting each of the routes with httpie or postman
     * get, post, put, delete on /categories and /categories/ID
