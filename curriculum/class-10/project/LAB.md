@@ -5,7 +5,7 @@ Refactor the Code Fellows 301 Book App, migrating it from Postgres(SQL) into Mon
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-Refer to the [Joins and Virtual Columns](../../class-09/README.md) examples and explanation from Class 09 as a refresher on connecting 2 documents. This will help you connect books and bookshelves
+Refer to the [Joins and Virtual Columns](../../../reference/mongo-cheatsheet.md) examples and explanation from Class 09 as a refresher on connecting 2 documents. This will help you connect books and bookshelves
 
 ## Requirements
 
@@ -31,31 +31,31 @@ At this point, the server should be working the same, but whereas before, everyt
 
 The key change here is the addition of the `pg.js` file which does the postgres connection and has the functions that run when the routes are accessed. It's the only file in the system now that knows about postgres.
 
-**In the next step, we'll add support for mongo.**
-  
-* Create a new file for handling the routes (e.g. `mongo.js`)
-  * Copy the contents of the `pg.js` file into this file so that you have a visual on what each function needs to do.
-* Change your router to require the `mongo.js` file instead of the `pg.sql` file
-  * At this point, your sever should **still** work -- you've required a different file and created some models, but haven't actually hooked into mongo yet ...
-* Create mongoose schemas for books and bookshelves (new files)
-* In the `mongo.js` file, require those schemas
-* In the `mongo.js` file, connect to your process.env.MONGODB_URI
-* In each of your route handlers, where you have SQL statements, replace that logic with mongoose equivalents (`.find()`, `.save()`, etc) to perform the database operations.
+**Next, add support for mongo.**
+
+* You will need a toggle or setting of some sort to switch between using Postgres and Mongo database back-ends
+* You will need to create mongoose schemas for `books` and `bookshelves`
+* Remember: the routes must work the same way regardless of whether you're using Mongo or PG as the data source
   * *Pro Tip: Be sure to send data back to the EJS rendering functions that has the same shape as what the Postgres version was doing*
-* Recommendation:
-  * Do the Create route first.
+
+* **Recommendations**
+  * Focus on how to convert the PG/SQL Logic into Mongo Equivalents
+  * Do the Create route (post `/books`) first.
     * Search for books, add them
     * Verify that you can see them in the books collection
     * For now, ignore the bookshelves logic.  Just add the book!
-  * Do the /books route next
+  * Do the Get `/books` and `/books:id` routes next
     * This should allow you to see them rendering in the browser
   * Then work on the Update & Delete routes
 
 
 ### Implementation Notes & Advice
-
 * You are not required to use the "API Server" or RESTful routes that were developed as part of your lab assignments during this block.
-* Create a new .env variable that you can change, which the `routes.js` file can use to determine whether to load the `mongo.js` or the `pg.js` file. Each of them has the same functions exported, but use different databases.  
+
+
+### Testing
+* Write a complete set of model and server/route tests using `supergoose`
+* Your tests should work unchanged regardless of which database system is active!
 
 ### Stretch Goals
 
@@ -65,9 +65,6 @@ The key change here is the addition of the `pg.js` file which does the postgres 
 
 **Software Engineering Notes!** *When you refactor, the heart of the task is to keep things the same (visually and functionally) while completely replacing the underlying implementation*
   
-### Testing
-* Write a complete set of model and server/route tests using `supergoose`
-* Your tests should work unchanged regardless of which database system is active!
 
 ## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
