@@ -3,7 +3,7 @@
 const rootDir = process.cwd();
 const supergoose = require('./supergoose.js');
 const {app} = require(`${rootDir}/src/app.js`);
-const mockRequest = supergoose.server(server);
+const mockRequest = supergoose.server(app);
 
 beforeAll(supergoose.startDB);
 afterAll(supergoose.stopDB);
