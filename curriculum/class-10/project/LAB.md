@@ -5,7 +5,7 @@ Refactor the Code Fellows 301 Book App, migrating it from Postgres(SQL) into Mon
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
-Refer to the [Joins and Virtual Columns](../../../reference/mongo-cheatsheet.md) examples and explanation from Class 09 as a refresher on connecting 2 documents. This will help you connect books and bookshelves
+Refer to the Joins and Virtual Columns examples and explanation from the [mongo cheatsheet](../../../reference/mongo-cheatsheet.md) as a refresher on connecting 2 documents. This will help you connect books and bookshelves
 
 ## Requirements
 
