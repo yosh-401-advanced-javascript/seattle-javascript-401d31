@@ -10,8 +10,9 @@ Wiki Entry Ideas:
 * Notes in outline form
 
 ## Read
+* [Web Sockets](https://en.wikipedia.org/wiki/WebSocket)
 * [Socket.io Tutorial](https://www.tutorialspoint.com/socket.io/){:target="_blank"}
-* [Socket.io Chat app](https://socket.io/get-started/chat/){:target="_blank"}
+* [Socket.io vs Web Sockets](https://www.educba.com/websocket-vs-socket-io/){:target="_blank"}
 
 ## Skim
 * [Getting Started](https://socket.io/docs/){:target="_blank"}

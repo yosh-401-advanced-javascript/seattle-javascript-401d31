@@ -16,11 +16,21 @@
 
 ## Lecture Main Topics & Overall Flow
 
-* What's the main difference between socket.io and TCP?
+* Web Sockets
+  * Maintain an open TCP like connection over HTTP
+  * (Still on OSI layer 7, but reliant on layer 4)
+  * Uses special headers to keep open connections
+  * Sends messages back and forth
+* What's the main difference between Web Sockets and TCP?
   * TCP is a protocol
   * TCP is client-less
-  * Socket.io uses TCP over HTTP
-    * Must work to keep the connectionopen
+  * Web Sockets rely on TCP
+* Socket.io
+  * Client + Server Architecture
+  * Eventing layer on top of Web Sockets
+  * Makes use (sometimes) of Web Sockets but also has fallbacks
+  * TCP over HTTP
+    * Must work to keep the connection open (heartbeats)
     * Must have a connected client (code) to function
 * Socket.io Advantages
   * Connection pool management
@@ -29,7 +39,9 @@
   * Rooms within a namespace (i.e. "Seahawks")
   * Can stand alone
   * Can integrate with and use express or http as a service
+  
 ---
+
 * Standard node events are sent with `emit()` and received with `on()` ... Socket.io uses the same methodology/terminology.
 
 * In an event driven node app, the entire app is in memory, and (through a common event pool), all parts of your application can emit and hear events, communicating with each other.  However, no outside application can participate in these events natively.
