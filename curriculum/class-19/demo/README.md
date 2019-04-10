@@ -23,12 +23,23 @@ When it's all put together, you should be able to run the app, which will raise 
 
 Note that running all of this will require multiple console windows. The "server" and "logger" are separate servers that always run, and the app is an application that triggers events between them. 
 
+### Demos
+There are 2 demo "start" folders provided ... both of which correspond to the final demo from the previous class.
 
-### Starting Point -- `demo/starter`
-In this folder, you'll find the final demo code from the last class. Review how this works with the students, and begin to modify this in place, ending with the code in the `final` folder.
+### Starting Point 1 -- `demo/start-simple-server`
+In this folder, you'll find the demo code that implements a simple Socket.io based server and clients that communicate only in the global space.
 
-You will be moving `app.js`, `logger.js`, and `server.js` into their own folders, each with its own package.json that pulls in the `@nms/q` libraries as described below
+This is a good place to start and level-set, as it's essentially code-review from the previous class first demo.
 
+### Starting Point 2 -- `demo/start-namespaced-server`
+In this folder, you'll find the demo code that implements a more advanced Socket.io based server and several clients that communicate both in the global space as well as several socket.io **namespaces** and within those, separate **rooms**
+
+Also to be seen as code review, this should re-enforce the capabilities of socket.io to create namespaces and rooms to segment and target events in categorized channels.
+
+
+### NMQ Based Server
+
+Review how these work with the students, and begin to modify in place, ending with the code in the `final` folder.
 
 ### Server -- `demo/final/server/server.js`
 Code this up first and start it with nodemon. As you build out the other apps, you'll start seeing messages in the console detailing each connection.

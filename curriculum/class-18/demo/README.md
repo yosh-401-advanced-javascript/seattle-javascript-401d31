@@ -9,33 +9,42 @@ Build this up slowly, with just server and app, and have app hear events (even t
 
 You can even open up https://amritb.github.io/socketio-client-tool and connect it to your server as well. If you use it to emit events your app should show them logging out as well.  Note -- that only works against localhost OR an SSL server
 
-### Server -- `demo/server.js`
+### First Pass - "simple-server"
+Build out a simple server that represents a single pool of connections and events with socket.io.
+
+Things to point out
+  * Clients will automaticallly reconnect and re-bind events after a disconnect (server restart, etc)
+  * Socket.io is managing all of the events, headers, and client pools
+
+#### Server -- `server.js`
 * Sets up a listener on port 3000
 * On each client's connect, it sets a listener on "speak"
 * On speak, it emits a "message" event
 
-### Client -- `demo/app.js`
+#### Client -- `app.js`
 * Connects to the server
 * Every 750ms, emits a 'speak' event.
 * This simulates a database api server that is notifying the world when a record gets saved
 
-### Logger -- `demo/logger.js`
+#### Logger -- `logger.js`
 * Connects to the server
 * Has a listener on 'message' events, which logs out the contents.
 
 Once all of the above demos are built up, running and well understood, talk with the students about Socket.io support for **namespaces** and **rooms**, which allow you to segment your connections (even within the same client)
 
-Then, build up the 2nd part of the demo:
+### Second Pass: Add Namespaces and Rooms
 
-#### Server
+Demonstrate the power of socket.io and it's ability to allow you to connect not only to the global pool, but to 2 layers of sub-pools (namespaces) and sub-sub pools (rooms within namespaces)
+
+#### `server.js`
 * Add support for 2 namespaces, and within one of them an event ('join') with a room.
 * Handle a new event just for that room
 
-#### App
+#### `app.js`
 * Join the 2 new namespaces from the server
 * Push events to them both
 
-#### school-logger, home-logger, codefellows-logger
+#### `school-logger`, `home-logger`, `codefellows-logger`
 * New apps that look like the main logger, but with some exceptions
 * They each connect to either the school or home namespace
 * The codefellows one only connects to the codefellows room in the school namespace
