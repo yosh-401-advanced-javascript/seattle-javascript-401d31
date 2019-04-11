@@ -36,6 +36,15 @@ Implement a Bearer Authentication system with optional token expiry, api keys, a
   * Auth Keys should never expire
   * Auth Keys should be re-usable
   * How might you make this secure?
+  
+### Notes
+
+To test your routes, you'll need to first login with a valid user to get a token, and then use httpie or postman to hit the routes using a Bearer Token
+
+**httpie**
+```
+http post :3000/hidden-stuff "authorization: bearer TOKENHERE"
+```
 
 ### Testing
 * Add test coverage to the auth tests to assert that:
