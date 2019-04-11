@@ -25,6 +25,17 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
   * Are the book routes protected properly?
 * Ensure that you use supergoose instead of mongo/express
 
+### Notes
+
+Signup with httpie: 
+```
+echo '{"username":"name","password":"pass"}' | http post :3000/signup
+```
+Signin with httpie: 
+```
+http post :3000/signin -a username:password
+```
+You may also use Postman or RESTy
 
 ## Assignment Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
