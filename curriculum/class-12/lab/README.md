@@ -5,6 +5,8 @@ Our company has decided to integrate OAuth instead of managing usernames and pas
 ## Before you begin
 Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
 
+Draw the UML/Process Flow diagram before you start coding so that you are 100% familiar with the full wiring of the OAuth server and processes.
+
 ## Getting Started
 * This lab contains 2 folders
   * `www-server` - The Web Server with the login form
@@ -48,3 +50,4 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
 * [Wordpress](https://developer.wordpress.com/docs/oauth2/)
 * [Facebook](https://developers.facebook.com/docs/facebook-login/)
 * [LinkedIn](https://developer.linkedin.com/docs/signin-with-linkedin)
+* [Amazon](https://developer.amazon.com/login-with-amazon)
