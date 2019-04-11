@@ -41,6 +41,13 @@ Connect the application (app.js) to the server (server.js) and emit messages rel
   * On "save", do a `console.log()` with the message
   * On "error" do a `console.error()` with the message
   
+### Notes
+* You will need to start your servers up in the right order so that you can visually test things out.
+
+1. `server.js` - needs to be up so that it can accept and re-emit events
+1. `logger.js` - needs to have a running server to connect to, so that it can hear events
+1. `app.js` to run and have the server hear your events
+  
 ### Stretch Goals
 * Monitor, Receive only specific events
 * Allow for objects/arrays as event data
