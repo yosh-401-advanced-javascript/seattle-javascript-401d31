@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Warm-Up Submission Instructions
-================================================================================
+# Warm-Up Submission Instructions
 
 ## Daily Warmups
 * Create a new repository for each warmup

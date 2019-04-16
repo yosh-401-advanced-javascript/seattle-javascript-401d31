@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) DSA/Challenge Submission Instruction
-=======================================================================
+# DSA/Challenge Submission Instruction
 
 **Create a new repository called `data-structures-and-algorithms`**
 
