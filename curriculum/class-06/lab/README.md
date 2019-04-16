@@ -1,9 +1,26 @@
 # LAB: HTTP and REST
 
-The goal for this lab is to get your hands dirty in using and properly documenting an API
+Get your hands dirty in using and properly documenting an API
 
 ## Before you begin
-Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing your proposed **UML** and/or **Data/Process Flow diagrams**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements and assess how to apply each requirement to your model.
+
+* For Each Requirement, ask yourself questions such as:
+  * Where should this new code live in the codebase?
+  * Which existing code needs to be modified?
+  * Are there any dependencies that this feature requires
+  
+Create a list of priorities, dependencies, and a mapping of where you need to do your work before jumping into the code.
+
+---
 
 ## Requirements
 
