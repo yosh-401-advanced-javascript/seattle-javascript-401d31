@@ -1,11 +1,30 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Props and State
-=================================================
-
+LAB - Props and State
 
 ## Before you begin
-* You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
 
-## Assignment 1 - Props Practice
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements and assess how to apply each requirement to your model.
+
+ * For Each Requirement, ask yourself questions such as:
+   * Where should this new code live in the codebase?
+   * Which existing code needs to be modified?
+   * Are there any dependencies that this feature requires
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
+
+## Requirements
+
+### Assignment 1 - Props Practice
 Fork the [Props Practice Sandbox](https://codesandbox.io/s/9y453m63or)
 
 **Challenge Instructions (Part 1)**
@@ -31,7 +50,7 @@ Fork the [Props Practice Sandbox](https://codesandbox.io/s/9y453m63or)
 * Create a 4th component and send props there as well
 
 
-## Assignment 2 - Internal State Practice
+### Assignment 2 - Internal State Practice
 Fork the [Internal State Practice Sandbox](https://codesandbox.io/s/myvyyqvwn9)
 
 **Challenge Instructions (Part 1)**
@@ -59,7 +78,7 @@ Fork the [Internal State Practice Sandbox](https://codesandbox.io/s/myvyyqvwn9)
 * Use multiple fields in your form to update multiple state properties
 * Make evaluations on the state of your state to dynamically render things. For example, if the name is empty, show an error or if there are 2 names given (first and last), reverse and comma separate them.
 
-## Assignment 3 - External State Practice
+### Assignment 3 - External State Practice
 Fork the [External State Practice Sandbox](https://codesandbox.io/s/jn2klxzq3y)
 
 **Challenge Instructions (Part 1)**

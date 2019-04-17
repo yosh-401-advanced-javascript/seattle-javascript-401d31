@@ -1,8 +1,27 @@
 # LAB -  `<Login />` and `<Auth />`
-=================================================
-
 
 ## Before you begin
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements and assess how to apply each requirement to your model.
+
+ * For Each Requirement, ask yourself questions such as:
+   * Where should this new code live in the codebase?
+   * Which existing code needs to be modified?
+   * Are there any dependencies that this feature requires
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
+
 * Create a new sandbox from your CMS project's source code
 * Reference: [`<Login />` and `<Auth />` implementation](https://codesandbox.io/s/q359203jmq)
   * You'll want to implement this so that you can use the `auth` components in your app.

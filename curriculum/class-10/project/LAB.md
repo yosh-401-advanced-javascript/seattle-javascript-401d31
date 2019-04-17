@@ -3,7 +3,26 @@
 Refactor the Code Fellows 301 Book App, migrating it from Postgres(SQL) into Mongo(noSQL) for data storage and modularize the server.
 
 ## Before you begin
-Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+
+**Visualize the Application**
+
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
+
+**Break Down the Assignment**
+
+Once you have a good visual and mental model of how the application works, break down the requirements and assess how to apply each requirement to your model.
+
+ * For Each Requirement, ask yourself questions such as:
+   * Where should this new code live in the codebase?
+   * Which existing code needs to be modified?
+   * Are there any dependencies that this feature requires
+
+**Map your priorities and dependencies before jumping into the code.**
+
+---
+
+## Getting Started
 
 Refer to the Joins and Virtual Columns examples and explanation from the [mongo cheatsheet](../../../reference/mongo-cheatsheet.md) as a refresher on connecting 2 documents. This will help you connect books and bookshelves
 

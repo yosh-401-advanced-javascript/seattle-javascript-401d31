@@ -83,7 +83,7 @@
   * Design: Scaffold
 * [Class 17](./class-17/README.md)
   * **TCP Servers**
-  * Lab: Event Driven Messagin Server
+  * Lab: Event Driven Messaging Server
   * Warm Up: Express Server 
   * Design: Variables
 * [Class 18](./class-18/README.md)
