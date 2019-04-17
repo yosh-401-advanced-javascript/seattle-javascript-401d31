@@ -13,12 +13,11 @@ Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Pro
 
 **Break Down the Assignment**
 
-Once you have a good visual and mental model of how the application works, break down the requirements and assess how to apply each requirement to your model.
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
 
- * For Each Requirement, ask yourself questions such as:
-   * Where should this new code live in the codebase?
-   * Which existing code needs to be modified?
-   * Are there any dependencies that this feature requires
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
 
 **Map your priorities and dependencies before jumping into the code.**
 
