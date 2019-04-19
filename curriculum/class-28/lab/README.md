@@ -1,4 +1,4 @@
-LAB - Props and State
+# LAB - Props and State
 
 ## Before you begin
 Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
@@ -21,10 +21,16 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Getting Started
 
+Starter code has been provided for you in the `/lab/starter-code` folder. There are 3 separate assignments, each with it's own folder.
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to the correct starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
+
 ## Requirements
 
 ### Assignment 1 - Props Practice
-Fork the [Props Practice Sandbox](https://codesandbox.io/s/9y453m63or)
+Begin with: `/lab/starter-code/props`
 
 **Challenge Instructions (Part 1)**
 
@@ -50,7 +56,8 @@ Fork the [Props Practice Sandbox](https://codesandbox.io/s/9y453m63or)
 
 
 ### Assignment 2 - Internal State Practice
-Fork the [Internal State Practice Sandbox](https://codesandbox.io/s/myvyyqvwn9)
+
+Begin with: `/lab/starter-code/internal-state`
 
 **Challenge Instructions (Part 1)**
 
@@ -78,7 +85,8 @@ Fork the [Internal State Practice Sandbox](https://codesandbox.io/s/myvyyqvwn9)
 * Make evaluations on the state of your state to dynamically render things. For example, if the name is empty, show an error or if there are 2 names given (first and last), reverse and comma separate them.
 
 ### Assignment 3 - External State Practice
-Fork the [External State Practice Sandbox](https://codesandbox.io/s/jn2klxzq3y)
+
+Begin with: `/lab/starter-code/external-state`
 
 **Challenge Instructions (Part 1)**
 
@@ -108,9 +116,9 @@ Fork the [External State Practice Sandbox](https://codesandbox.io/s/jn2klxzq3y)
 * Use multiple fields in your form to update multiple state properties
 * Make evaluations on the state of your state to dynamically render things. For example, if the name is empty, show an error or if there are 2 names given (first and last), reverse and comma separate them.
 
-##  Documentation
-Complete the README.md file included in the lab folder
+### Tests
 
-##  Submission Instructions
-Submit links to each of your Sandbox URLs (6 total)
-Submit a link to your fork of the lab rep, with an updated README.md. This file should document your work in each of the sandboxes, including a basic UML drawing of each solution.
+Write mount/enzyme tests for each component/assignment
+
+## Assignment Submission Instructions
+Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
