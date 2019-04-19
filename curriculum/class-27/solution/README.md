@@ -1,7 +1,28 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Component Based UI
-===================================================================
+# SOLUTION - Component Based UI
 
-[Lab Solution](https://codesandbox.io/s/9894jnq4vr)
+## Lab Requirements
+  * Tests Written
+  * Docs Published
+  * 3 Deployments Completed
+
+
+#### Grading Standards & Notes
+  * Features
+  * Code Quality
+  * Testing
+    * Running test suite executed at Travis
+  * Deployment
+    * Running app should be viewable at
+      * S3
+      * Cloudfront
+      * Netlify
+  * Documentation
+    * README Standards
+    * Live docs published via styleguidist
+      * Should be viewable on all deployments
+
+#### Lab Assistance Notes
+*
 
 ### Tests
 First, the students will need to a full TDD round at Code Sandbox.  This will involve getting a setupTests.js file up and running in the src folder, and a series of tests that are written with the correct assertions:

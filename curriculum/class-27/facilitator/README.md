@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: React Testing and Deployment
-======================================================================================
+# Facilitators Guide: React Testing and Deployment
 
 ## Preparation
 * Really understand your testing environment
@@ -15,7 +14,10 @@ Today is a tough one to execute for the students (esp AWS). It's important that 
   * Testing of a React App
     * shallow mounting
     * mounting
-    * snapshotting
+    * Snap-Shots
+  * Documenting a React App
+    * [Styleguidist](https://react-styleguidist.js.org/docs/getting-started.html)
+    * Component.md file
   * Deployment of a React App 
     * Ultimately, it's just a static file (index and js) like a 201 app
     * Need to run a build
@@ -34,8 +36,14 @@ Today is a tough one to execute for the students (esp AWS). It's important that 
   * So, lets get it out there ...
     * Live Demo of doing it at Amazon, step by step at S3
     * Live Demo of automating it with Cloud Formation (.yml)
+    * Live Demo of deploying to Netlify
   * What was that whole "cloud thing" again?
     * Great chance to draw a picture of how CDNs work and talk about why
+    
+* Documenting is different than on the Node side
+  * Styleguidist is live documentation
+  * Easy to write docs (.md files)
+  * Creates a live doc server and can build static docs
 
 * Testing is ... "interesting" on the front-end
   * Generally, you don't have nice little "units" to test like you on a server
@@ -53,11 +61,13 @@ Today is a tough one to execute for the students (esp AWS). It's important that 
 
 ## Lab Prep
 * Students will have 5 core tasks to complete for this lab:
-  * Complete a full ERD for the application.
+  * Complete a full UML Diagram for the application.
   * Apply some thoughtful styling to the app
+  * Document the components with examples
   * Fully cover the app in tests
   * Deploy a react application to a bucket manually
-  * Use automation to deploy a react app from Github.
+  * Use automation to deploy a react app to AWS from Github.
+  * Hook up a React app from Github to Netlify
 * We will be supplying them with working starter code, so they are able to jump right in and start syling, testing, and even get a working deployment right away.
 
 ## What bugs, issues, or surprises have come up in the past for this class?

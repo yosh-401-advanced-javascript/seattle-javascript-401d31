@@ -1,0 +1,11 @@
+@import '../../style/design';
+
+header {
+  background: darken($backgroundColor, 75);
+  border-bottom: 1px solid #eee;
+  color: #eee;
+  font-size: 1.5em;
+  line-height: 2em;
+  padding: 0;
+  margin: 1em 0;
+}

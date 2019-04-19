@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Component Based UI
-================================================================
+# DEMOS - Component Based UI
 
 [Demo Sandbox](https://codesandbox.io/s/x9w6xljn5p)
 
@@ -34,6 +33,7 @@ At this point, you should be able to check this into github and have Travis pick
 * Pull in a .travis.yml file and ensure that its setup to do an `npm test` (and not a `lint` unless you've also set that up)
 * Check into master and observe it passing at Travis-ci.com
 
+
 ## AWS Deployment - S3
 
 At minimum, the goal is to deploy a website to an AWS bucket.
@@ -48,5 +48,21 @@ Create yourself an S3 Bucket, give it public permissions, upload your build fold
 
 Use the aws.yml template file and create a new cloud formation stack by uploading it. Once you do that, it'll take about 20 minutes for it to pull from github.
 
+Talk through the contents and purpose of this .yml configuration file, which is to instruct AWS to do all of the necessary steps for you.
+
+You can automate the creation of this file by using a tool created by Code Fellows:
+
+[AWS React Pipleline Configurator](https://www.npmjs.com/package/@johnfellows/aws-tools)
+
+Once a .yml file is created, you should be able to upload it to cloud formation and see your app deployed ina bout 30 minutes.
+
+## Netlify Deployment
+
+Netlify is a static site hosting platform that is essentially an S3 system.
+
+* Create a Netlify Account
+* Hook to your github
+* Run the build script, specifying the build folder
+* Win
 
 
