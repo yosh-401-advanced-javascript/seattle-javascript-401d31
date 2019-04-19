@@ -1,14 +1,21 @@
 # Facilitators Guide: React Testing and Deployment
 
+For this class, the focus is less about coding and more about the ecosystem. In the first class, we showed a simple React app to get the students fired up about what React and Compoent frameworks **can** do.
+
+In this class, we'll take our first look at **how** React does it, and how we play nicely in the world -- testing, documentation, and deployments. This will be a long one, but sets the students up well to execute the next 3 blocks of material.
+
 ## Preparation
 * Really understand your testing environment
+* Write and build documentation using Styleguidist
 * Practice React TDD
 * Practice getting your code tested at Travis
 * Really practice the AWS variants (S3 and Cloudfront)
+* Do a deployment at Netlify
 
 There's a lot to get through in this lecture, so being on point, and having solid answers to the questions that will come up with testing and deployment are imperative.
 
 Today is a tough one to execute for the students (esp AWS). It's important that your demo be SOLID, as they'll likely have to re-watch it multiple times to really understand and be able to go through all of the deployment and CI steps.
+
 
 * Main takeaways for the day:
   * Testing of a React App

@@ -1,8 +1,21 @@
 # DEMOS - Component Based UI
 
-[Demo Sandbox](https://codesandbox.io/s/x9w6xljn5p)
+For this class, work all demos locally instead of at Code Sandbox. You'll definitely need to be running tests, builds, creating documentation, etc.  This is a great opportunity to demonstrate devloping React Apps outside of the online IDE and in a more "Real" way.
 
-## Enzyme Testing
+## Documentation
+
+* Install Styleguidist
+* Start the doc server
+* Write a simple doc for a component
+* View it live
+* Run the build
+* View it statically
+* Add a script to package.json to build it in the wild
+
+
+## Testing `/demo/tdd`
+
+### Enzyme Testing
 
 The key part of the demo here is to wire up the `setupTests.js` file in the `src` folder.  This has the requisite imports and globals declared. What create-react-app (and sandbox) does is to incorporate that into every test file you write, which is a nice time-saver.
 
@@ -10,7 +23,7 @@ Focus your demo on the differences between and use-cases for `shallow()` and `mo
 
 This can be done at sandbox, but to go deeper (and to connect into a CI environment, you'll need to work from a repo).  This is an annoying step, but it's important to start at sandbox and get all of the goodness of visual TDD.  In the next stage, we'll go local and the students will start to see what local react dev looks like and how to operate in a CI/CD world
 
-## Snapshot Testing
+### Snapshot Testing
 
 You cannot snapshot test on Code Sandbox because it creates files, so all of this needs to be done locally.
 
@@ -20,18 +33,19 @@ Write the snapshot test as shown in the demo, and then as you run `npm test` you
 
 Note that this is a comparison of raw html.  How could this break? What if you added a className to one of the elements? The enzyme (behavior) test would probbly still be ok, but adding a class would change the markup and therefore break the snapshot. This is a potentially big deal.
 
----
-
-**This is a good time for a break!**
-
----
-
 ## Travis hookup
 At this point, you should be able to check this into github and have Travis pick it up. 
 
 * Make sure you're actually working in a repo (create one if not)
 * Pull in a .travis.yml file and ensure that its setup to do an `npm test` (and not a `lint` unless you've also set that up)
 * Check into master and observe it passing at Travis-ci.com
+
+---
+
+**This is a good time for a break!**
+
+---
+
 
 
 ## AWS Deployment - S3
