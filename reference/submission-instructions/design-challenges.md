@@ -1,18 +1,17 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Design Challenge Submission Instructions
-=========================================================================================
+# Design Challenge Submission Instructions
 
-## Setup
+## Setup (First Assignment)
 * Open the design challenge starter sandbox
 * FORK it so that you have your own copy
 
-## Workflow
+## Daily Workflow
 * Work each day on the assigned challenge
 * The challenges are designed to build on one another
 * Over time, your SCSS will grow and modularize
 
 ## Canvas Submission
- * Submit a link to your sandbox
-
+ * Submit a link to your (forked) sandbox
+ 
 ## Grading Rubric
 
 | Criteria            | Deductions / Notes                                  | Max Points |

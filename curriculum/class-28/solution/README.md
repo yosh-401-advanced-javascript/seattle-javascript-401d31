@@ -1,9 +1,19 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Props and State
-=================================================
+# Solution - Props and State
 
-[External State](https://codesandbox.io/s/wwlqvnqq75)
+### Lab Assignments (All)
 
-[Internal State](https://codesandbox.io/s/p7jwpm9ll0)
+#### Grading Standards & Notes
+  * Features
+    * Each of the features in the lab assignment met
+  * Code Quality
+    * Strong modularity
+    * Proper passing of props and state
+  * Testing
+    * Mount/Enzyme tests of all components
+  * Deployment
+    * Code Sandbox Only
+  * Documentation
+    * README Standards
+    * Component Tests Not Required
 
-[Props Practice](https://codesandbox.io/s/kwvzrq9015)
-
+#### Lab Assistance Notes

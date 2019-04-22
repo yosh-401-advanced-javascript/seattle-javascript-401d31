@@ -1,9 +1,12 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Remote CRUD
-=========================================================
+# DEMOS - Remote CRUD
 
+## Execution
 
-### [Remote CRUD Demo](https://codesandbox.io/s/p9roxxm2wq)
+Demos are provided in the `demo` folder in the guide repository. They are created with `create-react-app` and are suitable to install and run locally or at [Code Sandbox](http://codesandbox.io).  
 
+At Code Sandbox, simply create a new app using "Git Hub" and point it at the the appropriate demo folder and it'll spin the app up for you. Saves a lot of time and also shows the students the value of doing quicker "POC" style work in an online IDE and then executing production code in their actual IDE.
+
+## remote-crud
 * This demo is designed for simplicity. It essentially takes form input, formats it as JSON, and does a POST to a server.
 * It also takes an ID and performs a DELETE.
 * The primary activity here is in the actions - implementing them to work with the server and keeping the reducers in sync.
