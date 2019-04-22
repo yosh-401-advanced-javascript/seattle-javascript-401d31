@@ -1,4 +1,4 @@
-# LAB - Component Composition
+# LAB - Routing and Component Composition
 
 ## Before you begin
 Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
@@ -70,6 +70,12 @@ Once you have a good visual and mental model of how the application works, break
 ### Testing
 * Complete basic render testing on these components
 * Complete logical and render testing on the if components
+
+### Stretch Goals
+* Create an NPM account and an organization
+* Publish your `<If />` and `<Modal />` components to NPM
+* Now, you can use them in any project.
+  * Make them great!
 
 ### Assignemnt Submission Instructions
 Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations

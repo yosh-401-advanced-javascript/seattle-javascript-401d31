@@ -1,7 +1,10 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Routing & Component Composition
-===================================================================
+# DEMO - Routing and Component Composition
 
-[Demo Sandbox](https://codesandbox.io/s/n79l168l40)
+## Execution
+
+Demos are provided in the `demo` folder in the guide repository. They are created with `create-react-app` and are suitable to install and run locally or at [Code Sandbox](http://codesandbox.io).  
+
+At Code Sandbox, simply create a new app using "Git Hub" and point it at the the appropriate demo folder and it'll spin the app up for you. Saves a lot of time and also shows the students the value of doing quicker "POC" style work in an online IDE and then executing production code in their actual IDE.
 
 
 ## Routing
@@ -20,6 +23,12 @@
 * Create an array of items in markup (e.g. map over an array to return a list of `<div>`)
 * Render one of your child components with that array.  i.e. `<Stuff>{things}</Stuff>`
 * Then in that component, render out `{props.children}`
+
+Now, make something more real, and usable...
+
 * Create a simple component called `<If />` that conditionally renders `{props.children}`
+* Talk through other options, like `Unless` and `When`
+
+Put this up on NPM!
 
 
