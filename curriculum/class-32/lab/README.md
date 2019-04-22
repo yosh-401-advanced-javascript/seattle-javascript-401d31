@@ -21,7 +21,14 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Getting Started
 
-* Fire up your API Server!
+Starter code has been provided for you in the `/lab/starter-code` folder. 
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
+
+**Fire up your API Server!**
+
   * Get your latest and greatest API server from the your earlier labs and get it running along with a MongoDB instance. (Recommended)
   * Or ... use the supplied server in this lab folder
   * Or ... simply connect to the deployed public API server

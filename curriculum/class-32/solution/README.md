@@ -1,9 +1,25 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Dynamic Forms
-==============================================================
+# SOLUTION - Dynamic Forms
 
-[Dynamic Forms Solution](https://codesandbox.io/s/3x4llr063q)
+## Lab Requirements
 
-## Lab Prep
+### Lab Assignment 1
+*
+
+#### Grading Standards & Notes
+  * Features
+    * All CRUD functionality
+  * Code Quality
+    * Multiple Reducers or Complex Reducer
+    * Required: Model/Schema fetching
+  * Testing
+    * Basic Store Tests, Mock Store
+  * Deployment
+    * Travis Only
+  * Documentation
+    * README Standards
+    * React Doc Required
+    
+## Lab Assistance Notes
 * Students will implementing PUT, GET, PATCH in the redux starter app. DELETE has been done for them.  What they'll need to get to is how to pass a record ID down to the <Record> component and then how to manipulate state in the reducer. They'll need to dive into spread, deconstruction, and all of those functional methods.
 * We'll also be hooking into an API server. Grading that could be tough if they set up their react apps to use a local server. There's a remote API deployed that you can hook into, by changing their API url: https://javascript-401-api.herokuapp.com/api/v1/
 * Definitely looking for them to do a full integration with the API for all methods.

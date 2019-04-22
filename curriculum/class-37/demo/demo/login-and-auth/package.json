@@ -1,0 +1,27 @@
+{
+  "name": "demo-login-and-auth",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "jsonwebtoken": "8.4.0",
+    "prop-types": "15.7.1",
+    "react": "16.6.3",
+    "react-cookies": "latest",
+    "react-dom": "16.6.3",
+    "react-jsonschema-form": "1.0.6",
+    "react-redux": "6.0.0",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "2.1.1",
+    "redux": "4.0.1",
+    "superagent": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

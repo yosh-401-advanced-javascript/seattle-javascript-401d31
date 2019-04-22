@@ -1,6 +1,4 @@
 # LAB - Application State
-=============================================================
-
 
 ## Before you begin
 Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
@@ -26,7 +24,7 @@ Once you have a good visual and mental model of how the application works, break
 ### Connect to a store
 For this assignment, you're going to take an existing component which puts out some random numbers when a div is clicked, and refactor it to use a Redux store instead of local state.
 
-* Fork this sandbox: [starter code: app-state - connect](https://codesandbox.io/s/ojl539kkz5)
+* You've been provided starter code to work with - `app-state-connect`
 * Connect `index.js` to the redux store and pass it down to the `App` component
 * Remove the state declaration in the constructor
   * Do you still need a constructor?
@@ -42,7 +40,7 @@ For this assignment, you're going to take an existing component which puts out s
 ### Create a new reducer
 In this assignment, we have a working app that uses Redux for it's state management. Now, it's time to extend it and add a new component with it's own reducer/actions. The twist is that this new reducer will also be able to respond to actions that the other component fires.
 
-* Fork this sandbox: [starter code: app-state - reducers](https://codesandbox.io/s/zlk5o2y6wp)
+* You've been provided starter code to work with - `app-state-reducers`
 * Create a new numbers reducer in the store: `numbers-reducer.js`
 * Create a new numbers action in the store: `numbers-actions.js`
 * Create a new action creator for the "RESET" action
@@ -60,12 +58,12 @@ In this assignment, we have a working app that uses Redux for it's state managem
 
 
 ###### Testing
-* Tests are not required for this lab.
-
+* Tests are not required for this lab
 
 ###### Stretch Goals:
 * Do all of this again, but from scratch
 * Add a third reducer and subscribe to both bits of state
+* Wire up Reducer unit tests and a fake store
 
 
 ### Assignemnt Submission Instructions

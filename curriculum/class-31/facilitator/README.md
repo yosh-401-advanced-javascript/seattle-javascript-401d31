@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Application State
-===========================================================================
+# Facilitators Guide: Application State
 
 ## Preparation
 * This is the first day of Redux.

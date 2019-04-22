@@ -21,9 +21,14 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Getting Started
 
+Starter code has been provided for you in the `/lab/starter-code` folder. 
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
+
 ## Assignment
 ### Refactor A Star Wars Lookup App
-* Fork [this sandbox](https://codesandbox.io/s/l7n0rwv0ym)
 * Convert the current react component state to use a Redux Store
   * Create a store
   * Connect to it, create it, provide from the index

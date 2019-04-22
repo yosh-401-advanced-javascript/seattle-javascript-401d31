@@ -1,0 +1,9 @@
+        <Auth>
+          <div>This should only show if you are a logged in user</div>
+        </Auth>
+        <Auth capability="update">
+          <div>This should only show if you have update rights</div>
+        </Auth>
+        <Auth capability="delete">
+          <div>This should only show if you have delete rights</div>
+        </Auth>

@@ -1,7 +1,24 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Remote APIs
-======================================================
+# SOLUTION - Remote APIs
 
-[Solution](https://codesandbox.io/s/43x42nwmn7)
+## Lab Requirements
+
+#### Grading Standards & Notes
+  * Features
+    * Get the initial fetch and the detail fetch working
+    * Use and style a proper Modal
+    * Multiple reducers should be used (list and detail)
+  * Code Quality
+    * Good modularity
+    * Reusable Modal
+  * Testing
+  * Deployment
+    * Travis Tests
+    * Code Sandbox App
+  * Documentation
+    * README Standards
+    * React Required
+
+#### Lab Assistance Notes
 
 The primary task for students today will be to take a working react application and convert it from app/component state into using a Redux store.
 

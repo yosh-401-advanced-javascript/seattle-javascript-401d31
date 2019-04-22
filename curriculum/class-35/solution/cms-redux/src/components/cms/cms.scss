@@ -1,0 +1,81 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#api {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* MODEL MENU */
+#api ul#models {
+  background: #000;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#api ul#models li {
+  color: #fff;
+  cursor: pointer;
+  padding: 0.75em 1.5em;
+  text-transform: capitalize;
+}
+
+#api ul#models li:hover {
+  background: #ccc;
+  color: #000;
+}
+
+/* RECORDS and FORM */
+
+#api #records {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#records ul#listings {
+  background: #414141;
+  list-style-type: none;
+  margin: 0;
+  min-width: 10em;
+  padding: 0;
+}
+
+#records ul#listings li {
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  padding: 0.75em 1.5em;
+  width: 100%;
+}
+
+#records ul#listings li:hover {
+  background: #ccc;
+  color: #000;
+}
+
+#records form .form-group {
+  margin: auto;
+  width: 85%;
+}

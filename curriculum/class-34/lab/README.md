@@ -20,8 +20,11 @@ Once you have a good visual and mental model of how the application works, break
 ---
 
 ## Getting Started
+Starter code has been provided for you in the `/lab/starter-code` folder. 
 
-Fork [this sandbox](https://codesandbox.io/s/n7552v6jpl)
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
 
 Fire up your API Server locally or connect your app to our remote API
 * https://javascript-401-api.herokuapp.com

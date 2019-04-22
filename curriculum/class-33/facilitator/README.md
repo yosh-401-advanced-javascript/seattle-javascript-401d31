@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Remote APIs
-===============================================================
+# Facilitators Guide: Remote APIs
 
 ## Preparation
 * Read Up on [Thunk Middleware](https://alligator.io/redux/redux-thunk/) and async issues with Redux applications
@@ -12,6 +11,9 @@
   * But ... in the real world, we do asyncronous things like talk to servers
   * Enter "thunk", which lets our action creators return a function instead of an object.
     * Thunk Middleware executes that function THEN dispatches the actual action, which returns that object.
+    * We will demo how thunk works by writing it
+    * The demo should include a full breakdown of how async actions work with and without thunking.
+    * Use the "real" thunk in production code (it's well tested and more robust)
 
 
 ## Lab Prep

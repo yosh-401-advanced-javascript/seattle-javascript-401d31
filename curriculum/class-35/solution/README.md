@@ -1,7 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - CMS Project
-============================================================
-
-[Solution (redux)](https://codesandbox.io/s/qkl37kjvlj)
+# SOLUTION - CMS Project
 
 
 ## Grading Notes / Requirements
