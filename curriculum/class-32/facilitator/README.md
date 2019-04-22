@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Dynamic Forms
-=======================================================================
+# Facilitators Guide: Dynamic Forms
 
 ## Preparation
 The principal topic here is dealing with forms in React. To this point, the students have probably seen you code a few simple forms with an input that has an `onChange()` and an `onSubmit()` for the form.  Now that we're in Redux, things can change slightly.  We're going to explore 2 libraries.  Why libraries? Mainly to show students that libraries are GOOD THINGS when well executed.  And the 2 that we're showing are widely used in the industry.
@@ -16,9 +15,7 @@ The principal topic here is dealing with forms in React. To this point, the stud
 Use this day to really show the students how to find, install, and use 3rd party modules. That message is just as important as implementing forms in React.
 
 ## Lecture Main Topics & Overall Flow
-* JOHN - Take notes here from 401d28!
-  * Sub
-
+* 
 
 ## What bugs, issues, or surprises have come up in the past for this class?
 *
