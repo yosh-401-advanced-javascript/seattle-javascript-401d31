@@ -1,8 +1,12 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Remote APIs
-=========================================================
+# DEMOS - Remote APIs
 
+## Execution
 
-### [async demo](https://codesandbox.io/s/lrm3727z3l)
+Demos are provided in the `demo` folder in the guide repository. They are created with `create-react-app` and are suitable to install and run locally or at [Code Sandbox](http://codesandbox.io).  
+
+At Code Sandbox, simply create a new app using "Git Hub" and point it at the the appropriate demo folder and it'll spin the app up for you. Saves a lot of time and also shows the students the value of doing quicker "POC" style work in an online IDE and then executing production code in 
+
+### async demo
 This is a simple demo that pulls in some data from an API.
 * Demonstrate first with some stubbed data in the reducer to get it all wired up.
   * Talking point: start your UI with stub/mock data so you can get work done
