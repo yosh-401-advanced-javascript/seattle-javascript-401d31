@@ -1,4 +1,4 @@
-# LAB - Context and Hooks
+# LAB - Context API
 
 Create a React application that wraps the entire `<App/>` with a context provider, created using Context API. Then, create multiple components that act as consumers to your context, using it in various ways.
 

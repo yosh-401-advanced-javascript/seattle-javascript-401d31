@@ -1,7 +1,12 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Context and Hooks
-===============================================================
+# DEMOS - Context API
 
-## [Context API](https://codesandbox.io/s/v054jk7jj0)
+## Execution
+
+Demos are provided in the `demo` folder in the guide repository. They are created with `create-react-app` and are suitable to install and run locally or at [Code Sandbox](http://codesandbox.io).  
+
+At Code Sandbox, simply create a new app using "Git Hub" and point it at the the appropriate demo folder and it'll spin the app up for you. Saves a lot of time and also shows the students the value of doing quicker "POC" style work in an online IDE and then executing production code in their actual IDE.
+
+## `context-api`
 
 For this demo, the actual code being written is relatively small, but the concept is again pretty large.
 

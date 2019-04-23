@@ -1,11 +1,9 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Context and Hooks
-===========================================================================
-<a name="top"></a>
+# Facilitators Guide: Context API
 
 ## Preparation
-This lessson hits on 2 major points
-* React Context API
-* React Hooks API
+This lesson focuses on the Context API. Be comfortable in how this wires up (it's a little bit complex in the wiring).  
+
+DO NOT prepare on the `useContext()` hook. We will be introducing that in Class 38
 
 ## Lecture Main Topics & Overall Flow
 How many ways do we currently know of to manage state?
@@ -13,66 +11,13 @@ How many ways do we currently know of to manage state?
   2. Managed or Shared State (a component passes state/props/methods) down
   3. Redux Global State (pub/sub)
 
-**Context**
-Context provides a means of passing state down the component tree through a Provider/Consumer relationship.
+Now, we'll introduce another way to deal with state.
 
-At as high a level as makes sense, a "provider" can make it's state available, along with means of altering it (methods). 
+**Context** allows for a "global" pass-down of state and methods by using composition (much like the redux `<Provider>`). Context can be passed down to both class and functional components.
 
-```
-import React from 'react';
+  * Note that there is a `useContext` hook that does allow for this as well as many 3rd party hooks.
 
-export const SettingsContext = React.createContext();
-
-class SettingsProvider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      changeTitleTo: this.changeTitleTo,
-      title: 'My Amazing Website',
-    };
-  }
-
-  changeTitleTo = title => {
-    this.setState({ title });
-  };
-
-  render() {
-    return (
-      <SettingsContext.Provider value={this.state}>
-        {this.props.children}
-      </SettingsContext.Provider>
-    );
-  }
-}
-
-export default SettingsProvider;
-
-```
-
-At the app level ...
-```
-      <SettingsContext>
-        <Content />
-      </SettingsContext>
-``` 
-
-At the lower levels any component can "opt-in" and become a "consumer" and receive state and potentially methods through it.  Note the wrapping of context in a component, and the requirement of using a function to "get" the context object itself, which is `this.state` from the provider component.
-```
-      <SettingsContext.Consumer>
-        {context => {
-          console.log(context);
-          return (
-            <div>
-              <h1>{context.title}</h1>
-              <button onClick={() => context.changeTitleTo('Your Website')}>
-                Change Title
-              </button>
-            </div>
-          );
-        }}
-      </SettingsContext.Consumer>
-```
-
+Prepare to draw some images that describe the location of (and the sharing of) state between components when using Context and passing it down.
 
 ## What bugs, issues, or surprises have come up in the past for this class?
 * Be prepared for students to struggle with a 3rd way to handle state
