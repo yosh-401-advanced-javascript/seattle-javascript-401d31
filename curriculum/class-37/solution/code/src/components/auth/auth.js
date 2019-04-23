@@ -8,12 +8,14 @@ const If = props => {
   return !!props.condition ? props.children : null;
 };
 
+const SECRET = process.env.REACT_APP_SECRET || "changeit";
+
 class Auth extends React.Component {
   render() {
     return (
       <LoginContext.Consumer>
         {context => {
-          let user = context.token ? jwt.verify(context.token, "changeit") : {};
+          let user = context.token ? jwt.verify(context.token, SECRET) : {};
           let okToRender =
             context.loggedIn &&
             (this.props.capability

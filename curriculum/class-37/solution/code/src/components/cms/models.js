@@ -16,12 +16,12 @@ const styles = {
 
 class Models extends React.Component {
   componentDidMount() {
-    let url = `${API}/models`;
+    let url = `${API}/api/v1/models`;
     this.props.getModels(url);
   }
 
   selectModel = model => {
-    let url = `${API}/${model}`;
+    let url = `${API}/api/v1/${model}`;
     this.props.clearRecord();
     this.props.setModel(model);
     this.props.getRecords(url);

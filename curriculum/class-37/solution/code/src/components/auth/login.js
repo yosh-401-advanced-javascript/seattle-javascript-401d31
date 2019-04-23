@@ -3,8 +3,7 @@ import querystring from 'querystring';
 import React from 'react';
 import { LoginContext } from './context.js';
 
-// const API = 'http://localhost:3000';
-const API = 'https://javascript-401-api.herokuapp.com';
+const API = process.env.REACT_APP_API;
 
 const If = props => {
   return !!props.condition ? props.children : null;
