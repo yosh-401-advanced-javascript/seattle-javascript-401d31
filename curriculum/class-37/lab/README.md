@@ -21,9 +21,11 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Getting Started
 
-* Create a new sandbox from your CMS project's source code
-* Reference: [`<Login />` and `<Auth />` implementation](https://codesandbox.io/s/q359203jmq)
-  * You'll want to implement this so that you can use the `auth` components in your app.
+Starter code has been provided for you in the `/lab/starter-code` folder. 
+
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+
+You will be submitting the URL to this working sandbox as part of your assignment.
 
 ## Assignment: Implement Login and Authorization into an existing application
 
