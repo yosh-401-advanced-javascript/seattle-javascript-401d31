@@ -11,6 +11,7 @@ Wiki Entry Ideas:
 
 ## Read
 * [hooks api](https://reactjs.org/docs/hooks-overview.html)
+* [effects hook](https://reactjs.org/docs/hooks-effect.html)
 
 ## Skim
 * [global state management with hooks](https://blog.usejournal.com/global-state-management-with-react-hooks-5e453468c5bf)
