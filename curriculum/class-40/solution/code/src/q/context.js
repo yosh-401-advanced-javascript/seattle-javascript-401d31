@@ -1,5 +1,5 @@
 import React from "react";
-import Q from "./subscriber.js";
+import Q from '@nmq/q/client';
 const database = new Q("database");
 
 export const QueueContext = React.createContext();

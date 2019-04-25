@@ -36,6 +36,11 @@ Your react application will be conneced to the Q server you build in Block 4. It
 
 You should give careful consideration to the visual layout of your application, color choices, animations, and overal usability.
 
+* Use a visualizer (charts, graphs, etc) to display realtime database information
+* Use the `@nmq/q/client` library in your React application
+* Use **context** and/or **hooks** to manage state
+* Perhaps use *redux* or *useReducer()* to manage complex state...
+
 ### Notes - Q Server
 * Deploy the server to Heroku and validate that you can connect and subscribe to events.
 * Listen on `process.env.PORT`
