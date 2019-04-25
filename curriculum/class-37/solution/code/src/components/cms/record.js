@@ -23,7 +23,7 @@ class Record extends React.Component {
   // Runs whenever props change (pre-render)
   static getDerivedStateFromProps(props, state) {
     if (props.model && !props.schemas[props.model]) {
-      let url = `${API}/${props.model}/schema`;
+      let url = `${API}/api/v1/${props.model}/schema`;
       props.getSchema(props.model, url);
     }
     return {};
@@ -35,10 +35,10 @@ class Record extends React.Component {
 
   handleSubmit = form => {
     if (form.formData._id) {
-      let url = `${API}/${this.props.model}/${form.formData._id}`;
+      let url = `${API}/api/v1/${this.props.model}/${form.formData._id}`;
       this.props.put(this.props.model, url, form.formData);
     } else {
-      let url = `${API}/${this.props.model}`;
+      let url = `${API}/api/v1/${this.props.model}`;
       this.props.post(this.props.model, url, form.formData);
     }
   };

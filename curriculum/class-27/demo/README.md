@@ -1,6 +1,6 @@
 # DEMOS - Component Based UI
 
-For this class, work all demos locally instead of at Code Sandbox. You'll definitely need to be running tests, builds, creating documentation, etc.  This is a great opportunity to demonstrate devloping React Apps outside of the online IDE and in a more "Real" way.
+For this class, work all demos locally instead of at Code Sandbox. You'll definitely need to be running tests, builds, creating documentation, etc.  This is a great opportunity to demonstrate developing React Apps outside of the online IDE and in a more "Real" way.
 
 ## Documentation
 

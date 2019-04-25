@@ -17,12 +17,12 @@ const styles = {
 
 class Records extends React.Component {
   getRecord = id => {
-    let url = `${API}/${this.props.model}/${id}`;
+    let url = `${API}/api/v1/${this.props.model}/${id}`;
     this.props.getRecord(url);
   };
 
   deleteRecord = id => {
-    let url = `${API}/${this.props.model}/${id}`;
+    let url = `${API}/api/v1/${this.props.model}/${id}`;
     this.props.deleteRecord(this.props.model, id, url);
   };
 
