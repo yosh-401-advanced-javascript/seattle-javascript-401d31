@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Access Control (ACL)
-==========================================================
+# Access Control (ACL)
 
 ## Solution Notes
 

@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Other UI Systems
-===========================================================
+# Other UI Systems
 
 ## Learning Objectives
 

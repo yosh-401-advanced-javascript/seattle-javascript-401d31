@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Mid-Term Projects
-=======================================================
+# Mid-Term Projects
 
 ## Core Requirements
 

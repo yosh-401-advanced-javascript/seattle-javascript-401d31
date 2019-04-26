@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: HTTP and REST
-=======================================================================
+# Facilitators Guide: HTTP and REST
 
 ## Preparation
 * Download and install [`json-server`](https://github.com/typicode/json-server) -- It's a node module that you install globally which opens up a zero configuration REST server.  We will connect to this for a couple of days as we dig into REST and HTTP

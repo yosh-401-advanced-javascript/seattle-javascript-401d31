@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 401 Advanced Javascript - Daily Warm-Up Exercises
-=======================================================================================
+# 401 Advanced Javascript - Daily Warm-Up Exercises
 
 With the exception of Week 1 and Week 9 (the first and last weeks of the course), students will be expected to complete a daily "Warm-Up" exercise
 

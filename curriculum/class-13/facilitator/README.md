@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Bearer Authorization
-==============================================================================
+# Facilitators Guide: Bearer Authorization
 
 ## Preparation
 Read up on JWTs, specifically the [jsonwebtoken node module](https://www.npmjs.com/package/jsonwebtoken) that we're wiring up for this assignment.

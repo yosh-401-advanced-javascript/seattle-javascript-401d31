@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demo: OAuth
-=================================================
+# Demo: OAuth
 
 Change this --- the demo is tiny. The lab needs to be an integration prior to the research
 

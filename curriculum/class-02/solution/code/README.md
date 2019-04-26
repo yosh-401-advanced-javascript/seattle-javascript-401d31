@@ -1,4 +1,4 @@
-# ![CF](http://i.imgur.com/7v5ASc8.png) LAB
+# LAB
 
 ## Project Name: Classes-Inheritance
 

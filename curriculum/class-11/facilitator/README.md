@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Authentication
-========================================================================
+# Facilitators Guide: Authentication
 
 ## Preparation
 * Prepare a demo on ciphers and encryption so that the students can fully understand

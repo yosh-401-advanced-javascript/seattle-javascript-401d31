@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Final Project
-========================================================
+# Final Project
 
 ## Project Requirements and Expectations
 

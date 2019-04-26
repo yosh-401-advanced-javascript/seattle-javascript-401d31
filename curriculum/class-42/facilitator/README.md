@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: React Native Deployments
-===============================================================
+# Facilitators Guide: React Native Deployments
 
 ## Preparation
 * Get an app deployed through expo to both app stores so you know the process!

@@ -1,11 +1,8 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+# LAB 00 - Deployment
 
-## Lab 00 - Deployment
+## Author: Student Name
 
-### Author: Student Name
-
-### Links and Resources
+## Links and Resources
 
 ![Build Status]()
 * [repo](https://)

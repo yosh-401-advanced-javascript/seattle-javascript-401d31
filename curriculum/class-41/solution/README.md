@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - React Native Ecosystem
-=======================================================================
+# SOLUTION - React Native Ecosystem
 
 There's no official solution code because this lab is purposefully ambiguous. 
 
