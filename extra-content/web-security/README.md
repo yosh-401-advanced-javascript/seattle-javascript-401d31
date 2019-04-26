@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Web Security
-==================================================
+# Web Security
 
 ## Learning Objectives
 **Students will be able to ...**

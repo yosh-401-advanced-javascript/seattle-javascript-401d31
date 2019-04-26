@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Socket.io
-=======================================================
+# DEMOS - Socket.io
 
 [Demo Troll Client](https://codesandbox.io/s/p9q2o33lrm)
 

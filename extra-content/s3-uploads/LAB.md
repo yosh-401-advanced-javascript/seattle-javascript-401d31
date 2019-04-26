@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) Image Uploads w/ AWS S3
-===
+# Image Uploads w/ AWS S3
 
 ## Submission Instructions
   * Follow the instructions in the "Lab Instructions" documentation in the reference folder of the class repository
