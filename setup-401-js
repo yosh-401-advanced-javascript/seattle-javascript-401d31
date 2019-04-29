@@ -1,0 +1,113 @@
+#!/bin/bash
+
+help() {
+    echo
+    echo "Usage: setup-401-js -c class-ode -t target-folder"
+    echo
+    echo "  -c [class-code] (i.e. javascript-401d29)"
+    echo "     required"
+    echo
+    echo "  -t [target-folder] (i.e. ~/codefellows/classes)"
+    echo "     defaults to the current folder"
+    echo
+    echo "  -m -push the class repository to master (all files/folders)"
+    echo "     default - no push"
+    echo
+    echo "Environment Variables Required:"
+    echo "  GIT_USER - Your github login id"
+    echo "  GIT_TOKEN - A Github developer token for the GIT_USER account"
+    echo "              with read access to the codefellows/code-401-javascript-guide reoi"
+    echo
+    echo "This Application will:"
+    echo "  - create a repository named 'seattle-javascript-CLASS-CODE'"
+    echo "  - create a folder named 'CLASS-CODE' in your designated target"
+    echo "  - copy the files/folders from the most up to date js guide repo"
+    echo "  - (optionally) push everything to master"
+    echo
+}
+
+error() {
+    echo -------------------------------------------------------
+    echo ERROR: $1
+    help
+    echo -------------------------------------------------------
+    exit;
+}
+
+setup_class() {
+
+    mkdir -p $CLASS_FOLDER
+
+    cd $CLASS_FOLDER
+
+    curl -L https://github.com/codefellows/code-401-javascript-guide/archive/master.zip -H "Authorization:Bearer $GIT_TOKEN" > 401.zip
+      unzip 401.zip
+      rm -rf 401.zip
+
+    mkdir apps-and-libraries
+    mv code-401-javascript-guide-master/configs .
+    mv code-401-javascript-guide-master/reference .
+    mv code-401-javascript-guide-master/curriculum .
+
+    rm -rf curriculum/data-structures
+    rm -rf curriculum/design-assignments
+    rm -rf curriculum/warm-ups
+    rm -rf code-401-javascript-guide-master
+
+    for i in $( ls -A -d curriculum/class-* );
+      do  rm -rf $i/solution; rm -rf $i/facilitator;
+    done;
+
+    # Setup Github
+    curl -u $GIT_USER:$GIT_TOKEN https://api.github.com/orgs/codefellows/repos -d '{"name":"'$REPO'"}'
+
+    git init
+    git remote add origin git@github.com:codefellows/$REPO.git
+
+    if [ $PUSH_TO_MASTER -eq 1 ]; then
+      git add .
+      git commit -m "Class Repo Initialization"
+      git push origin master
+      echo "Pushed everything to master";
+    fi
+
+}
+
+OK=0;
+PUSH_TO_MASTER=0;
+while getopts :t:c:m option
+do
+  case "${option}"
+    in
+      c) OK=1;CLASS=${OPTARG};;
+      t) TARGET=${OPTARG};;
+      m) PUSH_TO_MASTER=1;;
+      h) help;exit;;
+  esac
+done
+
+if [ $OK -eq 0 ]; then
+  error "Class Code Required"
+fi
+
+if [ -z "$GIT_USER" ]; then
+  error "Missing GIT_USER environment variable"
+fi
+
+if [ -z "$GIT_TOKEN" ]; then
+  error "Missing GIT_TOKEN environment variable"
+fi
+
+## Default TARGET to the current folder
+: ${TARGET=.}
+
+REPO="seattle-javascript-$CLASS"
+CLASS_FOLDER="$TARGET/$CLASS"
+
+echo Class Code: $CLASS
+echo Local Repo Folder: $CLASS_FOLDER
+echo Github Repo: $REPO
+
+setup_class
+
+
