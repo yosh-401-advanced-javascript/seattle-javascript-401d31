@@ -3,7 +3,7 @@
 **This is a paired Lab**
 
 ## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -76,4 +76,4 @@ In the `starter-code`, there are folders that map to each of the lab assignments
 
 
 ## Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

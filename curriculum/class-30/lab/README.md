@@ -7,7 +7,7 @@ That front end uses some older technologies (jQuery and Handlebars) that we woul
 But we don't want our clients to feel the impact. The look, feel, and functionality needs to remain exactly as it is. We can do a facelift at a later date. Our priority right now is to get this running on React.
 
 ## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -40,7 +40,7 @@ Once you have a good visual and mental model of how the application works, break
 * Render into each column, the properly formatted results of each service call
 
 ## Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 
 * Create a city-explorer repo at github
 * Initialize your repo and app by running create-react-app

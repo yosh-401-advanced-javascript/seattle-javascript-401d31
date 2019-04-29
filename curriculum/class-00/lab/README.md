@@ -3,7 +3,7 @@
 ### Get this code up and running Travis and Heroku!
 
 #### Getting Started
-Refer to *Getting Started* in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup instructions
+Refer to *Getting Started* in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup instructions
 
 ## Requirements
 
@@ -20,4 +20,4 @@ Refer to *Getting Started* in the [lab submission instructions]((../../../refere
 * tests in starter code pass in travis
 
 ### Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

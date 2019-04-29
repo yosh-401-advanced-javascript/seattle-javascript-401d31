@@ -3,7 +3,7 @@
 Create an event driven messaging server
 
 ## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -82,4 +82,4 @@ Not required for this assignment
 
 
 ## Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

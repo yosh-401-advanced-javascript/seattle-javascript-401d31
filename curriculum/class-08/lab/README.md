@@ -3,7 +3,7 @@
 You have been provided a partially working API server. The assignment for today is to complete the server's functionality by creating the data models and writing a full test suite
 
 ## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -86,7 +86,7 @@ The provided API server is setup to work, but the data models are not implemente
 **Engineering Note** This is a main benefit of testing -- asserting that major changes don't effect functionality!
 
 ## Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 
 
 

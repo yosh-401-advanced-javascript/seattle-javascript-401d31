@@ -3,7 +3,7 @@
 ## Overview
 
 ## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -65,5 +65,5 @@ You should give careful consideration to the visual layout of your application, 
   * Once you are confident in the wiring, begin work on the react client.
 
 ## Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations## Submission Instructions
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations## Submission Instructions
 

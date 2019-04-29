@@ -1,7 +1,7 @@
 # LAB: Classes, Inheritance, Functional Programming
 
 ## Before you begin
-Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -45,7 +45,7 @@ Your diagram should include proper module and functional definitions, connection
 
 #### JSDoc
 This server works great, but isn't very developer friendly at this point. 
-Refer to *Documentation* in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) to generate jsdocs for this lab.
+Refer to *Documentation* in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) to generate jsdocs for this lab.
 
 #### Swagger
 Now that the server has been upgraded to support dynamic models in the routes using the `/:model` url parameter, we need to revisit our swagger documentation to reflect this.
@@ -62,6 +62,6 @@ Get this server deployed to production. Although you aren't writing code against
 * Use `supergoose`
 
 ## Assignment Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 
 

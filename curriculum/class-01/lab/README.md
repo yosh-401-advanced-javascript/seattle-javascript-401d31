@@ -55,4 +55,4 @@ Create a NodeJS module in the `lib` directory named `greet.js`.  This module sho
 
 
 ### Assignemnt Submission Instructions
-Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
