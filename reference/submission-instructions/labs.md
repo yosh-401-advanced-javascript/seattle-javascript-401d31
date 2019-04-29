@@ -28,17 +28,25 @@
    * create a `styleguidist-build` script for building the styleguide (with your config file)
    * create a `styleguidist-server` script for building the styleguide (with your config file)
    * create a `deploy` script (optionally) to combine any of the above steps
- * **styleguidist.json** - contains settings for styleguide docs (For React Only)
  * **/\_\_tests\_\_/** - contains unit tests
  * **/docs** - Where your documentation will reside
  * **/docs/config**
  * **/docs/config/jsdoc.config.json**
    * JSDOC Config File
    * Edit this for each lab, if your folder structure is different
+ * **/docs/config/styleguidist.json** 
+   * contains settings for styleguide docs (For React Only)
 
 ### Canvas Submission
 * Copy the README-template.md file from the reference/submission-instructions folder, rename it to `README.md` and include it in your lab repository in the root folder
-* README must include the live (deployed) URLs to your **running server**, **API Documentation**, and **JSDoc**
+* README must include the live (deployed) URLs to your 
+   * **running server** (Deployed URL)
+     * Heroku for express apps
+     * Code Sandbox for React daily labs
+     * Netlify, AWS, or Azure for React projects
+   * **API Documentation** (swagger/blueprint)
+   * **JSDoc** (express labs)
+   * **Style Guide Doc** (React labs)
 * README should contain link to open PR on submission branch
 * Keep submission branch PR open in case of resubmit
 * Do NOT merge to master
@@ -105,6 +113,7 @@
 ### Deployment
 
  * For daily labs, using Codesandbox.io is sufficient for deployment
+   * Note that you may have multiple tasks and sandboxes to be completed for a single "lab"
  * Your block projects (applications) must be deployed at AWS Cloudfront or Netlify
  * Use an automated deployment, connecting your repository to AWS through cloud formation
  
@@ -117,8 +126,17 @@
     * Visibility
     * State Changes
   * For reducers and hooks, create pure unit tests to assert their baseline functionality
+  
 
 ### Documentation
+
+#### Compose a UML or Process/Data Flow Diagram for every application
+ [UML Reference](https://www.uml-diagrams.org/index-examples.html)
+ 
+ * This should be the first thing you do when beginning work on a lab assignment.
+ * Draw the process/data flow of your application and map it to the code you will need to write or evaluate/fix.
+ 
+#### Component Documentation (Style Guide)
 [Styleguidist Documentation](https://react-styleguidist.js.org/)
 
   * Describe your PropTypes
@@ -126,8 +144,16 @@
     * Use `<Component>.md` files to describe components and provide examples.
     * Setup your `package.json` to build your styleguide docs in a subfolder of `/build`, after your normal react `build` script runs
     * Ensure that your deployments are properly building your styleguidist docs
+  * Note that for daily "practice" labs deployed at code sandbox, your styleguidist docs will not be buildable or viewable
+    * Create and write them anyway (we will review them for completeness)
 
+#### React Lab Canvas Submissions
+  * Create a new Repository for each lab
+  * Include one README.md
+  * Include your UML diagram(s)
+  * Include a README with all URLs (including multiple sandboxes if the lab required them)
 
+---
 
 ## Grading Rubric
 Note: Not every lab will require all facets below. In these cases, points application from other (perhaps higher focus areas) will be increased.
@@ -137,7 +163,13 @@ Note: Not every lab will require all facets below. In these cases, points applic
 | ------------------- | ------------------------------------------------------------------------------------------------------ | ---------- |
 | Feature Completion  | Score based on % of features demonstrably completed                                                    | 2/5        |
 | Code Implementation | Efficiency of code // Missing JSDoc // Poor Code Quality // Modularity // Monolithic // Non-Functional | 2/5        |
-| Tests               | Targert: 80% Coverage // Running in CI (i.e. Travis)                                                   | 2/5        |
+| Tests               |  Travis // Plan // Coverage  | 2/5        |
 | Deployment          | (When applicable) - Deployed, Running, Testable: AWS, Heroku, Azure, etc.                              | 2/5        |
 | Documentation       | Proper README // UML Diagram // JSDoc Coverage                                                         | 2/5        |
 |                     |                                                                                                        | 10/25      |
+
+**Tests**
+
+  * Must have a Travis URL to be considered (0 points otherwise)
+  * Must have one solid unit/component fully tested with well scaffolded test plan for all others (1/2 credit)
+  * 80% coverage to get full points
