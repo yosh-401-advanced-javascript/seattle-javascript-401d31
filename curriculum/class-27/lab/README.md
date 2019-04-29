@@ -1,7 +1,7 @@
 # LAB - React Testing and Deployment
 
 ## Before you begin
-Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -52,5 +52,5 @@ Create a new repository for this assignment, copy the starter-code folder conten
 Submit all 3 deployed URLs as well as your Travis tests and documentation links.
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
 * Submit links to both deployments at AWS

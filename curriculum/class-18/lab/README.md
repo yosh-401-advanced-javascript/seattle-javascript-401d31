@@ -3,7 +3,7 @@
 Create a multi-client, event driven "smart app"
 
 ## Before you begin
-Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -80,6 +80,6 @@ Connect the application (app.js) to a `socker.io` server and emit messages relat
 
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
 
 * Your server need not be deployed to Heroku for this lab

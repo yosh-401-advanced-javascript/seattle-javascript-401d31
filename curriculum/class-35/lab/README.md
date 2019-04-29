@@ -12,7 +12,7 @@ In this project, you will be tasked with creating a "CMS" or Content Management 
 
 
 ## Before you begin
-Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -61,7 +61,7 @@ Once you have a good visual and mental model of how the application works, break
 * Enzyme tests for your interactions are required
 
 ## Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
 
 * Deploy your front-end (the React application) to AWS
   * Preferably, use the automated deployment process to connect a Cloud Formation stack

@@ -6,7 +6,7 @@
 * You'll need to initialize this lab folder as a new node module, install your dependencies, setup your npm script commands, and pull in your config files
 
 ## Getting Started
-Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+Refer to *Getting Started* in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup instructions
 
 #### Resources  
 * [Buffer Docs](https://nodejs.org/api/buffer.html)
@@ -39,4 +39,4 @@ Refer to *Getting Started* in [lab-instructions.md](../../../reference/submissio
   * should let you control what is in the buffers and the output
 
 ### Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations

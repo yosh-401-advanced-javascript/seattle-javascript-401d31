@@ -7,7 +7,7 @@ This lab will have you operating on the `/signin` route to add support for Token
 You'll be required to wire up Bearer auth properly and then to dive in deeper and add some security measures to the tokens to prevent misuse and fraud.
 
 ## Before you begin
-Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -73,4 +73,4 @@ http post :3000/hidden-stuff "authorization: bearer TOKENHERE"
 
 
 ## Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations

@@ -1,7 +1,7 @@
 # LAB: Classes, Inheritance, Functional Programming
 
 ## Before you begin
-Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+Refer to *Getting Started* in the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for complete setup instructions
 
 ### Getting Started: Objects and Classes
 In the `objects` folder, there is a full implementation of a Car and Motorcycle object created using a constructor function, with an index.js file that you can use to visually play with the objects as well as tests.
@@ -65,4 +65,4 @@ In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` t
 
 
 ### Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions]((../../../reference/submission-instructions/labs/README.md)) for the complete lab submission process and expectations
