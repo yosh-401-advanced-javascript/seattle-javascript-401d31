@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demo: API Server
-======================================================
+# Demo: API Server
 
 #### Demo Name -- `demo/api-server`
 * Alter the API server (starting with the previous day's solution)

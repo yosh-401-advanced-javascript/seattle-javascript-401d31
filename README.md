@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 401 Advanced Javascript
-=============================================================
+# 401 Advanced Javascript
 
 ## Course Goals
 ### Students will be able to demonstrate ...

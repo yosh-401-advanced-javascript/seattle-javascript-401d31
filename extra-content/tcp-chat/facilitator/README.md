@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: TCP Server
-=========================================================================
+# Facilitators Guide: TCP Server
 
 ## Preparation
 Today is all about the OSI model and working within a TCP layer.  You'll want to be comfortable with both the native NodeJS `net` module as well as node events in order to create a TCP chat server for the daily lecture demo.  You can find several implemetations of this demo in the */demos* directory.

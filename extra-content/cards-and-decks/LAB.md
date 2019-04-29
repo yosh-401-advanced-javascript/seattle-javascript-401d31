@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB - Cards and Decks
-=================================================================
+# LAB - Cards and Decks
 
 
 ## Assignment

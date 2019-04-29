@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: OAuth
-===============================================================
+# Facilitators Guide: OAuth
 
 ## Preparation
 * Understand the full OAuth flow and the history of this API/Process/Workflow.

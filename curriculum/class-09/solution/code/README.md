@@ -1,8 +1,4 @@
-
-
-
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+# LAB
 
 ## Project Name: LAB 14 Data Modeling and API server
 

@@ -1,5 +1,5 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Javascript and Web Frameworks
-=======================================================================================
+# Facilitators Guide: Javascript and Web Frameworks
+
 This is the first of a 2-day grouped research and development project, designed to have the students teach themselves an entirely new framework, and then prepare a knowledge transfer of their learnings to the group.
 
 Lecture is split over the last 2 days of the course. In the first lecture, you'll introduce the concept and demo the process.  In the second lecture, you'll be doing a sample presentation (as you expect to see from them) as well as to demonstrate the installation and operation of a Wordpress site.

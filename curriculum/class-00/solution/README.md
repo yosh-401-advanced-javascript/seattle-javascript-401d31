@@ -1,11 +1,8 @@
-![CF](http://i.imgur.com/7v5ASc8.png) LAB
-=================================================
+# Lab 00 - Deployment
 
-## Lab 00 - Deployment
+## Author: Author Name
 
-### Author: Author Name
-
-### Links and Resources
+## Links and Resources
 
 ![Build Status](https://www.travis-ci.com/beccalee123/00-deployment.svg?branch=master)
 * [repo](https://github.com/beccalee123/00-deployment)

@@ -1,5 +1,5 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Express
-=================================================================
+# Facilitators Guide: Express
+
 ## Preparation
 We're going to take the next 2 classes and replace json-server with one of our own making. This will start with an exploration of express routing and middleware.
 

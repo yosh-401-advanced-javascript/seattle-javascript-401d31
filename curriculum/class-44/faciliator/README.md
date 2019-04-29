@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Javascript and Web Frameworks
-=======================================================================================
+# Facilitators Guide: Javascript and Web Frameworks
 This is the second of a 2-day grouped research and development project, designed to have the students teach themselves an entirely new framework, and then prepare a knowledge transfer of their learnings to the group.
 
 ## Preparation

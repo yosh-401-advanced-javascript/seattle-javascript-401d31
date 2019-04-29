@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 401 Advanced Javascript - Design Assignments
-==================================================================================
+# 401 Advanced Javascript - Design Assignments
 
 Every day in blocks 5, 6, 7, students will be presented with a new design assignment to be completed along with each daily lab.
 

@@ -1,5 +1,5 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: React Native Ecosystem
-================================================================================
+# Facilitators Guide: React Native Ecosystem
+
 The first React Native class is designed to introduce students into the React Native Ecosystem. 
 
 * Spinning up a dev environment

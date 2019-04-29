@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: Classes, Inheritance, Functional Programming
-=========================================================================================
+# Demos: Classes, Inheritance, Functional Programming
 
 ## Notes
 Normally, you do an hour of "lecture" followed by a live demo ...

@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) 401 Advanced Javascript
-=============================================================
+# 401 Advanced Javascript
 
 ## Course At a Glance
 | Block 1                            | Block 2                     | Block 3                     | Block 4                     |

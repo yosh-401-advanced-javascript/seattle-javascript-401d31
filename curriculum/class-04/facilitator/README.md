@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Buffers
-=================================================================
+# Facilitators Guide: Buffers
 
 ## Preparation
 This is a big topic and one that can seem really daunting to students. For most of them, this is their first look at anything "Computer Science-y" -- make it fun and engaging. There are some quirky images in the repo that you can use to tell a few stories about the "old days" and why things are how they are.

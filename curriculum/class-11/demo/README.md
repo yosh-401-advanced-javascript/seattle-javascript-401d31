@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demo: Authentication
-==========================================================
+# Demo: Authentication
 
 ## Auth Server Demo
 

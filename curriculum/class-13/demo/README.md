@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demo: Bearer Authorization
-================================================================
+# Demo: Bearer Authorization
 
 ## Live Coding Demo(s)
 

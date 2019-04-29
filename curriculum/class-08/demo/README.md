@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: Data Modeling
-==========================================================
+# Demos: Data Modeling
 
 ### Express Routing and Middleware -- `demo/routing`
 * Build out a base express server, highlighting it's basic parts as you go

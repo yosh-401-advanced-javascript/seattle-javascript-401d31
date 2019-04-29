@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 18: Asset Management
-===
+# Asset Management
 
 ## Learning Objectives
 * Students will be able to upload static assets to AWS S3

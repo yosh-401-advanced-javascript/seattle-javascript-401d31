@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: API Server
-====================================================================
+# Facilitators Guide: API Server
 
 ## Preparation
 The core takeaways from the day are introducing the students to

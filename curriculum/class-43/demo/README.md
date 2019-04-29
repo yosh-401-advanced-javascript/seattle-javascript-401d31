@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - Javascript Frameworks
-===================================================================
+# DEMOS - Javascript Frameworks
 
 This is a "have fun" day for the instructor.  The studens are about to start a 2 day mini-project implementing different frameworks on their own.
 

@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Event Driven Applications
-===================================================================================
+# Facilitators Guide: Event Driven Applications
 
 ## Preparation
 This topic leads students directly into the TCP and Socket lectures that follow, and then into the end of section project, which is to build out an event driven queue.

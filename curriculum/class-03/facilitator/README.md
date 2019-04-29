@@ -1,6 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Async
-===============================================================
-<a name="top"></a>
+# Facilitators Guide: Async
 
 ## Preparation
 

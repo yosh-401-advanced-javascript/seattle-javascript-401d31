@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: Node Ecosystem
-===========================================================
+# Demos: Node Ecosystem
 
 ## Environments  (`envs`)
   * Open up the shell and talk about it being a place to run commands
