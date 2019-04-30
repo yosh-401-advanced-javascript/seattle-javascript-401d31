@@ -7,7 +7,7 @@ import * as api from '../../lib/api.js';
 import * as actions from './actions.js';
 
 // const API = 'http://localhost:3000';
-const API = 'https://javascript-401-api.herokuapp.com';
+const API = 'https://api-js401.herokuapp.com';
 
 const uiSchema = {
   _id: { 'ui:widget': 'hidden' },

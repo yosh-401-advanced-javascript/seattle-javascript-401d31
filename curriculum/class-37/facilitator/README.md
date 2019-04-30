@@ -5,7 +5,7 @@ This lesson hits on 2 major points
 * Login using Basic and Oauth
 * Authorization to hide/show components & controls conditionally
 
-For implementation and testing purposes, we have a running API server at: https://javascript-401-api.herokuapp.com
+For implementation and testing purposes, we have a running API server at: https://api-js401.herokuapp.com
   * Logins/Passwords:
     * user:USER
     * editor:EDITOR

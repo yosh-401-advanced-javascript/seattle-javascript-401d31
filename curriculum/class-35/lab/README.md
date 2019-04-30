@@ -47,7 +47,7 @@ Once you have a good visual and mental model of how the application works, break
 
 
 **Implementation Notes/Advice**
-* Use the deployed API server at https://javascript-401-api.herokuapp.com
+* Use the deployed API server at https://api-js401.herokuapp.com
 * The api server supports the following routes:
   * **GET** `/api/v1/models` - A list of all data models
   * **GET** `/api/v1/model/schema` - The JSON Schema for a given **model**

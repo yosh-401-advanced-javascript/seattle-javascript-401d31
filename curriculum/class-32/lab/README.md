@@ -32,13 +32,12 @@ You will be submitting the URL to this working sandbox as part of your assignmen
   * Get your latest and greatest API server from the your earlier labs and get it running along with a MongoDB instance. (Recommended)
   * Or ... use the supplied server in this lab folder
   * Or ... simply connect to the deployed public API server
-    * [https://javascript-401-api.herokuapp.com/api/v1/](https://javascript-401-api.herokuapp.com/api/v1/)...
+    * [https://api-js401.herokuapp.com/api/v1/](https://api-js401.herokuapp.com/api/v1/)...
 * Once you have it up and running, fetch the schema for any model that you have. We will be using this to build our forms. Copy the schema response that you get from the server and paste it into a file called "schema.json", we'll be using that later.
   * *The public API supports "players" and "teams" models for all operations*
 
 ## Assignments
 ### Implement the RESTful Reducers
-Begin by forking the [forms starter code sandbox](https://codesandbox.io/s/qv3zqp7jmj)
 
 * Use a static .json file to bring in the players schema (you can simply import it)
 * Implement all of the restful methods in the Redux Store for the player schema

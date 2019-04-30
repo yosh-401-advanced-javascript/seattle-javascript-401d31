@@ -27,7 +27,7 @@ Open [Code Sandbox](http://codesandbox.io) and Create a new application. When pr
 You will be submitting the URL to this working sandbox as part of your assignment.
 
 Fire up your API Server locally or connect your app to our remote API
-* https://javascript-401-api.herokuapp.com
+* https://api-js401.herokuapp.com
 
 ## Assignment
 Conver the forms lab into using remote APIs to source the schema and save the record data

@@ -1,6 +1,6 @@
 import * as utils from '../lib/utils';
 
-let api = 'https://javascript-401-api.herokuapp.com/api/v1/players';
+let api = 'https://api-js401.herokuapp.com/api/v1/players';
 
 // This won't work.
 // export const getStuff = async () => {
