@@ -1,13 +1,16 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-import reporter from './middleware/reporter.js';
-import thunk from './middleware/thunk.js';
-import APIreducer from './reducers.js';
+// import thunk from './middleware/thunk.js';
+import thunk from 'redux-thunk';
+
+import reducer from './reducers.js';
 
 let reducers = combineReducers({
-  api: APIreducer,
+  data: reducer,
 });
 
-export default () => createStore(reducers, applyMiddleware(thunk));
+const store = () =>
+  createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
-// , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+export default store;
