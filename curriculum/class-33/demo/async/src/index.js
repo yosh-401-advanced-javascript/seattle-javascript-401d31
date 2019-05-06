@@ -7,14 +7,12 @@ import App from './app.js';
 import createStore from './store/';
 const store = createStore();
 
-class Main extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-  }
+function Main() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  );
 }
 
 const rootElement = document.getElementById('root');
