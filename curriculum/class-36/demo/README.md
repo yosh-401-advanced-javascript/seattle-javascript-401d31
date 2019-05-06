@@ -21,6 +21,12 @@ Note that the demo has a repeated `<section>` in the render so that you can demo
 
 Make note that `contextType` only works if you have a single context being used in the component.
 
+The Editor demo is split into multiple components so that you can show:
+
+* 2 components sharing the same context
+* Using static context
+* Using the Provider functionality to use context
+
 
 ## `context-api-refactored`
 
