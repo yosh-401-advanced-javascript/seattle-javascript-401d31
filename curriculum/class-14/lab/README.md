@@ -1,7 +1,7 @@
 # LAB: Access Control
 
 ## Before you begin
-Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
@@ -60,4 +60,4 @@ http post :3000/hidden-stuff "authorization: bearer TOKENHERE"
 * Add tests to the mongoose model for the created static and instance methods.
 
 ## Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

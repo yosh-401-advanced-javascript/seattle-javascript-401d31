@@ -77,4 +77,4 @@ You will want to define a strategy for solving the problem before you begin to c
   * Verticaly or Horizontaly Stretch
 
 ## Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
