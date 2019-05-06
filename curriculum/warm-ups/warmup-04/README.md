@@ -24,5 +24,5 @@ This exercise is designed to ensure that you have a solid grasp on async program
 
 * Repeat the process, but this time using a function called `fetchPeopleWithAsync()` which uses async and await to return you a list of people
 
-## Assignemnt Submission Instructions
+## Assignment Submission Instructions
 Refer to the [warmup-instructions.md](../../../reference/submission-instructions/warmups) for the complete lab submission process and expectations
