@@ -5,7 +5,7 @@ React is great, but it's a client-side application, which has a negative impact 
 For content driven sites, such as a Blog or a news site, where its important to have search engines like Google and Bing  properly index your site, you must render full HTML on the server side and send all of that content to the browser.
 
 ## Before you begin
-Refer to *Getting Started*  in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup, configuration, deployment, and submission instructions.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
 **Visualize the Application**
 
