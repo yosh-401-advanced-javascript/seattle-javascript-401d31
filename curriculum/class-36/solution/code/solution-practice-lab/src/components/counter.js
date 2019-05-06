@@ -14,6 +14,9 @@ const Counter = props => {
     width: "15em"
   };
 
+  // How can we use contextType here instead?
+  // What about a hook?
+
   return (
     <CounterContext.Consumer>
       {context => {

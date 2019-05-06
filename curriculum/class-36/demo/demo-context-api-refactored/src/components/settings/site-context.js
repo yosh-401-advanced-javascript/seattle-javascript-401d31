@@ -6,14 +6,18 @@ class SettingsProvider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: 'Daily Dose of Code',
       changeTitleTo: this.changeTitleTo,
-      title: 'My Amazing Website',
+      twitter: 'DailyDoseOfCode',
+      changeTwitterTo: this.changeTwitterTo,
+      email: 'dailydoseofcode@gmail.com',
+      changeEmailTo: this.changeEmailTo,
     };
   }
 
-  changeTitleTo = title => {
-    this.setState({ title });
-  };
+  changeTitleTo = title => this.setState({ title });
+  changeTwitterTo = twitter => this.setState({ twitter });
+  changeEmailTo = email => this.setState({ email });
 
   render() {
     return (

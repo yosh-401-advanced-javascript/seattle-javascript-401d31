@@ -14,4 +14,24 @@ Definitely spend plenty of time in pictures, drawing out the connections between
 
 The demo only needs a simple context provider with one bit of state and one modifier method. That will be enough to sell the concept and give the students the tools to build out their counter application.
 
+Note that the demo has a repeated `<section>` in the render so that you can demonstrate the 2 ways to use a single Context
 
+* With a `<Context.Consumer>` wrapper, which requires you to use a function() that receives context
+* Using `static contextType` to set `this.context`
+
+Make note that `contextType` only works if you have a single context being used in the component.
+
+
+## `context-api-refactored`
+
+This second demo is more advanced, and makes use of multiple contexts
+
+The primary takeaway here is that you can no longer use `contextType` if you're referencing them in the same component.
+
+For this reason, talk about and look for opportunities to refactor and use multiple, targeted components to use each context.
+
+In this example, we're using the `Theme` context in main to drive style and also in the editor so that we can edit those settings and save them back to state.
+
+## Lab Prep
+
+Students will need to employ both methods to complete the lab assignments.
