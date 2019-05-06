@@ -1,11 +1,11 @@
 # JavaScript 401 Warm-Up - Express
 
 ## Setup
-* Work in a repository for this warmup exercise (`warmup-02`)
-  * On each day, create a new branch of this repo with the date
-    * i.e. `11-22-2018`
+* Work in a repository for this warmup exercise (`warmup-express`)
+  * On each day, create a new folder and branch of this repo with the date
+    * i.e. `YYYY-MM-DD`
   * Submit a PR from that branch to your master for review
-  * If you are deploying to Heroku or Code Sandbox, provide that link as well.
+  * If you are deploying to Heroku or Code Sandbox, provide that link as well
   * Timebox this to 1 hour
 
 ## Warm-Up Exercise
