@@ -1,7 +1,7 @@
 # LAB: Async
 
 ## Getting Started
-Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+Refer to *Getting Started* in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup instructions
 
 ## Requirements
 ### Part 1 - Read and Write to a File
@@ -78,5 +78,5 @@ In the files folder, you'll see 3 files: `1.txt`, `2.txt`, `3.txt`
 
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 

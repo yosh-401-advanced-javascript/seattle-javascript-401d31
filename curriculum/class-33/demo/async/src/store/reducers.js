@@ -1,10 +1,8 @@
-let initialState = {
-  results: [],
-};
+let initialState = { results: [] };
 
 export default (state = initialState, action) => {
-  let { type, payload } = action;
-
+  const { type, payload } = action;
+  console.log(payload);
   switch (type) {
     case 'GET':
       return payload;

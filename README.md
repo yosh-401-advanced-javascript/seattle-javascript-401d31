@@ -72,7 +72,11 @@ The facilitators folder in each day contains information for the instructional s
 
 #### Guide Repo Setup
 
-**Class Repo** - Create a repository with your class code, and copy the following into it:
+**Class Repo**
+
+* Run the included `setup-401-js` shell script to create your guide repo
+* To do this manually instead ...
+  * Create a repository with your class code, and copy the following into it:
     * `README.md`
     * `demo` folder
     * `lab` folder
@@ -136,7 +140,7 @@ It's advisable that the students first make an new org (perhaps called '401-js')
     * Linked directly into Canvas from the Guide Repo
     * Daily practice designed to be repetitive, build muscle memory and cement the basics. 
     
-  * **FUNDAMENTALS/PRACTICE (4 per block)**
+  * **FUNDAMENTALS/PRACTICE (2 per block)**
     * 5 Points (complete/incomplete)
     * :45 minutes
       * Students must timebox this.
