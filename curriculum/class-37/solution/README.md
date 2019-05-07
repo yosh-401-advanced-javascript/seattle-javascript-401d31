@@ -4,7 +4,7 @@
 
 * Students will be tasked with using the Auth/Login system
 * They are provided a usable version of these component/context in the lab
-* Their task will be to integrate that into a "CRUD" application and restrict access based on permissions (their CMS)
+* Their task will be to integrate that into a "CRUD" application and restrict access based on permissions (the To Do Application)
 * The goal for this lab is not to implement Login/Auth, but to understand it at it's core purpose, and to seemlessly implement this as a means to solve a real world problem set.
 
 #### Grading Standards & Notes

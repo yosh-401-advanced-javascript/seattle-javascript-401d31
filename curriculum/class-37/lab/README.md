@@ -1,5 +1,7 @@
 # LAB -  `<Login />` and `<Auth />`
 
+Using Login Context, "protect" the To Do application by restricting access to the various application features based on the users' login status and capabilities.
+
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
@@ -30,28 +32,31 @@ You will be submitting the URL to this working sandbox as part of your assignmen
 ## Assignment: Implement Login and Authorization into an existing application
 
 ### Requirements
+
+#### Migrate and Modularize
+* Refactor the app to make use of the Context API
+* Create a `context` for the Application
+* Create a separate `<Counter />` component that reads and displays the `count` from Context
+* Create separate components for the main To App elements
+  * `form` - Adds and updates to do list items
+  * `list` - Lists items, manages complete state and form visibility
+  
+  
+#### Login/Auth Features
 * Hide the entire interface until the user has logged in.
-* Provide a login and logout option in the main menu
+  * Provide a login and logout option in the main menu
 * Implement the following RBAC rules:
-    * Logged In Users with 'read' permissions can see the list of data models and records
-    * Logged In Users with 'delete' permissions can delete records
-    * Logged In Users with 'update' permissions can edit existing records
-    * Logged In Users with 'create' permissions can create new records
+    * Logged In Users with 'read' permissions can see the summary/count
+    * Logged In Users with 'read' permissions can see the list of To Do Items
+    * Logged In Users with 'delete' permissions can click the records to mark them as complete
+    * Logged In Users with 'update' permissions can edit existing items
+    * Logged In Users with 'create' permissions can create new items
 
 ### Notes
-* You may not alter the functionality of the existing application components.
+* You may not alter the functionality of the existing application
 * You may only grant access using RBAC
-* The API server supports the following routes:
-  * **POST** `/roles` - Accepts a JSON object with `role`, `capabilities` (array) to create a role.
-  * **POST** `/signup` - Accepts a JSON object with `username`, `password` to create an account
-  * **POST** `/signin` - Signin with either Basic Auth or Bearer Auth, returning a JWT Token
-  * **GET** `/api/v1/models` - A list of all data models
-  * **GET** `/api/v1/model` - A list of all records in a given **model**
-  * **GET** `/api/v1/model/schema` - The JSON Schema for a given **model**
-  * **GET** `/api/v1/model/id` - A single record, from a **model**, with the **id**
-  * **DELETE** `/api/v1/model/id` - Delete a single record, from a **model**, with the **id**
-  * **PUT** `/api/v1/model/id` - Replace single record, from a **model**, with the **id**
-  * **PATCH** `/api/v1/model/id` - Tactically update a single record, from a **model**, with the **id**
+* You may test with your own API server
+* You must either deploy that server and configure your React application to use it, or you may use the official API deployment at https://api-js401.herokuapp.com
 * The API server has the following user accounts (username:password) that you can use to login as a user with varying permissions
   * admin:ADMIN (create, read, update, delete)
   * editor:EDITOR (create, read, update)

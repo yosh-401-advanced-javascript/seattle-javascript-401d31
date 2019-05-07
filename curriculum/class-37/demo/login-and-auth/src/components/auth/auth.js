@@ -13,7 +13,10 @@ class Auth extends React.Component {
     return (
       <LoginContext.Consumer>
         {context => {
-          let user = context.token ? jwt.verify(context.token, 'changeit') : {};
+          let user = context.token
+            ? jwt.verify(context.token, process.env.REACT_APP_SECRET)
+            : {};
+          console.log(user);
           let okToRender =
             context.loggedIn &&
             (this.props.capability

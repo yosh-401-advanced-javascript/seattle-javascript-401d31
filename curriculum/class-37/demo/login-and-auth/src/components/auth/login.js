@@ -1,10 +1,11 @@
-import superagent from "superagent";
-import querystring from "querystring";
-import React from "react";
-import { LoginContext } from "./context.js";
+import superagent from 'superagent';
+import querystring from 'querystring';
+import React from 'react';
+import { LoginContext } from './context.js';
 
-// const API = 'http://localhost:3000';
-const API = "https://javascript-401-api.herokuapp.com";
+const API = process.env.REACT_APP_API;
+
+console.log({ API });
 
 const If = props => {
   return !!props.condition ? props.children : null;
@@ -32,15 +33,15 @@ class Login extends React.Component {
   };
 
   googleURL = () => {
-    let googleURL = "https://accounts.google.com/o/oauth2/v2/auth";
+    let googleURL = 'https://accounts.google.com/o/oauth2/v2/auth';
 
     let options = {
       client_id:
-        "560654039720-5kmgrmq63ctu07hb8e973t589jio17qf.apps.googleusercontent.com",
-      redirect_uri: "http://localhost:3000/oauth",
-      scope: "email openid profile",
-      prompt: "consent",
-      response_type: "code"
+        '560654039720-5kmgrmq63ctu07hb8e973t589jio17qf.apps.googleusercontent.com',
+      redirect_uri: 'http://localhost:3000/oauth',
+      scope: 'email openid profile',
+      prompt: 'consent',
+      response_type: 'code',
     };
 
     let QueryString = querystring.stringify(options);
@@ -54,7 +55,6 @@ class Login extends React.Component {
     return (
       <LoginContext.Consumer>
         {context => {
-          console.log("CTX", context);
           return (
             <>
               <If condition={context.loggedIn}>

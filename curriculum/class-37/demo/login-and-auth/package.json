@@ -5,17 +5,14 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "jsonwebtoken": "8.4.0",
-    "prop-types": "15.7.1",
-    "react": "16.6.3",
-    "react-cookies": "latest",
-    "react-dom": "16.6.3",
-    "react-jsonschema-form": "1.0.6",
-    "react-redux": "6.0.0",
-    "react-router-dom": "4.3.1",
-    "react-scripts": "2.1.1",
-    "redux": "4.0.1",
-    "superagent": "latest"
+    "jsonwebtoken": "8.5.1",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-cookies": "0.1.0",
+    "react-dom": "16.8.6",
+    "react-router-dom": "5.0.0",
+    "react-scripts": "3.0.0",
+    "superagent": "5.0.5"
   },
   "devDependencies": {},
   "scripts": {

@@ -1,25 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import LoginContext from './components/auth/context.js';
 
-import CMS from './components/cms/cms.js';
+import ToDoContext from './components/todo/context.js';
+import AuthContext from './components/auth/context.js';
 
-import createStore from './store/';
-const store = createStore();
+import App from './app.js';
 
-function App() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <LoginContext>
-          <CMS />
-        </LoginContext>
-      </BrowserRouter>
-    </Provider>
-  );
+class Main extends React.Component {
+  render() {
+    return (
+      <AuthContext>
+        <ToDoContext>
+          <App />
+        </ToDoContext>
+      </AuthContext>
+    );
+  }
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Main />, rootElement);

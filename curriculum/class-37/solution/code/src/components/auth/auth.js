@@ -1,21 +1,21 @@
-import React from "react";
-import jwt from "jsonwebtoken";
-import PropTypes from "prop-types";
+import React from 'react';
+import jwt from 'jsonwebtoken';
+import PropTypes from 'prop-types';
 
-import { LoginContext } from "./context.js";
+import { LoginContext } from './context.js';
 
 const If = props => {
   return !!props.condition ? props.children : null;
 };
-
-const SECRET = process.env.REACT_APP_SECRET || "changeit";
 
 class Auth extends React.Component {
   render() {
     return (
       <LoginContext.Consumer>
         {context => {
-          let user = context.token ? jwt.verify(context.token, SECRET) : {};
+          let user = context.token
+            ? jwt.verify(context.token, process.env.REACT_APP_SECRET)
+            : {};
           let okToRender =
             context.loggedIn &&
             (this.props.capability
@@ -30,7 +30,7 @@ class Auth extends React.Component {
 }
 
 Auth.propTypes = {
-  capability: PropTypes.string.isRequired
+  capability: PropTypes.string.isRequired,
 };
 
 export default Auth;
