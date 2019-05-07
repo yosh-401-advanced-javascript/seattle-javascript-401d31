@@ -1,14 +1,8 @@
-# Block 6 Project: CMS
+# Block 6 Project: RESTy Conversion to Redux
 
-At the core of every web site is content. Given that, the most basic need in the online world is a way to **manage** that content. Typically separate from the presentation (the actual website), most websites have a back-end or administrative interface that allows for the creation, curation, and management of the content that ultimately gets rendered to the user.
+Its upgrade time! We're going to migrate our venerable **RESTy** application from using a simplistic (and slightly monolithic) state management system into a more modern and robust **Redux** core.
 
-In this project, you will be tasked with creating a "CMS" or Content Management System, which will allow users to:
-
-* View a list of all data types (models)
-* View a list of all records in each table
-* Add a new record to any table
-* Delete a record from any table
-* Edit or Update existing data records
+**This is a paired assignment**
 
 
 ## Before you begin
@@ -32,33 +26,44 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Getting Started
 
+For this assignment, you'll be running in an "ejected" React application, where we get out from under the "Create React App" environment and into a more tactical one, using a generated "webpack" ... 
+
+**Do not modify any of the configuration files that are created by the steps below, or bring in any custom configs**
+
+* Create a new repository for this assignment and clone it
+* In that folder, unzip the provided starter code
+* Run `npm install` followed by `npm start` to get the app running
+* Once you confirm that it's working, stop the app
+* "Eject" from `create-react-app`
+  * `npm run eject`
+* Start your server again
+  * `npm start`
+
+
 ## Requirements
-* Create an application that will:
-  * Give the user a list of all data models
-  * When selecting a model, a list of all records
-  * When selecting a record, a way to edit or delete the record
-  * Add a new record to the model
+* Keeping the core functionality in place, upgrade RESTy
+  * Convert from component state to a Redux Store
+  * Convert from using `superagent` to `fetch`
+  * Modularize the component and store tree
+  * Fully document the application and all components
+  * Fully test the reducers, actions, and units
 
 * Use the tools you've built in react to construct an amazing application.
 * Make this easy and intuitive for a user to use
 * The User Interface and Experience are completely up to you
-  * Suggestion: Make a new dynamic "route" for each model which will present a list of records in a tabular format (react-table, perhaps?)
-  * Offer in-place editing, a modal editor, or a detail view
 
 
 **Implementation Notes/Advice**
-* Use the deployed API server at https://javascript-401-api.herokuapp.com
+* Use the deployed API server at https://api-401js.herokuapp.com
+* The API server has `players` and `teams` models
 * The api server supports the following routes:
   * **GET** `/api/v1/models` - A list of all data models
-  * **GET** `/api/v1/model/schema` - The JSON Schema for a given **model**
-  * **GET** `/api/v1/model/id` - A single record, from a **model**, with the **id**
-  * **DELETE** `/api/v1/model/id` - Delete a single record, from a **model**, with the **id**
-  * **PUT** `/api/v1/model/id` - Replace single record, from a **model**, with the **id**
-  * **PATCH** `/api/v1/model/id` - Tactically update a single record, from a **model**, with the **id**
+  * **GET** `/api/v1/:model/schema` - The JSON Schema for a given **model**
+  * **GET** `/api/v1/:model/id` - A single record, from a **model**, with the **id**
+  * **DELETE** `/api/v1/:model/id` - Delete a single record, from a **model**, with the **id**
+  * **PUT** `/api/v1/:model/id` - Replace single record, from a **model**, with the **id**
+  * **PATCH** `/api/v1/:model/id` - Tactically update a single record, from a **model**, with the **id**
 
-### Testing
-* Unit tests for your reducers are required
-* Enzyme tests for your interactions are required
 
 ## Assignment Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
