@@ -4,7 +4,7 @@ import React from 'react';
 import { LoginContext } from './context.js';
 
 // const API = 'http://localhost:3000';
-const API = 'https://javascript-401-api.herokuapp.com';
+const API = 'https://api-js401.herokuapp.com';
 
 const If = props => {
   return !!props.condition ? props.children : null;

@@ -26,7 +26,7 @@ In this project, you will be tasked with implementing a "CMS" or Content Managem
   * The User Interface and Experience are completely up to you
 
 ## Notes
-* This CMS uses a deployed API server located at https://javascript-401-api.herokuapp.com
+* This CMS uses a deployed API server located at https://api-js401.herokuapp.com
 * The api server supports the following routes:
   * **GET** `/api/v1/models` - A list of all data models
   * **GET** `/api/v1/model` - A list of all records in a given **model**

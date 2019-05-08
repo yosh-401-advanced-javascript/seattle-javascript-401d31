@@ -1,6 +1,5 @@
 import React from 'react';
 import cookie from 'react-cookies';
-import querystring from 'querystring';
 
 export const LoginContext = React.createContext();
 
@@ -18,11 +17,6 @@ class LoginProvider extends React.Component {
     };
   }
 
-  setLoginState = loggedIn => {
-    let token = cookie.load('auth');
-    this.setState({ loggedIn, token });
-  };
-
   login = token => {
     cookie.save('auth', token);
     this.setLoginState(true);
@@ -31,6 +25,11 @@ class LoginProvider extends React.Component {
   logout = () => {
     cookie.remove('auth');
     this.setLoginState(false);
+  };
+
+  setLoginState = loggedIn => {
+    let token = cookie.load('auth');
+    this.setState({ token, loggedIn });
   };
 
   render() {

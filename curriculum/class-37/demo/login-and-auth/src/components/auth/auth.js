@@ -1,37 +1,45 @@
 import React from 'react';
 import jwt from 'jsonwebtoken';
-import PropTypes from 'prop-types';
-
-import { LoginContext } from './context.js';
+import { LoginContext } from './context';
 
 const If = props => {
   return !!props.condition ? props.children : null;
 };
 
 class Auth extends React.Component {
+  static contextType = LoginContext;
   render() {
-    return (
-      <LoginContext.Consumer>
-        {context => {
-          let user = context.token
-            ? jwt.verify(context.token, process.env.REACT_APP_SECRET)
-            : {};
-          console.log(user);
-          let okToRender =
-            context.loggedIn &&
-            (this.props.capability
-              ? user.capabilities.includes(this.props.capability)
-              : true);
+    let okToRender = false;
 
-          return <If condition={okToRender}>{this.props.children}</If>;
-        }}
-      </LoginContext.Consumer>
+    try {
+      let user = this.context.token
+        ? jwt.verify(this.context.token, process.env.REACT_APP_SECRET)
+        : {};
+
+      okToRender =
+        this.context.loggedIn &&
+        (this.props.capability
+          ? user.capabilities.includes(this.props.capability)
+          : true);
+    } catch (e) {
+      console.error(e);
+    }
+
+    // <Auth> <div /> </Auth>
+    /// are you logged in?
+    /// was there no capability specified?
+
+    // <Auth capability="foo"> <div /> </Auth>
+    /// are you logged in?
+    /// Is there a capability that we care about?
+    /// do you have it?
+
+    return (
+      <If condition={okToRender}>
+        <div>{this.props.children}</div>
+      </If>
     );
   }
 }
-
-Auth.propTypes = {
-  capability: PropTypes.string.isRequired,
-};
 
 export default Auth;
