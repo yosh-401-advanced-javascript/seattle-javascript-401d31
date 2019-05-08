@@ -1,13 +1,12 @@
 import React from 'react';
 import cookie from 'react-cookies';
-import querystring from 'querystring';
 
 export const LoginContext = React.createContext();
 
 class LoginProvider extends React.Component {
   constructor(props) {
     super(props);
-    const qs = new URLSearchParams(document.location.search);
+    const qs = new URLSearchParams(location.search);
     const cookieToken = cookie.load('auth');
     const token = qs.get('token') || cookieToken || null;
     this.state = {
