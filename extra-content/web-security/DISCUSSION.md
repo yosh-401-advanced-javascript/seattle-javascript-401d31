@@ -10,8 +10,8 @@ Wiki Entry Ideas:
 * Notes in outline form
 
 ## Read
-* [owasp top 10 project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
-* [common xss react](https://medium.com/node-security/the-most-common-xss-vulnerability-in-react-js-applications-2bdffbcc1fa0)
+* [XSS Tutorial](https://excess-xss.com/)
+* [common xss react vulnerabilities](https://medium.com/node-security/the-most-common-xss-vulnerability-in-react-js-applications-2bdffbcc1fa0)
 
 ## Watch
 * [what is xss](https://www.youtube.com/watch?v=M_nIIcKTxGk)
@@ -19,8 +19,8 @@ Wiki Entry Ideas:
 
 ## Bookmark
 * [XSS Cheatsheet](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
-* [XSS Game](https://xss-game.appspot.com/)
 * [OWASP Game Dashboard](https://ctf365.com/dashboard)
+* [owasp top 10 project](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
 
 
 
