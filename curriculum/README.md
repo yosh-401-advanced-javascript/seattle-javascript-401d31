@@ -31,9 +31,9 @@
 * [Class 04](./class-04/README.md)
   * **Buffers and Binary Data**
   * Lab: Read and Write text file, using only raw buffers
-* Data Structure: Linked Lists
-* Design: SASS Structure and Basics
-* Project: Bitmap Transformer
+* **Data Structure:** Linked Lists
+* **Design:** SASS Structure and Basics
+* **Project:** Bitmap Transformer
 
 ### Block 2 - API Servers
 * [Class 06](./class-06/README.md)
@@ -44,9 +44,9 @@
   * **REST API Server and Basic Data Modeling**
 * [Class 09](./class-09/README.md)
   * **Dynamic API Server, Advanced Data Modeling**
-* Data Structure: Stacks and Queues
-* Design: Navigation and Lists
-* Project: Book App
+* **Data Structure:** Stacks and Queues
+* **Design:** Navigation and Lists
+* **Project:** Book App
 
 ### Block 3 - Auth/Auth
 * [Class 11](./class-11/README.md)
@@ -57,9 +57,9 @@
   * **Authorization**
 * [Class 14](./class-14/README.md)
   * **Access Control (ACL)**
-* Data Structure: Trees
-* Design: Forms
-* Project: Complete API Server
+* **Data Structure:** Trees
+* **Design:** Forms
+* **Project:** Complete API Server
 
 ### Block 4 - Realtime
 * [Class 16](./class-16/README.md)
@@ -74,9 +74,9 @@
 * [Class 19](./class-19/README.md)
   * **Socket.io Namespaces/Rooms**
   * Lab: Add messaging support to the API Server
-* Data Structure: (None)
-* Design: Tables
-* Project: Q Server Deployment (Azure & AWS)
+* **Data Structure:** (None)
+* **Design:** Tables
+* **Project:** Q Server Deployment (Azure & AWS)
 
 ### Block 5 - Mid-Term Project
 
@@ -89,9 +89,9 @@
   * **Props and State**
 * [Class 29](./class-29/README.md)
   * **Routing and Composition**
-* Data Structure: Sorting Algorithms
-* Design: Hidden Content
-* Project: City Explorer Front End
+* **Data Structure:** Sorting Algorithms
+* **Design:** Hidden Content
+* **Project:** City Explorer Front End
   * Built with create-react-app
   * Deployed to AWS
 
@@ -104,9 +104,9 @@
   * **Remote APIs**
 * [Class 34](./class-34/README.md)
   * **CRUD**
-* Data Structure: Hash Tables
-* Design: Grid Layouts
-* Project: CMS
+* **Data Structure:** Hash Tables
+* **Design:** Grid Layouts
+* **Project:** CMS
   * Built with gifted webpack
   * Deployed to Netlify
 
@@ -119,9 +119,9 @@
   * **Socket.io**
 * [Class 39](./class-39/README.md)
   * **Socket.io Pub/Sub**
-* Data Structure: Graphs
-* Design: Cards and Decks
-* Project: Hot Takes
+* **Data Structure:** Graphs
+* **Design:** Cards and Decks
+* **Project:** Hot Takes
   * Built with parcel
   * Deployed to Zeit/now
 
@@ -134,7 +134,7 @@
   * **Web Servers & Apps. UI Frameworks**
 * [Class 44](./class-44/README.md)
   * **Web CMS - Wordpress**
-* Project: UI Framework Reports
+* **Project:** UI Framework Reports
 
 ### Block 10 - Final Project
 
