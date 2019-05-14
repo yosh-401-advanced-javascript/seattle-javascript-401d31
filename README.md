@@ -150,7 +150,7 @@ It's advisable that the students first make an new org (perhaps called '401-js-<
     * Takes the learnings/components/modules from the previous 4 classes and has the students assemble them into a larger/full-scale application.
 
 
-### Daily Lecture Schedule and Overview
+## Daily Lecture Schedule and Overview
 
 The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
 
