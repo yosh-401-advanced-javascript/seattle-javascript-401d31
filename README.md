@@ -51,7 +51,7 @@
 
 ### Course Layout and Operations
 
-#### Daily Lecture and Labs
+### Daily Lecture and Labs
 
 The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
 
@@ -82,6 +82,8 @@ During the 2nd hour, introduce a new CS or UI concept as a short warm-up. This i
 
 * BREAK
 
+**Hour 3**
+
 Finish the day with a live coding demo that supports the class topic and sets the students up for executing their lab.
 
 * :55 - Live Code Demo
@@ -89,9 +91,7 @@ Finish the day with a live coding demo that supports the class topic and sets th
 * :05 - Lab Preview
     * Go over the LAB, DESIGN, and WARM-UP assignments and set expectations
 
-#### Guide Repo Setup
-
-**Class Repo**
+### Guide Repo Setup
 
 * Run the included `setup-401-js` shell script to create your guide repo
 * To do this manually instead ...
@@ -143,7 +143,7 @@ On most days, the lab folder will have some starter-code for them to copy. They 
 
 It's advisable that the students first make an new org (perhaps called '401-js-<their-name>') that these repositories can be created in, to help them organize things better.
 
-##### ASSIGNMENTS
+### ASSIGNMENTS
 
   * **READING (Due before each lecture)**
     * Source: `DISCUSSION.md`
