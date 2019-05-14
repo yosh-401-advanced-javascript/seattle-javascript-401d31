@@ -51,46 +51,6 @@
 
 ## Course Layout and Operations
 
-### Daily Lecture and Labs
-
-The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
-
-**Hour 1**
-
-Use the first hour to start the day cleanly with announcements, code review and optional extra material. Time is alotted for optional exercises such as an on the fly quiz, demonstrating (or pair programming with a student) one of the daily/weekly warm-ups or doing a live white-board session with one student. All are valuable, and should be rotated by the instructor based on the needs and rhythm of the class.
-
-* :05 - Introduction, Welcome, Announcements
-* :15 - Lightning Talk (1 Student per day)
-* :20 - Review / White Board / Warm-Up
-    * Q&A (Quiz Style) review of course material
-    * White Board Practice with one student, live
-    * Complete one of the daily/weekly warm-ups for or with (paired) the students
-* :20 - Code Review
-
-* BREAK
-
-**Hour 2**
-
-During the 2nd hour, introduce a new CS or UI concept as a short warm-up. This is a great time to squeeze in some CSS tricks, review recursion or reinforce anything that the students need clarification on. Close the hour with a solid presentation of the new material and topic for the day. This is where you'll do drawings, share a powerpoint and do your more traditional "lecture"
-
-* :30 - UI, Design, or CS Concepts 
-    * i.e. SASS, Menu Styling, Design Pattern, DS&A Practice/Review
-    * Use this time to fill in gaps or elevate skills
-* :30 - Lecture on the new concept of the day
-    * Slides, Drawings, Examples, Etc.
-    * This should be mostly conceptual and high level
-
-* BREAK
-
-**Hour 3**
-
-Finish the day with a live coding demo that supports the class topic and sets the students up for executing their lab.
-
-* :55 - Live Code Demo
-    * Supportive of the day's principle concept
-* :05 - Lab Preview
-    * Go over the LAB, DESIGN, and WARM-UP assignments and set expectations
-
 ### Guide Repo Setup
 
 * Run the included `setup-401-js` shell script to create your guide repo
@@ -138,7 +98,7 @@ The `DISCUSSION`,` DESIGN`, `WARMUP`, and `LAB` assignments are linked automatic
 
 ## Student Operation
 
-#### Students will **fork** the class repository
+### Students will **fork** the class repository
 On most days, the lab folder will have some starter-code for them to copy. They will generally be making a new repository each day and copying that code in as a starting point.
 
 It's advisable that the students first make an new org (perhaps called '401-js-<their-name>') that these repositories can be created in, to help them organize things better.
@@ -188,3 +148,44 @@ It's advisable that the students first make an new org (perhaps called '401-js-<
     * 2 Days (weekend for day class)
     * Generally Paired
     * Takes the learnings/components/modules from the previous 4 classes and has the students assemble them into a larger/full-scale application.
+
+
+### Daily Lecture Schedule and Overview
+
+The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
+
+**Hour 1**
+
+Use the first hour to start the day cleanly with announcements, code review and optional extra material. Time is alotted for optional exercises such as an on the fly quiz, demonstrating (or pair programming with a student) one of the daily/weekly warm-ups or doing a live white-board session with one student. All are valuable, and should be rotated by the instructor based on the needs and rhythm of the class.
+
+* :05 - Introduction, Welcome, Announcements
+* :15 - Lightning Talk (1 Student per day)
+* :20 - Review / White Board / Warm-Up
+    * Q&A (Quiz Style) review of course material
+    * White Board Practice with one student, live
+    * Complete one of the daily/weekly warm-ups for or with (paired) the students
+* :20 - Code Review
+
+* BREAK
+
+**Hour 2**
+
+During the 2nd hour, introduce a new CS or UI concept as a short warm-up. This is a great time to squeeze in some CSS tricks, review recursion or reinforce anything that the students need clarification on. Close the hour with a solid presentation of the new material and topic for the day. This is where you'll do drawings, share a powerpoint and do your more traditional "lecture"
+
+* :30 - UI, Design, or CS Concepts
+    * i.e. SASS, Menu Styling, Design Pattern, DS&A Practice/Review
+    * Use this time to fill in gaps or elevate skills
+* :30 - Lecture on the new concept of the day
+    * Slides, Drawings, Examples, Etc.
+    * This should be mostly conceptual and high level
+
+* BREAK
+
+**Hour 3**
+
+Finish the day with a live coding demo that supports the class topic and sets the students up for executing their lab.
+
+* :55 - Live Code Demo
+    * Supportive of the day's principle concept
+* :05 - Lab Preview
+    * Go over the LAB, DESIGN, and WARM-UP assignments and set expectations
