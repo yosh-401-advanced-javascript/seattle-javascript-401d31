@@ -1,74 +1,64 @@
 # 401 Advanced Javascript - Design Assignments
 
-Every day in blocks 5, 6, 7, students will be presented with a new design assignment to be completed along with each daily lab.
+At the end of each block, in addition to a new data structure, students will be presented with a new UI concept and design assignment, which will be due prior to the end of the next block.
 
 The intent is that by the end of the course, students will have a complete "scalable" design that can be used as a solid starting point for any web project, as well as a stable of React components that can both integrate into the overall design, or stand alone.
 
 *Think [Material Design](https://material-ui.com) vs [Bootstrap](https://getbootstrap.com/docs/3.3/css/)*
 
-Fork the [starter sandbox](https://codesandbox.io/s/nrozq68z80) and connect it to your github account, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
+To implement, students may work locally on their machine using the embedded `starter-code` or Fork the [starter sandbox](https://codesandbox.io/s/4xv7wyp607) and connect it to your github account ... in either case, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
 
-During your build-outs of React components, you'll be pulling from and adding to this repo, moving things around, and generally setting up your personal design workflow.
+The design repo must be deployed for review and grading. If working at Code Sandbox, then a simple link to the sandbox will suffice. If working in a local environment through git, then the submission must include both a PR to the repository and a link to a deployed application at Netlify or some other service.
 
-Students may work in code sandbox or locally.  In either case, each design assignment should be completed as a new PR in the `design` repository
+Each design assignment includes a mock-up to match against and a pre-built component and markup which can be styled using either component CSS or an extension to the master "design", at the student's discretion.
 
 Most of the design assignments come with some sort of "Inspiration" or collection visual examples to serve as either instructional materials or examples of what can be done. We encourage you to dive in and see how things work, read about why certain things are considered to be better practice than others, and generally look at approaches.  DO NO plagarize. Be inspired. Look, learn, tinker. And then be a developer and create this design your own way. If you do lean heavily on one approach (even just philisophically), provide a link back or a shout out to the originator.
 
 ## Design/Component Progression:
 
-### 01 - Scaffold, Variables, Mixins, Modules
+### Block 1 - Scaffold, Variables, Mixins, Modules
 * Setup a basic SASS design folder structure and compiler
 * design.scss
 * Create variables for simple alter-ables
 * Create mixins for resusable/variable elements
 * Break out the previous steps into separate _files and Create a design  root that imports them.
+* Basic Site Scaffold: Header, Main, Footer
+* Basic Site Elements: Font Ramp, Buttons, Links
 
-### 02 - Navigation
-* Horizontal, Hamburger, Vertical
+### Block 2 - Navigation and Lists
+* Horizontal, Hamburger, Vertical Menus
+* Lists
 
-### 03 - Basic Form Layout
+### Block 3 - Forms
 * Fieldsets, Labels, Placeholders
 * Inputs, Textareas
 * Selects, Radios, Checkboxes
 
-### 04 - Lists
-* Navigation Lists
-* Icons
-* Selectors
-
-### 05 - Grid Layouts
-* Implement an old-school GRID layout system
-
-### 06 - Deck Layouts
-* Design a system for laying out cards within decks
-* Basic 1,2,3 layouts
-* Highlight Center
-* Slider
-
-### 07 - Card Layouts
-* How many ways can you design a card?
-
-### 08 - Mobile 
-* Mixins for handling media queries
-
-### 09 - Tables
+### Block 4 - Tables
 * HTML Tables
 * Div Driven Tables
 * Sorting, Filtering
+* Responsive Tables
 
-### 10 - Responsive Tables
-* Responsive Table Tricks, Why
+### Block 6 - Hidden Content
+* Modal
+* Drawers
+* Sliders
+* Carousels
 
-### 11 - Buttons and Links
-* Single, Groups
+### Block 7 - Grid Systems and Layouts
+* Implement an old-school GRID layout system
+* Using Float, Flex, CSS Grid
 
-### 12 - Slideouts and Drawers
-* From all sides
-* Mobile UX
+### Block 8 - Cards and Decks
+* Design 4 ways to layout card contend
+* Design a system for laying out cards within decks
+* Basic 1,2,3 layouts
+* Highlight Center
+* Accordion, Tab
 
 
-
-#### Design Topology
+## Design Topology
 
 ```
     /design
