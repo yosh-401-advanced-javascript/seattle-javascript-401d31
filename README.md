@@ -49,7 +49,7 @@
   - `<Draggable />` and `<Droppable />`
 * Scalable SASS Layout and Theme Engine
 
-### Course Layout and Operations
+## Course Layout and Operations
 
 ### Daily Lecture and Labs
 
@@ -136,7 +136,7 @@ The `DISCUSSION`,` DESIGN`, `WARMUP`, and `LAB` assignments are linked automatic
   * In here, setup new course materials as a properly formatted "day" which can be taught independently.
   * These can be rolled into the course in the future or taught as supplemental or replacement lectures as required/possible
 
-### Student Operation
+## Student Operation
 
 #### Students will **fork** the class repository
 On most days, the lab folder will have some starter-code for them to copy. They will generally be making a new repository each day and copying that code in as a starting point.
