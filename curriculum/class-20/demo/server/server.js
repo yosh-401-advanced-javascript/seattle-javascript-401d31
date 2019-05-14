@@ -1,10 +1,10 @@
 'use strict';
 
-const port = process.env.PORT || 3333;
-const io = require('socket.io')(port);
+const Q = require('@nmq/q/server');
+Q.start();
 
-io.on('connection', (socket) => {
-  socket.on('speak', (payload) => {
-    socket.emit('message', payload);
-  });
-});
+const database = new Q('database');
+database.monitorEvent('create');
+database.monitorEvent('update');
+database.monitorEvent('delete');
+database.monitorEvent('error');
