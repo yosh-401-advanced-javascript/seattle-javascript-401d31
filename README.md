@@ -50,22 +50,40 @@
 * Scalable SASS Layout and Theme Engine
 
 ### Course Layout and Operations
+
 #### Daily Lecture and Labs
+
 The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
 
+**Hour 1**
+
+Use the first hour to start the day cleanly with announcements, code review and optional extra material. Time is alotted for optional exercises such as an on the fly quiz, demonstrating (or pair programming with a student) one of the daily/weekly warm-ups or doing a live white-board session with one student. All are valuable, and should be rotated by the instructor based on the needs and rhythm of the class.
+
 * :05 - Introduction, Welcome, Announcements
-* :05 - Review and Warm-up (pop-quiz, Q & A, etc)
-* :15 - Whiteboarding Practice (1 Student, Live)
-* :15 - Lightning Talk (1 Student, optional)
+* :15 - Lightning Talk (1 Student per day)
+* :20 - Review / White Board / Warm-Up
+    * Q&A (Quiz Style) review of course material
+    * White Board Practice with one student, live
+    * Complete one of the daily/weekly warm-ups for or with (paired) the students
 * :20 - Code Review
+
 * BREAK
+
+**Hour 2**
+
+During the 2nd hour, introduce a new CS or UI concept as a short warm-up. This is a great time to squeeze in some CSS tricks, review recursion or reinforce anything that the students need clarification on. Close the hour with a solid presentation of the new material and topic for the day. This is where you'll do drawings, share a powerpoint and do your more traditional "lecture"
+
 * :30 - UI, Design, or CS Concepts 
     * i.e. SASS, Menu Styling, Design Pattern, DS&A Practice/Review
     * Use this time to fill in gaps or elevate skills
 * :30 - Lecture on the new concept of the day
     * Slides, Drawings, Examples, Etc.
     * This should be mostly conceptual and high level
+
 * BREAK
+
+Finish the day with a live coding demo that supports the class topic and sets the students up for executing their lab.
+
 * :55 - Live Code Demo
     * Supportive of the day's principle concept
 * :05 - Lab Preview
