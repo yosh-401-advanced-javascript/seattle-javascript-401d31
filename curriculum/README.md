@@ -14,7 +14,7 @@
 | [27: Testing & Deployment](./class-27/README.md)        | [32: Forms](./class-32/README.md) | [37: Login/Auth](./class-37/README.md) | [42: React Native](./class-41/README.md) |
 | [28: Props & State](./class-28/README.md)        | [33: Remote APIs](./class-33/README.md) | [38: Sockets](./class-38/README.md) | [43: UI Frameworks](./class-42/README.md) |
 | [29: Routing & Composition](./class-29/README.md)        | [34: CRUD](./class-34/README.md) | [39: Sockets](./class-39/README.md) | [44: Web CMS](./class-43/README.md) |
-| [Project: City Explorer](class-30/README.md)        | [Project: CMS](class-35/README.md) | [Project: Yakker](class-40/README.md) | Final Exam |
+| [Project: RESTy to React](class-30/README.md)        | [Project: RESTy to Hooks](class-35/README.md) | [Project: RESTy to Redux](class-40/README.md) | Final Exam |
 | Project Week                       |                             |                             |                             |
 
 ### Block 1 - Javascript Fundamentals
@@ -91,7 +91,7 @@
   * **Routing and Composition**
 * **Data Structure:** Sorting Algorithms
 * **Design:** Hidden Content
-* **Project:** City Explorer Front End
+* **Project:** Refactor RESTy to React
   * Built with create-react-app
   * Deployed to AWS
 
@@ -106,8 +106,8 @@
   * **CRUD**
 * **Data Structure:** Hash Tables
 * **Design:** Grid Layouts
-* **Project:** CMS
-  * Built with gifted webpack
+* **Project:** Refactor RESTy to use Context/Hooks
+  * Built with gifted Webpack
   * Deployed to Netlify
 
 ### Block 8 - Auth and Realtime
@@ -121,8 +121,8 @@
   * **Socket.io Pub/Sub**
 * **Data Structure:** Graphs
 * **Design:** Cards and Decks
-* **Project:** Hot Takes
-  * Built with parcel
+* **Project:** Refactor RESTy to Redux
+  * Built with custom Webpack
   * Deployed to Zeit/now
 
 ### Block 9 - React Native and UI Frameworks

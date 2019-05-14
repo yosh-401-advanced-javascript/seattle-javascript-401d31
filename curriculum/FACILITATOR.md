@@ -1,6 +1,56 @@
 # 401 Advanced Javascript
 
-## Instructor Overview
+## Daily Lecture Schedule and Overview
+
+The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
+
+* :05 - Introduction, Welcome, Announcements
+* :20 - Lightning Talk (1 Student per day)
+* :20 - Concept Review / White Board / Warm-Up
+* :15 - Code Review
+* BREAK
+* :30 - UI, Design, CS Concepts or Code Review Continuation
+* :30 - Lecture on the new concept of the day
+* BREAK
+* :55 - Live Code Demo
+* :05 - Lab Preview
+
+**Hour 1**
+
+Use the first hour to start the day cleanly with announcements, code review and optional extra material. 
+
+If you are having your class do lightning talks (optional), then start the day with this, and allow a few minutes for feedback, but limit this block to about 20 minutes..
+
+Additional time is allotted for 20 minutes or so of optional "get ready" exercises such as ...
+
+ * Q&A (Quiz Style)
+ * Live white-board session with one student. 
+ * Demonstrating (or better - pair programming with a student or TA) one of the daily/weekly warm-ups from the post-grad roadmap
+ 
+ All are valuable, and should be rotated by the instructor based on the needs and rhythm of the class.
+ 
+ Complete the first hour with some basic code review (you can go deeper in the next hour if you need to).
+ 
+ Keep the pace of this first hour up. Switching gears between those different "segments" is great to keep students attention.
+
+**Hour 2**
+
+During the 2nd hour, use the first half hour to either finish code review or introduce a new CS or UI concept as a short change of pace. 
+
+This is a great time to squeeze in some CSS tricks, review recursion or reinforce anything that the students need clarification on. 
+
+Close the hour with a solid presentation of the new material and topic for the day. This is where you'll do drawings, share a powerpoint and do your more traditional "lecture"
+
+Basic code demos to support some of the high level items are ok in this segement, but generally, try and keep this high level, using imagery and live data/sites to illustrate the **concept**
+
+**Hour 3**
+
+Finish the day with a live coding demo that supports the class topic with much more granularity and sets the students up for executing their lab.
+    * Demo should be supportive of the day's principle concept
+    * Go over the assignment(s) and set expectations
+
+
+## Course Content
 
 ### Block 1 - Javascript Fundamentals
 The theme for the block is to spin the students up on fundamentals of the language and to get them ready for the rhythm that is 401 Javascript
@@ -44,7 +94,7 @@ Being comfortable with tools like `httpie` and `RESTy` (our Postman clone), debu
 
 We have spent a lot of time in the first two blocks of the course talking through modularization, single responsibility, etc.  For the end of week project, the students will revisit Book App from 301 (provide them the day 14 solution code) and make it modular and awesome.
 
-* Data Structure: Trees
+* Data Structure: Stacks and Queues
 * Project: Book App
 
 ### Block 3 - Auth/Auth
@@ -64,7 +114,7 @@ We finish out with implementing an Access Control system. More advanced middlewa
 
 The block-end project is a fully baked, authenticated, dynamic modeled, completely tested API server. This is their "Golden Server" that will serve as a primary takeaway from the course and will also power much of the 2nd half (React) projects.
 
-* Data Structure: None
+* Data Structure: Trees
 * Project: Complete API Server
 
 ### Block 4 - Realtime
@@ -76,7 +126,7 @@ The block will move from internal events, to using TCP and Socket Events, and fi
 
 The message here needs to be "Real Time" doesn't just mean "Chat" but large scale problem solving. Lots of real world examples this week really sells the message.
 
-* Data Structure: Stacks and Queues
+* Data Structure: None
 * Project: Q Server
 
 ### Block 5 - Mid-Term Project
@@ -96,8 +146,8 @@ Spend a lot of time in Class 27 talking through test procedures, examples, and p
 
 The project at the end of the block is a rebuild of City Explorer. In 301, they built the back-end. Now, they will refactor the front end from jQuery+Handlebars into React. Fun!
 
-* Data Structure: Hash Maps
-* Project: City Explorer Front End
+* Data Structure: Sorting Algorithms
+* Project: Refactor RESTy from Vanilla/jQuery into React
 
 ### Block 7 - CRUD and Global State
 
@@ -107,8 +157,8 @@ The project at the end of the block is a rebuild of City Explorer. In 301, they 
 
 For the end of block build, students will create a CMS that re-involves their API server from earlier in the course. This is a big build that has them getting a list of models, a list of records for each model and then CRUD on each record.
 
-* Data Structure: Graphs
-* Project: CMS
+* Data Structure: Hash Tables
+* Project: Refactor RESTy from Component State to Context/Hooks
 
 ### Block 8 - Auth and Realtime
 
@@ -122,8 +172,8 @@ For the end of block build, students will work locally (not in code sandbox) and
 
 The build itself uses socket.io to create an app that uses the Q server from the first half of the course and builds a live front-end dashboard. The API server should already be hooked up to post messages to the Queue on all write activity. (If not, then this should be done in class). The class should re-do their UML of that API and the Q server to cement how it works. On the React side, they'll be connecting to the Q server using the "subscriber" library that they wrote for that Project in block 4. Using it, their app can now "see" all database activity in real time. The project is to connect all of those pieces and make a living dashboard with a killer UI that operates in real time.
 
-* Data Structure: Sorting Algorithms
-* Project: Databae Dashboard
+* Data Structure: Graphs
+* Project: Refactor RESTy from Context/Hooks into Redux
 
 ### Block 9 - React Native and UI Frameworks
 The last block traditionally is difficult. Students have their eyes on their final exam, final projects and graduation.  For that reason, this week is light and fun.
@@ -135,7 +185,7 @@ We end the last 2 days with a research project. Assign the students a framework 
 This is educational and great practice, but also a light touch way to end the course on a really high note.
 
 * Data Structure: Final Exam
-* Project: UI Framework Reports
+* Projects: RNA Apps and UI Framework Reports
 
 ### Block 10 - Final Project
 
