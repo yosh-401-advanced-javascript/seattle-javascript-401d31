@@ -1,6 +1,7 @@
 # 401 Advanced Javascript
 
 ## Course Goals
+
 ### Students will be able to demonstrate ...
 * Complete mastery of JS Fundamentals
   * Objects, Factories, Classes
@@ -105,10 +106,9 @@ The `DISCUSSION`,` DESIGN`, `WARMUP`, and `LAB` assignments are linked automatic
     * These are not included in the daily folders to allow for the design assignments and the daily labs to operate independently.
     * These are automatically pulled into Canvas from this folder.
   * `/projects`
-    * Contains the lab instructions, solutions and notes for each of the "end of block" labs.
-    * These carry a higher point value and are intended to finish out each block with a large, paired lab.
+    * Contains the lab instructions, solutions and notes for the midterm and final projects
   * `/warm-ups`
-    * Contains the warm-up lab assignments and solution code
+    * Contains warm-up lab assignments and solution code
     * These are not included in the daily folders to allow for the design assignments and the daily labs to operate independently.
     * These are automatically pulled into Canvas from this folder.
 * `/reference`
@@ -123,46 +123,20 @@ The `DISCUSSION`,` DESIGN`, `WARMUP`, and `LAB` assignments are linked automatic
 #### Students will **fork** the class repository
 On most days, the lab folder will have some starter-code for them to copy. They will generally be making a new repository each day and copying that code in as a starting point.
 
-It's advisable that the students first make an new org (perhaps called '401-js') that these repositories can be created in, to help them organize things better.
+It's advisable that the students first make an new org (perhaps called '401-js-<their-name>') that these repositories can be created in, to help them organize things better.
 
-##### DAILY ASSIGNMENTS (Days 1,2,3,4 each week)
+##### ASSIGNMENTS
 
-  * **READING**
+  * **READING (Due before each lecture)**
     * Source: `DISCUSSION.md`
     * Linked directly into Canvas from the Guide Repo
     * Reading assignments should be done as articles/notes in the **wiki** of their repo fork
-    
-  * **DAILY WARMUP (4 per block)**
-    * 1 Points (complete/incomplete)
-    * :15 minutes
-      * Students must timebox this.
-    * Source: `warm-ups/WARMUP-daily.md`
-    * Linked directly into Canvas from the Guide Repo
-    * Daily practice designed to be repetitive, build muscle memory and cement the basics. 
-    
-  * **FUNDAMENTALS/PRACTICE (2 per block)**
-    * 5 Points (complete/incomplete)
-    * :45 minutes
-      * Students must timebox this.
-      * This is like 'circuit training' ... how much can you do in :45? More each day, eventually < :45
-    * Source: `warm-ups/WARMUP-[1,2,3,4].md`
-    * Linked directly into Canvas from the Guide Repo
-    * Daily practice designed to be repetitive, build muscle memory and cement the basics. 
-    * These repeat every 4 days.
     
   * **DS&A CODE CHALLENGE (4 per block)**
     * 5 points (3 points for whiteboard, 1 point for testing, 1 point for working code)
     * ~ 1 Hour
     * Source: `common-curriculum/data_structures_and_algorithms/Code_401/class-[05/10/15/...]/LAB.md`
     * Linked directly into Canvas from the Guide Repo
-    
-  * **DESIGN (4 per block - 2nd half only)**
-    * 5 Points (complete/incomplete)
-    * :30
-    * Source: `design-assignments/DESIGN-[01,02,03,...]
-    * Linked directly into Canvas from the Guide Repo
-    * From Class 06 to Class 39, the students will iteratively build out a scalable "design" or "theme" which should be easily transferable to any project they do. 
-    * This will be both monolithic and componentized (depending on how they implement it: Static or React). 
     
   * **LAB Assignments (4 per block)**
     * 10 Points (graded on the rubric)
@@ -176,15 +150,22 @@ It's advisable that the students first make an new org (perhaps called '401-js')
     * APIs must also be documented with Swagger
     * Students must use the README.md template to complete their assignment
     * The README requires them to have links to deployed code, Travis, functional documentation, test documentation and a UML and/or data-flow diagram.
+
+  * **DESIGN (1 per block)**
+    * 10 Points (complete/incomplete)
+    * 1-2 Hours
+    * Source: `design-assignments/DESIGN-[01,02,03,...]
+    * Linked directly into Canvas from the Guide Repo
+    * Following a short lecture at the end of each block, students will iteratively build out a scalable "design" or "theme" which should be easily transferable to any project they do.
+    * This will be both monolithic and componentized (depending on how they implement it: Static or React).
     
-##### END OF BLOCK ASSIGNMENTS
-  * **New DS&A Implementation**
+  * **DS&A IMPLEMENTATION**
     * 10 Points (complete/incomplete)
     * Source: `common-curriculum/data_structures_and_algorithms/Code_401/class-[05/10/15/...]/LAB.md`
     * Linked directly into Canvas from the Guide Repo
     * There is an associated reading with each of these "Day 5" lectures/labs
     
-  * **BLOCK Capstone Project**
+  * ** END OF BLOCK PROJECT**
     * 25 Points (graded on the rubric)
     * 2 Days (weekend for day class)
     * Generally Paired
