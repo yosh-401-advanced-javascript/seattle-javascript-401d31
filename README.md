@@ -165,7 +165,7 @@ It's advisable that the students first make an new org (perhaps called '401-js-<
     * Linked directly into Canvas from the Guide Repo
     * There is an associated reading with each of these "Day 5" lectures/labs
     
-  * ** END OF BLOCK PROJECT**
+  * **END OF BLOCK PROJECT**
     * 25 Points (graded on the rubric)
     * 2 Days (weekend for day class)
     * Generally Paired
