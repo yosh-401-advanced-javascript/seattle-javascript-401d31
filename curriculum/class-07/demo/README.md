@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: Express
-====================================================
+# Demos: Express
 
 ### Demo Name -- `demo/middleware
 * This should be an interactive demo.  As you talk about what middleware is and does during the lecture, each of the principles in the lecture matches up to a bit of middleware in this little server.

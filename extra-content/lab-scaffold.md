@@ -1,37 +1,28 @@
-# LAB: Title
+# LAB: Classes, Inheritance, Functional Programming
 
-#### Getting Started
-Refer to *Getting Started* in [lab-instructions.md](../../../reference/submission-instructions/labs.md) for complete setup instructions
+## Before you begin
+Refer to *Getting Started* in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup instructions
+
+## Getting Started
+In the `objects` folder, there is a full implementation of a Car and Motorcycle object created using a constructor function, with an index.js file that you can use to visually play with the objects as well as tests.
+
+In the `objects/__tests__` folder, you'll find a file called `vehicle.test.js` that tests the implementation of both a `Car` and a `Motorcycle` using the constructor pattern.
 
 ## Requirements
-#### Part 1
-* Implement this
-* Implement something else
 
-***Software Engineering Note!***
-*As you do your work, do this extra thing*
 
-#### Part 2
-  * Create a ________
-  * implement a _____  
-  * **Import requirement in bold**
-    * point 1
-    * point 
+### Assignment Title
+Description
 
-***Software Engineering Note!***
-*As you do your work, do this extra thing*
+* Bullets
+
+**Software Engineering Notes!** *something*
   
-## Testing
-* tests check for _____
-* tests check for _____
-* tests to ensure _____
-
-## Stretch Goal:
-  * Implement _______
-    * `slice()`
-    * `splice()`
-    * `reverse()`
+### Testing
 
 
-### Assignment Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+### Stretch Goal:
+
+
+## Assignment Submission Instructions
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) OAuth Comparative Analysis
-================================================================
+# OAuth Comparative Analysis
 
 ## OAuth Provider Name 
 

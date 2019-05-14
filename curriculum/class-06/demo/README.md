@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: HTTP and REST
-==========================================================
+# Demos: HTTP and REST
 
 ## JSON Server -- `demo/json-server-api`
 * Create `routes.json`, `json-server.json` files

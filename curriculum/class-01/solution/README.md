@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Solution Notes: Node Ecosystem
-====================================================================
+# Solution Notes: Node Ecosystem
 
 ## Lab Requirements
   * Arithmetic Module

@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) DEMOS - React Native Ecosystem
-====================================================================
+# DEMOS - React Native Ecosystem
 
 ## Snack Demo
 

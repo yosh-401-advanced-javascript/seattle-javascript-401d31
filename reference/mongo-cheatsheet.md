@@ -144,3 +144,71 @@ Command | Desctiption
 `.findOneAndDelete({query})` | Finds the first document that matches the query and deletes it. [Doc](https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndDelete/#db.collection.findOneAndDelete)
 `.findOneAndUpdate({query}, {<update>}, {<options>})` | Finds the first document that matches the query in the first argument, and updates it using the second arguments. Has optional options as well. [Doc](https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndUpdate/#db.collection.findOneAndUpdate)
 `.findOneAndReplace({query}, {<replacement>}, {<options>})` | Finds and replaces the document that matches the query. `<replacement>` cannot use update operators. [Doc](https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/#db.collection.findOneAndReplace)
+
+### Sub Documents
+
+[reference](https://mongoosejs.com/docs/subdocs.html)
+
+```
+var childSchema = new Schema({ name: 'string' });
+
+var parentSchema = new Schema({
+  // Array of subdocuments
+  children: [childSchema],
+  
+  // Single nested subdocuments.
+  child: childSchema
+});
+```
+
+### "Joins"
+
+* As a concept, "joins" are great for linking common/shared data such as players and baseball teams
+* Note that noSQL Databases don't really join in the same way a relational database such as SQL does, and doing so generally is considered an anti-pattern. Ensure that you're modeling things in the most logical way for this data store.
+* `populate()` is a method we can use in Mongoose to connect 2 collections in multiple ways
+  * Direct Population physically joins using a reference to another collection
+  * Virtual Population creates a virtual field in a document pointed to a field in another one.
+    * In `pre('find')` you do a popluate "on the fly" which can be more efficient than storing the relation.
+* Pre and Post hooks (middleware)
+  * Mongoose allows you to inject logic at various points in the lifecycle of a data record.
+    * User can perform validation, normalization
+    
+    
+#### Direct Population (References)
+Create a reference column in the collection and then when you save, you need to `push()` into the reference field with the _id of the referenced document.  This results in quicker `find()` but requires a lot more management on saves, updates, deletes.
+
+```
+const personSchema = Schema({
+  _id: Schema.Types.ObjectId,
+  name: String,
+  age: Number,
+  stories: [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+});
+
+const storySchema = Schema({
+  author: { type: Schema.Types.ObjectId, ref: 'Person' },
+  title: String,
+  fans: [{ type: Schema.Types.ObjectId, ref: 'Person' }]
+});
+```
+
+#### Virtual Joins
+
+In this example, we create a virtual field in teams called "players" by connecting them with named fields, and then doing a populate as we find/load documents.
+```
+const teams = mongoose.Schema({
+  name: { type:String, required:true },
+}, { toObject:{virtuals:true}, toJSON:{virtuals:true} });
+
+teams.virtual('players', {
+  ref: 'players',
+  localField: 'name',
+  foreignField: 'team',
+  justOne:false,
+});
+
+teams.pre('find', function() {
+  this.populate('players');
+});
+
+```

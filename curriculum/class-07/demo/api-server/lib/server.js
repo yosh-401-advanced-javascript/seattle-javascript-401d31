@@ -23,6 +23,10 @@ let messager = (req,res,next) => {
   next();
 };
 
+// Swagger Docs
+const swaggerDocs = require(`./docs/config/swagger.json`);
+app.use('/docs/api', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+
 app.get('/posts', (req,res,next) => {
   let count = db.length;
   let results = db;

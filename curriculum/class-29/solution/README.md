@@ -1,6 +1,18 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Component Composition
-======================================================
+# SOLUTION - Component Composition
 
-[Composition](https://codesandbox.io/s/yokmx9pl1)
+# Solution: LAB
 
-[Cards and Decks](https://codesandbox.io/s/ymvlr4r84z)
+## Lab Requirements
+
+### Lab Assignment 1
+*
+
+#### Grading Standards & Notes
+  * Features
+  * Code Quality
+  * Testing
+  * Deployment
+    * Travis Only
+  * Documentation
+    * README Standards
+    * JSDoc Required

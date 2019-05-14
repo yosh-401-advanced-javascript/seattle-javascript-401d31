@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Remote CRUD
-===============================================================
+# Facilitators Guide: Remote CRUD
 
 In the previous class, we made simple GET requests to the Star Wars API. Prior to that, we executed simple CRUD functionality using only the store.
 
@@ -23,7 +22,10 @@ The path for this session will be to revisit both of those previous solutions an
   * We already have Thunk in place for GET requests
   * Now, lets add it in place for all requests.
   * How can we clean up the calls to superagent?
+    * Can we librarize this?
+    * Switch between many ajax libraries
   * How do we handle authentication headers?
+    * Examine how `superagent` and `fetch` do this.
 
 
 ## What bugs, issues, or surprises have come up in the past for this class?

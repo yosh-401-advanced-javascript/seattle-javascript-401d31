@@ -1,6 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Access Control (ACL)
-===============================================================
-<a name="top"></a>
+# Facilitators Guide: Access Control (ACL)
 
 ## Preparation
 * Come up with some great concrete exaemples of Role Based Access Control

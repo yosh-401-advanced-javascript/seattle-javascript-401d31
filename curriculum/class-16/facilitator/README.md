@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Event Driven Applications
-===================================================================================
+# Facilitators Guide: Event Driven Applications
 
 ## Preparation
 This topic leads students directly into the TCP and Socket lectures that follow, and then into the end of section project, which is to build out an event driven queue.
@@ -32,18 +31,6 @@ It's important to start the students off with confirmation that they already kno
       * "This thing just happened..."
       * "Cool, thanks for letting me know, I don't care"
       * "Cool, thanks for letting me know, I need to do some stuff now"
-
-## Live Coding Demo(s)
-
-**`events`** - is a multi-file demo that shows how Node events work over multiple files/modules and how you must share a common core to make it all tie in.
-
-* Start in one file, by simply pulling in the events module and using `emit()` and `on()` to demonstrate simple Pub/Sub
-* Move to separate files 
-  * One only publishing, one only receiving
-  * Demonstrate that you cannot simply "require events" and go
-  * You'll need to create a common event controller for them to consume
-  * Once you to, each module can assume both roles
-  * And many more modules you add to the system can join the conversation
 
 ## Lab Prep
 * Students will do a full wiring of an event system.

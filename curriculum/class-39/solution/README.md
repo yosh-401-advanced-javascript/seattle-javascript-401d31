@@ -1,32 +1,28 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Socket.io Pub/Sub
-==================================================================
+# SOLUTION - Socket.io Client
 
-[Solution Sandbox](https://codesandbox.io/s/61v3r7oj5k)
+## Lab Requirements
 
-Students will be begin by forking a [starter sandbox](https://codesandbox.io/s/z6mpqy858m)
+* Create a context and hook that integrate with the socket.io server
 
-They will be required to connect many separate pieces in this lab:
+#### Grading Standards & Notes
+  * Features
+    * Proper Context -- Hook relationship
+    * Code should be extensible and ready to fold in Q
+    * The words and form components need to be cleared of chat logic
+  * Code Quality
+  * Testing
+    * Not required
+    * ... Too much network mocking required.
+  * Deployment
+    * Sandbox is ok for the client
+    * Server should be at Heroku so we can test it
+  * Documentation
+    * README Standards
+    * React Doc Required
 
-* A Q Server, deployed at Heroku
-  * Should open a queue called "database"
-  * Should monitor "create", "update", "delete" events
-  
-* An API Server, deployed at Heroku
-  * Must connect to the deployed Heroku server
-  * Must publish an event to it on "create", "update", "delete" on the models, with a payload that shows the event, model, and _id
-  
-* A react application that also connects to the Q server and listens for those same events
-
-The gist of this lab is to create a DB Dashboard that changes whenever the database changes.
-
-They will likely spend most of the day getting to proof of life. Press them to get there quickly (the demo does most of that) so that they can focus on the UX.
-
-Refer to the Guide Repo `apps-and-libraries` -- this section of the repo contains a fully working and deployable API and Q server that will work with this lab. If students are stuck, you can use that as a north star to help guide them through it.
-
-If you desire, you may deploy create your own GIT Repos and deploy these on your own and give them to the class so that they can totally focus on the React side of this.
-
----
-
-**To get this all working you (and the students) need to setup a mongo db at Heroku, and set the Q_SERVER environment variable on the API Server's settings to point to the Q Server that you deploy separately. This is the connection. That same Q server URL will then be used on the React App.**
-
-
+#### Lab Assistance Notes
+* This is going to be a tough lab for the students.
+* They will first need to create a context wrapper
+* Then, they can create a custom hook that uses `useContext()`
+* This hook should then be used to provide state and methods
+* Notice how the solution code has no actual socket/chat logic in the `<Words />` and `<Form />` components. This will allow us to switch out that logic from socket.io to Q at any time.

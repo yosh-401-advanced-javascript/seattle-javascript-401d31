@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Component Based UI
-============================================================================
+# Facilitators Guide: Component Based UI
 
 ## Preparation
 * Its React time, so get comfortable in the ecosystem.
@@ -17,7 +16,17 @@
     * Components cand load their own css
 
 ## Lecture Main Topics & Overall Flow
-* Take a walk down memory lane ...
+* SASS
+  * Open [SassMeister](https://www.sassmeister.com/)
+  * Do a brief demo of SASS's primary features
+    * element nesting and `&` targeting
+    * variables (background colors)
+    * mixins (make a border-radius mixin)
+  * We will be using SASS in our daily design challenges as well as every React Component and application, so set them up for the basic execution.
+  * Every day, as you code your demos, do some styling and use SASS features
+  
+* Before we get into the nitty gritty of React itself ...
+* Take a walk down memory lane
   * Build the Vanilla demo
     * Talk pros and cons (ids, event listeners, difficult to change behavior, etc)
   * Build a jQuery demo

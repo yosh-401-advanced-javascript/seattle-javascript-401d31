@@ -1,7 +1,26 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Socket.io Client
-=================================================================
+# SOLUTION - Hooks API
 
-[Solution](https://codesandbox.io/s/mzy7onozo9)
+## Lab Requirements
+* `<Login />` must be converted to a function component
+  * `useState()` must be used for managing the form
+  * `useContext()` must be used for hooking into `LoginContext`
+* `<Auth />` must be converted to a function component
+  * `useContext()` must be used for hooking into `LoginContext`
+* `<ToDo />` must be converted to a function component
+  * `useReducer()` must be used for the list management
+  * `useState()` must be used for managing the form
 
-* Have the students re-implement the client side of the application.
-* The lab assignemnt offers them some advice and ideas on extending the functionality, but let them get creative in how they manage and display the state of messages coming back.
+#### Grading Standards & Notes
+  * Features
+  * Code Quality
+    * As Noted Above
+  * Testing
+    * Functional Tests Required
+    * State changes must be asserted 
+  * Deployment
+    * Code Sandbox
+  * Documentation
+    * README Standards
+    * React Docs Required
+
+

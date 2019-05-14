@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: Buffers
-====================================================
+# Demos: Buffers
 
 ### Buffers  (`demo/buffer-demo.js`)
   * The demo file is pretty well commented.

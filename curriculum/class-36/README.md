@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Context and Hooks
-=======================================================
+# Context API
 
 ## Learning Objectives
 
@@ -22,7 +21,7 @@
 
 ## Main Topic:
 
-**Context**
+### Context
 Context provides a means of passing state down the component tree through a Provider/Consumer relationship.
 
 At as high a level as makes sense, a "provider" can make it's state available, along with means of altering it (methods). 
@@ -81,4 +80,5 @@ At the lower levels any component can "opt-in" and become a "consumer" and recei
   }}
 </SettingsContext.Consumer>
 ```
+
 

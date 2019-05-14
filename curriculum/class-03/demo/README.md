@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Demos: Async
-==================================================
+# Demos: Async
 
 ## Live Coding Demo(s)
 There's a lot of demo code here. The concepts for this lecture/demo are all intertwined, and lend themselves pretty well to building on one another.

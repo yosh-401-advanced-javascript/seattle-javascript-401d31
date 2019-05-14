@@ -1,19 +1,35 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Socket.io Namespaces and Rooms
-==========================================================
+# Solution: Socket.io Message Queue Server
 
-Students will be writing a server that accepts connections to 2 namespaces: `numbers` and `letters`, each with a room (`negative` and `lowercase`) that can be optionally joined by a client.
+## Lab Requirements
 
-The server must respond to 2 events: `next-number` and `next-letter` and emit `number` and `letter` events with some payload.
+### Assignment 1: File Writer
+* This is effectively the same solution as from Class 06
+* The difference being the use of the queue server instead of straight socket.io
+  * Requirement of a server to be running
+  * Requirement of logger to be running
+  
+### Assignment 2: API Server
+* Adding Q Publishing to the API
+* To execute, students need to:
+  * Require `@nmq/q/client` in the `models/mongo.js` file
+  * Publish "database" / "create|update|delete" events in the appropriate methods, following those operations
 
-For connections that join the rooms, those rooms must emit `_number` and `_letter` events **only to sockets that have joined** the `negative` and `lowercase` channels, respectively.
+#### Grading Standards & Notes
+  * Features
+    * Server and Logger need to be running and passing events
+    * File reader (4th run) should be perfect by now
+      * Uses the Message Queue server
+    * API Server needs to have the correct events firing on CRUD operations (or errors)
+  * Code Quality
+  * Testing
+    * Spies should be placed on the event running functions
+  * Deployment
+    * All servers to deployed to Heroku
+    * Heroku logs should show the output
+    * Since TAs can't get there, students should provide a screenshot to prove.
+  * Documentation
+    * README Standards
+    * JSDoc Required
 
-Students should also compose an `app.js` that runs an interval and emits the `next-number` and `next-letter` events periodically.
-
----
-
-We have deployed a front-end application written in React that will connect a socket.io server running at http://localhost:3000 to the namespaces '/numbers` and '/letters' and which will join the rooms noted above.
-
-When the events (`number`, `_number`, `letter`, `_letter` are emitted from the server to the client, the app will automatically refresh itself with the output from the server.
-
-[Running Client Application](https://pmww0ww42q.codesandbox.io/)
+#### Lab Assistance Notes
 

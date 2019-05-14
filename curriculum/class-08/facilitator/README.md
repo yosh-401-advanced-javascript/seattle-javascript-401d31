@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Data Modeling
-=======================================================================
+# Facilitators Guide: Data Modeling
 
 This is a big build day for the instructor. The concepts are actually not too heavy (routing and mongo) but they make more sense emerging from code demos that pure lecture.  Plan your lecture accordingly, to be building and teaching as you go.
 

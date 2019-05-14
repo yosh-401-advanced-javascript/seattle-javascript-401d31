@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Reading: React Testing and Deployment
-===========================================================================
+# Reading: React Testing and Deployment
 
 Below is a collection of resources of varying types and lengths which describe the topics for the upcoming lecture.  As you go through the readings each day, you'll find that certain sources work better for your reading and learning style. Focus on those, but also branch out and consume the material in different forms.
 
@@ -26,6 +25,7 @@ Wiki Entry Ideas:
 ## Watch
 
 ## Bookmark
+* [styleguidist](https://react-styleguidist.js.org/docs/getting-started.html)
 * [enzyme](https://airbnb.io/enzyme/docs/api/)
 * [nightmare](http://www.nightmarejs.org/)
 * [AWS](http://aws.amazon.com)

@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: API Server Project
-============================================================================
+# Facilitators Guide: API Server Project
 
 ## Preparation
 * The server should mostly be ready by this time. The class has been building it out in dribs and drabs over the last 2 blocks. 

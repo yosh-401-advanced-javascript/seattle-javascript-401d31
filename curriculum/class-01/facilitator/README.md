@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Node Ecosystem
-========================================================================
+# Facilitators Guide: Node Ecosystem
 
 ## Preparation
 * Make sure you have the latest version of node, nvm, etc installed

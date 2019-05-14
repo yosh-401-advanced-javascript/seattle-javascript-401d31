@@ -1,10 +1,19 @@
-![CF](http://i.imgur.com/7v5ASc8.png) SOLUTION - Application State
-==================================================================
+# SOLUTION - Application State
 
-[solution: reducers](https://codesandbox.io/s/nr4j6jzmn4)
+## Lab Requirements
 
-[solution: connect](https://codesandbox.io/s/0pk8q41mq0)
-
+#### Grading Standards & Notes
+  * Features
+  * Code Quality
+    * Wiring needs to be solid
+  * Testing
+    * Not required.  It's a stretch goal, though.
+  * Deployment
+    * Code Sandbox Only
+  * Documentation
+    * README Standards
+    * Good UML is essential
+    
 
 ## Lab Prep
 Students will be working with 2 bits of starter code. In both cases, the store is provided.

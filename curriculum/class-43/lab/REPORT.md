@@ -1,5 +1,4 @@
-![CF](http://i.imgur.com/7v5ASc8.png) JS Framework Comparative Analysis
-=======================================================================
+# JS Framework Comparative Analysis
 
 ## Framework Name (change me)
 

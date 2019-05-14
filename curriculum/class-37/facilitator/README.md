@@ -1,11 +1,11 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide:  `<Login />` and `<Auth />`
-===============================================================
+# Facilitators Guide:  `<Login />` and `<Auth />`
 
 ## Preparation
 This lesson hits on 2 major points
 * Login using Basic and Oauth
-* Authorization to hide/show components & controls
-* For implementation and testing purposes, we have a running API server at: https://javascript-401-api.herokuapp.com
+* Authorization to hide/show components & controls conditionally
+
+For implementation and testing purposes, we have a running API server at: https://api-js401.herokuapp.com
   * Logins/Passwords:
     * user:USER
     * editor:EDITOR
@@ -35,8 +35,7 @@ The login piece is a big build, as you'll have to account for the server connect
   * What does our database look like?
   * How are we defining Users, Roles, and tie-ing them together?
 
-* Demo the working Login/Auth component [demo](https://codesandbox.io/s/rj95o4l9lm), highlighting that you can login and logout and see the login form and content change based on that status.
-
+* Demo a working Login/Auth component (the solution code), highlighting that you can login and logout and see the login form and content change based on that status.
 * Draw a diagram of code you want users to be able to use (`<Auth />`)
 * Draw a UML diagram of how we're going to get there and solve the problem.
 * Students will struggle with the moving parts, so have a good reference point to consistently remind them of where in the process we are as our demo is being written and the code is running.

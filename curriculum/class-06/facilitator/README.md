@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: HTTP and REST
-=======================================================================
+# Facilitators Guide: HTTP and REST
 
 ## Preparation
 * Download and install [`json-server`](https://github.com/typicode/json-server) -- It's a node module that you install globally which opens up a zero configuration REST server.  We will connect to this for a couple of days as we dig into REST and HTTP
@@ -28,6 +27,12 @@
   * Addresses the METHODS you can run against a RESOURCE
   * Usually JSON
   * Generally Versioned
+* API Servers
+  * Handle REST Requests
+  * Documented with [Swagger](https://swagger.io/)
+    * Document routes, params, query strings
+    * Create schemas for input and output specification
+    * Documentation is "live" and runs against your actual API
 * Multiple Tiers of Servers and Services
   * Most services require auth/auth
   * Web servers usually don't go directly to a REST API

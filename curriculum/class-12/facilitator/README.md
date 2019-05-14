@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: OAuth
-===============================================================
+# Facilitators Guide: OAuth
 
 ## Preparation
 * Understand the full OAuth flow and the history of this API/Process/Workflow.
@@ -16,18 +15,6 @@ In this lecture, we introduce OAuth, which is quite a handshake process, but at 
 
 The principle difference is that in OAuth, we must conflate the login and signup processes.  If a user grants access (i.e. from Google), we may not yet have an account for them on our end, so the login process might beget a signup/create process.
   * Sub
-
-
-## Live Coding Demo(s)
-#### Demo Name -- `demo/www-server`
-* This is a simple one -- the server just throws up the index.html file and uses jQuery to build the google login link dynamically, based on all the variables.
-* Its important to have this as an actual server, otherwise the students couldn't deploy it to Heroku
-
-#### Demo Name -- `demo/api-server`
-* Start with the `auth-server` that was coded in the previous lecture and build from it.
-* Most of this lab will be spent building out the handshakes in the `auth/lib/oauth.js` file.
-* There is a small bit of work in the `model.js` file, where you build out the `createfromOAuth()` function that creates the mongo user.
-* Lots of opportunity in here to use the debugger to check the progress of all the handshaking.
 
 ## Lab Prep
 * The students lab starter code matches the live demo and is also the full solution code (minus the individual providers' code). 

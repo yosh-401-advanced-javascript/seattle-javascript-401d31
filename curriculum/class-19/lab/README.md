@@ -1,58 +1,71 @@
-# Lab - Socket.io Namespaces and Rooms
-
-Create a multi-channel, multi-room socket.io server
+# LAB: Socket.io - Message Queue Server
 
 ## Before you begin
-Visit / Bookmark the [Running Client Application](https://pmww0ww42q.codesandbox.io/) which you will be testing against.
+Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
-## Assignment
-Develop a server that accepts connections to 2 namespaces: `numbers` and `letters`, each with a room (`negative` and `lowercase`) that can be optionally joined by a client.
+**Visualize the Application**
 
-Compose an `app.js` that runs an interval and emits specific events to the server periodically, for testing.
+Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
 
-We have deployed a front-end application written in React that will connect a socket.io server running at http://localhost:3000 and to the namespaces and rooms specified below.  This application will automatically connect and respond to events and display the data published by your server.
+**Break Down the Assignment**
 
-### Requirements 
+Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
 
-#### server.js
+* Where should this new code live in the codebase?
+* What existing code needs to be modified?
+* What dependencies will I need to install?
 
-* Start a server with 2 global variables
-  * counter = 0
-  * letter = A
-* Allow inbound connections on 2 namespaces
-  * `/numbers`
-  * `/letters`
-* Within each namespace, allow users to join an arbitrary room
-* For the `numbers` namespace
-  * Respond to an event named `next-number`
-  * `emit()` an event called `number` with the global counter, increased by 1.
-  * For anyone connected to this namespace AND in the `negative` room
-    * `emit()` an event called `_number` with the negative value of the global counter
-* For the `letters` namespace
-  * Respond to an event named `next-letter`
-  * `emit()` an event called `letter` with the next letter in the alphabet
-  * For anyone connected to this namespace AND in the `lowercase` room
-    * `emit()` an event called `_letter` with the lowercase value of the current letter
+**Map your priorities and dependencies before jumping into the code.**
 
-#### app.js (provided)
-* Connects to both the `letter` and `number` namespaces
-* Runs an interval and emits the `next-number` and `next-letter` events periodically.
+---
 
-#### client.js (provided)
-* This will assist you in testing. Effectively, it does exactly what the website does -- connects to the server and listens for `number` and `letter` events in the right namespaces.
-* If you fire up your server, fire up this client, and then run the app.js, you should see numbers and letters flying out.  This is a pretty good indication that the deployed application will also work.
+## Getting Started
+
+Get your api server up and running!  You're going to be modifying it in this lab.
+
+You will likely be creating 3 new git repositories to house the servers for this lab assignment
+
+## Overview
+
+For this lab assignment, we will be writing a Message Queue server that monitors database events, and then modifying our API server to fire events into that Queue on all CRUD operations in our models.
+
+### Assignment - Message Queue Server and Logger
+
+* Create a message queue server
+* Initiate a queue called "files" that monitors "save" and "error" events
+* Initiate a queue called "database" that monitors "create", "read", "update", "delete" and "error" events
+* Create a logger application 
+* Connects to the "file" and "database" queues
+* Performs a custom `console.log()` on the events named above
+
+### Assignment 1 - File Writer (warm-up)
+This will be a repeat of the previous labs, this time using your new message queue server.
+
+* In the starter code, you'll once again find an `app.js` that reads and modifies a file.
+* On a successful write, publish a "save" event to the "file" queue
+* On error, publish an "error" event to the "file" queue
+* Modularize the file reader
+
+### Assignment 2 - API Server
+Alter your API server to publish events on all CRUD Operations
+
+* Import the Queue client library
+* Perform a publish into the database queue, after "create", "update", "delete" and on any errors in your models.
+
+**Questions**
+
+* Where is the best place to do this? In the `mongo.js`? In each mongoose model?
+* How will you trap and publish error events?
+* Where will you identify the Queue server?
 
 ### Testing
-* Compose your server in as modular a manner as possible to support testing.
-* You will want to extract any 'non-event' functionality 
-* Write tests around all of your units
-* Test event handlers (not events themselves)
+* What will your approach be to asserting the API server published the right event?
+* How will you write assertions on the logger?
 
 ### Deployment
-* Your server need not be deployed to Travis for this assignment 
+* Deploy all 3 servers (server, logger, api server) to Heroku.  Use `heroku logs` to view your logger output as your API is serving requests.
+* Do not deploy the file writer app. Theres' no server running for that
 
-###  Documentation
-Complete the README.md file included in the lab folder
 
 ### Assignemnt Submission Instructions
-Refer to the [lab-instructions.md](../../../reference/submission-instructions/labs.md) for the complete lab submission process and expectations
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Facilitators Guide: Classes, Inheritance, Functional Programming
-======================================================================================================
+# Facilitators Guide: Classes, Inheritance, Functional Programming
 
 ## Preparation
 * Have a solid grasp on scope and context. We're not going too deep into `call`, `apply`, `bind`, but having a good grasp on these topics will allow for a smooth demo of how you can pass `this` around.

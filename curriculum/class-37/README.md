@@ -1,5 +1,4 @@
-![cf](http://i.imgur.com/7v5ASc8.png)  `<Login />` and `<Auth />`
-===================================================
+# `<Login />` and `<Auth />`
 
 ## Learning Objectives
 
@@ -40,7 +39,7 @@ What problems do we need to solve for?
 
 * Based on your permissions and login status, it either gives you access to a component or jsx or hides it.
 * Must not use Redux
-  * We don't want to force implementors into a specific state management system.
+  * Why? We don't want to force implementors into a specific state management system.
 
 ```
 // The div only shows if you are logged in

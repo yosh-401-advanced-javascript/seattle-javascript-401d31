@@ -1,7 +1,7 @@
 # JavaScript 401 Warm Up - HTML/CSS
 
 ## Setup
-* Work in a repository for this warmup exercise (`warmup-01`)
+* Work in a repository for this warmup exercise (`warmup-grail`)
   * On each day, create a new branch of this repo with the date
     * i.e. `11-22-2018`
   * Submit a PR from that branch to your master for review
