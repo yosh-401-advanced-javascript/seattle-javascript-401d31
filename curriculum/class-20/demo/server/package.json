@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "q",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^2.2.0"
+    "@nmq/q": "^1.0.0"
   }
 }
