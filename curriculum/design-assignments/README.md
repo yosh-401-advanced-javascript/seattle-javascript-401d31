@@ -6,13 +6,17 @@ The intent is that by the end of the course, students will have a complete "scal
 
 *Think [Material Design](https://material-ui.com) vs [Bootstrap](https://getbootstrap.com/docs/3.3/css/)*
 
-To implement, students may work locally on their machine using the embedded `starter-code` or Fork the [starter sandbox](https://codesandbox.io/s/4xv7wyp607) and connect it to your github account ... in either case, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
+To implement, students may work locally on their machine using the included `design-challenge-app.zip` or Fork the [starter sandbox](https://codesandbox.io/s/4xv7wyp607) and connect it to your github account.
+ 
+ In either case, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
 
 The design repo must be deployed for review and grading. If working at Code Sandbox, then a simple link to the sandbox will suffice. If working in a local environment through git, then the submission must include both a PR to the repository and a link to a deployed application at Netlify or some other service.
 
 Each design assignment includes a mock-up to match against and a pre-built component and markup which can be styled using either component CSS or an extension to the master "design", at the student's discretion.
 
 Most of the design assignments come with some sort of "Inspiration" or collection visual examples to serve as either instructional materials or examples of what can be done. We encourage you to dive in and see how things work, read about why certain things are considered to be better practice than others, and generally look at approaches.  DO NO plagarize. Be inspired. Look, learn, tinker. And then be a developer and create this design your own way. If you do lean heavily on one approach (even just philisophically), provide a link back or a shout out to the originator.
+
+## Wireframe / Mockup / Design Target
 
 ## Design/Component Progression:
 
@@ -64,6 +68,8 @@ Most of the design assignments come with some sort of "Inspiration" or collectio
     /design
         /lib
             /_variables.scss
+            /_mixins.scss
+            /_reset.scss
         /core
             /_header.scss
             /_footer.scss
@@ -71,4 +77,5 @@ Most of the design assignments come with some sort of "Inspiration" or collectio
         /design.scss
             
 ```
+
 
