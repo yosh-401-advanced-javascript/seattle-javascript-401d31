@@ -1,36 +1,55 @@
-# Facilitators Guide: Remote CRUD
+# Facilitators Guide: Block 1 DSA & Design
 
-In the previous class, we made simple GET requests to the Star Wars API. Prior to that, we executed simple CRUD functionality using only the store.
+At the end of this Block the students are presented with 3 assignments:
 
-In this class we will be continuing to use remote APIs with React/Redux+Thunk.
-
-The path for this session will be to revisit both of those previous solutions and marrying the concepts by pulling the schema from the server and posting data back to the server instead of using a .json file and the in-memory store
+* End of Block "Project": Bitmap Transformer
+  * 25 Points
+  * Paired
+  * Due prior to the start of the next Block
+* Design Challenge
+  * 10 Points
+  * Due prior to the end of the next Block
+* Data Structure Implementation: Linked Lists
+  * 10 Points
+  * Due prior to the start of the next class
+    * Will be used in subsequent code challenges
 
 
 ## Preparation
 
-* Get your local API server up and running with the following routes:
-  * `/api/v1/models` (a list of models)
-  * `/api/vi/<modelname>/schema` (the JSON Schema for the requested model)
-  * GET, POST, PUT, PATCH, DELETE on `/api/v1/<modelname>`
-* Ensure that the solution and demo code, when using your server work properly.
-* Practice building up the demo from a baseline starting point so that you can hit the talking points.
-* Its important that you can hit the server routes both directly with JSON and from a FORM post so that you can demonstrate both methods to the students.
+We're going to cover 3 topics today, beginning with looking harder at buffers and code-reviewing the previous lab. This will set them up well for the big end of block project.  We introduce SASS as a design architecture and close out with our first Data Structure - Linked Lists.
+
+As noted, students will have 3 assignments from this class, so prep them for some time management and goals setting.
+
+* Understand the history and use cases for Linked Lists.
+* Inevitably, you'll be asked "why" they exist and "when" you'd use them in the real world
+* Get good at SASS, especially in making up rules on the fly. Once students see it compiling in real time at sassmeister.com, they'll have many "can you do xyz?" questions for you. Be ready to riff.
 
 ## Lecture Main Topics & Overall Flow
-* CRUD
-  * We already have Thunk in place for GET requests
-  * Now, lets add it in place for all requests.
-  * How can we clean up the calls to superagent?
-    * Can we librarize this?
-    * Switch between many ajax libraries
-  * How do we handle authentication headers?
-    * Examine how `superagent` and `fetch` do this.
+
+### Buffers (continued)
+  * Continue from the previous class, where we talked about buffers in general.
+  * Code review is going to really help the students understand how binary is used.
+  * Do a demo of of bitmap, where you simply read a file and then iterate the buffer, mapping the header from the spec.  
+  * Teach them how to read doc!
+  
+### SASS
+  * CSS doesn't have to suck!
+  * We have variables and functions
+  * We can write CSS that matches markup structure
+  * @import and @include make sense!
+  
+### Linked Lists
+  * Why are they a thing?
+  * Arrays are hard to "grow"
+  * No need for contiguous memory
+  * Multiple things can point to a single node
+  * It's all about the `.next`
+  * `head` and `tail`
+  * `while current.next` is the most basic traversal
+  * Mention and demo the "tortoise" and "hare" as a cool way to solve linked list questions.
 
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-* They will struggle with toggling the state of the form (clearing it after a post/put) and getting the async behavior down.
-* Many students will see this is an opportunity to implement a spinner/wait state. Great! This is a cool thing to demo.
 
 ## General Comments and Notes
-* This is a prep lab for the end-of-block capstone "CMS" project, which is to do CRUD on multiple models in true CMS fashion.
