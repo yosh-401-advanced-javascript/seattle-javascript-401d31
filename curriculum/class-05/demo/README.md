@@ -13,11 +13,17 @@ Use this demo as the students final prep for the end of block project - Bitmap T
       * Can you find the edges?
       
 ### Big O
+
+[Common Curriculum Big-O Demo](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-05/demos/big-o/demo)
+
 The big-o demo is setup with code that is increasingly complex so that you can point to executable lines and count the number of times they will run.
 
 Use this to determine the 'n' factor in loops and recursion, and continually point out and query the students for how many times things will run.
 
 ### Linked Lists
+
+[Common Curriculum Linked Lists Demo](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-05/demos/linked-lists/javascript)
+
 Don't go much deeper than the core implementation of a list constructor.
 
 * Head
