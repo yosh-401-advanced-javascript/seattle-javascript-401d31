@@ -2,7 +2,7 @@
 
 **Build muscle memory on some the core fundamentals of the language and as a JS developer in general.**
 
-Each day, you should complete the "Daily" warm-up as well as one of the other 4 named warm-up exercises.
+Each day, you should complete the "Daily" warm-up as well as one of the other 4 named warm-up exercises, rotating those each week.
 
 ## [Daily Warmup](./daily/)
 * Work with arrays, functions, looping, and objects.  Implement spread, deconstruction techniques along with `map`, `filter`, and `reduce`.
