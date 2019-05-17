@@ -25,14 +25,8 @@ A Deck's primary responsibility is to layout cards.
 
 <img src="assets/deck3.png" width="500" />
 
-### Setup
-If you haven't already done so, Fork the [starter sandbox](https://codesandbox.io/s/nrozq68z80) and connect it to your github account, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
-
-Work in a new branch of this repo
 
 ### Requirements
-Reference: [Cards and Decks Starter Code](https://codesandbox.io/s/km24yvxx8v)
-
 * From a markup standpoint ...
   * Decks are sections with a class of 'deck'
   * Cards are divs with a class of 'card'
@@ -44,6 +38,3 @@ Reference: [Cards and Decks Starter Code](https://codesandbox.io/s/km24yvxx8v)
   * More importantly, leave the door open in your implementation for more deck styles to be created as designs arise.
 
 * To implement, you will need to edit the content.json file (which contains deck and card data) and add some different values for `type` for each deck so that you can test styling.
-
-### Submission Instructions
-Report in canvas with a link to the PR for this branch of your repo or your sandbox.  You may merge it to master after your submission is turned in.
