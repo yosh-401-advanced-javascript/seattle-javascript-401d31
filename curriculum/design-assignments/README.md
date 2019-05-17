@@ -20,7 +20,7 @@ Most of the design assignments come with some sort of "Inspiration" or collectio
 
 ## Design/Component Progression:
 
-### Block 1 - [Scaffold, Variables, Mixins, Modules](./base/)
+### Block 1 - [Scaffold, Variables, Mixins, Modules](./01-base/)
 * Setup a basic SASS design folder structure and compiler
 * design.scss
 * Create variables for simple alter-ables
@@ -29,32 +29,32 @@ Most of the design assignments come with some sort of "Inspiration" or collectio
 * Basic Site Scaffold: Header, Main, Footer
 * Basic Site Elements: Font Ramp, Buttons, Links
 
-### Block 2 - [Navigation and Lists](./navigation-and-lists/)
+### Block 2 - [Navigation and Lists](./02-navigation-and-lists/)
 * Horizontal, Hamburger, Vertical Menus
 * Lists
 
-### Block 3 - [Forms](./forms/)
+### Block 3 - [Forms](./03-forms/)
 * Fieldsets, Labels, Placeholders
 * Inputs, Textareas
 * Selects, Radios, Checkboxes
 
-### Block 4 - [Tables](./tables/)
+### Block 4 - [Tables](./04-tables/)
 * HTML Tables
 * Div Driven Tables
 * Sorting, Filtering
 * Responsive Tables
 
-### Block 6 - [Hidden Content](./hidden-content/)
+### Block 6 - [Hidden Content](./06-hidden-content/)
 * Modal
 * Drawers
 * Sliders
 * Carousels
 
-### Block 7 - [Grid Systems and Layouts](./grid-system/)
+### Block 7 - [Grid Systems and Layouts](./07-grid-system/)
 * Implement an old-school GRID layout system
 * Using Float, Flex, CSS Grid
 
-### Block 8 - [Cards and Decks](./cards-and-decks/)
+### Block 8 - [Cards and Decks](./08-cards-and-decks/)
 * Design 4 ways to layout card contend
 * Design a system for laying out cards within decks
 * Basic 1,2,3 layouts
