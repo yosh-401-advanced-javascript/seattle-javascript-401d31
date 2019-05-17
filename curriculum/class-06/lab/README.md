@@ -52,10 +52,12 @@ Once you have a good visual and mental model of how the application works, break
 
 * Swagger Documentation
   * In your API, Create a folder called `docs`
-  * Write and publish swagger documentation with Swagger Editor
-    * Open [Swagger Editor](https://swagger.io/tools/swagger-editor/)
+  * Write and publish swagger documentation with Swagger Inspector
+    * Open [Swagger Editor](https://inspector.swagger.io)
     * Review and use swagger's default **Pet Store** documentation for reference
-    * Copy and paste swagger.json from starter code into the editor, resolve errors, and complete missing documentation
+    * Copy and paste swagger.json from the editor and add to your server project.
+    * For submission, this file needs to be in your repository
+    * Additionally, add the URL to the swagger inspector page where you build the docs to your README.
 
 
 ### Testing
