@@ -1,9 +1,34 @@
-# Solution: Book App v2
+# Solutions: Block 2 DSA & Design
 
-## Lab Requirements
+## DS&A - Linked Lists
+[Solution Code](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-05/solutions/javascript/)
+
+### Grading Standards & Notes
+
+* Features
+  * Node Constructor
+  * Linked List Constructor
+  * Insert and Append
+* Code Quality
+  * Uses a javascript Class
+  * Properly exported
+  * Promises!
+* Testing
+  * 80% coverage
+* Deployment
+  * Travis Only
+* Documentation
+  * README Standards
+  * JSDoc Required
+  * Documentation should be VERY clear about how to import and use the constructor
+      
+      
+
+## Solution: Book App v2
+### Lab Requirements
 The students must stand up a fully functioning mongo based version of the book app from 301. Ideally, a change of a setting in .env could allow you to switch between postgres and mongo storage/routing engines.
 
-#### Grading Standards & Notes
+### Grading Standards & Notes
   * Features
     * All features must work identically as the 301 starter code 
   * Code Quality
@@ -20,7 +45,7 @@ The students must stand up a fully functioning mongo based version of the book a
     * JSDoc Required
     * UML Diagram
     
-#### Lab Assistance Notes
+## Lab Assistance Notes
 
 *A suggested path for adding Mongo Support ...*
 
