@@ -1,49 +1,14 @@
-# DESIGN - Deck Layouts and Styles
+# DESIGN - Grid Layouts
 
 ## Assignment
-Begin Implementing Layouts using Cards and Decks. Decks are containers for cards. Specifically, a deck is a section, which contains cards, and optionall a title and navigation.
+"Grid" based layout systems (not css-grid) are the foundation for a large percentage of today's websites. They are largely based on the concept of dividing a page into a specific number of vertical columns and horizontal rows and then laying out your content in creative ways to span multiple columns and rows to achieve a plethora of layout options.
 
-```html
-<section class="deck">
-    <header><h2>Title</h2></header>
-    <nav>
-        <ul>
-            <li><a href='#card1'>Card 1</a></li>
-            <li><a href='#card2'>Card 2</a></li>
-        </ul>
-    </nav>
-    <div id="card1" class="card">...</div>
-    <div id="card2" class="card">...</div>
-</section>
-```
+The major CSS frameworks (bootstrap, material, etc) provide native support for grids, and they're a huge part of most wordpress sites as well. Even with the advent of Cards and Decks, grids will remain a huge part of design implementation
 
-A Deck's primary responsibility is to layout cards.
-
-<img src="assets/deck1.png" width="500" />
-
-<img src="assets/deck2.png" width="500" />
-
-<img src="assets/deck3.png" width="500" />
-
-### Setup
-If you haven't already done so, Fork the [starter sandbox](https://codesandbox.io/s/nrozq68z80) and connect it to your github account, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
-
-Work in a new branch of this repo
+Inspiration: [Grid Systems](https://www.interaction-design.org/literature/article/the-grid-system-building-a-solid-design-layout) |  [Materialize](https://materializecss.com/grid.html) | [Flexbox Grid SASS](http://hugeinc.github.io/flexboxgrid-sass/)
 
 ### Requirements
-Reference: [Cards and Decks Starter Code](https://codesandbox.io/s/km24yvxx8v)
-
-* From a markup standpoint ...
-  * Decks are sections with a class of 'deck'
-  * Cards are divs with a class of 'card'
-* From a styling standpoint ...
-  * Create deck classes in a `_decks.scss` file in your core folder
-  * This should contain layout options for deck content (header, nav) as well the cards for a few different layout options.
-  * Assign classes such as `grid`, `col-1, col-2, col-3`, `highlight`, etc to indicate different patterns for laying out the various components that make up a deck.
-  * Aside from the examples and notes given, come up with a few of your own.
-  * More importantly, leave the door open in your implementation for more deck styles to be created as designs arise.
-
-* To implement, you will need to edit the content.json file (which contains deck and card data) and add some different values for `type` for each deck so that you can test styling.
-
-### Submission Instructions
-Report in canvas with a link to the PR for this branch of your repo or your sandbox.  You may merge it to master after your submission is turned in.
+* Implement a grid system comprised of rows and columns, allowing for spanning of each.
+* You may use float, flexbox, or css-grid
+* Use mixins and modules in SASS to make this easier to implement and scale.
+* Use the inspiration links as inspiration, not as source!

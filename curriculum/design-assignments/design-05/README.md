@@ -1,22 +1,47 @@
-# DESIGN - Grid Layouts
+# DESIGN - `<Drawer />` Component
 
 ## Assignment
-"Grid" based layout systems (not css-grid) are the foundation for a large percentage of today's websites. They are largely based on the concept of dividing a page into a specific number of vertical columns and horizontal rows and then laying out your content in creative ways to span multiple columns and rows to achieve a plethora of layout options.
+Create a `<Drawer />` component, which can contain content (usually nav) and start "off screen". When activated, the drawer slides into view.
 
-The major CSS frameworks (bootstrap, material, etc) provide native support for grids, and they're a huge part of most wordpress sites as well. Even with the advent of Cards and Decks, grids will remain a huge part of design implementation
+Inspiration 
 
-Inspiration: [Grid Systems](https://www.interaction-design.org/literature/article/the-grid-system-building-a-solid-design-layout) |  [Materialize](https://materializecss.com/grid.html) | [Flexbox Grid SASS](http://hugeinc.github.io/flexboxgrid-sass/)
-
-### Setup
-If you haven't already done so, Fork the [starter sandbox](https://codesandbox.io/s/nrozq68z80) and connect it to your github account, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
-
-Work in a new branch of this repo
+* [Drawer Examples](http://mac81.github.io/pure-drawer/)
+* [Creating Accordions](https://www.hongkiat.com/blog/css-only-accordion/)
+* [Accordion Examples](https://1stwebdesigner.com/css-accordion-menu-methods/)
+* [CSS Carousel](https://codeburst.io/how-to-pure-css-carousel-ce1a8cb231c8)    
+* [Cool Carousels](https://coolcarousels.frebsite.nl/)
 
 ### Requirements
-* Implement a grid system comprised of rows and columns, allowing for spanning of each.
-* You may use float, flexbox, or css-grid
-* Use mixins and modules in SASS to make this easier to implement and scale.
-* Use the inspiration links as inspiration, not as source!
+Stylize "hidden" content that is exposed when activated.
+
+In general, components such as these should declare CSS for their states, but should not be concerned with the triggering of that state. The component that draws the drawer should send it prop functions that the drawer can call upon to close itself.
+
+Why? The container generally is in charge of the overall animations and actions, while the child component is either visible or not. Let the parent component decide what triggers the drawer and decide how/when to close it.
+
+
+#### `<Drawer />`
+* The `<Drawer />` should render it's `children`
+* Should start off screen
+* Should have some sort of activation (prop)
+* Should have a means of closing (prop)
+* Accept props to declare the animation and location
+
+#### `<Modal />`
+* The `<Modal />` should render screen center (horizontally and vertically)
+* Apply opacity to the content behind the modal
+* Disallow screen scrolling or access to content behind the modal
+
+#### `<Accordion />`
+* The `<Accordion />` should make the titles linkable
+* Only the "active" content should be visible
+* Animate the switching between content sections
+
+#### `<Rotator />`
+* Left and right buttons
+* Shoud rotate all the way around
+* Provide "pips" to let the user choose a panel
+
+
 
 ### Submission Instructions
 Report in canvas with a link to the PR for this branch and/or a link to your sandbox running this new feature along with all preceding design work.  You may merge it to master after your submission is turned in.

@@ -8,11 +8,6 @@ Style navigation elements
 * [100 Menus](https://www.jotform.com/blog/100-great-css-menu-tutorials/)
 * [20 menu examples](https://medium.com/level-up-web/20-responsive-navigation-solutions-examples-codes-21644390afeb)
 
-### Setup
-If you haven't already done so, Fork the [starter sandbox](https://codesandbox.io/s/nrozq68z80) and connect it to your github account, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
-
-Work in a new branch of this repo
-
 ### Requirements
 * Create a new mixin, under `core`, called `nav`
 * Create the following navigation rules:
@@ -38,5 +33,9 @@ Work in a new branch of this repo
 
 You can implement this using CSS-In-JS methodologies or by using context to dynamically load different SASS Partials with your theme.
 
-### Submission Instructions
-Report in canvas with a link to the PR for this branch and/or a link to your sandbox running this new feature along with all preceding design work.  You may merge it to master after your submission is turned in.
+## DESIGN - Lists
+
+There are hundreds of ways to lay out and style lists, use your imagination.  More importatnly, create a component/styling system that can grow over time as you develop and need more ideas and options in the future.
+
+Inspiration: [List Examples](https://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/)
+

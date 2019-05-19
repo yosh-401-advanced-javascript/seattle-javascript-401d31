@@ -1,25 +1,32 @@
-# DESIGN - Lists
+# DESIGN - HTML Tables
 
 ## Assignment
-Create and manage a dynamic `<List />` component that can accept an array of data and some props to define it's look and behavior
+HTML tables are commonly used for displaying tabular data. They are challenging to design well as users tend to have a hard time focusing in large grids.
 
-There are hundreds of ways to lay out and style lists, use your imagination.  More importatnly, create a component/styling system that can grow over time as you develop and need more ideas and options in the future.
+Inspiration: [25 Table Design Ideas](https://freshdesignweb.com/free-css-tables/)
 
-Inspiration: [List Examples](https://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/)
-
-### Setup
-If you haven't already done so, Fork the [starter sandbox](https://codesandbox.io/s/nrozq68z80) and connect it to your github account, creating a new repository called `design`, where you will be working on your design as you build it throughout the course of each daily design exercise.
-
-Work in a new branch of this repo
 
 ### Requirements
-* Work in a fork of your "sass-design" repository in your github account
-* Create a new component called `List` with the following requirements:
-  * Accepts a property called `items` which is an array of data to render
-  * Accepts a property indicating what type of list this is (ordered, unordered, etc)
-  * Accepts a property indicating what style of list (this is visual)
-  * Generate the correct JSX and SASS to render the elements from `items` in proper semantic tags.
-  * Write styles/sass modules designed to style your list correctly based on options sent in with props.
+* Style the `<thead>`, `<tbody>`, `<th>`, `<td>`, `<tfoot>` present markup
+* Tinker with dynamism: adding rows dynamically, filtering, etc.
+* Style the table in your design
+* Provide SASS Classes or Mixins to handle some of the following concepts
+  * Scrolling the body (to save visible vertical space)
+  * Zebra striping either the rows or the columns
+  * Better header/footer differentiation
+  * Hover states and zooming
+  * Printing
+  * Column, Row, Cell spacing, separation, gridlines
+  
+## DESIGN - Responsive Tables
 
-### Submission Instructions
-Report in canvas with a link to the PR for this branch and/or a link to your sandbox running this new feature along with all preceding design work.  You may merge it to master after your submission is turned in.
+## Assignment
+Tables are inherently **not** responsive. They are always going to have the number of columns defined, and those columns will always have the data they have.
+
+On mobile this usually results in either horizontal scrolling or squished/unreadable data, both of which are highly undesirable.
+
+To develop "responsive" tables, the general approach is not to use `<table />` at all but rather a creative use of `<div />` and either `css-grid` or `css-table-x` rule sets to alter the layout of tables at smaller resolutions and screen widths
+
+Inspiration: [CSS Tricks Responsive Tables](https://css-tricks.com/accessible-simple-responsive-tables/) (Great list of alternative solutions at the bottom of that article as well)
+
+
