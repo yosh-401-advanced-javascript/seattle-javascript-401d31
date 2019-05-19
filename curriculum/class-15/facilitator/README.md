@@ -1,40 +1,54 @@
-# Facilitators Guide: API Server Project
+# Facilitators Guide: Block 3 - DS&A, Designs, Comp Sci, Recap
 
 ## Preparation
-* The server should mostly be ready by this time. The class has been building it out in dribs and drabs over the last 2 blocks. 
+* Ensure that you have a solid API Server and a solid Auth Server that you can demo from
+* Get ready with a solid Tree Demo and Implementation
 
-This project is all about tightening it up and making sure that it's enterprise ready.
 
 ## Lecture Main Topics & Overall Flow
+
+### DS&A - Trees: Binary and BST
+
+* Lots of great drawings today!
+* First, we introduce trees as a basic structure
+* Talk about the different ways to traverse a tree
+  * Breadth First: Queue
+    * Draw a queue and visually traverse, showing how the queue is built and used during the process
+  * Depth First
+    * First visual needs to be the types of traversals
+    * Have the students predict the values as you traverse each way
+    * First chance to talk about recursion
+    * DEMO
+* Introduce BSTs
+  * Just a Binary tree, but with rules
+  * Rules allow you to easily add and search
+  * Provides clarity to your traversals
+  
+### SASS - Forms and UI
+* The readings for this class covered not only form field designs, but a couple of videos on usability, which is a huge issue for web forms.
+* Lecture today should focus on the usability piece -- 
+  * what does it mean to be successful in filling out a form?
+  * How can we use layout to ensure success?
+  * How does accessibility play in?
+  * How can we use labels, placeholders and defaults?
+  * Tab controls?
+
+### Lab/Project Prep
+* Demo both the API and Auth Servers
 * Review the requirements with the class
 * Documentation: JSDoc, Swagger, README
 * Full Test Coverage (and run through Travis)
 * Dynamic Models
   * Ship with 2 connected models
 * Common API Route
-* Authenticated Access Control (overridable)
+* Authenticated Access Control to API operations
+* Make Auth "optional" through an ENV setting
 * Deployable (Heroku)
 * Proper error and 404 handling middleware
 * Fully checked and validated inputs (type checking, valididy)
 * Static Route Handler
-* Optionally connected to the queue server
-  * Models raise events on write ops
-  * Auth raises events (hack warnings)
 
-
-## Live Coding Demo(s)
-* No code demo today
-* Do an architectural drawing of the system
-* Re-Confirm Swagger Format
-* Re-Confirm JSDoc Format
-
-## Lab Prep
-* Group the students and have them work through a whiteboard session before starting 
-
-** Grading Advice / What to look for**
-* Perfection
-* Needs to be deployed
-* Needs to handle all routes on a stock model
+Group the students and have them work through a whiteboard session before starting 
 
 ## What bugs, issues, or surprises have come up in the past for this class?
 
