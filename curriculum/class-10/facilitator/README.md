@@ -1,4 +1,4 @@
-# Facilitators Guide: Block 2 DSA & Design
+# Facilitators Guide: Block 2 - DS&A, Designs, Comp Sci, Recap 
 
 At the end of this Block the students are presented with 3 assignments:
 
@@ -17,39 +17,38 @@ At the end of this Block the students are presented with 3 assignments:
 
 ## Preparation
 
-We're going to cover 3 topics today, beginning with looking harder at buffers and code-reviewing the previous lab. This will set them up well for the big end of block project.  We introduce SASS as a design architecture and close out with our first Data Structure - Linked Lists.
-
-As noted, students will have 3 assignments from this class, so prep them for some time management and goals setting.
-
-* Understand the history and use cases for Linked Lists.
-* Inevitably, you'll be asked "why" they exist and "when" you'd use them in the real world
-* Get good at SASS, especially in making up rules on the fly. Once students see it compiling in real time at sassmeister.com, they'll have many "can you do xyz?" questions for you. Be ready to riff.
+* Get the Book App from 301 up and running
+* Get Book App v2 (this class solution) up and running
 
 ## Lecture Main Topics & Overall Flow
-
-### Buffers (continued)
-  * Continue from the previous class, where we talked about buffers in general.
-  * Code review is going to really help the students understand how binary is used.
-  * Do a demo of of bitmap, where you simply read a file and then iterate the buffer, mapping the header from the spec.  
-  * Teach them how to read doc!
+### DS&A - Stacks and Queues
+* DS&A Lecture on Stacks and Queues
+* We have previously talked about the JS Event Loop in Class 03 (Async).
+  * Now, we can see how that process uses an actual Stack and Queue to function.
+  * There's a demo called `event-loop.js` that uses a stack and a queue to simlate this (poorly, but the point gets made...)
   
 ### SASS
-  * CSS doesn't have to suck!
-  * We have variables and functions
-  * We can write CSS that matches markup structure
-  * @import and @include make sense!
+* For this lab, the students will be working on navigation and lists.
+* SASS lecture should center around ways and tactics to manipulate layouts for menus
+  * `float`, `flex`, `inline-block`
+  * The "checkbox trick" for hamburgers
+  * Drop down menu strategies
+  * Using the browser inspector to force hover/active states for testing.   
+
+### Project/Lab Prep: Refactoring
+The end of block project is "Book App v2", which requires the students to completely refactor the 301 book app.
+
+Work this with the student on the white board.  How do you break that app down? Where are the modules? What gets split out? How do we model the data? Do we replicate the app using Mongo instead of PG, or do we write an app that uses our API as a service? 
+
+Lots of big and fun decisions. Let them learn to be engineers while you mentor and mediate the discussion.
+
+  * Migrating to Mongo from PG 
+  * ... yet maintaining support for PG
+  * Modularization
+  * Proper Data Modeling
+
+
   
-### Linked Lists
-  * Why are they a thing?
-  * Arrays are hard to "grow"
-  * No need for contiguous memory
-  * Multiple things can point to a single node
-  * It's all about the `.next`
-  * `head` and `tail`
-  * `while current.next` is the most basic traversal
-  * Mention and demo the "tortoise" and "hare" as a cool way to solve linked list questions.
-
-
 ## What bugs, issues, or surprises have come up in the past for this class?
 
 ## General Comments and Notes

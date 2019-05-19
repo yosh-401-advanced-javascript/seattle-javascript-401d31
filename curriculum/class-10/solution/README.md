@@ -1,18 +1,18 @@
-# Solutions: Block 2 DSA & Design
+# Solutions: Block 2 - DS&A, Designs, Comp Sci, Recap 
 
-## DS&A - Linked Lists
-[Solution Code](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-05/solutions/javascript/)
+## DS&A - Stacks and Queues
+[Solution Code](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-10/solutions/javascript/)
 
 ### Grading Standards & Notes
 
 * Features
-  * Node Constructor
-  * Linked List Constructor
-  * Insert and Append
+  * Stack with `pop()`, `push()`, `peek()` methods
+  * Stack with `top`, `bottom` properties
+  * Queue with `enqueue(), `dequeue()`, peek()` methods
+  * Queue with `front`, `back` poperties
 * Code Quality
   * Uses a javascript Class
   * Properly exported
-  * Promises!
 * Testing
   * 80% coverage
 * Deployment

@@ -1,4 +1,4 @@
-# Block 1: Data Structures and Designs
+# Block 1: DS&A, Designs, Comp Sci, Recap
 
 ## Learning Objectives
 * White Board Strategy

@@ -1,4 +1,4 @@
-# Solutions: Block 1 DSA & Design
+# Solutions: Block 1 Project and DS&A
 
 ## DS&A - Linked Lists
 [Solution Code](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-05/solutions/javascript/)

@@ -1,4 +1,4 @@
-# Block 2: Data Structures and Designs
+# Block 2: DS&A, Designs, Comp Sci, Recap
 
 ## Learning Objectives
 * Stacks and Queues
@@ -10,6 +10,9 @@
   * Vertical and Horizontal lists/menus
   * Checkbox Trick for Hamburgers
   * Icons
+* Refactoring 
+  * Approaches
+  * Best Practices
 
 ## Labs and Assignments
 

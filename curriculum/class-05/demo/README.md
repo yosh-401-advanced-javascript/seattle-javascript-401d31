@@ -1,4 +1,4 @@
-# Demos: Block 1 DSA & Design
+# Demos: Block 1 - DS&A, Designs, Comp Sci, Recap
 
 ### Bitmaps  (`demo/bitmap-demo.js`)
 Use this demo as the students final prep for the end of block project - Bitmap Transformer

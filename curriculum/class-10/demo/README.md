@@ -1,27 +1,19 @@
-# Demos: Block 2 DSA & Design
+# Demos: Block 2 - DS&A, Designs, Comp Sci, Recap 
 
-### Bitmaps  [`demo/bitmap-demo.js`]
+### Stacks and Queues  [`demo/bitmap-demo.js`]
 
-[Common Curriculum Stacks & Queues Demo](http://codefellows.github.io/code-401-javascript-guide/curricussssssssssssssssssssssssssssssssssssssssssssslum/design-assignments/)
+[Common Curriculum Stacks & Queues Demo](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-10/demos/javascript)
 
-Don't go much deeper than the core implementation of a list constructor.
+Don't go much deeper than the core implementation of the stacks and queues
 
-* Head
-* Tail
-* While Loop to go through and add a node to the end - O(n)
-* Simple head replacement to put a new node at the start - O(1)
+* Create the core properties and scaffold out the required methods.
+* Implement `peek()`, pseudocode the others
 
-### SASS
-[Sassmeister](http://www.sassmeister.com)
+### Menus (SASS)
 
-Use the Sassmeister online tool (which was built by a former Code Fellows student) to do your initial demo into SASS, hitting on the following basic points:
+* Talk through the options for creating menus and other ways to manipulate lists.
+* This demo shows one way of doing horizontal drop lists
+* It also demonstates the checkbox trick for hamburgers
+* It has been helpful in the past to talk about, with drawings, how these can work and then pair program part of the implementation with either a TA or a student, getting input from the class
 
-* Nested Selectors
-* Use of the `&` to stick rules
-* Variables
-* Mixins
-* Loading of Partials
-
-The demo code included in this repo, when typed in, will showcase in real time how SASS compiles down to CSS.
-
-Do the mixins last, once the students grok the idea of nesting and variables.
+Generally speaking, the SASS demos are great when interactively, as most students have a decent understanding of CSS and are much more willing to contribute ideas.

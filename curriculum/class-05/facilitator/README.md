@@ -1,4 +1,4 @@
-# Facilitators Guide: Block 1 DSA & Design
+# Facilitators Guide: Block 1 - DS&A, Designs, Comp Sci, Recap
 
 At the end of this Block the students are presented with 3 assignments:
 
