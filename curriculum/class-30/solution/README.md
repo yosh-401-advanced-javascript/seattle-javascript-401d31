@@ -1,23 +1,32 @@
-#  Week 6 Project - City Explorer
+#  Block 5 Project - Solutions
 
-## Lab Requirements
+## DS&A - Hash Tables
 
-The application must look and act exactly as the original. 
-
-The students must use the same CSS, but with a React front-end, deployed to their service of choice.
+[Official Solution](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-30/solutions/javascript)
 
 #### Grading Standards & Notes
   * Features
-    * Use Promises and Superagent to fetch data
-    * Promise.all() preferred
-    * CSS must not be changed
-    * Markup must be the same as the original
+    * `hash()`, `add()`, `has()`, `get()` methods
+    * All REST methods must be supported
   * Code Quality
-    * Good modularization
-    * Good composition (child components)
-    * Re-Use of common components
+    * Created as a Class
   * Testing
-    * Mocked Superagent
+    * All functionality must be covered
+  * Deployment
+    * Travis Tests
+  * Documentation
+    * README Standards
+    
+    
+## RESTy
+
+#### Grading Standards & Notes
+  * Features
+    * The application styling needs to match
+    * All REST methods must be supported
+  * Code Quality
+    * Use `fetch()` API
+  * Testing
     * All functionality must be covered
   * Deployment
     * Travis Tests
@@ -25,8 +34,3 @@ The students must use the same CSS, but with a React front-end, deployed to thei
   * Documentation
     * README Standards
     * React Docs Required
-
-#### Lab Assistance Notes
-* Use view-source to figure out the markup
-* Get into the source of the original .js files to find the templates that contain the markup they need
-* In what order are the server calls made?

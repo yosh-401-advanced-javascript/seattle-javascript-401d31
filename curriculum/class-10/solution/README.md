@@ -1,9 +1,34 @@
-# Solution: Book App v2
+# Solutions: Block 2 - DS&A, Designs, Comp Sci, Recap 
 
-## Lab Requirements
+## DS&A - Stacks and Queues
+[Solution Code](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-10/solutions/javascript/)
+
+### Grading Standards & Notes
+
+* Features
+  * Stack with `pop()`, `push()`, `peek()` methods
+  * Stack with `top`, `bottom` properties
+  * Queue with `enqueue(), `dequeue()`, peek()` methods
+  * Queue with `front`, `back` poperties
+* Code Quality
+  * Uses a javascript Class
+  * Properly exported
+* Testing
+  * 80% coverage
+* Deployment
+  * Travis Only
+* Documentation
+  * README Standards
+  * JSDoc Required
+  * Documentation should be VERY clear about how to import and use the constructor
+      
+      
+
+## Solution: Book App v2
+### Lab Requirements
 The students must stand up a fully functioning mongo based version of the book app from 301. Ideally, a change of a setting in .env could allow you to switch between postgres and mongo storage/routing engines.
 
-#### Grading Standards & Notes
+### Grading Standards & Notes
   * Features
     * All features must work identically as the 301 starter code 
   * Code Quality
@@ -20,7 +45,7 @@ The students must stand up a fully functioning mongo based version of the book a
     * JSDoc Required
     * UML Diagram
     
-#### Lab Assistance Notes
+## Lab Assistance Notes
 
 *A suggested path for adding Mongo Support ...*
 

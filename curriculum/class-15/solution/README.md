@@ -1,4 +1,4 @@
-# Solution: API Server
+# Block 3 Solution: API Server
 
 ## Lab Requirements
 Implement a fully functional, modular, authenticated, and tested API Server
