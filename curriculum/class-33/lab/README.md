@@ -1,4 +1,8 @@
-# LAB - Remote APIs
+# LAB - Context API
+
+Create a React application that wraps the entire `<App/>` with a context provider, created using Context API. Then, create multiple components that act as consumers to your context, using it in various ways.
+
+Specifically, build a counter that uses 3 separate components that subscribe to a common provider
 
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
@@ -19,52 +23,34 @@ Once you have a good visual and mental model of how the application works, break
 
 ---
 
-## Getting Started
+### Assignment 1 - Counter
+* Create a Counter Provider component, which exposes the following state:
+  * `count` - A number (default to 0)
+  * `increment` - A reference to a function that increases the count
+  * `decrement` - A reference to a function that decreases the count
+* In the index.js, import CounterContext and wrap `<App />` in it, so that all child components can optionally subscribe to it as consumers.
+* Your `<App />` component should simply pull in and render the following child components ...
+* Create the following child components that register as a `.Consumer` to the provided context.
+  * `<Incrementer />` - Renders a button that, when clicked, calls the `increment()` method in the `Counter Provider`
+  * `<Decrementer />` - Renders a button that, when clicked, calls the `decrement()` method in the `Counter Provider`
+  * `<Counter />` - Renders the current value of `count` from the Counter Provider
+* Provide good styling. Use the css-in-js methodology within the components themselves.
 
-Starter code has been provided for you in the `/lab/starter-code` folder. 
+## Assignment 2 - To Do
+You have been provided, in the `starter-code` folder, a working To Do manager application, written using standard React Component State
 
-Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
+* Refactor the app to make use of Context
+* Create a `context` for the Application
+* Create a separate `<Counter />` component that reads and displays the `count` from Context
+* Create separate components for the main To App elements
+  * `form` - Adds and updates to do list items
+  * `list` - Lists items, manages complete state and form visibility
 
-You will be submitting the URL to this working sandbox as part of your assignment.
-
-## Assignment
-### Refactor A Star Wars Lookup App
-* Convert the current react component state to use a Redux Store
-  * Create a store
-  * Connect to it, create it, provide from the index
-  * Connect to it from the component
-  * Create a reducer that holds the state
-  * Create actions that update the store after a fetch
-  * Alter your fetch to call those actions instead of doing a `setState()`
-  * Have a store for holding all people and a store for holding state of 1 person
-  * On each fetch, change the contents of the store.
-  * Alter the rendering function to use props instead of state
-* Break the app into multiple components
-  * A wrapper that has the link
-  * A lister that shows the people
-  * A detailer that shows the person after being clicked on
-* Convert the native `fetch...()` calls from being in the components to instead invoking action methods
-  * These should return functions that dispatch the real action
-  * You'll need to have `thunk` in place to make this work
-* Cache the results in the store
-  * Once you're all wired up, alter the stores to hold onto state as you fetch things. This way, when you start clicking on people more than once, you don't end up going out to the API to get their data.
-
-### Styling
-* Clearly, this needs a little bit of TLC
-* Use your generic design to apply core styling and layout
-* Use your creativity ...
-  * A pop-up modal for the details instead of a simple list?
-  * Accordions?
-  * Slide Out?
-  * Rotator?
 
 ### Testing
-* tests that ensure the list module functions correctly with error-check parameters
-
-### Stretch Goals:
-* Paginate the results.  The initial calls to the people list will give a total number people, pages, and a link to the next page.
-* Create a new component for navigation that will use those links to draw a list of pages to fetch, and then keep re-calling that initial fetch method to update the list based on what page you are "on"
-* Implement these functional methods as well ...
+* Do a deep mount of the app, and set tests to make assertions on the child components that consume context from the Provider.
+  * Can they see context?
+  * Can they interact via published functions?
 
 ### Assignemnt Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

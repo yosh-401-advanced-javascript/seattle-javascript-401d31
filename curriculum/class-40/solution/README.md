@@ -1,20 +1,21 @@
-# Solution: Socket.io Client
+#  Block 8 Project - Solutions
 
-## Lab Requirements
+## RESTy
 
 #### Grading Standards & Notes
   * Features
-    * Students must use the Q library
-    * Each of the CRUD methods should be reported separately
-    * Graph or Charts should be used for visuals
+    * The application styling needs to match
+    * All REST methods must be supported
+    * Store and Re-Use History
   * Code Quality
-    * Context and/or Hooks must be used
+    * Use `fetch()` API
+    * Redux Store for history
+    * Hooks for form state
   * Testing
-    * End-To-End (Functional) tests only
+    * All functionality must be covered
   * Deployment
-    * Deploy to AWS or Netlify
+    * Travis Tests
+    * Deployed to either Netlify, AWS, or Azure
   * Documentation
     * README Standards
-    * JSDoc Required
-
-#### Lab Assistance Notes
+    * React Docs Required

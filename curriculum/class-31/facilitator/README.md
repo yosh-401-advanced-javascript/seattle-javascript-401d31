@@ -1,26 +1,24 @@
-# Facilitators Guide: Application State
+# Facilitators Guide: Hooks API
 
 ## Preparation
-* This is the first day of Redux.
-* Focus on the problem that Redux solves (global or application state) and really understand HOW it manages that.
-* The majority of the day will be in wiring up a very simple store with a single action and reducer, but this will open up many rabbit holes for you to go down with the students.
-* Be prepared to move between component state and app state and back over and over so that you can explain what Redux is doing.
-* Have a few images that you can draw on a whiteboard (or on your computer)
+In this session, we'll be introducing yet another way to manage state in React -- Hooks
 
+Definitely go through the readings and videos before you dive in, as there are a few ways to implement hooks.
 
 ## Lecture Main Topics & Overall Flow
-* Redux!
-  * We are moving from app/component on-way state management into a global state.
-  * Currently, state and manipulation methods can only be "pushed down" as a prop from a parent to a child component, very tactically.
-  * With Redux, components can now "Reach Up" and get the state they want from the global store.
-  
+* What are Hooks?
+  * A means of managing state in Function Components
+  * "Hooks are functions that let you 'hook into' React state and lifecycle features from function components."
+  * Generally export a "getter" and a "setter"
+  * Built-In hooks exist for specific cases
+    * `useState()` to manage single bits of state
+    * `useReducer()` to mimic the reducer pattern
+    * `useContext()` to gain access to the Context API
+    * `useEffect()` - to perform side effects on a function component (lifecycle hooks)
+      * Effects are scheduled (and re-set) to run after every render
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-* Students will absolutely struggle with the wiring of things.
-* Work extra hard in lecture, demo, and in Q&A dealing with how things are referenced and called.
-* Draw lots of pictures to assist
+*
 
 ## General Comments and Notes
-* For the students, this is going to:
-  * Solve a problem they don't yet have
-  * Solve it in a way that is going to feel very "magical"
+*

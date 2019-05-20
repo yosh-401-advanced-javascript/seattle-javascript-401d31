@@ -1,22 +1,27 @@
-# SOLUTION -  `<Login />` and `<Auth />`
+# SOLUTION - Dynamic Forms
 
 ## Lab Requirements
 
-* Students will be tasked with using the Auth/Login system
-* They are provided a usable version of these component/context in the lab
-* Their task will be to integrate that into a "CRUD" application and restrict access based on permissions (the To Do Application)
-* The goal for this lab is not to implement Login/Auth, but to understand it at it's core purpose, and to seemlessly implement this as a means to solve a real world problem set.
+### Lab Assignment 1
+*
 
 #### Grading Standards & Notes
   * Features
+    * All CRUD functionality
   * Code Quality
+    * Multiple Reducers or Complex Reducer
+    * Required: Model/Schema fetching
   * Testing
+    * Basic Store Tests, Mock Store
   * Deployment
     * Travis Only
   * Documentation
     * README Standards
-    * JSDoc Required
-
-#### Lab Assistance Notes
-**The students need a working and complete CMS (Class 35 Project) to complete this assignment**
-
+    * React Doc Required
+    
+## Lab Assistance Notes
+* Students will implementing PUT, GET, PATCH in the redux starter app. DELETE has been done for them.  What they'll need to get to is how to pass a record ID down to the <Record> component and then how to manipulate state in the reducer. They'll need to dive into spread, deconstruction, and all of those functional methods.
+* We'll also be hooking into an API server. Grading that could be tough if they set up their react apps to use a local server. There's a remote API deployed that you can hook into, by changing their API url: https://api-js401.herokuapp.com/api/v1/
+* Definitely looking for them to do a full integration with the API for all methods.
+* Sticking points for them will be in getting the reducers right and handling multiple reducers
+* Basic tests using a store will be required, but not full coverage. There's a lot of other work to complete, but getting the core Redux test wiring in place is a baseline goal for today.
