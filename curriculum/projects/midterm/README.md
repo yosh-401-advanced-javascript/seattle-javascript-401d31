@@ -49,7 +49,7 @@
 
 ## Development Schedule
 
-#### FRIDAY
+#### Class 20 (Project Planning)
   * Create your github organization
     * Back-End Repo
     * Front-End Repo
@@ -61,29 +61,29 @@
     * At this stage, its's probably just stories to write more stories...
   * Get your Wiki setup for documentation
   
-#### MONDAY
+#### Class 21 (Project Start)
   * Wireframes Complete
   * User workflows finalized
   * Initial design planned
   * Code
   
-#### TUESDAY
+#### Class 22 (Core MVP)
   * First MVP should be completed by EOD
   * Your core functionality should be working end to end.
     * Databases Hooked up and saving
     * User workflow works (navigation, actions)
     
-#### WEDNESDAY
+#### Class 23 (Final MVP)
   * Adding Non-Breaking Features 
   * Final "MVP" should be complete
     * Whatever you have by EOD should be presentation ready
     * Anything you add from this point on is purely additive.
   
-#### THURSDAY
+#### Class 24
   * Final Polish
   * Presentation Practice
   
-#### FRIDAY
+#### Class 25 (Presentation Day)
   * Eat.
   * Drink.
   * Present.
