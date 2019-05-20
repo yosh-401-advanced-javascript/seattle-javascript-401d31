@@ -1,6 +1,4 @@
-# LAB -  `<Login />` and `<Auth />`
-
-Using Login Context, "protect" the To Do application by restricting access to the various application features based on the users' login status and capabilities.
+# LAB - Dynamic Forms
 
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
@@ -29,42 +27,47 @@ Open [Code Sandbox](http://codesandbox.io) and Create a new application. When pr
 
 You will be submitting the URL to this working sandbox as part of your assignment.
 
-## Assignment: Implement Login and Authorization into an existing application
+**Fire up your API Server!**
 
-### Requirements
+  * Get your latest and greatest API server from the your earlier labs and get it running along with a MongoDB instance. (Recommended)
+  * Or ... use the supplied server in this lab folder
+  * Or ... simply connect to the deployed public API server
+    * [https://api-js401.herokuapp.com/api/v1/](https://api-js401.herokuapp.com/api/v1/)...
+* Once you have it up and running, fetch the schema for any model that you have. We will be using this to build our forms. Copy the schema response that you get from the server and paste it into a file called "schema.json", we'll be using that later.
+  * *The public API supports "players" and "teams" models for all operations*
 
-#### Migrate and Modularize
-* Refactor the app to make use of the Context API
-* Create a `context` for the Application
-* Create a separate `<Counter />` component that reads and displays the `count` from Context
-* Create separate components for the main To App elements
-  * `form` - Adds and updates to do list items
-  * `list` - Lists items, manages complete state and form visibility
-  
-  
-#### Login/Auth Features
-* Hide the entire interface until the user has logged in.
-  * Provide a login and logout option in the main menu
-* Implement the following RBAC rules:
-    * Logged In Users with 'read' permissions can see the summary/count
-    * Logged In Users with 'read' permissions can see the list of To Do Items
-    * Logged In Users with 'delete' permissions can click the records to mark them as complete
-    * Logged In Users with 'update' permissions can edit existing items
-    * Logged In Users with 'create' permissions can create new items
+## Assignments
+### Implement the RESTful Reducers
 
-### Notes
-* You may not alter the functionality of the existing application
-* You may only grant access using RBAC
-* You may test with your own API server
-* You must either deploy that server and configure your React application to use it, or you may use the official API deployment at https://api-js401.herokuapp.com
-* The API server has the following user accounts (username:password) that you can use to login as a user with varying permissions
-  * admin:ADMIN (create, read, update, delete)
-  * editor:EDITOR (create, read, update)
-  * user:USER (read)
+* Use a static .json file to bring in the players schema (you can simply import it)
+* Implement all of the restful methods in the Redux Store for the player schema
+  * GET - Retrieve one item
+  * POST - Create New Item
+  * PUT - Replace an item
+  * PATCH - Update an item
+  * DELETE - Remove an item
+* Display a list of every element in the store, updating the list with every action taken on individual items.
 
-### Testing
-* Write a suite of UI tests that assert the existence of components based on user login state.
-* You will need to create some mocking interface to fake a server/login to simulate.
+### Create a generic `<Record/>` component
+In the first phase, you created a form that can edit a single model. In this phase, you will be genericizing that component.
+
+* Rename your editor component to `<Record />`
+* It should dynamically load the correct schema json file based on a prop on the component given by the container component.
+* Based on the schema
+  * Draw the correct form
+  * Connect to the right part of the store.
+  * Ensure that the record list is from the right part of state
+  * Ensure that your REST actions are using the right part of state
+
+
+### Turn it on!
+* Instead of importing .json files, connect the `<Record />` component to an API server to fetch the actual Schema from the API
+* This should be optional. Use a flag of some kind to tell your component to read from a local .json file or connect to a server.
+* Use a variable to identify the API server so that your application is deployable.
+
+###### Testing
+* Test the reducers to make sure that each action is properly manipulating state
+* Test the form behavior to ensure that added items are showing in the list, updates are showing real time changes, etc.
 
 ### Assignemnt Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

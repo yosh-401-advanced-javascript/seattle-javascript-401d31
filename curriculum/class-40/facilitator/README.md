@@ -1,27 +1,81 @@
-# Facilitators Guide: Socket.io Client
+# Facilitators Guide: Block 8 - DS&A, Designs, Comp Sci, Recap
 
-## Preparation
-* Get the API and Q servers up and running (the versions in the apps-and-libraries folders are the latest) locally and in heroku
-* Test them against the solution code so that you're confident in how this all operates before you start demo'ing it
+At the end of this Block the students are presented with 2 assignments:
 
-**There are official deployed versions of these here:**
+* End of Block "Project": RESTy Refactor (to Redux)
+  * 25 Points
+  * Paired
+  * Due prior to the start of the next Block
+* Design Challenge: Cards and Decks
+  * 10 Points
+  * Due prior to the end of the next Block
+    
 
-* [Deployed API Server](https://api-js401.herokuapp.com/api/v1)
-* [Deployed Q Server](https://q-js401.herokuapp.com)
+## Lecture Main Topics & Overall Flow
 
+### DS&A - Review
 
-## Lab Prep
-* Demonstrate the working solution code to show the baseline expectations for this. (This uses previously deployed servers)
-* Ensure that the students know the full scope of the lab
-* They'll need to:
-   * Deploy a working and properly configured Q server to Heroku and note it's URL
-   * Deploy a working API server to Heroku that publishes events on the models to that Q server
-   * Create a React app that also connects to the Q server
-* There's not a lot of coding to do on those servers, but they'll need to refresh their memory a bit to get them deployed and working together.
-  * Push them to getting this to work!
+* This is a good opportunity to do a full review
+  * All Data Structures (theory)
+  * Proper traversal mechanics for each
+  * Good use cases for each (when do choose one over another)
+  * White Board Strategies
+
+### SASS - Cards and Decks
+
+* Cards - granular unit of content in semantic markup
+  * Title
+  * Media (image(s), video)
+  * Copy (random markup)
+  * Links
+  * Arranged in any number of ways (via class)
+    * Image Left, Right, Top, Bottom,
+    * Flip with content on back, etc.
+* Decks - Collections of Cards
+  * Arranged in any number of ways (via class)
+  * Side by side
+  * Carousel
+  * Accordion
+  * ... let your mind wander
+* Draw out as many examples of both that you can think of as a class.
+* Show the markup (below) and code one version out.
+
+```html
+<section class="deck 3-col">
+  <div class="card">
+    <title>Card Title</title>
+    <figure>
+      <img src="image.jpg" />
+      <figcaption>An Image</figcaption>
+    </figure>
+    <div class="copy">
+      <p>Some Content</p>
+      <ul>
+        <li>thing 1</li>
+        <li>thing 2</li>
+      </ul>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a class="primary">Click Me</a>
+        </li>
+        <li>
+          <a class="secondary">Not Me</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+```
+
+### Lab Prep
+
+* Demo the currently [deployed RESTy app](https://resty.netlify.com)
+* Whiteboard and plan out how to approach the architecture given knowledge of Redux being layered onto their core React knowledge
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-*
+
 
 ## General Comments and Notes
-*

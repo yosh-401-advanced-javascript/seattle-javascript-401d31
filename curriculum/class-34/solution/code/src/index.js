@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 
-import App from './components/app.js';
+import ToDoContext from './components/todo/context.js';
+import AuthContext from './components/auth/context.js';
 
-import createStore from './store/';
-const store = createStore();
+import App from './app.js';
 
-function Main() {
-  return (
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+class Main extends React.Component {
+  render() {
+    return (
+      <AuthContext>
+        <ToDoContext>
+          <App />
+        </ToDoContext>
+      </AuthContext>
+    );
+  }
 }
 
 const rootElement = document.getElementById('root');

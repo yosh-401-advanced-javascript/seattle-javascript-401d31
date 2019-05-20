@@ -1,4 +1,6 @@
-# LAB - Application State
+# LAB - Hooks API
+
+Using the React "Hooks" API, refactor a functioning application, upgrading the implementation from a class-based component state driven system in a more modern functional hooks-based state system.
 
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
@@ -20,51 +22,36 @@ Once you have a good visual and mental model of how the application works, break
 ---
 
 ## Getting Started
+Starter code has been provided for you in the `/lab/starter-code` folder. 
 
-### Connect to a store
-For this assignment, you're going to take an existing component which puts out some random numbers when a div is clicked, and refactor it to use a Redux store instead of local state.
+Open [Code Sandbox](http://codesandbox.io) and Create a new application. When prompted, choose "From GitHub" and then paste in the URL to today's starter code folder from your fork of the class repository.
 
-* You've been provided starter code to work with - `app-state-connect`
-* Connect `index.js` to the redux store and pass it down to the `App` component
-* Remove the state declaration in the constructor
-  * Do you still need a constructor?
-* Bring in the actions to `app.js`
-* Map state and dispatch to props in `app.js`
-  * use `stuff` as your state keyword.
-* Export the connected `App` component
-* Render `this.props.stuff.foo` instead of `this.state.foo`
-* Remove the `handleChange()` method in `app.js`
-* Re-Implement the click event on the `<div>` using the action method that you mapped earlier
+You will be submitting the URL to this working sandbox as part of your assignment.
 
+## Assignment
+Refactor the provided To Do application using the Hooks API.
 
-### Create a new reducer
-In this assignment, we have a working app that uses Redux for it's state management. Now, it's time to extend it and add a new component with it's own reducer/actions. The twist is that this new reducer will also be able to respond to actions that the other component fires.
+Note that the application should be configured to use the deployed API, with the proper "Secret". Create a `.env` file with the following values
 
-* You've been provided starter code to work with - `app-state-reducers`
-* Create a new numbers reducer in the store: `numbers-reducer.js`
-* Create a new numbers action in the store: `numbers-actions.js`
-* Create a new action creator for the "RESET" action
-* Connect to the reducer in the store's `index.js` file and export it's state as "numbers"
-* The initial state should be a simple object with one key: currentNumber, set to any number you would like
-* In the reducer, create a listener (in the `case`) for both the `CHANGE` and `RESET` actions
-* On `CHANGE`, change the number to a random number
-* On `RESET`, reset the state back to the `initialState`
-* Create a new `Numbers` component that renders a `<div>` with the content "Hello"
-* Import this into your `<App>` and render it below the content already being rendered
-  * You should see your app's output along with "Hello" at this point
-* Import your numbers actions
-* Connect the Numbers component to the store and map the numbers actions and state to Props.
-* Render `this.props.numbers.currentNumber`
+```javascript
+REACT_APP_API=https://api-js401.herokuapp.com
+REACT_APP_SECRET=supersecret
+```
 
+### Login/Auth System
+* Convert the `<Login />` and `<Auth />` components from classes to functional components
+  * Implement the `useContext()` hook to tap into the Login Context
+  * Use the `useState()` hook in the `<Login />` component to manage form state as the user types.
 
-###### Testing
-* Tests are not required for this lab
+### To Do Component
+Note that this component is protected by the `<Auth />` system, so make sure that this functionality remains intact.
 
-###### Stretch Goals:
-* Do all of this again, but from scratch
-* Add a third reducer and subscribe to both bits of state
-* Wire up Reducer unit tests and a fake store
+* Convert from class to a function component
+* Use the `useReducer()` hook to manage the To Do List items list
+* Use the `useState()` hook to manage the form
 
+### Testing
+* Tests should assert all functionality
 
 ### Assignemnt Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations

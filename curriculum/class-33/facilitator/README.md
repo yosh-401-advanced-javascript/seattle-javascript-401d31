@@ -1,32 +1,27 @@
-# Facilitators Guide: Remote APIs
+# Facilitators Guide: Context API
 
 ## Preparation
-* Read Up on [Thunk Middleware](https://alligator.io/redux/redux-thunk/) and async issues with Redux applications
-* There's a host of issues that arise when trying to do asynchronous things in a Redux action.  Principally, they just won't run in order
+This lesson focuses on the Context API. Be comfortable in how this wires up (it's a little bit complex in the wiring).  
+
+DO NOT prepare on the `useContext()` hook. We will be introducing that in Class 38
 
 ## Lecture Main Topics & Overall Flow
-* Asynchronous issues with Redux
-  * Actions must be objects, period.
-  * Action Creators therefore must return objects.
-  * But ... in the real world, we do asyncronous things like talk to servers
-  * Enter "thunk", which lets our action creators return a function instead of an object.
-    * Thunk Middleware executes that function THEN dispatches the actual action, which returns that object.
-    * We will demo how thunk works by writing it
-    * The demo should include a full breakdown of how async actions work with and without thunking.
-    * Use the "real" thunk in production code (it's well tested and more robust)
+How many ways do we currently know of to manage state?
+  1. Local State (a component carries its own state)
+  2. Managed or Shared State (a component passes state/props/methods) down
+  3. Redux Global State (pub/sub)
 
+Now, we'll introduce another way to deal with state.
 
-## Lab Prep
-The lab for this lesson will require the students to refactor an application that pulls in data from the Star Wars API to change from regular state into a Redux store
+**Context** allows for a "global" pass-down of state and methods by using composition (much like the redux `<Provider>`). Context can be passed down to both class and functional components.
 
-Additionally, they'll need to split the application out into multiple components
+  * Note that there is a `useContext` hook that does allow for this as well as many 3rd party hooks.
 
-They will need to implement thunk and async calls as well as to figure out how to pass data between components.
-
-As a stretch goal, they should refer to the store before doing any API calls to save the network.
+Prepare to draw some images that describe the location of (and the sharing of) state between components when using Context and passing it down.
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-*
+* Be prepared for students to struggle with a 3rd way to handle state
+* This will also be the first time the students will be dealing with webpack...
 
 ## General Comments and Notes
-* In the previous class, we worked on dynamic forms.  This class we're working on using Thunk middleware to hit remote APIs. This is leading towards our next class where those concepts get merged and we use a remote API with a form to perform full CRUD operations.
+*

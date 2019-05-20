@@ -1,49 +1,24 @@
-# Facilitators Guide:  `<Login />` and `<Auth />`
+# Facilitators Guide: Dynamic Forms
 
 ## Preparation
-This lesson hits on 2 major points
-* Login using Basic and Oauth
-* Authorization to hide/show components & controls conditionally
+The principal topic here is dealing with forms in React. To this point, the students have probably seen you code a few simple forms with an input that has an `onChange()` and an `onSubmit()` for the form.  Now that we're in Redux, things can change slightly.  We're going to explore 2 libraries.  Why libraries? Mainly to show students that libraries are GOOD THINGS when well executed.  And the 2 that we're showing are widely used in the industry.
 
-For implementation and testing purposes, we have a running API server at: https://api-js401.herokuapp.com
-  * Logins/Passwords:
-    * user:USER
-    * editor:EDITOR
-    * admin:ADMIN
+* JSON Schema Form - Can read a standardized JSON Schema file (which our API server can generate for you...)
+  * Once implemented on the server side, you can simply get the schema for a model, feed it to a `<Form />` component and get an object with the form data.
+  * [React Library](https://github.com/mozilla-services/react-jsonschema-form)
+  * [Mongo Express Module](https://www.npmjs.com/package/mongoose-schema-jsonschema)
 
-The login piece is a big build, as you'll have to account for the server connection for both Basic and Bearer Auth. In addition to the pure implementation of hitting the server to get logged in, we will be using this opportunity to introduce the React Context API
+* Redux Form
+  * [Redux Form Module for React](https://redux-form.com)
+  * You have to build out the form fields yourself (no magical schema here), but it comes with its own reducers and handlers. Very easy to plug in.
 
- Practice working with Context. It can be confusing and difficult to pass state through it, as it does require a function in the consumer in order to function.  Ensure that your demo is tight and well practiced, and be ready to field questions regarding how things are wired and sent through context to the child components.
-
- Introduce Login as the reason to use Context as you don't want to use Redux for something so "simple", yet passing props all over the place is overkill.  Context lets us more tightly control this bit of global state.
-
- Have some good use cases in hand for using authorization.  Our component will be a wrapper around things to protect. In this example, the button only shows to logged in users that are allowed to delete.
-
- ```javascript
- <Auth capability="delete">
-  <button onClick={this.deleteRecord}>Delete</button>
-</Auth>
- ```
+Use this day to really show the students how to find, install, and use 3rd party modules. That message is just as important as implementing forms in React.
 
 ## Lecture Main Topics & Overall Flow
-* Do a full code review of the API server
-  * ... these are topics covered and built in the 1st half of the course, but we should revisit to level-set
-  * How does our auth system work again?
-    * What does the server return (if we use ajax?)
-  * How does OAuth work?
-    * The server can't return ... where does it redirect?
-  * What does our database look like?
-  * How are we defining Users, Roles, and tie-ing them together?
-
-* Demo a working Login/Auth component (the solution code), highlighting that you can login and logout and see the login form and content change based on that status.
-* Draw a diagram of code you want users to be able to use (`<Auth />`)
-* Draw a UML diagram of how we're going to get there and solve the problem.
-* Students will struggle with the moving parts, so have a good reference point to consistently remind them of where in the process we are as our demo is being written and the code is running.
-
+* 
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-* Note that codesandbox.io, heroku and other providers won't let you set cookies from the server to the client. You will need some client code to physically set the cookie.
+*
 
 ## General Comments and Notes
 *
-

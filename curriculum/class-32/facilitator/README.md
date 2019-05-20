@@ -1,21 +1,23 @@
-# Facilitators Guide: Dynamic Forms
+# Facilitators Guide: Socket.io Client
 
 ## Preparation
-The principal topic here is dealing with forms in React. To this point, the students have probably seen you code a few simple forms with an input that has an `onChange()` and an `onSubmit()` for the form.  Now that we're in Redux, things can change slightly.  We're going to explore 2 libraries.  Why libraries? Mainly to show students that libraries are GOOD THINGS when well executed.  And the 2 that we're showing are widely used in the industry.
+In this session, we'll be introducing the basics of socket.io, from the React side, and reinforcing the managing of application state through the use of `Context` and `Hooks`.  
 
-* JSON Schema Form - Can read a standardized JSON Schema file (which our API server can generate for you...)
-  * Once implemented on the server side, you can simply get the schema for a model, feed it to a `<Form />` component and get an object with the form data.
-  * [React Library](https://github.com/mozilla-services/react-jsonschema-form)
-  * [Mongo Express Module](https://www.npmjs.com/package/mongoose-schema-jsonschema)
+This first session is all about setup and wiring.  The goal needs to be limited to getting a server up, running and deployed, and a client created that can communicate with it.
 
-* Redux Form
-  * [Redux Form Module for React](https://redux-form.com)
-  * You have to build out the form fields yourself (no magical schema here), but it comes with its own reducers and handlers. Very easy to plug in.
-
-Use this day to really show the students how to find, install, and use 3rd party modules. That message is just as important as implementing forms in React.
+* Work through the demos and prepare a server and client through which you can send and receive messages.  
 
 ## Lecture Main Topics & Overall Flow
-* 
+* What is Socket.io?
+  * This is a revisit from the earlier portion of the class, where we built out a bigger I/O server.
+  * Might be a good idea to bring that back up and do a feature and code review on it.
+  * Keeps a pipe open between client and server
+  * Keeps communication pathway open
+  * Responds to events that one side or the other `emits`
+  * Publish an Event `socket.emit('run', tellEveryoneToRun)`
+  * Respond to an Event `socket.on('run', doTheRunningMan)`
+* On the React side, you can respond to an event and add it's payload to state, or use a state change to trigger an `emit`
+
 
 ## What bugs, issues, or surprises have come up in the past for this class?
 *

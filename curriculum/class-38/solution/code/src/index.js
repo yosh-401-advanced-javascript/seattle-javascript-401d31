@@ -1,23 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import LoginContext from './components/auth/context.js';
+import { Provider } from 'react-redux';
 
-import ToDo from './components/todo/todo.js';
-import Header from './components/header/header.js';
+import App from './app.js';
 
-import './site.scss';
+import createStore from './store/';
+const store = createStore();
 
-function App() {
-  return (
-    <BrowserRouter>
-      <LoginContext>
-        <Header />
-        <ToDo />
-      </LoginContext>
-    </BrowserRouter>
-  );
+class Main extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+  }
 }
 
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Main />, rootElement);

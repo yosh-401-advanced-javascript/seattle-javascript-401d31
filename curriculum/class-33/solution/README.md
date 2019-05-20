@@ -1,29 +1,20 @@
-# SOLUTION - Remote APIs
-
-## Lab Requirements
+# SOLUTION - Context and Hooks
 
 #### Grading Standards & Notes
   * Features
-    * Get the initial fetch and the detail fetch working
-    * Use and style a proper Modal
-    * Multiple reducers should be used (list and detail)
+    * A full counter, with modular parts that share the common context
   * Code Quality
-    * Good modularity
-    * Reusable Modal
+    * Looking for consistent modularity
   * Testing
+    * Test the deep mounting of context and it's availability
+    * Functional tests required
   * Deployment
-    * Travis Tests
-    * Code Sandbox App
+    * Travis and Code Sandbox
   * Documentation
     * README Standards
-    * React Required
+    * React Docs Required
 
 #### Lab Assistance Notes
-
-The primary task for students today will be to take a working react application and convert it from app/component state into using a Redux store.
-
-They'll need to create 2 reducers and action sets.
-
-Its likely that they will make 2 actions, both called "GET" that end up in both reducers firing. Be on the lookout for oddities like this as they go through their implementations.  This potential case is not covered in lecture, in hopes that we run into this during lab or code review as a discussion point.
-
-Tests are required. Guide the students into mocking out the superagent calls.
+* The expectation here is that the students build out a fully tested counter application with context holding the state and the actions and providing them down.
+* Students should be able to build this out pretty cleanly, with a good set of abstracted components. 
+* Testing will be a hurdle, but a deep mount from the app level should allow them to perform what is essentially and end-to-end functional test.

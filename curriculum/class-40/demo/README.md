@@ -1,32 +1,24 @@
-# DEMOS - Socket.io Client
+# Demos: Block 8 - DS&A, Designs, Comp Sci, Recap
 
-## Execution
+### SASS: Cards and Decks
 
-Demos are provided in the `demo` folder in the guide repository. They are created with `create-react-app` and are suitable to install and run locally or at [Code Sandbox](http://codesandbox.io).  
+Show the included sample, which showcases a few Card and Deck designs. Don't go too deep into the code, but rather how this renders out a recognizable web page.  Students should be led into recognizing visual patterns and be encouraged to strategize on their own.
 
-At Code Sandbox, simply create a new app using "Git Hub" and point it at the the appropriate demo folder and it'll spin the app up for you. Saves a lot of time and also shows the students the value of doing quicker "POC" style work in an online IDE and then executing production code in their actual IDE.
+Do, however, share card and deck markup, so that they can start to mentally map what they're seeing with how the CSS might look.
 
-## Q Server
-* Open the Q server code from Block 4
-* Do a quick code review with the students
-* Demonstrate that the Q server itself is deployed
-  * https://q-js401.herokuapp.com
+Demo here should be less about the CSS code itself but rather in how cards and decks actually work, so that they can replicate that during the following days -- their lab is going to be to implement their own custom grid system, using this as inspiration.
 
-## API Server
-* Open the API server code from Block 3
-* Do a quick code review with the students
-* Demonstrate that the API server itself is deployed
-  * https://api-js401.herokuapp.com
+It has been helpful in the past to talk about, with drawings, how these can work and then pair program part of the implementation with either a TA or a student, getting input from the class
 
-## React App
-* (Silently) Edit the `.env` file to point to the deployed Q Server
-* Launch the app
-* Don't show the code to the students
-* Just show the app working
+Generally speaking, the SASS demos are great when interactively, as most students have a decent understanding of CSS and are much more willing to contribute ideas.
 
-## Work with Data
-* Open postman and POST,PUT,DELETE records into `/api/v1/teams` and `/api/v1/players`
-* As you do this, the react app will list out your actions in a series of list items
 
-This is cool stuff -- 2 separate servers and a separate client all talking to one another.
+### Project / Lab Prep
 
+Students will be creating a complete version of the [RESTy](https://resty.netlify.com) application by refactoring a simplistic working version.
+
+* Do not do a code review of their starter code.
+* It's important for this lab that they're able to jump into existing code and "figure it out", especially when given a visually working application to build from.
+* Ensure that you have a running API server
+* Recommend that the students use their own
+* They should be able to run their RESTy against any API

@@ -1,26 +1,29 @@
-# SOLUTION - Hooks API
+# SOLUTION - Remote APIs
 
 ## Lab Requirements
-* `<Login />` must be converted to a function component
-  * `useState()` must be used for managing the form
-  * `useContext()` must be used for hooking into `LoginContext`
-* `<Auth />` must be converted to a function component
-  * `useContext()` must be used for hooking into `LoginContext`
-* `<ToDo />` must be converted to a function component
-  * `useReducer()` must be used for the list management
-  * `useState()` must be used for managing the form
 
 #### Grading Standards & Notes
   * Features
+    * Get the initial fetch and the detail fetch working
+    * Use and style a proper Modal
+    * Multiple reducers should be used (list and detail)
   * Code Quality
-    * As Noted Above
+    * Good modularity
+    * Reusable Modal
   * Testing
-    * Functional Tests Required
-    * State changes must be asserted 
   * Deployment
-    * Code Sandbox
+    * Travis Tests
+    * Code Sandbox App
   * Documentation
     * README Standards
-    * React Docs Required
+    * React Required
 
+#### Lab Assistance Notes
 
+The primary task for students today will be to take a working react application and convert it from app/component state into using a Redux store.
+
+They'll need to create 2 reducers and action sets.
+
+Its likely that they will make 2 actions, both called "GET" that end up in both reducers firing. Be on the lookout for oddities like this as they go through their implementations.  This potential case is not covered in lecture, in hopes that we run into this during lab or code review as a discussion point.
+
+Tests are required. Guide the students into mocking out the superagent calls.

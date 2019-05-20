@@ -1,28 +1,25 @@
-# SOLUTION - Socket.io Client
+# SOLUTION - Remote CRUD
 
 ## Lab Requirements
 
-* Create a context and hook that integrate with the socket.io server
-
 #### Grading Standards & Notes
   * Features
-    * Proper Context -- Hook relationship
-    * Code should be extensible and ready to fold in Q
-    * The words and form components need to be cleared of chat logic
   * Code Quality
+    * Proper use of ajax
+      * Superagent or Fetch
+      * Thunk
+      * Multiple/Combined Reducers
+      * Remotely pull the schema & cache it
   * Testing
-    * Not required
-    * ... Too much network mocking required.
+    * Required
   * Deployment
-    * Sandbox is ok for the client
-    * Server should be at Heroku so we can test it
+    * Travis 
+    * Code Sandbox App
   * Documentation
     * README Standards
-    * React Doc Required
+    * React Docs Required
 
 #### Lab Assistance Notes
-* This is going to be a tough lab for the students.
-* They will first need to create a context wrapper
-* Then, they can create a custom hook that uses `useContext()`
-* This hook should then be used to provide state and methods
-* Notice how the solution code has no actual socket/chat logic in the `<Words />` and `<Form />` components. This will allow us to switch out that logic from socket.io to Q at any time.
+
+* Students will be using the form lab solution code as their starting point.  This code is a working in-memory Redux store that handles all of the REST verbs, in-memory in the store.
+* They are tasked with converting that to use the server for all operations and to use the Redux store only for cache

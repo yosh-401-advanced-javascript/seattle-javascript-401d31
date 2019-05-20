@@ -1,25 +1,22 @@
-# SOLUTION - Remote CRUD
+# SOLUTION -  `<Login />` and `<Auth />`
 
 ## Lab Requirements
+
+* Students will be tasked with using the Auth/Login system
+* They are provided a usable version of these component/context in the lab
+* Their task will be to integrate that into a "CRUD" application and restrict access based on permissions (the To Do Application)
+* The goal for this lab is not to implement Login/Auth, but to understand it at it's core purpose, and to seemlessly implement this as a means to solve a real world problem set.
 
 #### Grading Standards & Notes
   * Features
   * Code Quality
-    * Proper use of ajax
-      * Superagent or Fetch
-      * Thunk
-      * Multiple/Combined Reducers
-      * Remotely pull the schema & cache it
   * Testing
-    * Required
   * Deployment
-    * Travis 
-    * Code Sandbox App
+    * Travis Only
   * Documentation
     * README Standards
-    * React Docs Required
+    * JSDoc Required
 
 #### Lab Assistance Notes
+**The students need a working and complete CMS (Class 35 Project) to complete this assignment**
 
-* Students will be using the form lab solution code as their starting point.  This code is a working in-memory Redux store that handles all of the REST verbs, in-memory in the store.
-* They are tasked with converting that to use the server for all operations and to use the Redux store only for cache

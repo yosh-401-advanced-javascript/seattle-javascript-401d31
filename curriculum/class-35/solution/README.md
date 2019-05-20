@@ -1,37 +1,38 @@
-# SOLUTION - CMS Project
+#  Block 7 Project - Solutions
 
+## DS&A - Graphs
 
-## Grading Notes / Requirements
+[Official Solution](https://github.com/codefellows/common_curriculum/tree/master/data_structures_and_algorithms/Code_401/class-35/solutions/javascript)
 
-* Models Route that shows all available models from the server 
-* Each model route shows all fields
-* CRUD for each record in the database for each model
-* Test Coverage
-* Really looking for some good styling and UX
+#### Grading Standards & Notes
+  * Features
+    * Add Vertices and Connected Edges
+  * Code Quality
+    * Created as a Class
+  * Testing
+    * All functionality must be covered
+  * Deployment
+    * Travis Tests
+  * Documentation
+    * README Standards
+    
+    
+## RESTy
 
-They've done all of the pieces already. This project is putting it all together.
-
-They will revisit this again in the next block, using the `<Login />` component to protect the various CMS actions
-
-
-## If the students are assigned the "Bug Fix / Map It Out" Lab ...
-
-**Bug List**
-
-* `store/index.js` line 8: `records: APIreducer` should be: `api: APIreducer'
-  * Without this, none of the components can get the right stateToProps
-* `components/cms/models.js` line 26: `this.props.setModel();` should be: `this.props.setModel(model);`
-  * Without this, none of the components will know what the selected model is.
-* `components/cms/models.js, record.js, records.js`
-  * `const API = process.env.API;` should be ... 
-  * `const API = process.env.REACT_APP_API;`
-  * ... this can be found out if they look inside the .env file
-* `components/cms/record.js` line 74: Missing `mapDispatchToProps` in the connect
-  * None of the actions will ever get dispatched without that
-* `components/cms/reducer.js` line 29: just returns `state`
-  * needs to return `{ ...state, record: {} };` 
-  * so that we can properly clear out the record in state and wipe the form.
-* `components/cms/actions.js` line 36 should be:
-  * `export const getRecords = url => dispatch => {`
-  * it is missing the curried function that takes dispatch and will therefore not work.
-
+#### Grading Standards & Notes
+  * Features
+    * The application styling needs to match
+    * All REST methods must be supported
+    * Store and Re-Use History
+  * Code Quality
+    * Use `fetch()` API
+    * Context for history
+    * Hooks for form state
+  * Testing
+    * All functionality must be covered
+  * Deployment
+    * Travis Tests
+    * Deployed to either Netlify, AWS, or Azure
+  * Documentation
+    * README Standards
+    * React Docs Required

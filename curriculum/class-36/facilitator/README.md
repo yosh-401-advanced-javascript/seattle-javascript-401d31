@@ -1,27 +1,26 @@
-# Facilitators Guide: Context API
+# Facilitators Guide: Application State
 
 ## Preparation
-This lesson focuses on the Context API. Be comfortable in how this wires up (it's a little bit complex in the wiring).  
+* This is the first day of Redux.
+* Focus on the problem that Redux solves (global or application state) and really understand HOW it manages that.
+* The majority of the day will be in wiring up a very simple store with a single action and reducer, but this will open up many rabbit holes for you to go down with the students.
+* Be prepared to move between component state and app state and back over and over so that you can explain what Redux is doing.
+* Have a few images that you can draw on a whiteboard (or on your computer)
 
-DO NOT prepare on the `useContext()` hook. We will be introducing that in Class 38
 
 ## Lecture Main Topics & Overall Flow
-How many ways do we currently know of to manage state?
-  1. Local State (a component carries its own state)
-  2. Managed or Shared State (a component passes state/props/methods) down
-  3. Redux Global State (pub/sub)
-
-Now, we'll introduce another way to deal with state.
-
-**Context** allows for a "global" pass-down of state and methods by using composition (much like the redux `<Provider>`). Context can be passed down to both class and functional components.
-
-  * Note that there is a `useContext` hook that does allow for this as well as many 3rd party hooks.
-
-Prepare to draw some images that describe the location of (and the sharing of) state between components when using Context and passing it down.
+* Redux!
+  * We are moving from app/component on-way state management into a global state.
+  * Currently, state and manipulation methods can only be "pushed down" as a prop from a parent to a child component, very tactically.
+  * With Redux, components can now "Reach Up" and get the state they want from the global store.
+  
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-* Be prepared for students to struggle with a 3rd way to handle state
-* This will also be the first time the students will be dealing with webpack...
+* Students will absolutely struggle with the wiring of things.
+* Work extra hard in lecture, demo, and in Q&A dealing with how things are referenced and called.
+* Draw lots of pictures to assist
 
 ## General Comments and Notes
-*
+* For the students, this is going to:
+  * Solve a problem they don't yet have
+  * Solve it in a way that is going to feel very "magical"

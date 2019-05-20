@@ -1,24 +1,32 @@
-# Facilitators Guide: Hooks API
+# Facilitators Guide: Remote APIs
 
 ## Preparation
-In this session, we'll be introducing yet another way to manage state in React -- Hooks
-
-Definitely go through the readings and videos before you dive in, as there are a few ways to implement hooks.
+* Read Up on [Thunk Middleware](https://alligator.io/redux/redux-thunk/) and async issues with Redux applications
+* There's a host of issues that arise when trying to do asynchronous things in a Redux action.  Principally, they just won't run in order
 
 ## Lecture Main Topics & Overall Flow
-* What are Hooks?
-  * A means of managing state in Function Components
-  * "Hooks are functions that let you 'hook into' React state and lifecycle features from function components."
-  * Generally export a "getter" and a "setter"
-  * Built-In hooks exist for specific cases
-    * `useState()` to manage single bits of state
-    * `useReducer()` to mimic the reducer pattern
-    * `useContext()` to gain access to the Context API
-    * `useEffect()` - to perform side effects on a function component (lifecycle hooks)
-      * Effects are scheduled (and re-set) to run after every render
+* Asynchronous issues with Redux
+  * Actions must be objects, period.
+  * Action Creators therefore must return objects.
+  * But ... in the real world, we do asyncronous things like talk to servers
+  * Enter "thunk", which lets our action creators return a function instead of an object.
+    * Thunk Middleware executes that function THEN dispatches the actual action, which returns that object.
+    * We will demo how thunk works by writing it
+    * The demo should include a full breakdown of how async actions work with and without thunking.
+    * Use the "real" thunk in production code (it's well tested and more robust)
+
+
+## Lab Prep
+The lab for this lesson will require the students to refactor an application that pulls in data from the Star Wars API to change from regular state into a Redux store
+
+Additionally, they'll need to split the application out into multiple components
+
+They will need to implement thunk and async calls as well as to figure out how to pass data between components.
+
+As a stretch goal, they should refer to the store before doing any API calls to save the network.
 
 ## What bugs, issues, or surprises have come up in the past for this class?
 *
 
 ## General Comments and Notes
-*
+* In the previous class, we worked on dynamic forms.  This class we're working on using Thunk middleware to hit remote APIs. This is leading towards our next class where those concepts get merged and we use a remote API with a form to perform full CRUD operations.

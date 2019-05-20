@@ -1,36 +1,49 @@
-# Facilitators Guide: Remote CRUD
-
-In the previous class, we made simple GET requests to the Star Wars API. Prior to that, we executed simple CRUD functionality using only the store.
-
-In this class we will be continuing to use remote APIs with React/Redux+Thunk.
-
-The path for this session will be to revisit both of those previous solutions and marrying the concepts by pulling the schema from the server and posting data back to the server instead of using a .json file and the in-memory store
-
+# Facilitators Guide:  `<Login />` and `<Auth />`
 
 ## Preparation
+This lesson hits on 2 major points
+* Login using Basic and Oauth
+* Authorization to hide/show components & controls conditionally
 
-* Get your local API server up and running with the following routes:
-  * `/api/v1/models` (a list of models)
-  * `/api/vi/<modelname>/schema` (the JSON Schema for the requested model)
-  * GET, POST, PUT, PATCH, DELETE on `/api/v1/<modelname>`
-* Ensure that the solution and demo code, when using your server work properly.
-* Practice building up the demo from a baseline starting point so that you can hit the talking points.
-* Its important that you can hit the server routes both directly with JSON and from a FORM post so that you can demonstrate both methods to the students.
+For implementation and testing purposes, we have a running API server at: https://api-js401.herokuapp.com
+  * Logins/Passwords:
+    * user:USER
+    * editor:EDITOR
+    * admin:ADMIN
+
+The login piece is a big build, as you'll have to account for the server connection for both Basic and Bearer Auth. In addition to the pure implementation of hitting the server to get logged in, we will be using this opportunity to introduce the React Context API
+
+ Practice working with Context. It can be confusing and difficult to pass state through it, as it does require a function in the consumer in order to function.  Ensure that your demo is tight and well practiced, and be ready to field questions regarding how things are wired and sent through context to the child components.
+
+ Introduce Login as the reason to use Context as you don't want to use Redux for something so "simple", yet passing props all over the place is overkill.  Context lets us more tightly control this bit of global state.
+
+ Have some good use cases in hand for using authorization.  Our component will be a wrapper around things to protect. In this example, the button only shows to logged in users that are allowed to delete.
+
+ ```javascript
+ <Auth capability="delete">
+  <button onClick={this.deleteRecord}>Delete</button>
+</Auth>
+ ```
 
 ## Lecture Main Topics & Overall Flow
-* CRUD
-  * We already have Thunk in place for GET requests
-  * Now, lets add it in place for all requests.
-  * How can we clean up the calls to superagent?
-    * Can we librarize this?
-    * Switch between many ajax libraries
-  * How do we handle authentication headers?
-    * Examine how `superagent` and `fetch` do this.
+* Do a full code review of the API server
+  * ... these are topics covered and built in the 1st half of the course, but we should revisit to level-set
+  * How does our auth system work again?
+    * What does the server return (if we use ajax?)
+  * How does OAuth work?
+    * The server can't return ... where does it redirect?
+  * What does our database look like?
+  * How are we defining Users, Roles, and tie-ing them together?
+
+* Demo a working Login/Auth component (the solution code), highlighting that you can login and logout and see the login form and content change based on that status.
+* Draw a diagram of code you want users to be able to use (`<Auth />`)
+* Draw a UML diagram of how we're going to get there and solve the problem.
+* Students will struggle with the moving parts, so have a good reference point to consistently remind them of where in the process we are as our demo is being written and the code is running.
 
 
 ## What bugs, issues, or surprises have come up in the past for this class?
-* They will struggle with toggling the state of the form (clearing it after a post/put) and getting the async behavior down.
-* Many students will see this is an opportunity to implement a spinner/wait state. Great! This is a cool thing to demo.
+* Note that codesandbox.io, heroku and other providers won't let you set cookies from the server to the client. You will need some client code to physically set the cookie.
 
 ## General Comments and Notes
-* This is a prep lab for the end-of-block capstone "CMS" project, which is to do CRUD on multiple models in true CMS fashion.
+*
+

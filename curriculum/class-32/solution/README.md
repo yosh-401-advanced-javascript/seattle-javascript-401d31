@@ -1,27 +1,28 @@
-# SOLUTION - Dynamic Forms
+# SOLUTION - Socket.io Client
 
 ## Lab Requirements
 
-### Lab Assignment 1
-*
+* Create a context and hook that integrate with the socket.io server
 
 #### Grading Standards & Notes
   * Features
-    * All CRUD functionality
+    * Proper Context -- Hook relationship
+    * Code should be extensible and ready to fold in Q
+    * The words and form components need to be cleared of chat logic
   * Code Quality
-    * Multiple Reducers or Complex Reducer
-    * Required: Model/Schema fetching
   * Testing
-    * Basic Store Tests, Mock Store
+    * Not required
+    * ... Too much network mocking required.
   * Deployment
-    * Travis Only
+    * Sandbox is ok for the client
+    * Server should be at Heroku so we can test it
   * Documentation
     * README Standards
     * React Doc Required
-    
-## Lab Assistance Notes
-* Students will implementing PUT, GET, PATCH in the redux starter app. DELETE has been done for them.  What they'll need to get to is how to pass a record ID down to the <Record> component and then how to manipulate state in the reducer. They'll need to dive into spread, deconstruction, and all of those functional methods.
-* We'll also be hooking into an API server. Grading that could be tough if they set up their react apps to use a local server. There's a remote API deployed that you can hook into, by changing their API url: https://api-js401.herokuapp.com/api/v1/
-* Definitely looking for them to do a full integration with the API for all methods.
-* Sticking points for them will be in getting the reducers right and handling multiple reducers
-* Basic tests using a store will be required, but not full coverage. There's a lot of other work to complete, but getting the core Redux test wiring in place is a baseline goal for today.
+
+#### Lab Assistance Notes
+* This is going to be a tough lab for the students.
+* They will first need to create a context wrapper
+* Then, they can create a custom hook that uses `useContext()`
+* This hook should then be used to provide state and methods
+* Notice how the solution code has no actual socket/chat logic in the `<Words />` and `<Form />` components. This will allow us to switch out that logic from socket.io to Q at any time.

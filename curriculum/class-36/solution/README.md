@@ -1,20 +1,30 @@
-# SOLUTION - Context and Hooks
+# SOLUTION - Application State
+
+## Lab Requirements
 
 #### Grading Standards & Notes
   * Features
-    * A full counter, with modular parts that share the common context
   * Code Quality
-    * Looking for consistent modularity
+    * Wiring needs to be solid
   * Testing
-    * Test the deep mounting of context and it's availability
-    * Functional tests required
+    * Not required.  It's a stretch goal, though.
   * Deployment
-    * Travis and Code Sandbox
+    * Code Sandbox Only
   * Documentation
     * README Standards
-    * React Docs Required
+    * Good UML is essential
+    
 
-#### Lab Assistance Notes
-* The expectation here is that the students build out a fully tested counter application with context holding the state and the actions and providing them down.
-* Students should be able to build this out pretty cleanly, with a good set of abstracted components. 
-* Testing will be a hurdle, but a deep mount from the app level should allow them to perform what is essentially and end-to-end functional test.
+## Lab Prep
+Students will be working with 2 bits of starter code. In both cases, the store is provided.
+
+* Task 1 - refactor a stateful component to use the store
+* Task 2 - add a new reducer/action to the store and a new component that connects and uses it
+
+### Hints on Grading and Assistance
+
+* The lab is designed to get them touching state and manipulating it for various uses in a few ways.
+* This is less about "getting it to work" and more about "understanding how" it works
+* The takeway from their time in lab needs to be gaining an understanding on the wiring of a Redux application.
+* Have the students draw diagrams of the code example in the README and of all of their starter/solution code.
+* For grading purposes, tests are not required today, but a good UML diagram is.
