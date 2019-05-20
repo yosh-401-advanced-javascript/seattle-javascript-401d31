@@ -1,5 +1,15 @@
 # Facilitators Guide: DS&A, Designs, Comp Sci, Recap
 
+At the end of this Block the students are presented with 2 assignments:
+
+* End of Block "Project": Cloud Deployment
+  * 25 Points
+  * Paired
+  * Due prior to the start of the next Block
+* Design Challenge
+  * 10 Points
+  * Due prior to the end of the next Block
+    
 For this class, and the students end of block project, we will be deploying 3 servers to 3 separate cloud providers and connecting them all with the Q server.
 
 To test it, we'll have a React application that we can use to create/delete/update database records on the API server and receive/log messages from the other 2 servers which all use a common Q to tie it all together.

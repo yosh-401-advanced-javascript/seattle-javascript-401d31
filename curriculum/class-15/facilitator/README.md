@@ -1,5 +1,19 @@
 # Facilitators Guide: Block 3 - DS&A, Designs, Comp Sci, Recap
 
+At the end of this Block the students are presented with 3 assignments:
+
+* End of Block "Project": Authenticated API Server
+  * 25 Points
+  * Paired
+  * Due prior to the start of the next Block
+* Design Challenge
+  * 10 Points
+  * Due prior to the end of the next Block
+* Data Structure Implementation: Trees
+  * 10 Points
+  * Due prior to the start of the next class
+    * Will be used in subsequent code challenges
+    
 ## Preparation
 * Ensure that you have a solid API Server and a solid Auth Server that you can demo from
 * Get ready with a solid Tree Demo and Implementation

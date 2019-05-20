@@ -1,10 +1,12 @@
-# Block 5 Project: City Explorer
+# Block 5 Project: RESTy
 
-We currently have a live City Explorer application running on 2 servers. The front end application is currently hosted at Github Pages.
+We currently have a live RESTy application deployed at Netlify
 
-That front end uses some older technologies (jQuery and Handlebars) that we would like to upgrade out of, and into the newest tech ... namely, React!
+For this project, you will build a similar application in this lab, covering most of the core features (details below).
 
-But we don't want our clients to feel the impact. The look, feel, and functionality needs to remain exactly as it is. We can do a facelift at a later date. Our priority right now is to get this running on React.
+The style and functionality as presented must be matched. You must use your own markup and CSS. 
+
+Treat the deployed application as a mockup/redline.
 
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
@@ -28,21 +30,23 @@ Once you have a good visual and mental model of how the application works, break
 ## Getting Started
 
 ## Requirements
-* Re-Implement the City Explorer Front-End using React
-* With the exception the landing page, match the design and behavior of the [current application](https://codefellows.github.io/city_explorer/)
-* Keep the CSS exactly the same
-* Match the markup with your React components
-* Bypass the home page. Rather than ask for an API URL, use the deployed API, located here:
-    * https://city-explorer-backend.herokuapp.com
-* Accept an input for city, state
-* Fetch the location from the API
-* Call the API for each service to retrieve the correct data
-* Render into each column, the properly formatted results of each service call
+* Visit and review the deployed [RESTy Application](https://resty.netlify.com) 
+* Match the design and overall functionality
+  * Input field for entering a URL
+  * Radio Buttons for method (GET/PUT/POST/DELETE)
+  * Input field for typing in JSON for POST/PUT
+* Full Testing and Documentation are required.
+
+
+## Stretch Goals
+* Use authenticated APIs by sending either Basic or Bearer Auth, when specified
+  * Username+Password entry for Basic Auth
+  * Token entry for Bearer Auth
+* Save History in local storage
+  * When choosing from history, pre-fill the form
+
 
 ## Assignment Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 
-* Create a city-explorer repo at github
-* Initialize your repo and app by running create-react-app
-* Run a local build of your application when complete
-* Deploy your /build folder to AWS S3
+
