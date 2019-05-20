@@ -54,7 +54,7 @@ Your final project should be a full showcase of the talents you've cultivated du
 
 ## Development Schedule
 
-#### FRIDAY
+#### Class 45 (Project Planning)
   * Create your github organization
     * Back-End Repo
     * Front-End Repo
@@ -66,30 +66,30 @@ Your final project should be a full showcase of the talents you've cultivated du
     * At this stage, its's probably just stories to write more stories...
   * Get your Wiki setup for documentation
   
-#### MONDAY
+#### Class 46 (Project Start)
   * Wireframes Complete
   * User workflows finalized
   * Initial design planned
   * Code
   
-#### TUESDAY
+#### Class 47 (Core MVP)
   * First MVP should be completed by EOD
   * Your core functionality should be working end to end.
     * Databases Hooked up and saving
     * User workflow works (navigation, actions)
     
-#### WEDNESDAY
+#### Class 48 (Final MVP)
   * Adding Non-Breaking Features 
   * Layering on the Styles
   * Final "MVP" should be complete
     * Whatever you have by EOD should be presentation ready
     * Anything you add from this point on is purely additive.
   
-#### THURSDAY
+#### Class 49
   * Final Polish
   * Presentation Practice
   
-#### FRIDAY
+#### Class 50 (Graduation Day)
   * Eat.
   * Drink.
   * Present.
