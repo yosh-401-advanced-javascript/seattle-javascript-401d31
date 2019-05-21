@@ -89,3 +89,27 @@ Connection: close
 
 {"id":"1234123412341324","title":"kata","content":"get 100 points on hacker rank"}
 ```
+
+### REST Documentation (Swagger)
+
+The standard for documenting REST APIs is with a "live" documentation system: Open API (formerly "Swagger")
+
+Once generated, Swagger Docs present developers a way not only see how to use an API, but to actually use it.  Yes, this is documentation that allows for live requests from with it.
+
+Here's an example: [Star Wars API Docs](https://app.swaggerhub.com/apis/ahardia/swapi/1.0.0#/)
+
+* On the left, you'll see the source code for the documentation.
+* On the right  is the generated "Swagger" or "Open API" documentation for the [Star Wars API](https://swapi.co/api/people)
+
+#### Generating your own Swagger Documentation
+
+The swagger documentation service allows you to generate the swagger documentation simply by visiting your API and analyzing the output.
+
+* Visit and review the docs and overview at [Swagger.io](https://swagger.io)
+* Sign in to the [Swagger Inspector](https://inspector.swagger.io/builder)
+* Visit your API, using all applicable REST endpoints and data.
+* Note that on the right side, it'll keep your history.
+* Once you've gone through all of your routes, use the radio buttons select the routes you want to document.
+ * Click the "Create API Definition" button 
+ * Follow the instructions to import your new API documentation to Swagger Hub
+ * You can leave it running there, or download the definition as .yml or .json and use it in your own project.

@@ -56,8 +56,7 @@ In the `starter-code`, there are folders that map to each of the lab assignments
   * Only with a good object, should a write operation be allowed to occur
 * JSDoc for all methods, routes
 * Provide full swagger documentation
-  * Your Lab-06 Swagger should be suitable as a starting point
-  * Wire up to a route called `/docs/api` using the `swagger-ui-express` npm module
+  * Wire up to a custom port using the `express-swagger-generator` npm module
   * Note that your routes might be different as well as the returned data shape ... update accordingly
 
 **Engineering Note** - *Testing servers without side-effects is crucial. More critical is not having to manage starting/stopping a server in multiple environments.*

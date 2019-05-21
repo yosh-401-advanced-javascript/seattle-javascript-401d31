@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const swaggerUI = require('swagger-ui-express');
+require('../docs/config/swagger.js');
 
 const notFound = require('./middleware/404.js');
 const errorHandler = require('./middleware/500.js');
@@ -11,19 +11,57 @@ const categoriesDatabase = new Categories();
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Swagger Docs
-const swaggerDocs = require(`../docs/config/swagger.json`);
-app.use('/docs/api', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
-
 // Categories Routes
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route GET /posts
+ * @returns {object} 200 { count: 2, results: [ {}, {} ] }
+ * @returns {Error}  500 - Server error
+ */
 app.get('/categories', getCategories);
+
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route GET /posts
+ * @returns {object} 200 { count: 2, results: [ {}, {} ] }
+ * @returns {Error}  500 - Server error
+ */
 app.get('/categories/:id', getCategory);
+
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route GET /posts/:id
+ * @param {id} id.path.required
+ * @returns {object} 200 {}
+ * @returns {Error}  500 - Server error
+ */
 app.post('/categories', addCategory);
+
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route PUT /posts/:id
+ * @param {id} id.path.required
+ * @returns {object} 200 { count: 2, results: [ {}, {} ] }
+ * @returns {Error}  500 - Server error
+ */
 app.put('/categories/:id', replaceCategory);
+
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route DELETE /posts/:id
+ * @param {id} id.path.required
+ * @returns {object} 200 {}
+ * @returns {Error}  500 - Server error
+ */
 app.delete('/categories/:id', deleteCategory);
 
 function getCategories(req,res,next) {
@@ -64,7 +102,7 @@ app.use(errorHandler);
 module.exports = {
   server: app,
   start: port => {
-    let PORT = port || process.env.PORT || 8080;
+    let PORT = port || process.env.PORT || 3000;
     app.listen(PORT, () => console.log(`Listening on ${PORT}`));
   },
 };

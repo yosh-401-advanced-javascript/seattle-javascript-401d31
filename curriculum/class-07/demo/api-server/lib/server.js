@@ -2,9 +2,9 @@
 
 const express = require('express');
 
-const app = express();
+require('../docs/config/swagger.js');
 
-const PORT = process.env.PORT || 8080;
+const app = express();
 
 const schema = ['id', 'name', 'title', 'author', 'article'];
 let db = [];
@@ -23,9 +23,13 @@ let messager = (req,res,next) => {
   next();
 };
 
-// Swagger Docs
-const swaggerDocs = require(`./docs/config/swagger.json`);
-app.use('/docs/api', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route GET /posts
+ * @returns {object} 200 { count: 2, results: [ {}, {} ] }
+ * @returns {Error}  500 - Server error
+ */
 
 app.get('/posts', (req,res,next) => {
   let count = db.length;
@@ -81,7 +85,7 @@ app.use((error, req, res, next) => {
 module.exports = {
   server: app,
   start: port => {
-    let PORT = port || process.env.PORT || 8080;
+    let PORT = port || process.env.PORT || 3000;
     app.listen(PORT, () => console.log(`Listening on ${PORT}`));
   },
 };
