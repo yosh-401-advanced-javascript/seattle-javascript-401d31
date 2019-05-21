@@ -39,6 +39,7 @@ Implement a Bearer Authentication system with optional token expiry, api keys, a
 ### Assignment 1: Install the core bearer authorization system
 * `middleware.js` - Handle the Bearer Header to pull and verify with the token
 * `users-model.js` - Add a bearer authorization method that verifies the token
+* Create a few users+passwords to test with
 
 ### Assignment 2: Improve the core bearer authorization system...
 * Add support for the creation and usage of time sensitive (valid for 15 minutes) JWTs
