@@ -49,15 +49,7 @@ Once you have a good visual and mental model of how the application works, break
     * `<FunctionalStory />` and `<FunctionalDetails />`
   * Your output should repeat, once with each component set
 
-### Assignment 3  - Conditionals
-* Create a new component (in its own folder) called `If`
-* Code this component to use logic to hide/show it's `props.children`
-  * `<If condition> <Then> (render when true) <Else> (render when false)`
-  * `<Unless condition...>` (only displays if condition is false)
-  * `<When condition ...>` (only displays if condition is true)
-* Use this component to conditionally render items from the previous assignments.
-
-### Assignment 4  - Modal
+### Assignment 3  - Modal
 * Fork the [star wars fetcher sandbox](https://codesandbox.io/s/1o64l8pqm4)
 * Create a new component (in its own folder) called `Modal`
 * Replace the `<h3>` tag that shows the person with a `<Modal>` with the `<h3>` inside it
