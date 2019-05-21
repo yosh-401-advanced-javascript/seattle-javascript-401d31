@@ -27,8 +27,10 @@ At Code Sandbox, simply create a new app using "Git Hub" and point it at the the
 Now, make something more real, and usable...
 
 * Create a simple component called `<If />` that conditionally renders `{props.children}`
-* Talk through other options, like `Unless` and `When`
+* Talk through and code out other options, like `Unless`, `When`, and a full `If` / `Then` / `Else` series.
 
-Put this up on NPM!
+**Put this up on NPM!** -- create an org for yourself to namespace if you haven't already.
+
+Great candidate for re-use and really cool to demonstrate to students how to globalize their solutions
 
 
