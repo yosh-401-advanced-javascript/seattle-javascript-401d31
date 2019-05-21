@@ -22,10 +22,13 @@ Today is all about the OSI model and working within a TCP layer.  You'll want to
 We have been doing lots of client/server applications to this point. This is the first time we'll be running multiple servers. Students will struggle mightily with this concept.
 
 * Where do the servers reside?
+  * Best Practice = separate folders
 * Where is the data?
 * Why are we doing this?
 
 It's critical that you draw lots of pictures to describe the process of multiple servers talking to one another and triggering each other to "do work"
+
+Mocking the `fs` module has caused some confusion. We covered this back in Class 03, but the concept quickly becomes stale and might be worth a re-review for your class.
 
 ## General Comments and Notes
 Students have been working with basic NodeJS event programmig concepts, async programming, binary data, and file system I/O during the past week.  This week is all about how the internet works, starting with the build of a TCP application, then moving into HTTP based applications for the remainder of the course.  You'll want to discuss how HTTP is built on top of TCP and what processes take place to get data from one communication channel to the other.
