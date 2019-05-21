@@ -49,3 +49,5 @@ Once you have a good visual and mental model of how the application works, break
 ## Assignment Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 
+You are required to deploy a locally built application, using an "ejected" `create-react-app`
+

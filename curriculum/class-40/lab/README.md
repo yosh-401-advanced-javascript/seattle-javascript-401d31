@@ -73,6 +73,8 @@ For this assignment, you'll be running in an "ejected" React application, where 
 ## Assignment Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
 
+You are required to deploy a locally built application, using a custom built `webpack` configuration
+
 * Deploy your front-end (the React application) to AWS
   * Preferably, use the automated deployment process to connect a Cloud Formation stack
 * Deploy your back-end (the API server) to Heroku with a mongo database

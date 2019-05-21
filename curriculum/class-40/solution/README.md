@@ -16,6 +16,7 @@
   * Deployment
     * Travis Tests
     * Deployed to either Netlify, AWS, or Azure
+    * Custom built webpack is required for build/deploy
   * Documentation
     * README Standards
     * React Docs Required

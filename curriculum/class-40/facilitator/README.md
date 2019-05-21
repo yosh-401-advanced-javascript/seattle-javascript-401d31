@@ -72,6 +72,8 @@ At the end of this Block the students are presented with 2 assignments:
 
 ### Lab Prep
 
+* Students will be required to use a custom `webpack` to construct their lab today
+  * Rebuild and review the process from scratch
 * Demo the currently [deployed RESTy app](https://resty.netlify.com)
 * Whiteboard and plan out how to approach the architecture given knowledge of Redux being layered onto their core React knowledge
 

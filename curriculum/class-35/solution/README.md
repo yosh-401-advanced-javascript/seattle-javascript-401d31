@@ -33,6 +33,7 @@
   * Deployment
     * Travis Tests
     * Deployed to either Netlify, AWS, or Azure
+    * `create-react-app` must be ejected and used to build/deploy
   * Documentation
     * README Standards
     * React Docs Required
