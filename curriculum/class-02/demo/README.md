@@ -17,11 +17,6 @@ Have a good plan and understanding of the demos, and use those along with the la
 * There's a few (well commented) files in here that can be used to demonstrate how to pass context around
 * Don't spend too much time here beyond calling out the problem domain and how the context functions can help you out of particular situations
 
-### Functional Programming  (`demo/fp`)
-* Demo the difference between non-functional and functional functions that appear to do the same thing.
-* Highlight areas where functions are doing "too much" and how we can refactor
-* Have the students call out when things are pure and impure and why as you go throughout the rest of the demos (throughout the course)
-
 ### Classes/Inheritance  (`demo/objects`)
 * Use the dog/animal example to show how you can create an inherited object 3 ways.
 * Talk pros and cons to each as you go
