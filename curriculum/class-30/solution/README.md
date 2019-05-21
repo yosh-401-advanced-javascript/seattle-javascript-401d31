@@ -31,6 +31,7 @@
   * Deployment
     * Travis Tests
     * Deployed to either Netlify, AWS, or Azure
+    * Use `create-react-app` as base
   * Documentation
     * README Standards
     * React Docs Required

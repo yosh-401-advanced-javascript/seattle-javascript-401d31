@@ -138,7 +138,7 @@ From a coding/concept standpoint, the takeaway from this block must be an unders
 
 **State Management** - We will only be using native app/component state.
 
-**Build** - We will only be using create-react-app during this first block.
+**Build and Deploy** - We will only be using `create-react-app` during this first block.
 
 Have a daily exercise where the students are physically drawing the application architecture, component and data flow, and events. Having solid footing on how a React app is constructed and and connected within itself is critical leading in to the more advanced concepts.
 
@@ -149,24 +149,24 @@ The project at the end of the block is a rebuild of City Explorer. In 301, they 
 * Data Structure: Sorting Algorithms
 * Project: Refactor RESTy from Vanilla/jQuery into React
 
-### Block 7 - CRUD and Global State
+### Block 7 - Hooks, Context, CRUD, Auth, Realtime
 
 **State Management** - In this Block, we introduce Redux and manage state globally for all classes.
 
-**Build** - Continue to use create-react-app for labs.  Their focus still needs to be on code.
+**Build** - Use an 'ejected' `create-react-app` this block for final deployment. 
 
 For the end of block build, students will create a CMS that re-involves their API server from earlier in the course. This is a big build that has them getting a list of models, a list of records for each model and then CRUD on each record.
 
 * Data Structure: Hash Tables
 * Project: Refactor RESTy from Component State to Context/Hooks
 
-### Block 8 - Auth and Realtime
+### Block 8 - Redux State Management
 
 **State Management** - In this Block, we introduce both the Context API and Hooks and manage state using these methods instead of Native State or Redux.  This is all about teaching the students about choice and choosing the best state manager for the task at hand.
 
 Once Authentication and Login are wired in, we will revisit Real-Time with socket.io and start creating a chat-like application that requires a login to function and operate.
 
-**Build** - Continue to use create-react-app for labs.  Their focus still needs to be on code.  Instructor will work locally each day with a fresh build, using webpack.  DO NOT DWELL on each line. Talk about what webpack does, and then shred it out, generalizing what the file does.  It's a good idea to "eject" a create-react-app one day to show that process.
+**Build and Deployment** - This block, we'll be using a custom `webpack` configuration instead of `create-react-app`
 
 For the end of block build, students will work locally (not in code sandbox) and will be required to use webpack instead of create-react-app. The course configs folder contains a working config.  Students should use that as a reference.
 

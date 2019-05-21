@@ -55,6 +55,8 @@ For demo, review the starter code (in the design-assignments folder) and look at
 
 ### Lab Prep
 
+* Students will use an "ejected" `create-react-app` to complete todays lab.
+  * Review the process and the implications
 * Demo the currently [deployed RESTy app](https://resty.netlify.com)
 * Whiteboard and plan out how to approach the architecture given knowledge of Context and  Hooks being layered onto their core React knowledge
 

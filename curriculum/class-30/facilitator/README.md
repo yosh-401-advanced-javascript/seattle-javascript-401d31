@@ -47,6 +47,9 @@ For demo, review the starter code (in the design-assignments folder) and look at
 
 ### Lab Prep
 
+* Students will be using `create-react-app` to create the application locally.
+  * Review what this does, how to use
+  * You'll need to specifically install `node-sass`
 * Demo the currently [deployed RESTy app](https://resty.netlify.com)
 * Whiteboard and plan out how to approach the architecture.
 
