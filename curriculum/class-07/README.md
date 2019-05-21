@@ -65,5 +65,81 @@
       * Really connect to other services (hard dependencies)
     * Acceptance
       * The server might be a dependency of some other test
+      
+### REST Documentation (Swagger)
+
+The standard for documenting REST APIs is with a "live" documentation system: Open API (formerly "Swagger")
+
+Once generated, Swagger Docs present developers a way not only see how to use an API, but to actually use it.  Yes, this is documentation that allows for live requests from with it.
+
+Here's an example: [Star Wars API Docs](https://app.swaggerhub.com/apis/ahardia/swapi/1.0.0#/)
+
+* On the left, you'll see the source code for the documentation.
+* On the right  is the generated "Swagger" or "Open API" documentation for the [Star Wars API](https://swapi.co/api/people)
 
 
+#### Serving your own Swagger Documentation
+
+Use the node `express-swagger-generator` utility to create an endpoint that will render the Open API documentation for your API simply by putting properly formmated JSDoc-like comments in your API.
+
+Create and import a file called `swagger.js` into your API server, which uses a configuration object that you can use to customize according to your API's file and URL structure.
+
+```javascript
+const express = require('express');
+const app = express();
+const expressSwagger = require('express-swagger-generator')(app);
+
+let options = {
+  swaggerDefinition: {
+    info: {
+      description: 'API Server',
+      title: 'Swaggertastic Docs!',
+      version: '1.0.1',
+    },
+    host: 'localhost:3300',
+    basePath: '',
+    produces: [
+      'application/json',
+    ],
+    schemes: ['http'],
+    securityDefinitions: {
+      basicAuth: {
+        type: 'basic',
+      },
+    },
+  },
+  basedir: __dirname, //app absolute path
+  files: ['./*.js'], //Path to the API handle folder
+};
+expressSwagger(options);
+// start up a specific standalone swagger server on a specific port
+app.listen(3000);
+```
+
+Within your API file, document your routes, with properly formatted comments like this:
+
+```javascript
+/**
+ * Get a list of records for a given model
+ * Model must be a proper model, located within the ../models folder
+ * @route GET /api/v1/{model}
+ * @param {model} model.path - Model Name
+ * @security basicAuth
+ * @returns {object} 200 { count: 2, results: [ {}, {} ] }
+ * @returns {Error}  500 - Server error
+ */
+router.get('/api/v1/:model', auth('read'), handleGetAll);
+
+/**
+ * @route POST /api/v1/:model
+ * Model must be a proper model, located within the ../models folder
+ * @param {model} model.path.required
+ * @returns {object} 200 - Count of results with an array of results
+ * @returns {Error}  500 - Unexpected error
+ */
+router.post('/api/v1/:model', auth('create'), handlePost);
+```
+
+Once done, navigating to your running server at `/api-docs/` on the port specified in your swagger.js configuration file will reveal your live running Open API documentation.
+
+**This is required for every API server that you create**
