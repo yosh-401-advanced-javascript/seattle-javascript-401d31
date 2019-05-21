@@ -8,13 +8,27 @@
   * Requirement of a server to be running
   * Requirement of logger to be running
   
+#### How to grade this lab
+
+* pull down logger-server repo
+* start node server.js and node logger.js both from the logger-server repo
+* pull down the file-reader
+* run command to read in the file
+* note that because the port defaults to 3333 you shouldn't need to make env files
+
+  
 ### Assignment 2: API Server
 * Adding Q Publishing to the API
 * To execute, students need to:
   * Require `@nmq/q/client` in the `models/mongo.js` file
   * Publish "database" / "create|update|delete" events in the appropriate methods, following those operations
+  
+#### How to grade this lab
+* need to put a .env in the server-api thing
+* add the mongod port and port 3000
+* post to port 3000 and check that stuff logged in the logger
 
-#### Grading Standards & Notes
+### Grading Standards & Notes
   * Features
     * Server and Logger need to be running and passing events
     * File reader (4th run) should be perfect by now

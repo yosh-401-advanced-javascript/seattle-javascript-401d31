@@ -63,8 +63,7 @@ Alter your API server to publish events on all CRUD Operations
 * How will you write assertions on the logger?
 
 ### Deployment
-* Deploy all 3 servers (server, logger, api server) to Heroku.  Use `heroku logs` to view your logger output as your API is serving requests.
-* Do not deploy the file writer app. Theres' no server running for that
+* Deployment is not required
 
 
 ### Assignemnt Submission Instructions
