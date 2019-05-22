@@ -1,4 +1,12 @@
 # Facilitators Guide: Javascript and Web Frameworks
+
+## Learning Objectives
+
+**Students will be able to ...**
+* Live in a world where Express and React aren't the only players...
+* Have a basic understanding of how other frameworks are installed and implemented
+* Have a basis to compare and contrast these and others that may be encountered.
+
 This is the second of a 2-day grouped research and development project, designed to have the students teach themselves an entirely new framework, and then prepare a knowledge transfer of their learnings to the group.
 
 ## Preparation
