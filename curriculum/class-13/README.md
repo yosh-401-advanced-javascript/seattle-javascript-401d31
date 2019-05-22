@@ -2,8 +2,7 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-* Students will be able to create a Bearer Authentication parser
+* Create a Bearer Authentication parser
 
 ## Outline
 * :05 **Housekeeping/Recap**

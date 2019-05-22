@@ -1,5 +1,12 @@
 # Facilitators Guide: Data Modeling
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Build an API server with error handling, logging, and dynamic modeling
+* Build an in-memory data store with file persistence.
+
 This is a big build day for the instructor. The concepts are actually not too heavy (routing and mongo) but they make more sense emerging from code demos that pure lecture.  Plan your lecture accordingly, to be building and teaching as you go.
 
 ## Preparation

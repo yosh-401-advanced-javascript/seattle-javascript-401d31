@@ -1,5 +1,17 @@
 # Facilitators Guide: Component Based UI
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Desribe in general terms "Component Architecture"
+* Describe in general terms application and component "State"
+* Begin a React project locally with `create-react-app`
+* Use codesandbox.io to work live on a React application
+* Create and render `Class` and `Functional` React components to the DOM
+* Add event listeners to React components
+* Update React component state
+* Style React applications/components
+
 ## Preparation
 * Its React time, so get comfortable in the ecosystem.
 * Students will really struggle on how things fit, what calls what, and how the magic works. Make sure that your demos and coding style leaves room for the rabbit holes, questions, and confusion that will arise.

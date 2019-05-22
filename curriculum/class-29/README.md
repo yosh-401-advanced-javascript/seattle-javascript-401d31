@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Implement React Routing via `<BrowserRouter />`
   * Page Level
   * Component Swapping

@@ -1,5 +1,11 @@
 # Facilitators Guide: OAuth
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Setup a Google Cloud Application
+* Implement OAuth2 on the server side
+
 ## Preparation
 * Understand the full OAuth flow and the history of this API/Process/Workflow.
 * Ensure that your .env file is well explained, because you will need to add a bunch of SECRET stuff to it. Important to teach this as you go.

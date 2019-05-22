@@ -2,7 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
 * Understand and implement `thunk` middleware
 * Perform asynchronous redux actions
 * Take advantage of lifecycle hooks

@@ -1,5 +1,12 @@
 # Facilitators Guide: TCP Server
 
+## Learning Objectives  
+**Students will be able to...**
+
+* Network computers by implementing a TCP server
+* Describe computer networking using the OSI model
+* Describe computer networking using the Internet Protocol Suite
+
 ## Preparation
 Today is all about the OSI model and working within a TCP layer.  You'll want to be comfortable with both the native NodeJS `net` module as well as node events in order to create a TCP event server for the daily lecture demo.  
  

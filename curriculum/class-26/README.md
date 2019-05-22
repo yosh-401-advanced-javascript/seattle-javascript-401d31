@@ -2,7 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
 * Desribe in general terms "Component Architecture"
 * Describe in general terms application and component "State"
 * Begin a React project locally with `create-react-app`

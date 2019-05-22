@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Understand Express Middleware
 * Understand Express Routing
 * Properly test an `express` server

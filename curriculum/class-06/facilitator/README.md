@@ -1,5 +1,22 @@
 # Facilitators Guide: HTTP and REST
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Describe the full WRRC
+* Identify Clients and Servers
+* Describe the operations of HTTP
+  * Verbs
+  * Status Codes
+  * Headers
+  * Requests and Responses
+* Describe REST
+  * Supported Verbs
+  * Usage of HTTP
+  * What is a resource?
+  * What is an API?
+
 ## Preparation
 * Download and install [`json-server`](https://github.com/typicode/json-server) -- It's a node module that you install globally which opens up a zero configuration REST server.  We will connect to this for a couple of days as we dig into REST and HTTP
 * Download and install [`httpie`](https://httpie.org/) -- Command line HTTP Client

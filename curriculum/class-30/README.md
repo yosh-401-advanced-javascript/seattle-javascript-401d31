@@ -2,11 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
-* Deploy a node server to AWS EC2
-* Deploy a node server to Azure
-
 ## Outline
 * :05 **Housekeeping/Recap**
 * :30 **Whiteboard/DSA Review**

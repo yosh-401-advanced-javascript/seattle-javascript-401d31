@@ -14,6 +14,19 @@ At the end of this Block the students are presented with 3 assignments:
   * Due prior to the start of the next class
     * Will be used in subsequent code challenges
     
+## Learning Objectives
+* Binary Trees and BSTs
+  * Theory/History
+  * Common Use Cases
+  * Implementation
+* Scalable Designs and CSS
+  * Forms and Usability
+* Production Ready Applications and Integration
+  * Documentation
+  * Tests
+  * Stability
+  * Best Practices
+  
 ## Preparation
 * Ensure that you have a solid API Server and a solid Auth Server that you can demo from
 * Get ready with a solid Tree Demo and Implementation

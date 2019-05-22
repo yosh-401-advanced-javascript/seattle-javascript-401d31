@@ -1,5 +1,12 @@
 # Facilitators Guide: DS&A, Designs, Comp Sci, Recap
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Deploy a node server to AWS EC2
+* Deploy a node server to Azure
+
 At the end of this Block the students are presented with 2 assignments:
 
 * End of Block "Project": Cloud Deployment

@@ -1,5 +1,13 @@
 # Facilitators Guide: Application State
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Manage state at an application level using a Redux Store
+* Understand the basic roles of Actions and Reducers
+* Implement the core Redux Boilerplating required to participate in a store-based state managed application
+
 ## Preparation
 * This is the first day of Redux.
 * Focus on the problem that Redux solves (global or application state) and really understand HOW it manages that.

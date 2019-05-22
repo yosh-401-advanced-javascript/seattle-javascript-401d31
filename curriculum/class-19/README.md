@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Describe and Draw the architecture for a Message Queue server
 * Describe namespaces and rooms in Socket.io
 

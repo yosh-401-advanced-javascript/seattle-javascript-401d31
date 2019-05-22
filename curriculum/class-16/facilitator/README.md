@@ -1,5 +1,13 @@
 # Facilitators Guide: Event Driven Applications
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Describe and use the node event system
+* Implement the Observer pattern using Pub/Sub
+* Create a modular, event based system.
+
 ## Preparation
 This topic leads students directly into the TCP and Socket lectures that follow, and then into the end of section project, which is to build out an event driven queue.
 

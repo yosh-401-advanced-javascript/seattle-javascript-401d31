@@ -1,9 +1,9 @@
 # Buffers
 
 ## Learning Objectives
-* Students will learn how binary data is encoded and decoded
-* Students will be able to manipulate binary data using NodeJS Buffers
-* Students will be able to use EventEmitters to manage asynchronous code
+* describe binary data is encoded and decoded
+* manipulate binary data using NodeJS Buffers
+* use EventEmitters to manage asynchronous code
 
 ## Resources
 * Read [node buffer api docs]

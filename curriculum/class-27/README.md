@@ -2,7 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
 * Write and Execute Snapshot tests for a React Application
 * Write and Execute Enzyme (live) tests for a React Application
 * Deploy a React applicaation to AWS S3 manually

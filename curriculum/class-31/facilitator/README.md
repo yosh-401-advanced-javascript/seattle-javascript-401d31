@@ -1,5 +1,13 @@
 # Facilitators Guide: Hooks API
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Use the Hooks API to manage state in a functional component
+* Interact with Context using Hooks
+* Create custom hooks
+
 ## Preparation
 In this session, we'll be introducing yet another way to manage state in React -- Hooks
 

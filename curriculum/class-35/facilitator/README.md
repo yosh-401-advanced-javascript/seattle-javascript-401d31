@@ -1,5 +1,12 @@
 # Facilitators Guide: Block 7 - DS&A, Designs, Comp Sci, Recap
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Create a React Application using Contextual Global State
+* Manipulate React Functional Component State with State and Custom Hooks
+
 
 At the end of this Block the students are presented with 3 assignments:
 

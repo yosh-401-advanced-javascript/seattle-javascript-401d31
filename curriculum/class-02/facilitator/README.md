@@ -1,5 +1,17 @@
 # Facilitators Guide: Classes, Inheritance, Functional Programming
 
+## Learning Objectives
+**Students will be able to ...**
+
+* create npm scripts for automating command line tasks
+* nd function context with `call`, `apply`, and `bind`
+* handle thrown errors through the use of `try` and `catch`
+* interpret the different types of errors in Javascript
+* describe the difference between a constructor function and a factory function
+* identify and explain the qualities of imperative and functional code
+* implement a functional, array-like, list with `map`, `filter`, `reduce`, and `forEach` methods
+
+
 ## Preparation
 * Have a solid grasp on scope and context. We're not going too deep into `call`, `apply`, `bind`, but having a good grasp on these topics will allow for a smooth demo of how you can pass `this` around.
 * Understand how to throw and trap errors and exceptions.

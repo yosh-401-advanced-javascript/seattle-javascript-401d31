@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Pass props from a container component to a child
 * Execute methods in a parent component from a child
 * Manage state from events

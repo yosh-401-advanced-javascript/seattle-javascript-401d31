@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Implement a standalone Socket.io server for handling events and real time messaging.
 * Use events to properly route incoming messages and payload
 

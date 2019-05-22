@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Describe and use the node event system
 * Implement the Observer pattern using Pub/Sub
 * Create a modular, event based system.

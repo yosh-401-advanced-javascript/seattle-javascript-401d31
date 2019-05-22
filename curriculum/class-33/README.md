@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Use the React Context API to tactically manage global state.
 
 ## Outline

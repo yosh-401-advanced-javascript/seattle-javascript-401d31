@@ -1,5 +1,12 @@
 # Facilitators Guide: Socket.io - Message Queue Server
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Describe and Draw the architecture for a Message Queue server
+* Describe namespaces and rooms in Socket.io
+
 In this block, we've been focusing primarily on the "how"
   * Event Driven Apps
   * TCP and Sockets

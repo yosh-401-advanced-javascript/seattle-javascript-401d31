@@ -13,6 +13,20 @@ At the end of this Block the students are presented with 3 assignments:
   * 10 Points
   * Due prior to the start of the next class
     * Will be used in subsequent code challenges
+    
+## Learning Objectives
+* Stacks and Queues
+  * Theory/History
+  * How JS Uses this in the Event Loop
+  * Implementation
+* Scalable Designs and CSS
+  * Navigation and Lists
+  * Vertical and Horizontal lists/menus
+  * Checkbox Trick for Hamburgers
+  * Icons
+* Refactoring 
+  * Approaches
+  * Best Practices
 
 
 ## Preparation

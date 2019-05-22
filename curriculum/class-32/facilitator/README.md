@@ -1,5 +1,16 @@
 # Facilitators Guide: Socket.io Client
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Create and deploy a Socket.io server
+* Create and deploy a Socket.io client
+* Wire up events and listeners (Pub/Sub) on both ends
+* Connect a react application to a realtime server using socket.io
+* Subscribe to remote events
+* Emit events and data back to the server
+
 ## Preparation
 In this session, we'll be introducing the basics of socket.io, from the React side, and reinforcing the managing of application state through the use of `Context` and `Hooks`.  
 

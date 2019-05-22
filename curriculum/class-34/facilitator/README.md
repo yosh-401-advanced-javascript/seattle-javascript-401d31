@@ -1,5 +1,14 @@
 # Facilitators Guide:  `<Login />` and `<Auth />`
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Create a rules based application
+* Authorize using both "Basic Authorization" and a "Bearer Token"
+* Store a login token for re-use
+* Hide and Show components, links, pages based on both login status and permissions
+
 ## Preparation
 This lesson hits on 2 major points
 * Login using Basic and Oauth

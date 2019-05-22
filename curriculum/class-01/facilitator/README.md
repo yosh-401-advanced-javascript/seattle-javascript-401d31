@@ -1,5 +1,17 @@
 # Facilitators Guide: Node Ecosystem
 
+## Learning Objectives
+**Students will be able to ...**
+
+* setup a NodeJS Package using npm
+* create commonjs modules
+* to create unit tests for synchronous Javascript code
+* use to test driven development methodologies
+* connect their github repository to travis-ci for hot build testing
+* describe and define continuous integration and continuous delivery
+* configure TravisCI to run their tests on all pushes to GitHub
+
+
 ## Preparation
 * Make sure you have the latest version of node, nvm, etc installed
 * For a good demo, also have PHP and Perl installed

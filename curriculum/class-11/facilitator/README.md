@@ -1,5 +1,13 @@
 # Facilitators Guide: Authentication
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Describe cryptographic hash and cypher algorithms
+* Model a User and safely store their sensitive data
+* Implement a Basic Authorization parser
+* Create a Bearer Authentication parser
+
 ## Preparation
 * Prepare a demo on ciphers and encryption so that the students can fully understand
 

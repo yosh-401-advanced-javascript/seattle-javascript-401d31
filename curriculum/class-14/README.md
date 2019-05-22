@@ -2,7 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
 * Integrate back-end authorization controls using Express and Mongoose
 
 ## Outline

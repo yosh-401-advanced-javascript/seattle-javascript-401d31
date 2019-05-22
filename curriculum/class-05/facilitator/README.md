@@ -13,6 +13,19 @@ At the end of this Block the students are presented with 3 assignments:
   * 10 Points
   * Due prior to the start of the next class
     * Will be used in subsequent code challenges
+    
+## Learning Objectives
+* White Board Strategy
+* Algorithmic Complexity (Big O)
+  * Purpose
+  * Theory
+  * Calculation
+* Linked Lists
+  * Theory/History
+  * Implementation
+* Scalable Designs and CSS
+  * SASS
+  * Variables, Mixins, Partials
 
 
 ## Preparation
