@@ -1,6 +1,17 @@
 # Facilitators Guide: React Native Ecosystem
 
-The first React Native class is designed to introduce students into the React Native Ecosystem. 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Get a simple "hello world" application up and running on mobile devices
+* Understand the react-native workflow
+
+This class begins a 2-Session project where they will create a React Native application that uses device or hardware specific features for their phone.
+
+Following these 2 classes, they will present their apps to the class prior to the start of Class 43.
+
+This first React Native class is designed to introduce students into the React Native Ecosystem and to get them started with a stable dev environment and some good ideas and inspiration. 
 
 * Spinning up a dev environment
 * Expo
@@ -32,3 +43,10 @@ The first React Native class is designed to introduce students into the React Na
 * Running locally, you can use your own device or the official simulator
   * Only Apple users can test iphones 
   * Anyone can test android, but you need to start up the ADB from Android Studio
+
+### App Ideas
+* NFC Sharing (contacts, songs, etc)
+* Metal Detector using the magnetometer
+* Shaking, Motion and Impact detection ("ouch" when dropped or "whee!" when flipped)
+* Use the step counter in fun ways
+* Use GPS in fun ways (buzz when your friends are close)

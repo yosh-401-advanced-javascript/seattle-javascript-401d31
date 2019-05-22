@@ -9,6 +9,12 @@ Wiki Entry Ideas:
 * Dictionary / Flash Cards
 * Notes in outline form
 
+## Pre Work
+* Install XCode (Mac Users Only)
+* Install Android Studio (All Users)
+  * Install 1 device emulator
+* Install expo-cli globally `npm i -g expo-cli`
+
 ## Read
 * [getting started](https://facebook.github.io/react-native/docs/getting-started)
 * [react native basics](https://facebook.github.io/react-native/docs/tutorial) (Tutorial)

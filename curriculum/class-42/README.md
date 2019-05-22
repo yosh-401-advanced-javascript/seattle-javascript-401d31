@@ -2,11 +2,9 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
-* Deploy a React Native app to the store
 * Implement Device Features
 * Apply Styling
+* (optionally) Deploy a React Native app to the Google Play or Apple App Store(s)
 
 ## Outline
 * :05 **Housekeeping/Recap**
