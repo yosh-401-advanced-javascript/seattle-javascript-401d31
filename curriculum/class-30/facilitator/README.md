@@ -1,5 +1,9 @@
 # Facilitators Guide: DS&A, Designs, Comp Sci, Recap
 
+## Learning Objectives
+
+**Students will be able to ...**
+
 
 At the end of this Block the students are presented with 3 assignments:
 

@@ -1,5 +1,10 @@
 # Facilitators Guide: Access Control (ACL)
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Integrate back-end authorization controls using Express and Mongoose
+
 ## Preparation
 * Come up with some great concrete exaemples of Role Based Access Control
 * Students will want to be able to equate this work with something "real"

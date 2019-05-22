@@ -1,5 +1,13 @@
 # Facilitators Guide: API Server
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Manage the lifecycle of data model instances with pre and post hooks
+* Extend classes and override methods in Javascript
+* Use param middleware in express
+
 ## Preparation
 The core takeaways from the day are introducing the students to
 * Mongo Sub Documents

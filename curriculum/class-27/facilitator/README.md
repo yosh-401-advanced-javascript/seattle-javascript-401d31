@@ -1,5 +1,13 @@
 # Facilitators Guide: React Testing and Deployment
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Write and Execute Snapshot tests for a React Application
+* Write and Execute Enzyme (live) tests for a React Application
+* Deploy a React applicaation to AWS S3 manually
+* Deploy a React application to cloudfront directly from github
+
 For this class, the focus is less about coding and more about the ecosystem. In the first class, we showed a simple React app to get the students fired up about what React and Compoent frameworks **can** do.
 
 In this class, we'll take our first look at **how** React does it, and how we play nicely in the world -- testing, documentation, and deployments. This will be a long one, but sets the students up well to execute the next 3 blocks of material.

@@ -1,5 +1,10 @@
 # Facilitators Guide: Bearer Authorization
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Create a Bearer Authentication parser
+
 ## Preparation
 Read up on JWTs, specifically the [jsonwebtoken node module](https://www.npmjs.com/package/jsonwebtoken) that we're wiring up for this assignment.
 

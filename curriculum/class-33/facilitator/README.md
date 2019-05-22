@@ -1,5 +1,11 @@
 # Facilitators Guide: Context API
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Use the React Context API to tactically manage global state.
+
 ## Preparation
 This lesson focuses on the Context API. Be comfortable in how this wires up (it's a little bit complex in the wiring).  
 

@@ -1,13 +1,13 @@
 # Async
 
 ## Learning Objectives
-* Students will understand how synchronous and asynchronous code runs in the Javascript runtime
-* Students will be able to manage asynchronous data flow using error first callbacks
-* Students will be able to manage asynchronous data flow using Promises
-* Students will be able to manage asynchronous data flow using async/await
-* Students will be able to utilize the asynchronous methods from built-in NodeJS modules
-* Students will be able to work with raw data using Buffers
-* Students will be able to test asynchronous code using a BDD testing framework
+* understand how synchronous and asynchronous code runs in the Javascript runtime
+* manage asynchronous data flow using error first callbacks
+* manage asynchronous data flow using Promises
+* manage asynchronous data flow using async/await
+* utilize the asynchronous methods from built-in NodeJS modules
+* work with raw data using Buffers
+* test asynchronous code using a BDD testing framework
 
 ## Outline
 

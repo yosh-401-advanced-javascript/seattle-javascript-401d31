@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Build an API server with error handling, logging, and dynamic modeling
 * Build an in-memory data store with file persistence.
 

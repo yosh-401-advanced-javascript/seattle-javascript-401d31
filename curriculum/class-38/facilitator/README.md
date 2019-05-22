@@ -1,5 +1,12 @@
 # Facilitators Guide: Remote APIs
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Understand and implement `thunk` middleware
+* Perform asynchronous redux actions
+* Take advantage of lifecycle hooks
+
 ## Preparation
 * Read Up on [Thunk Middleware](https://alligator.io/redux/redux-thunk/) and async issues with Redux applications
 * There's a host of issues that arise when trying to do asynchronous things in a Redux action.  Principally, they just won't run in order

@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Create a rules based application
 * Authorize using both "Basic Authorization" and a "Bearer Token"
 * Store a login token for re-use

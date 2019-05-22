@@ -2,9 +2,9 @@
 ======
 
 ## Learning Objectives  
-* Students will learn how to network computers by implementing a TCP server
-* Students will learn to describe computer networking using the OSI model
-* Students will learn to describe computer networking using the Internet Protocol Suite
+* Network computers by implementing a TCP server
+* Describe computer networking using the OSI model
+* Describe computer networking using the Internet Protocol Suite
 
 ## Outline
 * :05 **Housekeeping/Recap**

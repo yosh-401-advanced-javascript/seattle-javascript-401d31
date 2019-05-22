@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Describe the full WRRC
 * Identify Clients and Servers
 * Describe the operations of HTTP

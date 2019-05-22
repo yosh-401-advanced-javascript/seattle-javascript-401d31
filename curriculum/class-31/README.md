@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Use the Hooks API to manage state in a functional component
 * Interact with Context using Hooks
 * Create custom hooks

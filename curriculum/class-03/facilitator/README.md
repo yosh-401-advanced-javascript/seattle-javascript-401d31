@@ -1,5 +1,17 @@
 # Facilitators Guide: Async
 
+## Learning Objectives
+**Students will be able to ...**
+
+* understand how synchronous and asynchronous code runs in the Javascript runtime
+* manage asynchronous data flow using error first callbacks
+* manage asynchronous data flow using Promises
+* manage asynchronous data flow using async/await
+* utilize the asynchronous methods from built-in NodeJS modules
+* work with raw data using Buffers
+* test asynchronous code using a BDD testing framework
+
+
 ## Preparation
 
 Be proficient in writing and using Callbacks and practice refactoring code from Callback to Promise to Async/Await and back. This is a big part of the demo and the source of a ton of questions from the students

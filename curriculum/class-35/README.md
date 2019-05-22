@@ -2,8 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
-
 * Create a React Application using Contextual Global State
 * Manipulate React Functional Component State with State and Custom Hooks
 

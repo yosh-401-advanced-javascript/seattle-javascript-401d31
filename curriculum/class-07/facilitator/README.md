@@ -1,5 +1,15 @@
 # Facilitators Guide: Express
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Understand Express Middleware
+* Understand Express Routing
+* Properly test an `express` server
+* Implement CRUD behavior through HTTP to a REST API
+  * Considerations for Modeling Data
+
 ## Preparation
 We're going to take the next 2 classes and replace json-server with one of our own making. This will start with an exploration of express routing and middleware.
 

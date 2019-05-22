@@ -1,5 +1,10 @@
 # Facilitators Guide: Remote CRUD
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Fully interact with a RESTful API from a React Application
+
 In the previous class, we made simple GET requests to the Star Wars API. Prior to that, we executed simple CRUD functionality using only the store.
 
 In this class we will be continuing to use remote APIs with React/Redux+Thunk.

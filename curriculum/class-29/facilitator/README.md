@@ -1,5 +1,18 @@
 # Facilitators Guide - Routing and Component Composition
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Implement React Routing via `<BrowserRouter />`
+  * Page Level
+  * Component Swapping
+* Compose components hierarchically
+* Create logical wrapper components
+* Create functional wrapper components
+* Utilize `children` in composed components
+* Compose the `<List>, <If>, <Card>, <Deck>` Components
+
 ## Preparation
 * Get a good grasp on `react-router-dom` and the differences between BrowserRouter, MemoryRouter, Link and Route and how this all differs from normal `<a>` tags.
 * This will be the first time they see a context wrapper (`<BrowserRouter/>`) so be prepared to answer questions on it, but tread lightly as we get into context in a later Block.

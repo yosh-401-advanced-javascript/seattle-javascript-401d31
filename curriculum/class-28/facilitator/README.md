@@ -1,5 +1,14 @@
 # Facilitators Guide: Props and State
 
+## Learning Objectives
+
+**Students will be able to ...**
+
+* Pass props from a container component to a child
+* Execute methods in a parent component from a child
+* Manage state from events
+* Handle form input
+
 ## Preparation
 * Get used to passing state, props, and methods down the component chain
 

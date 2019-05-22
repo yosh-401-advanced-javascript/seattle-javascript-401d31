@@ -1,5 +1,12 @@
 # Facilitators Guide: Dynamic Forms
 
+## Learning Objectives
+
+**Students will be able to ...**
+* Implement a generic form using Redux Form
+* Implement a generic standard form using JSON Schema
+* Connect form data back to the store
+
 ## Preparation
 The principal topic here is dealing with forms in React. To this point, the students have probably seen you code a few simple forms with an input that has an `onChange()` and an `onSubmit()` for the form.  Now that we're in Redux, things can change slightly.  We're going to explore 2 libraries.  Why libraries? Mainly to show students that libraries are GOOD THINGS when well executed.  And the 2 that we're showing are widely used in the industry.
 

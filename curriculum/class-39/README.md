@@ -2,7 +2,6 @@
 
 ## Learning Objectives
 
-**Students will be able to ...**
 * Fully interact with a RESTful API from a React Application
 
 ## Outline
