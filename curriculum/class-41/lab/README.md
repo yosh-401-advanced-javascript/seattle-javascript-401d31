@@ -1,25 +1,18 @@
-# LAB - React Native
+# LAB - React Native - Milestone 1: MVP
 
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.
 
-**Visualize the Application**
+**Visualize Your Application**
 
 Evaluate the lab requirements and begin with drawing a **UML** and/or **Data/Process Flow diagram**.  Having a solid visual understanding of the code you have/need and how it connects is critical to properly approaching this assignment.
-
-**Break Down the Assignment**
-
-Once you have a good visual and mental model of how the application works, break down the requirements. For each requirement, ask your self the following questions:
-
-* Where should this new code live in the codebase?
-* What existing code needs to be modified?
-* What dependencies will I need to install?
-
-**Map your priorities and dependencies before jumping into the code.**
 
 ---
 
 ## Getting Started
+
+**Confirm the following**
+
 * Install XCode (Mac Users)
 * Install Android Studio (All Users)
     * Install 1 device emulator
@@ -29,23 +22,28 @@ Once you have a good visual and mental model of how the application works, break
 * Create google play and apple developer accounts
 
 ## Assignment
-Create your first Phone App. What it does and how it looks is up to you. This is an opportunity to play around with whats possible in React Native and to get a feel for how you can get into the various device features.
+Create your first Phone App. What it does and how it looks is up to you. 
 
-This is a 2-day assignment, after which you will live-demo your phone app to the class (at the start of class 43)
-
-**Day 1** - Focus on getting your dev system up and operational and getting "proof of life"
-
-**Day 2** - Add in the device features, polish, and prepare for deployments.
-
-
-### Requirements
+### Application Requirements
 * Use 2 screens
 * Use and share state between components/screens
 * Use at least 1 native device feature (contacts, camera, gps, etc)
+* Properly Documented for End Users
+* Live Demo
+
+### Milestone 1 - MVP (This Lab)
+* Deliver your MVP for raw functionality
+* Your dev environment should be properly working
+* Other users should be able to scan your QR and see your app on any device
+* All of your core "features" should be working properly
+  * Unstyled is fine. We're looking for things to buzz, light up, detect movement, etc.
+
 
 ###  Documentation
-Complete the README.md file included in the lab folder
+For this assignment, instead of writing developer documentation, write end user documentation.
 
-### Submission
-* Submit a link to your PR
-* If you developed on Snack, include your snack link in your README so that we can easily open and run your app on our devices
+"How do I use this application"
+
+We recommend using the "Steve Jobs" standards, which is to say that your app should be so easy to use and should do such an obvious thing that documentation isn't required.
+
+That said ... it's required. Shoot for the Jobs standard, but document this like you're going to sell it on the *App Store* (you might)
