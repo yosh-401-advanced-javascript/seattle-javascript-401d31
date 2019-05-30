@@ -73,7 +73,7 @@ value     01011
 ```
 
 ### Signed vs Unsigned
-Signed integers add a rule that states the first bit represents weather or not a number is positive or negative. Negative values then follow a rule called `twos compliment`. In twos compliment, the value after the singed bit is added to the number of positions supported by the the remaining bits and then multiplied by -1. When decoding a four bit signed number, the first bit is a boolean value indicating negative or positive. The remaining three can support 8 unique values (0-7). So a signed four bit number can represent positive numbers from 0 to 7 and negative numbers -1 to -8.
+Signed integers add a rule that states the first bit represents weather or not a number is positive or negative. Negative values then follow a rule called **two's complement**. In two's complement, the value after the signed bit is added to the number of positions supported by the the remaining bits and then multiplied by -1. When decoding a four bit signed number, the first bit is a boolean value indicating negative or positive. The remaining three can support 8 unique values (0-7). So a signed four bit number can represent positive numbers from 0 to 7 and negative numbers -1 to -8.
 
 ```
 Signed |Unsigned
@@ -85,15 +85,15 @@ Signed |Unsigned
  4     |4        |0100   
  5     |5        |0101   
  6     |6        |0110   
- 7     |7        |0111   _________NEGITIVE_VALUES
--8     |8        |1000   (8 + 0) * -1
--7     |9        |1001   (8 + 1) * -1
--6     |10       |1010   (8 + 2) * -1
--5     |11       |1011   (8 + 3) * -1
--4     |12       |1100   (8 + 4) * -1
--3     |13       |1101   (8 + 5) * -1
--2     |14       |1110   (8 + 6) * -1
--1     |15       |1111   (8 + 7) * -1
+ 7     |7        |0111     Negative numbers
+-8     |8        |1000     -8 + 0
+-7     |9        |1001     -8 + 1
+-6     |10       |1010     -8 + 2
+-5     |11       |1011     -8 + 3
+-4     |12       |1100     -8 + 4
+-3     |13       |1101     -8 + 5
+-2     |14       |1110     -8 + 6
+-1     |15       |1111     -8 + 7
 ```
 
 ### Hex Cheat Sheet
