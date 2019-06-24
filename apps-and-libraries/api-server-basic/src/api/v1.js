@@ -16,7 +16,7 @@ const modelFinder = require(`${cwd}/src/middleware/model-finder.js`);
 const router = express.Router();
 
 // Evaluate the model, dynamically
-router.param('model', modelFinder);
+router.param('model', modelFinder.load);
 
 // Swagger Docs
 const swaggerDocs = require(`${cwd}/docs/config/swagger.json`);
