@@ -18,6 +18,18 @@ describe('Teams Model', () => {
 
   for (Implementation in implementations) {
 
+    // How might we repeat this to check on types?
+    it(`${Implementation} sanitize() returns undefined with missing requirements`, () => {
+      const schema = teams.schema;
+      var testRecord = {};
+      for (var field in schema) {
+        if (schema[field].required) {
+          testRecord[field] = null;
+        }
+      }
+      expect(teams.sanitize(testRecord)).toBeUndefined();
+    });
+
     it(`${Implementation} can post() a new team`, () => {
       let obj = { name: 'Test Team' };
       return teams.create(obj)

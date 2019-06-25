@@ -8,6 +8,18 @@ describe('Categories Model', () => {
     categories = new Categories();
   })
 
+  // How might we repeat this to check on types?
+  it('sanitize() returns undefined with missing requirements', () => {
+    const schema = categories.schema;
+    var testRecord = {};
+    for (var field in schema) {
+      if (schema[field].required) {
+        testRecord[field] = null;
+      }
+    }
+    expect(categories.sanitize(testRecord)).toBeUndefined();
+  });
+
   it('can post() a new category', () => {
     let obj = { name: 'Test Category' };
     return categories.create(obj)
