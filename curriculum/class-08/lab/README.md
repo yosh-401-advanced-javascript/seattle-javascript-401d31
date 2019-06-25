@@ -28,41 +28,8 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Requirements
 
-### Task 1: Modeling
-The provided API server is setup to work, but the data models are not implemented
 
-* Work in the `api-server/src/models` folder in the starter code
-* You will find the models (with empty methods) in the models folder
-* Implement each data model, in different manners, **using only TDD**
-* **Categories**
-  * Create this as a class
-  * Create a mongoose schemas for this collection
-  * The model class should hold and manage the data in memory
-  * The model class should expose methods that match REST verbs
-    * `get()`
-    * `post()`
-    * `put()`
-    * `delete()`
-* **Products**
-  * Create this as a class
-  * Create a mongoose schemas for this collection
-    * Use a pre-save hook to manipulate some part of the input (uppercase something, for example)
-  * The model class should expose methods that match REST verbs yet use mongoose data access methods
-    * `get()`
-    * `post()`
-    * `put()`
-    * `delete()`
-* Refer to the API server for guidance on how to properly implement the model interfaces (This is the interface contract)
-  * How is the server calling each of the model methods? (What params are being sent)
-  * What does the server expect back in terms of data?
-  * How do the models need to return that data?
-* Use **supergoose** to write tests that ensure that your mongo models work properly
-
-**Engineering Note** APIs that enforce a data contract that define the shape of the data are the heart of a scalable and extensible system. When it's well established and agreed upon, code is movable and extendable
-  
----
-
-### Task 2: INTEGRATE WITH THE API
+### INTEGRATE DATA MODELS WITH THE API
 * Once the models are completed and tested, they should integrate well with the API Server.
 * So long as your models obey the interface contract, your API routes should begin working
   * Verify this manually by visiting each of the routes with httpie or postman
@@ -72,7 +39,7 @@ The provided API server is setup to work, but the data models are not implemente
     * /post saves a new record
     * /get gets all records
     * ...etc
-    
+
 ---
 
 ### Stretch Goal: MODULARIZING

@@ -12,15 +12,10 @@ This is a big build day for the instructor. The concepts are actually not too he
 ## Preparation
 
 The core takeaways from the day are introducing the students to
-* Data Modeling
-  * NOSQL Databases
-  * Mongoose as an ORM
-  * Mongoose Pre and Post hooks (middleware)
 * Express Routing
   * express.Router()
   * Prefixed and Self-Contained Routes
 * Firmer Grasp on Separation of Concerns, Modularization Strategies
-
 
 ## Lecture Main Topics & Overall Flow
 
@@ -37,21 +32,6 @@ The core takeaways from the day are introducing the students to
 * We will use this in this lecture to match route modules to data models
   * This will definitely not be DRY.  Don't worry, we'll clean that up in the next class.
 
-### Data Modeling
-* Input sanitization
-* Data normalization 
-* Type and Error checking
-
-### NOSQL Databases and Mongo
-* Schemas for document definition
-* Show the students the mongo setup, command line tooling
-  * This is just like `pg`, but a different tool
-* Discuss briefly how it stores data
-  * Collections of Documents vs Tables and Rows
-  * The students will work with Mongo data stores for the rest of the course. 
-    * The intricacies emerge as you go, so be "ok" with the "use and demo to teach" model over a long theoretical discussion of noSQL databases
-* In the demo portion, we'll make a few models and use it for real
-* Talk through schemas and a light touch on pre/post hooks
 
 ## What bugs, issues, or surprises have come up in the past for this class?
 

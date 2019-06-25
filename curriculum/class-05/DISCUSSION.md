@@ -1,4 +1,4 @@
-# Readings: Buffers
+# Reading: Data Modeling With NoSQL Databases
 
 Below is a collection of resources of varying types and lengths which describe the topics for the upcoming lecture.  As you go through the readings each day, you'll find that certain sources work better for your reading and learning style. Focus on those, but also branch out and consume the material in different forms.
 
@@ -10,17 +10,19 @@ Wiki Entry Ideas:
 * Notes in outline form
 
 ## Read
-* [node buffer basics](https://medium.freecodecamp.org/do-you-want-a-better-understanding-of-buffer-in-node-js-check-this-out-2e29de2968e8)
-
-## Skim
-* [node buffer api docs]( https://nodejs.org/api/buffer.html)
+* [nosql vs sql](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool)
+* [nosql modeling techniques](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
 
 ## Watch
-* [endian and little endian](https://www.youtube.com/watch?v=B50mNoVw21k)
+* [sql vs nosql](https://www.youtube.com/watch?v=ZS_kXvOeQ5Y)
 
 ## Bookmark
-* [ascii chart](https://ascii.cl/)
-* [bmp spec (full)](https://en.wikipedia.org/wiki/BMP_file_format)
-* [bmp spec (simplified)](http://www.dragonwins.com/domains/getteched/bmp/bmpfileformat.htm)
-* [bmp spec (pdf)](http://www.di.unito.it/~marcog/SM/BMPformat-Wiki.pdf)
+* [mongoose api](https://mongoosejs.com/docs/api.html#Model)
+* [mongoose middleware](https://mongoosejs.com/docs/middleware.html)
+* [mongo memory server](https://www.npmjs.com/package/mongodb-memory-server)
+* [supertest](https://github.com/visionmedia/supertest)
+
+
+
+
 

@@ -8,17 +8,21 @@ class Players {
   }
 
   get(_id) {
-    let queryObject = _id ? {_id} : {};
-    return schema.find(queryObject);
+    if (_id) {
+      return schema.findOne({ _id });
+    }
+    else {
+      return schema.find({});
+    }
   }
-  
-  post(record) {
+
+  create(record) {
     let newRecord = new schema(record);
     return newRecord.save();
   }
 
-  put(_id, record) {
-    return schema.findByIdAndUpdate(_id, record, {new:true});
+  update(_id, record) {
+    return schema.findByIdAndUpdate(_id, record, { new: true });
   }
 
   delete(_id) {
