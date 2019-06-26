@@ -48,13 +48,6 @@ We're going to take the next 2 classes and replace json-server with one of our o
 * Testing Servers
   * Exporting a server module
   * Supertest for end-to-end testing
-* Introduction to data models
-  * Very light...
-  * Building a simple API server today, so just use an object/array for storage 
-  * Talk about constraints, ids, etc. Use the word "model"
-  * Suggest pulling the model out to a different module
-  * Provide some common methods to access it
-  * Will dive in deeper in the next lecture
   
 ### LAB Prep
 * Following demo ...

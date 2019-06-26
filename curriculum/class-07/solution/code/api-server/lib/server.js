@@ -1,17 +1,13 @@
 'use strict';
 
 const express = require('express');
-require('../docs/config/swagger.js');
 
 const notFound = require('./middleware/404.js');
 const errorHandler = require('./middleware/500.js');
 
-const Categories = require('./models/categories.js');
-const categoriesDatabase = new Categories();
+let db = [];
 
 const app = express();
-
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -64,36 +60,44 @@ app.put('/categories/:id', replaceCategory);
  */
 app.delete('/categories/:id', deleteCategory);
 
-function getCategories(req,res,next) {
-  let count = categoriesDatabase.count();
-  let results = categoriesDatabase.get();
-  res.json({count,results});
+function getCategories(req, res, next) {
+  let count = db.length;
+  let results = db;
+  res.json({ count, results });
 }
 
-function getCategory(req,res,next) {
-  let id = parseInt(req.params.id);
-  let record = categoriesDatabase.get(id);
+function getCategory(req, res, next) {
+  let id = req.params.id;
+  let record = db.filter((record) => record.id === parseInt(id));
   res.json(record[0]);
 }
 
-function addCategory(req,res,next) {
-  let {name} = req.body;
-  let record = categoriesDatabase.post({name});
+function addCategory(req, res, next) {
+  let { name } = req.body;
+  let record = { name };
+  record.id = db.length + 1;
+  db.push(record);
   res.json(record);
 }
 
-function replaceCategory(req,res,next) {
+function replaceCategory(req, res, next) {
+
   let id = parseInt(req.params.id);
-  let {name} = req.body;
-  let record = {id,name};
-  let updatedRecord = categoriesDatabase.put(id, record);
+
+  if (!id) { next('invalid id'); }
+
+  let { name } = req.body;
+  let updatedRecord = { id, name };
+
+  db = db.map((record) => record.id === id ? updatedRecord : record);
+
   res.json(updatedRecord);
 }
 
-function deleteCategory(req,res,next) {
+function deleteCategory(req, res, next) {
   let id = parseInt(req.params.id);
-  let result = categoriesDatabase.delete(id);
-  res.json(result);
+  db = db.filter((record) => record.id !== id);
+  res.json({});
 }
 
 app.use('*', notFound);

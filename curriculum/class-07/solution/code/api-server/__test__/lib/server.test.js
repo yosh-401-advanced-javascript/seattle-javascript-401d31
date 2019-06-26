@@ -1,8 +1,8 @@
 'use strict';
 
-const {server} = require('../../lib/server.js');
-const supertest = require('supertest');
-const mockRequest = supertest(server);
+const { server } = require('../../lib/server.js');
+const supergoose = require('../supergoose.js');
+const mockRequest = supergoose(server);
 
 describe('web server', () => {
 
@@ -10,29 +10,22 @@ describe('web server', () => {
 
     return mockRequest
       .put('/categories/0')
-      .then(results => {
-        expect(results.status).toBe(500);
-      });
+      .expect(500);
 
   });
-  
+
   it('should respond with a 404 on an invalid route', () => {
 
     return mockRequest
       .get('/foobar')
-      .then(results => {
-        expect(results.status).toBe(404);
-      });
-
+      .expect(404);
   });
 
   it('should respond with a 404 on an invalid method', () => {
 
     return mockRequest
       .post('/')
-      .then(results => {
-        expect(results.status).toBe(404);
-      });
+      .expect(404);
 
   });
 
@@ -40,9 +33,7 @@ describe('web server', () => {
 
     return mockRequest
       .get('/categories')
-      .then(results => {
-        expect(results.status).toBe(200);
-      });
+      .expect(200);
 
   });
 
