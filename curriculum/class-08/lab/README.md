@@ -1,4 +1,4 @@
-# LAB - Data Modeling
+# LAB - Express Routing & Connected API
 
 You have been provided a partially working API server. The assignment for today is to complete the server's functionality by creating the data models and writing a full test suite
 
@@ -29,8 +29,11 @@ Once you have a good visual and mental model of how the application works, break
 ## Requirements
 
 
-### INTEGRATE DATA MODELS WITH THE API
-* Once the models are completed and tested, they should integrate well with the API Server.
+### Assignment 1: Integrate "Real" Data Models 
+* Import your data models from your earlier data modeling lab. 
+  * Put them in a `models` folder in your source tree
+  * Import them into your `server.js`
+  * Wire them into the routes, replacing the in-memory "database"
 * So long as your models obey the interface contract, your API routes should begin working
   * Verify this manually by visiting each of the routes with httpie or postman
     * get, post, put, delete on /categories and /categories/ID
@@ -42,10 +45,12 @@ Once you have a good visual and mental model of how the application works, break
 
 ---
 
-### Stretch Goal: MODULARIZING
+### Modularizing with External Routes
 
-* Move the 2 sets of routes and functions into separate, external routers
+* Move the 2 sets of routes and rout handler functions into separate, external routers
   * They should go into a `routes` folder as separate files
+    * One for categories
+    * One for products
   * They will need to export an express router instance
   * The app will now need to import and use these routes
 * Once you've moved the routes out, the tests that you wrote should still work.
@@ -54,6 +59,3 @@ Once you have a good visual and mental model of how the application works, break
 
 ## Assignment Submission Instructions
 Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
-
-
-

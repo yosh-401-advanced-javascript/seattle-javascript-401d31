@@ -2,18 +2,18 @@
 
 const express = require('express');
 
-const Products = require('../models/products.js');
+const Products = require('../models/products/products.js');
 const products = new Products();
 
 const router = express.Router();
 
 // ROUTES
-router.get('/products', getProducts);
-router.post('/products', postProducts);
+router.get('/api/v1/products', getProducts);
+router.post('/api/v1/products', postProducts);
 
-router.get('/products/:id', getProduct);
-router.put('/products/:id', putProducts);
-router.delete('/products/:id', deleteProducts);
+router.get('/api/v1/products/:id', getProduct);
+router.put('/api/v1/products/:id', putProducts);
+router.delete('/api/v1/products/:id', deleteProducts);
 
 // FUNCTIONS
 function getProducts(request,response,next) {
@@ -35,14 +35,14 @@ function getProduct(request,response,next) {
 }
 
 function postProducts(request,response,next) {
-  products.post(request.body)
+  products.create(request.body)
     .then( result => response.status(200).json(result) )
     .catch( next );
 }
 
 
 function putProducts(request,response,next) {
-  products.put(request.params.id, request.body)
+  products.update(request.params.id, request.body)
     .then( result => response.status(200).json(result) )
     .catch( next );
 }

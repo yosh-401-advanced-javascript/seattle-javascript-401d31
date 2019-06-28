@@ -1,13 +1,15 @@
-const Categories = require('../../../src/models/categories.js');
+const Categories = require('../../../src/models/categories/categories.js');
+const supergoose = require('../../supergoose.js');
+
 let categories = new Categories();
 
 describe('Categories Model', () => {
-  it('can post() a new category', () => {
+  it('can create() a new category', () => {
     let obj = {name:'Test Categories'};
-    return categories.post(obj)
+    return categories.create(obj)
       .then(record => {
         Object.keys(obj).forEach(key =>{
-          expect(record[0][key]).toEqual(obj[key]);
+          expect(record[key]).toEqual(obj[key]);
         });
       })
       .catch(e => console.error('ERR', e) );
@@ -15,9 +17,9 @@ describe('Categories Model', () => {
 
   it('can get() a category', () => {
     let obj = {name:'Test Categories 2'};
-    return categories.post(obj)
+    return categories.create(obj)
       .then(record => {
-        return categories.get(record[0].id)
+        return categories.get(record.id)
           .then(category => {
             Object.keys(obj).forEach(key =>{
               expect(category[0][key]).toEqual(obj[key]);
@@ -25,5 +27,5 @@ describe('Categories Model', () => {
           });
       });
   });
-  
+
 });

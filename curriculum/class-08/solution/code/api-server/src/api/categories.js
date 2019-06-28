@@ -2,18 +2,18 @@
 
 const express = require('express');
 
-const Categories = require('../models/categories.js');
+const Categories = require('../models/categories/categories.js');
 const categories = new Categories();
 
 const router = express.Router();
 
 // ROUTES
-router.get('/categories', getCategories);
-router.post('/categories', postCategory);
+router.get('/api/v1/categories', getCategories);
+router.post('/api/v1/categories', postCategory);
 
-router.get('/categories/:id', getCategory);
-router.put('/categories/:id', putCategory);
-router.delete('/categories/:id', deleteCategory);
+router.get('/api/v1/categories/:id', getCategory);
+router.put('/api/v1/categories/:id', putCategory);
+router.delete('/api/v1/categories/:id', deleteCategory);
 
 // FUNCTIONS
 function getCategories(request,response,next) {
@@ -35,14 +35,14 @@ function getCategory(request,response,next) {
 }
 
 function postCategory(request,response,next) {
-  categories.post(request.body)
-    .then( result => response.status(200).json(result[0]) )
+  categories.create(request.body)
+    .then( result => response.status(200).json(result) )
     .catch( next );
 }
 
 
 function putCategory(request,response,next) {
-  categories.put(request.params.id, request.body)
+  categories.update(request.params.id, request.body)
     .then( result => response.status(200).json(result[0]) )
     .catch( next );
 }
