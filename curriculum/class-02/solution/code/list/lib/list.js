@@ -29,13 +29,26 @@ class List {
   }
 
   map(callback) {
-    if ( ! this.length ) { return undefined; }
+    if (!this.length) {
+      return undefined;
+    }
     let result = new List();
     for (let i = 0; i <= this.length - 1; i++) {
       result.push(callback(this[i], i));
     }
     return result;
   }
+
+  /*
+
+     let arr = [1,2,3,4]
+     let evens = arr.filter( (val,idx) => {
+        return !(val % 2);
+     })
+
+     10,000
+
+   */
 
   filter(callback) {
     if ( ! this.length ) { return undefined; }
@@ -48,6 +61,12 @@ class List {
     return result;
   }
 
+  /*
+    arr.reduce( (acc,val,idx) => {
+      acc['foo'] = val;
+      return acc;
+    }, {});
+   */
   reduce(callback, state) {
     if ( ! this.length ) { return undefined; }
     for (let i = 0; i <= this.length - 1; i++) {
