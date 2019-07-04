@@ -1,4 +1,4 @@
-# LAB: Buffers - File Transformers
+# LAB: Data Modeling
 
 ## Before you begin
 * Create a new git repository for this lab

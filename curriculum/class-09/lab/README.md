@@ -1,4 +1,4 @@
-# LAB: Classes, Inheritance, Functional Programming
+# LAB: API Server
 
 ## Before you begin
 Refer to *Getting Started*  in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup, configuration, deployment, and submission instructions.

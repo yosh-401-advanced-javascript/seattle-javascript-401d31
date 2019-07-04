@@ -1,4 +1,4 @@
-# Solution: Buffers
+# Solution: Data Modeling
 
 ## Lab Requirements
 
