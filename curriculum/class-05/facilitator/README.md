@@ -18,6 +18,7 @@
 
 ## Preparation
 * Make sure your own mongo is up and running locally
+* Review the [Student Facing README](../README.md) as it contains the information the students should be retaining. It helps to drive your lecture to hit all of those basic points.
 * Helps to install compass as well to show a GUI
 * Have an [mLab](https://mlab.com/) account so that you can show a remote mongo installation/interface
 * Also, an [Atlas](https://www.mongodb.com/cloud/atlas) account to give yet another view of dbs in the cloud.
@@ -51,7 +52,7 @@
 * Introduce Compass and any other tools that you like to use or are familiar with
 * ORMS
   * Mongoose is an ORM that wraps all of the core functionality for us, in a native JS Library
-  * In the demo portion, we'll make a few models and use it for real
+  * In the demo portion, we'll make a few models and use it for real, to show the ability of it to shape unstrucured data and provide CRUD methods.
   * Talk through schemas and a light touch on pre/post hooks
 
 ## What bugs, issues, or surprises have come up in the past for this class?
