@@ -30,14 +30,14 @@ Once you have a good visual and mental model of how the application works, break
 
 
 ### Assignment 1: Integrate "Real" Data Models 
-* Import your data models from your earlier data modeling lab. 
+* Import your mongo data models from your earlier data modeling lab. 
   * Put them in a `models` folder in your source tree
   * Import them into your `server.js`
   * Wire them into the routes, replacing the in-memory "database"
 * So long as your models obey the interface contract, your API routes should begin working
   * Verify this manually by visiting each of the routes with httpie or postman
-    * get, post, put, delete on /categories and /categories/ID
-    * get, post, put, delete on /products and /products/ID
+    * get, post, put, delete on /categories and /categories/:id
+    * get, post, put, delete on /products and /products/:id
   * Write supergoose tests to verify that your routes are functioning
     * /post saves a new record
     * /get gets all records

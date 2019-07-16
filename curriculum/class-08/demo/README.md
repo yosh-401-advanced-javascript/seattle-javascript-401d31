@@ -14,10 +14,15 @@
     * Implement express.router() and export them.
   * Import them back into the server
   * For one of them, leave the full get route in the route (`/my/stuff`)
+* **Route Prefixing**
   * For the other, `use` it with a prefix: `app.use('/your', yourStuffRouter)` and then in the route, only declare `/stuff` to prove that you can wire it that way as well.
+* **Params, Query Strings, and Data**
+  * In the routes, incorporate handling of Query Strings, Route Params, Param based middleware, form submissions, json submissions ets
+  * This is a fluid part of the demo to show the students the various ways we work with data from the client to make our routes have additional logic
   
 ### Assemble an API server -- `demo/api-server`
 * For the 2nd demo, build out a simple API server that marries routing with models
+  * You will need to use route params to get ids through and read in JSON to get data from the request packet.
 * Build this with 2 route modules (players and teams, for example)
 * Build 2 simple data models (memory based CRUD is fine)
 * Point the routes at these simple data models to do CRUD via REST
