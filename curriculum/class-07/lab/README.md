@@ -63,7 +63,7 @@ In the `starter-code`, there are folders that map to each of the lab assignments
 
 **Engineering Note** - *Testing servers without side-effects is crucial. More critical is not having to manage starting/stopping a server in multiple environments.*
 
-### Stretch Goal:
+### Stretch Goals:
 * Add support for a second data type: `products`
   * New Model
   * Additional Routes
