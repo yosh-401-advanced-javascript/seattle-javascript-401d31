@@ -27,19 +27,11 @@ app.use(authRouter);
 app.use(notFound);
 app.use(errorHandler);
 
-let isRunning = false;
-
 module.exports = {
   server: app,
   start: (port) => {
-    if( ! isRunning ) {
-      app.listen(port, () => {
-        isRunning = true;
-        console.log(`Server Up on ${port}`);
-      });
-    }
-    else {
-      console.log('Server is already running');
-    }
+    app.listen(port, () => {
+      console.log(`Server Up on ${port}`);
+    });
   },
 };

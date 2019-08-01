@@ -45,26 +45,11 @@ app.get('/d', auth('delete'), (req,res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-let isRunning = false;
-
 module.exports = {
   server: app,
-  startSSL: () => {
-    let certOptions = {
-      key: fs.readFileSync(path.resolve('./server.key')),
-      cert: fs.readFileSync(path.resolve('./server.crt')),
-    };
-    var server = https.createServer(certOptions, app).listen(443);
-  },
   start: (port) => {
-    if( ! isRunning ) {
-      app.listen(port, () => {
-        isRunning = true;
-        console.log(`Server Up on ${port}`);
-      });
-    }
-    else {
-      console.log('Server is already running');
-    }
+    app.listen(port, () => {
+      console.log(`Server Up on ${port}`);
+    });
   },
 };
