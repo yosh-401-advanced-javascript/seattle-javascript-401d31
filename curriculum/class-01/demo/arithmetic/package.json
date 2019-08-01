@@ -4,14 +4,14 @@
   "description": "this will be sooooo cool",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint **/*.js",
     "test": "jest --verbose --coverage",
-    "lint": "eslint '**/*.js'"
+    "test-watch": "jest --watchAll --verbose --coverage"
   },
-  "author": "",
+  "author": "john@codefellows.com",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^6.1.0",
-    "eslint-plugin-react": "^7.14.3",
+    "eslint": "^5.6.1",
     "jest": "^24.8.0"
   }
 }
