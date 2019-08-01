@@ -1,0 +1,51 @@
+# LAB: Async
+
+## Getting Started
+Refer to *Getting Started* in the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for complete setup instructions
+
+## Requirements
+### Read and Write to a File
+Write a node application, called `edit-file.js` in the root of your project that will modify a file on your computer
+
+#### Getting Started
+In the `data` folder, there is a file called `person.json` which is a simple object, representing a person.
+
+#### Requirements
+* Use the node `fs` module
+* Accepts a file name as a command line parameter
+* Reads in the contents of the file specified 
+* Convert the contents to a javascript object
+* Alters some values in the object
+  * Maybe use `faker`
+* Save the new object back to the file
+  * What 2 steps are required to do this?
+* Re-Open and read the file contents
+* Prove that the new file contents match your changed object
+
+***Software Engineering Note!***
+*Working with command line arguments is an essential part of writing server side code, which often starts with options. Learn to read and use them*
+
+### Execution notes
+
+Perform each implementation below in a seaparate module that you can test and also require/run from the index.js file
+
+1. Perform the above operations with standard node `fs` module callbacks
+1. Re-Implement using promises
+1. Re-Implement using async/await
+
+#### Testing
+* valid input params from the cli
+* handle errors (i.e. file not found) in a consistent way
+* Use the mocked `fs` module
+* Handle async issues in your tests
+  * Callbacks, async, promises all behave differently ...
+
+### Stretch Goals
+
+* Rather than use the built-in `JSON.parse()` and `JSON.stringify()` methods ...
+  * Write your own `stringify()` method that will turn any Object into a valid JSON string
+  * Write your own `parse()` method that will turn a string of JSON into a real object
+
+## Assignemnt Submission Instructions
+Refer to the the [lab submission instructions](../../../reference/submission-instructions/labs/README.md) for the complete lab submission process and expectations
+
