@@ -1,68 +1,61 @@
-# Facilitators Guide: Block 1 - DS&A, Designs, Comp Sci, Recap
+# Facilitators Guide: Data Modeling With NoSQL Databases
 
-At the end of this Block the students are presented with 3 assignments:
-
-* End of Block "Project": Bitmap Transformer
-  * 25 Points
-  * Paired
-  * Due prior to the start of the next Block
-* Design Challenge
-  * 10 Points
-  * Due prior to the end of the next Block
-* Data Structure Implementation: Linked Lists
-  * 10 Points
-  * Due prior to the start of the next class
-    * Will be used in subsequent code challenges
-    
 ## Learning Objectives
-* White Board Strategy
-* Algorithmic Complexity (Big O)
-  * Purpose
-  * Theory
-  * Calculation
-* Linked Lists
-  * Theory/History
-  * Implementation
-* Scalable Designs and CSS
-  * SASS
-  * Variables, Mixins, Partials
+**Students will be able to ...**
 
+* Understand the differences between SQL and noSQL Databases
+* Understand the MongoDB Ecosystem
+* Modeling Data / Schemas
+* Lifecyle Hooks
+* Be able to use various MongoDB Clients
+  * mongo cli
+  * compass
+* Remote Mongo
+  * mLab
+  * Atlas
+  * Dynamo (AWS)
+* ORMs (i.e. mongoose)
 
 ## Preparation
+* Make sure your own mongo is up and running locally
+* Review the [Student Facing README](../README.md) as it contains the information the students should be retaining. It helps to drive your lecture to hit all of those basic points.
+* Helps to install compass as well to show a GUI
+* Have an [mLab](https://mlab.com/) account so that you can show a remote mongo installation/interface
+* Also, an [Atlas](https://www.mongodb.com/cloud/atlas) account to give yet another view of dbs in the cloud.
 
-We're going to cover 3 topics today, beginning with looking harder at buffers and code-reviewing the previous lab. This will set them up well for the big end of block project.  We introduce SASS as a design architecture and close out with our first Data Structure - Linked Lists.
-
-As noted, students will have 3 assignments from this class, so prep them for some time management and goals setting.
-
-* Understand the history and use cases for Linked Lists.
-* Inevitably, you'll be asked "why" they exist and "when" you'd use them in the real world
-* Get good at SASS, especially in making up rules on the fly. Once students see it compiling in real time at sassmeister.com, they'll have many "can you do xyz?" questions for you. Be ready to riff.
 
 ## Lecture Main Topics & Overall Flow
 
-### Buffers (continued)
-  * Continue from the previous class, where we talked about buffers in general.
-  * Code review is going to really help the students understand how binary is used.
-  * Do a demo of of bitmap, where you simply read a file and then iterate the buffer, mapping the header from the spec.  
-  * Teach them how to read doc!
-  
-### SASS
-  * CSS doesn't have to suck!
-  * We have variables and functions
-  * We can write CSS that matches markup structure
-  * @import and @include make sense!
-  
-### Linked Lists
-  * Why are they a thing?
-  * Arrays are hard to "grow"
-  * No need for contiguous memory
-  * Multiple things can point to a single node
-  * It's all about the `.next`
-  * `head` and `tail`
-  * `while current.next` is the most basic traversal
-  * Mention and demo the "tortoise" and "hare" as a cool way to solve linked list questions.
+### Data Modeling
+* This should be a review of the techniques and reasons for modeling data
+* Schemas -
+  * Input sanitization
+  * Data normalization
+  * Type and Error checking
 
+### NOSQL Databases and Mongo
+* We built this already ... in memory and with a JSON file
+* MongoDB codifies it, and makes that concept scale, really well
+* Schemas for document definition
+* Show the students the mongo setup, command line tooling
+* Discuss briefly how it stores data
+  * Collections of Documents vs Tables and Rows
+  * The students will work with Mongo data stores for the rest of the course.
+    * The intricacies emerge as you go, so be "ok" with the "use and demo to teach" model over a long theoretical discussion of noSQL databases
+* `mongo` CLI tool
+  * This is just like `pg`, but a different tool
+  * `show dbs` to show the databases
+  * `use <db>` to select a db
+  * `show collections` to show tables/collections in a db
+  * `find()`, etc to query data
+  * Show students the mongo cheatsheet in the class repo under `reference`
+* Introduce Compass and any other tools that you like to use or are familiar with
+* ORMS
+  * Mongoose is an ORM that wraps all of the core functionality for us, in a native JS Library
+  * In the demo portion, we'll make a few models and use it for real, to show the ability of it to shape unstrucured data and provide CRUD methods.
+  * Talk through schemas and a light touch on pre/post hooks
 
 ## What bugs, issues, or surprises have come up in the past for this class?
+
 
 ## General Comments and Notes

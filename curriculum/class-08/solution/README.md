@@ -1,4 +1,4 @@
-# Solution: Data Modeling
+# Solution: Express Routing & Connected API
 
 ## Lab Requirements
 
@@ -6,13 +6,16 @@
   * Features
     * Class based data models
     * All REST endpoints must be supported
+      * Use the /api/v1 prefix
+    * Model methods should match the api verbs
     * Proper modularization
   * Code Quality
     * Separate Schema
     * Common interface between the models
+    * Same data contract for all
   * Testing
     * Models must be tested independently
-    * Server routes must be fully tested with supertest
+    * Server routes must be fully tested with supergoose
   * Deployment
     * Travis for tests
     * Heroku for the API
@@ -33,7 +36,7 @@ const products = new Products();
 
 ...
 
-router.post('/products', postProduct); 
+router.post('/api/v1/products', postProduct); 
 
 ...
 

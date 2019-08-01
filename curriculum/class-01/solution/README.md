@@ -1,21 +1,13 @@
 # Solution Notes: Node Ecosystem
 
 ## Lab Requirements
-  * Arithmetic Module
-    * Write tests for the arithmetic module (provided for them)
-      * argument types, argument count, return values, error handling
-    * Extend the arithmetic module (multiply/divide)
-    * Refactor it to move the argument type checking and counts into a shared function
-  * Greet Module
-    * Write a "greet" module from scratch.
-    * Tests: 
-      * argument types, argument count, return values, error handling
-      
 
 ## Grading Standards & Notes
   * Features
-    * add, subtract, multiply, divide
-    * hello takes a person
+    * Validator Module
+      * Must have type check methods for each data type
+      * Must be able to inspect an object for a deep prop
+      * Must be able to validate array types 
   * Testing
     * Required: type checking, return values
     * Recommended: error handling

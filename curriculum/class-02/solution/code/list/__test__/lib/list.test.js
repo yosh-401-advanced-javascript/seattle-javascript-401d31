@@ -26,7 +26,7 @@ describe('List', () => {
   it('push() adds an element to the list', () => {
     let myList = loadList();
     myList.push('FOO');
-    expect( myList[myList.length - 1] ).toEqual('FOO');
+    expect( myList.data[myList.length - 1] ).toEqual('FOO');
   });
 
   it('pop() undefined on an empty list', () => {
@@ -42,6 +42,29 @@ describe('List', () => {
   it('pop() decrements .length property by 1', () => {
     let myList = loadList();
     myList.pop();
+    expect( myList.length ).toEqual(2);
+  });
+
+  it('unshift() increments the .length property', () => {
+    let myList = loadList();
+    myList.unshift('foobar');
+    expect( myList.length ).toEqual(4);
+  });
+
+  it('unshift() adds an element to the front of list', () => {
+    let myList = loadList();
+    myList.unshift('FOO');
+    expect( myList.data[0] ).toEqual('FOO');
+  });
+
+  it('shift() returns the first item', () => {
+    let myList = loadList();
+    expect( myList.shift() ).toEqual(testArray[0]);
+  });
+
+  it('shift() decrements .length property by 1', () => {
+    let myList = loadList();
+    myList.shift();
     expect( myList.length ).toEqual(2);
   });
 
@@ -76,7 +99,7 @@ describe('List', () => {
     });
 
     expect( newList.length ).toEqual(myList.length);
-    expect( newList[0] ).toEqual( `0 -- ${testArray[0]}` );
+    expect( newList.data[0] ).toEqual( `0 -- ${testArray[0]}` );
 
   });
 
@@ -93,7 +116,7 @@ describe('List', () => {
     });
 
     expect( newList.length ).toEqual(1);
-    expect( newList[0] ).toEqual( testArray[0] );
+    expect( newList.data[0] ).toEqual( testArray[0] );
 
   });
 

@@ -9,18 +9,7 @@ The `async-app` is actually a pretty succinct demo that brings all of the concep
 
 The other demos are there so that you have some reference code for diving really deep into a particular topic, or for students to get and see more depth where that app does not provide it.
 
-
-### App - `demo/async-app`
-  * This is a simple application
-    * `async.js` exports an asynchronous callback and a promise
-    * `index.js` requires `async.js` and runs some async callbacks and promises to show their live use
-    * `__tests__` exist to show students how to test async code with jest
-    
-### Files - `demo/file-reader-module`
-  * This demo shows how to mock the fs module for the purposes of tests
-  * The demo itself just reads a file and logs it's contents, which isn't terribly interesting
-  * The test uses a mock of the node `fs` module.
-    * Important to talk about the importance of mocking when hitting FS or a server
+## Concepts
 
 ### Callbacks  (`demo/async-concepts/callbacks.js`)
   * The first demo shows creating a simple callback function and then another function that's called with that callback as a param.  Might be the first time they're ever seeing a function sent as a param, so this might turn into a rabbit hole
@@ -32,7 +21,7 @@ The other demos are there so that you have some reference code for diving really
   * The second demo is a long string that shows how errors are passed to the first  `.catch()` and then the flow can continue or die.
     * change that demo after you run it to not return in that first catch and watch the chain stop there.
   * The final demos shows off Promise.all()
-
+  
 ### Promisify (`demo/async-concepts/promisify.js`)
   * Demonstrates how to turn any error first callback into a promise
   * The first demo is done manually to show "how" this works
@@ -48,4 +37,18 @@ The other demos are there so that you have some reference code for diving really
     * You can operate in the function, and it looks like sync code, which is cool
   * The last example shows how you keep trying until you get a good response. This is far easier with async/await than promises
 
+## Applications
 
+### Async App - `demo/async-app`
+  * This is a simple application
+    * `async.js` exports an asynchronous callback and a promise
+    * `index.js` requires `async.js` and runs some async callbacks and promises to show their live use
+    * `__tests__` exist to show students how to test async code with jest
+
+
+### Files - `demo/file-reader-module`
+  * This demo shows how to mock the fs module for the purposes of tests
+  * The demo itself just reads a file and logs it's contents, which isn't terribly interesting
+  * What is interesting is showing off `promisify` so that we can work in promises instead of callbacks.
+  * The test uses a mock of the node `fs` module.
+    * Important to talk about the importance of mocking when hitting FS or a server

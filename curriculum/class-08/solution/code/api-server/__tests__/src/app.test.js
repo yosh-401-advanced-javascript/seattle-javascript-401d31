@@ -1,12 +1,9 @@
 'use strict';
 
 const rootDir = process.cwd();
-const supergoose = require('./supergoose.js');
+const supergoose = require('../supergoose.js');
 const {server} = require(`${rootDir}/src/app.js`);
-const mockRequest = supergoose.server(server);
-
-beforeAll(supergoose.startDB);
-afterAll(supergoose.stopDB);
+const mockRequest = supergoose(server);
 
 describe('api server', () => {
 
@@ -20,22 +17,22 @@ describe('api server', () => {
 
   });
 
-  it('should respond properly on request to /categories', () => {
+  it('should respond properly on request to /api/v1/categories', () => {
 
     return mockRequest
-      .get('/categories')
+      .get('/api/v1/categories')
       .then(results => {
         expect(results.status).toBe(200);
       });
 
   });
 
-  it('should be able to post to /categories', () => {
+  it('should be able to post to /api/v1/categories', () => {
 
     let obj = {name:'test'};
 
     return mockRequest
-      .post('/categories')
+      .post('/api/v1/categories')
       .send(obj)
       .then(results => {
         expect(results.status).toBe(200);
@@ -50,10 +47,10 @@ describe('api server', () => {
     let obj = {name:'testing'};
 
     return mockRequest
-      .post('/categories')
+      .post('/api/v1/categories')
       .send(obj)
       .then(results => {
-        return mockRequest.get(`/categories/${results.body.id}`)
+        return mockRequest.get(`/api/v1/categories/${results.body._id}`)
           .then(list => {
             expect(list.status).toBe(200);
             expect(list.body.name).toEqual(obj.name);

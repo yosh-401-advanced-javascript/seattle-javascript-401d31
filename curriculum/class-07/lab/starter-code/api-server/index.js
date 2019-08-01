@@ -1,5 +1,29 @@
 'use strict';
 
-const server = require('./lib/server.js');
+const express = require('express');
 
-server.start(8080);
+const app = express();
+
+let db = [];
+
+app.use(express.json());
+
+// Route to Get All Categories
+app.get('/categories', (req, res, next) => {
+  let count = db.length;
+  let results = db;
+  res.json({ count, results });
+});
+
+// Route to Create a Category
+app.post('/categories', (req, res, next) => {
+  let record = req.body;
+  record.id = Math.random();
+  db.push(record);
+  res.json(record);
+});
+
+let PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+
+

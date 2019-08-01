@@ -29,11 +29,20 @@
   * Single Responsibility
   * Immutability
   * Purity (!Side Effects)
+  * Code out some examples showing SRP and Side Effects
 * Classes and Factory Functions
   * Similarities & Differences between these and constructor functions
   * Use Cases for each
   * Demo: Animal/Dog
 * Big Demo -- The List Constructor
+  * Concepts to deliver on
+  * Constructor
+  * Extends
+  * Instance methods
+  * Static Methods
+    * What makes sense as a "static" method in the list?
+    * Things that don't require an instance, such as ...
+      * 
 
 
 ## What bugs, issues, or surprises have come up in the past for this class?
