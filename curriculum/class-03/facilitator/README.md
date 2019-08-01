@@ -31,7 +31,6 @@ Today's tests also use a "mock" of the `fs` module, so get familiar with how jes
 
 
 ## Lecture Main Topics & Overall Flow
-[Full Lecture Details](#lecture-details)
 * Async vs Sync
 * How does JS do Async (Call Stack + Callback Queue / Event Loop)
   * draw it on the whiteboard
