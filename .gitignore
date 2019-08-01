@@ -1,9 +1,8 @@
 
 # Created by https://www.gitignore.io/api/vim,osx,linux,node
-db 
-temp 
-data
-.env 
+db
+temp
+.env
 *.env
 package-lock.json
 aws.yml
