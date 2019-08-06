@@ -5,11 +5,13 @@ const fs = require('fs');
 const util = require('util');
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
+const Validator = require('../lib/validator.js');
 
 class Model {
 
-  constructor(dataFile) {
-    this.dataFile = dataFile;
+  constructor(schema) {
+    this.dataFile = `${__dirname}/data/${schema.name}.json`;
+    this.schema = schema;
   }
 
   /**
@@ -26,7 +28,7 @@ class Model {
       return JSON.parse(raw.toString());
     }
     // Default to an empty array, file will auto create itself :)
-    catch (e) { return []; }
+    catch (e) { return {}; }
   }
 
   /**
@@ -59,8 +61,8 @@ class Model {
   async get(id) {
     try {
       let db = await this.load();
-      let result = id ? db.filter((item) => item.id === id) : db;
-      return result;
+      let result = id ? db[id] : {count: Object.keys(db).length, results: Object.values(db)};
+      return Promise.resolve(result);
     }
     catch (e) {
       return Promise.reject(e);
@@ -72,18 +74,21 @@ class Model {
    * Async methods are technically promises,
    * so what they return is like a Promise.resolve()
    *
-   * @param {*} entry
+   * @param {*} record
    * @returns
    * @memberof Model
    */
-  async create(entry) {
-    entry.id = uuid();
-    let record = this.sanitize(entry);
+  async create(record) {
+
+    record.id = uuid();
+
+    if ( ! this.valid(record) ) {  return Promise.reject('Invalid Record'); }
+
     if (record) {
       let db = await this.load();
-      db.push(record);
+      db[record.id] = record;
       const saved = await this.save(db);
-      return saved ? record : Promise.reject();
+      return saved ? Promise.resolve(record) : Promise.reject();
     }
     else {
       return Promise.reject();
@@ -97,19 +102,19 @@ class Model {
    * so what they return is like a Promise.resolve()
    *
    * @param {*} id
-   * @param {*} entry
+   * @param {*} record
    * @returns
    * @memberof Model
    */
-  async update(id, entry) {
+  async update(id, record) {
 
-    let record = this.sanitize(entry);
+    if ( ! this.valid(record) ) {  return Promise.reject('Invalid Record'); }
 
-    if (record) {
+    if (id && record) {
       let db = await this.load();
-      db = db.map((item) => (item.id === id) ? record : item);
+      db[id] = record;
       const saved = await this.save(db);
-      return saved ? record : Promise.reject();
+      return saved ? Promise.resolve(record) : Promise.reject();
     }
     else {
       return Promise.reject();
@@ -129,44 +134,14 @@ class Model {
    */
   async delete(id) {
     let db = await this.load();
-    db = db.filter((item) => item.id !== id);
+    delete db[id];
     const saved = await this.save(db);
-    return saved ? {} : Promise.reject();
+    return saved ? Promise.resolve({}) : Promise.reject();
   }
 
-
-  /**
-   * Sanitize a record against the schema for the model
-   *
-   * @param {*} entry
-   * @returns
-   * @memberof Model
-   */
-  sanitize(entry) {
-
-    // I wish this was a static thing on the sub-class
-    let schema = this.schema();
-
-    let valid = true;
-
-    for (let field in schema) {
-
-      // Am I required and set?
-      let required = schema[field].required
-        ? !!entry[field]
-        : true;
-
-      // Am I the right type (if we even care)
-      let type = schema[field].type
-        ? typeof entry[field] === schema[field].type
-        : true;
-
-      // If anything is false ...
-      if (!(required && type)) { return 'Invalid Record'; }
-
-    };
-
-    return entry;
+  valid(record) {
+    let validator = new Validator(this.schema);
+    return validator.validate(record);
   }
 
 }
