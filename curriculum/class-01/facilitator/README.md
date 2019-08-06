@@ -66,3 +66,6 @@
 The initial hookup of Travis to Github should be done workshop style either at the end of class or during lab in a group setting.  Make sure that the students are properly logged into travis-ci.com, have the travis-ci app installed in their github account, and that they are able to get auto-builds when code is pushed.
 
 *This should have been done as a part of pre-work and Lab-00*
+
+Test Change
+
