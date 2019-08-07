@@ -1,10 +1,8 @@
 'use strict';
 
 const uuid = require('uuid/v4');
-const fs = require('fs');
 const util = require('util');
-const readFile = util.promisify(fs.readFile);
-const writeFile = util.promisify(fs.writeFile);
+const file = require('../lib/files.js');
 const Validator = require('../lib/validator.js');
 
 class Model {
@@ -24,8 +22,8 @@ class Model {
    */
   async load() {
     try {
-      const raw = await readFile(this.dataFile);
-      return JSON.parse(raw.toString());
+      const json = await file.read(this.dataFile);
+      return json;
     }
     // Default to an empty array, file will auto create itself :)
     catch (e) { return {}; }
@@ -43,8 +41,7 @@ class Model {
    */
   async save(db) {
     try {
-      const buffer = Buffer.from(JSON.stringify(db));
-      const saved = await writeFile(this.dataFile, buffer);
+      const saved = await file.write(this.dataFile, db);
       return true;
     }
     catch (e) { return false; }
@@ -141,7 +138,7 @@ class Model {
 
   valid(record) {
     let validator = new Validator(this.schema);
-    return validator.validate(record);
+    return validator.isValid(record);
   }
 
 }
