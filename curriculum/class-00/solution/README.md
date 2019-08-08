@@ -4,9 +4,9 @@
 
 ## Links and Resources
 
-![Build Status](https://www.travis-ci.com/beccalee123/00-deployment.svg?branch=master)
-* [repo](https://github.com/beccalee123/00-deployment)
-* [server](https://dashboard.heroku.com/apps/becca-00-deployment)
+![Build Status]()
+* [repo]()
+* [server]()
 
 ### Modules
 #### `pol.js`
@@ -18,13 +18,18 @@
 #### `.env` requirements
 * `PORT` - Defined in the ENV
 
-
-#### Running the app
+### Running the app
 * `npm start`
 * Endpoint: `/`
   * Returns `true`
 
-#### Tests
+### Documentation
+* `npm run jsdoc` to generate
+* Browse to `/docs` to view
+
+### Tests
 * `npm test` runs the unit test
 * `npm run lint` runs linter tests
+
+### UML
 
