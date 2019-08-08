@@ -1,6 +1,79 @@
 # 401 Advanced Javascript
 
-## Daily Lecture Schedule and Overview
+## Course Layout and Operations
+
+### Class Repository Setup
+
+* Create a repository for your course under the proper org
+  * i.e. `seattle-javascript-401d50`
+  * On the settings tab, turn on github pages, pointed to `master`
+* Download the `setup-class-repo` script from this guide to your local machine
+* Run the script from the command line, providing it your course code as well as the clone URL for the repository you created
+  * i.e. `sh setup-class-repo -c js-401d50 -r git@github.com:codefellows/js-401d50.git`
+
+This will create a folder for you, called `js-401d50` which will contain a full copy of, and an upstream link to, the official **401 Javascript Guide Repository**. 
+
+The `.gitignore` at the root of this repo will have been altered to hide the solutions and facilitator notes when you push to it, so that your students will only see their own readings, labs, the official demos and any content that **you** add for them.
+
+> Feel free to upload any additional demos, images or supplementary materials for your class as you lecture each day.  **remind your students to fetch from your class repo daily** (They should have this repo set as their own upstream)
+
+**Stay In Sync**
+> You may perform a `git fetch upstream` to stay in sync with the official guide.
+
+**Should you wish to alter any lab or reading assignments**
+
+> Do so in your repo, and alter the iframes in your canvas to point to your GitHub Pages links in your class repo.
+
+### Guide Repository Organization
+
+From the official guide repository, the `DISCUSSION`,` DESIGN`, `WARMUP`, and `LAB` assignments are linked automatically into Canvas
+
+* `/apps-and-libraries`
+  * Storage home for the "golden" apps built in class (see above)
+* `/configs`
+  * Re-usable configuration files for Travis, .git, Linting, etc.
+* `/curriculum`
+  * `/class-##` - Daily Lecture Folder
+    * `README.md` - The daily "go" file for the students. Edit this each day with any notes or announcements.
+    * `DISCUSSION.md` - The daily reading assignments for students.
+    * `REVIEW.md` - A set of "pop-quiz" style questions tailored for each day to keep students connected to older topics.
+    * `/demo` - Contains fully baked lecture demos and notes
+    * `/facilitator` - Contains lecture notes, assets, solution code
+    * `/lab` - Contains all assignments
+      * `/LAB.md` - The core lab for the day
+  * `data-structures`
+    * Contains javascript specific notes and demo code for each  structure.
+    * This material is designed to **augment**, not replace the core curriculum materials
+  * `/design-assignments`
+    * Contains the design assignments and solution code
+    * Contains the daily design assignments. 
+    * These are not included in the daily folders to allow for the design assignments and the daily labs to operate independently.
+    * These are automatically pulled into Canvas from this folder.
+  * `/projects`
+    * Contains the lab instructions, solutions and notes for the midterm and final projects
+  * `/warm-ups`
+    * Contains warm-up lab assignments and solution code
+    * These are not included in the daily folders to allow for the design assignments and the daily labs to operate independently.
+    * These are automatically pulled into Canvas from this folder.
+* `/facilitator`
+  * Contains reference material and templates for the instructor
+* `/reference`
+  * Contains reference information for the students.
+    * templates, how-to's, cheat sheets, etc.    
+* `/extra-content`
+  * This is an open area for 401 instructors and staff to do curriculum development
+  * In here, setup new course materials as a properly formatted "day" which can be taught independently.
+  * These can be rolled into the course in the future or taught as supplemental or replacement lectures as required/possible
+
+## Student Operation
+
+### Students will **fork** the class repository
+On most days, the lab folder will have some starter-code for them to copy. They will generally be making a new repository each day and copying that code in as a starting point.
+
+It's advisable that the students first make an new org (perhaps called '401-js-<their-name>') that these repositories can be created in, to help them organize things better.
+
+
+## Daily Lecture Schedule Template
 
 The facilitators folder in each day contains information for the instructional staff. Your daily lecture schedule should follow a format similar to the following, adjusting for your class needs.
 
