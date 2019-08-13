@@ -15,19 +15,14 @@ validator.isValid = (input, rules) => {
   switch (rules) {
   case 'string':
     return validator.isString(input);
-    break;
   case 'arr':
     return validator.isEvenArr(input);
-    break;
   case  'positive':
     return validator.isPosNum(input);
-    break;
   case 'object':
     return validator.isObj(input);
-    break;
   case 'hair':
     return validator.objHas(input);
-    break;
   default:
     return undefined;
   }
@@ -50,12 +45,12 @@ validator.isObj = (input) => {
   return typeof  input === 'object';
 };
 
-
-validator.objHas = (hair) => {
+validator.objHas = (hair) => {/*eslint-disable */
   return hair.hasOwnProperty('cut')
-  && hair.hasOwnProperty('length')
-  && hair.hasOwnProperty('color')
-  && hair.hasOwnProperty('bald');
+        && hair.hasOwnProperty('length')
+        && hair.hasOwnProperty('color')
+        && hair.hasOwnProperty('bald');
+  /*eslint-enable*/
 
 };
 

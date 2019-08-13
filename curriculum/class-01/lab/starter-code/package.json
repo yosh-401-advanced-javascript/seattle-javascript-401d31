@@ -4,7 +4,7 @@
   "description": "this will be sooooo cool",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --coverage",
+    "test": "jest --coverage",
     "lint": "eslint '**/*.js'"
   },
   "author": "",

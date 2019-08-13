@@ -1,7 +1,7 @@
 'use strict';
 
 // Animal Class
-class Animal {
+class Animal = (name) => {
 
   // When creating a new animal, store it's name
   constructor(name) {
